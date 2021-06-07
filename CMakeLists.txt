@@ -12,7 +12,7 @@ include_directories(include)
 ###############################
 #add_library(empty INTERFACE)
 #target_sources(empty INTERFACE empty.hpp)
-#target_include_directories (ModuleWorker
+#target_include_directories (empty
 #INTERFACE
 #    ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
@@ -42,3 +42,11 @@ if (DOXYGEN_FOUND)
 else (DOXYGEN_FOUND)
     message("Doxygen need to be installed to generate the doxygen documentation")
 endif (DOXYGEN_FOUND)
+
+
+###############################
+# for test
+###############################
+#enable_testing()
+#add_subdirectory(test)
+
