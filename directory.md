@@ -1,6 +1,6 @@
 ### directory 구조
 ---
-1. [repository]
+### 1. [repository]
 ```
         |--------- [src]     # 소스코드 디렉토리
         |--------- [include] # 헤더 디렉토리
@@ -14,13 +14,13 @@
 ```
         
         
-2. configure.sh
+### 2. configure.sh
 ```
 cmake -B build -S .
 cmake --build build
 ```
 
-3. .gitignore
+### 3. .gitignore
 ```
 build
 ```
