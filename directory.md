@@ -1,6 +1,7 @@
 ### directory 구조
 ---
 1. [repository]
+```
         |--------- [src]     # 소스코드 디렉토리
         |--------- [include] # 헤더 디렉토리
         |--------- [docs]    # doxygen 결과물
@@ -10,6 +11,7 @@
         |--------- Doxyfile       # doxygen 설정 파일
         |--------- LICENSE
         |--------- configure.sh   # 빌드 스크립트        
+```
         
         
 2. configure.sh
