@@ -47,7 +47,6 @@ endif (DOXYGEN_FOUND)
 ###############################
 # for test
 ###############################
-set(BUILD_TESTING OFF)
 if (BUILD_TESTING)
     enable_testing()
     add_subdirectory(test)
