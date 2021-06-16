@@ -1,0 +1,344 @@
+\hypertarget{classModuleWorker}{}\doxysection{Module\+Worker$<$ T $>$ 클래스 템플릿 참조}
+\label{classModuleWorker}\index{ModuleWorker$<$ T $>$@{ModuleWorker$<$ T $>$}}
+
+
+worker(작업자) 스레드가 job(작업)을 처리하는 라이브러리~\newline
+하나의 job이 Queue(큐)에 추가되면 여러개의 worker 중 하나의 worker가 선택되어 job을 처리한다. 여기서 어떠한 worker가 선택될지는 모른다. $\ast$  
+
+
+
+
+{\ttfamily \#include $<$Module\+Worker.\+hpp$>$}
+
+\doxysubsection*{클래스}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classModuleWorker_1_1Job}{Job}}
+\begin{DoxyCompactList}\small\item\em 작업 객체 ~\newline
+typename T\+: 처리해야 할 Class 타입 \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classModuleWorker_1_1Worker}{Worker}}
+\begin{DoxyCompactList}\small\item\em job(작업)를 처리하기 worker(작업)를 관리하기 위한 객체 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classModuleWorker_acc844af45ab3e000582bf13306d2cb46}{worker\+Thread\+Func}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classModuleWorker_1_1Worker}{Worker}} $>$ worker)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classModuleWorker}{Module\+Worker}} 생성자 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classModuleWorker_a6b95e9d122fbaefdeb8dfc72bdd87b72}{Module\+Worker}} (int worker\+\_\+num, int \mbox{\hyperlink{classModuleWorker_aa4135fcbeb2fbd0cfb8fe494e03f5f1d}{wait\+\_\+for\+\_\+ms}}, \mbox{\hyperlink{classModuleWorker_aa7eb2b4d2dd1128cd2f42a398a8008f6}{job\+\_\+init\+\_\+func\+\_\+t}} worker\+\_\+init, \mbox{\hyperlink{classModuleWorker_ac4a47eb76738a107edbc810f1e02a8bc}{job\+\_\+handle\+\_\+func\+\_\+t}} \mbox{\hyperlink{classModuleWorker_a9db5f0c02c81e788a6b115a9d37ccc19}{job\+\_\+handle}}, \mbox{\hyperlink{classModuleWorker_a96e7f04710860eacf66e9c6aa20b70df}{persist\+\_\+handle\+\_\+func\+\_\+t}} \mbox{\hyperlink{classModuleWorker_aa8c4a6343cd595e124978c1143a2791d}{persist\+\_\+handle}})
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classModuleWorker}{Module\+Worker}} 생성자 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classModuleWorker_ac0d2c40dabdcd2161bcbdddfabf4874f}{add\+Job}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classModuleWorker_1_1Job}{Job}} $>$ job)
+\begin{DoxyCompactList}\small\item\em job(작업) 대기 Queue(큐)에 작업을 추가한다 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classModuleWorker_a0af7ee60cc767a2dbce8e51d0277be78}{run}} (bool block)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classModuleWorker}{Module\+Worker}} 수행 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private 타입}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classModuleWorker_aa7eb2b4d2dd1128cd2f42a398a8008f6}{job\+\_\+init\+\_\+func\+\_\+t}} = std\+::function$<$ void $\ast$(void)$>$
+\begin{DoxyCompactList}\small\item\em job(작업) 초기화 함수 포인터 Type \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{classModuleWorker_ac4a47eb76738a107edbc810f1e02a8bc}{job\+\_\+handle\+\_\+func\+\_\+t}} = std\+::function$<$ void(std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classModuleWorker_1_1Job}{Job}} $>$, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classModuleWorker_1_1Worker}{Worker}} $>$)$>$
+\begin{DoxyCompactList}\small\item\em job(작업) 처리 함수 포인터 Type \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{classModuleWorker_a96e7f04710860eacf66e9c6aa20b70df}{persist\+\_\+handle\+\_\+func\+\_\+t}} = std\+::function$<$ void(std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classModuleWorker_1_1Worker}{Worker}} $>$)$>$
+\begin{DoxyCompactList}\small\item\em worker(작업자)가 작업이 없는 경우에도 처리해야 할 동작 함수 포인터 Type \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+std\+::deque$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classModuleWorker_1_1Job}{Job}} $>$ $>$ \mbox{\hyperlink{classModuleWorker_a3bc07991f160393218bb87b3414ba920}{job\+\_\+q}}
+\begin{DoxyCompactList}\small\item\em worker(작업자)에게 할당을 요청하는 선택 대기 Queue(큐) \end{DoxyCompactList}\item 
+std\+::mutex \mbox{\hyperlink{classModuleWorker_a52b54d28d448188bd895ef1e6dea86fc}{job\+\_\+q\+\_\+mutex}}
+\begin{DoxyCompactList}\small\item\em worker(작업자) 선택 대기 Queue 동시 접근을 위한 lock \end{DoxyCompactList}\item 
+std\+::condition\+\_\+variable \mbox{\hyperlink{classModuleWorker_ab60350b426c1214c3aeb052d99151137}{job\+\_\+q\+\_\+cv}}
+\begin{DoxyCompactList}\small\item\em worker(작업자) 선택 대기 Queue 동시 접근 변수 \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classModuleWorker_1_1Worker}{Worker}} $>$ $>$ \mbox{\hyperlink{classModuleWorker_a9a44976769b151e33b8662433d8dd1a9}{workers}}
+\begin{DoxyCompactList}\small\item\em 작업자(worker) 목록 \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ std\+::thread $>$ $>$ \mbox{\hyperlink{classModuleWorker_a2caa42996f2d717b506253a1db6de68d}{worker\+\_\+threads}}
+\begin{DoxyCompactList}\small\item\em 작업자(worker) 스레드 목록 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classModuleWorker_ac4a47eb76738a107edbc810f1e02a8bc}{job\+\_\+handle\+\_\+func\+\_\+t}} \mbox{\hyperlink{classModuleWorker_a9db5f0c02c81e788a6b115a9d37ccc19}{job\+\_\+handle}}
+\item 
+\mbox{\hyperlink{classModuleWorker_a96e7f04710860eacf66e9c6aa20b70df}{persist\+\_\+handle\+\_\+func\+\_\+t}} \mbox{\hyperlink{classModuleWorker_aa8c4a6343cd595e124978c1143a2791d}{persist\+\_\+handle}}
+\begin{DoxyCompactList}\small\item\em worker(작업자)가 작업이 없는 경우에도 지속적으로 처리해야 할 작업 함수 포인터 \end{DoxyCompactList}\item 
+std\+::chrono\+::milliseconds \mbox{\hyperlink{classModuleWorker_aa4135fcbeb2fbd0cfb8fe494e03f5f1d}{wait\+\_\+for\+\_\+ms}}
+\begin{DoxyCompactList}\small\item\em worker(작업자)가 job(작업) 요청을 대기하는 시간으로 해당 시간 안에 작업 요청이 없으면 persist handle(지속적으로 처리해야 작업)이 호출됨 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+\subsubsection*{template$<$typename T$>$\newline
+class Module\+Worker$<$ T $>$}
+
+worker(작업자) 스레드가 job(작업)을 처리하는 라이브러리~\newline
+하나의 job이 Queue(큐)에 추가되면 여러개의 worker 중 하나의 worker가 선택되어 job을 처리한다. 여기서 어떠한 worker가 선택될지는 모른다. $\ast$ 
+
+
+\begin{DoxyTemplParams}{템플릿 파라메터}
+{\em T} & 작업을 정의하는 Class 타입 \\
+\hline
+\end{DoxyTemplParams}
+
+
+Module\+Worker.\+hpp 파일의 25 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 타입정의 문서화}
+\mbox{\Hypertarget{classModuleWorker_ac4a47eb76738a107edbc810f1e02a8bc}\label{classModuleWorker_ac4a47eb76738a107edbc810f1e02a8bc}} 
+\index{ModuleWorker$<$ T $>$@{ModuleWorker$<$ T $>$}!job\_handle\_func\_t@{job\_handle\_func\_t}}
+\index{job\_handle\_func\_t@{job\_handle\_func\_t}!ModuleWorker$<$ T $>$@{ModuleWorker$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{job\_handle\_func\_t}{job\_handle\_func\_t}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \mbox{\hyperlink{classModuleWorker}{Module\+Worker}}$<$ T $>$\+::\mbox{\hyperlink{classModuleWorker_ac4a47eb76738a107edbc810f1e02a8bc}{job\+\_\+handle\+\_\+func\+\_\+t}} =  std\+::function$<$void(std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classModuleWorker_1_1Job}{Job}}$>$, std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classModuleWorker_1_1Worker}{Worker}}$>$)$>$\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+job(작업) 처리 함수 포인터 Type 
+
+
+
+Module\+Worker.\+hpp 파일의 136 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classModuleWorker_aa7eb2b4d2dd1128cd2f42a398a8008f6}\label{classModuleWorker_aa7eb2b4d2dd1128cd2f42a398a8008f6}} 
+\index{ModuleWorker$<$ T $>$@{ModuleWorker$<$ T $>$}!job\_init\_func\_t@{job\_init\_func\_t}}
+\index{job\_init\_func\_t@{job\_init\_func\_t}!ModuleWorker$<$ T $>$@{ModuleWorker$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{job\_init\_func\_t}{job\_init\_func\_t}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \mbox{\hyperlink{classModuleWorker}{Module\+Worker}}$<$ T $>$\+::\mbox{\hyperlink{classModuleWorker_aa7eb2b4d2dd1128cd2f42a398a8008f6}{job\+\_\+init\+\_\+func\+\_\+t}} =  std\+::function$<$void $\ast$(void)$>$\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+job(작업) 초기화 함수 포인터 Type 
+
+
+
+Module\+Worker.\+hpp 파일의 133 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classModuleWorker_a96e7f04710860eacf66e9c6aa20b70df}\label{classModuleWorker_a96e7f04710860eacf66e9c6aa20b70df}} 
+\index{ModuleWorker$<$ T $>$@{ModuleWorker$<$ T $>$}!persist\_handle\_func\_t@{persist\_handle\_func\_t}}
+\index{persist\_handle\_func\_t@{persist\_handle\_func\_t}!ModuleWorker$<$ T $>$@{ModuleWorker$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{persist\_handle\_func\_t}{persist\_handle\_func\_t}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \mbox{\hyperlink{classModuleWorker}{Module\+Worker}}$<$ T $>$\+::\mbox{\hyperlink{classModuleWorker_a96e7f04710860eacf66e9c6aa20b70df}{persist\+\_\+handle\+\_\+func\+\_\+t}} =  std\+::function$<$void(std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classModuleWorker_1_1Worker}{Worker}}$>$)$>$\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+worker(작업자)가 작업이 없는 경우에도 처리해야 할 동작 함수 포인터 Type 
+
+
+
+Module\+Worker.\+hpp 파일의 138 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{classModuleWorker_a6b95e9d122fbaefdeb8dfc72bdd87b72}\label{classModuleWorker_a6b95e9d122fbaefdeb8dfc72bdd87b72}} 
+\index{ModuleWorker$<$ T $>$@{ModuleWorker$<$ T $>$}!ModuleWorker@{ModuleWorker}}
+\index{ModuleWorker@{ModuleWorker}!ModuleWorker$<$ T $>$@{ModuleWorker$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ModuleWorker()}{ModuleWorker()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classModuleWorker}{Module\+Worker}}$<$ T $>$\+::\mbox{\hyperlink{classModuleWorker}{Module\+Worker}} (\begin{DoxyParamCaption}\item[{int}]{worker\+\_\+num,  }\item[{int}]{wait\+\_\+for\+\_\+ms,  }\item[{\mbox{\hyperlink{classModuleWorker_aa7eb2b4d2dd1128cd2f42a398a8008f6}{job\+\_\+init\+\_\+func\+\_\+t}}}]{worker\+\_\+init,  }\item[{\mbox{\hyperlink{classModuleWorker_ac4a47eb76738a107edbc810f1e02a8bc}{job\+\_\+handle\+\_\+func\+\_\+t}}}]{job\+\_\+handle,  }\item[{\mbox{\hyperlink{classModuleWorker_a96e7f04710860eacf66e9c6aa20b70df}{persist\+\_\+handle\+\_\+func\+\_\+t}}}]{persist\+\_\+handle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{classModuleWorker}{Module\+Worker}} 생성자 
+
+
+\begin{DoxyParams}{매개변수}
+{\em worker\+\_\+num} & worker(작업자) 수 \\
+\hline
+{\em wait\+\_\+for\+\_\+ms} & job(작업) 용처 대기 시간 (millisecond) \\
+\hline
+{\em worker\+\_\+init} & worker(작업자) 초기화 수행 함수 \\
+\hline
+{\em job\+\_\+handle} & job(작업) 수행 함수 \\
+\hline
+{\em persist\+\_\+handle} & job(작업)이 없는 경우 worker(작업자)가 지속적으로 수행해야 할 함수 \\
+\hline
+\end{DoxyParams}
+
+
+Module\+Worker.\+hpp 파일의 192 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{classModuleWorker_ac0d2c40dabdcd2161bcbdddfabf4874f}\label{classModuleWorker_ac0d2c40dabdcd2161bcbdddfabf4874f}} 
+\index{ModuleWorker$<$ T $>$@{ModuleWorker$<$ T $>$}!addJob@{addJob}}
+\index{addJob@{addJob}!ModuleWorker$<$ T $>$@{ModuleWorker$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{addJob()}{addJob()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classModuleWorker}{Module\+Worker}}$<$ T $>$\+::add\+Job (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classModuleWorker_1_1Job}{Job}} $>$}]{job }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+job(작업) 대기 Queue(큐)에 작업을 추가한다 
+
+
+\begin{DoxyParams}{매개변수}
+{\em job} & \\
+\hline
+\end{DoxyParams}
+
+
+Module\+Worker.\+hpp 파일의 215 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classModuleWorker_a0af7ee60cc767a2dbce8e51d0277be78}\label{classModuleWorker_a0af7ee60cc767a2dbce8e51d0277be78}} 
+\index{ModuleWorker$<$ T $>$@{ModuleWorker$<$ T $>$}!run@{run}}
+\index{run@{run}!ModuleWorker$<$ T $>$@{ModuleWorker$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classModuleWorker}{Module\+Worker}}$<$ T $>$\+::run (\begin{DoxyParamCaption}\item[{bool}]{block }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{classModuleWorker}{Module\+Worker}} 수행 
+
+
+\begin{DoxyParams}{매개변수}
+{\em block} & Y\+E\+S인 경우 run 함수 block되어 뒤에 실행 코드가 수행 안됨~\newline
+F\+A\+L\+S\+E인 경우 run 함수 호출 후 바로 리턴됨 \\
+\hline
+\end{DoxyParams}
+
+
+Module\+Worker.\+hpp 파일의 227 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classModuleWorker_acc844af45ab3e000582bf13306d2cb46}\label{classModuleWorker_acc844af45ab3e000582bf13306d2cb46}} 
+\index{ModuleWorker$<$ T $>$@{ModuleWorker$<$ T $>$}!workerThreadFunc@{workerThreadFunc}}
+\index{workerThreadFunc@{workerThreadFunc}!ModuleWorker$<$ T $>$@{ModuleWorker$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{workerThreadFunc()}{workerThreadFunc()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classModuleWorker}{Module\+Worker}}$<$ T $>$\+::worker\+Thread\+Func (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classModuleWorker_1_1Worker}{Worker}} $>$}]{worker }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{classModuleWorker}{Module\+Worker}} 생성자 
+
+
+\begin{DoxyParams}{매개변수}
+{\em worker} & \\
+\hline
+\end{DoxyParams}
+
+
+Module\+Worker.\+hpp 파일의 154 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{classModuleWorker_a9db5f0c02c81e788a6b115a9d37ccc19}\label{classModuleWorker_a9db5f0c02c81e788a6b115a9d37ccc19}} 
+\index{ModuleWorker$<$ T $>$@{ModuleWorker$<$ T $>$}!job\_handle@{job\_handle}}
+\index{job\_handle@{job\_handle}!ModuleWorker$<$ T $>$@{ModuleWorker$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{job\_handle}{job\_handle}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classModuleWorker_ac4a47eb76738a107edbc810f1e02a8bc}{job\+\_\+handle\+\_\+func\+\_\+t}} \mbox{\hyperlink{classModuleWorker}{Module\+Worker}}$<$ T $>$\+::job\+\_\+handle\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Module\+Worker.\+hpp 파일의 141 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classModuleWorker_a3bc07991f160393218bb87b3414ba920}\label{classModuleWorker_a3bc07991f160393218bb87b3414ba920}} 
+\index{ModuleWorker$<$ T $>$@{ModuleWorker$<$ T $>$}!job\_q@{job\_q}}
+\index{job\_q@{job\_q}!ModuleWorker$<$ T $>$@{ModuleWorker$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{job\_q}{job\_q}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::deque$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classModuleWorker_1_1Job}{Job}}$>$ $>$ \mbox{\hyperlink{classModuleWorker}{Module\+Worker}}$<$ T $>$\+::job\+\_\+q\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+worker(작업자)에게 할당을 요청하는 선택 대기 Queue(큐) 
+
+
+
+Module\+Worker.\+hpp 파일의 121 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classModuleWorker_ab60350b426c1214c3aeb052d99151137}\label{classModuleWorker_ab60350b426c1214c3aeb052d99151137}} 
+\index{ModuleWorker$<$ T $>$@{ModuleWorker$<$ T $>$}!job\_q\_cv@{job\_q\_cv}}
+\index{job\_q\_cv@{job\_q\_cv}!ModuleWorker$<$ T $>$@{ModuleWorker$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{job\_q\_cv}{job\_q\_cv}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::condition\+\_\+variable \mbox{\hyperlink{classModuleWorker}{Module\+Worker}}$<$ T $>$\+::job\+\_\+q\+\_\+cv\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+worker(작업자) 선택 대기 Queue 동시 접근 변수 
+
+
+
+Module\+Worker.\+hpp 파일의 125 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classModuleWorker_a52b54d28d448188bd895ef1e6dea86fc}\label{classModuleWorker_a52b54d28d448188bd895ef1e6dea86fc}} 
+\index{ModuleWorker$<$ T $>$@{ModuleWorker$<$ T $>$}!job\_q\_mutex@{job\_q\_mutex}}
+\index{job\_q\_mutex@{job\_q\_mutex}!ModuleWorker$<$ T $>$@{ModuleWorker$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{job\_q\_mutex}{job\_q\_mutex}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::mutex \mbox{\hyperlink{classModuleWorker}{Module\+Worker}}$<$ T $>$\+::job\+\_\+q\+\_\+mutex\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+worker(작업자) 선택 대기 Queue 동시 접근을 위한 lock 
+
+
+
+Module\+Worker.\+hpp 파일의 123 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classModuleWorker_aa8c4a6343cd595e124978c1143a2791d}\label{classModuleWorker_aa8c4a6343cd595e124978c1143a2791d}} 
+\index{ModuleWorker$<$ T $>$@{ModuleWorker$<$ T $>$}!persist\_handle@{persist\_handle}}
+\index{persist\_handle@{persist\_handle}!ModuleWorker$<$ T $>$@{ModuleWorker$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{persist\_handle}{persist\_handle}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classModuleWorker_a96e7f04710860eacf66e9c6aa20b70df}{persist\+\_\+handle\+\_\+func\+\_\+t}} \mbox{\hyperlink{classModuleWorker}{Module\+Worker}}$<$ T $>$\+::persist\+\_\+handle\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+worker(작업자)가 작업이 없는 경우에도 지속적으로 처리해야 할 작업 함수 포인터 
+
+
+
+Module\+Worker.\+hpp 파일의 144 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classModuleWorker_aa4135fcbeb2fbd0cfb8fe494e03f5f1d}\label{classModuleWorker_aa4135fcbeb2fbd0cfb8fe494e03f5f1d}} 
+\index{ModuleWorker$<$ T $>$@{ModuleWorker$<$ T $>$}!wait\_for\_ms@{wait\_for\_ms}}
+\index{wait\_for\_ms@{wait\_for\_ms}!ModuleWorker$<$ T $>$@{ModuleWorker$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{wait\_for\_ms}{wait\_for\_ms}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::chrono\+::milliseconds \mbox{\hyperlink{classModuleWorker}{Module\+Worker}}$<$ T $>$\+::wait\+\_\+for\+\_\+ms\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+worker(작업자)가 job(작업) 요청을 대기하는 시간으로 해당 시간 안에 작업 요청이 없으면 persist handle(지속적으로 처리해야 작업)이 호출됨 
+
+
+
+Module\+Worker.\+hpp 파일의 147 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classModuleWorker_a2caa42996f2d717b506253a1db6de68d}\label{classModuleWorker_a2caa42996f2d717b506253a1db6de68d}} 
+\index{ModuleWorker$<$ T $>$@{ModuleWorker$<$ T $>$}!worker\_threads@{worker\_threads}}
+\index{worker\_threads@{worker\_threads}!ModuleWorker$<$ T $>$@{ModuleWorker$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{worker\_threads}{worker\_threads}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$std\+::shared\+\_\+ptr$<$std\+::thread$>$ $>$ \mbox{\hyperlink{classModuleWorker}{Module\+Worker}}$<$ T $>$\+::worker\+\_\+threads\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+작업자(worker) 스레드 목록 
+
+
+
+Module\+Worker.\+hpp 파일의 130 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classModuleWorker_a9a44976769b151e33b8662433d8dd1a9}\label{classModuleWorker_a9a44976769b151e33b8662433d8dd1a9}} 
+\index{ModuleWorker$<$ T $>$@{ModuleWorker$<$ T $>$}!workers@{workers}}
+\index{workers@{workers}!ModuleWorker$<$ T $>$@{ModuleWorker$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{workers}{workers}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classModuleWorker_1_1Worker}{Worker}}$>$ $>$ \mbox{\hyperlink{classModuleWorker}{Module\+Worker}}$<$ T $>$\+::workers\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+작업자(worker) 목록 
+
+
+
+Module\+Worker.\+hpp 파일의 128 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{ModuleWorker_8hpp}{Module\+Worker.\+hpp}}\end{DoxyCompactItemize}

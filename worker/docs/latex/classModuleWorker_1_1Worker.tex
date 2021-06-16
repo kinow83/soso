@@ -1,0 +1,196 @@
+\hypertarget{classModuleWorker_1_1Worker}{}\doxysection{Module\+Worker$<$ T $>$\+::Worker 클래스 참조}
+\label{classModuleWorker_1_1Worker}\index{ModuleWorker$<$ T $>$::Worker@{ModuleWorker$<$ T $>$::Worker}}
+
+
+job(작업)를 처리하기 worker(작업)를 관리하기 위한 객체  
+
+
+
+
+{\ttfamily \#include $<$Module\+Worker.\+hpp$>$}
+
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classModuleWorker_1_1Worker_a824c0e21b5a4376fb63caa9e8143af6d}{Worker}} (int \mbox{\hyperlink{classModuleWorker_1_1Worker_a07e18b9f4eec35eabd089d6f586126d2}{worker\+\_\+id}})
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classModuleWorker_1_1Worker}{Worker}} 생성자 \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{classModuleWorker_1_1Worker_a4a39bbc1e642bdd79a0986fef7c4a2a5}{get\+Worker\+ID}} () const
+\begin{DoxyCompactList}\small\item\em worker I\+D를 반환 \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{classModuleWorker_1_1Worker_a75a5b0f9b56343709edd759983474ae5}{get\+Completed\+Jobs}} () const
+\begin{DoxyCompactList}\small\item\em worker가 완료 처리한 job(작업) 수를 반환 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classModuleWorker_1_1Worker_a95e4fb1afdc372554b063888eee2e731}{set\+Context}} (void $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em worker가 완료 처리한 jo\+Module\+Workerturn ++completed\+\_\+jobs; \} /$\ast$$\ast$ \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{classModuleWorker_1_1Worker_a971782242aa08e4f4c327cde23999f20}{get\+Context}} ()
+\begin{DoxyCompactList}\small\item\em worker의 내부 정보 반환 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classModuleWorker_1_1Worker_a07e18b9f4eec35eabd089d6f586126d2}{worker\+\_\+id}}
+\begin{DoxyCompactList}\small\item\em worker ID \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{classModuleWorker_1_1Worker_a96a298a85de631525b11ab5342a9e2e8}{completed\+\_\+jobs}}
+\begin{DoxyCompactList}\small\item\em 처리 완료된 작업 수 \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{classModuleWorker_1_1Worker_a7ab9204ece96e261ea7845eca5a8612e}{woker\+\_\+ctx}}
+\begin{DoxyCompactList}\small\item\em 개별 worker 마다의 사용자 정의 context \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+\subsubsection*{template$<$typename T$>$\newline
+class Module\+Worker$<$ T $>$\+::\+Worker}
+
+job(작업)를 처리하기 worker(작업)를 관리하기 위한 객체 
+
+Module\+Worker.\+hpp 파일의 30 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{classModuleWorker_1_1Worker_a824c0e21b5a4376fb63caa9e8143af6d}\label{classModuleWorker_1_1Worker_a824c0e21b5a4376fb63caa9e8143af6d}} 
+\index{ModuleWorker$<$ T $>$::Worker@{ModuleWorker$<$ T $>$::Worker}!Worker@{Worker}}
+\index{Worker@{Worker}!ModuleWorker$<$ T $>$::Worker@{ModuleWorker$<$ T $>$::Worker}}
+\doxysubsubsection{\texorpdfstring{Worker()}{Worker()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classModuleWorker}{Module\+Worker}}$<$ T $>$\+::Worker\+::\+Worker (\begin{DoxyParamCaption}\item[{int}]{worker\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{classModuleWorker_1_1Worker}{Worker}} 생성자 
+
+
+\begin{DoxyParams}{매개변수}
+{\em worker\+\_\+id} & worker ID \\
+\hline
+\end{DoxyParams}
+
+
+Module\+Worker.\+hpp 파일의 44 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{classModuleWorker_1_1Worker_a75a5b0f9b56343709edd759983474ae5}\label{classModuleWorker_1_1Worker_a75a5b0f9b56343709edd759983474ae5}} 
+\index{ModuleWorker$<$ T $>$::Worker@{ModuleWorker$<$ T $>$::Worker}!getCompletedJobs@{getCompletedJobs}}
+\index{getCompletedJobs@{getCompletedJobs}!ModuleWorker$<$ T $>$::Worker@{ModuleWorker$<$ T $>$::Worker}}
+\doxysubsubsection{\texorpdfstring{getCompletedJobs()}{getCompletedJobs()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+uint64\+\_\+t \mbox{\hyperlink{classModuleWorker}{Module\+Worker}}$<$ T $>$\+::Worker\+::get\+Completed\+Jobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+worker가 완료 처리한 job(작업) 수를 반환 
+
+\begin{DoxyReturn}{반환값}
+uint64\+\_\+t 
+\end{DoxyReturn}
+
+
+Module\+Worker.\+hpp 파일의 58 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classModuleWorker_1_1Worker_a971782242aa08e4f4c327cde23999f20}\label{classModuleWorker_1_1Worker_a971782242aa08e4f4c327cde23999f20}} 
+\index{ModuleWorker$<$ T $>$::Worker@{ModuleWorker$<$ T $>$::Worker}!getContext@{getContext}}
+\index{getContext@{getContext}!ModuleWorker$<$ T $>$::Worker@{ModuleWorker$<$ T $>$::Worker}}
+\doxysubsubsection{\texorpdfstring{getContext()}{getContext()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void$\ast$ \mbox{\hyperlink{classModuleWorker}{Module\+Worker}}$<$ T $>$\+::Worker\+::get\+Context (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+worker의 내부 정보 반환 
+
+\begin{DoxyReturn}{반환값}
+void$\ast$ 
+\end{DoxyReturn}
+
+
+Module\+Worker.\+hpp 파일의 70 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classModuleWorker_1_1Worker_a4a39bbc1e642bdd79a0986fef7c4a2a5}\label{classModuleWorker_1_1Worker_a4a39bbc1e642bdd79a0986fef7c4a2a5}} 
+\index{ModuleWorker$<$ T $>$::Worker@{ModuleWorker$<$ T $>$::Worker}!getWorkerID@{getWorkerID}}
+\index{getWorkerID@{getWorkerID}!ModuleWorker$<$ T $>$::Worker@{ModuleWorker$<$ T $>$::Worker}}
+\doxysubsubsection{\texorpdfstring{getWorkerID()}{getWorkerID()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+uint32\+\_\+t \mbox{\hyperlink{classModuleWorker}{Module\+Worker}}$<$ T $>$\+::Worker\+::get\+Worker\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+worker I\+D를 반환 
+
+\begin{DoxyReturn}{반환값}
+uint32\+\_\+t 
+\end{DoxyReturn}
+
+
+Module\+Worker.\+hpp 파일의 53 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classModuleWorker_1_1Worker_a95e4fb1afdc372554b063888eee2e731}\label{classModuleWorker_1_1Worker_a95e4fb1afdc372554b063888eee2e731}} 
+\index{ModuleWorker$<$ T $>$::Worker@{ModuleWorker$<$ T $>$::Worker}!setContext@{setContext}}
+\index{setContext@{setContext}!ModuleWorker$<$ T $>$::Worker@{ModuleWorker$<$ T $>$::Worker}}
+\doxysubsubsection{\texorpdfstring{setContext()}{setContext()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classModuleWorker}{Module\+Worker}}$<$ T $>$\+::Worker\+::set\+Context (\begin{DoxyParamCaption}\item[{void $\ast$}]{ctx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+worker가 완료 처리한 jo\+Module\+Workerturn ++completed\+\_\+jobs; \} /$\ast$$\ast$ 
+
+worker의 내부 정보 저장 
+\begin{DoxyParams}{매개변수}
+{\em ctx} & \\
+\hline
+\end{DoxyParams}
+
+
+Module\+Worker.\+hpp 파일의 65 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{classModuleWorker_1_1Worker_a96a298a85de631525b11ab5342a9e2e8}\label{classModuleWorker_1_1Worker_a96a298a85de631525b11ab5342a9e2e8}} 
+\index{ModuleWorker$<$ T $>$::Worker@{ModuleWorker$<$ T $>$::Worker}!completed\_jobs@{completed\_jobs}}
+\index{completed\_jobs@{completed\_jobs}!ModuleWorker$<$ T $>$::Worker@{ModuleWorker$<$ T $>$::Worker}}
+\doxysubsubsection{\texorpdfstring{completed\_jobs}{completed\_jobs}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+uint64\+\_\+t \mbox{\hyperlink{classModuleWorker}{Module\+Worker}}$<$ T $>$\+::Worker\+::completed\+\_\+jobs\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+처리 완료된 작업 수 
+
+
+
+Module\+Worker.\+hpp 파일의 35 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classModuleWorker_1_1Worker_a7ab9204ece96e261ea7845eca5a8612e}\label{classModuleWorker_1_1Worker_a7ab9204ece96e261ea7845eca5a8612e}} 
+\index{ModuleWorker$<$ T $>$::Worker@{ModuleWorker$<$ T $>$::Worker}!woker\_ctx@{woker\_ctx}}
+\index{woker\_ctx@{woker\_ctx}!ModuleWorker$<$ T $>$::Worker@{ModuleWorker$<$ T $>$::Worker}}
+\doxysubsubsection{\texorpdfstring{woker\_ctx}{woker\_ctx}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void$\ast$ \mbox{\hyperlink{classModuleWorker}{Module\+Worker}}$<$ T $>$\+::Worker\+::woker\+\_\+ctx\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+개별 worker 마다의 사용자 정의 context 
+
+
+
+Module\+Worker.\+hpp 파일의 37 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classModuleWorker_1_1Worker_a07e18b9f4eec35eabd089d6f586126d2}\label{classModuleWorker_1_1Worker_a07e18b9f4eec35eabd089d6f586126d2}} 
+\index{ModuleWorker$<$ T $>$::Worker@{ModuleWorker$<$ T $>$::Worker}!worker\_id@{worker\_id}}
+\index{worker\_id@{worker\_id}!ModuleWorker$<$ T $>$::Worker@{ModuleWorker$<$ T $>$::Worker}}
+\doxysubsubsection{\texorpdfstring{worker\_id}{worker\_id}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+uint32\+\_\+t \mbox{\hyperlink{classModuleWorker}{Module\+Worker}}$<$ T $>$\+::Worker\+::worker\+\_\+id\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+worker ID 
+
+
+
+Module\+Worker.\+hpp 파일의 33 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{ModuleWorker_8hpp}{Module\+Worker.\+hpp}}\end{DoxyCompactItemize}

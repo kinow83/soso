@@ -1,0 +1,285 @@
+\hypertarget{classsoso_1_1WorkerManager}{}\doxysection{soso\+::Worker\+Manager 클래스 참조}
+\label{classsoso_1_1WorkerManager}\index{soso::WorkerManager@{soso::WorkerManager}}
+
+
+worker(작업자) 스레드가 job(작업)을 처리하는 라이브러리~\newline
+하나의 job이 Queue(큐)에 추가되면 여러개의 worker 중 하나의 worker가 선택되어 job을 처리한다. 여기서 어떠한 worker가 선택될지는 모른다. $\ast$  
+
+
+
+
+{\ttfamily \#include $<$worker.\+hpp$>$}
+
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classsoso_1_1WorkerManager_a130ed99a428029e226f02b2b09fd293f}{terminate}} (bool with\+\_\+join)
+\begin{DoxyCompactList}\small\item\em 모든 worker(작업자) thread 종료할 것을 알림~\newline
+실제로 종료되었음을 보장하지 않고 join을 호출해야 종료 여부를 알 수 있음 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsoso_1_1WorkerManager_a0d21a295ec60035ae8de22f1e7f880e3}{join}} ()
+\begin{DoxyCompactList}\small\item\em worker thread가 모두 종료 될 때 까지 대기 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsoso_1_1WorkerManager_a0a8aa568575f4424927b1e7449e5ef04}{Worker\+Manager}} (int worker\+\_\+num, int wait\+\_\+for\+\_\+ms)
+\begin{DoxyCompactList}\small\item\em Module\+Worker 생성자 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsoso_1_1WorkerManager_a2abc16f7352cdad9e0069677692c0937}{add\+Job}} (\mbox{\hyperlink{namespacesoso_a5e0f73d41fc3ab920bed09e3254c3d50}{job\+\_\+handler\+\_\+t}} handler, bool multi\+\_\+worker)
+\begin{DoxyCompactList}\small\item\em job(작업) 대기 Queue(큐)에 작업을 추가한다 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsoso_1_1WorkerManager_ae36e12c555f90b04750be9c456c5abc2}{run}} (bool block=false)
+\begin{DoxyCompactList}\small\item\em Module\+Worker 수행 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classsoso_1_1WorkerManager_a30117bebb23b506b3fcbee6bd43f19f4}{worker\+Thread\+Func}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsoso_1_1Worker}{Worker}} $>$ worker)
+\begin{DoxyCompactList}\small\item\em worker thread 동작 함수~\newline
+worker(작업자) thread는 작업큐에서 job(작업)을 가져와 작업 함수(job\+\_\+handle)를 수행한다. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+std\+::deque$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsoso_1_1Job}{Job}} $>$ $>$ \mbox{\hyperlink{classsoso_1_1WorkerManager_ad87994fce4b6b805b7f90657a88387d5}{\+\_\+job\+\_\+Q}} \mbox{[}\mbox{\hyperlink{namespacesoso_a390399d33ffd04660776fff91e506a43aceb3ab4797d35f9e480d8e471378de9a}{J\+O\+B\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+I\+ZE}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em worker(작업자)에게 할당을 요청하는 선택 대기 Queue(큐) \end{DoxyCompactList}\item 
+std\+::mutex \mbox{\hyperlink{classsoso_1_1WorkerManager_a64ebdaab8cbd968782051a069283412a}{\+\_\+job\+\_\+\+Q\+\_\+mutex}} \mbox{[}\mbox{\hyperlink{namespacesoso_a390399d33ffd04660776fff91e506a43aceb3ab4797d35f9e480d8e471378de9a}{J\+O\+B\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+I\+ZE}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em worker(작업자) 선택 대기 Queue 동시 접근을 위한 lock \end{DoxyCompactList}\item 
+std\+::condition\+\_\+variable \mbox{\hyperlink{classsoso_1_1WorkerManager_a0da63a1c9924c2dc6f62c672c3166690}{\+\_\+job\+\_\+\+Q\+\_\+cv}} \mbox{[}\mbox{\hyperlink{namespacesoso_a390399d33ffd04660776fff91e506a43aceb3ab4797d35f9e480d8e471378de9a}{J\+O\+B\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+I\+ZE}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em worker(작업자) 선택 대기 Queue 동시 접근 변수 \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsoso_1_1Worker}{Worker}} $>$ $>$ \mbox{\hyperlink{classsoso_1_1WorkerManager_a60801da07320a26e32c0a536e545f35d}{\+\_\+workers}}
+\begin{DoxyCompactList}\small\item\em 작업자(worker) 목록 \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ std\+::thread $>$ $>$ \mbox{\hyperlink{classsoso_1_1WorkerManager_a4b6db249486a712e60cc4659c1c3f973}{\+\_\+worker\+\_\+threads}}
+\begin{DoxyCompactList}\small\item\em 작업자(worker) 스레드 목록 \end{DoxyCompactList}\item 
+std\+::chrono\+::milliseconds \mbox{\hyperlink{classsoso_1_1WorkerManager_ae1f1f281a5095799669fc93c6b78049a}{\+\_\+wait\+\_\+for\+\_\+ms}}
+\item 
+bool \mbox{\hyperlink{classsoso_1_1WorkerManager_afb1b57feefac977d1e6072a36001531d}{\+\_\+running}} = true
+\begin{DoxyCompactList}\small\item\em 모든 worker(작업자) thread 실행 여부 (종료 용도로만 사용) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+worker(작업자) 스레드가 job(작업)을 처리하는 라이브러리~\newline
+하나의 job이 Queue(큐)에 추가되면 여러개의 worker 중 하나의 worker가 선택되어 job을 처리한다. 여기서 어떠한 worker가 선택될지는 모른다. $\ast$ 
+
+
+\begin{DoxyTemplParams}{템플릿 파라메터}
+{\em T} & 작업을 정의하는 Class 타입 \\
+\hline
+\end{DoxyTemplParams}
+
+
+worker.\+hpp 파일의 168 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{classsoso_1_1WorkerManager_a0a8aa568575f4424927b1e7449e5ef04}\label{classsoso_1_1WorkerManager_a0a8aa568575f4424927b1e7449e5ef04}} 
+\index{soso::WorkerManager@{soso::WorkerManager}!WorkerManager@{WorkerManager}}
+\index{WorkerManager@{WorkerManager}!soso::WorkerManager@{soso::WorkerManager}}
+\doxysubsubsection{\texorpdfstring{WorkerManager()}{WorkerManager()}}
+{\footnotesize\ttfamily soso\+::\+Worker\+Manager\+::\+Worker\+Manager (\begin{DoxyParamCaption}\item[{int}]{worker\+\_\+num,  }\item[{int}]{wait\+\_\+for\+\_\+ms }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Module\+Worker 생성자 
+
+
+\begin{DoxyParams}{매개변수}
+{\em worker\+\_\+num} & worker(작업자) 수 \\
+\hline
+{\em wait\+\_\+for\+\_\+ms} & job(작업) 용처 대기 시간 (millisecond) 수행해야 할 함수 \\
+\hline
+\end{DoxyParams}
+initialize job workers
+
+worker.\+hpp 파일의 264 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{classsoso_1_1WorkerManager_a2abc16f7352cdad9e0069677692c0937}\label{classsoso_1_1WorkerManager_a2abc16f7352cdad9e0069677692c0937}} 
+\index{soso::WorkerManager@{soso::WorkerManager}!addJob@{addJob}}
+\index{addJob@{addJob}!soso::WorkerManager@{soso::WorkerManager}}
+\doxysubsubsection{\texorpdfstring{addJob()}{addJob()}}
+{\footnotesize\ttfamily void soso\+::\+Worker\+Manager\+::add\+Job (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesoso_a5e0f73d41fc3ab920bed09e3254c3d50}{job\+\_\+handler\+\_\+t}}}]{handler,  }\item[{bool}]{multi\+\_\+worker }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+job(작업) 대기 Queue(큐)에 작업을 추가한다 
+
+
+\begin{DoxyParams}{매개변수}
+{\em job} & \\
+\hline
+\end{DoxyParams}
+
+
+worker.\+hpp 파일의 282 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1WorkerManager_a0d21a295ec60035ae8de22f1e7f880e3}\label{classsoso_1_1WorkerManager_a0d21a295ec60035ae8de22f1e7f880e3}} 
+\index{soso::WorkerManager@{soso::WorkerManager}!join@{join}}
+\index{join@{join}!soso::WorkerManager@{soso::WorkerManager}}
+\doxysubsubsection{\texorpdfstring{join()}{join()}}
+{\footnotesize\ttfamily void soso\+::\+Worker\+Manager\+::join (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+worker thread가 모두 종료 될 때 까지 대기 
+
+
+
+worker.\+hpp 파일의 247 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1WorkerManager_ae36e12c555f90b04750be9c456c5abc2}\label{classsoso_1_1WorkerManager_ae36e12c555f90b04750be9c456c5abc2}} 
+\index{soso::WorkerManager@{soso::WorkerManager}!run@{run}}
+\index{run@{run}!soso::WorkerManager@{soso::WorkerManager}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void soso\+::\+Worker\+Manager\+::run (\begin{DoxyParamCaption}\item[{bool}]{block = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Module\+Worker 수행 
+
+
+\begin{DoxyParams}{매개변수}
+{\em block} & Y\+E\+S인 경우 run 함수 block되어 뒤에 실행 코드가 수행 안됨~\newline
+F\+A\+L\+S\+E인 경우 run 함수 호출 후 바로 리턴됨 \\
+\hline
+\end{DoxyParams}
+create job worker thread
+
+block thread
+
+non block thread
+
+worker.\+hpp 파일의 294 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1WorkerManager_a130ed99a428029e226f02b2b09fd293f}\label{classsoso_1_1WorkerManager_a130ed99a428029e226f02b2b09fd293f}} 
+\index{soso::WorkerManager@{soso::WorkerManager}!terminate@{terminate}}
+\index{terminate@{terminate}!soso::WorkerManager@{soso::WorkerManager}}
+\doxysubsubsection{\texorpdfstring{terminate()}{terminate()}}
+{\footnotesize\ttfamily void soso\+::\+Worker\+Manager\+::terminate (\begin{DoxyParamCaption}\item[{bool}]{with\+\_\+join }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+모든 worker(작업자) thread 종료할 것을 알림~\newline
+실제로 종료되었음을 보장하지 않고 join을 호출해야 종료 여부를 알 수 있음 
+
+
+
+worker.\+hpp 파일의 237 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1WorkerManager_a30117bebb23b506b3fcbee6bd43f19f4}\label{classsoso_1_1WorkerManager_a30117bebb23b506b3fcbee6bd43f19f4}} 
+\index{soso::WorkerManager@{soso::WorkerManager}!workerThreadFunc@{workerThreadFunc}}
+\index{workerThreadFunc@{workerThreadFunc}!soso::WorkerManager@{soso::WorkerManager}}
+\doxysubsubsection{\texorpdfstring{workerThreadFunc()}{workerThreadFunc()}}
+{\footnotesize\ttfamily void soso\+::\+Worker\+Manager\+::worker\+Thread\+Func (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsoso_1_1Worker}{Worker}} $>$}]{worker }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+worker thread 동작 함수~\newline
+worker(작업자) thread는 작업큐에서 job(작업)을 가져와 작업 함수(job\+\_\+handle)를 수행한다. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em worker} & 작업자 \\
+\hline
+\end{DoxyParams}
+worker thread 종료 되었음을 알림
+
+worker.\+hpp 파일의 196 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{classsoso_1_1WorkerManager_ad87994fce4b6b805b7f90657a88387d5}\label{classsoso_1_1WorkerManager_ad87994fce4b6b805b7f90657a88387d5}} 
+\index{soso::WorkerManager@{soso::WorkerManager}!\_job\_Q@{\_job\_Q}}
+\index{\_job\_Q@{\_job\_Q}!soso::WorkerManager@{soso::WorkerManager}}
+\doxysubsubsection{\texorpdfstring{\_job\_Q}{\_job\_Q}}
+{\footnotesize\ttfamily std\+::deque$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classsoso_1_1Job}{Job}}$>$ $>$ soso\+::\+Worker\+Manager\+::\+\_\+job\+\_\+Q\mbox{[}\mbox{\hyperlink{namespacesoso_a390399d33ffd04660776fff91e506a43aceb3ab4797d35f9e480d8e471378de9a}{J\+O\+B\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+I\+ZE}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+worker(작업자)에게 할당을 요청하는 선택 대기 Queue(큐) 
+
+
+
+worker.\+hpp 파일의 172 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1WorkerManager_a0da63a1c9924c2dc6f62c672c3166690}\label{classsoso_1_1WorkerManager_a0da63a1c9924c2dc6f62c672c3166690}} 
+\index{soso::WorkerManager@{soso::WorkerManager}!\_job\_Q\_cv@{\_job\_Q\_cv}}
+\index{\_job\_Q\_cv@{\_job\_Q\_cv}!soso::WorkerManager@{soso::WorkerManager}}
+\doxysubsubsection{\texorpdfstring{\_job\_Q\_cv}{\_job\_Q\_cv}}
+{\footnotesize\ttfamily std\+::condition\+\_\+variable soso\+::\+Worker\+Manager\+::\+\_\+job\+\_\+\+Q\+\_\+cv\mbox{[}\mbox{\hyperlink{namespacesoso_a390399d33ffd04660776fff91e506a43aceb3ab4797d35f9e480d8e471378de9a}{J\+O\+B\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+I\+ZE}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+worker(작업자) 선택 대기 Queue 동시 접근 변수 
+
+
+
+worker.\+hpp 파일의 176 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1WorkerManager_a64ebdaab8cbd968782051a069283412a}\label{classsoso_1_1WorkerManager_a64ebdaab8cbd968782051a069283412a}} 
+\index{soso::WorkerManager@{soso::WorkerManager}!\_job\_Q\_mutex@{\_job\_Q\_mutex}}
+\index{\_job\_Q\_mutex@{\_job\_Q\_mutex}!soso::WorkerManager@{soso::WorkerManager}}
+\doxysubsubsection{\texorpdfstring{\_job\_Q\_mutex}{\_job\_Q\_mutex}}
+{\footnotesize\ttfamily std\+::mutex soso\+::\+Worker\+Manager\+::\+\_\+job\+\_\+\+Q\+\_\+mutex\mbox{[}\mbox{\hyperlink{namespacesoso_a390399d33ffd04660776fff91e506a43aceb3ab4797d35f9e480d8e471378de9a}{J\+O\+B\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+I\+ZE}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+worker(작업자) 선택 대기 Queue 동시 접근을 위한 lock 
+
+
+
+worker.\+hpp 파일의 174 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1WorkerManager_afb1b57feefac977d1e6072a36001531d}\label{classsoso_1_1WorkerManager_afb1b57feefac977d1e6072a36001531d}} 
+\index{soso::WorkerManager@{soso::WorkerManager}!\_running@{\_running}}
+\index{\_running@{\_running}!soso::WorkerManager@{soso::WorkerManager}}
+\doxysubsubsection{\texorpdfstring{\_running}{\_running}}
+{\footnotesize\ttfamily bool soso\+::\+Worker\+Manager\+::\+\_\+running = true\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+모든 worker(작업자) thread 실행 여부 (종료 용도로만 사용) 
+
+
+
+worker.\+hpp 파일의 187 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1WorkerManager_ae1f1f281a5095799669fc93c6b78049a}\label{classsoso_1_1WorkerManager_ae1f1f281a5095799669fc93c6b78049a}} 
+\index{soso::WorkerManager@{soso::WorkerManager}!\_wait\_for\_ms@{\_wait\_for\_ms}}
+\index{\_wait\_for\_ms@{\_wait\_for\_ms}!soso::WorkerManager@{soso::WorkerManager}}
+\doxysubsubsection{\texorpdfstring{\_wait\_for\_ms}{\_wait\_for\_ms}}
+{\footnotesize\ttfamily std\+::chrono\+::milliseconds soso\+::\+Worker\+Manager\+::\+\_\+wait\+\_\+for\+\_\+ms\hspace{0.3cm}{\ttfamily [private]}}
+
+worker(작업자)가 job(작업) 요청을 대기하는 시간으로 해당 시간 안에 작업 요청이 없으면 persist handle(지속적으로 처리해야 작업)이 호출됨 
+
+worker.\+hpp 파일의 185 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1WorkerManager_a4b6db249486a712e60cc4659c1c3f973}\label{classsoso_1_1WorkerManager_a4b6db249486a712e60cc4659c1c3f973}} 
+\index{soso::WorkerManager@{soso::WorkerManager}!\_worker\_threads@{\_worker\_threads}}
+\index{\_worker\_threads@{\_worker\_threads}!soso::WorkerManager@{soso::WorkerManager}}
+\doxysubsubsection{\texorpdfstring{\_worker\_threads}{\_worker\_threads}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$std\+::thread$>$ $>$ soso\+::\+Worker\+Manager\+::\+\_\+worker\+\_\+threads\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+작업자(worker) 스레드 목록 
+
+
+
+worker.\+hpp 파일의 181 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1WorkerManager_a60801da07320a26e32c0a536e545f35d}\label{classsoso_1_1WorkerManager_a60801da07320a26e32c0a536e545f35d}} 
+\index{soso::WorkerManager@{soso::WorkerManager}!\_workers@{\_workers}}
+\index{\_workers@{\_workers}!soso::WorkerManager@{soso::WorkerManager}}
+\doxysubsubsection{\texorpdfstring{\_workers}{\_workers}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classsoso_1_1Worker}{Worker}}$>$ $>$ soso\+::\+Worker\+Manager\+::\+\_\+workers\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+작업자(worker) 목록 
+
+
+
+worker.\+hpp 파일의 179 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{worker_8hpp}{worker.\+hpp}}\end{DoxyCompactItemize}

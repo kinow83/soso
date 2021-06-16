@@ -1,0 +1,262 @@
+\hypertarget{classsoso_1_1Worker}{}\doxysection{soso\+::Worker 클래스 참조}
+\label{classsoso_1_1Worker}\index{soso::Worker@{soso::Worker}}
+
+
+job(작업)를 처리하기 worker(작업)를 관리하기 위한 객체  
+
+
+
+
+{\ttfamily \#include $<$worker.\+hpp$>$}
+
+
+
+soso\+::Worker에 대한 협력 다이어그램\+:
+% FIG 0
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsoso_1_1Worker_a3ca22c6e2e9464033394473e3d4909af}{Worker}} (\mbox{\hyperlink{classsoso_1_1WorkerManager}{Worker\+Manager}} $\ast$worker\+\_\+manager, int worker\+\_\+id, \mbox{\hyperlink{namespacesoso_a390399d33ffd04660776fff91e506a43}{J\+O\+B\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+T\+Y\+PE}} job\+\_\+type)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classsoso_1_1Worker}{Worker}} 생성자 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacesoso_a390399d33ffd04660776fff91e506a43}{J\+O\+B\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{classsoso_1_1Worker_a3bdaf6f49930a0409c4a3fb1374e1996}{get\+Job\+Type}} ()
+\item 
+const \mbox{\hyperlink{classsoso_1_1WorkerManager}{Worker\+Manager}} $\ast$ \mbox{\hyperlink{classsoso_1_1Worker_aadc06e7944ca0a5356ca8bf7f1c16532}{get\+Worker\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Module\+Worker(작업 관리자) 포인터 반환 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsoso_1_1Worker_a6b3514214d43d3728a5edec4e8caa4b1}{finished}} ()
+\begin{DoxyCompactList}\small\item\em worker thread 종료 여부 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsoso_1_1Worker_a0d621552c5e21e273004a558b9716e96}{terminate}} ()
+\begin{DoxyCompactList}\small\item\em worker(작업자) thread를 종료하라고 알림 \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{classsoso_1_1Worker_a46ae8041f7471d2a1699c92fe71fe429}{get\+Worker\+ID}} ()
+\begin{DoxyCompactList}\small\item\em worker I\+D를 반환 \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{classsoso_1_1Worker_ac0da7aa43a172055511535a74547e97d}{get\+Completed\+Jobs}} ()
+\begin{DoxyCompactList}\small\item\em worker가 완료 처리한 job(작업) 수를 반환 \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{classsoso_1_1Worker_a84bbefcfa1768f0901292714b6519a11}{inc\+Completed\+Jobs}} ()
+\begin{DoxyCompactList}\small\item\em worker가 완료 처리한 job(작업) 수 1 증가 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classsoso_1_1Worker_aa7b6328b62b3b85f55afb3fbb9c21b60}{\+\_\+worker\+\_\+id}}
+\begin{DoxyCompactList}\small\item\em worker ID \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{classsoso_1_1Worker_ad46bfde230d18454e8ddc72a9a4f9588}{\+\_\+completed\+\_\+jobs}}
+\begin{DoxyCompactList}\small\item\em 처리 완료된 작업 수 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsoso_1_1WorkerManager}{Worker\+Manager}} $\ast$ \mbox{\hyperlink{classsoso_1_1Worker_a4d14a9741b5de134c758fea01800ce08}{\+\_\+worker\+\_\+manager}}
+\item 
+bool \mbox{\hyperlink{classsoso_1_1Worker_a58f521c08a6748ebf70e088cf1cc1c70}{\+\_\+running}} = true
+\begin{DoxyCompactList}\small\item\em worker(작업자) thread 종료되었는지 여부 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacesoso_a390399d33ffd04660776fff91e506a43}{J\+O\+B\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{classsoso_1_1Worker_a0d7964172c9bdefc560dd82135d79a7b}{\+\_\+job\+\_\+type}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+job(작업)를 처리하기 worker(작업)를 관리하기 위한 객체 
+
+worker.\+hpp 파일의 34 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{classsoso_1_1Worker_a3ca22c6e2e9464033394473e3d4909af}\label{classsoso_1_1Worker_a3ca22c6e2e9464033394473e3d4909af}} 
+\index{soso::Worker@{soso::Worker}!Worker@{Worker}}
+\index{Worker@{Worker}!soso::Worker@{soso::Worker}}
+\doxysubsubsection{\texorpdfstring{Worker()}{Worker()}}
+{\footnotesize\ttfamily soso\+::\+Worker\+::\+Worker (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsoso_1_1WorkerManager}{Worker\+Manager}} $\ast$}]{worker\+\_\+manager,  }\item[{int}]{worker\+\_\+id,  }\item[{\mbox{\hyperlink{namespacesoso_a390399d33ffd04660776fff91e506a43}{J\+O\+B\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+T\+Y\+PE}}}]{job\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{classsoso_1_1Worker}{Worker}} 생성자 
+
+
+\begin{DoxyParams}{매개변수}
+{\em worker\+\_\+id} & worker ID \\
+\hline
+\end{DoxyParams}
+
+
+worker.\+hpp 파일의 52 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{classsoso_1_1Worker_a6b3514214d43d3728a5edec4e8caa4b1}\label{classsoso_1_1Worker_a6b3514214d43d3728a5edec4e8caa4b1}} 
+\index{soso::Worker@{soso::Worker}!finished@{finished}}
+\index{finished@{finished}!soso::Worker@{soso::Worker}}
+\doxysubsubsection{\texorpdfstring{finished()}{finished()}}
+{\footnotesize\ttfamily bool soso\+::\+Worker\+::finished (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+worker thread 종료 여부 
+
+\begin{DoxyReturn}{반환값}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+worker.\+hpp 파일의 77 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1Worker_ac0da7aa43a172055511535a74547e97d}\label{classsoso_1_1Worker_ac0da7aa43a172055511535a74547e97d}} 
+\index{soso::Worker@{soso::Worker}!getCompletedJobs@{getCompletedJobs}}
+\index{getCompletedJobs@{getCompletedJobs}!soso::Worker@{soso::Worker}}
+\doxysubsubsection{\texorpdfstring{getCompletedJobs()}{getCompletedJobs()}}
+{\footnotesize\ttfamily uint64\+\_\+t soso\+::\+Worker\+::get\+Completed\+Jobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+worker가 완료 처리한 job(작업) 수를 반환 
+
+\begin{DoxyReturn}{반환값}
+uint64\+\_\+t 
+\end{DoxyReturn}
+
+
+worker.\+hpp 파일의 100 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1Worker_a3bdaf6f49930a0409c4a3fb1374e1996}\label{classsoso_1_1Worker_a3bdaf6f49930a0409c4a3fb1374e1996}} 
+\index{soso::Worker@{soso::Worker}!getJobType@{getJobType}}
+\index{getJobType@{getJobType}!soso::Worker@{soso::Worker}}
+\doxysubsubsection{\texorpdfstring{getJobType()}{getJobType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesoso_a390399d33ffd04660776fff91e506a43}{J\+O\+B\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+T\+Y\+PE}} soso\+::\+Worker\+::get\+Job\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+worker.\+hpp 파일의 60 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1Worker_a46ae8041f7471d2a1699c92fe71fe429}\label{classsoso_1_1Worker_a46ae8041f7471d2a1699c92fe71fe429}} 
+\index{soso::Worker@{soso::Worker}!getWorkerID@{getWorkerID}}
+\index{getWorkerID@{getWorkerID}!soso::Worker@{soso::Worker}}
+\doxysubsubsection{\texorpdfstring{getWorkerID()}{getWorkerID()}}
+{\footnotesize\ttfamily uint32\+\_\+t soso\+::\+Worker\+::get\+Worker\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+worker I\+D를 반환 
+
+\begin{DoxyReturn}{반환값}
+uint32\+\_\+t 
+\end{DoxyReturn}
+
+
+worker.\+hpp 파일의 94 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1Worker_aadc06e7944ca0a5356ca8bf7f1c16532}\label{classsoso_1_1Worker_aadc06e7944ca0a5356ca8bf7f1c16532}} 
+\index{soso::Worker@{soso::Worker}!getWorkerManager@{getWorkerManager}}
+\index{getWorkerManager@{getWorkerManager}!soso::Worker@{soso::Worker}}
+\doxysubsubsection{\texorpdfstring{getWorkerManager()}{getWorkerManager()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classsoso_1_1WorkerManager}{Worker\+Manager}}$\ast$ soso\+::\+Worker\+::get\+Worker\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Module\+Worker(작업 관리자) 포인터 반환 
+
+\begin{DoxyReturn}{반환값}
+const Module\+Worker$<$\+T$>$$\ast$ 
+\end{DoxyReturn}
+
+
+worker.\+hpp 파일의 68 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1Worker_a84bbefcfa1768f0901292714b6519a11}\label{classsoso_1_1Worker_a84bbefcfa1768f0901292714b6519a11}} 
+\index{soso::Worker@{soso::Worker}!incCompletedJobs@{incCompletedJobs}}
+\index{incCompletedJobs@{incCompletedJobs}!soso::Worker@{soso::Worker}}
+\doxysubsubsection{\texorpdfstring{incCompletedJobs()}{incCompletedJobs()}}
+{\footnotesize\ttfamily uint64\+\_\+t soso\+::\+Worker\+::inc\+Completed\+Jobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+worker가 완료 처리한 job(작업) 수 1 증가 
+
+
+
+worker.\+hpp 파일의 105 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1Worker_a0d621552c5e21e273004a558b9716e96}\label{classsoso_1_1Worker_a0d621552c5e21e273004a558b9716e96}} 
+\index{soso::Worker@{soso::Worker}!terminate@{terminate}}
+\index{terminate@{terminate}!soso::Worker@{soso::Worker}}
+\doxysubsubsection{\texorpdfstring{terminate()}{terminate()}}
+{\footnotesize\ttfamily void soso\+::\+Worker\+::terminate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+worker(작업자) thread를 종료하라고 알림 
+
+\begin{DoxyReturn}{반환값}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+worker.\+hpp 파일의 86 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{classsoso_1_1Worker_ad46bfde230d18454e8ddc72a9a4f9588}\label{classsoso_1_1Worker_ad46bfde230d18454e8ddc72a9a4f9588}} 
+\index{soso::Worker@{soso::Worker}!\_completed\_jobs@{\_completed\_jobs}}
+\index{\_completed\_jobs@{\_completed\_jobs}!soso::Worker@{soso::Worker}}
+\doxysubsubsection{\texorpdfstring{\_completed\_jobs}{\_completed\_jobs}}
+{\footnotesize\ttfamily uint64\+\_\+t soso\+::\+Worker\+::\+\_\+completed\+\_\+jobs\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+처리 완료된 작업 수 
+
+
+
+worker.\+hpp 파일의 39 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1Worker_a0d7964172c9bdefc560dd82135d79a7b}\label{classsoso_1_1Worker_a0d7964172c9bdefc560dd82135d79a7b}} 
+\index{soso::Worker@{soso::Worker}!\_job\_type@{\_job\_type}}
+\index{\_job\_type@{\_job\_type}!soso::Worker@{soso::Worker}}
+\doxysubsubsection{\texorpdfstring{\_job\_type}{\_job\_type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesoso_a390399d33ffd04660776fff91e506a43}{J\+O\+B\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+T\+Y\+PE}} soso\+::\+Worker\+::\+\_\+job\+\_\+type\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+worker.\+hpp 파일의 45 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1Worker_a58f521c08a6748ebf70e088cf1cc1c70}\label{classsoso_1_1Worker_a58f521c08a6748ebf70e088cf1cc1c70}} 
+\index{soso::Worker@{soso::Worker}!\_running@{\_running}}
+\index{\_running@{\_running}!soso::Worker@{soso::Worker}}
+\doxysubsubsection{\texorpdfstring{\_running}{\_running}}
+{\footnotesize\ttfamily bool soso\+::\+Worker\+::\+\_\+running = true\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+worker(작업자) thread 종료되었는지 여부 
+
+
+
+worker.\+hpp 파일의 43 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1Worker_aa7b6328b62b3b85f55afb3fbb9c21b60}\label{classsoso_1_1Worker_aa7b6328b62b3b85f55afb3fbb9c21b60}} 
+\index{soso::Worker@{soso::Worker}!\_worker\_id@{\_worker\_id}}
+\index{\_worker\_id@{\_worker\_id}!soso::Worker@{soso::Worker}}
+\doxysubsubsection{\texorpdfstring{\_worker\_id}{\_worker\_id}}
+{\footnotesize\ttfamily uint32\+\_\+t soso\+::\+Worker\+::\+\_\+worker\+\_\+id\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+worker ID 
+
+
+
+worker.\+hpp 파일의 37 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1Worker_a4d14a9741b5de134c758fea01800ce08}\label{classsoso_1_1Worker_a4d14a9741b5de134c758fea01800ce08}} 
+\index{soso::Worker@{soso::Worker}!\_worker\_manager@{\_worker\_manager}}
+\index{\_worker\_manager@{\_worker\_manager}!soso::Worker@{soso::Worker}}
+\doxysubsubsection{\texorpdfstring{\_worker\_manager}{\_worker\_manager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsoso_1_1WorkerManager}{Worker\+Manager}}$\ast$ soso\+::\+Worker\+::\+\_\+worker\+\_\+manager\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+worker.\+hpp 파일의 41 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{worker_8hpp}{worker.\+hpp}}\end{DoxyCompactItemize}

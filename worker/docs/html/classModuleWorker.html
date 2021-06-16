@@ -1,0 +1,664 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ModuleWorker: ModuleWorker&lt; T &gt; 클래스 템플릿 참조</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ModuleWorker
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'검색');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','검색');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">클래스</a> &#124;
+<a href="#pub-methods">Public 멤버 함수</a> &#124;
+<a href="#pri-types">Private 타입</a> &#124;
+<a href="#pri-attribs">Private 속성</a> &#124;
+<a href="classModuleWorker-members.html">모든 멤버 목록</a>  </div>
+  <div class="headertitle">
+<div class="title">ModuleWorker&lt; T &gt; 클래스 템플릿 참조</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>worker(작업자) 스레드가 job(작업)을 처리하는 라이브러리<br  />
+하나의 job이 Queue(큐)에 추가되면 여러개의 worker 중 하나의 worker가 선택되어 job을 처리한다. 여기서 어떠한 worker가 선택될지는 모른다. *  
+ <a href="classModuleWorker.html#details">더 자세히 ...</a></p>
+
+<p><code>#include &lt;<a class="el" href="ModuleWorker_8hpp_source.html">ModuleWorker.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+클래스</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModuleWorker_1_1Job.html">Job</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">작업 객체 <br  />
+typename T: 처리해야 할 Class 타입  <a href="classModuleWorker_1_1Job.html#details">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModuleWorker_1_1Worker.html">Worker</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">job(작업)를 처리하기 worker(작업)를 관리하기 위한 객체  <a href="classModuleWorker_1_1Worker.html#details">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 멤버 함수</h2></td></tr>
+<tr class="memitem:acc844af45ab3e000582bf13306d2cb46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModuleWorker.html#acc844af45ab3e000582bf13306d2cb46">workerThreadFunc</a> (std::shared_ptr&lt; <a class="el" href="classModuleWorker_1_1Worker.html">Worker</a> &gt; worker)</td></tr>
+<tr class="memdesc:acc844af45ab3e000582bf13306d2cb46"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classModuleWorker.html" title="worker(작업자) 스레드가 job(작업)을 처리하는 라이브러리 하나의 job이 Queue(큐)에 추가되면 여러개의 worker 중 하나의 worker가 선택되어 job을 처리한다...">ModuleWorker</a> 생성자  <a href="classModuleWorker.html#acc844af45ab3e000582bf13306d2cb46">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:acc844af45ab3e000582bf13306d2cb46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b95e9d122fbaefdeb8dfc72bdd87b72"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModuleWorker.html#a6b95e9d122fbaefdeb8dfc72bdd87b72">ModuleWorker</a> (int worker_num, int <a class="el" href="classModuleWorker.html#aa4135fcbeb2fbd0cfb8fe494e03f5f1d">wait_for_ms</a>, <a class="el" href="classModuleWorker.html#aa7eb2b4d2dd1128cd2f42a398a8008f6">job_init_func_t</a> worker_init, <a class="el" href="classModuleWorker.html#ac4a47eb76738a107edbc810f1e02a8bc">job_handle_func_t</a> <a class="el" href="classModuleWorker.html#a9db5f0c02c81e788a6b115a9d37ccc19">job_handle</a>, <a class="el" href="classModuleWorker.html#a96e7f04710860eacf66e9c6aa20b70df">persist_handle_func_t</a> <a class="el" href="classModuleWorker.html#aa8c4a6343cd595e124978c1143a2791d">persist_handle</a>)</td></tr>
+<tr class="memdesc:a6b95e9d122fbaefdeb8dfc72bdd87b72"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classModuleWorker.html" title="worker(작업자) 스레드가 job(작업)을 처리하는 라이브러리 하나의 job이 Queue(큐)에 추가되면 여러개의 worker 중 하나의 worker가 선택되어 job을 처리한다...">ModuleWorker</a> 생성자  <a href="classModuleWorker.html#a6b95e9d122fbaefdeb8dfc72bdd87b72">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a6b95e9d122fbaefdeb8dfc72bdd87b72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0d2c40dabdcd2161bcbdddfabf4874f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModuleWorker.html#ac0d2c40dabdcd2161bcbdddfabf4874f">addJob</a> (std::shared_ptr&lt; <a class="el" href="classModuleWorker_1_1Job.html">Job</a> &gt; job)</td></tr>
+<tr class="memdesc:ac0d2c40dabdcd2161bcbdddfabf4874f"><td class="mdescLeft">&#160;</td><td class="mdescRight">job(작업) 대기 Queue(큐)에 작업을 추가한다  <a href="classModuleWorker.html#ac0d2c40dabdcd2161bcbdddfabf4874f">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:ac0d2c40dabdcd2161bcbdddfabf4874f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0af7ee60cc767a2dbce8e51d0277be78"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModuleWorker.html#a0af7ee60cc767a2dbce8e51d0277be78">run</a> (bool block)</td></tr>
+<tr class="memdesc:a0af7ee60cc767a2dbce8e51d0277be78"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classModuleWorker.html" title="worker(작업자) 스레드가 job(작업)을 처리하는 라이브러리 하나의 job이 Queue(큐)에 추가되면 여러개의 worker 중 하나의 worker가 선택되어 job을 처리한다...">ModuleWorker</a> 수행  <a href="classModuleWorker.html#a0af7ee60cc767a2dbce8e51d0277be78">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a0af7ee60cc767a2dbce8e51d0277be78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
+Private 타입</h2></td></tr>
+<tr class="memitem:aa7eb2b4d2dd1128cd2f42a398a8008f6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModuleWorker.html#aa7eb2b4d2dd1128cd2f42a398a8008f6">job_init_func_t</a> = std::function&lt; void *(void)&gt;</td></tr>
+<tr class="memdesc:aa7eb2b4d2dd1128cd2f42a398a8008f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">job(작업) 초기화 함수 포인터 Type  <a href="classModuleWorker.html#aa7eb2b4d2dd1128cd2f42a398a8008f6">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:aa7eb2b4d2dd1128cd2f42a398a8008f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4a47eb76738a107edbc810f1e02a8bc"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModuleWorker.html#ac4a47eb76738a107edbc810f1e02a8bc">job_handle_func_t</a> = std::function&lt; void(std::shared_ptr&lt; <a class="el" href="classModuleWorker_1_1Job.html">Job</a> &gt;, std::shared_ptr&lt; <a class="el" href="classModuleWorker_1_1Worker.html">Worker</a> &gt;)&gt;</td></tr>
+<tr class="memdesc:ac4a47eb76738a107edbc810f1e02a8bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">job(작업) 처리 함수 포인터 Type  <a href="classModuleWorker.html#ac4a47eb76738a107edbc810f1e02a8bc">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:ac4a47eb76738a107edbc810f1e02a8bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96e7f04710860eacf66e9c6aa20b70df"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModuleWorker.html#a96e7f04710860eacf66e9c6aa20b70df">persist_handle_func_t</a> = std::function&lt; void(std::shared_ptr&lt; <a class="el" href="classModuleWorker_1_1Worker.html">Worker</a> &gt;)&gt;</td></tr>
+<tr class="memdesc:a96e7f04710860eacf66e9c6aa20b70df"><td class="mdescLeft">&#160;</td><td class="mdescRight">worker(작업자)가 작업이 없는 경우에도 처리해야 할 동작 함수 포인터 Type  <a href="classModuleWorker.html#a96e7f04710860eacf66e9c6aa20b70df">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a96e7f04710860eacf66e9c6aa20b70df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 속성</h2></td></tr>
+<tr class="memitem:a3bc07991f160393218bb87b3414ba920"><td class="memItemLeft" align="right" valign="top">std::deque&lt; std::shared_ptr&lt; <a class="el" href="classModuleWorker_1_1Job.html">Job</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModuleWorker.html#a3bc07991f160393218bb87b3414ba920">job_q</a></td></tr>
+<tr class="memdesc:a3bc07991f160393218bb87b3414ba920"><td class="mdescLeft">&#160;</td><td class="mdescRight">worker(작업자)에게 할당을 요청하는 선택 대기 Queue(큐)  <a href="classModuleWorker.html#a3bc07991f160393218bb87b3414ba920">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a3bc07991f160393218bb87b3414ba920"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52b54d28d448188bd895ef1e6dea86fc"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModuleWorker.html#a52b54d28d448188bd895ef1e6dea86fc">job_q_mutex</a></td></tr>
+<tr class="memdesc:a52b54d28d448188bd895ef1e6dea86fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">worker(작업자) 선택 대기 Queue 동시 접근을 위한 lock  <a href="classModuleWorker.html#a52b54d28d448188bd895ef1e6dea86fc">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a52b54d28d448188bd895ef1e6dea86fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab60350b426c1214c3aeb052d99151137"><td class="memItemLeft" align="right" valign="top">std::condition_variable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModuleWorker.html#ab60350b426c1214c3aeb052d99151137">job_q_cv</a></td></tr>
+<tr class="memdesc:ab60350b426c1214c3aeb052d99151137"><td class="mdescLeft">&#160;</td><td class="mdescRight">worker(작업자) 선택 대기 Queue 동시 접근 변수  <a href="classModuleWorker.html#ab60350b426c1214c3aeb052d99151137">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:ab60350b426c1214c3aeb052d99151137"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a44976769b151e33b8662433d8dd1a9"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classModuleWorker_1_1Worker.html">Worker</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModuleWorker.html#a9a44976769b151e33b8662433d8dd1a9">workers</a></td></tr>
+<tr class="memdesc:a9a44976769b151e33b8662433d8dd1a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">작업자(worker) 목록  <a href="classModuleWorker.html#a9a44976769b151e33b8662433d8dd1a9">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a9a44976769b151e33b8662433d8dd1a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2caa42996f2d717b506253a1db6de68d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; std::thread &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModuleWorker.html#a2caa42996f2d717b506253a1db6de68d">worker_threads</a></td></tr>
+<tr class="memdesc:a2caa42996f2d717b506253a1db6de68d"><td class="mdescLeft">&#160;</td><td class="mdescRight">작업자(worker) 스레드 목록  <a href="classModuleWorker.html#a2caa42996f2d717b506253a1db6de68d">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a2caa42996f2d717b506253a1db6de68d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9db5f0c02c81e788a6b115a9d37ccc19"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classModuleWorker.html#ac4a47eb76738a107edbc810f1e02a8bc">job_handle_func_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModuleWorker.html#a9db5f0c02c81e788a6b115a9d37ccc19">job_handle</a></td></tr>
+<tr class="separator:a9db5f0c02c81e788a6b115a9d37ccc19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8c4a6343cd595e124978c1143a2791d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classModuleWorker.html#a96e7f04710860eacf66e9c6aa20b70df">persist_handle_func_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModuleWorker.html#aa8c4a6343cd595e124978c1143a2791d">persist_handle</a></td></tr>
+<tr class="memdesc:aa8c4a6343cd595e124978c1143a2791d"><td class="mdescLeft">&#160;</td><td class="mdescRight">worker(작업자)가 작업이 없는 경우에도 지속적으로 처리해야 할 작업 함수 포인터  <a href="classModuleWorker.html#aa8c4a6343cd595e124978c1143a2791d">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:aa8c4a6343cd595e124978c1143a2791d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4135fcbeb2fbd0cfb8fe494e03f5f1d"><td class="memItemLeft" align="right" valign="top">std::chrono::milliseconds&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModuleWorker.html#aa4135fcbeb2fbd0cfb8fe494e03f5f1d">wait_for_ms</a></td></tr>
+<tr class="memdesc:aa4135fcbeb2fbd0cfb8fe494e03f5f1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">worker(작업자)가 job(작업) 요청을 대기하는 시간으로 해당 시간 안에 작업 요청이 없으면 persist handle(지속적으로 처리해야 작업)이 호출됨  <a href="classModuleWorker.html#aa4135fcbeb2fbd0cfb8fe494e03f5f1d">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:aa4135fcbeb2fbd0cfb8fe494e03f5f1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock"><h3>template&lt;typename T&gt;<br />
+class ModuleWorker&lt; T &gt;</h3>
+
+<p>worker(작업자) 스레드가 job(작업)을 처리하는 라이브러리<br  />
+하나의 job이 Queue(큐)에 추가되면 여러개의 worker 중 하나의 worker가 선택되어 job을 처리한다. 여기서 어떠한 worker가 선택될지는 모른다. * </p>
+<dl class="tparams"><dt>템플릿 파라메터</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>작업을 정의하는 Class 타입 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"><a class="el" href="ModuleWorker_8hpp_source.html">ModuleWorker.hpp</a> 파일의 <a class="el" href="ModuleWorker_8hpp_source.html#l00025">25</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">멤버 타입정의 문서화</h2>
+<a id="ac4a47eb76738a107edbc810f1e02a8bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4a47eb76738a107edbc810f1e02a8bc">&#9670;&nbsp;</a></span>job_handle_func_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classModuleWorker.html">ModuleWorker</a>&lt; T &gt;::<a class="el" href="classModuleWorker.html#ac4a47eb76738a107edbc810f1e02a8bc">job_handle_func_t</a> =  std::function&lt;void(std::shared_ptr&lt;<a class="el" href="classModuleWorker_1_1Job.html">Job</a>&gt;, std::shared_ptr&lt;<a class="el" href="classModuleWorker_1_1Worker.html">Worker</a>&gt;)&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>job(작업) 처리 함수 포인터 Type </p>
+
+<p class="definition"><a class="el" href="ModuleWorker_8hpp_source.html">ModuleWorker.hpp</a> 파일의 <a class="el" href="ModuleWorker_8hpp_source.html#l00136">136</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="aa7eb2b4d2dd1128cd2f42a398a8008f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7eb2b4d2dd1128cd2f42a398a8008f6">&#9670;&nbsp;</a></span>job_init_func_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classModuleWorker.html">ModuleWorker</a>&lt; T &gt;::<a class="el" href="classModuleWorker.html#aa7eb2b4d2dd1128cd2f42a398a8008f6">job_init_func_t</a> =  std::function&lt;void *(void)&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>job(작업) 초기화 함수 포인터 Type </p>
+
+<p class="definition"><a class="el" href="ModuleWorker_8hpp_source.html">ModuleWorker.hpp</a> 파일의 <a class="el" href="ModuleWorker_8hpp_source.html#l00133">133</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a96e7f04710860eacf66e9c6aa20b70df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96e7f04710860eacf66e9c6aa20b70df">&#9670;&nbsp;</a></span>persist_handle_func_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classModuleWorker.html">ModuleWorker</a>&lt; T &gt;::<a class="el" href="classModuleWorker.html#a96e7f04710860eacf66e9c6aa20b70df">persist_handle_func_t</a> =  std::function&lt;void(std::shared_ptr&lt;<a class="el" href="classModuleWorker_1_1Worker.html">Worker</a>&gt;)&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>worker(작업자)가 작업이 없는 경우에도 처리해야 할 동작 함수 포인터 Type </p>
+
+<p class="definition"><a class="el" href="ModuleWorker_8hpp_source.html">ModuleWorker.hpp</a> 파일의 <a class="el" href="ModuleWorker_8hpp_source.html#l00138">138</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
+<a id="a6b95e9d122fbaefdeb8dfc72bdd87b72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b95e9d122fbaefdeb8dfc72bdd87b72">&#9670;&nbsp;</a></span>ModuleWorker()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classModuleWorker.html">ModuleWorker</a>&lt; T &gt;::<a class="el" href="classModuleWorker.html">ModuleWorker</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>worker_num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>wait_for_ms</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classModuleWorker.html#aa7eb2b4d2dd1128cd2f42a398a8008f6">job_init_func_t</a>&#160;</td>
+          <td class="paramname"><em>worker_init</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classModuleWorker.html#ac4a47eb76738a107edbc810f1e02a8bc">job_handle_func_t</a>&#160;</td>
+          <td class="paramname"><em>job_handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classModuleWorker.html#a96e7f04710860eacf66e9c6aa20b70df">persist_handle_func_t</a>&#160;</td>
+          <td class="paramname"><em>persist_handle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classModuleWorker.html" title="worker(작업자) 스레드가 job(작업)을 처리하는 라이브러리 하나의 job이 Queue(큐)에 추가되면 여러개의 worker 중 하나의 worker가 선택되어 job을 처리한다...">ModuleWorker</a> 생성자 </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">worker_num</td><td>worker(작업자) 수 </td></tr>
+    <tr><td class="paramname">wait_for_ms</td><td>job(작업) 용처 대기 시간 (millisecond) </td></tr>
+    <tr><td class="paramname">worker_init</td><td>worker(작업자) 초기화 수행 함수 </td></tr>
+    <tr><td class="paramname">job_handle</td><td>job(작업) 수행 함수 </td></tr>
+    <tr><td class="paramname">persist_handle</td><td>job(작업)이 없는 경우 worker(작업자)가 지속적으로 수행해야 할 함수 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"><a class="el" href="ModuleWorker_8hpp_source.html">ModuleWorker.hpp</a> 파일의 <a class="el" href="ModuleWorker_8hpp_source.html#l00192">192</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="ac0d2c40dabdcd2161bcbdddfabf4874f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0d2c40dabdcd2161bcbdddfabf4874f">&#9670;&nbsp;</a></span>addJob()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classModuleWorker.html">ModuleWorker</a>&lt; T &gt;::addJob </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classModuleWorker_1_1Job.html">Job</a> &gt;&#160;</td>
+          <td class="paramname"><em>job</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>job(작업) 대기 Queue(큐)에 작업을 추가한다 </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">job</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"><a class="el" href="ModuleWorker_8hpp_source.html">ModuleWorker.hpp</a> 파일의 <a class="el" href="ModuleWorker_8hpp_source.html#l00215">215</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a0af7ee60cc767a2dbce8e51d0277be78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0af7ee60cc767a2dbce8e51d0277be78">&#9670;&nbsp;</a></span>run()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classModuleWorker.html">ModuleWorker</a>&lt; T &gt;::run </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>block</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classModuleWorker.html" title="worker(작업자) 스레드가 job(작업)을 처리하는 라이브러리 하나의 job이 Queue(큐)에 추가되면 여러개의 worker 중 하나의 worker가 선택되어 job을 처리한다...">ModuleWorker</a> 수행 </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">block</td><td>YES인 경우 run 함수 block되어 뒤에 실행 코드가 수행 안됨<br  />
+FALSE인 경우 run 함수 호출 후 바로 리턴됨 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"><a class="el" href="ModuleWorker_8hpp_source.html">ModuleWorker.hpp</a> 파일의 <a class="el" href="ModuleWorker_8hpp_source.html#l00227">227</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="acc844af45ab3e000582bf13306d2cb46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc844af45ab3e000582bf13306d2cb46">&#9670;&nbsp;</a></span>workerThreadFunc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classModuleWorker.html">ModuleWorker</a>&lt; T &gt;::workerThreadFunc </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classModuleWorker_1_1Worker.html">Worker</a> &gt;&#160;</td>
+          <td class="paramname"><em>worker</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classModuleWorker.html" title="worker(작업자) 스레드가 job(작업)을 처리하는 라이브러리 하나의 job이 Queue(큐)에 추가되면 여러개의 worker 중 하나의 worker가 선택되어 job을 처리한다...">ModuleWorker</a> 생성자 </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">worker</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"><a class="el" href="ModuleWorker_8hpp_source.html">ModuleWorker.hpp</a> 파일의 <a class="el" href="ModuleWorker_8hpp_source.html#l00154">154</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="a9db5f0c02c81e788a6b115a9d37ccc19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9db5f0c02c81e788a6b115a9d37ccc19">&#9670;&nbsp;</a></span>job_handle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classModuleWorker.html#ac4a47eb76738a107edbc810f1e02a8bc">job_handle_func_t</a> <a class="el" href="classModuleWorker.html">ModuleWorker</a>&lt; T &gt;::job_handle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="ModuleWorker_8hpp_source.html">ModuleWorker.hpp</a> 파일의 <a class="el" href="ModuleWorker_8hpp_source.html#l00141">141</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a3bc07991f160393218bb87b3414ba920"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bc07991f160393218bb87b3414ba920">&#9670;&nbsp;</a></span>job_q</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::deque&lt;std::shared_ptr&lt;<a class="el" href="classModuleWorker_1_1Job.html">Job</a>&gt; &gt; <a class="el" href="classModuleWorker.html">ModuleWorker</a>&lt; T &gt;::job_q</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>worker(작업자)에게 할당을 요청하는 선택 대기 Queue(큐) </p>
+
+<p class="definition"><a class="el" href="ModuleWorker_8hpp_source.html">ModuleWorker.hpp</a> 파일의 <a class="el" href="ModuleWorker_8hpp_source.html#l00121">121</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ab60350b426c1214c3aeb052d99151137"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab60350b426c1214c3aeb052d99151137">&#9670;&nbsp;</a></span>job_q_cv</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::condition_variable <a class="el" href="classModuleWorker.html">ModuleWorker</a>&lt; T &gt;::job_q_cv</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>worker(작업자) 선택 대기 Queue 동시 접근 변수 </p>
+
+<p class="definition"><a class="el" href="ModuleWorker_8hpp_source.html">ModuleWorker.hpp</a> 파일의 <a class="el" href="ModuleWorker_8hpp_source.html#l00125">125</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a52b54d28d448188bd895ef1e6dea86fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52b54d28d448188bd895ef1e6dea86fc">&#9670;&nbsp;</a></span>job_q_mutex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mutex <a class="el" href="classModuleWorker.html">ModuleWorker</a>&lt; T &gt;::job_q_mutex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>worker(작업자) 선택 대기 Queue 동시 접근을 위한 lock </p>
+
+<p class="definition"><a class="el" href="ModuleWorker_8hpp_source.html">ModuleWorker.hpp</a> 파일의 <a class="el" href="ModuleWorker_8hpp_source.html#l00123">123</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="aa8c4a6343cd595e124978c1143a2791d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8c4a6343cd595e124978c1143a2791d">&#9670;&nbsp;</a></span>persist_handle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classModuleWorker.html#a96e7f04710860eacf66e9c6aa20b70df">persist_handle_func_t</a> <a class="el" href="classModuleWorker.html">ModuleWorker</a>&lt; T &gt;::persist_handle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>worker(작업자)가 작업이 없는 경우에도 지속적으로 처리해야 할 작업 함수 포인터 </p>
+
+<p class="definition"><a class="el" href="ModuleWorker_8hpp_source.html">ModuleWorker.hpp</a> 파일의 <a class="el" href="ModuleWorker_8hpp_source.html#l00144">144</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="aa4135fcbeb2fbd0cfb8fe494e03f5f1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4135fcbeb2fbd0cfb8fe494e03f5f1d">&#9670;&nbsp;</a></span>wait_for_ms</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::chrono::milliseconds <a class="el" href="classModuleWorker.html">ModuleWorker</a>&lt; T &gt;::wait_for_ms</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>worker(작업자)가 job(작업) 요청을 대기하는 시간으로 해당 시간 안에 작업 요청이 없으면 persist handle(지속적으로 처리해야 작업)이 호출됨 </p>
+
+<p class="definition"><a class="el" href="ModuleWorker_8hpp_source.html">ModuleWorker.hpp</a> 파일의 <a class="el" href="ModuleWorker_8hpp_source.html#l00147">147</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a2caa42996f2d717b506253a1db6de68d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2caa42996f2d717b506253a1db6de68d">&#9670;&nbsp;</a></span>worker_threads</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::shared_ptr&lt;std::thread&gt; &gt; <a class="el" href="classModuleWorker.html">ModuleWorker</a>&lt; T &gt;::worker_threads</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>작업자(worker) 스레드 목록 </p>
+
+<p class="definition"><a class="el" href="ModuleWorker_8hpp_source.html">ModuleWorker.hpp</a> 파일의 <a class="el" href="ModuleWorker_8hpp_source.html#l00130">130</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a9a44976769b151e33b8662433d8dd1a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a44976769b151e33b8662433d8dd1a9">&#9670;&nbsp;</a></span>workers</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::shared_ptr&lt;<a class="el" href="classModuleWorker_1_1Worker.html">Worker</a>&gt; &gt; <a class="el" href="classModuleWorker.html">ModuleWorker</a>&lt; T &gt;::workers</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>작업자(worker) 목록 </p>
+
+<p class="definition"><a class="el" href="ModuleWorker_8hpp_source.html">ModuleWorker.hpp</a> 파일의 <a class="el" href="ModuleWorker_8hpp_source.html#l00128">128</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<hr/>이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
+<li>include/<a class="el" href="ModuleWorker_8hpp_source.html">ModuleWorker.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

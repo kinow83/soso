@@ -1,0 +1,218 @@
+\hypertarget{classModuleWorker_1_1Job}{}\doxysection{Module\+Worker$<$ T $>$\+::Job 클래스 참조}
+\label{classModuleWorker_1_1Job}\index{ModuleWorker$<$ T $>$::Job@{ModuleWorker$<$ T $>$::Job}}
+
+
+작업 객체 ~\newline
+typename T\+: 처리해야 할 Class 타입  
+
+
+
+
+{\ttfamily \#include $<$Module\+Worker.\+hpp$>$}
+
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classModuleWorker_1_1Job_a6e5d93510c6e380dd5d47b4e3901b81e}{Job}} (std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{classModuleWorker_1_1Job_ac4cce9fe2c62705c040a2555f3dcdfaa}{data}})
+\begin{DoxyCompactList}\small\item\em 작업 객체 생성장 \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{classModuleWorker_1_1Job_a56ae961e49cab8e83c1098121ef0fdb9}{get\+Worker\+ID}} () const
+\begin{DoxyCompactList}\small\item\em 할당된 worker 쓰레드 ID \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{classModuleWorker_1_1Job_add312cd372d73b832c8ae06b1de09ba0}{get\+Job\+ID}} () const
+\begin{DoxyCompactList}\small\item\em worker(작업자) 쓰레드별 할당 받은 job 순서 번호 \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{classModuleWorker_1_1Job_ae2fa9f8e2777e959947d6b7941d0c356}{get\+Data}} () const
+\begin{DoxyCompactList}\small\item\em 작업 객체 정보 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classModuleWorker_1_1Job_a619056fcabb204e6903531c5201b073a}{set\+Worker\+Id}} (uint32\+\_\+t \mbox{\hyperlink{classModuleWorker_1_1Job_a14dcd8724f620fe952bde6972d1e8f84}{worker\+\_\+id}})
+\item 
+void \mbox{\hyperlink{classModuleWorker_1_1Job_a54c5aa419008da4b8f42dbc2430de8c3}{set\+Job\+Id}} (uint64\+\_\+t \mbox{\hyperlink{classModuleWorker_1_1Job_aa95ee571daa8024856b0b543db7ad812}{job\+\_\+id}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+friend \mbox{\hyperlink{classModuleWorker_1_1Job_a301b42030029681bb515a7932774a688}{Module\+Worker}}
+\item 
+std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{classModuleWorker_1_1Job_ac4cce9fe2c62705c040a2555f3dcdfaa}{data}}
+\begin{DoxyCompactList}\small\item\em 작업 저장 객체는 shared\+\_\+ptr로 자동 소멸됨 \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{classModuleWorker_1_1Job_a14dcd8724f620fe952bde6972d1e8f84}{worker\+\_\+id}}
+\begin{DoxyCompactList}\small\item\em job(작업)을 할당 받은 작업자(worker) ID \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{classModuleWorker_1_1Job_aa95ee571daa8024856b0b543db7ad812}{job\+\_\+id}}
+\begin{DoxyCompactList}\small\item\em job(작업) ID \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+\subsubsection*{template$<$typename T$>$\newline
+class Module\+Worker$<$ T $>$\+::\+Job}
+
+작업 객체 ~\newline
+typename T\+: 처리해야 할 Class 타입 
+
+Module\+Worker.\+hpp 파일의 77 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{classModuleWorker_1_1Job_a6e5d93510c6e380dd5d47b4e3901b81e}\label{classModuleWorker_1_1Job_a6e5d93510c6e380dd5d47b4e3901b81e}} 
+\index{ModuleWorker$<$ T $>$::Job@{ModuleWorker$<$ T $>$::Job}!Job@{Job}}
+\index{Job@{Job}!ModuleWorker$<$ T $>$::Job@{ModuleWorker$<$ T $>$::Job}}
+\doxysubsubsection{\texorpdfstring{Job()}{Job()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classModuleWorker}{Module\+Worker}}$<$ T $>$\+::Job\+::\+Job (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ T $>$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+작업 객체 생성장 
+
+
+\begin{DoxyParams}{매개변수}
+{\em data} & shared\+\_\+ptr 타입으로 전달 \\
+\hline
+\end{DoxyParams}
+
+
+Module\+Worker.\+hpp 파일의 92 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{classModuleWorker_1_1Job_ae2fa9f8e2777e959947d6b7941d0c356}\label{classModuleWorker_1_1Job_ae2fa9f8e2777e959947d6b7941d0c356}} 
+\index{ModuleWorker$<$ T $>$::Job@{ModuleWorker$<$ T $>$::Job}!getData@{getData}}
+\index{getData@{getData}!ModuleWorker$<$ T $>$::Job@{ModuleWorker$<$ T $>$::Job}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::shared\+\_\+ptr$<$T$>$ \mbox{\hyperlink{classModuleWorker}{Module\+Worker}}$<$ T $>$\+::Job\+::get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+작업 객체 정보 
+
+\begin{DoxyReturn}{반환값}
+std\+::shared\+\_\+ptr$<$\+T$>$ 
+\end{DoxyReturn}
+
+
+Module\+Worker.\+hpp 파일의 111 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classModuleWorker_1_1Job_add312cd372d73b832c8ae06b1de09ba0}\label{classModuleWorker_1_1Job_add312cd372d73b832c8ae06b1de09ba0}} 
+\index{ModuleWorker$<$ T $>$::Job@{ModuleWorker$<$ T $>$::Job}!getJobID@{getJobID}}
+\index{getJobID@{getJobID}!ModuleWorker$<$ T $>$::Job@{ModuleWorker$<$ T $>$::Job}}
+\doxysubsubsection{\texorpdfstring{getJobID()}{getJobID()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+uint64\+\_\+t \mbox{\hyperlink{classModuleWorker}{Module\+Worker}}$<$ T $>$\+::Job\+::get\+Job\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+worker(작업자) 쓰레드별 할당 받은 job 순서 번호 
+
+\begin{DoxyReturn}{반환값}
+uint64\+\_\+t 
+\end{DoxyReturn}
+
+
+Module\+Worker.\+hpp 파일의 106 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classModuleWorker_1_1Job_a56ae961e49cab8e83c1098121ef0fdb9}\label{classModuleWorker_1_1Job_a56ae961e49cab8e83c1098121ef0fdb9}} 
+\index{ModuleWorker$<$ T $>$::Job@{ModuleWorker$<$ T $>$::Job}!getWorkerID@{getWorkerID}}
+\index{getWorkerID@{getWorkerID}!ModuleWorker$<$ T $>$::Job@{ModuleWorker$<$ T $>$::Job}}
+\doxysubsubsection{\texorpdfstring{getWorkerID()}{getWorkerID()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+uint32\+\_\+t \mbox{\hyperlink{classModuleWorker}{Module\+Worker}}$<$ T $>$\+::Job\+::get\+Worker\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+할당된 worker 쓰레드 ID 
+
+\begin{DoxyReturn}{반환값}
+uint32\+\_\+t 
+\end{DoxyReturn}
+
+
+Module\+Worker.\+hpp 파일의 101 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classModuleWorker_1_1Job_a54c5aa419008da4b8f42dbc2430de8c3}\label{classModuleWorker_1_1Job_a54c5aa419008da4b8f42dbc2430de8c3}} 
+\index{ModuleWorker$<$ T $>$::Job@{ModuleWorker$<$ T $>$::Job}!setJobId@{setJobId}}
+\index{setJobId@{setJobId}!ModuleWorker$<$ T $>$::Job@{ModuleWorker$<$ T $>$::Job}}
+\doxysubsubsection{\texorpdfstring{setJobId()}{setJobId()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classModuleWorker}{Module\+Worker}}$<$ T $>$\+::Job\+::set\+Job\+Id (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{job\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Module\+Worker.\+hpp 파일의 115 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classModuleWorker_1_1Job_a619056fcabb204e6903531c5201b073a}\label{classModuleWorker_1_1Job_a619056fcabb204e6903531c5201b073a}} 
+\index{ModuleWorker$<$ T $>$::Job@{ModuleWorker$<$ T $>$::Job}!setWorkerId@{setWorkerId}}
+\index{setWorkerId@{setWorkerId}!ModuleWorker$<$ T $>$::Job@{ModuleWorker$<$ T $>$::Job}}
+\doxysubsubsection{\texorpdfstring{setWorkerId()}{setWorkerId()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classModuleWorker}{Module\+Worker}}$<$ T $>$\+::Job\+::set\+Worker\+Id (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{worker\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Module\+Worker.\+hpp 파일의 114 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{classModuleWorker_1_1Job_ac4cce9fe2c62705c040a2555f3dcdfaa}\label{classModuleWorker_1_1Job_ac4cce9fe2c62705c040a2555f3dcdfaa}} 
+\index{ModuleWorker$<$ T $>$::Job@{ModuleWorker$<$ T $>$::Job}!data@{data}}
+\index{data@{data}!ModuleWorker$<$ T $>$::Job@{ModuleWorker$<$ T $>$::Job}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::shared\+\_\+ptr$<$T$>$ \mbox{\hyperlink{classModuleWorker}{Module\+Worker}}$<$ T $>$\+::Job\+::data\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+작업 저장 객체는 shared\+\_\+ptr로 자동 소멸됨 
+
+
+
+Module\+Worker.\+hpp 파일의 81 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classModuleWorker_1_1Job_aa95ee571daa8024856b0b543db7ad812}\label{classModuleWorker_1_1Job_aa95ee571daa8024856b0b543db7ad812}} 
+\index{ModuleWorker$<$ T $>$::Job@{ModuleWorker$<$ T $>$::Job}!job\_id@{job\_id}}
+\index{job\_id@{job\_id}!ModuleWorker$<$ T $>$::Job@{ModuleWorker$<$ T $>$::Job}}
+\doxysubsubsection{\texorpdfstring{job\_id}{job\_id}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+uint64\+\_\+t \mbox{\hyperlink{classModuleWorker}{Module\+Worker}}$<$ T $>$\+::Job\+::job\+\_\+id\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+job(작업) ID 
+
+
+
+Module\+Worker.\+hpp 파일의 85 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classModuleWorker_1_1Job_a301b42030029681bb515a7932774a688}\label{classModuleWorker_1_1Job_a301b42030029681bb515a7932774a688}} 
+\index{ModuleWorker$<$ T $>$::Job@{ModuleWorker$<$ T $>$::Job}!ModuleWorker@{ModuleWorker}}
+\index{ModuleWorker@{ModuleWorker}!ModuleWorker$<$ T $>$::Job@{ModuleWorker$<$ T $>$::Job}}
+\doxysubsubsection{\texorpdfstring{ModuleWorker}{ModuleWorker}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+friend \mbox{\hyperlink{classModuleWorker}{Module\+Worker}}$<$ T $>$\+::Job\+::\+Module\+Worker\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Module\+Worker.\+hpp 파일의 79 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classModuleWorker_1_1Job_a14dcd8724f620fe952bde6972d1e8f84}\label{classModuleWorker_1_1Job_a14dcd8724f620fe952bde6972d1e8f84}} 
+\index{ModuleWorker$<$ T $>$::Job@{ModuleWorker$<$ T $>$::Job}!worker\_id@{worker\_id}}
+\index{worker\_id@{worker\_id}!ModuleWorker$<$ T $>$::Job@{ModuleWorker$<$ T $>$::Job}}
+\doxysubsubsection{\texorpdfstring{worker\_id}{worker\_id}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+uint32\+\_\+t \mbox{\hyperlink{classModuleWorker}{Module\+Worker}}$<$ T $>$\+::Job\+::worker\+\_\+id\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+job(작업)을 할당 받은 작업자(worker) ID 
+
+
+
+Module\+Worker.\+hpp 파일의 83 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{ModuleWorker_8hpp}{Module\+Worker.\+hpp}}\end{DoxyCompactItemize}
