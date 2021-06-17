@@ -1,0 +1,68 @@
+\hypertarget{atomic_8h}{}\doxysection{include/atomic.h 파일 참조}
+\label{atomic_8h}\index{include/atomic.h@{include/atomic.h}}
+이 그래프는 이 파일을 직/간접적으로 include 하는 파일들을 보여줍니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=179pt]{atomic_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{클래스}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structatomic__t}{atomic\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{매크로}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{atomic_8h_aadfbba86627ee7eeb07e04f712550f73}{A\+T\+O\+M\+I\+C\+\_\+\+I\+N\+IT}}(i)~\{ (i) \}
+\item 
+\#define \mbox{\hyperlink{atomic_8h_a1414350b98d3d1dc33887f9da5878542}{atomic\+\_\+read}}(v)~((v)-\/$>$counter)
+\item 
+\#define \mbox{\hyperlink{atomic_8h_af7cad706a5bba06487b2011794061922}{atomic\+\_\+set}}(v,  i)~(((v)-\/$>$counter) = (i))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{매크로 문서화}
+\mbox{\Hypertarget{atomic_8h_aadfbba86627ee7eeb07e04f712550f73}\label{atomic_8h_aadfbba86627ee7eeb07e04f712550f73}} 
+\index{atomic.h@{atomic.h}!ATOMIC\_INIT@{ATOMIC\_INIT}}
+\index{ATOMIC\_INIT@{ATOMIC\_INIT}!atomic.h@{atomic.h}}
+\doxysubsubsection{\texorpdfstring{ATOMIC\_INIT}{ATOMIC\_INIT}}
+{\footnotesize\ttfamily \#define A\+T\+O\+M\+I\+C\+\_\+\+I\+N\+IT(\begin{DoxyParamCaption}\item[{}]{i }\end{DoxyParamCaption})~\{ (i) \}}
+
+
+
+atomic.\+h 파일의 17 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{atomic_8h_a1414350b98d3d1dc33887f9da5878542}\label{atomic_8h_a1414350b98d3d1dc33887f9da5878542}} 
+\index{atomic.h@{atomic.h}!atomic\_read@{atomic\_read}}
+\index{atomic\_read@{atomic\_read}!atomic.h@{atomic.h}}
+\doxysubsubsection{\texorpdfstring{atomic\_read}{atomic\_read}}
+{\footnotesize\ttfamily \#define atomic\+\_\+read(\begin{DoxyParamCaption}\item[{}]{v }\end{DoxyParamCaption})~((v)-\/$>$counter)}
+
+Read atomic variable 
+\begin{DoxyParams}{매개변수}
+{\em v} & pointer of type \mbox{\hyperlink{structatomic__t}{atomic\+\_\+t}}\\
+\hline
+\end{DoxyParams}
+Atomically reads the value of @v. 
+
+atomic.\+h 파일의 26 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{atomic_8h_af7cad706a5bba06487b2011794061922}\label{atomic_8h_af7cad706a5bba06487b2011794061922}} 
+\index{atomic.h@{atomic.h}!atomic\_set@{atomic\_set}}
+\index{atomic\_set@{atomic\_set}!atomic.h@{atomic.h}}
+\doxysubsubsection{\texorpdfstring{atomic\_set}{atomic\_set}}
+{\footnotesize\ttfamily \#define atomic\+\_\+set(\begin{DoxyParamCaption}\item[{}]{v,  }\item[{}]{i }\end{DoxyParamCaption})~(((v)-\/$>$counter) = (i))}
+
+Set atomic variable 
+\begin{DoxyParams}{매개변수}
+{\em v} & pointer of type \mbox{\hyperlink{structatomic__t}{atomic\+\_\+t}} \\
+\hline
+{\em i} & required value \\
+\hline
+\end{DoxyParams}
+
+
+atomic.\+h 파일의 33 번째 라인에서 정의되었습니다.
+

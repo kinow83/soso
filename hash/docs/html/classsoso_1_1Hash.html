@@ -1,0 +1,927 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>hash: soso::Hash&lt; T &gt; 클래스 템플릿 참조</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">hash
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'검색');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','검색');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacesoso.html">soso</a></li><li class="navelem"><a class="el" href="classsoso_1_1Hash.html">Hash</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">클래스</a> &#124;
+<a href="#pub-methods">Public 멤버 함수</a> &#124;
+<a href="#pri-attribs">Private 속성</a> &#124;
+<a href="classsoso_1_1Hash-members.html">모든 멤버 목록</a>  </div>
+  <div class="headertitle">
+<div class="title">soso::Hash&lt; T &gt; 클래스 템플릿 참조</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="hash_8hpp_source.html">hash.hpp</a>&gt;</code></p>
+<div class="dynheader">
+soso::Hash&lt; T &gt;에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="classsoso_1_1Hash__coll__graph.png" border="0" usemap="#soso_1_1Hash_3_01T_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="soso_1_1Hash_3_01T_01_4_coll__map" id="soso_1_1Hash_3_01T_01_4_coll__map">
+<area shape="rect" title=" " alt="" coords="131,97,261,124"/>
+<area shape="rect" href="classsoso_1_1Hash_1_1Node.html" title=" " alt="" coords="5,7,179,33"/>
+<area shape="rect" href="structatomic__t.html" title=" " alt="" coords="261,7,339,33"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">범례</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+클래스</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Hash_1_1Node.html">Node</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 멤버 함수</h2></td></tr>
+<tr class="memitem:abe5f4b5c9834946193571a78fb02cb47"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Hash.html#abe5f4b5c9834946193571a78fb02cb47">Hash</a> (long <a class="el" href="classsoso_1_1Hash.html#a3dda770aa25ac301122831aaef9cb6e2">num_buckets</a>, long(*<a class="el" href="classsoso_1_1Hash.html#a24c6f7049a6962c9232408802a9ea7ab">fnHash</a>)(T &amp;a), int(*<a class="el" href="classsoso_1_1Hash.html#a30ad6317bf80acecc394006119179553">fnCompare</a>)(T &amp;a, T &amp;b), void(*<a class="el" href="classsoso_1_1Hash.html#a91c357347bdc8f5287d9e4b3c0ac2127">fnDataFree</a>)(T &amp;a), std::optional&lt; T &gt;(*<a class="el" href="classsoso_1_1Hash.html#a7b726b881ece2273d0fbb46043783ca7">fnDataCopy</a>)(T &amp;a), std::string(*<a class="el" href="classsoso_1_1Hash.html#a0303c0ec3a92f2763f39dad4f66e3671">fnToString</a>)(T &amp;a), bool <a class="el" href="classsoso_1_1Hash.html#aabfcc19c7e54ff265e39ccf38805bb24">replace</a>)</td></tr>
+<tr class="memdesc:abe5f4b5c9834946193571a78fb02cb47"><td class="mdescLeft">&#160;</td><td class="mdescRight">HashTable 생성자  <a href="classsoso_1_1Hash.html#abe5f4b5c9834946193571a78fb02cb47">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:abe5f4b5c9834946193571a78fb02cb47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5048fe4f263f9dc2b9b4b06e8dbd6faa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Hash.html#a5048fe4f263f9dc2b9b4b06e8dbd6faa">~Hash</a> ()</td></tr>
+<tr class="memdesc:a5048fe4f263f9dc2b9b4b06e8dbd6faa"><td class="mdescLeft">&#160;</td><td class="mdescRight">HashTable 소멸자  <a href="classsoso_1_1Hash.html#a5048fe4f263f9dc2b9b4b06e8dbd6faa">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a5048fe4f263f9dc2b9b4b06e8dbd6faa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66f8d59718aa743b93e1ce6ee0b42951"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Hash.html#a66f8d59718aa743b93e1ce6ee0b42951">insert</a> (T &amp;data)</td></tr>
+<tr class="memdesc:a66f8d59718aa743b93e1ce6ee0b42951"><td class="mdescLeft">&#160;</td><td class="mdescRight">데이터 추가  <a href="classsoso_1_1Hash.html#a66f8d59718aa743b93e1ce6ee0b42951">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a66f8d59718aa743b93e1ce6ee0b42951"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fb1368097cdd9b0a1a067239392462b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Hash.html#a6fb1368097cdd9b0a1a067239392462b">remove</a> (T &amp;data)</td></tr>
+<tr class="memdesc:a6fb1368097cdd9b0a1a067239392462b"><td class="mdescLeft">&#160;</td><td class="mdescRight">데이터 삭제  <a href="classsoso_1_1Hash.html#a6fb1368097cdd9b0a1a067239392462b">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a6fb1368097cdd9b0a1a067239392462b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff80200fdf2dfe5fe3c127ba834e80d2"><td class="memItemLeft" align="right" valign="top">std::optional&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Hash.html#aff80200fdf2dfe5fe3c127ba834e80d2">pop</a> (T &amp;data)</td></tr>
+<tr class="memdesc:aff80200fdf2dfe5fe3c127ba834e80d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">데이터 제거 후 추출  <a href="classsoso_1_1Hash.html#aff80200fdf2dfe5fe3c127ba834e80d2">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:aff80200fdf2dfe5fe3c127ba834e80d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed32f8cee85d49b68e11560053352540"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Hash.html#aed32f8cee85d49b68e11560053352540">exist</a> (T &amp;data)</td></tr>
+<tr class="memdesc:aed32f8cee85d49b68e11560053352540"><td class="mdescLeft">&#160;</td><td class="mdescRight">데이터 존재 여부  <a href="classsoso_1_1Hash.html#aed32f8cee85d49b68e11560053352540">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:aed32f8cee85d49b68e11560053352540"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae7260b7e243bdc44837c24be327c444"><td class="memItemLeft" align="right" valign="top">std::optional&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Hash.html#aae7260b7e243bdc44837c24be327c444">copy</a> (T &amp;data)</td></tr>
+<tr class="memdesc:aae7260b7e243bdc44837c24be327c444"><td class="mdescLeft">&#160;</td><td class="mdescRight">데이터 복사 (복사 함수 구현되어야 함 - for thread safe)  <a href="classsoso_1_1Hash.html#aae7260b7e243bdc44837c24be327c444">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:aae7260b7e243bdc44837c24be327c444"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace2e320a704a92a6fef7f32b66c9901d"><td class="memItemLeft" align="right" valign="top">std::optional&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Hash.html#ace2e320a704a92a6fef7f32b66c9901d">find</a> (T &amp;data)</td></tr>
+<tr class="memdesc:ace2e320a704a92a6fef7f32b66c9901d"><td class="mdescLeft">&#160;</td><td class="mdescRight">데이터 조회 - thread not safe  <a href="classsoso_1_1Hash.html#ace2e320a704a92a6fef7f32b66c9901d">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:ace2e320a704a92a6fef7f32b66c9901d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a605c1ffc78f24aa6c76e9cea5844bcae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Hash.html#a605c1ffc78f24aa6c76e9cea5844bcae">show</a> (const char *outfile)</td></tr>
+<tr class="memdesc:a605c1ffc78f24aa6c76e9cea5844bcae"><td class="mdescLeft">&#160;</td><td class="mdescRight">해쉬 테이블 정보 디버깅  <a href="classsoso_1_1Hash.html#a605c1ffc78f24aa6c76e9cea5844bcae">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a605c1ffc78f24aa6c76e9cea5844bcae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18f5005549077c4b9972510a26ee9202"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Hash.html#a18f5005549077c4b9972510a26ee9202">loop</a> (std::function&lt; void(T &amp;data)&gt; func)</td></tr>
+<tr class="memdesc:a18f5005549077c4b9972510a26ee9202"><td class="mdescLeft">&#160;</td><td class="mdescRight">해쉬 테이블 전역 데이터를 순회하면서 func을 호출한다.<br  />
+내부적으로 버킷 lock을 걸고 순회하므로 thread-safe 함  <a href="classsoso_1_1Hash.html#a18f5005549077c4b9972510a26ee9202">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a18f5005549077c4b9972510a26ee9202"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 속성</h2></td></tr>
+<tr class="memitem:ae2e755471fe7469aac66250f5955465d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structatomic__t.html">atomic_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Hash.html#ae2e755471fe7469aac66250f5955465d">num_elements</a></td></tr>
+<tr class="separator:ae2e755471fe7469aac66250f5955465d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dda770aa25ac301122831aaef9cb6e2"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Hash.html#a3dda770aa25ac301122831aaef9cb6e2">num_buckets</a></td></tr>
+<tr class="separator:a3dda770aa25ac301122831aaef9cb6e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a732ad3d998929f4fe0bd1aaee5fc87ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsoso_1_1Hash.html">Hash</a>&lt; T &gt;::<a class="el" href="classsoso_1_1Hash_1_1Node.html">Node</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Hash.html#a732ad3d998929f4fe0bd1aaee5fc87ab">buckets</a></td></tr>
+<tr class="separator:a732ad3d998929f4fe0bd1aaee5fc87ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e55a9af00eda34d4ad15940e022aea6"><td class="memItemLeft" align="right" valign="top">pthread_mutex_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Hash.html#a1e55a9af00eda34d4ad15940e022aea6">bucket_lock</a></td></tr>
+<tr class="separator:a1e55a9af00eda34d4ad15940e022aea6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab43d31141979e2b68f73f1fe2abcbccc"><td class="memItemLeft" align="right" valign="top">pthread_mutex_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Hash.html#ab43d31141979e2b68f73f1fe2abcbccc">hash_table_lock</a></td></tr>
+<tr class="separator:ab43d31141979e2b68f73f1fe2abcbccc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48b4f42e290c084728eb6b2c0826214c"><td class="memItemLeft" align="right" valign="top">long *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Hash.html#a48b4f42e290c084728eb6b2c0826214c">num_of_nodes_in_bucket</a></td></tr>
+<tr class="separator:a48b4f42e290c084728eb6b2c0826214c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabfcc19c7e54ff265e39ccf38805bb24"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Hash.html#aabfcc19c7e54ff265e39ccf38805bb24">replace</a></td></tr>
+<tr class="separator:aabfcc19c7e54ff265e39ccf38805bb24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24c6f7049a6962c9232408802a9ea7ab"><td class="memItemLeft" align="right" valign="top">long(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Hash.html#a24c6f7049a6962c9232408802a9ea7ab">fnHash</a> )(T &amp;a)</td></tr>
+<tr class="separator:a24c6f7049a6962c9232408802a9ea7ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30ad6317bf80acecc394006119179553"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Hash.html#a30ad6317bf80acecc394006119179553">fnCompare</a> )(T &amp;a, T &amp;b)</td></tr>
+<tr class="separator:a30ad6317bf80acecc394006119179553"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91c357347bdc8f5287d9e4b3c0ac2127"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Hash.html#a91c357347bdc8f5287d9e4b3c0ac2127">fnDataFree</a> )(T &amp;a)</td></tr>
+<tr class="separator:a91c357347bdc8f5287d9e4b3c0ac2127"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b726b881ece2273d0fbb46043783ca7"><td class="memItemLeft" align="right" valign="top">std::optional&lt; T &gt;(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Hash.html#a7b726b881ece2273d0fbb46043783ca7">fnDataCopy</a> )(T &amp;a)</td></tr>
+<tr class="separator:a7b726b881ece2273d0fbb46043783ca7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0303c0ec3a92f2763f39dad4f66e3671"><td class="memItemLeft" align="right" valign="top">std::string(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Hash.html#a0303c0ec3a92f2763f39dad4f66e3671">fnToString</a> )(T &amp;a)</td></tr>
+<tr class="separator:a0303c0ec3a92f2763f39dad4f66e3671"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock"><h3>template&lt;typename T&gt;<br />
+class soso::Hash&lt; T &gt;</h3>
+
+<dl class="tparams"><dt>템플릿 파라메터</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"><a class="el" href="hash_8hpp_source.html">hash.hpp</a> 파일의 <a class="el" href="hash_8hpp_source.html#l00021">21</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
+<a id="abe5f4b5c9834946193571a78fb02cb47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe5f4b5c9834946193571a78fb02cb47">&#9670;&nbsp;</a></span>Hash()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsoso_1_1Hash.html">soso::Hash</a>&lt; T &gt;::<a class="el" href="classsoso_1_1Hash.html">Hash</a> </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>num_buckets</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long(*)(T &amp;a)&#160;</td>
+          <td class="paramname"><em>fnHash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int(*)(T &amp;a, T &amp;b)&#160;</td>
+          <td class="paramname"><em>fnCompare</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(T &amp;a)&#160;</td>
+          <td class="paramname"><em>fnDataFree</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; T &gt;(*)(T &amp;a)&#160;</td>
+          <td class="paramname"><em>fnDataCopy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string(*)(T &amp;a)&#160;</td>
+          <td class="paramname"><em>fnToString</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>replace</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HashTable 생성자 </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">num_buckets</td><td>해쉬 버킷 수 </td></tr>
+    <tr><td class="paramname">fnHash</td><td>해쉬 함수 </td></tr>
+    <tr><td class="paramname">fnCompare</td><td>데이터 비교 함수 </td></tr>
+    <tr><td class="paramname">fnDataFree</td><td>데이터 메모리 해제 함수 </td></tr>
+    <tr><td class="paramname">fnDataCopy</td><td>데이터 복사 함수 (for thread safe) </td></tr>
+    <tr><td class="paramname">fnToString</td><td>데이터 출력 함수 </td></tr>
+    <tr><td class="paramname">replace</td><td>중복 key 추가 시 데이터 교체 여부 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"><a class="el" href="hash_8hpp_source.html">hash.hpp</a> 파일의 <a class="el" href="hash_8hpp_source.html#l00088">88</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a5048fe4f263f9dc2b9b4b06e8dbd6faa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5048fe4f263f9dc2b9b4b06e8dbd6faa">&#9670;&nbsp;</a></span>~Hash()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsoso_1_1Hash.html">soso::Hash</a>&lt; T &gt;::~<a class="el" href="classsoso_1_1Hash.html">Hash</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HashTable 소멸자 </p>
+
+<p class="definition"><a class="el" href="hash_8hpp_source.html">hash.hpp</a> 파일의 <a class="el" href="hash_8hpp_source.html#l00143">143</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="aae7260b7e243bdc44837c24be327c444"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae7260b7e243bdc44837c24be327c444">&#9670;&nbsp;</a></span>copy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;T&gt; <a class="el" href="classsoso_1_1Hash.html">soso::Hash</a>&lt; T &gt;::copy </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>데이터 복사 (복사 함수 구현되어야 함 - for thread safe) </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>std::optional&lt;T&gt; </dd></dl>
+
+<p class="definition"><a class="el" href="hash_8hpp_source.html">hash.hpp</a> 파일의 <a class="el" href="hash_8hpp_source.html#l00328">328</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="aed32f8cee85d49b68e11560053352540"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed32f8cee85d49b68e11560053352540">&#9670;&nbsp;</a></span>exist()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classsoso_1_1Hash.html">soso::Hash</a>&lt; T &gt;::exist </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>데이터 존재 여부 </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+<p class="definition"><a class="el" href="hash_8hpp_source.html">hash.hpp</a> 파일의 <a class="el" href="hash_8hpp_source.html#l00301">301</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ace2e320a704a92a6fef7f32b66c9901d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace2e320a704a92a6fef7f32b66c9901d">&#9670;&nbsp;</a></span>find()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;T&gt; <a class="el" href="classsoso_1_1Hash.html">soso::Hash</a>&lt; T &gt;::find </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>데이터 조회 - thread not safe </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>std::optional&lt;T&gt; </dd></dl>
+
+<p class="definition"><a class="el" href="hash_8hpp_source.html">hash.hpp</a> 파일의 <a class="el" href="hash_8hpp_source.html#l00359">359</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a66f8d59718aa743b93e1ce6ee0b42951"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66f8d59718aa743b93e1ce6ee0b42951">&#9670;&nbsp;</a></span>insert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classsoso_1_1Hash.html">soso::Hash</a>&lt; T &gt;::insert </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>데이터 추가 </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+<p class="definition"><a class="el" href="hash_8hpp_source.html">hash.hpp</a> 파일의 <a class="el" href="hash_8hpp_source.html#l00169">169</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a18f5005549077c4b9972510a26ee9202"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18f5005549077c4b9972510a26ee9202">&#9670;&nbsp;</a></span>loop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classsoso_1_1Hash.html">soso::Hash</a>&lt; T &gt;::loop </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(T &amp;data)&gt;&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>해쉬 테이블 전역 데이터를 순회하면서 func을 호출한다.<br  />
+내부적으로 버킷 lock을 걸고 순회하므로 thread-safe 함 </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">func</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"><a class="el" href="hash_8hpp_source.html">hash.hpp</a> 파일의 <a class="el" href="hash_8hpp_source.html#l00427">427</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="aff80200fdf2dfe5fe3c127ba834e80d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff80200fdf2dfe5fe3c127ba834e80d2">&#9670;&nbsp;</a></span>pop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;T&gt; <a class="el" href="classsoso_1_1Hash.html">soso::Hash</a>&lt; T &gt;::pop </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>데이터 제거 후 추출 </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>std::optional&lt;T&gt;data_copy </dd></dl>
+
+<p class="definition"><a class="el" href="hash_8hpp_source.html">hash.hpp</a> 파일의 <a class="el" href="hash_8hpp_source.html#l00258">258</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a6fb1368097cdd9b0a1a067239392462b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fb1368097cdd9b0a1a067239392462b">&#9670;&nbsp;</a></span>remove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classsoso_1_1Hash.html">soso::Hash</a>&lt; T &gt;::remove </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>데이터 삭제 </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+<p class="definition"><a class="el" href="hash_8hpp_source.html">hash.hpp</a> 파일의 <a class="el" href="hash_8hpp_source.html#l00215">215</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a605c1ffc78f24aa6c76e9cea5844bcae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a605c1ffc78f24aa6c76e9cea5844bcae">&#9670;&nbsp;</a></span>show()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classsoso_1_1Hash.html">soso::Hash</a>&lt; T &gt;::show </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>outfile</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>해쉬 테이블 정보 디버깅 </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">outfile</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"><a class="el" href="hash_8hpp_source.html">hash.hpp</a> 파일의 <a class="el" href="hash_8hpp_source.html#l00387">387</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="a1e55a9af00eda34d4ad15940e022aea6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e55a9af00eda34d4ad15940e022aea6">&#9670;&nbsp;</a></span>bucket_lock</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">pthread_mutex_t* <a class="el" href="classsoso_1_1Hash.html">soso::Hash</a>&lt; T &gt;::bucket_lock</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="hash_8hpp_source.html">hash.hpp</a> 파일의 <a class="el" href="hash_8hpp_source.html#l00047">47</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a732ad3d998929f4fe0bd1aaee5fc87ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a732ad3d998929f4fe0bd1aaee5fc87ab">&#9670;&nbsp;</a></span>buckets</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsoso_1_1Hash.html">Hash</a>&lt;T&gt;::<a class="el" href="classsoso_1_1Hash_1_1Node.html">Node</a>** <a class="el" href="classsoso_1_1Hash.html">soso::Hash</a>&lt; T &gt;::buckets</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="hash_8hpp_source.html">hash.hpp</a> 파일의 <a class="el" href="hash_8hpp_source.html#l00045">45</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a30ad6317bf80acecc394006119179553"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30ad6317bf80acecc394006119179553">&#9670;&nbsp;</a></span>fnCompare</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* <a class="el" href="classsoso_1_1Hash.html">soso::Hash</a>&lt; T &gt;::fnCompare) (T &amp;a, T &amp;b)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>@briefstd </p>
+
+<p class="definition"><a class="el" href="hash_8hpp_source.html">hash.hpp</a> 파일의 <a class="el" href="hash_8hpp_source.html#l00063">63</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a7b726b881ece2273d0fbb46043783ca7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b726b881ece2273d0fbb46043783ca7">&#9670;&nbsp;</a></span>fnDataCopy</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;T&gt;(* <a class="el" href="classsoso_1_1Hash.html">soso::Hash</a>&lt; T &gt;::fnDataCopy) (T &amp;a)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="hash_8hpp_source.html">hash.hpp</a> 파일의 <a class="el" href="hash_8hpp_source.html#l00071">71</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a91c357347bdc8f5287d9e4b3c0ac2127"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91c357347bdc8f5287d9e4b3c0ac2127">&#9670;&nbsp;</a></span>fnDataFree</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* <a class="el" href="classsoso_1_1Hash.html">soso::Hash</a>&lt; T &gt;::fnDataFree) (T &amp;a)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="hash_8hpp_source.html">hash.hpp</a> 파일의 <a class="el" href="hash_8hpp_source.html#l00067">67</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a24c6f7049a6962c9232408802a9ea7ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24c6f7049a6962c9232408802a9ea7ab">&#9670;&nbsp;</a></span>fnHash</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long(* <a class="el" href="classsoso_1_1Hash.html">soso::Hash</a>&lt; T &gt;::fnHash) (T &amp;a)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="hash_8hpp_source.html">hash.hpp</a> 파일의 <a class="el" href="hash_8hpp_source.html#l00059">59</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a0303c0ec3a92f2763f39dad4f66e3671"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0303c0ec3a92f2763f39dad4f66e3671">&#9670;&nbsp;</a></span>fnToString</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string(* <a class="el" href="classsoso_1_1Hash.html">soso::Hash</a>&lt; T &gt;::fnToString) (T &amp;a)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="hash_8hpp_source.html">hash.hpp</a> 파일의 <a class="el" href="hash_8hpp_source.html#l00075">75</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ab43d31141979e2b68f73f1fe2abcbccc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab43d31141979e2b68f73f1fe2abcbccc">&#9670;&nbsp;</a></span>hash_table_lock</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">pthread_mutex_t <a class="el" href="classsoso_1_1Hash.html">soso::Hash</a>&lt; T &gt;::hash_table_lock</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="hash_8hpp_source.html">hash.hpp</a> 파일의 <a class="el" href="hash_8hpp_source.html#l00049">49</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a3dda770aa25ac301122831aaef9cb6e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dda770aa25ac301122831aaef9cb6e2">&#9670;&nbsp;</a></span>num_buckets</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long <a class="el" href="classsoso_1_1Hash.html">soso::Hash</a>&lt; T &gt;::num_buckets</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="hash_8hpp_source.html">hash.hpp</a> 파일의 <a class="el" href="hash_8hpp_source.html#l00043">43</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ae2e755471fe7469aac66250f5955465d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2e755471fe7469aac66250f5955465d">&#9670;&nbsp;</a></span>num_elements</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structatomic__t.html">atomic_t</a> <a class="el" href="classsoso_1_1Hash.html">soso::Hash</a>&lt; T &gt;::num_elements</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="hash_8hpp_source.html">hash.hpp</a> 파일의 <a class="el" href="hash_8hpp_source.html#l00041">41</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a48b4f42e290c084728eb6b2c0826214c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48b4f42e290c084728eb6b2c0826214c">&#9670;&nbsp;</a></span>num_of_nodes_in_bucket</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long* <a class="el" href="classsoso_1_1Hash.html">soso::Hash</a>&lt; T &gt;::num_of_nodes_in_bucket</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="hash_8hpp_source.html">hash.hpp</a> 파일의 <a class="el" href="hash_8hpp_source.html#l00051">51</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="aabfcc19c7e54ff265e39ccf38805bb24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabfcc19c7e54ff265e39ccf38805bb24">&#9670;&nbsp;</a></span>replace</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classsoso_1_1Hash.html">soso::Hash</a>&lt; T &gt;::replace</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="hash_8hpp_source.html">hash.hpp</a> 파일의 <a class="el" href="hash_8hpp_source.html#l00053">53</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<hr/>이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
+<li>include/<a class="el" href="hash_8hpp_source.html">hash.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

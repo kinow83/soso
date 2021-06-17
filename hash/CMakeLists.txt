@@ -1,4 +1,4 @@
-project(chronos)
+project(hash)
 
 set(ORG_BUILD_TESTING ${BUILD_TESTING})
 set(BUILD_TESTING OFF)
@@ -8,25 +8,16 @@ set(CMAKE_CXX_COMPILER /usr/bin/c++)
 set(CMAKE_CXX_FLAGS "-m64 -std=c++17")
 add_compile_options(-W -Wall -g -fpermissive)
 
-include(FetchContent)
-
 include_directories(include)
-find_package(fmt REQUIRED)
 
 ###############################
 # for hpp
 ###############################
-add_library(chronos INTERFACE)
-target_sources(chronos INTERFACE chronos.hpp)
-target_include_directories (chronos
+add_library(hash INTERFACE)
+target_sources(hash INTERFACE hash.hpp atomic.h)
+target_include_directories (hash
 INTERFACE
-    ${CMAKE_CURRENT_SOURCE_DIR}/include
-    ${fmt_SOURCE_DIR}/include)
-
-# auto link library fmt
-target_link_libraries(chronos
-INTERFACE
-    fmt)
+    ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 ###############################
 # for doxygen
@@ -37,7 +28,7 @@ if (DOXYGEN_FOUND)
     set(DOXYGEN_OUT ${CMAKE_CURRENT_SOURCE_DIR}/Doxyfile)
     configure_file(${DOXYGEN_OUT} @ONLY)
     add_custom_target(
-        doc_doxygen ALL
+	hash_doxygen ALL
         COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYGEN_OUT}
         WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
         COMMENT "Generating API documentation with Doxygen"
@@ -46,13 +37,11 @@ else (DOXYGEN_FOUND)
     message("Doxygen need to be installed to generate the doxygen documentation")
 endif (DOXYGEN_FOUND)
 
-
 ###############################
-# for testfmt
+# for test
 ###############################
 set(BUILD_TESTING ${ORG_BUILD_TESTING})
 if (BUILD_TESTING)
     enable_testing()
     add_subdirectory(test)
 endif()
-
