@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['maxlongtimepointsize_11',['maxLongTimePointSize',['../classTimeDiffer.html#afdfa18347ea97ccdfb718fb1e25cfb68',1,'TimeDiffer']]],
-  ['maxpointsize_12',['maxPointSize',['../classTimeDiffer.html#ad010026bab6fdffe607e6ee44f203b8e',1,'TimeDiffer']]]
+  ['tostring_24',['toString',['../classsoso_1_1Chronos.html#a124add76f416fe09e5907654f321c93e',1,'soso::Chronos']]]
 ];

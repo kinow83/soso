@@ -1,4 +1,4 @@
-project(TimeDiffer)
+project(chronos)
 
 cmake_minimum_required(VERSION 3.16)
 set(CMAKE_CXX_COMPILER /usr/bin/c++)
@@ -13,15 +13,15 @@ find_package(fmt REQUIRED)
 ###############################
 # for hpp
 ###############################
-add_library(TimeDiffer INTERFACE)
-target_sources(TimeDiffer INTERFACE TimeDiffer.hpp)
-target_include_directories (TimeDiffer
+add_library(chronos INTERFACE)
+target_sources(chronos INTERFACE chronos.hpp)
+target_include_directories (chronos
 INTERFACE
     ${CMAKE_CURRENT_SOURCE_DIR}/include
     ${fmt_SOURCE_DIR}/include)
 
 # auto link library fmt
-target_link_libraries(TimeDiffer
+target_link_libraries(chronos
 INTERFACE
     fmt)
 

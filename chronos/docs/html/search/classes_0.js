@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['timecheckpoint_25',['TimeCheckPoint',['../structTimeCheckPoint.html',1,'']]],
-  ['timediffer_26',['TimeDiffer',['../classTimeDiffer.html',1,'']]]
+  ['chronos_26',['Chronos',['../classsoso_1_1Chronos.html',1,'soso']]],
+  ['chronoscheckpoint_27',['ChronosCheckPoint',['../structsoso_1_1ChronosCheckPoint.html',1,'soso']]]
 ];

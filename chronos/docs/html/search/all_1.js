@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['checkedcount_1',['checkedCount',['../classTimeDiffer.html#a2e9ed9c84e09cf6f13a5270a835dc33f',1,'TimeDiffer']]],
-  ['checkpoint_2',['checkpoint',['../classTimeDiffer.html#ace655a2bc848127357b6328c956a0eab',1,'TimeDiffer::checkpoint()'],['../classTimeDiffer.html#a6addb5cb0575cf47f391782fa6306741',1,'TimeDiffer::checkpoint(const std::string &amp;desc, bool continuous=true)']]],
-  ['checktime_3',['checktime',['../structTimeCheckPoint.html#acd08f7a478765ab177ab8d1bcc2a0892',1,'TimeCheckPoint']]],
-  ['checktimegt_4',['checkTimeGT',['../structTimeCheckPoint.html#a2f8137f96c7bf8a02ea54bfa112bd68f',1,'TimeCheckPoint']]],
-  ['checktimelt_5',['checkTimeLT',['../structTimeCheckPoint.html#ab40e68a6c95cdca51d8f09474cf59efe',1,'TimeCheckPoint']]]
+  ['checkpoint_11',['checkpoint',['../classsoso_1_1Chronos.html#a29ea9559a6e40d39f4d9d6202a67f862',1,'soso::Chronos::checkpoint()'],['../classsoso_1_1Chronos.html#af7a4ee93d606d185a0661c30a7e02ab1',1,'soso::Chronos::checkpoint(const std::string &amp;desc, bool continuous=true)']]],
+  ['checktimegt_12',['checkTimeGT',['../structsoso_1_1ChronosCheckPoint.html#a3b02e386c7e9a5959ad471ec019bc5de',1,'soso::ChronosCheckPoint']]],
+  ['checktimelt_13',['checkTimeLT',['../structsoso_1_1ChronosCheckPoint.html#a11f8351bf4da715044ef3aee866a9753',1,'soso::ChronosCheckPoint']]],
+  ['chronos_14',['Chronos',['../classsoso_1_1Chronos.html',1,'soso::Chronos'],['../classsoso_1_1Chronos.html#a7b376cc4f61246b173551d12a8184c88',1,'soso::Chronos::Chronos()'],['../classsoso_1_1Chronos.html#adac55a084606514c4c9032c01fda083a',1,'soso::Chronos::Chronos(const std::string &amp;title)']]],
+  ['chronos_2ehpp_15',['chronos.hpp',['../chronos_8hpp.html',1,'']]],
+  ['chronoscheckpoint_16',['ChronosCheckPoint',['../structsoso_1_1ChronosCheckPoint.html',1,'soso::ChronosCheckPoint'],['../structsoso_1_1ChronosCheckPoint.html#a5cbd400a82190ca7395a526230b12763',1,'soso::ChronosCheckPoint::ChronosCheckPoint()']]]
 ];

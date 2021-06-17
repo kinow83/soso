@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['difftimegt_31',['diffTimeGT',['../structTimeCheckPoint.html#a2cd29530c81407f77427afa13bef3682',1,'TimeCheckPoint']]],
-  ['difftimelt_32',['diffTimeLT',['../structTimeCheckPoint.html#add7f4a6da63b9e40b4dd0dad7c55d408',1,'TimeCheckPoint']]]
+  ['difftimegt_35',['diffTimeGT',['../structsoso_1_1ChronosCheckPoint.html#aa56984253a246513a15cb6de6876e401',1,'soso::ChronosCheckPoint']]],
+  ['difftimelt_36',['diffTimeLT',['../structsoso_1_1ChronosCheckPoint.html#a25010b5eb11327b250a54fe3c51783eb',1,'soso::ChronosCheckPoint']]]
 ];

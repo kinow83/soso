@@ -1,0 +1,250 @@
+\hypertarget{structsoso_1_1ChronosCheckPoint}{}\doxysection{soso\+::Chronos\+Check\+Point 구조체 참조}
+\label{structsoso_1_1ChronosCheckPoint}\index{soso::ChronosCheckPoint@{soso::ChronosCheckPoint}}
+
+
+소요 시간 측정 class  
+
+
+
+
+{\ttfamily \#include $<$chronos.\+hpp$>$}
+
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsoso_1_1ChronosCheckPoint_a5cbd400a82190ca7395a526230b12763}{Chronos\+Check\+Point}} (const std\+::string \&desc=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Time\+Check\+Point 생성자 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structsoso_1_1ChronosCheckPoint_a1debbae1217a483e9aae4479b3ac7fb2}{set\+Desc}} (const std\+::string \&desc)
+\begin{DoxyCompactList}\small\item\em 설명 설정 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structsoso_1_1ChronosCheckPoint_a746e7b2ce3d4c82a4cdc5857f66d4f31}{update\+Check\+Time}} ()
+\begin{DoxyCompactList}\small\item\em 측정 시간 업데이트 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structsoso_1_1ChronosCheckPoint_aa56984253a246513a15cb6de6876e401}{diff\+Time\+GT}} (const \mbox{\hyperlink{structsoso_1_1ChronosCheckPoint}{Chronos\+Check\+Point}} \&checkpoint)
+\begin{DoxyCompactList}\small\item\em difftime 시간이 checkpoint 보다 큰 값인지 확인 (difftime 시간 크기 비교) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structsoso_1_1ChronosCheckPoint_a25010b5eb11327b250a54fe3c51783eb}{diff\+Time\+LT}} (const \mbox{\hyperlink{structsoso_1_1ChronosCheckPoint}{Chronos\+Check\+Point}} \&checkpoint)
+\begin{DoxyCompactList}\small\item\em difftime 시간이 checkpoint 보다 작은 값인지 확인 (difftime 시간 크기 비교) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structsoso_1_1ChronosCheckPoint_a3b02e386c7e9a5959ad471ec019bc5de}{check\+Time\+GT}} (const \mbox{\hyperlink{structsoso_1_1ChronosCheckPoint}{Chronos\+Check\+Point}} \&checkpoint)
+\begin{DoxyCompactList}\small\item\em checktime 시간이 checkpoint 보다 큰 값인지 확인 (checktime 시간 크기 비교) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structsoso_1_1ChronosCheckPoint_a11f8351bf4da715044ef3aee866a9753}{check\+Time\+LT}} (const \mbox{\hyperlink{structsoso_1_1ChronosCheckPoint}{Chronos\+Check\+Point}} \&checkpoint)
+\begin{DoxyCompactList}\small\item\em checktime 시간이 checkpoint 보다 작은 값인지 확인 (checktime 시간 크기 비교) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{structsoso_1_1ChronosCheckPoint_a49f6bbbbc6b4d67ad0e73e46356d9d79}{\+\_\+desc}}
+\begin{DoxyCompactList}\small\item\em 소요 시간 측정 설명 \end{DoxyCompactList}\item 
+struct timeval \mbox{\hyperlink{structsoso_1_1ChronosCheckPoint_a7d2150935f0798aa3ae2ee4dff1c5198}{\+\_\+checktime}}
+\begin{DoxyCompactList}\small\item\em 측정 시점 시각 \end{DoxyCompactList}\item 
+struct timeval \mbox{\hyperlink{structsoso_1_1ChronosCheckPoint_a0a2032f9fc98ab938aae9aac82c916db}{\+\_\+difftime}}
+\begin{DoxyCompactList}\small\item\em 소요 시간 측정 값 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+소요 시간 측정 class 
+
+
+
+chronos.\+hpp 파일의 20 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{structsoso_1_1ChronosCheckPoint_a5cbd400a82190ca7395a526230b12763}\label{structsoso_1_1ChronosCheckPoint_a5cbd400a82190ca7395a526230b12763}} 
+\index{soso::ChronosCheckPoint@{soso::ChronosCheckPoint}!ChronosCheckPoint@{ChronosCheckPoint}}
+\index{ChronosCheckPoint@{ChronosCheckPoint}!soso::ChronosCheckPoint@{soso::ChronosCheckPoint}}
+\doxysubsubsection{\texorpdfstring{ChronosCheckPoint()}{ChronosCheckPoint()}}
+{\footnotesize\ttfamily soso\+::\+Chronos\+Check\+Point\+::\+Chronos\+Check\+Point (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{desc = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Time\+Check\+Point 생성자 
+
+
+\begin{DoxyParams}{매개변수}
+{\em desc} & \\
+\hline
+\end{DoxyParams}
+
+
+chronos.\+hpp 파일의 32 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{structsoso_1_1ChronosCheckPoint_a3b02e386c7e9a5959ad471ec019bc5de}\label{structsoso_1_1ChronosCheckPoint_a3b02e386c7e9a5959ad471ec019bc5de}} 
+\index{soso::ChronosCheckPoint@{soso::ChronosCheckPoint}!checkTimeGT@{checkTimeGT}}
+\index{checkTimeGT@{checkTimeGT}!soso::ChronosCheckPoint@{soso::ChronosCheckPoint}}
+\doxysubsubsection{\texorpdfstring{checkTimeGT()}{checkTimeGT()}}
+{\footnotesize\ttfamily bool soso\+::\+Chronos\+Check\+Point\+::check\+Time\+GT (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsoso_1_1ChronosCheckPoint}{Chronos\+Check\+Point}} \&}]{checkpoint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+checktime 시간이 checkpoint 보다 큰 값인지 확인 (checktime 시간 크기 비교) 
+
+
+\begin{DoxyParams}{매개변수}
+{\em checkpoint} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+chronos.\+hpp 파일의 74 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsoso_1_1ChronosCheckPoint_a11f8351bf4da715044ef3aee866a9753}\label{structsoso_1_1ChronosCheckPoint_a11f8351bf4da715044ef3aee866a9753}} 
+\index{soso::ChronosCheckPoint@{soso::ChronosCheckPoint}!checkTimeLT@{checkTimeLT}}
+\index{checkTimeLT@{checkTimeLT}!soso::ChronosCheckPoint@{soso::ChronosCheckPoint}}
+\doxysubsubsection{\texorpdfstring{checkTimeLT()}{checkTimeLT()}}
+{\footnotesize\ttfamily bool soso\+::\+Chronos\+Check\+Point\+::check\+Time\+LT (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsoso_1_1ChronosCheckPoint}{Chronos\+Check\+Point}} \&}]{checkpoint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+checktime 시간이 checkpoint 보다 작은 값인지 확인 (checktime 시간 크기 비교) 
+
+
+\begin{DoxyParams}{매개변수}
+{\em checkpoint} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+chronos.\+hpp 파일의 85 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsoso_1_1ChronosCheckPoint_aa56984253a246513a15cb6de6876e401}\label{structsoso_1_1ChronosCheckPoint_aa56984253a246513a15cb6de6876e401}} 
+\index{soso::ChronosCheckPoint@{soso::ChronosCheckPoint}!diffTimeGT@{diffTimeGT}}
+\index{diffTimeGT@{diffTimeGT}!soso::ChronosCheckPoint@{soso::ChronosCheckPoint}}
+\doxysubsubsection{\texorpdfstring{diffTimeGT()}{diffTimeGT()}}
+{\footnotesize\ttfamily bool soso\+::\+Chronos\+Check\+Point\+::diff\+Time\+GT (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsoso_1_1ChronosCheckPoint}{Chronos\+Check\+Point}} \&}]{checkpoint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+difftime 시간이 checkpoint 보다 큰 값인지 확인 (difftime 시간 크기 비교) 
+
+
+\begin{DoxyParams}{매개변수}
+{\em checkpoint} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+chronos.\+hpp 파일의 54 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsoso_1_1ChronosCheckPoint_a25010b5eb11327b250a54fe3c51783eb}\label{structsoso_1_1ChronosCheckPoint_a25010b5eb11327b250a54fe3c51783eb}} 
+\index{soso::ChronosCheckPoint@{soso::ChronosCheckPoint}!diffTimeLT@{diffTimeLT}}
+\index{diffTimeLT@{diffTimeLT}!soso::ChronosCheckPoint@{soso::ChronosCheckPoint}}
+\doxysubsubsection{\texorpdfstring{diffTimeLT()}{diffTimeLT()}}
+{\footnotesize\ttfamily bool soso\+::\+Chronos\+Check\+Point\+::diff\+Time\+LT (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsoso_1_1ChronosCheckPoint}{Chronos\+Check\+Point}} \&}]{checkpoint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+difftime 시간이 checkpoint 보다 작은 값인지 확인 (difftime 시간 크기 비교) 
+
+
+\begin{DoxyParams}{매개변수}
+{\em checkpoint} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+chronos.\+hpp 파일의 64 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsoso_1_1ChronosCheckPoint_a1debbae1217a483e9aae4479b3ac7fb2}\label{structsoso_1_1ChronosCheckPoint_a1debbae1217a483e9aae4479b3ac7fb2}} 
+\index{soso::ChronosCheckPoint@{soso::ChronosCheckPoint}!setDesc@{setDesc}}
+\index{setDesc@{setDesc}!soso::ChronosCheckPoint@{soso::ChronosCheckPoint}}
+\doxysubsubsection{\texorpdfstring{setDesc()}{setDesc()}}
+{\footnotesize\ttfamily void soso\+::\+Chronos\+Check\+Point\+::set\+Desc (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{desc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+설명 설정 
+
+
+\begin{DoxyParams}{매개변수}
+{\em desc} & \\
+\hline
+\end{DoxyParams}
+
+
+chronos.\+hpp 파일의 41 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsoso_1_1ChronosCheckPoint_a746e7b2ce3d4c82a4cdc5857f66d4f31}\label{structsoso_1_1ChronosCheckPoint_a746e7b2ce3d4c82a4cdc5857f66d4f31}} 
+\index{soso::ChronosCheckPoint@{soso::ChronosCheckPoint}!updateCheckTime@{updateCheckTime}}
+\index{updateCheckTime@{updateCheckTime}!soso::ChronosCheckPoint@{soso::ChronosCheckPoint}}
+\doxysubsubsection{\texorpdfstring{updateCheckTime()}{updateCheckTime()}}
+{\footnotesize\ttfamily void soso\+::\+Chronos\+Check\+Point\+::update\+Check\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+측정 시간 업데이트 
+
+
+
+chronos.\+hpp 파일의 45 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{structsoso_1_1ChronosCheckPoint_a7d2150935f0798aa3ae2ee4dff1c5198}\label{structsoso_1_1ChronosCheckPoint_a7d2150935f0798aa3ae2ee4dff1c5198}} 
+\index{soso::ChronosCheckPoint@{soso::ChronosCheckPoint}!\_checktime@{\_checktime}}
+\index{\_checktime@{\_checktime}!soso::ChronosCheckPoint@{soso::ChronosCheckPoint}}
+\doxysubsubsection{\texorpdfstring{\_checktime}{\_checktime}}
+{\footnotesize\ttfamily struct timeval soso\+::\+Chronos\+Check\+Point\+::\+\_\+checktime}
+
+
+
+측정 시점 시각 
+
+
+
+chronos.\+hpp 파일의 24 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsoso_1_1ChronosCheckPoint_a49f6bbbbc6b4d67ad0e73e46356d9d79}\label{structsoso_1_1ChronosCheckPoint_a49f6bbbbc6b4d67ad0e73e46356d9d79}} 
+\index{soso::ChronosCheckPoint@{soso::ChronosCheckPoint}!\_desc@{\_desc}}
+\index{\_desc@{\_desc}!soso::ChronosCheckPoint@{soso::ChronosCheckPoint}}
+\doxysubsubsection{\texorpdfstring{\_desc}{\_desc}}
+{\footnotesize\ttfamily std\+::string soso\+::\+Chronos\+Check\+Point\+::\+\_\+desc}
+
+
+
+소요 시간 측정 설명 
+
+
+
+chronos.\+hpp 파일의 22 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsoso_1_1ChronosCheckPoint_a0a2032f9fc98ab938aae9aac82c916db}\label{structsoso_1_1ChronosCheckPoint_a0a2032f9fc98ab938aae9aac82c916db}} 
+\index{soso::ChronosCheckPoint@{soso::ChronosCheckPoint}!\_difftime@{\_difftime}}
+\index{\_difftime@{\_difftime}!soso::ChronosCheckPoint@{soso::ChronosCheckPoint}}
+\doxysubsubsection{\texorpdfstring{\_difftime}{\_difftime}}
+{\footnotesize\ttfamily struct timeval soso\+::\+Chronos\+Check\+Point\+::\+\_\+difftime}
+
+
+
+소요 시간 측정 값 
+
+
+
+chronos.\+hpp 파일의 26 번째 라인에서 정의되었습니다.
+
+
+
+이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{chronos_8hpp}{chronos.\+hpp}}\end{DoxyCompactItemize}

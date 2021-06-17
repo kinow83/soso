@@ -1,0 +1,4 @@
+<map id="soso::Chronos" name="soso::Chronos">
+<area shape="rect" id="node1" title="프로그램 시간 소요 시간 측정 checkpoint()를 호출할 때마다 소요된 시간 측정 값을 저장" alt="" coords="42,109,155,136"/>
+<area shape="rect" id="node2" href="$structsoso_1_1ChronosCheckPoint.html" title="소요 시간 측정 class" alt="" coords="5,5,192,32"/>
+</map>
