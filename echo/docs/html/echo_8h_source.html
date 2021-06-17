@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>echo: include/echo.h 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">echo
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'검색');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','검색');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">echo.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="echo_8h.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __SOSO_ECHO_H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __SOSO_ECHO_H__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;stdarg.h&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="namespacesoso.html">    9</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacesoso.html">soso</a> {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="echo_8h.html#a3b3d2511f7edf88284fd597bef4b69c7">   11</a></span>&#160;<span class="preprocessor">#define L_FATAL 0</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="echo_8h.html#a48538932682d4fe3cdf01547db361240">   12</a></span>&#160;<span class="preprocessor">#define L_ERROR 1</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="echo_8h.html#a44e93e627399c941f83961cf839eaaf2">   13</a></span>&#160;<span class="preprocessor">#define L_INFO 2</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="echo_8h.html#a27548f4fa27b9f4b02fb403f4ea6863c">   14</a></span>&#160;<span class="preprocessor">#define L_DEBUG 3</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="echo_8h.html#aa15a64659bb3a58d01f3fd568f27de83">   15</a></span>&#160;<span class="preprocessor">#define L_TRACE 4</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="echo_8h.html#a6240a6bf123b4433eb36b5f1d3aff461">   16</a></span>&#160;<span class="preprocessor">#define L_ALL (L_TRACE + 1)</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="echo_8h.html#a13a45f34adaa394179c3b221fbc5267a">   18</a></span>&#160;<span class="preprocessor">#define macfmt &quot;%02x:%02x:%02x:%02x:%02x:%02x&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="echo_8h.html#a4a17efd9128c546f79b05988bdec6d5b">   19</a></span>&#160;<span class="preprocessor">#define MACFMT &quot;%02X:%02X:%02X:%02X:%02X:%02X&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classsoso_1_1Echo.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsoso_1_1Echo.html">Echo</a> {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classsoso_1_1Echo.html#a666f64ca31a1112cbda0d7e61f03bba1">   28</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classsoso_1_1Echo.html#a666f64ca31a1112cbda0d7e61f03bba1">_log_level</a> = <a class="code" href="echo_8h.html#a27548f4fa27b9f4b02fb403f4ea6863c">L_DEBUG</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classsoso_1_1Echo.html#a21975d05e0bdd3f0747ff53be54be3fa">   30</a></span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="classsoso_1_1Echo.html#a21975d05e0bdd3f0747ff53be54be3fa">_filename</a> = NULL;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classsoso_1_1Echo.html#a08ebcdbae30c9b871893292eb8320684">   32</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classsoso_1_1Echo.html#a08ebcdbae30c9b871893292eb8320684">_exit_on_fatal</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsoso_1_1Echo.html#a4d17991146309d1d253fbd22894dae40">consoleLog</a>(<span class="keywordtype">int</span> lv, <span class="keyword">const</span> <span class="keywordtype">char</span> *fmt, va_list ap, uint8_t *hex, <span class="keywordtype">size_t</span> len,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                  <span class="keyword">const</span> <span class="keywordtype">char</span> *color, <span class="keywordtype">bool</span> bold);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsoso_1_1Echo.html#a520a07697a68f2a0151d663f019d9cd4">setLevel</a>(<span class="keywordtype">int</span> lv);</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classsoso_1_1Echo.html#a191c79417bbd902ef18b5849273bd28f">   46</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsoso_1_1Echo.html#a191c79417bbd902ef18b5849273bd28f">exitOnFatal</a>() { <a class="code" href="classsoso_1_1Echo.html#a08ebcdbae30c9b871893292eb8320684">_exit_on_fatal</a> = <span class="keyword">true</span>; }</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classsoso_1_1Echo.html#a4ac381f84df4f70860ff0a56e0b69dc5">   51</a></span>&#160;  <a class="code" href="classsoso_1_1Echo.html#a4ac381f84df4f70860ff0a56e0b69dc5">Echo</a>(<span class="keywordtype">int</span> lv = <a class="code" href="echo_8h.html#a6240a6bf123b4433eb36b5f1d3aff461">L_ALL</a>) : <a class="code" href="classsoso_1_1Echo.html#a666f64ca31a1112cbda0d7e61f03bba1">_log_level</a>(lv) {}</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <a class="code" href="classsoso_1_1Echo.html#a4ac381f84df4f70860ff0a56e0b69dc5">Echo</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *filename, <span class="keywordtype">int</span> lv = <a class="code" href="echo_8h.html#a6240a6bf123b4433eb36b5f1d3aff461">L_ALL</a>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <a class="code" href="classsoso_1_1Echo.html#a03c51e9ff426744f7ae68a9aac8614c8">~Echo</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsoso_1_1Echo.html#aabdcfb2b0e098a92143ef66af37877e0">f</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *fmt, ...);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsoso_1_1Echo.html#af8b57896ce90f79461a891b58df78142">e</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *fmt, ...);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsoso_1_1Echo.html#a6d2975ed62fd6654ab6068258012feb3">i</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *fmt, ...);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsoso_1_1Echo.html#aac3c52599d974f45b8e80e48a9e9ac2f">d</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *fmt, ...);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsoso_1_1Echo.html#ab0159f2c56630d9bb35db92463a187c2">t</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *fmt, ...);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsoso_1_1Echo.html#a8bfbfb11081c968dd7ec9918cb68a2ff">F</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *fmt, ...);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsoso_1_1Echo.html#a5ca5d3117cb455c70e7b7bb70f25efc2">E</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *fmt, ...);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsoso_1_1Echo.html#a3b08b16b06886b99fcadf0b8a82e2569">I</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *fmt, ...);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsoso_1_1Echo.html#a999dd7b6f25dbe59353dc68cedf77971">D</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *fmt, ...);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsoso_1_1Echo.html#a118e4d1eac0d2e5129ce62d7944ecef7">T</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *fmt, ...);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsoso_1_1Echo.html#a3d590371c24cb0248c17976917827a64">fx</a>(uint8_t *hex, <span class="keywordtype">size_t</span> len, <span class="keyword">const</span> <span class="keywordtype">char</span> *fmt, ...);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsoso_1_1Echo.html#ae898bf7d8868bbc947fe510beb63b87e">ex</a>(uint8_t *hex, <span class="keywordtype">size_t</span> len, <span class="keyword">const</span> <span class="keywordtype">char</span> *fmt, ...);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsoso_1_1Echo.html#a93d8f7ff0d2596cc3ef29723fea4c734">ix</a>(uint8_t *hex, <span class="keywordtype">size_t</span> len, <span class="keyword">const</span> <span class="keywordtype">char</span> *fmt, ...);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsoso_1_1Echo.html#af888e1110d3221cf2a69206e6731f21e">dx</a>(uint8_t *hex, <span class="keywordtype">size_t</span> len, <span class="keyword">const</span> <span class="keywordtype">char</span> *fmt, ...);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsoso_1_1Echo.html#aa62cf8132c87f60bcec1dc1a00cda4f2">tx</a>(uint8_t *hex, <span class="keywordtype">size_t</span> len, <span class="keyword">const</span> <span class="keywordtype">char</span> *fmt, ...);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;};</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacesoso.html#a43b3aa78db65277cf3f542925d7f4d67">default_echo_level</a>(<span class="keywordtype">int</span> lv);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;}; <span class="comment">// namespace soso</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="keyword">extern</span> <a class="code" href="classsoso_1_1Echo.html">soso::Echo</a> <a class="code" href="echo_8h.html#a284176256a094d363e5226eaaa621990">echo</a>;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclasssoso_1_1Echo_html_aac3c52599d974f45b8e80e48a9e9ac2f"><div class="ttname"><a href="classsoso_1_1Echo.html#aac3c52599d974f45b8e80e48a9e9ac2f">soso::Echo::d</a></div><div class="ttdeci">void d(const char *fmt,...)</div><div class="ttdoc">debug 일반 로그 출력</div><div class="ttdef"><b>Definition:</b> <a href="echo_8cpp_source.html#l00161">echo.cpp:161</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Echo_html_a03c51e9ff426744f7ae68a9aac8614c8"><div class="ttname"><a href="classsoso_1_1Echo.html#a03c51e9ff426744f7ae68a9aac8614c8">soso::Echo::~Echo</a></div><div class="ttdeci">~Echo()</div><div class="ttdef"><b>Definition:</b> <a href="echo_8cpp_source.html#l00072">echo.cpp:72</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Echo_html_af888e1110d3221cf2a69206e6731f21e"><div class="ttname"><a href="classsoso_1_1Echo.html#af888e1110d3221cf2a69206e6731f21e">soso::Echo::dx</a></div><div class="ttdeci">void dx(uint8_t *hex, size_t len, const char *fmt,...)</div><div class="ttdoc">debug hex 로그 출력</div><div class="ttdef"><b>Definition:</b> <a href="echo_8cpp_source.html#l00238">echo.cpp:238</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Echo_html_a3d590371c24cb0248c17976917827a64"><div class="ttname"><a href="classsoso_1_1Echo.html#a3d590371c24cb0248c17976917827a64">soso::Echo::fx</a></div><div class="ttdeci">void fx(uint8_t *hex, size_t len, const char *fmt,...)</div><div class="ttdoc">fatal hex 로그 출력  (주의! 로그 출력 후 exit 1로 프로그램 종료 됨)</div><div class="ttdef"><b>Definition:</b> <a href="echo_8cpp_source.html#l00217">echo.cpp:217</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Echo_html_a8bfbfb11081c968dd7ec9918cb68a2ff"><div class="ttname"><a href="classsoso_1_1Echo.html#a8bfbfb11081c968dd7ec9918cb68a2ff">soso::Echo::F</a></div><div class="ttdeci">void F(const char *fmt,...)</div><div class="ttdoc">fatal bold 로그 출력  (주의! 로그 출력 후 exit 1로 프로그램 종료 됨)</div><div class="ttdef"><b>Definition:</b> <a href="echo_8cpp_source.html#l00178">echo.cpp:178</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Echo_html_a3b08b16b06886b99fcadf0b8a82e2569"><div class="ttname"><a href="classsoso_1_1Echo.html#a3b08b16b06886b99fcadf0b8a82e2569">soso::Echo::I</a></div><div class="ttdeci">void I(const char *fmt,...)</div><div class="ttdoc">info bold 로그 출력</div><div class="ttdef"><b>Definition:</b> <a href="echo_8cpp_source.html#l00192">echo.cpp:192</a></div></div>
+<div class="ttc" id="anamespacesoso_html"><div class="ttname"><a href="namespacesoso.html">soso</a></div><div class="ttdef"><b>Definition:</b> <a href="echo_8h_source.html#l00009">echo.h:9</a></div></div>
+<div class="ttc" id="aecho_8h_html_a27548f4fa27b9f4b02fb403f4ea6863c"><div class="ttname"><a href="echo_8h.html#a27548f4fa27b9f4b02fb403f4ea6863c">L_DEBUG</a></div><div class="ttdeci">#define L_DEBUG</div><div class="ttdef"><b>Definition:</b> <a href="echo_8h_source.html#l00014">echo.h:14</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Echo_html_aabdcfb2b0e098a92143ef66af37877e0"><div class="ttname"><a href="classsoso_1_1Echo.html#aabdcfb2b0e098a92143ef66af37877e0">soso::Echo::f</a></div><div class="ttdeci">void f(const char *fmt,...)</div><div class="ttdoc">fatal 일반 로그 출력  (주의! 로그 출력 후 exit 1로 프로그램 종료 됨)</div><div class="ttdef"><b>Definition:</b> <a href="echo_8cpp_source.html#l00140">echo.cpp:140</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Echo_html_aa62cf8132c87f60bcec1dc1a00cda4f2"><div class="ttname"><a href="classsoso_1_1Echo.html#aa62cf8132c87f60bcec1dc1a00cda4f2">soso::Echo::tx</a></div><div class="ttdeci">void tx(uint8_t *hex, size_t len, const char *fmt,...)</div><div class="ttdoc">trace hex 로그 출력</div><div class="ttdef"><b>Definition:</b> <a href="echo_8cpp_source.html#l00245">echo.cpp:245</a></div></div>
+<div class="ttc" id="aecho_8h_html_a6240a6bf123b4433eb36b5f1d3aff461"><div class="ttname"><a href="echo_8h.html#a6240a6bf123b4433eb36b5f1d3aff461">L_ALL</a></div><div class="ttdeci">#define L_ALL</div><div class="ttdef"><b>Definition:</b> <a href="echo_8h_source.html#l00016">echo.h:16</a></div></div>
+<div class="ttc" id="aecho_8h_html_a284176256a094d363e5226eaaa621990"><div class="ttname"><a href="echo_8h.html#a284176256a094d363e5226eaaa621990">echo</a></div><div class="ttdeci">soso::Echo echo</div><div class="ttdoc">echo 기본 echo 모듈  주의! static 변수이므로 오브젝트 마다 echo 객체가 생성됨</div><div class="ttdef"><b>Definition:</b> <a href="echo_8cpp_source.html#l00252">echo.cpp:252</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Echo_html_a999dd7b6f25dbe59353dc68cedf77971"><div class="ttname"><a href="classsoso_1_1Echo.html#a999dd7b6f25dbe59353dc68cedf77971">soso::Echo::D</a></div><div class="ttdeci">void D(const char *fmt,...)</div><div class="ttdoc">debug bold 로그 출력</div><div class="ttdef"><b>Definition:</b> <a href="echo_8cpp_source.html#l00199">echo.cpp:199</a></div></div>
+<div class="ttc" id="anamespacesoso_html_a43b3aa78db65277cf3f542925d7f4d67"><div class="ttname"><a href="namespacesoso.html#a43b3aa78db65277cf3f542925d7f4d67">soso::default_echo_level</a></div><div class="ttdeci">void default_echo_level(int lv)</div><div class="ttdoc">기본 echo 객체에 대한 로그 레벨 설정</div><div class="ttdef"><b>Definition:</b> <a href="echo_8cpp_source.html#l00254">echo.cpp:254</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Echo_html_a4d17991146309d1d253fbd22894dae40"><div class="ttname"><a href="classsoso_1_1Echo.html#a4d17991146309d1d253fbd22894dae40">soso::Echo::consoleLog</a></div><div class="ttdeci">void consoleLog(int lv, const char *fmt, va_list ap, uint8_t *hex, size_t len, const char *color, bool bold)</div><div class="ttdoc">화면으로 로그 출력</div><div class="ttdef"><b>Definition:</b> <a href="echo_8cpp_source.html#l00079">echo.cpp:79</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Echo_html_a666f64ca31a1112cbda0d7e61f03bba1"><div class="ttname"><a href="classsoso_1_1Echo.html#a666f64ca31a1112cbda0d7e61f03bba1">soso::Echo::_log_level</a></div><div class="ttdeci">int _log_level</div><div class="ttdef"><b>Definition:</b> <a href="echo_8h_source.html#l00028">echo.h:28</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Echo_html_a520a07697a68f2a0151d663f019d9cd4"><div class="ttname"><a href="classsoso_1_1Echo.html#a520a07697a68f2a0151d663f019d9cd4">soso::Echo::setLevel</a></div><div class="ttdeci">void setLevel(int lv)</div><div class="ttdoc">로그 레벨 설정</div><div class="ttdef"><b>Definition:</b> <a href="echo_8cpp_source.html#l00074">echo.cpp:74</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Echo_html_a21975d05e0bdd3f0747ff53be54be3fa"><div class="ttname"><a href="classsoso_1_1Echo.html#a21975d05e0bdd3f0747ff53be54be3fa">soso::Echo::_filename</a></div><div class="ttdeci">const char * _filename</div><div class="ttdoc">로그 출력 파일명</div><div class="ttdef"><b>Definition:</b> <a href="echo_8h_source.html#l00030">echo.h:30</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Echo_html"><div class="ttname"><a href="classsoso_1_1Echo.html">soso::Echo</a></div><div class="ttdoc">로그 출력 (화면 또는 특정 파일)</div><div class="ttdef"><b>Definition:</b> <a href="echo_8h_source.html#l00024">echo.h:24</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Echo_html_a118e4d1eac0d2e5129ce62d7944ecef7"><div class="ttname"><a href="classsoso_1_1Echo.html#a118e4d1eac0d2e5129ce62d7944ecef7">soso::Echo::T</a></div><div class="ttdeci">void T(const char *fmt,...)</div><div class="ttdoc">trace bold 로그 출력</div><div class="ttdef"><b>Definition:</b> <a href="echo_8cpp_source.html#l00206">echo.cpp:206</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Echo_html_a08ebcdbae30c9b871893292eb8320684"><div class="ttname"><a href="classsoso_1_1Echo.html#a08ebcdbae30c9b871893292eb8320684">soso::Echo::_exit_on_fatal</a></div><div class="ttdeci">bool _exit_on_fatal</div><div class="ttdoc">fatal 로그 호출 시 프로그램 종료 여부</div><div class="ttdef"><b>Definition:</b> <a href="echo_8h_source.html#l00032">echo.h:32</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Echo_html_ab0159f2c56630d9bb35db92463a187c2"><div class="ttname"><a href="classsoso_1_1Echo.html#ab0159f2c56630d9bb35db92463a187c2">soso::Echo::t</a></div><div class="ttdeci">void t(const char *fmt,...)</div><div class="ttdoc">trace 일반 로그 출력</div><div class="ttdef"><b>Definition:</b> <a href="echo_8cpp_source.html#l00168">echo.cpp:168</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Echo_html_a191c79417bbd902ef18b5849273bd28f"><div class="ttname"><a href="classsoso_1_1Echo.html#a191c79417bbd902ef18b5849273bd28f">soso::Echo::exitOnFatal</a></div><div class="ttdeci">void exitOnFatal()</div><div class="ttdoc">fatal 로그 호출 시 프로그램을 종료하지 않음</div><div class="ttdef"><b>Definition:</b> <a href="echo_8h_source.html#l00046">echo.h:46</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Echo_html_a4ac381f84df4f70860ff0a56e0b69dc5"><div class="ttname"><a href="classsoso_1_1Echo.html#a4ac381f84df4f70860ff0a56e0b69dc5">soso::Echo::Echo</a></div><div class="ttdeci">Echo(int lv=L_ALL)</div><div class="ttdoc">Echo 생성자</div><div class="ttdef"><b>Definition:</b> <a href="echo_8h_source.html#l00051">echo.h:51</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Echo_html_a5ca5d3117cb455c70e7b7bb70f25efc2"><div class="ttname"><a href="classsoso_1_1Echo.html#a5ca5d3117cb455c70e7b7bb70f25efc2">soso::Echo::E</a></div><div class="ttdeci">void E(const char *fmt,...)</div><div class="ttdoc">error bold 로그 출력</div><div class="ttdef"><b>Definition:</b> <a href="echo_8cpp_source.html#l00185">echo.cpp:185</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Echo_html_a93d8f7ff0d2596cc3ef29723fea4c734"><div class="ttname"><a href="classsoso_1_1Echo.html#a93d8f7ff0d2596cc3ef29723fea4c734">soso::Echo::ix</a></div><div class="ttdeci">void ix(uint8_t *hex, size_t len, const char *fmt,...)</div><div class="ttdoc">info hex 로그 출력</div><div class="ttdef"><b>Definition:</b> <a href="echo_8cpp_source.html#l00231">echo.cpp:231</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Echo_html_af8b57896ce90f79461a891b58df78142"><div class="ttname"><a href="classsoso_1_1Echo.html#af8b57896ce90f79461a891b58df78142">soso::Echo::e</a></div><div class="ttdeci">void e(const char *fmt,...)</div><div class="ttdoc">error 일반 로그 출력</div><div class="ttdef"><b>Definition:</b> <a href="echo_8cpp_source.html#l00147">echo.cpp:147</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Echo_html_ae898bf7d8868bbc947fe510beb63b87e"><div class="ttname"><a href="classsoso_1_1Echo.html#ae898bf7d8868bbc947fe510beb63b87e">soso::Echo::ex</a></div><div class="ttdeci">void ex(uint8_t *hex, size_t len, const char *fmt,...)</div><div class="ttdoc">error hex 로그 출력</div><div class="ttdef"><b>Definition:</b> <a href="echo_8cpp_source.html#l00224">echo.cpp:224</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Echo_html_a6d2975ed62fd6654ab6068258012feb3"><div class="ttname"><a href="classsoso_1_1Echo.html#a6d2975ed62fd6654ab6068258012feb3">soso::Echo::i</a></div><div class="ttdeci">void i(const char *fmt,...)</div><div class="ttdoc">info 일반 로그 출력</div><div class="ttdef"><b>Definition:</b> <a href="echo_8cpp_source.html#l00154">echo.cpp:154</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

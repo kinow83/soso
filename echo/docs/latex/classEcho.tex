@@ -1,0 +1,552 @@
+\hypertarget{classEcho}{}\doxysection{Echo 클래스 참조}
+\label{classEcho}\index{Echo@{Echo}}
+
+
+로그 출력 (화면 또는 특정 파일)  
+
+
+
+
+{\ttfamily \#include $<$Echo.\+h$>$}
+
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classEcho_a520a07697a68f2a0151d663f019d9cd4}{set\+Level}} (int lv)
+\begin{DoxyCompactList}\small\item\em 로그 레벨 설정 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEcho_aacd884049a7a48766d4cdf80bbbe624a}{exit\+On\+Fatal}} ()
+\begin{DoxyCompactList}\small\item\em fatal 로그 호출 시 프로그램을 종료하지 않음 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEcho_a4b1ec185a195f910f0276e4073eb8e23}{Echo}} (int lv=\mbox{\hyperlink{Echo_8h_a6240a6bf123b4433eb36b5f1d3aff461}{L\+\_\+\+A\+LL}})
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEcho}{Echo}} 생성자 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEcho_a4d676505fbd0c9eb3d33101ccc5c718b}{Echo}} (const char $\ast$\mbox{\hyperlink{classEcho_ad835420d1fbc760a7595181e6570f9e4}{filename}}, int lv=\mbox{\hyperlink{Echo_8h_a6240a6bf123b4433eb36b5f1d3aff461}{L\+\_\+\+A\+LL}})
+\item 
+\mbox{\hyperlink{classEcho_a03c51e9ff426744f7ae68a9aac8614c8}{$\sim$\+Echo}} ()
+\item 
+void \mbox{\hyperlink{classEcho_aabdcfb2b0e098a92143ef66af37877e0}{f}} (const char $\ast$fmt,...)
+\begin{DoxyCompactList}\small\item\em fatal 일반 로그 출력 ~\newline
+(주의! 로그 출력 후 exit 1로 프로그램 종료 됨) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEcho_af8b57896ce90f79461a891b58df78142}{e}} (const char $\ast$fmt,...)
+\begin{DoxyCompactList}\small\item\em error 일반 로그 출력 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEcho_a6d2975ed62fd6654ab6068258012feb3}{i}} (const char $\ast$fmt,...)
+\begin{DoxyCompactList}\small\item\em info 일반 로그 출력 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEcho_aac3c52599d974f45b8e80e48a9e9ac2f}{d}} (const char $\ast$fmt,...)
+\begin{DoxyCompactList}\small\item\em debug 일반 로그 출력 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEcho_ab0159f2c56630d9bb35db92463a187c2}{t}} (const char $\ast$fmt,...)
+\begin{DoxyCompactList}\small\item\em trace 일반 로그 출력 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEcho_a8bfbfb11081c968dd7ec9918cb68a2ff}{F}} (const char $\ast$fmt,...)
+\begin{DoxyCompactList}\small\item\em fatal bold 로그 출력 ~\newline
+(주의! 로그 출력 후 exit 1로 프로그램 종료 됨) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEcho_a5ca5d3117cb455c70e7b7bb70f25efc2}{E}} (const char $\ast$fmt,...)
+\begin{DoxyCompactList}\small\item\em error bold 로그 출력 ~\newline
+\end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEcho_a3b08b16b06886b99fcadf0b8a82e2569}{I}} (const char $\ast$fmt,...)
+\begin{DoxyCompactList}\small\item\em info bold 로그 출력 ~\newline
+\end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEcho_a999dd7b6f25dbe59353dc68cedf77971}{D}} (const char $\ast$fmt,...)
+\begin{DoxyCompactList}\small\item\em debug bold 로그 출력 ~\newline
+\end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEcho_a118e4d1eac0d2e5129ce62d7944ecef7}{T}} (const char $\ast$fmt,...)
+\begin{DoxyCompactList}\small\item\em trace bold 로그 출력 ~\newline
+\end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEcho_a3d590371c24cb0248c17976917827a64}{fx}} (uint8\+\_\+t $\ast$hex, size\+\_\+t len, const char $\ast$fmt,...)
+\begin{DoxyCompactList}\small\item\em fatal hex 로그 출력 ~\newline
+(주의! 로그 출력 후 exit 1로 프로그램 종료 됨) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEcho_ae898bf7d8868bbc947fe510beb63b87e}{ex}} (uint8\+\_\+t $\ast$hex, size\+\_\+t len, const char $\ast$fmt,...)
+\begin{DoxyCompactList}\small\item\em error hex 로그 출력 ~\newline
+\end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEcho_a93d8f7ff0d2596cc3ef29723fea4c734}{ix}} (uint8\+\_\+t $\ast$hex, size\+\_\+t len, const char $\ast$fmt,...)
+\begin{DoxyCompactList}\small\item\em info hex 로그 출력 ~\newline
+\end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEcho_af888e1110d3221cf2a69206e6731f21e}{dx}} (uint8\+\_\+t $\ast$hex, size\+\_\+t len, const char $\ast$fmt,...)
+\begin{DoxyCompactList}\small\item\em debug hex 로그 출력 ~\newline
+\end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEcho_aa62cf8132c87f60bcec1dc1a00cda4f2}{tx}} (uint8\+\_\+t $\ast$hex, size\+\_\+t len, const char $\ast$fmt,...)
+\begin{DoxyCompactList}\small\item\em trace hex 로그 출력 ~\newline
+\end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classEcho_a4d17991146309d1d253fbd22894dae40}{console\+Log}} (int lv, const char $\ast$fmt, va\+\_\+list ap, uint8\+\_\+t $\ast$hex, size\+\_\+t len, const char $\ast$color, bool bold)
+\begin{DoxyCompactList}\small\item\em 화면으로 로그 출력 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classEcho_aa92dbd4e4885ac357130681dc009fbd8}{log\+\_\+level}} = \mbox{\hyperlink{Echo_8h_a27548f4fa27b9f4b02fb403f4ea6863c}{L\+\_\+\+D\+E\+B\+UG}}
+\item 
+const char $\ast$ \mbox{\hyperlink{classEcho_ad835420d1fbc760a7595181e6570f9e4}{filename}} = N\+U\+LL
+\begin{DoxyCompactList}\small\item\em 로그 출력 파일명 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classEcho_acb2fc054f5334682be6e800e4ed944e2}{exit\+\_\+on\+\_\+fatal}} = false
+\begin{DoxyCompactList}\small\item\em fatal 로그 호출 시 프로그램 종료 여부 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+로그 출력 (화면 또는 특정 파일) 
+
+Echo.\+h 파일의 22 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{classEcho_a4b1ec185a195f910f0276e4073eb8e23}\label{classEcho_a4b1ec185a195f910f0276e4073eb8e23}} 
+\index{Echo@{Echo}!Echo@{Echo}}
+\index{Echo@{Echo}!Echo@{Echo}}
+\doxysubsubsection{\texorpdfstring{Echo()}{Echo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Echo\+::\+Echo (\begin{DoxyParamCaption}\item[{int}]{lv = {\ttfamily \mbox{\hyperlink{Echo_8h_a6240a6bf123b4433eb36b5f1d3aff461}{L\+\_\+\+A\+LL}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{classEcho}{Echo}} 생성자 
+
+
+\begin{DoxyParams}{매개변수}
+{\em lv} & \\
+\hline
+\end{DoxyParams}
+
+
+Echo.\+h 파일의 49 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classEcho_a4d676505fbd0c9eb3d33101ccc5c718b}\label{classEcho_a4d676505fbd0c9eb3d33101ccc5c718b}} 
+\index{Echo@{Echo}!Echo@{Echo}}
+\index{Echo@{Echo}!Echo@{Echo}}
+\doxysubsubsection{\texorpdfstring{Echo()}{Echo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Echo\+::\+Echo (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{int}]{lv = {\ttfamily \mbox{\hyperlink{Echo_8h_a6240a6bf123b4433eb36b5f1d3aff461}{L\+\_\+\+A\+LL}}} }\end{DoxyParamCaption})}
+
+
+
+Echo.\+cpp 파일의 64 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classEcho_a03c51e9ff426744f7ae68a9aac8614c8}\label{classEcho_a03c51e9ff426744f7ae68a9aac8614c8}} 
+\index{Echo@{Echo}!````~Echo@{$\sim$Echo}}
+\index{````~Echo@{$\sim$Echo}!Echo@{Echo}}
+\doxysubsubsection{\texorpdfstring{$\sim$Echo()}{~Echo()}}
+{\footnotesize\ttfamily Echo\+::$\sim$\+Echo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Echo.\+cpp 파일의 70 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{classEcho_a4d17991146309d1d253fbd22894dae40}\label{classEcho_a4d17991146309d1d253fbd22894dae40}} 
+\index{Echo@{Echo}!consoleLog@{consoleLog}}
+\index{consoleLog@{consoleLog}!Echo@{Echo}}
+\doxysubsubsection{\texorpdfstring{consoleLog()}{consoleLog()}}
+{\footnotesize\ttfamily void Echo\+::console\+Log (\begin{DoxyParamCaption}\item[{int}]{lv,  }\item[{const char $\ast$}]{fmt,  }\item[{va\+\_\+list}]{ap,  }\item[{uint8\+\_\+t $\ast$}]{hex,  }\item[{size\+\_\+t}]{len,  }\item[{const char $\ast$}]{color,  }\item[{bool}]{bold }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+화면으로 로그 출력 
+
+
+
+Echo.\+cpp 파일의 77 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classEcho_aac3c52599d974f45b8e80e48a9e9ac2f}\label{classEcho_aac3c52599d974f45b8e80e48a9e9ac2f}} 
+\index{Echo@{Echo}!d@{d}}
+\index{d@{d}!Echo@{Echo}}
+\doxysubsubsection{\texorpdfstring{d()}{d()}}
+{\footnotesize\ttfamily void Echo\+::d (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+debug 일반 로그 출력 
+
+
+\begin{DoxyParams}{매개변수}
+{\em fmt} & \\
+\hline
+{\em ...} & \\
+\hline
+\end{DoxyParams}
+
+
+Echo.\+cpp 파일의 158 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classEcho_a999dd7b6f25dbe59353dc68cedf77971}\label{classEcho_a999dd7b6f25dbe59353dc68cedf77971}} 
+\index{Echo@{Echo}!D@{D}}
+\index{D@{D}!Echo@{Echo}}
+\doxysubsubsection{\texorpdfstring{D()}{D()}}
+{\footnotesize\ttfamily void Echo\+::D (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+debug bold 로그 출력 ~\newline
+
+
+
+\begin{DoxyParams}{매개변수}
+{\em fmt} & \\
+\hline
+{\em ...} & \\
+\hline
+\end{DoxyParams}
+
+
+Echo.\+cpp 파일의 196 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classEcho_af888e1110d3221cf2a69206e6731f21e}\label{classEcho_af888e1110d3221cf2a69206e6731f21e}} 
+\index{Echo@{Echo}!dx@{dx}}
+\index{dx@{dx}!Echo@{Echo}}
+\doxysubsubsection{\texorpdfstring{dx()}{dx()}}
+{\footnotesize\ttfamily void Echo\+::dx (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{hex,  }\item[{size\+\_\+t}]{len,  }\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+debug hex 로그 출력 ~\newline
+
+
+
+\begin{DoxyParams}{매개변수}
+{\em fmt} & \\
+\hline
+{\em ...} & \\
+\hline
+\end{DoxyParams}
+
+
+Echo.\+cpp 파일의 235 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classEcho_af8b57896ce90f79461a891b58df78142}\label{classEcho_af8b57896ce90f79461a891b58df78142}} 
+\index{Echo@{Echo}!e@{e}}
+\index{e@{e}!Echo@{Echo}}
+\doxysubsubsection{\texorpdfstring{e()}{e()}}
+{\footnotesize\ttfamily void Echo\+::e (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+error 일반 로그 출력 
+
+
+\begin{DoxyParams}{매개변수}
+{\em fmt} & \\
+\hline
+{\em ...} & \\
+\hline
+\end{DoxyParams}
+
+
+Echo.\+cpp 파일의 144 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classEcho_a5ca5d3117cb455c70e7b7bb70f25efc2}\label{classEcho_a5ca5d3117cb455c70e7b7bb70f25efc2}} 
+\index{Echo@{Echo}!E@{E}}
+\index{E@{E}!Echo@{Echo}}
+\doxysubsubsection{\texorpdfstring{E()}{E()}}
+{\footnotesize\ttfamily void Echo\+::E (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+error bold 로그 출력 ~\newline
+
+
+
+\begin{DoxyParams}{매개변수}
+{\em fmt} & \\
+\hline
+{\em ...} & \\
+\hline
+\end{DoxyParams}
+
+
+Echo.\+cpp 파일의 182 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classEcho_ae898bf7d8868bbc947fe510beb63b87e}\label{classEcho_ae898bf7d8868bbc947fe510beb63b87e}} 
+\index{Echo@{Echo}!ex@{ex}}
+\index{ex@{ex}!Echo@{Echo}}
+\doxysubsubsection{\texorpdfstring{ex()}{ex()}}
+{\footnotesize\ttfamily void Echo\+::ex (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{hex,  }\item[{size\+\_\+t}]{len,  }\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+error hex 로그 출력 ~\newline
+
+
+
+\begin{DoxyParams}{매개변수}
+{\em fmt} & \\
+\hline
+{\em ...} & \\
+\hline
+\end{DoxyParams}
+
+
+Echo.\+cpp 파일의 221 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classEcho_aacd884049a7a48766d4cdf80bbbe624a}\label{classEcho_aacd884049a7a48766d4cdf80bbbe624a}} 
+\index{Echo@{Echo}!exitOnFatal@{exitOnFatal}}
+\index{exitOnFatal@{exitOnFatal}!Echo@{Echo}}
+\doxysubsubsection{\texorpdfstring{exitOnFatal()}{exitOnFatal()}}
+{\footnotesize\ttfamily void Echo\+::exit\+On\+Fatal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+fatal 로그 호출 시 프로그램을 종료하지 않음 
+
+
+
+Echo.\+h 파일의 44 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classEcho_aabdcfb2b0e098a92143ef66af37877e0}\label{classEcho_aabdcfb2b0e098a92143ef66af37877e0}} 
+\index{Echo@{Echo}!f@{f}}
+\index{f@{f}!Echo@{Echo}}
+\doxysubsubsection{\texorpdfstring{f()}{f()}}
+{\footnotesize\ttfamily void Echo\+::f (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+fatal 일반 로그 출력 ~\newline
+(주의! 로그 출력 후 exit 1로 프로그램 종료 됨) 
+
+
+\begin{DoxyParams}{매개변수}
+{\em fmt} & \\
+\hline
+{\em ...} & \\
+\hline
+\end{DoxyParams}
+
+
+Echo.\+cpp 파일의 137 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classEcho_a8bfbfb11081c968dd7ec9918cb68a2ff}\label{classEcho_a8bfbfb11081c968dd7ec9918cb68a2ff}} 
+\index{Echo@{Echo}!F@{F}}
+\index{F@{F}!Echo@{Echo}}
+\doxysubsubsection{\texorpdfstring{F()}{F()}}
+{\footnotesize\ttfamily void Echo\+::F (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+fatal bold 로그 출력 ~\newline
+(주의! 로그 출력 후 exit 1로 프로그램 종료 됨) 
+
+
+\begin{DoxyParams}{매개변수}
+{\em fmt} & \\
+\hline
+{\em ...} & \\
+\hline
+\end{DoxyParams}
+
+
+Echo.\+cpp 파일의 175 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classEcho_a3d590371c24cb0248c17976917827a64}\label{classEcho_a3d590371c24cb0248c17976917827a64}} 
+\index{Echo@{Echo}!fx@{fx}}
+\index{fx@{fx}!Echo@{Echo}}
+\doxysubsubsection{\texorpdfstring{fx()}{fx()}}
+{\footnotesize\ttfamily void Echo\+::fx (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{hex,  }\item[{size\+\_\+t}]{len,  }\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+fatal hex 로그 출력 ~\newline
+(주의! 로그 출력 후 exit 1로 프로그램 종료 됨) 
+
+
+\begin{DoxyParams}{매개변수}
+{\em fmt} & \\
+\hline
+{\em ...} & \\
+\hline
+\end{DoxyParams}
+
+
+Echo.\+cpp 파일의 214 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classEcho_a6d2975ed62fd6654ab6068258012feb3}\label{classEcho_a6d2975ed62fd6654ab6068258012feb3}} 
+\index{Echo@{Echo}!i@{i}}
+\index{i@{i}!Echo@{Echo}}
+\doxysubsubsection{\texorpdfstring{i()}{i()}}
+{\footnotesize\ttfamily void Echo\+::i (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+info 일반 로그 출력 
+
+
+\begin{DoxyParams}{매개변수}
+{\em fmt} & \\
+\hline
+{\em ...} & \\
+\hline
+\end{DoxyParams}
+
+
+Echo.\+cpp 파일의 151 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classEcho_a3b08b16b06886b99fcadf0b8a82e2569}\label{classEcho_a3b08b16b06886b99fcadf0b8a82e2569}} 
+\index{Echo@{Echo}!I@{I}}
+\index{I@{I}!Echo@{Echo}}
+\doxysubsubsection{\texorpdfstring{I()}{I()}}
+{\footnotesize\ttfamily void Echo\+::I (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+info bold 로그 출력 ~\newline
+
+
+
+\begin{DoxyParams}{매개변수}
+{\em fmt} & \\
+\hline
+{\em ...} & \\
+\hline
+\end{DoxyParams}
+
+
+Echo.\+cpp 파일의 189 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classEcho_a93d8f7ff0d2596cc3ef29723fea4c734}\label{classEcho_a93d8f7ff0d2596cc3ef29723fea4c734}} 
+\index{Echo@{Echo}!ix@{ix}}
+\index{ix@{ix}!Echo@{Echo}}
+\doxysubsubsection{\texorpdfstring{ix()}{ix()}}
+{\footnotesize\ttfamily void Echo\+::ix (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{hex,  }\item[{size\+\_\+t}]{len,  }\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+info hex 로그 출력 ~\newline
+
+
+
+\begin{DoxyParams}{매개변수}
+{\em fmt} & \\
+\hline
+{\em ...} & \\
+\hline
+\end{DoxyParams}
+
+
+Echo.\+cpp 파일의 228 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classEcho_a520a07697a68f2a0151d663f019d9cd4}\label{classEcho_a520a07697a68f2a0151d663f019d9cd4}} 
+\index{Echo@{Echo}!setLevel@{setLevel}}
+\index{setLevel@{setLevel}!Echo@{Echo}}
+\doxysubsubsection{\texorpdfstring{setLevel()}{setLevel()}}
+{\footnotesize\ttfamily void Echo\+::set\+Level (\begin{DoxyParamCaption}\item[{int}]{lv }\end{DoxyParamCaption})}
+
+
+
+로그 레벨 설정 
+
+
+\begin{DoxyParams}{매개변수}
+{\em lv} & L\+\_\+\+T\+R\+A\+CE $>$ L\+\_\+\+D\+E\+B\+UG $>$ L\+\_\+\+I\+N\+FO $>$ L\+\_\+\+E\+R\+R\+OR $>$ L\+\_\+\+F\+A\+T\+AL \\
+\hline
+\end{DoxyParams}
+
+
+Echo.\+cpp 파일의 72 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classEcho_ab0159f2c56630d9bb35db92463a187c2}\label{classEcho_ab0159f2c56630d9bb35db92463a187c2}} 
+\index{Echo@{Echo}!t@{t}}
+\index{t@{t}!Echo@{Echo}}
+\doxysubsubsection{\texorpdfstring{t()}{t()}}
+{\footnotesize\ttfamily void Echo\+::t (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+trace 일반 로그 출력 
+
+
+\begin{DoxyParams}{매개변수}
+{\em fmt} & \\
+\hline
+{\em ...} & \\
+\hline
+\end{DoxyParams}
+
+
+Echo.\+cpp 파일의 165 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classEcho_a118e4d1eac0d2e5129ce62d7944ecef7}\label{classEcho_a118e4d1eac0d2e5129ce62d7944ecef7}} 
+\index{Echo@{Echo}!T@{T}}
+\index{T@{T}!Echo@{Echo}}
+\doxysubsubsection{\texorpdfstring{T()}{T()}}
+{\footnotesize\ttfamily void Echo\+::T (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+trace bold 로그 출력 ~\newline
+
+
+
+\begin{DoxyParams}{매개변수}
+{\em fmt} & \\
+\hline
+{\em ...} & \\
+\hline
+\end{DoxyParams}
+
+
+Echo.\+cpp 파일의 203 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classEcho_aa62cf8132c87f60bcec1dc1a00cda4f2}\label{classEcho_aa62cf8132c87f60bcec1dc1a00cda4f2}} 
+\index{Echo@{Echo}!tx@{tx}}
+\index{tx@{tx}!Echo@{Echo}}
+\doxysubsubsection{\texorpdfstring{tx()}{tx()}}
+{\footnotesize\ttfamily void Echo\+::tx (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{hex,  }\item[{size\+\_\+t}]{len,  }\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+trace hex 로그 출력 ~\newline
+
+
+
+\begin{DoxyParams}{매개변수}
+{\em fmt} & \\
+\hline
+{\em ...} & \\
+\hline
+\end{DoxyParams}
+
+
+Echo.\+cpp 파일의 242 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{classEcho_acb2fc054f5334682be6e800e4ed944e2}\label{classEcho_acb2fc054f5334682be6e800e4ed944e2}} 
+\index{Echo@{Echo}!exit\_on\_fatal@{exit\_on\_fatal}}
+\index{exit\_on\_fatal@{exit\_on\_fatal}!Echo@{Echo}}
+\doxysubsubsection{\texorpdfstring{exit\_on\_fatal}{exit\_on\_fatal}}
+{\footnotesize\ttfamily bool Echo\+::exit\+\_\+on\+\_\+fatal = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+fatal 로그 호출 시 프로그램 종료 여부 
+
+
+
+Echo.\+h 파일의 30 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classEcho_ad835420d1fbc760a7595181e6570f9e4}\label{classEcho_ad835420d1fbc760a7595181e6570f9e4}} 
+\index{Echo@{Echo}!filename@{filename}}
+\index{filename@{filename}!Echo@{Echo}}
+\doxysubsubsection{\texorpdfstring{filename}{filename}}
+{\footnotesize\ttfamily const char$\ast$ Echo\+::filename = N\+U\+LL\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+로그 출력 파일명 
+
+
+
+Echo.\+h 파일의 28 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classEcho_aa92dbd4e4885ac357130681dc009fbd8}\label{classEcho_aa92dbd4e4885ac357130681dc009fbd8}} 
+\index{Echo@{Echo}!log\_level@{log\_level}}
+\index{log\_level@{log\_level}!Echo@{Echo}}
+\doxysubsubsection{\texorpdfstring{log\_level}{log\_level}}
+{\footnotesize\ttfamily int Echo\+::log\+\_\+level = \mbox{\hyperlink{Echo_8h_a27548f4fa27b9f4b02fb403f4ea6863c}{L\+\_\+\+D\+E\+B\+UG}}\hspace{0.3cm}{\ttfamily [private]}}
+
+로그레벨~\newline
+T\+R\+A\+CE $>$ D\+E\+B\+UG $>$ I\+N\+FO $>$ E\+R\+R\+OR $>$ F\+A\+T\+AL 
+
+Echo.\+h 파일의 26 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Echo_8h}{Echo.\+h}}\item 
+src/\mbox{\hyperlink{Echo_8cpp}{Echo.\+cpp}}\end{DoxyCompactItemize}
