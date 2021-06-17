@@ -1,0 +1,4 @@
+<map id="soso::Worker" name="soso::Worker">
+<area shape="rect" id="node1" title="job(작업)를 처리하기 worker(작업)를 관리하기 위한 객체" alt="" coords="34,95,139,121"/>
+<area shape="rect" id="node2" href="$classsoso_1_1WorkerManager.html" title="worker(작업자) 스레드가 job(작업)을 처리하는 라이브러리. 하나의 job이 Queue(큐)에 추가되면 여러개의 worker 중 하나의 worker가 선택되어 job을 처리한..." alt="" coords="5,5,168,32"/>
+</map>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['inccompletedjobs_51',['incCompletedJobs',['../classsoso_1_1Worker.html#a84bbefcfa1768f0901292714b6519a11',1,'soso::Worker']]]
+  ['inccompletedjobs_62',['incCompletedJobs',['../classsoso_1_1Worker.html#a59ac0930303a04cb26ff2f7954ffa1a5',1,'soso::Worker']]]
 ];

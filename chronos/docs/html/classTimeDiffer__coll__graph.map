@@ -1,0 +1,4 @@
+<map id="TimeDiffer" name="TimeDiffer">
+<area shape="rect" id="node1" title="프로그램 시간 소요 시간 측정 checkpoint()를 호출할 때마다 소요된 시간 측정 값을 저장" alt="" coords="24,109,115,136"/>
+<area shape="rect" id="node2" href="$structTimeCheckPoint.html" title="소요 시간 측정 class" alt="" coords="5,5,133,32"/>
+</map>

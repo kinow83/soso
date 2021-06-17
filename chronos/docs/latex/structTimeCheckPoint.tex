@@ -1,0 +1,250 @@
+\hypertarget{structTimeCheckPoint}{}\doxysection{Time\+Check\+Point 구조체 참조}
+\label{structTimeCheckPoint}\index{TimeCheckPoint@{TimeCheckPoint}}
+
+
+소요 시간 측정 class  
+
+
+
+
+{\ttfamily \#include $<$Time\+Differ.\+hpp$>$}
+
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structTimeCheckPoint_a0cb55de02011f7ceb24121b26e92460f}{Time\+Check\+Point}} (const std\+::string \&\mbox{\hyperlink{structTimeCheckPoint_ad6b9aad19b93446d2a7058381cc4bee0}{desc}}=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structTimeCheckPoint}{Time\+Check\+Point}} 생성자 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structTimeCheckPoint_a7bf196c2713836b6bf293bdd43804f5a}{set\+Desc}} (const std\+::string \&\mbox{\hyperlink{structTimeCheckPoint_ad6b9aad19b93446d2a7058381cc4bee0}{desc}})
+\begin{DoxyCompactList}\small\item\em 설명 설정 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structTimeCheckPoint_afe7f7803c0a3e6604cfeb15adc7f644a}{update\+Check\+Time}} ()
+\begin{DoxyCompactList}\small\item\em 측정 시간 업데이트 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structTimeCheckPoint_a2cd29530c81407f77427afa13bef3682}{diff\+Time\+GT}} (const \mbox{\hyperlink{structTimeCheckPoint}{Time\+Check\+Point}} \&checkpoint)
+\begin{DoxyCompactList}\small\item\em difftime 시간이 checkpoint 보다 큰 값인지 확인 (difftime 시간 크기 비교) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structTimeCheckPoint_add7f4a6da63b9e40b4dd0dad7c55d408}{diff\+Time\+LT}} (const \mbox{\hyperlink{structTimeCheckPoint}{Time\+Check\+Point}} \&checkpoint)
+\begin{DoxyCompactList}\small\item\em difftime 시간이 checkpoint 보다 작은 값인지 확인 (difftime 시간 크기 비교) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structTimeCheckPoint_a2f8137f96c7bf8a02ea54bfa112bd68f}{check\+Time\+GT}} (const \mbox{\hyperlink{structTimeCheckPoint}{Time\+Check\+Point}} \&checkpoint)
+\begin{DoxyCompactList}\small\item\em checktime 시간이 checkpoint 보다 큰 값인지 확인 (checktime 시간 크기 비교) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structTimeCheckPoint_ab40e68a6c95cdca51d8f09474cf59efe}{check\+Time\+LT}} (const \mbox{\hyperlink{structTimeCheckPoint}{Time\+Check\+Point}} \&checkpoint)
+\begin{DoxyCompactList}\small\item\em checktime 시간이 checkpoint 보다 작은 값인지 확인 (checktime 시간 크기 비교) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{structTimeCheckPoint_ad6b9aad19b93446d2a7058381cc4bee0}{desc}}
+\begin{DoxyCompactList}\small\item\em 소요 시간 측정 설명 \end{DoxyCompactList}\item 
+struct timeval \mbox{\hyperlink{structTimeCheckPoint_acd08f7a478765ab177ab8d1bcc2a0892}{checktime}}
+\begin{DoxyCompactList}\small\item\em 측정 시점 시각 \end{DoxyCompactList}\item 
+struct timeval \mbox{\hyperlink{structTimeCheckPoint_abe59d90ba9b595aa50e6d983105d36e0}{difftime}}
+\begin{DoxyCompactList}\small\item\em 소요 시간 측정 값 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+소요 시간 측정 class 
+
+
+
+Time\+Differ.\+hpp 파일의 19 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{structTimeCheckPoint_a0cb55de02011f7ceb24121b26e92460f}\label{structTimeCheckPoint_a0cb55de02011f7ceb24121b26e92460f}} 
+\index{TimeCheckPoint@{TimeCheckPoint}!TimeCheckPoint@{TimeCheckPoint}}
+\index{TimeCheckPoint@{TimeCheckPoint}!TimeCheckPoint@{TimeCheckPoint}}
+\doxysubsubsection{\texorpdfstring{TimeCheckPoint()}{TimeCheckPoint()}}
+{\footnotesize\ttfamily Time\+Check\+Point\+::\+Time\+Check\+Point (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{desc = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{structTimeCheckPoint}{Time\+Check\+Point}} 생성자 
+
+
+\begin{DoxyParams}{매개변수}
+{\em desc} & \\
+\hline
+\end{DoxyParams}
+
+
+Time\+Differ.\+hpp 파일의 31 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{structTimeCheckPoint_a2f8137f96c7bf8a02ea54bfa112bd68f}\label{structTimeCheckPoint_a2f8137f96c7bf8a02ea54bfa112bd68f}} 
+\index{TimeCheckPoint@{TimeCheckPoint}!checkTimeGT@{checkTimeGT}}
+\index{checkTimeGT@{checkTimeGT}!TimeCheckPoint@{TimeCheckPoint}}
+\doxysubsubsection{\texorpdfstring{checkTimeGT()}{checkTimeGT()}}
+{\footnotesize\ttfamily bool Time\+Check\+Point\+::check\+Time\+GT (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structTimeCheckPoint}{Time\+Check\+Point}} \&}]{checkpoint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+checktime 시간이 checkpoint 보다 큰 값인지 확인 (checktime 시간 크기 비교) 
+
+
+\begin{DoxyParams}{매개변수}
+{\em checkpoint} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+Time\+Differ.\+hpp 파일의 73 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structTimeCheckPoint_ab40e68a6c95cdca51d8f09474cf59efe}\label{structTimeCheckPoint_ab40e68a6c95cdca51d8f09474cf59efe}} 
+\index{TimeCheckPoint@{TimeCheckPoint}!checkTimeLT@{checkTimeLT}}
+\index{checkTimeLT@{checkTimeLT}!TimeCheckPoint@{TimeCheckPoint}}
+\doxysubsubsection{\texorpdfstring{checkTimeLT()}{checkTimeLT()}}
+{\footnotesize\ttfamily bool Time\+Check\+Point\+::check\+Time\+LT (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structTimeCheckPoint}{Time\+Check\+Point}} \&}]{checkpoint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+checktime 시간이 checkpoint 보다 작은 값인지 확인 (checktime 시간 크기 비교) 
+
+
+\begin{DoxyParams}{매개변수}
+{\em checkpoint} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+Time\+Differ.\+hpp 파일의 83 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structTimeCheckPoint_a2cd29530c81407f77427afa13bef3682}\label{structTimeCheckPoint_a2cd29530c81407f77427afa13bef3682}} 
+\index{TimeCheckPoint@{TimeCheckPoint}!diffTimeGT@{diffTimeGT}}
+\index{diffTimeGT@{diffTimeGT}!TimeCheckPoint@{TimeCheckPoint}}
+\doxysubsubsection{\texorpdfstring{diffTimeGT()}{diffTimeGT()}}
+{\footnotesize\ttfamily bool Time\+Check\+Point\+::diff\+Time\+GT (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structTimeCheckPoint}{Time\+Check\+Point}} \&}]{checkpoint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+difftime 시간이 checkpoint 보다 큰 값인지 확인 (difftime 시간 크기 비교) 
+
+
+\begin{DoxyParams}{매개변수}
+{\em checkpoint} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+Time\+Differ.\+hpp 파일의 53 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structTimeCheckPoint_add7f4a6da63b9e40b4dd0dad7c55d408}\label{structTimeCheckPoint_add7f4a6da63b9e40b4dd0dad7c55d408}} 
+\index{TimeCheckPoint@{TimeCheckPoint}!diffTimeLT@{diffTimeLT}}
+\index{diffTimeLT@{diffTimeLT}!TimeCheckPoint@{TimeCheckPoint}}
+\doxysubsubsection{\texorpdfstring{diffTimeLT()}{diffTimeLT()}}
+{\footnotesize\ttfamily bool Time\+Check\+Point\+::diff\+Time\+LT (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structTimeCheckPoint}{Time\+Check\+Point}} \&}]{checkpoint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+difftime 시간이 checkpoint 보다 작은 값인지 확인 (difftime 시간 크기 비교) 
+
+
+\begin{DoxyParams}{매개변수}
+{\em checkpoint} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+Time\+Differ.\+hpp 파일의 63 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structTimeCheckPoint_a7bf196c2713836b6bf293bdd43804f5a}\label{structTimeCheckPoint_a7bf196c2713836b6bf293bdd43804f5a}} 
+\index{TimeCheckPoint@{TimeCheckPoint}!setDesc@{setDesc}}
+\index{setDesc@{setDesc}!TimeCheckPoint@{TimeCheckPoint}}
+\doxysubsubsection{\texorpdfstring{setDesc()}{setDesc()}}
+{\footnotesize\ttfamily void Time\+Check\+Point\+::set\+Desc (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{desc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+설명 설정 
+
+
+\begin{DoxyParams}{매개변수}
+{\em desc} & \\
+\hline
+\end{DoxyParams}
+
+
+Time\+Differ.\+hpp 파일의 40 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structTimeCheckPoint_afe7f7803c0a3e6604cfeb15adc7f644a}\label{structTimeCheckPoint_afe7f7803c0a3e6604cfeb15adc7f644a}} 
+\index{TimeCheckPoint@{TimeCheckPoint}!updateCheckTime@{updateCheckTime}}
+\index{updateCheckTime@{updateCheckTime}!TimeCheckPoint@{TimeCheckPoint}}
+\doxysubsubsection{\texorpdfstring{updateCheckTime()}{updateCheckTime()}}
+{\footnotesize\ttfamily void Time\+Check\+Point\+::update\+Check\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+측정 시간 업데이트 
+
+
+
+Time\+Differ.\+hpp 파일의 44 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{structTimeCheckPoint_acd08f7a478765ab177ab8d1bcc2a0892}\label{structTimeCheckPoint_acd08f7a478765ab177ab8d1bcc2a0892}} 
+\index{TimeCheckPoint@{TimeCheckPoint}!checktime@{checktime}}
+\index{checktime@{checktime}!TimeCheckPoint@{TimeCheckPoint}}
+\doxysubsubsection{\texorpdfstring{checktime}{checktime}}
+{\footnotesize\ttfamily struct timeval Time\+Check\+Point\+::checktime}
+
+
+
+측정 시점 시각 
+
+
+
+Time\+Differ.\+hpp 파일의 23 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structTimeCheckPoint_ad6b9aad19b93446d2a7058381cc4bee0}\label{structTimeCheckPoint_ad6b9aad19b93446d2a7058381cc4bee0}} 
+\index{TimeCheckPoint@{TimeCheckPoint}!desc@{desc}}
+\index{desc@{desc}!TimeCheckPoint@{TimeCheckPoint}}
+\doxysubsubsection{\texorpdfstring{desc}{desc}}
+{\footnotesize\ttfamily std\+::string Time\+Check\+Point\+::desc}
+
+
+
+소요 시간 측정 설명 
+
+
+
+Time\+Differ.\+hpp 파일의 21 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structTimeCheckPoint_abe59d90ba9b595aa50e6d983105d36e0}\label{structTimeCheckPoint_abe59d90ba9b595aa50e6d983105d36e0}} 
+\index{TimeCheckPoint@{TimeCheckPoint}!difftime@{difftime}}
+\index{difftime@{difftime}!TimeCheckPoint@{TimeCheckPoint}}
+\doxysubsubsection{\texorpdfstring{difftime}{difftime}}
+{\footnotesize\ttfamily struct timeval Time\+Check\+Point\+::difftime}
+
+
+
+소요 시간 측정 값 
+
+
+
+Time\+Differ.\+hpp 파일의 25 번째 라인에서 정의되었습니다.
+
+
+
+이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{TimeDiffer_8hpp}{Time\+Differ.\+hpp}}\end{DoxyCompactItemize}

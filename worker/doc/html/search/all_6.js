@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['run_29',['run',['../classsoso_1_1WorkerManager.html#ae36e12c555f90b04750be9c456c5abc2',1,'soso::WorkerManager']]]
+  ['multi_5fworker_35',['MULTI_WORKER',['../namespacesoso.html#a390399d33ffd04660776fff91e506a43ab02ede17e2689a850c85da32d3d3fafe',1,'soso']]]
 ];

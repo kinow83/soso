@@ -1,0 +1,287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TimeDiffer: include/TimeDiffer.hpp 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">TimeDiffer
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'검색');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','검색');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TimeDiffer.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="TimeDiffer_8hpp.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __TIME_DIFFER_H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __TIME_DIFFER_H__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;assert.h&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;bits/stdc++.h&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;fmt/format.h&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;sys/time.h&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="structTimeCheckPoint.html">   19</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structTimeCheckPoint.html">TimeCheckPoint</a> {</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="structTimeCheckPoint.html#ad6b9aad19b93446d2a7058381cc4bee0">   21</a></span>&#160;  std::string <a class="code" href="structTimeCheckPoint.html#ad6b9aad19b93446d2a7058381cc4bee0">desc</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="structTimeCheckPoint.html#acd08f7a478765ab177ab8d1bcc2a0892">   23</a></span>&#160;  <span class="keyword">struct </span>timeval <a class="code" href="structTimeCheckPoint.html#acd08f7a478765ab177ab8d1bcc2a0892">checktime</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structTimeCheckPoint.html#abe59d90ba9b595aa50e6d983105d36e0">   25</a></span>&#160;  <span class="keyword">struct </span>timeval <a class="code" href="structTimeCheckPoint.html#abe59d90ba9b595aa50e6d983105d36e0">difftime</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structTimeCheckPoint.html#a0cb55de02011f7ceb24121b26e92460f">   31</a></span>&#160;  <a class="code" href="structTimeCheckPoint.html#a0cb55de02011f7ceb24121b26e92460f">TimeCheckPoint</a>(<span class="keyword">const</span> std::string &amp;<a class="code" href="structTimeCheckPoint.html#ad6b9aad19b93446d2a7058381cc4bee0">desc</a> = <span class="stringliteral">&quot;&quot;</span>) {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    this-&gt;desc = <a class="code" href="structTimeCheckPoint.html#ad6b9aad19b93446d2a7058381cc4bee0">desc</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    gettimeofday(&amp;this-&gt;<a class="code" href="structTimeCheckPoint.html#acd08f7a478765ab177ab8d1bcc2a0892">checktime</a>, NULL);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    timerclear(&amp;this-&gt;<a class="code" href="structTimeCheckPoint.html#abe59d90ba9b595aa50e6d983105d36e0">difftime</a>);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  }</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="structTimeCheckPoint.html#a7bf196c2713836b6bf293bdd43804f5a">   40</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="structTimeCheckPoint.html#a7bf196c2713836b6bf293bdd43804f5a">setDesc</a>(<span class="keyword">const</span> std::string &amp;<a class="code" href="structTimeCheckPoint.html#ad6b9aad19b93446d2a7058381cc4bee0">desc</a>) { this-&gt;desc = <a class="code" href="structTimeCheckPoint.html#ad6b9aad19b93446d2a7058381cc4bee0">desc</a>; }</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="structTimeCheckPoint.html#afe7f7803c0a3e6604cfeb15adc7f644a">   44</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="structTimeCheckPoint.html#afe7f7803c0a3e6604cfeb15adc7f644a">updateCheckTime</a>() { gettimeofday(&amp;this-&gt;<a class="code" href="structTimeCheckPoint.html#acd08f7a478765ab177ab8d1bcc2a0892">checktime</a>, NULL); }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="structTimeCheckPoint.html#a2cd29530c81407f77427afa13bef3682">   53</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="structTimeCheckPoint.html#a2cd29530c81407f77427afa13bef3682">diffTimeGT</a>(<span class="keyword">const</span> <a class="code" href="structTimeCheckPoint.html">TimeCheckPoint</a> &amp;checkpoint) {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">return</span> timercmp(&amp;this-&gt;<a class="code" href="structTimeCheckPoint.html#abe59d90ba9b595aa50e6d983105d36e0">difftime</a>, &amp;checkpoint.<a class="code" href="structTimeCheckPoint.html#abe59d90ba9b595aa50e6d983105d36e0">difftime</a>, &gt;) ? true : <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  }</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="structTimeCheckPoint.html#add7f4a6da63b9e40b4dd0dad7c55d408">   63</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="structTimeCheckPoint.html#add7f4a6da63b9e40b4dd0dad7c55d408">diffTimeLT</a>(<span class="keyword">const</span> <a class="code" href="structTimeCheckPoint.html">TimeCheckPoint</a> &amp;checkpoint) {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">return</span> timercmp(&amp;this-&gt;<a class="code" href="structTimeCheckPoint.html#abe59d90ba9b595aa50e6d983105d36e0">difftime</a>, &amp;checkpoint.<a class="code" href="structTimeCheckPoint.html#abe59d90ba9b595aa50e6d983105d36e0">difftime</a>, &lt;) ? true : <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  }</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="structTimeCheckPoint.html#a2f8137f96c7bf8a02ea54bfa112bd68f">   73</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="structTimeCheckPoint.html#a2f8137f96c7bf8a02ea54bfa112bd68f">checkTimeGT</a>(<span class="keyword">const</span> <a class="code" href="structTimeCheckPoint.html">TimeCheckPoint</a> &amp;checkpoint) {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">return</span> timercmp(&amp;this-&gt;<a class="code" href="structTimeCheckPoint.html#acd08f7a478765ab177ab8d1bcc2a0892">checktime</a>, &amp;checkpoint.<a class="code" href="structTimeCheckPoint.html#acd08f7a478765ab177ab8d1bcc2a0892">checktime</a>, &gt;) ? true : <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  }</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="structTimeCheckPoint.html#ab40e68a6c95cdca51d8f09474cf59efe">   83</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="structTimeCheckPoint.html#ab40e68a6c95cdca51d8f09474cf59efe">checkTimeLT</a>(<span class="keyword">const</span> <a class="code" href="structTimeCheckPoint.html">TimeCheckPoint</a> &amp;checkpoint) {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">return</span> timercmp(&amp;this-&gt;<a class="code" href="structTimeCheckPoint.html#acd08f7a478765ab177ab8d1bcc2a0892">checktime</a>, &amp;checkpoint.<a class="code" href="structTimeCheckPoint.html#acd08f7a478765ab177ab8d1bcc2a0892">checktime</a>, &lt;) ? true : <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;};</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="classTimeDiffer.html">   92</a></span>&#160;<span class="keyword">class </span><a class="code" href="classTimeDiffer.html">TimeDiffer</a> {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classTimeDiffer.html#aaa2e00e360bed5570c43b62b78b2252d">   95</a></span>&#160;  std::string <a class="code" href="classTimeDiffer.html#aaa2e00e360bed5570c43b62b78b2252d">title</a>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="classTimeDiffer.html#a6ab29f7141abd5eecee0a621fd7e2a7c">   97</a></span>&#160;  std::list&lt;TimeCheckPoint&gt; <a class="code" href="classTimeDiffer.html#a6ab29f7141abd5eecee0a621fd7e2a7c">points</a>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="classTimeDiffer.html#ad010026bab6fdffe607e6ee44f203b8e">   99</a></span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="classTimeDiffer.html#ad010026bab6fdffe607e6ee44f203b8e">maxPointSize</a> = 100;</div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="classTimeDiffer.html#a2e9ed9c84e09cf6f13a5270a835dc33f">  101</a></span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="classTimeDiffer.html#a2e9ed9c84e09cf6f13a5270a835dc33f">checkedCount</a> = 0;</div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="classTimeDiffer.html#a8ddf70b4f53f87c55a9ad45fb9b9d8bf">  103</a></span>&#160;  <a class="code" href="structTimeCheckPoint.html">TimeCheckPoint</a> <a class="code" href="classTimeDiffer.html#a8ddf70b4f53f87c55a9ad45fb9b9d8bf">avg</a>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="classTimeDiffer.html#a978da25aee73dcc9c99573a1cedf525e">  105</a></span>&#160;  <a class="code" href="structTimeCheckPoint.html">TimeCheckPoint</a> <a class="code" href="classTimeDiffer.html#a978da25aee73dcc9c99573a1cedf525e">total</a>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="classTimeDiffer.html#ad0b1f53c6beb0acb8f94a4fcf10a220d">  107</a></span>&#160;  std::list&lt;TimeCheckPoint&gt; <a class="code" href="classTimeDiffer.html#ad0b1f53c6beb0acb8f94a4fcf10a220d">longTimePoints</a>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="classTimeDiffer.html#afdfa18347ea97ccdfb718fb1e25cfb68">  109</a></span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="classTimeDiffer.html#afdfa18347ea97ccdfb718fb1e25cfb68">maxLongTimePointSize</a> = 5;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="classTimeDiffer.html#ab50e2dede2b798aebd7ab36cd3225ea0">  115</a></span>&#160;  <a class="code" href="classTimeDiffer.html#ab50e2dede2b798aebd7ab36cd3225ea0">TimeDiffer</a>() {}</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="classTimeDiffer.html#a6f571ad84ea50518ea3539456c781edd">  121</a></span>&#160;  <a class="code" href="classTimeDiffer.html#a6f571ad84ea50518ea3539456c781edd">TimeDiffer</a>(<span class="keyword">const</span> std::string &amp;<a class="code" href="classTimeDiffer.html#aaa2e00e360bed5570c43b62b78b2252d">title</a>) {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    this-&gt;title = <a class="code" href="classTimeDiffer.html#aaa2e00e360bed5570c43b62b78b2252d">title</a>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <a class="code" href="classTimeDiffer.html#a8ddf70b4f53f87c55a9ad45fb9b9d8bf">avg</a>.<a class="code" href="structTimeCheckPoint.html#a7bf196c2713836b6bf293bdd43804f5a">setDesc</a>(<a class="code" href="classTimeDiffer.html#aaa2e00e360bed5570c43b62b78b2252d">title</a> + <span class="stringliteral">&quot;-average&quot;</span>);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <a class="code" href="classTimeDiffer.html#a978da25aee73dcc9c99573a1cedf525e">total</a>.<a class="code" href="structTimeCheckPoint.html#a7bf196c2713836b6bf293bdd43804f5a">setDesc</a>(<a class="code" href="classTimeDiffer.html#aaa2e00e360bed5570c43b62b78b2252d">title</a> + <span class="stringliteral">&quot;-total&quot;</span>);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="classTimeDiffer.html#a9bd5ac1079d4550c2867f25c74e8ea6a">  131</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classTimeDiffer.html#a9bd5ac1079d4550c2867f25c74e8ea6a">setMaxLongTimePointsSize</a>(<span class="keywordtype">size_t</span> max) { <span class="comment">//</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    this-&gt;maxLongTimePointSize = max;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  }</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="classTimeDiffer.html#a0b49f810d8a60b4dcd8bf82723e846ce">  139</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classTimeDiffer.html#a0b49f810d8a60b4dcd8bf82723e846ce">setMaxPointSize</a>(<span class="keywordtype">size_t</span> max) { <span class="comment">//</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    this-&gt;maxPointSize = max;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  }</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="classTimeDiffer.html#a18b95dcb63694e6fdb85616af6abf674">  147</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classTimeDiffer.html#a18b95dcb63694e6fdb85616af6abf674">setTitle</a>(<span class="keyword">const</span> std::string &amp;<a class="code" href="classTimeDiffer.html#aaa2e00e360bed5570c43b62b78b2252d">title</a>) {</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    this-&gt;title = <a class="code" href="classTimeDiffer.html#aaa2e00e360bed5570c43b62b78b2252d">title</a>;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <a class="code" href="classTimeDiffer.html#a8ddf70b4f53f87c55a9ad45fb9b9d8bf">avg</a>.<a class="code" href="structTimeCheckPoint.html#a7bf196c2713836b6bf293bdd43804f5a">setDesc</a>(<a class="code" href="classTimeDiffer.html#aaa2e00e360bed5570c43b62b78b2252d">title</a> + <span class="stringliteral">&quot;-average&quot;</span>);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <a class="code" href="classTimeDiffer.html#a978da25aee73dcc9c99573a1cedf525e">total</a>.<a class="code" href="structTimeCheckPoint.html#a7bf196c2713836b6bf293bdd43804f5a">setDesc</a>(<a class="code" href="classTimeDiffer.html#aaa2e00e360bed5570c43b62b78b2252d">title</a> + <span class="stringliteral">&quot;-total&quot;</span>);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  }</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="classTimeDiffer.html#ace655a2bc848127357b6328c956a0eab">  156</a></span>&#160;  <span class="keyword">struct </span>timeval <a class="code" href="classTimeDiffer.html#ace655a2bc848127357b6328c956a0eab">checkpoint</a>() {</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classTimeDiffer.html#ace655a2bc848127357b6328c956a0eab">checkpoint</a>(<span class="stringliteral">&quot;&quot;</span>, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  }</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
+<div class="line"><a name="l00165"></a><span class="lineno"><a class="line" href="classTimeDiffer.html#a6addb5cb0575cf47f391782fa6306741">  165</a></span>&#160;  <span class="keyword">struct </span>timeval <a class="code" href="classTimeDiffer.html#ace655a2bc848127357b6328c956a0eab">checkpoint</a>(const std::string &amp;desc, bool continuous = true) {</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <a class="code" href="structTimeCheckPoint.html">TimeCheckPoint</a> <a class="code" href="classTimeDiffer.html#ace655a2bc848127357b6328c956a0eab">checkpoint</a>(desc);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classTimeDiffer.html#a6ab29f7141abd5eecee0a621fd7e2a7c">points</a>.size() == 0) {</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;      <a class="code" href="classTimeDiffer.html#a6ab29f7141abd5eecee0a621fd7e2a7c">points</a>.push_back(<a class="code" href="classTimeDiffer.html#ace655a2bc848127357b6328c956a0eab">checkpoint</a>);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;      <a class="code" href="classTimeDiffer.html#a2e9ed9c84e09cf6f13a5270a835dc33f">checkedCount</a>++;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;      <a class="code" href="structTimeCheckPoint.html">TimeCheckPoint</a> &amp;last = <a class="code" href="classTimeDiffer.html#a6ab29f7141abd5eecee0a621fd7e2a7c">points</a>.back();</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;      timersub(&amp;<a class="code" href="classTimeDiffer.html#ace655a2bc848127357b6328c956a0eab">checkpoint</a>.checktime, &amp;last.<a class="code" href="structTimeCheckPoint.html#acd08f7a478765ab177ab8d1bcc2a0892">checktime</a>, &amp;last.<a class="code" href="structTimeCheckPoint.html#abe59d90ba9b595aa50e6d983105d36e0">difftime</a>);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;      <span class="keywordflow">if</span> (continuous) {</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <a class="code" href="classTimeDiffer.html#a6ab29f7141abd5eecee0a621fd7e2a7c">points</a>.push_back(<a class="code" href="classTimeDiffer.html#ace655a2bc848127357b6328c956a0eab">checkpoint</a>);</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <a class="code" href="classTimeDiffer.html#a2e9ed9c84e09cf6f13a5270a835dc33f">checkedCount</a>++;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;      }</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="classTimeDiffer.html#ad0b1f53c6beb0acb8f94a4fcf10a220d">longTimePoints</a>.size() == 0) {</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <a class="code" href="classTimeDiffer.html#ad0b1f53c6beb0acb8f94a4fcf10a220d">longTimePoints</a>.push_back(last);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;      } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <a class="code" href="structTimeCheckPoint.html">TimeCheckPoint</a> &amp;min = <a class="code" href="classTimeDiffer.html#ad0b1f53c6beb0acb8f94a4fcf10a220d">longTimePoints</a>.back();</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <span class="keyword">auto</span> cmp = ([](<a class="code" href="structTimeCheckPoint.html">TimeCheckPoint</a> &amp;a, <a class="code" href="structTimeCheckPoint.html">TimeCheckPoint</a> &amp;b) {</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;          <span class="keywordflow">if</span> (a.<a class="code" href="structTimeCheckPoint.html#abe59d90ba9b595aa50e6d983105d36e0">difftime</a>.tv_sec == b.difftime.tv_sec) {</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            <span class="keywordflow">return</span> (b.difftime.tv_usec &lt; a.<a class="code" href="structTimeCheckPoint.html#abe59d90ba9b595aa50e6d983105d36e0">difftime</a>.tv_usec);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;          }</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;          <span class="keywordflow">return</span> (b.difftime.tv_sec &lt; a.<a class="code" href="structTimeCheckPoint.html#abe59d90ba9b595aa50e6d983105d36e0">difftime</a>.tv_sec);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        });</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="classTimeDiffer.html#ad0b1f53c6beb0acb8f94a4fcf10a220d">longTimePoints</a>.size() &lt; <a class="code" href="classTimeDiffer.html#afdfa18347ea97ccdfb718fb1e25cfb68">maxLongTimePointSize</a>) {</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;          <a class="code" href="classTimeDiffer.html#ad0b1f53c6beb0acb8f94a4fcf10a220d">longTimePoints</a>.push_back(last);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;          <a class="code" href="classTimeDiffer.html#ad0b1f53c6beb0acb8f94a4fcf10a220d">longTimePoints</a>.sort(cmp);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;          <span class="keywordflow">if</span> (min.<a class="code" href="structTimeCheckPoint.html#add7f4a6da63b9e40b4dd0dad7c55d408">diffTimeLT</a>(last)) {</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            <a class="code" href="classTimeDiffer.html#ad0b1f53c6beb0acb8f94a4fcf10a220d">longTimePoints</a>.push_back(last);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            <a class="code" href="classTimeDiffer.html#ad0b1f53c6beb0acb8f94a4fcf10a220d">longTimePoints</a>.sort(cmp);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            <span class="keywordtype">size_t</span> i = 1;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = <a class="code" href="classTimeDiffer.html#ad0b1f53c6beb0acb8f94a4fcf10a220d">longTimePoints</a>.begin(); <span class="comment">//</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                 it != <a class="code" href="classTimeDiffer.html#ad0b1f53c6beb0acb8f94a4fcf10a220d">longTimePoints</a>.end();       <span class="comment">//</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                 it++) {</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;              i++;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;              <span class="keywordflow">if</span> (i &gt; <a class="code" href="classTimeDiffer.html#afdfa18347ea97ccdfb718fb1e25cfb68">maxLongTimePointSize</a>) {</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                <a class="code" href="classTimeDiffer.html#ad0b1f53c6beb0acb8f94a4fcf10a220d">longTimePoints</a>.erase(it, <a class="code" href="classTimeDiffer.html#ad0b1f53c6beb0acb8f94a4fcf10a220d">longTimePoints</a>.end());</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;              }</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            }</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;          }</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        }</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;      }</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;      <a class="code" href="classTimeDiffer.html#a978da25aee73dcc9c99573a1cedf525e">total</a>.<a class="code" href="structTimeCheckPoint.html#afe7f7803c0a3e6604cfeb15adc7f644a">updateCheckTime</a>();</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;      timeradd(&amp;<a class="code" href="classTimeDiffer.html#a978da25aee73dcc9c99573a1cedf525e">total</a>.<a class="code" href="structTimeCheckPoint.html#abe59d90ba9b595aa50e6d983105d36e0">difftime</a>, &amp;last.<a class="code" href="structTimeCheckPoint.html#abe59d90ba9b595aa50e6d983105d36e0">difftime</a>, &amp;<a class="code" href="classTimeDiffer.html#a978da25aee73dcc9c99573a1cedf525e">total</a>.<a class="code" href="structTimeCheckPoint.html#abe59d90ba9b595aa50e6d983105d36e0">difftime</a>);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;      <a class="code" href="classTimeDiffer.html#a8ddf70b4f53f87c55a9ad45fb9b9d8bf">avg</a>.<a class="code" href="structTimeCheckPoint.html#afe7f7803c0a3e6604cfeb15adc7f644a">updateCheckTime</a>();</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;      uint64_t avg_time =</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;          ((<a class="code" href="classTimeDiffer.html#a978da25aee73dcc9c99573a1cedf525e">total</a>.<a class="code" href="structTimeCheckPoint.html#abe59d90ba9b595aa50e6d983105d36e0">difftime</a>.tv_sec * 1000000) + <a class="code" href="classTimeDiffer.html#a978da25aee73dcc9c99573a1cedf525e">total</a>.<a class="code" href="structTimeCheckPoint.html#abe59d90ba9b595aa50e6d983105d36e0">difftime</a>.tv_usec) /</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;          <a class="code" href="classTimeDiffer.html#a2e9ed9c84e09cf6f13a5270a835dc33f">checkedCount</a>;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;      <a class="code" href="classTimeDiffer.html#a8ddf70b4f53f87c55a9ad45fb9b9d8bf">avg</a>.<a class="code" href="structTimeCheckPoint.html#abe59d90ba9b595aa50e6d983105d36e0">difftime</a>.tv_sec = avg_time / 1000000;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;      <a class="code" href="classTimeDiffer.html#a8ddf70b4f53f87c55a9ad45fb9b9d8bf">avg</a>.<a class="code" href="structTimeCheckPoint.html#abe59d90ba9b595aa50e6d983105d36e0">difftime</a>.tv_usec = avg_time % 1000000;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160; </div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="classTimeDiffer.html#a6ab29f7141abd5eecee0a621fd7e2a7c">points</a>.size() &gt; <a class="code" href="classTimeDiffer.html#ad010026bab6fdffe607e6ee44f203b8e">maxPointSize</a>) {</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <a class="code" href="classTimeDiffer.html#a6ab29f7141abd5eecee0a621fd7e2a7c">points</a>.pop_front();</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;      }</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    }</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classTimeDiffer.html#ace655a2bc848127357b6328c956a0eab">checkpoint</a>.difftime;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  }</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
+<div class="line"><a name="l00238"></a><span class="lineno"><a class="line" href="classTimeDiffer.html#a139adfbad264628230380ca9539f2f6d">  238</a></span>&#160;  <span class="keyword">const</span> std::string <a class="code" href="classTimeDiffer.html#a139adfbad264628230380ca9539f2f6d">toString</a>() {</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    std::string results = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="keywordtype">size_t</span> i;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; </div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    results += <span class="stringliteral">&quot;[&quot;</span> + <a class="code" href="classTimeDiffer.html#a978da25aee73dcc9c99573a1cedf525e">total</a>.<a class="code" href="structTimeCheckPoint.html#ad6b9aad19b93446d2a7058381cc4bee0">desc</a> + <span class="stringliteral">&quot;] &quot;</span> +                     <span class="comment">//</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;               std::to_string(<a class="code" href="classTimeDiffer.html#a978da25aee73dcc9c99573a1cedf525e">total</a>.<a class="code" href="structTimeCheckPoint.html#abe59d90ba9b595aa50e6d983105d36e0">difftime</a>.tv_sec) + <span class="stringliteral">&quot;.&quot;</span> + <span class="comment">//</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;               fmt::format(<span class="stringliteral">&quot;{0:0&gt;7}&quot;</span>, std::to_string(<a class="code" href="classTimeDiffer.html#a978da25aee73dcc9c99573a1cedf525e">total</a>.<a class="code" href="structTimeCheckPoint.html#abe59d90ba9b595aa50e6d983105d36e0">difftime</a>.tv_usec)) +</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;               <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    results += <span class="stringliteral">&quot;\n[&quot;</span> + <a class="code" href="classTimeDiffer.html#a8ddf70b4f53f87c55a9ad45fb9b9d8bf">avg</a>.<a class="code" href="structTimeCheckPoint.html#ad6b9aad19b93446d2a7058381cc4bee0">desc</a> + <span class="stringliteral">&quot;] &quot;</span> +                   <span class="comment">//</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;               std::to_string(<a class="code" href="classTimeDiffer.html#a8ddf70b4f53f87c55a9ad45fb9b9d8bf">avg</a>.<a class="code" href="structTimeCheckPoint.html#abe59d90ba9b595aa50e6d983105d36e0">difftime</a>.tv_sec) + <span class="stringliteral">&quot;.&quot;</span> + <span class="comment">//</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;               fmt::format(<span class="stringliteral">&quot;{0:0&gt;7}&quot;</span>, std::to_string(<a class="code" href="classTimeDiffer.html#a8ddf70b4f53f87c55a9ad45fb9b9d8bf">avg</a>.<a class="code" href="structTimeCheckPoint.html#abe59d90ba9b595aa50e6d983105d36e0">difftime</a>.tv_usec)) +</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;               <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    results += <span class="stringliteral">&quot;\n[check point stack]\n&quot;</span>;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    i = 0;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> p : <a class="code" href="classTimeDiffer.html#a6ab29f7141abd5eecee0a621fd7e2a7c">points</a>) {</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;      results += <span class="stringliteral">&quot;(&quot;</span> + std::to_string(++i) + <span class="stringliteral">&quot;) &quot;</span>;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;      results += <span class="stringliteral">&quot;[&quot;</span> + this-&gt;title + <span class="stringliteral">&quot;] &quot;</span> + p.desc + <span class="stringliteral">&quot;: &quot;</span> + <span class="comment">//</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                 std::to_string(p.difftime.tv_sec) + <span class="stringliteral">&quot;.&quot;</span> +  <span class="comment">//</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                 fmt::format(<span class="stringliteral">&quot;{0:0&gt;7}&quot;</span>, std::to_string(p.difftime.tv_usec)) +</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                 <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    }</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    results += <span class="stringliteral">&quot;\n[long time check point stack]\n&quot;</span>;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    i = 0;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> p : <a class="code" href="classTimeDiffer.html#ad0b1f53c6beb0acb8f94a4fcf10a220d">longTimePoints</a>) {</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;      results += <span class="stringliteral">&quot;(&quot;</span> + std::to_string(++i) + <span class="stringliteral">&quot;) &quot;</span>;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;      results += <span class="stringliteral">&quot;[&quot;</span> + this-&gt;title + <span class="stringliteral">&quot;] &quot;</span> + p.desc + <span class="stringliteral">&quot;: &quot;</span> + <span class="comment">//</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                 std::to_string(p.difftime.tv_sec) + <span class="stringliteral">&quot;.&quot;</span> +  <span class="comment">//</span></div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                 fmt::format(<span class="stringliteral">&quot;{0:0&gt;7}&quot;</span>, std::to_string(p.difftime.tv_usec)) +</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                 <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    }</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keywordflow">return</span> results;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  }</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;};</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160; </div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassTimeDiffer_html_a139adfbad264628230380ca9539f2f6d"><div class="ttname"><a href="classTimeDiffer.html#a139adfbad264628230380ca9539f2f6d">TimeDiffer::toString</a></div><div class="ttdeci">const std::string toString()</div><div class="ttdoc">최종 시간 측정 값 출력</div><div class="ttdef"><b>Definition:</b> <a href="TimeDiffer_8hpp_source.html#l00238">TimeDiffer.hpp:238</a></div></div>
+<div class="ttc" id="aclassTimeDiffer_html_ad0b1f53c6beb0acb8f94a4fcf10a220d"><div class="ttname"><a href="classTimeDiffer.html#ad0b1f53c6beb0acb8f94a4fcf10a220d">TimeDiffer::longTimePoints</a></div><div class="ttdeci">std::list&lt; TimeCheckPoint &gt; longTimePoints</div><div class="ttdoc">오랜 시간 소요 목록</div><div class="ttdef"><b>Definition:</b> <a href="TimeDiffer_8hpp_source.html#l00107">TimeDiffer.hpp:107</a></div></div>
+<div class="ttc" id="astructTimeCheckPoint_html"><div class="ttname"><a href="structTimeCheckPoint.html">TimeCheckPoint</a></div><div class="ttdoc">소요 시간 측정 class</div><div class="ttdef"><b>Definition:</b> <a href="TimeDiffer_8hpp_source.html#l00019">TimeDiffer.hpp:19</a></div></div>
+<div class="ttc" id="aclassTimeDiffer_html_ad010026bab6fdffe607e6ee44f203b8e"><div class="ttname"><a href="classTimeDiffer.html#ad010026bab6fdffe607e6ee44f203b8e">TimeDiffer::maxPointSize</a></div><div class="ttdeci">size_t maxPointSize</div><div class="ttdoc">시간 측정 값 최대 저장 갯수</div><div class="ttdef"><b>Definition:</b> <a href="TimeDiffer_8hpp_source.html#l00099">TimeDiffer.hpp:99</a></div></div>
+<div class="ttc" id="aclassTimeDiffer_html_a6ab29f7141abd5eecee0a621fd7e2a7c"><div class="ttname"><a href="classTimeDiffer.html#a6ab29f7141abd5eecee0a621fd7e2a7c">TimeDiffer::points</a></div><div class="ttdeci">std::list&lt; TimeCheckPoint &gt; points</div><div class="ttdoc">시간 측정 값 배열</div><div class="ttdef"><b>Definition:</b> <a href="TimeDiffer_8hpp_source.html#l00097">TimeDiffer.hpp:97</a></div></div>
+<div class="ttc" id="aclassTimeDiffer_html_ace655a2bc848127357b6328c956a0eab"><div class="ttname"><a href="classTimeDiffer.html#ace655a2bc848127357b6328c956a0eab">TimeDiffer::checkpoint</a></div><div class="ttdeci">struct timeval checkpoint()</div><div class="ttdoc">측정 종료</div><div class="ttdef"><b>Definition:</b> <a href="TimeDiffer_8hpp_source.html#l00156">TimeDiffer.hpp:156</a></div></div>
+<div class="ttc" id="astructTimeCheckPoint_html_ad6b9aad19b93446d2a7058381cc4bee0"><div class="ttname"><a href="structTimeCheckPoint.html#ad6b9aad19b93446d2a7058381cc4bee0">TimeCheckPoint::desc</a></div><div class="ttdeci">std::string desc</div><div class="ttdoc">소요 시간 측정 설명</div><div class="ttdef"><b>Definition:</b> <a href="TimeDiffer_8hpp_source.html#l00021">TimeDiffer.hpp:21</a></div></div>
+<div class="ttc" id="aclassTimeDiffer_html_a8ddf70b4f53f87c55a9ad45fb9b9d8bf"><div class="ttname"><a href="classTimeDiffer.html#a8ddf70b4f53f87c55a9ad45fb9b9d8bf">TimeDiffer::avg</a></div><div class="ttdeci">TimeCheckPoint avg</div><div class="ttdoc">평균 소요 값</div><div class="ttdef"><b>Definition:</b> <a href="TimeDiffer_8hpp_source.html#l00103">TimeDiffer.hpp:103</a></div></div>
+<div class="ttc" id="aclassTimeDiffer_html"><div class="ttname"><a href="classTimeDiffer.html">TimeDiffer</a></div><div class="ttdoc">프로그램 시간 소요 시간 측정 checkpoint()를 호출할 때마다 소요된 시간 측정 값을 저장</div><div class="ttdef"><b>Definition:</b> <a href="TimeDiffer_8hpp_source.html#l00092">TimeDiffer.hpp:92</a></div></div>
+<div class="ttc" id="aclassTimeDiffer_html_a18b95dcb63694e6fdb85616af6abf674"><div class="ttname"><a href="classTimeDiffer.html#a18b95dcb63694e6fdb85616af6abf674">TimeDiffer::setTitle</a></div><div class="ttdeci">void setTitle(const std::string &amp;title)</div><div class="ttdoc">시간 측정 키워드 지정</div><div class="ttdef"><b>Definition:</b> <a href="TimeDiffer_8hpp_source.html#l00147">TimeDiffer.hpp:147</a></div></div>
+<div class="ttc" id="aclassTimeDiffer_html_a6f571ad84ea50518ea3539456c781edd"><div class="ttname"><a href="classTimeDiffer.html#a6f571ad84ea50518ea3539456c781edd">TimeDiffer::TimeDiffer</a></div><div class="ttdeci">TimeDiffer(const std::string &amp;title)</div><div class="ttdoc">TimeDiffer 생성자</div><div class="ttdef"><b>Definition:</b> <a href="TimeDiffer_8hpp_source.html#l00121">TimeDiffer.hpp:121</a></div></div>
+<div class="ttc" id="aclassTimeDiffer_html_afdfa18347ea97ccdfb718fb1e25cfb68"><div class="ttname"><a href="classTimeDiffer.html#afdfa18347ea97ccdfb718fb1e25cfb68">TimeDiffer::maxLongTimePointSize</a></div><div class="ttdeci">size_t maxLongTimePointSize</div><div class="ttdoc">오랜 시간 소요 목록 갯수</div><div class="ttdef"><b>Definition:</b> <a href="TimeDiffer_8hpp_source.html#l00109">TimeDiffer.hpp:109</a></div></div>
+<div class="ttc" id="astructTimeCheckPoint_html_a2cd29530c81407f77427afa13bef3682"><div class="ttname"><a href="structTimeCheckPoint.html#a2cd29530c81407f77427afa13bef3682">TimeCheckPoint::diffTimeGT</a></div><div class="ttdeci">bool diffTimeGT(const TimeCheckPoint &amp;checkpoint)</div><div class="ttdoc">difftime 시간이 checkpoint 보다 큰 값인지 확인 (difftime 시간 크기 비교)</div><div class="ttdef"><b>Definition:</b> <a href="TimeDiffer_8hpp_source.html#l00053">TimeDiffer.hpp:53</a></div></div>
+<div class="ttc" id="aclassTimeDiffer_html_a2e9ed9c84e09cf6f13a5270a835dc33f"><div class="ttname"><a href="classTimeDiffer.html#a2e9ed9c84e09cf6f13a5270a835dc33f">TimeDiffer::checkedCount</a></div><div class="ttdeci">size_t checkedCount</div><div class="ttdoc">checkpoint 호출 횟수</div><div class="ttdef"><b>Definition:</b> <a href="TimeDiffer_8hpp_source.html#l00101">TimeDiffer.hpp:101</a></div></div>
+<div class="ttc" id="astructTimeCheckPoint_html_a2f8137f96c7bf8a02ea54bfa112bd68f"><div class="ttname"><a href="structTimeCheckPoint.html#a2f8137f96c7bf8a02ea54bfa112bd68f">TimeCheckPoint::checkTimeGT</a></div><div class="ttdeci">bool checkTimeGT(const TimeCheckPoint &amp;checkpoint)</div><div class="ttdoc">checktime 시간이 checkpoint 보다 큰 값인지 확인 (checktime 시간 크기 비교)</div><div class="ttdef"><b>Definition:</b> <a href="TimeDiffer_8hpp_source.html#l00073">TimeDiffer.hpp:73</a></div></div>
+<div class="ttc" id="aclassTimeDiffer_html_aaa2e00e360bed5570c43b62b78b2252d"><div class="ttname"><a href="classTimeDiffer.html#aaa2e00e360bed5570c43b62b78b2252d">TimeDiffer::title</a></div><div class="ttdeci">std::string title</div><div class="ttdoc">시간 측정 키워드</div><div class="ttdef"><b>Definition:</b> <a href="TimeDiffer_8hpp_source.html#l00095">TimeDiffer.hpp:95</a></div></div>
+<div class="ttc" id="aclassTimeDiffer_html_a978da25aee73dcc9c99573a1cedf525e"><div class="ttname"><a href="classTimeDiffer.html#a978da25aee73dcc9c99573a1cedf525e">TimeDiffer::total</a></div><div class="ttdeci">TimeCheckPoint total</div><div class="ttdoc">전체 소요 시간</div><div class="ttdef"><b>Definition:</b> <a href="TimeDiffer_8hpp_source.html#l00105">TimeDiffer.hpp:105</a></div></div>
+<div class="ttc" id="aclassTimeDiffer_html_a9bd5ac1079d4550c2867f25c74e8ea6a"><div class="ttname"><a href="classTimeDiffer.html#a9bd5ac1079d4550c2867f25c74e8ea6a">TimeDiffer::setMaxLongTimePointsSize</a></div><div class="ttdeci">void setMaxLongTimePointsSize(size_t max)</div><div class="ttdoc">오랜 시간 소요 목록 수 지정</div><div class="ttdef"><b>Definition:</b> <a href="TimeDiffer_8hpp_source.html#l00131">TimeDiffer.hpp:131</a></div></div>
+<div class="ttc" id="astructTimeCheckPoint_html_abe59d90ba9b595aa50e6d983105d36e0"><div class="ttname"><a href="structTimeCheckPoint.html#abe59d90ba9b595aa50e6d983105d36e0">TimeCheckPoint::difftime</a></div><div class="ttdeci">struct timeval difftime</div><div class="ttdoc">소요 시간 측정 값</div><div class="ttdef"><b>Definition:</b> <a href="TimeDiffer_8hpp_source.html#l00025">TimeDiffer.hpp:25</a></div></div>
+<div class="ttc" id="astructTimeCheckPoint_html_acd08f7a478765ab177ab8d1bcc2a0892"><div class="ttname"><a href="structTimeCheckPoint.html#acd08f7a478765ab177ab8d1bcc2a0892">TimeCheckPoint::checktime</a></div><div class="ttdeci">struct timeval checktime</div><div class="ttdoc">측정 시점 시각</div><div class="ttdef"><b>Definition:</b> <a href="TimeDiffer_8hpp_source.html#l00023">TimeDiffer.hpp:23</a></div></div>
+<div class="ttc" id="astructTimeCheckPoint_html_ab40e68a6c95cdca51d8f09474cf59efe"><div class="ttname"><a href="structTimeCheckPoint.html#ab40e68a6c95cdca51d8f09474cf59efe">TimeCheckPoint::checkTimeLT</a></div><div class="ttdeci">bool checkTimeLT(const TimeCheckPoint &amp;checkpoint)</div><div class="ttdoc">checktime 시간이 checkpoint 보다 작은 값인지 확인 (checktime 시간 크기 비교)</div><div class="ttdef"><b>Definition:</b> <a href="TimeDiffer_8hpp_source.html#l00083">TimeDiffer.hpp:83</a></div></div>
+<div class="ttc" id="astructTimeCheckPoint_html_afe7f7803c0a3e6604cfeb15adc7f644a"><div class="ttname"><a href="structTimeCheckPoint.html#afe7f7803c0a3e6604cfeb15adc7f644a">TimeCheckPoint::updateCheckTime</a></div><div class="ttdeci">void updateCheckTime()</div><div class="ttdoc">측정 시간 업데이트</div><div class="ttdef"><b>Definition:</b> <a href="TimeDiffer_8hpp_source.html#l00044">TimeDiffer.hpp:44</a></div></div>
+<div class="ttc" id="astructTimeCheckPoint_html_add7f4a6da63b9e40b4dd0dad7c55d408"><div class="ttname"><a href="structTimeCheckPoint.html#add7f4a6da63b9e40b4dd0dad7c55d408">TimeCheckPoint::diffTimeLT</a></div><div class="ttdeci">bool diffTimeLT(const TimeCheckPoint &amp;checkpoint)</div><div class="ttdoc">difftime 시간이 checkpoint 보다 작은 값인지 확인 (difftime 시간 크기 비교)</div><div class="ttdef"><b>Definition:</b> <a href="TimeDiffer_8hpp_source.html#l00063">TimeDiffer.hpp:63</a></div></div>
+<div class="ttc" id="aclassTimeDiffer_html_a0b49f810d8a60b4dcd8bf82723e846ce"><div class="ttname"><a href="classTimeDiffer.html#a0b49f810d8a60b4dcd8bf82723e846ce">TimeDiffer::setMaxPointSize</a></div><div class="ttdeci">void setMaxPointSize(size_t max)</div><div class="ttdoc">시간 측정 값 최대 목록 수 지정</div><div class="ttdef"><b>Definition:</b> <a href="TimeDiffer_8hpp_source.html#l00139">TimeDiffer.hpp:139</a></div></div>
+<div class="ttc" id="aclassTimeDiffer_html_ab50e2dede2b798aebd7ab36cd3225ea0"><div class="ttname"><a href="classTimeDiffer.html#ab50e2dede2b798aebd7ab36cd3225ea0">TimeDiffer::TimeDiffer</a></div><div class="ttdeci">TimeDiffer()</div><div class="ttdoc">TimeDiffer 생성자</div><div class="ttdef"><b>Definition:</b> <a href="TimeDiffer_8hpp_source.html#l00115">TimeDiffer.hpp:115</a></div></div>
+<div class="ttc" id="astructTimeCheckPoint_html_a0cb55de02011f7ceb24121b26e92460f"><div class="ttname"><a href="structTimeCheckPoint.html#a0cb55de02011f7ceb24121b26e92460f">TimeCheckPoint::TimeCheckPoint</a></div><div class="ttdeci">TimeCheckPoint(const std::string &amp;desc=&quot;&quot;)</div><div class="ttdoc">TimeCheckPoint 생성자</div><div class="ttdef"><b>Definition:</b> <a href="TimeDiffer_8hpp_source.html#l00031">TimeDiffer.hpp:31</a></div></div>
+<div class="ttc" id="astructTimeCheckPoint_html_a7bf196c2713836b6bf293bdd43804f5a"><div class="ttname"><a href="structTimeCheckPoint.html#a7bf196c2713836b6bf293bdd43804f5a">TimeCheckPoint::setDesc</a></div><div class="ttdeci">void setDesc(const std::string &amp;desc)</div><div class="ttdoc">설명 설정</div><div class="ttdef"><b>Definition:</b> <a href="TimeDiffer_8hpp_source.html#l00040">TimeDiffer.hpp:40</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>
