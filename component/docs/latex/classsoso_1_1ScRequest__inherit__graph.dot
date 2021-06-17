@@ -1,0 +1,9 @@
+digraph "soso::ScRequest"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="soso::ScRequest",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="server-client 모델 request 정의"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="soso::Request",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsoso_1_1Request.html",tooltip="모듈 컴포넌트에 전달되는 정보 Class 수신된 패킷 또는 메타정보등을 추가할 수 있다. Request Class를 상속 받아 구현에 맞게 커스터마이징 필요"];
+}

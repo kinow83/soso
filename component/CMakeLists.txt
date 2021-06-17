@@ -8,22 +8,28 @@ add_compile_options(-W -Wall -g -fpermissive)
 include_directories(include)
 
 ###############################
-# for hpp
-###############################
-#add_library(component INTERFACE)
-#target_sources(component INTERFACE component.hpp)
-#target_include_directories (component
-#INTERFACE
-#    ${CMAKE_CURRENT_SOURCE_DIR}/include)
-
-###############################
 # for cpp (.so)
 ###############################
-#add_library(component SHARED component.cpp)
+add_library(component SHARED)
+target_sources(
+component
+    PRIVATE
+        src/component.cpp
+    PUBLIC
+        include/component.h
+)
 #install(TARGETS ${PROJECT_NAME} LIBRARY DESTINATION lib)
-#target_include_directories (component
-#PUBLIC
-#    ${CMAKE_CURRENT_SOURCE_DIR}/include)
+target_include_directories (component
+PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}/include
+    ${chronos_SOURCE_DIR}/include
+    ${echo_SOURCE_DIR}/include
+)
+
+target_link_libraries(component
+PUBLIC
+    echo chronos
+)
 
 ###############################
 # for doxygen
@@ -34,7 +40,7 @@ if (DOXYGEN_FOUND)
     set(DOXYGEN_OUT ${CMAKE_CURRENT_SOURCE_DIR}/Doxyfile)
     configure_file(${DOXYGEN_OUT} @ONLY)
     add_custom_target(
-        doc_doxygen ALL
+        component_doxygen ALL
         COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYGEN_OUT}
         WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
         COMMENT "Generating API documentation with Doxygen"

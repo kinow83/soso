@@ -30,7 +30,9 @@ add_library(restapi SHARED
 install(TARGETS ${PROJECT_NAME} LIBRARY DESTINATION lib)
 target_include_directories (restapi
 PUBLIC
-    ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    ${CMAKE_CURRENT_SOURCE_DIR}/include
+    ${nlohmann_SOURCE_DIR}/include
+)
 
 
 target_link_libraries(restapi
@@ -46,7 +48,7 @@ if (DOXYGEN_FOUND)
     set(DOXYGEN_OUT ${CMAKE_CURRENT_SOURCE_DIR}/Doxyfile)
     configure_file(${DOXYGEN_OUT} @ONLY)
     add_custom_target(
-        doc_doxygen ALL
+        restapi_doxygen ALL
         COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYGEN_OUT}
         WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
         COMMENT "Generating API documentation with Doxygen"

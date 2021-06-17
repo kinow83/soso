@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['update_42',['update',['../structTimeCheckPoint.html#a5693694550cfa180dae5ed71440adacd',1,'TimeCheckPoint']]]
+  ['updatechecktime_63',['updateCheckTime',['../structsoso_1_1ChronosCheckPoint.html#a746e7b2ce3d4c82a4cdc5857f66d4f31',1,'soso::ChronosCheckPoint']]]
 ];

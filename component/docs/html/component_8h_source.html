@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>component: include/component.h 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">component
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'검색');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','검색');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">component.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="component_8h.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __SOSO_COMPONENT_H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __SOSO_COMPONENT_H__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="request_8h.html">request.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;chrono.hpp&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;mutex&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;thread&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="namespacesoso.html">   13</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacesoso.html">soso</a> {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="namespacesoso.html#a6f2db82b33e65eff7d46c08d41d0a71e">   15</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="namespacesoso.html#a6f2db82b33e65eff7d46c08d41d0a71e">COMPONENT_IDX</a> {</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="namespacesoso.html#a6f2db82b33e65eff7d46c08d41d0a71ea8dc3e0002916184fe7a4f32ebde6912e">   16</a></span>&#160;  <a class="code" href="namespacesoso.html#a6f2db82b33e65eff7d46c08d41d0a71ea8dc3e0002916184fe7a4f32ebde6912e">COMPONENT_INIT</a> = 0,</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="namespacesoso.html#a6f2db82b33e65eff7d46c08d41d0a71eaa306c64fb5cb22c23813c7e5b20270e5">   17</a></span>&#160;  <a class="code" href="namespacesoso.html#a6f2db82b33e65eff7d46c08d41d0a71eaa306c64fb5cb22c23813c7e5b20270e5">COMPONENT_PREPARE</a>,</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="namespacesoso.html#a6f2db82b33e65eff7d46c08d41d0a71ea1243ef3ce32856aec555a7b6740d6bde">   18</a></span>&#160;  <a class="code" href="namespacesoso.html#a6f2db82b33e65eff7d46c08d41d0a71ea1243ef3ce32856aec555a7b6740d6bde">COMPONENT_PROCESS</a>,</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="namespacesoso.html#a6f2db82b33e65eff7d46c08d41d0a71ea372656c32f416bf7b5c6ef9e42c8cab3">   19</a></span>&#160;  <a class="code" href="namespacesoso.html#a6f2db82b33e65eff7d46c08d41d0a71ea372656c32f416bf7b5c6ef9e42c8cab3">COMPONENT_POST</a>,</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="namespacesoso.html#a6f2db82b33e65eff7d46c08d41d0a71eaa20c0f80fcc1d94259a07b27e5ab3187">   20</a></span>&#160;  <a class="code" href="namespacesoso.html#a6f2db82b33e65eff7d46c08d41d0a71eaa20c0f80fcc1d94259a07b27e5ab3187">COMPONENT_SCHEDULE</a>,</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="namespacesoso.html#a6f2db82b33e65eff7d46c08d41d0a71ea7e92890260e525a47cb24c208a758e41">   21</a></span>&#160;  <a class="code" href="namespacesoso.html#a6f2db82b33e65eff7d46c08d41d0a71ea7e92890260e525a47cb24c208a758e41">COMPONENT_SIZE</a></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;};</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classsoso_1_1Component.html">   27</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsoso_1_1Component.html">Component</a> {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classsoso_1_1Component.html#aac81779ea2e00c1e3aa1868cd85ad442">   30</a></span>&#160;  <span class="keyword">const</span> std::string <a class="code" href="classsoso_1_1Component.html#aac81779ea2e00c1e3aa1868cd85ad442">_name</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classsoso_1_1Component.html#a8170611bd45d7ec714286da2cd550212">   34</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classsoso_1_1Component.html#a8170611bd45d7ec714286da2cd550212">noop</a>() { <span class="keywordflow">return</span> <span class="keyword">true</span>; }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classsoso_1_1Component.html#aa51b455cf021cf121ed4eb9b79a2c8d3">   41</a></span>&#160;  <a class="code" href="classsoso_1_1Component.html#aa51b455cf021cf121ed4eb9b79a2c8d3">Component</a>(std::string name) : <a class="code" href="classsoso_1_1Component.html#aac81779ea2e00c1e3aa1868cd85ad442">_name</a>(name) { <span class="comment">//</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  }</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classsoso_1_1Component.html#a39f2df35f9c64532c65bd04949f9f6c2">   47</a></span>&#160;  <span class="keyword">const</span> std::string <a class="code" href="classsoso_1_1Component.html#a39f2df35f9c64532c65bd04949f9f6c2">getName</a>() { <span class="keywordflow">return</span> this-&gt;<a class="code" href="classsoso_1_1Component.html#aac81779ea2e00c1e3aa1868cd85ad442">_name</a>; }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classsoso_1_1Component.html#a938eedb53bb41d71f4b7b47fec963b0a">   52</a></span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classsoso_1_1Component.html#a938eedb53bb41d71f4b7b47fec963b0a">~Component</a>() {}</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classsoso_1_1Component.html#a9ba2dc919ec264fb2efe0a26531273e3">init</a>() = 0;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classsoso_1_1Component.html#aaf97110181a444bca4bc52a368d5cada">prepare</a>(std::shared_ptr&lt;Request&gt; request) = 0;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classsoso_1_1Component.html#af6a2ed84928ca83d8323640bc41d1956">process</a>(std::shared_ptr&lt;Request&gt; request) = 0;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classsoso_1_1Component.html#acca54280cc7daffaad59c6cf94fdc712">post</a>(std::shared_ptr&lt;Request&gt; request) = 0;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classsoso_1_1Component.html#aee7a1fdff6412fbf9317e86d6bf313f0">schedule</a>() = 0;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;};</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="classsoso_1_1ComponentChain.html">   96</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsoso_1_1ComponentChain.html">ComponentChain</a> {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="classsoso_1_1ComponentChain.html#adf899c89081914ea27673de553c49408">   98</a></span>&#160;  std::vector&lt;ChronoStack&gt; <a class="code" href="classsoso_1_1ComponentChain.html#adf899c89081914ea27673de553c49408">_chrono_stack</a>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="classsoso_1_1ComponentChain.html#ab309f1e01ee720570407cafff0a0a118">   99</a></span>&#160;  std::mutex <a class="code" href="classsoso_1_1ComponentChain.html#ab309f1e01ee720570407cafff0a0a118">_chrono_lock</a>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="classsoso_1_1ComponentChain.html#a309c2a0591c42d96b8bc2aef6013e028">  100</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classsoso_1_1ComponentChain.html#a309c2a0591c42d96b8bc2aef6013e028">_trace_chrono</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="classsoso_1_1ComponentChain.html#a79ab7bb941ebbadd95740955fd90099a">  103</a></span>&#160;  std::vector&lt;std::shared_ptr&lt;Component&gt;&gt; <a class="code" href="classsoso_1_1ComponentChain.html#a79ab7bb941ebbadd95740955fd90099a">_chains</a>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <a class="code" href="classsoso_1_1ComponentChain.html#a10b4560394ede1e049aee254895f5613">ComponentChain</a>();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <a class="code" href="classsoso_1_1ComponentChain.html#a3b8aa038b315352fad9013026114e257">~ComponentChain</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="classsoso_1_1ComponentChain.html#ad6fd7670451a5f9f47a71632d60608b3">  110</a></span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="classsoso_1_1ComponentChain.html#ad6fd7670451a5f9f47a71632d60608b3">componentSize</a>() { <span class="keywordflow">return</span> <a class="code" href="classsoso_1_1ComponentChain.html#a79ab7bb941ebbadd95740955fd90099a">_chains</a>.size(); }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="classsoso_1_1ComponentChain.html#a835149f6e49ad0e0f778d05f9bb479a3">  112</a></span>&#160;  <span class="keyword">const</span> std::string <a class="code" href="classsoso_1_1ComponentChain.html#a835149f6e49ad0e0f778d05f9bb479a3">getChronoResult</a>() {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keyword">const</span> std::lock_guard&lt;std::mutex&gt; lock(<a class="code" href="classsoso_1_1ComponentChain.html#ab309f1e01ee720570407cafff0a0a118">_chrono_lock</a>);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    std::string results = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordflow">for</span> (ChronoStack &amp;c : <a class="code" href="classsoso_1_1ComponentChain.html#adf899c89081914ea27673de553c49408">_chrono_stack</a>) {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      results += c.toString();</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordflow">return</span> results;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsoso_1_1ComponentChain.html#aa30c87b6b132e73ea8741c1dde6bc8f3">registers</a>(std::shared_ptr&lt;Component&gt; component);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  std::shared_ptr&lt;Component&gt; <a class="code" href="classsoso_1_1ComponentChain.html#a3745a6211dc92541f5cf88fc171e2799">operator[]</a>(<span class="keyword">const</span> std::string name);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsoso_1_1ComponentChain.html#a0cfbfb25ebbfcc663e36dedcbcd91a46">remove</a>(<span class="keyword">const</span> std::string name);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classsoso_1_1ComponentChain.html#a17115f4a295d3581483ca91ddee8b063">initComponent</a>();</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsoso_1_1ComponentChain.html#a90f6157c59fc3089314b85d57abab43c">callComponent</a>(std::shared_ptr&lt;Request&gt; request);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsoso_1_1ComponentChain.html#ac9617aa3ea17528e6cb93d935db40724">callSchedule</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsoso_1_1ComponentChain.html#a839c7df891f78f000ecbf01a6359c8aa">showComponent</a>();</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classsoso_1_1ComponentChain.html#a0ba98388f8fa74514f4c139992ece189">chronosCheckPoint</a>(<span class="keyword">const</span> std::string comp_name, <span class="keywordtype">int</span> comp_idx,</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                         std::function&lt;<span class="keywordtype">bool</span>(<span class="keywordtype">void</span>)&gt; logic);</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;};</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="namespacesoso.html#a2b939c133344f28c59ccd7e20cc5f309">pcapModuleCall</a>(ComponentChain &amp;chain, <span class="keyword">const</span> <span class="keywordtype">char</span> *pcap_resource,</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                    <span class="keywordtype">int</span> thread_num, <span class="keywordtype">bool</span> forever);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="namespacesoso.html#a70e96ac18ce960263d86d96140611285">serverModuleCall</a>(ComponentChain &amp;chain, <span class="keywordtype">int</span> thread_num, <span class="keywordtype">int</span> port);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="namespacesoso.html#a527fae4279f7c402f6b95f324a9bdf2a">clientModuleCall</a>(ComponentChain &amp;chain, <span class="keywordtype">int</span> thread_num, <span class="keywordtype">int</span> port,</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;                      <span class="keyword">struct</span> timeval *terminate_tv = NULL,</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                      <span class="keyword">struct</span> timeval *monitor_tv = NULL);</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;}; <span class="comment">// namespace soso</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclasssoso_1_1Component_html"><div class="ttname"><a href="classsoso_1_1Component.html">soso::Component</a></div><div class="ttdoc">컴포넌트 구성 요소 Class</div><div class="ttdef"><b>Definition:</b> <a href="component_8h_source.html#l00027">component.h:27</a></div></div>
+<div class="ttc" id="aclasssoso_1_1ComponentChain_html_a90f6157c59fc3089314b85d57abab43c"><div class="ttname"><a href="classsoso_1_1ComponentChain.html#a90f6157c59fc3089314b85d57abab43c">soso::ComponentChain::callComponent</a></div><div class="ttdeci">void callComponent(std::shared_ptr&lt; Request &gt; request)</div><div class="ttdoc">컴포넌트 호출 호출 순서: prepare -&gt; process -&gt; post</div><div class="ttdef"><b>Definition:</b> <a href="component_8cpp_source.html#l00099">component.cpp:99</a></div></div>
+<div class="ttc" id="aclasssoso_1_1ComponentChain_html_aa30c87b6b132e73ea8741c1dde6bc8f3"><div class="ttname"><a href="classsoso_1_1ComponentChain.html#aa30c87b6b132e73ea8741c1dde6bc8f3">soso::ComponentChain::registers</a></div><div class="ttdeci">void registers(std::shared_ptr&lt; Component &gt; component)</div><div class="ttdoc">컴포넌트 추가</div><div class="ttdef"><b>Definition:</b> <a href="component_8cpp_source.html#l00016">component.cpp:16</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Component_html_a9ba2dc919ec264fb2efe0a26531273e3"><div class="ttname"><a href="classsoso_1_1Component.html#a9ba2dc919ec264fb2efe0a26531273e3">soso::Component::init</a></div><div class="ttdeci">virtual bool init()=0</div><div class="ttdoc">컴포넌트 초기화 가상 멤버 함수</div></div>
+<div class="ttc" id="aclasssoso_1_1Component_html_af6a2ed84928ca83d8323640bc41d1956"><div class="ttname"><a href="classsoso_1_1Component.html#af6a2ed84928ca83d8323640bc41d1956">soso::Component::process</a></div><div class="ttdeci">virtual bool process(std::shared_ptr&lt; Request &gt; request)=0</div><div class="ttdoc">컴포넌트 수행 가상 멤버 함수</div></div>
+<div class="ttc" id="aclasssoso_1_1ComponentChain_html_a79ab7bb941ebbadd95740955fd90099a"><div class="ttname"><a href="classsoso_1_1ComponentChain.html#a79ab7bb941ebbadd95740955fd90099a">soso::ComponentChain::_chains</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; Component &gt; &gt; _chains</div><div class="ttdoc">컴포넌트 구성요청 체인 리스트</div><div class="ttdef"><b>Definition:</b> <a href="component_8h_source.html#l00103">component.h:103</a></div></div>
+<div class="ttc" id="aclasssoso_1_1ComponentChain_html_a0ba98388f8fa74514f4c139992ece189"><div class="ttname"><a href="classsoso_1_1ComponentChain.html#a0ba98388f8fa74514f4c139992ece189">soso::ComponentChain::chronosCheckPoint</a></div><div class="ttdeci">bool chronosCheckPoint(const std::string comp_name, int comp_idx, std::function&lt; bool(void)&gt; logic)</div><div class="ttdef"><b>Definition:</b> <a href="component_8cpp_source.html#l00050">component.cpp:50</a></div></div>
+<div class="ttc" id="aclasssoso_1_1ComponentChain_html_a10b4560394ede1e049aee254895f5613"><div class="ttname"><a href="classsoso_1_1ComponentChain.html#a10b4560394ede1e049aee254895f5613">soso::ComponentChain::ComponentChain</a></div><div class="ttdeci">ComponentChain()</div><div class="ttdef"><b>Definition:</b> <a href="component_8cpp_source.html#l00008">component.cpp:8</a></div></div>
+<div class="ttc" id="aclasssoso_1_1ComponentChain_html_ab309f1e01ee720570407cafff0a0a118"><div class="ttname"><a href="classsoso_1_1ComponentChain.html#ab309f1e01ee720570407cafff0a0a118">soso::ComponentChain::_chrono_lock</a></div><div class="ttdeci">std::mutex _chrono_lock</div><div class="ttdef"><b>Definition:</b> <a href="component_8h_source.html#l00099">component.h:99</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Component_html_aee7a1fdff6412fbf9317e86d6bf313f0"><div class="ttname"><a href="classsoso_1_1Component.html#aee7a1fdff6412fbf9317e86d6bf313f0">soso::Component::schedule</a></div><div class="ttdeci">virtual void schedule()=0</div><div class="ttdoc">컴포넌트 스케줄러 가상 멤버 함수 스케줄링 작업이 필요한 경우 구현 컴포넌트 호출 시 이전 컴포넌트의 성공 여부와 상관없이 무조건 호출</div></div>
+<div class="ttc" id="anamespacesoso_html"><div class="ttname"><a href="namespacesoso.html">soso</a></div><div class="ttdef"><b>Definition:</b> <a href="component_8h_source.html#l00013">component.h:13</a></div></div>
+<div class="ttc" id="anamespacesoso_html_a2b939c133344f28c59ccd7e20cc5f309"><div class="ttname"><a href="namespacesoso.html#a2b939c133344f28c59ccd7e20cc5f309">soso::pcapModuleCall</a></div><div class="ttdeci">bool pcapModuleCall(ComponentChain &amp;chain, const char *pcap_resource, int thread_num, bool forever)</div><div class="ttdoc">PCAP을 이용하여 패킷 수신 시 등록된 컴포넌트를 호출</div></div>
+<div class="ttc" id="aclasssoso_1_1Component_html_aac81779ea2e00c1e3aa1868cd85ad442"><div class="ttname"><a href="classsoso_1_1Component.html#aac81779ea2e00c1e3aa1868cd85ad442">soso::Component::_name</a></div><div class="ttdeci">const std::string _name</div><div class="ttdoc">컴포넌트 이름</div><div class="ttdef"><b>Definition:</b> <a href="component_8h_source.html#l00030">component.h:30</a></div></div>
+<div class="ttc" id="anamespacesoso_html_a6f2db82b33e65eff7d46c08d41d0a71ea372656c32f416bf7b5c6ef9e42c8cab3"><div class="ttname"><a href="namespacesoso.html#a6f2db82b33e65eff7d46c08d41d0a71ea372656c32f416bf7b5c6ef9e42c8cab3">soso::COMPONENT_POST</a></div><div class="ttdeci">@ COMPONENT_POST</div><div class="ttdef"><b>Definition:</b> <a href="component_8h_source.html#l00019">component.h:19</a></div></div>
+<div class="ttc" id="aclasssoso_1_1ComponentChain_html_a309c2a0591c42d96b8bc2aef6013e028"><div class="ttname"><a href="classsoso_1_1ComponentChain.html#a309c2a0591c42d96b8bc2aef6013e028">soso::ComponentChain::_trace_chrono</a></div><div class="ttdeci">bool _trace_chrono</div><div class="ttdef"><b>Definition:</b> <a href="component_8h_source.html#l00100">component.h:100</a></div></div>
+<div class="ttc" id="aclasssoso_1_1ComponentChain_html_a17115f4a295d3581483ca91ddee8b063"><div class="ttname"><a href="classsoso_1_1ComponentChain.html#a17115f4a295d3581483ca91ddee8b063">soso::ComponentChain::initComponent</a></div><div class="ttdeci">bool initComponent()</div><div class="ttdoc">컴포넌트 초기화 주의: 자원 초기화 시 multi-thread로 동작하지 않도록 해야 함.</div><div class="ttdef"><b>Definition:</b> <a href="component_8cpp_source.html#l00068">component.cpp:68</a></div></div>
+<div class="ttc" id="aclasssoso_1_1ComponentChain_html_adf899c89081914ea27673de553c49408"><div class="ttname"><a href="classsoso_1_1ComponentChain.html#adf899c89081914ea27673de553c49408">soso::ComponentChain::_chrono_stack</a></div><div class="ttdeci">std::vector&lt; ChronoStack &gt; _chrono_stack</div><div class="ttdef"><b>Definition:</b> <a href="component_8h_source.html#l00098">component.h:98</a></div></div>
+<div class="ttc" id="aclasssoso_1_1ComponentChain_html_a835149f6e49ad0e0f778d05f9bb479a3"><div class="ttname"><a href="classsoso_1_1ComponentChain.html#a835149f6e49ad0e0f778d05f9bb479a3">soso::ComponentChain::getChronoResult</a></div><div class="ttdeci">const std::string getChronoResult()</div><div class="ttdef"><b>Definition:</b> <a href="component_8h_source.html#l00112">component.h:112</a></div></div>
+<div class="ttc" id="anamespacesoso_html_a6f2db82b33e65eff7d46c08d41d0a71e"><div class="ttname"><a href="namespacesoso.html#a6f2db82b33e65eff7d46c08d41d0a71e">soso::COMPONENT_IDX</a></div><div class="ttdeci">COMPONENT_IDX</div><div class="ttdef"><b>Definition:</b> <a href="component_8h_source.html#l00015">component.h:15</a></div></div>
+<div class="ttc" id="anamespacesoso_html_a6f2db82b33e65eff7d46c08d41d0a71eaa20c0f80fcc1d94259a07b27e5ab3187"><div class="ttname"><a href="namespacesoso.html#a6f2db82b33e65eff7d46c08d41d0a71eaa20c0f80fcc1d94259a07b27e5ab3187">soso::COMPONENT_SCHEDULE</a></div><div class="ttdeci">@ COMPONENT_SCHEDULE</div><div class="ttdef"><b>Definition:</b> <a href="component_8h_source.html#l00020">component.h:20</a></div></div>
+<div class="ttc" id="anamespacesoso_html_a70e96ac18ce960263d86d96140611285"><div class="ttname"><a href="namespacesoso.html#a70e96ac18ce960263d86d96140611285">soso::serverModuleCall</a></div><div class="ttdeci">bool serverModuleCall(ComponentChain &amp;chain, int thread_num, int port)</div><div class="ttdoc">서버-클라이언트 구조로 클라이언트로 부터 수신 시 컴포넌트를 호출</div></div>
+<div class="ttc" id="aclasssoso_1_1ComponentChain_html_a839c7df891f78f000ecbf01a6359c8aa"><div class="ttname"><a href="classsoso_1_1ComponentChain.html#a839c7df891f78f000ecbf01a6359c8aa">soso::ComponentChain::showComponent</a></div><div class="ttdeci">void showComponent()</div><div class="ttdoc">컴포넌트 정보 출력 (디버깅용)</div><div class="ttdef"><b>Definition:</b> <a href="component_8cpp_source.html#l00144">component.cpp:144</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Component_html_a8170611bd45d7ec714286da2cd550212"><div class="ttname"><a href="classsoso_1_1Component.html#a8170611bd45d7ec714286da2cd550212">soso::Component::noop</a></div><div class="ttdeci">bool noop()</div><div class="ttdoc">No operation (Next 컴포넌트 호출)</div><div class="ttdef"><b>Definition:</b> <a href="component_8h_source.html#l00034">component.h:34</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Component_html_a39f2df35f9c64532c65bd04949f9f6c2"><div class="ttname"><a href="classsoso_1_1Component.html#a39f2df35f9c64532c65bd04949f9f6c2">soso::Component::getName</a></div><div class="ttdeci">const std::string getName()</div><div class="ttdoc">컴포넌트 이름 반환</div><div class="ttdef"><b>Definition:</b> <a href="component_8h_source.html#l00047">component.h:47</a></div></div>
+<div class="ttc" id="aclasssoso_1_1ComponentChain_html_a3745a6211dc92541f5cf88fc171e2799"><div class="ttname"><a href="classsoso_1_1ComponentChain.html#a3745a6211dc92541f5cf88fc171e2799">soso::ComponentChain::operator[]</a></div><div class="ttdeci">std::shared_ptr&lt; Component &gt; operator[](const std::string name)</div><div class="ttdoc">컴포넌트 접근자</div><div class="ttdef"><b>Definition:</b> <a href="component_8cpp_source.html#l00025">component.cpp:25</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Component_html_a938eedb53bb41d71f4b7b47fec963b0a"><div class="ttname"><a href="classsoso_1_1Component.html#a938eedb53bb41d71f4b7b47fec963b0a">soso::Component::~Component</a></div><div class="ttdeci">virtual ~Component()</div><div class="ttdoc">Component 소멸자 가상 멤버 함수</div><div class="ttdef"><b>Definition:</b> <a href="component_8h_source.html#l00052">component.h:52</a></div></div>
+<div class="ttc" id="anamespacesoso_html_a527fae4279f7c402f6b95f324a9bdf2a"><div class="ttname"><a href="namespacesoso.html#a527fae4279f7c402f6b95f324a9bdf2a">soso::clientModuleCall</a></div><div class="ttdeci">bool clientModuleCall(ComponentChain &amp;chain, int thread_num, int port, struct timeval *terminate_tv=NULL, struct timeval *monitor_tv=NULL)</div><div class="ttdoc">서버-클라이언트 구조로 서버로 접속 시 컴포넌트를 호출</div></div>
+<div class="ttc" id="anamespacesoso_html_a6f2db82b33e65eff7d46c08d41d0a71ea1243ef3ce32856aec555a7b6740d6bde"><div class="ttname"><a href="namespacesoso.html#a6f2db82b33e65eff7d46c08d41d0a71ea1243ef3ce32856aec555a7b6740d6bde">soso::COMPONENT_PROCESS</a></div><div class="ttdeci">@ COMPONENT_PROCESS</div><div class="ttdef"><b>Definition:</b> <a href="component_8h_source.html#l00018">component.h:18</a></div></div>
+<div class="ttc" id="aclasssoso_1_1ComponentChain_html_a3b8aa038b315352fad9013026114e257"><div class="ttname"><a href="classsoso_1_1ComponentChain.html#a3b8aa038b315352fad9013026114e257">soso::ComponentChain::~ComponentChain</a></div><div class="ttdeci">~ComponentChain()=default</div></div>
+<div class="ttc" id="anamespacesoso_html_a6f2db82b33e65eff7d46c08d41d0a71ea7e92890260e525a47cb24c208a758e41"><div class="ttname"><a href="namespacesoso.html#a6f2db82b33e65eff7d46c08d41d0a71ea7e92890260e525a47cb24c208a758e41">soso::COMPONENT_SIZE</a></div><div class="ttdeci">@ COMPONENT_SIZE</div><div class="ttdef"><b>Definition:</b> <a href="component_8h_source.html#l00021">component.h:21</a></div></div>
+<div class="ttc" id="arequest_8h_html"><div class="ttname"><a href="request_8h.html">request.h</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Component_html_aa51b455cf021cf121ed4eb9b79a2c8d3"><div class="ttname"><a href="classsoso_1_1Component.html#aa51b455cf021cf121ed4eb9b79a2c8d3">soso::Component::Component</a></div><div class="ttdeci">Component(std::string name)</div><div class="ttdoc">Component 생성자</div><div class="ttdef"><b>Definition:</b> <a href="component_8h_source.html#l00041">component.h:41</a></div></div>
+<div class="ttc" id="anamespacesoso_html_a6f2db82b33e65eff7d46c08d41d0a71ea8dc3e0002916184fe7a4f32ebde6912e"><div class="ttname"><a href="namespacesoso.html#a6f2db82b33e65eff7d46c08d41d0a71ea8dc3e0002916184fe7a4f32ebde6912e">soso::COMPONENT_INIT</a></div><div class="ttdeci">@ COMPONENT_INIT</div><div class="ttdef"><b>Definition:</b> <a href="component_8h_source.html#l00016">component.h:16</a></div></div>
+<div class="ttc" id="aclasssoso_1_1ComponentChain_html_a0cfbfb25ebbfcc663e36dedcbcd91a46"><div class="ttname"><a href="classsoso_1_1ComponentChain.html#a0cfbfb25ebbfcc663e36dedcbcd91a46">soso::ComponentChain::remove</a></div><div class="ttdeci">void remove(const std::string name)</div><div class="ttdoc">컴포넌트 제거</div><div class="ttdef"><b>Definition:</b> <a href="component_8cpp_source.html#l00034">component.cpp:34</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Component_html_acca54280cc7daffaad59c6cf94fdc712"><div class="ttname"><a href="classsoso_1_1Component.html#acca54280cc7daffaad59c6cf94fdc712">soso::Component::post</a></div><div class="ttdeci">virtual bool post(std::shared_ptr&lt; Request &gt; request)=0</div><div class="ttdoc">컴포넌트 후처리 가상 멤버 함수</div></div>
+<div class="ttc" id="anamespacesoso_html_a6f2db82b33e65eff7d46c08d41d0a71eaa306c64fb5cb22c23813c7e5b20270e5"><div class="ttname"><a href="namespacesoso.html#a6f2db82b33e65eff7d46c08d41d0a71eaa306c64fb5cb22c23813c7e5b20270e5">soso::COMPONENT_PREPARE</a></div><div class="ttdeci">@ COMPONENT_PREPARE</div><div class="ttdef"><b>Definition:</b> <a href="component_8h_source.html#l00017">component.h:17</a></div></div>
+<div class="ttc" id="aclasssoso_1_1ComponentChain_html_ac9617aa3ea17528e6cb93d935db40724"><div class="ttname"><a href="classsoso_1_1ComponentChain.html#ac9617aa3ea17528e6cb93d935db40724">soso::ComponentChain::callSchedule</a></div><div class="ttdeci">void callSchedule(void)</div><div class="ttdoc">컴포넌트의 schedule(단일 스레드로 동작해야 할)을 호출</div><div class="ttdef"><b>Definition:</b> <a href="component_8cpp_source.html#l00082">component.cpp:82</a></div></div>
+<div class="ttc" id="aclasssoso_1_1ComponentChain_html"><div class="ttname"><a href="classsoso_1_1ComponentChain.html">soso::ComponentChain</a></div><div class="ttdoc">컴포넌트을 체인으로 관리하여 각 컴포넌트을 호출 및 관리하는 Class</div><div class="ttdef"><b>Definition:</b> <a href="component_8h_source.html#l00096">component.h:96</a></div></div>
+<div class="ttc" id="aclasssoso_1_1ComponentChain_html_ad6fd7670451a5f9f47a71632d60608b3"><div class="ttname"><a href="classsoso_1_1ComponentChain.html#ad6fd7670451a5f9f47a71632d60608b3">soso::ComponentChain::componentSize</a></div><div class="ttdeci">size_t componentSize()</div><div class="ttdef"><b>Definition:</b> <a href="component_8h_source.html#l00110">component.h:110</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Component_html_aaf97110181a444bca4bc52a368d5cada"><div class="ttname"><a href="classsoso_1_1Component.html#aaf97110181a444bca4bc52a368d5cada">soso::Component::prepare</a></div><div class="ttdeci">virtual bool prepare(std::shared_ptr&lt; Request &gt; request)=0</div><div class="ttdoc">컴포넌트 사전 처리 가상 멤버 함수</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

@@ -1,0 +1,289 @@
+\hypertarget{classsoso_1_1ComponentChain}{}\doxysection{soso\+::Component\+Chain 클래스 참조}
+\label{classsoso_1_1ComponentChain}\index{soso::ComponentChain@{soso::ComponentChain}}
+
+
+컴포넌트을 체인으로 관리하여 각 컴포넌트을 호출 및 관리하는 Class  
+
+
+
+
+{\ttfamily \#include $<$component.\+h$>$}
+
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsoso_1_1ComponentChain_a10b4560394ede1e049aee254895f5613}{Component\+Chain}} ()
+\item 
+\mbox{\hyperlink{classsoso_1_1ComponentChain_a3b8aa038b315352fad9013026114e257}{$\sim$\+Component\+Chain}} ()=default
+\item 
+size\+\_\+t \mbox{\hyperlink{classsoso_1_1ComponentChain_ad6fd7670451a5f9f47a71632d60608b3}{component\+Size}} ()
+\item 
+const std\+::string \mbox{\hyperlink{classsoso_1_1ComponentChain_a835149f6e49ad0e0f778d05f9bb479a3}{get\+Chrono\+Result}} ()
+\item 
+void \mbox{\hyperlink{classsoso_1_1ComponentChain_aa30c87b6b132e73ea8741c1dde6bc8f3}{registers}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsoso_1_1Component}{Component}} $>$ component)
+\begin{DoxyCompactList}\small\item\em 컴포넌트 추가 \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsoso_1_1Component}{Component}} $>$ \mbox{\hyperlink{classsoso_1_1ComponentChain_a3745a6211dc92541f5cf88fc171e2799}{operator\mbox{[}$\,$\mbox{]}}} (const std\+::string name)
+\begin{DoxyCompactList}\small\item\em 컴포넌트 접근자 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsoso_1_1ComponentChain_a0cfbfb25ebbfcc663e36dedcbcd91a46}{remove}} (const std\+::string name)
+\begin{DoxyCompactList}\small\item\em 컴포넌트 제거 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsoso_1_1ComponentChain_a17115f4a295d3581483ca91ddee8b063}{init\+Component}} ()
+\begin{DoxyCompactList}\small\item\em 컴포넌트 초기화 주의\+: 자원 초기화 시 multi-\/thread로 동작하지 않도록 해야 함. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsoso_1_1ComponentChain_a90f6157c59fc3089314b85d57abab43c}{call\+Component}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsoso_1_1Request}{Request}} $>$ request)
+\begin{DoxyCompactList}\small\item\em 컴포넌트 호출~\newline
+호출 순서\+: prepare -\/$>$ process -\/$>$ post \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsoso_1_1ComponentChain_ac9617aa3ea17528e6cb93d935db40724}{call\+Schedule}} (void)
+\begin{DoxyCompactList}\small\item\em 컴포넌트의 schedule(단일 스레드로 동작해야 할)을 호출 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsoso_1_1ComponentChain_a839c7df891f78f000ecbf01a6359c8aa}{show\+Component}} ()
+\begin{DoxyCompactList}\small\item\em 컴포넌트 정보 출력 (디버깅용) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsoso_1_1ComponentChain_a0ba98388f8fa74514f4c139992ece189}{chronos\+Check\+Point}} (const std\+::string comp\+\_\+name, int comp\+\_\+idx, std\+::function$<$ bool(void)$>$ logic)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ Chrono\+Stack $>$ \mbox{\hyperlink{classsoso_1_1ComponentChain_adf899c89081914ea27673de553c49408}{\+\_\+chrono\+\_\+stack}}
+\item 
+std\+::mutex \mbox{\hyperlink{classsoso_1_1ComponentChain_ab309f1e01ee720570407cafff0a0a118}{\+\_\+chrono\+\_\+lock}}
+\item 
+bool \mbox{\hyperlink{classsoso_1_1ComponentChain_a309c2a0591c42d96b8bc2aef6013e028}{\+\_\+trace\+\_\+chrono}} = true
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsoso_1_1Component}{Component}} $>$ $>$ \mbox{\hyperlink{classsoso_1_1ComponentChain_a79ab7bb941ebbadd95740955fd90099a}{\+\_\+chains}}
+\begin{DoxyCompactList}\small\item\em 컴포넌트 구성요청 체인 리스트 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+컴포넌트을 체인으로 관리하여 각 컴포넌트을 호출 및 관리하는 Class 
+
+component.\+h 파일의 96 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{classsoso_1_1ComponentChain_a10b4560394ede1e049aee254895f5613}\label{classsoso_1_1ComponentChain_a10b4560394ede1e049aee254895f5613}} 
+\index{soso::ComponentChain@{soso::ComponentChain}!ComponentChain@{ComponentChain}}
+\index{ComponentChain@{ComponentChain}!soso::ComponentChain@{soso::ComponentChain}}
+\doxysubsubsection{\texorpdfstring{ComponentChain()}{ComponentChain()}}
+{\footnotesize\ttfamily Component\+Chain\+::\+Component\+Chain (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+component.\+cpp 파일의 8 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1ComponentChain_a3b8aa038b315352fad9013026114e257}\label{classsoso_1_1ComponentChain_a3b8aa038b315352fad9013026114e257}} 
+\index{soso::ComponentChain@{soso::ComponentChain}!````~ComponentChain@{$\sim$ComponentChain}}
+\index{````~ComponentChain@{$\sim$ComponentChain}!soso::ComponentChain@{soso::ComponentChain}}
+\doxysubsubsection{\texorpdfstring{$\sim$ComponentChain()}{~ComponentChain()}}
+{\footnotesize\ttfamily soso\+::\+Component\+Chain\+::$\sim$\+Component\+Chain (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{classsoso_1_1ComponentChain_a90f6157c59fc3089314b85d57abab43c}\label{classsoso_1_1ComponentChain_a90f6157c59fc3089314b85d57abab43c}} 
+\index{soso::ComponentChain@{soso::ComponentChain}!callComponent@{callComponent}}
+\index{callComponent@{callComponent}!soso::ComponentChain@{soso::ComponentChain}}
+\doxysubsubsection{\texorpdfstring{callComponent()}{callComponent()}}
+{\footnotesize\ttfamily void Component\+Chain\+::call\+Component (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsoso_1_1Request}{Request}} $>$}]{request }\end{DoxyParamCaption})}
+
+
+
+컴포넌트 호출~\newline
+호출 순서\+: prepare -\/$>$ process -\/$>$ post 
+
+
+\begin{DoxyParams}{매개변수}
+{\em request} & \\
+\hline
+\end{DoxyParams}
+
+
+component.\+cpp 파일의 99 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1ComponentChain_ac9617aa3ea17528e6cb93d935db40724}\label{classsoso_1_1ComponentChain_ac9617aa3ea17528e6cb93d935db40724}} 
+\index{soso::ComponentChain@{soso::ComponentChain}!callSchedule@{callSchedule}}
+\index{callSchedule@{callSchedule}!soso::ComponentChain@{soso::ComponentChain}}
+\doxysubsubsection{\texorpdfstring{callSchedule()}{callSchedule()}}
+{\footnotesize\ttfamily void Component\+Chain\+::call\+Schedule (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+컴포넌트의 schedule(단일 스레드로 동작해야 할)을 호출 
+
+
+
+component.\+cpp 파일의 82 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1ComponentChain_a0ba98388f8fa74514f4c139992ece189}\label{classsoso_1_1ComponentChain_a0ba98388f8fa74514f4c139992ece189}} 
+\index{soso::ComponentChain@{soso::ComponentChain}!chronosCheckPoint@{chronosCheckPoint}}
+\index{chronosCheckPoint@{chronosCheckPoint}!soso::ComponentChain@{soso::ComponentChain}}
+\doxysubsubsection{\texorpdfstring{chronosCheckPoint()}{chronosCheckPoint()}}
+{\footnotesize\ttfamily bool Component\+Chain\+::chronos\+Check\+Point (\begin{DoxyParamCaption}\item[{const std\+::string}]{comp\+\_\+name,  }\item[{int}]{comp\+\_\+idx,  }\item[{std\+::function$<$ bool(void)$>$}]{logic }\end{DoxyParamCaption})}
+
+
+
+component.\+cpp 파일의 50 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1ComponentChain_ad6fd7670451a5f9f47a71632d60608b3}\label{classsoso_1_1ComponentChain_ad6fd7670451a5f9f47a71632d60608b3}} 
+\index{soso::ComponentChain@{soso::ComponentChain}!componentSize@{componentSize}}
+\index{componentSize@{componentSize}!soso::ComponentChain@{soso::ComponentChain}}
+\doxysubsubsection{\texorpdfstring{componentSize()}{componentSize()}}
+{\footnotesize\ttfamily size\+\_\+t soso\+::\+Component\+Chain\+::component\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+component.\+h 파일의 110 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1ComponentChain_a835149f6e49ad0e0f778d05f9bb479a3}\label{classsoso_1_1ComponentChain_a835149f6e49ad0e0f778d05f9bb479a3}} 
+\index{soso::ComponentChain@{soso::ComponentChain}!getChronoResult@{getChronoResult}}
+\index{getChronoResult@{getChronoResult}!soso::ComponentChain@{soso::ComponentChain}}
+\doxysubsubsection{\texorpdfstring{getChronoResult()}{getChronoResult()}}
+{\footnotesize\ttfamily const std\+::string soso\+::\+Component\+Chain\+::get\+Chrono\+Result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+component.\+h 파일의 112 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1ComponentChain_a17115f4a295d3581483ca91ddee8b063}\label{classsoso_1_1ComponentChain_a17115f4a295d3581483ca91ddee8b063}} 
+\index{soso::ComponentChain@{soso::ComponentChain}!initComponent@{initComponent}}
+\index{initComponent@{initComponent}!soso::ComponentChain@{soso::ComponentChain}}
+\doxysubsubsection{\texorpdfstring{initComponent()}{initComponent()}}
+{\footnotesize\ttfamily bool Component\+Chain\+::init\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+컴포넌트 초기화 주의\+: 자원 초기화 시 multi-\/thread로 동작하지 않도록 해야 함. 
+
+\begin{DoxyReturn}{반환값}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+component.\+cpp 파일의 68 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1ComponentChain_a3745a6211dc92541f5cf88fc171e2799}\label{classsoso_1_1ComponentChain_a3745a6211dc92541f5cf88fc171e2799}} 
+\index{soso::ComponentChain@{soso::ComponentChain}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!soso::ComponentChain@{soso::ComponentChain}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{classsoso_1_1Component}{Component}} $>$ Component\+Chain\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+컴포넌트 접근자 
+
+
+\begin{DoxyParams}{매개변수}
+{\em name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+std\+::shared\+\_\+ptr$<$\+Component$>$ 
+\end{DoxyReturn}
+
+
+component.\+cpp 파일의 25 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1ComponentChain_aa30c87b6b132e73ea8741c1dde6bc8f3}\label{classsoso_1_1ComponentChain_aa30c87b6b132e73ea8741c1dde6bc8f3}} 
+\index{soso::ComponentChain@{soso::ComponentChain}!registers@{registers}}
+\index{registers@{registers}!soso::ComponentChain@{soso::ComponentChain}}
+\doxysubsubsection{\texorpdfstring{registers()}{registers()}}
+{\footnotesize\ttfamily void Component\+Chain\+::registers (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsoso_1_1Component}{Component}} $>$}]{component }\end{DoxyParamCaption})}
+
+
+
+컴포넌트 추가 
+
+
+\begin{DoxyParams}{매개변수}
+{\em component} & \\
+\hline
+\end{DoxyParams}
+
+
+component.\+cpp 파일의 16 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1ComponentChain_a0cfbfb25ebbfcc663e36dedcbcd91a46}\label{classsoso_1_1ComponentChain_a0cfbfb25ebbfcc663e36dedcbcd91a46}} 
+\index{soso::ComponentChain@{soso::ComponentChain}!remove@{remove}}
+\index{remove@{remove}!soso::ComponentChain@{soso::ComponentChain}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily void Component\+Chain\+::remove (\begin{DoxyParamCaption}\item[{const std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+컴포넌트 제거 
+
+
+\begin{DoxyParams}{매개변수}
+{\em name} & 등록 시 사용한 컴포넌트 이름 \\
+\hline
+\end{DoxyParams}
+
+
+component.\+cpp 파일의 34 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1ComponentChain_a839c7df891f78f000ecbf01a6359c8aa}\label{classsoso_1_1ComponentChain_a839c7df891f78f000ecbf01a6359c8aa}} 
+\index{soso::ComponentChain@{soso::ComponentChain}!showComponent@{showComponent}}
+\index{showComponent@{showComponent}!soso::ComponentChain@{soso::ComponentChain}}
+\doxysubsubsection{\texorpdfstring{showComponent()}{showComponent()}}
+{\footnotesize\ttfamily void Component\+Chain\+::show\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+컴포넌트 정보 출력 (디버깅용) 
+
+
+
+component.\+cpp 파일의 144 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{classsoso_1_1ComponentChain_a79ab7bb941ebbadd95740955fd90099a}\label{classsoso_1_1ComponentChain_a79ab7bb941ebbadd95740955fd90099a}} 
+\index{soso::ComponentChain@{soso::ComponentChain}!\_chains@{\_chains}}
+\index{\_chains@{\_chains}!soso::ComponentChain@{soso::ComponentChain}}
+\doxysubsubsection{\texorpdfstring{\_chains}{\_chains}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classsoso_1_1Component}{Component}}$>$ $>$ soso\+::\+Component\+Chain\+::\+\_\+chains\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+컴포넌트 구성요청 체인 리스트 
+
+
+
+component.\+h 파일의 103 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1ComponentChain_ab309f1e01ee720570407cafff0a0a118}\label{classsoso_1_1ComponentChain_ab309f1e01ee720570407cafff0a0a118}} 
+\index{soso::ComponentChain@{soso::ComponentChain}!\_chrono\_lock@{\_chrono\_lock}}
+\index{\_chrono\_lock@{\_chrono\_lock}!soso::ComponentChain@{soso::ComponentChain}}
+\doxysubsubsection{\texorpdfstring{\_chrono\_lock}{\_chrono\_lock}}
+{\footnotesize\ttfamily std\+::mutex soso\+::\+Component\+Chain\+::\+\_\+chrono\+\_\+lock\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+component.\+h 파일의 99 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1ComponentChain_adf899c89081914ea27673de553c49408}\label{classsoso_1_1ComponentChain_adf899c89081914ea27673de553c49408}} 
+\index{soso::ComponentChain@{soso::ComponentChain}!\_chrono\_stack@{\_chrono\_stack}}
+\index{\_chrono\_stack@{\_chrono\_stack}!soso::ComponentChain@{soso::ComponentChain}}
+\doxysubsubsection{\texorpdfstring{\_chrono\_stack}{\_chrono\_stack}}
+{\footnotesize\ttfamily std\+::vector$<$Chrono\+Stack$>$ soso\+::\+Component\+Chain\+::\+\_\+chrono\+\_\+stack\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+component.\+h 파일의 98 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1ComponentChain_a309c2a0591c42d96b8bc2aef6013e028}\label{classsoso_1_1ComponentChain_a309c2a0591c42d96b8bc2aef6013e028}} 
+\index{soso::ComponentChain@{soso::ComponentChain}!\_trace\_chrono@{\_trace\_chrono}}
+\index{\_trace\_chrono@{\_trace\_chrono}!soso::ComponentChain@{soso::ComponentChain}}
+\doxysubsubsection{\texorpdfstring{\_trace\_chrono}{\_trace\_chrono}}
+{\footnotesize\ttfamily bool soso\+::\+Component\+Chain\+::\+\_\+trace\+\_\+chrono = true\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+component.\+h 파일의 100 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{component_8h}{component.\+h}}\item 
+src/\mbox{\hyperlink{component_8cpp}{component.\+cpp}}\end{DoxyCompactItemize}

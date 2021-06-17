@@ -1,14 +1,19 @@
 var searchData=
 [
-  ['_5favg_43',['_avg',['../classsoso_1_1Chronos.html#a1a9f37a43eccf4ac58baf8af49de480b',1,'soso::Chronos']]],
-  ['_5fchecked_5fcount_44',['_checked_count',['../classsoso_1_1Chronos.html#a02be39853f319996a554c9d3b0a5c3c8',1,'soso::Chronos']]],
-  ['_5fchecktime_45',['_checktime',['../structsoso_1_1ChronosCheckPoint.html#a7d2150935f0798aa3ae2ee4dff1c5198',1,'soso::ChronosCheckPoint']]],
-  ['_5fdesc_46',['_desc',['../structsoso_1_1ChronosCheckPoint.html#a49f6bbbbc6b4d67ad0e73e46356d9d79',1,'soso::ChronosCheckPoint']]],
-  ['_5fdifftime_47',['_difftime',['../structsoso_1_1ChronosCheckPoint.html#a0a2032f9fc98ab938aae9aac82c916db',1,'soso::ChronosCheckPoint']]],
-  ['_5flong_5ftime_5fpoints_48',['_long_time_points',['../classsoso_1_1Chronos.html#a89af7955e4ee52eff1b4b9ece9eaa37d',1,'soso::Chronos']]],
-  ['_5fmax_5fcheck_5fpoint_49',['_max_check_point',['../classsoso_1_1Chronos.html#a8a6e23e876bb5a24c7664d9003a77de2',1,'soso::Chronos']]],
-  ['_5fmax_5flong_5ftime_5fpoint_50',['_max_long_time_point',['../classsoso_1_1Chronos.html#a21b35847059e3fa596ed83eea3c3829f',1,'soso::Chronos']]],
-  ['_5fpoints_51',['_points',['../classsoso_1_1Chronos.html#ab893742847e9cbacc9ae55b2d21a777e',1,'soso::Chronos']]],
-  ['_5ftitle_52',['_title',['../classsoso_1_1Chronos.html#a00651c562eef463354f3163b1baa9d3e',1,'soso::Chronos']]],
-  ['_5ftotal_53',['_total',['../classsoso_1_1Chronos.html#acddc0f5b3b232cfb41639dcf605b2066',1,'soso::Chronos']]]
+  ['_5fadd_5fcount_64',['_add_count',['../classsoso_1_1ChronoStack.html#a2b92a61a0cf1890051416509fb4f4f7a',1,'soso::ChronoStack']]],
+  ['_5favg_65',['_avg',['../classsoso_1_1ChronoStack.html#a2a270f29f8f9e5cc443c801265622808',1,'soso::ChronoStack::_avg()'],['../classsoso_1_1Chronos.html#a1a9f37a43eccf4ac58baf8af49de480b',1,'soso::Chronos::_avg()']]],
+  ['_5fbegin_66',['_begin',['../classsoso_1_1Chrono.html#aa98569d85c27f44130aa76fc77cc279d',1,'soso::Chrono']]],
+  ['_5fchecked_5fcount_67',['_checked_count',['../classsoso_1_1Chronos.html#a02be39853f319996a554c9d3b0a5c3c8',1,'soso::Chronos']]],
+  ['_5fchecktime_68',['_checktime',['../structsoso_1_1ChronosCheckPoint.html#a7d2150935f0798aa3ae2ee4dff1c5198',1,'soso::ChronosCheckPoint']]],
+  ['_5fdesc_69',['_desc',['../classsoso_1_1Chrono.html#adcaddb2e93ee1b8c7197fb8d5bd0116f',1,'soso::Chrono::_desc()'],['../structsoso_1_1ChronosCheckPoint.html#a49f6bbbbc6b4d67ad0e73e46356d9d79',1,'soso::ChronosCheckPoint::_desc()']]],
+  ['_5fdiff_70',['_diff',['../classsoso_1_1Chrono.html#a962af9d8eebb10b13c8d9269fe9e8c28',1,'soso::Chrono']]],
+  ['_5fdifftime_71',['_difftime',['../structsoso_1_1ChronosCheckPoint.html#a0a2032f9fc98ab938aae9aac82c916db',1,'soso::ChronosCheckPoint']]],
+  ['_5fend_72',['_end',['../classsoso_1_1Chrono.html#ac0c30c5a68de750ca3a2b42eb643b2a0',1,'soso::Chrono']]],
+  ['_5flong_5ftime_5fpoints_73',['_long_time_points',['../classsoso_1_1Chronos.html#a89af7955e4ee52eff1b4b9ece9eaa37d',1,'soso::Chronos']]],
+  ['_5fmax_5fcheck_5fpoint_74',['_max_check_point',['../classsoso_1_1Chronos.html#a8a6e23e876bb5a24c7664d9003a77de2',1,'soso::Chronos']]],
+  ['_5fmax_5flong_5ftime_5fpoint_75',['_max_long_time_point',['../classsoso_1_1Chronos.html#a21b35847059e3fa596ed83eea3c3829f',1,'soso::Chronos']]],
+  ['_5fmax_5fpoint_76',['_max_point',['../classsoso_1_1ChronoStack.html#ac9e80d3114c4ebb0dca07b4bbe966821',1,'soso::ChronoStack']]],
+  ['_5fpoints_77',['_points',['../classsoso_1_1ChronoStack.html#ae799dc1ae1c95c41fa676b1c83af0008',1,'soso::ChronoStack::_points()'],['../classsoso_1_1Chronos.html#ab893742847e9cbacc9ae55b2d21a777e',1,'soso::Chronos::_points()']]],
+  ['_5ftitle_78',['_title',['../classsoso_1_1ChronoStack.html#a2df2a0702d78882c9cdc44417aa466d8',1,'soso::ChronoStack::_title()'],['../classsoso_1_1Chronos.html#a00651c562eef463354f3163b1baa9d3e',1,'soso::Chronos::_title()']]],
+  ['_5ftotal_79',['_total',['../classsoso_1_1ChronoStack.html#af538dc73d02545318b46456c1dc664c9',1,'soso::ChronoStack::_total()'],['../classsoso_1_1Chronos.html#acddc0f5b3b232cfb41639dcf605b2066',1,'soso::Chronos::_total()']]]
 ];

@@ -30,19 +30,19 @@ struct ChronosCheckPoint {
    * @param desc
    */
   ChronosCheckPoint(const std::string &desc = "") {
-    this->_desc = desc;
-    gettimeofday(&this->_checktime, NULL);
-    timerclear(&this->_difftime);
+    _desc = desc;
+    gettimeofday(&_checktime, NULL);
+    timerclear(&_difftime);
   }
   /**
    * @brief 설명 설정
    * @param desc
    */
-  void setDesc(const std::string &desc) { this->_desc = desc; }
+  void setDesc(const std::string &desc) { _desc = desc; }
   /**
    * @brief 측정 시간 업데이트
    */
-  void updateCheckTime() { gettimeofday(&this->_checktime, NULL); }
+  void updateCheckTime() { gettimeofday(&_checktime, NULL); }
 
   /**
    * @brief difftime 시간이 checkpoint 보다 큰 값인지 확인 (difftime 시간 크기
@@ -52,7 +52,7 @@ struct ChronosCheckPoint {
    * @return false
    */
   bool diffTimeGT(const ChronosCheckPoint &checkpoint) {
-    return timercmp(&this->_difftime, &checkpoint._difftime, >) ? true : false;
+    return timercmp(&_difftime, &checkpoint._difftime, >) ? true : false;
   }
   /**
    * @brief difftime 시간이 checkpoint 보다 작은 값인지 확인 (difftime 시간
@@ -62,7 +62,7 @@ struct ChronosCheckPoint {
    * @return false
    */
   bool diffTimeLT(const ChronosCheckPoint &checkpoint) {
-    return timercmp(&this->_difftime, &checkpoint._difftime, <) ? true : false;
+    return timercmp(&_difftime, &checkpoint._difftime, <) ? true : false;
   }
   /**
    * @brief checktime 시간이 checkpoint 보다 큰 값인지 확인 (checktime 시간 크기
@@ -72,8 +72,7 @@ struct ChronosCheckPoint {
    * @return false
    */
   bool checkTimeGT(const ChronosCheckPoint &checkpoint) {
-    return timercmp(&this->_checktime, &checkpoint._checktime, >) ? true
-                                                                  : false;
+    return timercmp(&_checktime, &checkpoint._checktime, >) ? true : false;
   }
   /**
    * @brief checktime 시간이 checkpoint 보다 작은 값인지 확인 (checktime 시간
@@ -83,8 +82,7 @@ struct ChronosCheckPoint {
    * @return false
    */
   bool checkTimeLT(const ChronosCheckPoint &checkpoint) {
-    return timercmp(&this->_checktime, &checkpoint._checktime, <) ? true
-                                                                  : false;
+    return timercmp(&_checktime, &checkpoint._checktime, <) ? true : false;
   }
 };
 
@@ -122,7 +120,7 @@ public:
    * @param title
    */
   Chronos(const std::string &title) {
-    this->_title = title;
+    _title = title;
     _avg.setDesc(title + "-average");
     _total.setDesc(title + "-total");
   }
@@ -132,7 +130,7 @@ public:
    * @param max
    */
   void setMaxLongTimeCheckPoint(size_t max) { //
-    this->_max_long_time_point = max;
+    _max_long_time_point = max;
   }
 
   /**
@@ -140,7 +138,7 @@ public:
    * @param max
    */
   void setMaxCheckPoint(size_t max) { //
-    this->_max_check_point = max;
+    _max_check_point = max;
   }
 
   /**
@@ -148,7 +146,7 @@ public:
    * @param title
    */
   void setTitle(const std::string &title) {
-    this->_title = title;
+    _title = title;
     _avg.setDesc(title + "-average");
     _total.setDesc(title + "-total");
   }
@@ -246,26 +244,26 @@ public:
         "[" + _total._desc + "] " +                     //
         std::to_string(_total._difftime.tv_sec) + "." + //
         fmt::format("{0:0>7}", std::to_string(_total._difftime.tv_usec)) + "\n";
-    results += "\n[" + _avg._desc + "] " +                   //
+    results += "[" + _avg._desc + "] " +                     //
                std::to_string(_avg._difftime.tv_sec) + "." + //
                fmt::format("{0:0>7}", std::to_string(_avg._difftime.tv_usec)) +
                "\n";
 
-    results += "\n[check point stack]\n";
+    results += "[" + _title + "-check point stack]\n";
     i = 0;
     for (auto p : _points) {
       results += "(" + std::to_string(++i) + ") ";
-      results += "[" + this->_title + "] " + p._desc + ": " + //
-                 std::to_string(p._difftime.tv_sec) + "." +   //
+      results += "[" + _title + "] " + p._desc + ": " +     //
+                 std::to_string(p._difftime.tv_sec) + "." + //
                  fmt::format("{0:0>7}", std::to_string(p._difftime.tv_usec)) +
                  "\n";
     }
-    results += "\n[long time check point stack]\n";
+    results += "[" + _title + "-long time check point stack]\n";
     i = 0;
     for (auto p : _long_time_points) {
       results += "(" + std::to_string(++i) + ") ";
-      results += "[" + this->_title + "] " + p._desc + ": " + //
-                 std::to_string(p._difftime.tv_sec) + "." +   //
+      results += "[" + _title + "] " + p._desc + ": " +     //
+                 std::to_string(p._difftime.tv_sec) + "." + //
                  fmt::format("{0:0>7}", std::to_string(p._difftime.tv_usec)) +
                  "\n";
     }

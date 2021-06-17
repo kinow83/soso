@@ -28,7 +28,16 @@ var menudata={children:[
 {text:"클래스 목록",url:"annotated.html"},
 {text:"클래스 색인",url:"classes.html"},
 {text:"클래스 멤버",url:"functions.html",children:[
-{text:"모두",url:"functions.html"},
+{text:"모두",url:"functions.html",children:[
+{text:"_",url:"functions.html#index__5F"},
+{text:"a",url:"functions.html#index_a"},
+{text:"b",url:"functions.html#index_b"},
+{text:"c",url:"functions.html#index_c"},
+{text:"d",url:"functions.html#index_d"},
+{text:"e",url:"functions.html#index_e"},
+{text:"s",url:"functions.html#index_s"},
+{text:"t",url:"functions.html#index_t"},
+{text:"u",url:"functions.html#index_u"}]},
 {text:"함수",url:"functions_func.html"},
 {text:"변수",url:"functions_vars.html"}]}]},
 {text:"파일들",url:"files.html",children:[

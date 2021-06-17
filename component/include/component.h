@@ -2,11 +2,10 @@
 #define __SOSO_COMPONENT_H__
 
 #include "request.h"
-#include <chronos.hpp>
+#include <chrono.hpp>
 #include <memory>
 #include <mutex>
 #include <stdexcept>
-#include <string.h>
 #include <string>
 #include <thread>
 #include <vector>
@@ -96,15 +95,9 @@ public:
  */
 class ComponentChain {
 private:
-  Chronos _chronos[COMPONENT_SIZE] = { //
-      Chronos("init"),                 //
-      Chronos("prepare"),              //
-      Chronos("process"),              //
-      Chronos("post"),                 //
-      Chronos("schedule")};
-
-  std::mutex _chronos_lock;
-  bool _trace_chronos = true;
+  std::vector<ChronoStack> _chrono_stack;
+  std::mutex _chrono_lock;
+  bool _trace_chrono = true;
 
   /// 컴포넌트 구성요청 체인 리스트
   std::vector<std::shared_ptr<Component>> _chains;
@@ -113,6 +106,18 @@ public:
   ComponentChain();
 
   ~ComponentChain() = default;
+
+  size_t componentSize() { return _chains.size(); }
+
+  const std::string getChronoResult() {
+    const std::lock_guard<std::mutex> lock(_chrono_lock);
+    std::string results = "";
+
+    for (ChronoStack &c : _chrono_stack) {
+      results += c.toString();
+    }
+    return results;
+  }
 
   /**
    * @brief 컴포넌트 추가
@@ -158,7 +163,7 @@ public:
    */
   void showComponent();
 
-  bool chronosCheckPoint(const string &comp_name, int comp_idx,
+  bool chronosCheckPoint(const std::string comp_name, int comp_idx,
                          std::function<bool(void)> logic);
 };
 

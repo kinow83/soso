@@ -1,17 +1,16 @@
 #include "component.h"
 #include "echo.h"
-#include <string.h>
-#include <string>
 #include <unistd.h>
 
 using namespace std;
 using namespace soso;
 
 ComponentChain::ComponentChain() {
-  for (auto c : _chronos) {
-    c.setMaxCheckPoint(1000);
-    c.setMaxLongTimeCheckPoint(500);
-  }
+  _chrono_stack.push_back(ChronoStack("init", 100));
+  _chrono_stack.push_back(ChronoStack("prepare", 100));
+  _chrono_stack.push_back(ChronoStack("process", 100));
+  _chrono_stack.push_back(ChronoStack("post", 100));
+  _chrono_stack.push_back(ChronoStack("schedule", 100));
 }
 
 void ComponentChain::registers(shared_ptr<Component> component) {
@@ -48,20 +47,21 @@ void ComponentChain::remove(const string name) {
   }
 }
 
-bool ComponentChain::chronosCheckPoint(const string &comp_name, int comp_idx,
+bool ComponentChain::chronosCheckPoint(const string comp_name, int comp_idx,
                                        std::function<bool(void)> logic) {
-
   bool result;
-  if (!_trace_chronos) {
+  if (!_trace_chrono) {
     return logic();
   }
 
-  const lock_guard<mutex> lock(_chronos_lock);
-  _chronos[comp_idx].checkpoint(comp_name);
-
+  Chrono chrono(comp_name);
   result = logic();
+  chrono.end();
 
-  _chronos[comp_idx].checkpoint();
+  _chrono_lock.lock();
+  _chrono_stack[comp_idx].addChrono(chrono);
+  _chrono_lock.unlock();
+
   return result;
 }
 
@@ -73,8 +73,10 @@ bool ComponentChain::initComponent() {
                            [&c](void) { return c->init(); });
     if (!ok) {
       echo.e("Fail init for '%s' component", c->getName());
+      return ok;
     }
   }
+  return ok;
 }
 
 void ComponentChain::callSchedule(void) {
@@ -88,8 +90,10 @@ void ComponentChain::callSchedule(void) {
                            });
     if (!ok) {
       echo.e("Fail schedule for '%s' component", c->getName());
+      return;
     }
   }
+  return;
 }
 
 void ComponentChain::callComponent(shared_ptr<Request> request) {
@@ -106,6 +110,7 @@ void ComponentChain::callComponent(shared_ptr<Request> request) {
                            });
     if (!ok) {
       echo.e("Fail prepare for '%s' component", c->getName());
+      return;
     }
   }
 
@@ -118,6 +123,7 @@ void ComponentChain::callComponent(shared_ptr<Request> request) {
                            });
     if (!ok) {
       echo.e("Fail process for '%s' component", c->getName());
+      return;
     }
   }
 
@@ -130,6 +136,7 @@ void ComponentChain::callComponent(shared_ptr<Request> request) {
                            });
     if (!ok) {
       echo.e("Fail post for '%s' component", c->getName());
+      return;
     }
   }
 }

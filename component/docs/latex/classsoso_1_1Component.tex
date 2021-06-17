@@ -1,0 +1,228 @@
+\hypertarget{classsoso_1_1Component}{}\doxysection{soso\+::Component 클래스 참조}
+\label{classsoso_1_1Component}\index{soso::Component@{soso::Component}}
+
+
+컴포넌트 구성 요소 Class  
+
+
+
+
+{\ttfamily \#include $<$component.\+h$>$}
+
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsoso_1_1Component_aa51b455cf021cf121ed4eb9b79a2c8d3}{Component}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classsoso_1_1Component}{Component}} 생성자 \end{DoxyCompactList}\item 
+const std\+::string \mbox{\hyperlink{classsoso_1_1Component_a39f2df35f9c64532c65bd04949f9f6c2}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em 컴포넌트 이름 반환 \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classsoso_1_1Component_a938eedb53bb41d71f4b7b47fec963b0a}{$\sim$\+Component}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classsoso_1_1Component}{Component}} 소멸자 가상 멤버 함수 \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classsoso_1_1Component_a9ba2dc919ec264fb2efe0a26531273e3}{init}} ()=0
+\begin{DoxyCompactList}\small\item\em 컴포넌트 초기화 가상 멤버 함수 \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classsoso_1_1Component_aaf97110181a444bca4bc52a368d5cada}{prepare}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsoso_1_1Request}{Request}} $>$ request)=0
+\begin{DoxyCompactList}\small\item\em 컴포넌트 사전 처리 가상 멤버 함수 \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classsoso_1_1Component_af6a2ed84928ca83d8323640bc41d1956}{process}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsoso_1_1Request}{Request}} $>$ request)=0
+\begin{DoxyCompactList}\small\item\em 컴포넌트 수행 가상 멤버 함수 \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classsoso_1_1Component_acca54280cc7daffaad59c6cf94fdc712}{post}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsoso_1_1Request}{Request}} $>$ request)=0
+\begin{DoxyCompactList}\small\item\em 컴포넌트 후처리 가상 멤버 함수 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsoso_1_1Component_aee7a1fdff6412fbf9317e86d6bf313f0}{schedule}} ()=0
+\begin{DoxyCompactList}\small\item\em 컴포넌트 스케줄러 가상 멤버 함수~\newline
+스케줄링 작업이 필요한 경우 구현~\newline
+컴포넌트 호출 시 이전 컴포넌트의 성공 여부와 상관없이 무조건 호출 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classsoso_1_1Component_a8170611bd45d7ec714286da2cd550212}{noop}} ()
+\begin{DoxyCompactList}\small\item\em No operation (Next 컴포넌트 호출) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::string \mbox{\hyperlink{classsoso_1_1Component_aac81779ea2e00c1e3aa1868cd85ad442}{\+\_\+name}}
+\begin{DoxyCompactList}\small\item\em 컴포넌트 이름 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+컴포넌트 구성 요소 Class 
+
+component.\+h 파일의 27 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{classsoso_1_1Component_aa51b455cf021cf121ed4eb9b79a2c8d3}\label{classsoso_1_1Component_aa51b455cf021cf121ed4eb9b79a2c8d3}} 
+\index{soso::Component@{soso::Component}!Component@{Component}}
+\index{Component@{Component}!soso::Component@{soso::Component}}
+\doxysubsubsection{\texorpdfstring{Component()}{Component()}}
+{\footnotesize\ttfamily soso\+::\+Component\+::\+Component (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{classsoso_1_1Component}{Component}} 생성자 
+
+
+\begin{DoxyParams}{매개변수}
+{\em name} & \\
+\hline
+\end{DoxyParams}
+
+
+component.\+h 파일의 41 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1Component_a938eedb53bb41d71f4b7b47fec963b0a}\label{classsoso_1_1Component_a938eedb53bb41d71f4b7b47fec963b0a}} 
+\index{soso::Component@{soso::Component}!````~Component@{$\sim$Component}}
+\index{````~Component@{$\sim$Component}!soso::Component@{soso::Component}}
+\doxysubsubsection{\texorpdfstring{$\sim$Component()}{~Component()}}
+{\footnotesize\ttfamily virtual soso\+::\+Component\+::$\sim$\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{classsoso_1_1Component}{Component}} 소멸자 가상 멤버 함수 
+
+
+
+component.\+h 파일의 52 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{classsoso_1_1Component_a39f2df35f9c64532c65bd04949f9f6c2}\label{classsoso_1_1Component_a39f2df35f9c64532c65bd04949f9f6c2}} 
+\index{soso::Component@{soso::Component}!getName@{getName}}
+\index{getName@{getName}!soso::Component@{soso::Component}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily const std\+::string soso\+::\+Component\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+컴포넌트 이름 반환 
+
+\begin{DoxyReturn}{반환값}
+const std\+::string 
+\end{DoxyReturn}
+
+
+component.\+h 파일의 47 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1Component_a9ba2dc919ec264fb2efe0a26531273e3}\label{classsoso_1_1Component_a9ba2dc919ec264fb2efe0a26531273e3}} 
+\index{soso::Component@{soso::Component}!init@{init}}
+\index{init@{init}!soso::Component@{soso::Component}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily virtual bool soso\+::\+Component\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+컴포넌트 초기화 가상 멤버 함수 
+
+\begin{DoxyReturn}{반환값}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsoso_1_1Component_a8170611bd45d7ec714286da2cd550212}\label{classsoso_1_1Component_a8170611bd45d7ec714286da2cd550212}} 
+\index{soso::Component@{soso::Component}!noop@{noop}}
+\index{noop@{noop}!soso::Component@{soso::Component}}
+\doxysubsubsection{\texorpdfstring{noop()}{noop()}}
+{\footnotesize\ttfamily bool soso\+::\+Component\+::noop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+No operation (Next 컴포넌트 호출) 
+
+
+
+component.\+h 파일의 34 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1Component_acca54280cc7daffaad59c6cf94fdc712}\label{classsoso_1_1Component_acca54280cc7daffaad59c6cf94fdc712}} 
+\index{soso::Component@{soso::Component}!post@{post}}
+\index{post@{post}!soso::Component@{soso::Component}}
+\doxysubsubsection{\texorpdfstring{post()}{post()}}
+{\footnotesize\ttfamily virtual bool soso\+::\+Component\+::post (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsoso_1_1Request}{Request}} $>$}]{request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+컴포넌트 후처리 가상 멤버 함수 
+
+
+\begin{DoxyParams}{매개변수}
+{\em request} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsoso_1_1Component_aaf97110181a444bca4bc52a368d5cada}\label{classsoso_1_1Component_aaf97110181a444bca4bc52a368d5cada}} 
+\index{soso::Component@{soso::Component}!prepare@{prepare}}
+\index{prepare@{prepare}!soso::Component@{soso::Component}}
+\doxysubsubsection{\texorpdfstring{prepare()}{prepare()}}
+{\footnotesize\ttfamily virtual bool soso\+::\+Component\+::prepare (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsoso_1_1Request}{Request}} $>$}]{request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+컴포넌트 사전 처리 가상 멤버 함수 
+
+
+\begin{DoxyParams}{매개변수}
+{\em request} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsoso_1_1Component_af6a2ed84928ca83d8323640bc41d1956}\label{classsoso_1_1Component_af6a2ed84928ca83d8323640bc41d1956}} 
+\index{soso::Component@{soso::Component}!process@{process}}
+\index{process@{process}!soso::Component@{soso::Component}}
+\doxysubsubsection{\texorpdfstring{process()}{process()}}
+{\footnotesize\ttfamily virtual bool soso\+::\+Component\+::process (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsoso_1_1Request}{Request}} $>$}]{request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+컴포넌트 수행 가상 멤버 함수 
+
+
+\begin{DoxyParams}{매개변수}
+{\em request} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsoso_1_1Component_aee7a1fdff6412fbf9317e86d6bf313f0}\label{classsoso_1_1Component_aee7a1fdff6412fbf9317e86d6bf313f0}} 
+\index{soso::Component@{soso::Component}!schedule@{schedule}}
+\index{schedule@{schedule}!soso::Component@{soso::Component}}
+\doxysubsubsection{\texorpdfstring{schedule()}{schedule()}}
+{\footnotesize\ttfamily virtual void soso\+::\+Component\+::schedule (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+컴포넌트 스케줄러 가상 멤버 함수~\newline
+스케줄링 작업이 필요한 경우 구현~\newline
+컴포넌트 호출 시 이전 컴포넌트의 성공 여부와 상관없이 무조건 호출 
+
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{classsoso_1_1Component_aac81779ea2e00c1e3aa1868cd85ad442}\label{classsoso_1_1Component_aac81779ea2e00c1e3aa1868cd85ad442}} 
+\index{soso::Component@{soso::Component}!\_name@{\_name}}
+\index{\_name@{\_name}!soso::Component@{soso::Component}}
+\doxysubsubsection{\texorpdfstring{\_name}{\_name}}
+{\footnotesize\ttfamily const std\+::string soso\+::\+Component\+::\+\_\+name\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+컴포넌트 이름 
+
+
+
+component.\+h 파일의 30 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{component_8h}{component.\+h}}\end{DoxyCompactItemize}

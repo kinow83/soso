@@ -17,7 +17,7 @@ find_package(fmt REQUIRED)
 # for hpp
 ###############################
 add_library(chronos INTERFACE)
-target_sources(chronos INTERFACE chronos.hpp)
+target_sources(chronos INTERFACE chronos.hpp chrono.hpp)
 target_include_directories (chronos
 INTERFACE
     ${CMAKE_CURRENT_SOURCE_DIR}/include
@@ -37,7 +37,7 @@ if (DOXYGEN_FOUND)
     set(DOXYGEN_OUT ${CMAKE_CURRENT_SOURCE_DIR}/Doxyfile)
     configure_file(${DOXYGEN_OUT} @ONLY)
     add_custom_target(
-        doc_doxygen ALL
+        chronos_doxygen ALL
         COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYGEN_OUT}
         WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
         COMMENT "Generating API documentation with Doxygen"

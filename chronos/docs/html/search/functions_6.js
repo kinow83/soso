@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['timecheckpoint_39',['TimeCheckPoint',['../structTimeCheckPoint.html#a0cb55de02011f7ceb24121b26e92460f',1,'TimeCheckPoint']]],
-  ['timediffer_40',['TimeDiffer',['../classTimeDiffer.html#ab50e2dede2b798aebd7ab36cd3225ea0',1,'TimeDiffer::TimeDiffer()'],['../classTimeDiffer.html#a6f571ad84ea50518ea3539456c781edd',1,'TimeDiffer::TimeDiffer(const std::string &amp;title)']]],
-  ['tostring_41',['toString',['../classTimeDiffer.html#a139adfbad264628230380ca9539f2f6d',1,'TimeDiffer']]]
+  ['tostring_62',['toString',['../classsoso_1_1ChronoStack.html#a82fbd3d5a568b340b0933c47dad53f79',1,'soso::ChronoStack::toString()'],['../classsoso_1_1Chronos.html#a124add76f416fe09e5907654f321c93e',1,'soso::Chronos::toString()']]]
 ];
