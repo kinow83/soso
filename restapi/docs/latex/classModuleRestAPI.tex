@@ -1,0 +1,209 @@
+\hypertarget{classModuleRestAPI}{}\doxysection{Module\+Rest\+A\+PI 클래스 참조}
+\label{classModuleRestAPI}\index{ModuleRestAPI@{ModuleRestAPI}}
+
+
+\mbox{\hyperlink{classModuleRestAPI}{Module\+Rest\+A\+PI}}~\newline
+정의된 A\+P\+I를 추가하고 서버를 동작시킨다.  
+
+
+
+
+{\ttfamily \#include $<$Module\+Rest\+A\+P\+I.\+h$>$}
+
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classModuleRestAPI_a07bbfe8f0f0d29fa899f24c30460e070}{Module\+Rest\+A\+PI}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classModuleRestAPI}{Module\+Rest\+A\+PI}} 생성자 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classModuleRestAPI_a31344e46dab7ca219057ba72ddbf53ea}{Module\+Rest\+A\+PI}} (const std\+::string \&\mbox{\hyperlink{classModuleRestAPI_a8a896fec13dfda7805c38d796711ff18}{address}})
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classModuleRestAPI}{Module\+Rest\+A\+PI}} 생성자 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classModuleRestAPI_a282ef7839c82cd0c9bf8b52b3cbfd28f}{$\sim$\+Module\+Rest\+A\+PI}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classModuleRestAPI}{Module\+Rest\+A\+PI}} 소멸자 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classModuleRestAPI_a114b036e14eb367cf3c4f460ba1a8462}{set\+Address}} (const std\+::string \&\mbox{\hyperlink{classModuleRestAPI_a8a896fec13dfda7805c38d796711ff18}{address}})
+\begin{DoxyCompactList}\small\item\em A\+PI url 주소 입력 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classModuleRestAPI_a1e7486a5269774811d2dcc75181cef3a}{on\+\_\+initialize}} ()
+\begin{DoxyCompactList}\small\item\em A\+PI 서버 실행 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classModuleRestAPI_a32a6cf936a22b7913e895b28419932c5}{on\+\_\+shutdown}} ()
+\begin{DoxyCompactList}\small\item\em A\+PI 서버 종료 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classModuleRestAPI_adfc956a9fd778e4489ffdaf18b31be7f}{add\+A\+PI}} (\mbox{\hyperlink{RestAPIHandle_8h_a98c8bf3ad96ddc55f238880c201b4073}{A\+P\+I\+\_\+\+M\+E\+T\+H\+OD}} method, const utility\+::string\+\_\+t path, \mbox{\hyperlink{RestAPIHandle_8h_a31a694d35a9b4051e3d3f1c27f01f6e6}{End\+Point\+Handle}} handle)
+\begin{DoxyCompactList}\small\item\em A\+PI 정의 추가 (H\+T\+TP Method별 U\+R\+L에 맵핑되는 A\+PI 동작 정의 추가) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::string \mbox{\hyperlink{classModuleRestAPI_a8a896fec13dfda7805c38d796711ff18}{address}}
+\begin{DoxyCompactList}\small\item\em A\+PI 서버 주소 (포트까지 포함) \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classRestAPIHandler}{Rest\+A\+P\+I\+Handler}} $>$ \mbox{\hyperlink{classModuleRestAPI_a7345597f9fb7aa2c9ce7a0f52d9cd013}{api\+\_\+handler}}
+\begin{DoxyCompactList}\small\item\em U\+R\+L에 맵핑된 A\+PI 호출 동작 정의 객체 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+\mbox{\hyperlink{classModuleRestAPI}{Module\+Rest\+A\+PI}}~\newline
+정의된 A\+P\+I를 추가하고 서버를 동작시킨다. 
+
+Module\+Rest\+A\+P\+I.\+h 파일의 11 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{classModuleRestAPI_a07bbfe8f0f0d29fa899f24c30460e070}\label{classModuleRestAPI_a07bbfe8f0f0d29fa899f24c30460e070}} 
+\index{ModuleRestAPI@{ModuleRestAPI}!ModuleRestAPI@{ModuleRestAPI}}
+\index{ModuleRestAPI@{ModuleRestAPI}!ModuleRestAPI@{ModuleRestAPI}}
+\doxysubsubsection{\texorpdfstring{ModuleRestAPI()}{ModuleRestAPI()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Module\+Rest\+A\+P\+I\+::\+Module\+Rest\+A\+PI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classModuleRestAPI}{Module\+Rest\+A\+PI}} 생성자 
+
+
+
+Module\+Rest\+A\+P\+I.\+cpp 파일의 15 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classModuleRestAPI_a31344e46dab7ca219057ba72ddbf53ea}\label{classModuleRestAPI_a31344e46dab7ca219057ba72ddbf53ea}} 
+\index{ModuleRestAPI@{ModuleRestAPI}!ModuleRestAPI@{ModuleRestAPI}}
+\index{ModuleRestAPI@{ModuleRestAPI}!ModuleRestAPI@{ModuleRestAPI}}
+\doxysubsubsection{\texorpdfstring{ModuleRestAPI()}{ModuleRestAPI()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Module\+Rest\+A\+P\+I\+::\+Module\+Rest\+A\+PI (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{address }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classModuleRestAPI}{Module\+Rest\+A\+PI}} 생성자 
+
+
+\begin{DoxyParams}{매개변수}
+{\em address} & \\
+\hline
+\end{DoxyParams}
+
+
+Module\+Rest\+A\+P\+I.\+cpp 파일의 17 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classModuleRestAPI_a282ef7839c82cd0c9bf8b52b3cbfd28f}\label{classModuleRestAPI_a282ef7839c82cd0c9bf8b52b3cbfd28f}} 
+\index{ModuleRestAPI@{ModuleRestAPI}!````~ModuleRestAPI@{$\sim$ModuleRestAPI}}
+\index{````~ModuleRestAPI@{$\sim$ModuleRestAPI}!ModuleRestAPI@{ModuleRestAPI}}
+\doxysubsubsection{\texorpdfstring{$\sim$ModuleRestAPI()}{~ModuleRestAPI()}}
+{\footnotesize\ttfamily Module\+Rest\+A\+P\+I\+::$\sim$\+Module\+Rest\+A\+PI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classModuleRestAPI}{Module\+Rest\+A\+PI}} 소멸자 
+
+
+
+Module\+Rest\+A\+P\+I.\+cpp 파일의 21 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{classModuleRestAPI_adfc956a9fd778e4489ffdaf18b31be7f}\label{classModuleRestAPI_adfc956a9fd778e4489ffdaf18b31be7f}} 
+\index{ModuleRestAPI@{ModuleRestAPI}!addAPI@{addAPI}}
+\index{addAPI@{addAPI}!ModuleRestAPI@{ModuleRestAPI}}
+\doxysubsubsection{\texorpdfstring{addAPI()}{addAPI()}}
+{\footnotesize\ttfamily bool Module\+Rest\+A\+P\+I\+::add\+A\+PI (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{RestAPIHandle_8h_a98c8bf3ad96ddc55f238880c201b4073}{A\+P\+I\+\_\+\+M\+E\+T\+H\+OD}}}]{method,  }\item[{const utility\+::string\+\_\+t}]{path,  }\item[{\mbox{\hyperlink{RestAPIHandle_8h_a31a694d35a9b4051e3d3f1c27f01f6e6}{End\+Point\+Handle}}}]{handle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+A\+PI 정의 추가 (H\+T\+TP Method별 U\+R\+L에 맵핑되는 A\+PI 동작 정의 추가) 
+
+
+\begin{DoxyParams}{매개변수}
+{\em method} & G\+E\+T/\+P\+O\+S\+T/\+P\+U\+T/\+D\+EL \\
+\hline
+{\em path} & url (endpoint) \\
+\hline
+{\em handle} & A\+PI 호출 시 동작하는 함수 정의 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+Module\+Rest\+A\+P\+I.\+h 파일의 55 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classModuleRestAPI_a1e7486a5269774811d2dcc75181cef3a}\label{classModuleRestAPI_a1e7486a5269774811d2dcc75181cef3a}} 
+\index{ModuleRestAPI@{ModuleRestAPI}!on\_initialize@{on\_initialize}}
+\index{on\_initialize@{on\_initialize}!ModuleRestAPI@{ModuleRestAPI}}
+\doxysubsubsection{\texorpdfstring{on\_initialize()}{on\_initialize()}}
+{\footnotesize\ttfamily void Module\+Rest\+A\+P\+I\+::on\+\_\+initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+A\+PI 서버 실행 
+
+
+
+Module\+Rest\+A\+P\+I.\+cpp 파일의 33 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classModuleRestAPI_a32a6cf936a22b7913e895b28419932c5}\label{classModuleRestAPI_a32a6cf936a22b7913e895b28419932c5}} 
+\index{ModuleRestAPI@{ModuleRestAPI}!on\_shutdown@{on\_shutdown}}
+\index{on\_shutdown@{on\_shutdown}!ModuleRestAPI@{ModuleRestAPI}}
+\doxysubsubsection{\texorpdfstring{on\_shutdown()}{on\_shutdown()}}
+{\footnotesize\ttfamily void Module\+Rest\+A\+P\+I\+::on\+\_\+shutdown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+A\+PI 서버 종료 
+
+
+
+Module\+Rest\+A\+P\+I.\+cpp 파일의 39 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classModuleRestAPI_a114b036e14eb367cf3c4f460ba1a8462}\label{classModuleRestAPI_a114b036e14eb367cf3c4f460ba1a8462}} 
+\index{ModuleRestAPI@{ModuleRestAPI}!setAddress@{setAddress}}
+\index{setAddress@{setAddress}!ModuleRestAPI@{ModuleRestAPI}}
+\doxysubsubsection{\texorpdfstring{setAddress()}{setAddress()}}
+{\footnotesize\ttfamily void Module\+Rest\+A\+P\+I\+::set\+Address (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{address }\end{DoxyParamCaption})}
+
+
+
+A\+PI url 주소 입력 
+
+
+\begin{DoxyParams}{매개변수}
+{\em address} & \\
+\hline
+\end{DoxyParams}
+
+
+Module\+Rest\+A\+P\+I.\+cpp 파일의 27 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{classModuleRestAPI_a8a896fec13dfda7805c38d796711ff18}\label{classModuleRestAPI_a8a896fec13dfda7805c38d796711ff18}} 
+\index{ModuleRestAPI@{ModuleRestAPI}!address@{address}}
+\index{address@{address}!ModuleRestAPI@{ModuleRestAPI}}
+\doxysubsubsection{\texorpdfstring{address}{address}}
+{\footnotesize\ttfamily const std\+::string Module\+Rest\+A\+P\+I\+::address\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A\+PI 서버 주소 (포트까지 포함) 
+
+
+
+Module\+Rest\+A\+P\+I.\+h 파일의 14 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classModuleRestAPI_a7345597f9fb7aa2c9ce7a0f52d9cd013}\label{classModuleRestAPI_a7345597f9fb7aa2c9ce7a0f52d9cd013}} 
+\index{ModuleRestAPI@{ModuleRestAPI}!api\_handler@{api\_handler}}
+\index{api\_handler@{api\_handler}!ModuleRestAPI@{ModuleRestAPI}}
+\doxysubsubsection{\texorpdfstring{api\_handler}{api\_handler}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classRestAPIHandler}{Rest\+A\+P\+I\+Handler}}$>$ Module\+Rest\+A\+P\+I\+::api\+\_\+handler\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+U\+R\+L에 맵핑된 A\+PI 호출 동작 정의 객체 
+
+
+
+Module\+Rest\+A\+P\+I.\+h 파일의 16 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{ModuleRestAPI_8h}{Module\+Rest\+A\+P\+I.\+h}}\item 
+src/\mbox{\hyperlink{ModuleRestAPI_8cpp}{Module\+Rest\+A\+P\+I.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,260 @@
+\hypertarget{classRestAPIHandler}{}\doxysection{Rest\+A\+P\+I\+Handler 클래스 참조}
+\label{classRestAPIHandler}\index{RestAPIHandler@{RestAPIHandler}}
+
+
+\mbox{\hyperlink{classRestAPIHandler}{Rest\+A\+P\+I\+Handler}}  
+
+
+
+
+{\ttfamily \#include $<$restapi\+\_\+handler.\+h$>$}
+
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRestAPIHandler_a5baecf798f164eaeaa00f60fda69a5fb}{Rest\+A\+P\+I\+Handler}} ()=default
+\item 
+\mbox{\hyperlink{classRestAPIHandler_a3051faaef751ae97f53f811fee1223c9}{Rest\+A\+P\+I\+Handler}} (utility\+::string\+\_\+t url)
+\item 
+virtual \mbox{\hyperlink{classRestAPIHandler_a910aad68ff28d06800a7f0c1c8c372f3}{$\sim$\+Rest\+A\+P\+I\+Handler}} ()
+\item 
+pplx\+::task$<$ void $>$ \mbox{\hyperlink{classRestAPIHandler_a1d4122d5f56c1e98534a916d921e5a8a}{open}} ()
+\begin{DoxyCompactList}\small\item\em rest api 서버 시작 \end{DoxyCompactList}\item 
+pplx\+::task$<$ void $>$ \mbox{\hyperlink{classRestAPIHandler_aef647d67fb80e3eb89ac7fa740e65307}{close}} ()
+\begin{DoxyCompactList}\small\item\em rest api 서버 종료 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classRestAPIHandler_ace5e475db26e2e5e9608729b314c11f3}{add\+Endpoint}} (\mbox{\hyperlink{restapi__handler_8h_a98c8bf3ad96ddc55f238880c201b4073}{A\+P\+I\+\_\+\+M\+E\+T\+H\+OD}} method, const utility\+::string\+\_\+t path, \mbox{\hyperlink{restapi__handler_8h_a622eaad3757b7958bc2ec8745663d270}{end\+\_\+point\+\_\+handle\+\_\+t}} handle)
+\begin{DoxyCompactList}\small\item\em rest api 서비스 등록 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{restapi__handler_8h_a622eaad3757b7958bc2ec8745663d270}{end\+\_\+point\+\_\+handle\+\_\+t}} $\ast$ \mbox{\hyperlink{classRestAPIHandler_a50f692a6bf481bb03c3828956c3afc53}{get\+Endpoint\+Handle}} (\mbox{\hyperlink{restapi__handler_8h_a98c8bf3ad96ddc55f238880c201b4073}{A\+P\+I\+\_\+\+M\+E\+T\+H\+OD}} method, const utility\+::string\+\_\+t path)
+\begin{DoxyCompactList}\small\item\em rest api endpoint 핸들 반환 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classRestAPIHandler_ab24afb50cbe9cc1dd72e8afe33f89af1}{get}} (web\+::http\+::http\+\_\+request message)
+\item 
+void \mbox{\hyperlink{classRestAPIHandler_a0f7c54b435bc2ecb70671acbfd9597c3}{put}} (web\+::http\+::http\+\_\+request message)
+\item 
+void \mbox{\hyperlink{classRestAPIHandler_a6c979b15d25f42a05bbbdf7e740dcc73}{post}} (web\+::http\+::http\+\_\+request message)
+\item 
+void \mbox{\hyperlink{classRestAPIHandler_aaefe4923028655a0b29e5bf96cb6bce1}{del}} (web\+::http\+::http\+\_\+request message)
+\item 
+void \mbox{\hyperlink{classRestAPIHandler_a7a59c0fa734af5b8df90908233c5b6bf}{callapi}} (\mbox{\hyperlink{restapi__handler_8h_a98c8bf3ad96ddc55f238880c201b4073}{A\+P\+I\+\_\+\+M\+E\+T\+H\+OD}} method, web\+::http\+::http\+\_\+request message)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+web\+::http\+::experimental\+::listener\+::http\+\_\+listener \mbox{\hyperlink{classRestAPIHandler_a6cf949014ef702e63a6075689aa248a8}{\+\_\+listener}}
+\begin{DoxyCompactList}\small\item\em cpprestsdk A\+PI 서버 리스너 \end{DoxyCompactList}\item 
+std\+::map$<$ utility\+::string\+\_\+t, \mbox{\hyperlink{restapi__handler_8h_a622eaad3757b7958bc2ec8745663d270}{end\+\_\+point\+\_\+handle\+\_\+t}} $>$ \mbox{\hyperlink{classRestAPIHandler_aff2f0cf0af12b790857cebd47d4bc1c7}{\+\_\+tables}} \mbox{[}\mbox{\hyperlink{restapi__handler_8h_a98c8bf3ad96ddc55f238880c201b4073a9261722746d6f8680495eaadadd11325}{A\+P\+I\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+S\+I\+ZE}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em A\+PI 동작 정의 테이블 (G\+E\+T/\+P\+O\+S\+T/\+P\+U\+T/\+D\+EL 각 각 정의) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+\mbox{\hyperlink{classRestAPIHandler}{Rest\+A\+P\+I\+Handler}} 
+
+restapi\+\_\+handler.\+h 파일의 36 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{classRestAPIHandler_a5baecf798f164eaeaa00f60fda69a5fb}\label{classRestAPIHandler_a5baecf798f164eaeaa00f60fda69a5fb}} 
+\index{RestAPIHandler@{RestAPIHandler}!RestAPIHandler@{RestAPIHandler}}
+\index{RestAPIHandler@{RestAPIHandler}!RestAPIHandler@{RestAPIHandler}}
+\doxysubsubsection{\texorpdfstring{RestAPIHandler()}{RestAPIHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Rest\+A\+P\+I\+Handler\+::\+Rest\+A\+P\+I\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classRestAPIHandler_a3051faaef751ae97f53f811fee1223c9}\label{classRestAPIHandler_a3051faaef751ae97f53f811fee1223c9}} 
+\index{RestAPIHandler@{RestAPIHandler}!RestAPIHandler@{RestAPIHandler}}
+\index{RestAPIHandler@{RestAPIHandler}!RestAPIHandler@{RestAPIHandler}}
+\doxysubsubsection{\texorpdfstring{RestAPIHandler()}{RestAPIHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Rest\+A\+P\+I\+Handler\+::\+Rest\+A\+P\+I\+Handler (\begin{DoxyParamCaption}\item[{utility\+::string\+\_\+t}]{url }\end{DoxyParamCaption})}
+
+
+
+restapi\+\_\+handler.\+cpp 파일의 79 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classRestAPIHandler_a910aad68ff28d06800a7f0c1c8c372f3}\label{classRestAPIHandler_a910aad68ff28d06800a7f0c1c8c372f3}} 
+\index{RestAPIHandler@{RestAPIHandler}!````~RestAPIHandler@{$\sim$RestAPIHandler}}
+\index{````~RestAPIHandler@{$\sim$RestAPIHandler}!RestAPIHandler@{RestAPIHandler}}
+\doxysubsubsection{\texorpdfstring{$\sim$RestAPIHandler()}{~RestAPIHandler()}}
+{\footnotesize\ttfamily virtual Rest\+A\+P\+I\+Handler\+::$\sim$\+Rest\+A\+P\+I\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{classRestAPIHandler_ace5e475db26e2e5e9608729b314c11f3}\label{classRestAPIHandler_ace5e475db26e2e5e9608729b314c11f3}} 
+\index{RestAPIHandler@{RestAPIHandler}!addEndpoint@{addEndpoint}}
+\index{addEndpoint@{addEndpoint}!RestAPIHandler@{RestAPIHandler}}
+\doxysubsubsection{\texorpdfstring{addEndpoint()}{addEndpoint()}}
+{\footnotesize\ttfamily bool Rest\+A\+P\+I\+Handler\+::add\+Endpoint (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{restapi__handler_8h_a98c8bf3ad96ddc55f238880c201b4073}{A\+P\+I\+\_\+\+M\+E\+T\+H\+OD}}}]{method,  }\item[{const utility\+::string\+\_\+t}]{path,  }\item[{\mbox{\hyperlink{restapi__handler_8h_a622eaad3757b7958bc2ec8745663d270}{end\+\_\+point\+\_\+handle\+\_\+t}}}]{handle }\end{DoxyParamCaption})}
+
+
+
+rest api 서비스 등록 
+
+
+\begin{DoxyParams}{매개변수}
+{\em method} & G\+ET, P\+UT, P\+O\+ST, D\+EL \\
+\hline
+{\em path} & endpoint U\+RL \\
+\hline
+{\em handle} & rest api 동작 함수 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+restapi\+\_\+handler.\+cpp 파일의 18 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classRestAPIHandler_a7a59c0fa734af5b8df90908233c5b6bf}\label{classRestAPIHandler_a7a59c0fa734af5b8df90908233c5b6bf}} 
+\index{RestAPIHandler@{RestAPIHandler}!callapi@{callapi}}
+\index{callapi@{callapi}!RestAPIHandler@{RestAPIHandler}}
+\doxysubsubsection{\texorpdfstring{callapi()}{callapi()}}
+{\footnotesize\ttfamily void Rest\+A\+P\+I\+Handler\+::callapi (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{restapi__handler_8h_a98c8bf3ad96ddc55f238880c201b4073}{A\+P\+I\+\_\+\+M\+E\+T\+H\+OD}}}]{method,  }\item[{web\+::http\+::http\+\_\+request}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+parameters
+
+query
+
+merge parameters + query
+
+restapi\+\_\+handler.\+cpp 파일의 55 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classRestAPIHandler_aef647d67fb80e3eb89ac7fa740e65307}\label{classRestAPIHandler_aef647d67fb80e3eb89ac7fa740e65307}} 
+\index{RestAPIHandler@{RestAPIHandler}!close@{close}}
+\index{close@{close}!RestAPIHandler@{RestAPIHandler}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily pplx\+::task$<$void$>$ Rest\+A\+P\+I\+Handler\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+rest api 서버 종료 
+
+\begin{DoxyReturn}{반환값}
+pplx\+::task$<$void$>$ 
+\end{DoxyReturn}
+
+
+restapi\+\_\+handler.\+h 파일의 65 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classRestAPIHandler_aaefe4923028655a0b29e5bf96cb6bce1}\label{classRestAPIHandler_aaefe4923028655a0b29e5bf96cb6bce1}} 
+\index{RestAPIHandler@{RestAPIHandler}!del@{del}}
+\index{del@{del}!RestAPIHandler@{RestAPIHandler}}
+\doxysubsubsection{\texorpdfstring{del()}{del()}}
+{\footnotesize\ttfamily void Rest\+A\+P\+I\+Handler\+::del (\begin{DoxyParamCaption}\item[{web\+::http\+::http\+\_\+request}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+restapi\+\_\+handler.\+cpp 파일의 43 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classRestAPIHandler_ab24afb50cbe9cc1dd72e8afe33f89af1}\label{classRestAPIHandler_ab24afb50cbe9cc1dd72e8afe33f89af1}} 
+\index{RestAPIHandler@{RestAPIHandler}!get@{get}}
+\index{get@{get}!RestAPIHandler@{RestAPIHandler}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily void Rest\+A\+P\+I\+Handler\+::get (\begin{DoxyParamCaption}\item[{web\+::http\+::http\+\_\+request}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+restapi\+\_\+handler.\+cpp 파일의 51 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classRestAPIHandler_a50f692a6bf481bb03c3828956c3afc53}\label{classRestAPIHandler_a50f692a6bf481bb03c3828956c3afc53}} 
+\index{RestAPIHandler@{RestAPIHandler}!getEndpointHandle@{getEndpointHandle}}
+\index{getEndpointHandle@{getEndpointHandle}!RestAPIHandler@{RestAPIHandler}}
+\doxysubsubsection{\texorpdfstring{getEndpointHandle()}{getEndpointHandle()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{restapi__handler_8h_a622eaad3757b7958bc2ec8745663d270}{end\+\_\+point\+\_\+handle\+\_\+t}} $\ast$ Rest\+A\+P\+I\+Handler\+::get\+Endpoint\+Handle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{restapi__handler_8h_a98c8bf3ad96ddc55f238880c201b4073}{A\+P\+I\+\_\+\+M\+E\+T\+H\+OD}}}]{method,  }\item[{const utility\+::string\+\_\+t}]{path }\end{DoxyParamCaption})}
+
+
+
+rest api endpoint 핸들 반환 
+
+
+\begin{DoxyParams}{매개변수}
+{\em method} & \\
+\hline
+{\em path} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+End\+Point\+Handle$\ast$ 
+\end{DoxyReturn}
+
+
+restapi\+\_\+handler.\+cpp 파일의 30 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classRestAPIHandler_a1d4122d5f56c1e98534a916d921e5a8a}\label{classRestAPIHandler_a1d4122d5f56c1e98534a916d921e5a8a}} 
+\index{RestAPIHandler@{RestAPIHandler}!open@{open}}
+\index{open@{open}!RestAPIHandler@{RestAPIHandler}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily pplx\+::task$<$void$>$ Rest\+A\+P\+I\+Handler\+::open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+rest api 서버 시작 
+
+\begin{DoxyReturn}{반환값}
+pplx\+::task$<$void$>$ 
+\end{DoxyReturn}
+
+
+restapi\+\_\+handler.\+h 파일의 59 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classRestAPIHandler_a6c979b15d25f42a05bbbdf7e740dcc73}\label{classRestAPIHandler_a6c979b15d25f42a05bbbdf7e740dcc73}} 
+\index{RestAPIHandler@{RestAPIHandler}!post@{post}}
+\index{post@{post}!RestAPIHandler@{RestAPIHandler}}
+\doxysubsubsection{\texorpdfstring{post()}{post()}}
+{\footnotesize\ttfamily void Rest\+A\+P\+I\+Handler\+::post (\begin{DoxyParamCaption}\item[{web\+::http\+::http\+\_\+request}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+restapi\+\_\+handler.\+cpp 파일의 39 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classRestAPIHandler_a0f7c54b435bc2ecb70671acbfd9597c3}\label{classRestAPIHandler_a0f7c54b435bc2ecb70671acbfd9597c3}} 
+\index{RestAPIHandler@{RestAPIHandler}!put@{put}}
+\index{put@{put}!RestAPIHandler@{RestAPIHandler}}
+\doxysubsubsection{\texorpdfstring{put()}{put()}}
+{\footnotesize\ttfamily void Rest\+A\+P\+I\+Handler\+::put (\begin{DoxyParamCaption}\item[{web\+::http\+::http\+\_\+request}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+restapi\+\_\+handler.\+cpp 파일의 47 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{classRestAPIHandler_a6cf949014ef702e63a6075689aa248a8}\label{classRestAPIHandler_a6cf949014ef702e63a6075689aa248a8}} 
+\index{RestAPIHandler@{RestAPIHandler}!\_listener@{\_listener}}
+\index{\_listener@{\_listener}!RestAPIHandler@{RestAPIHandler}}
+\doxysubsubsection{\texorpdfstring{\_listener}{\_listener}}
+{\footnotesize\ttfamily web\+::http\+::experimental\+::listener\+::http\+\_\+listener Rest\+A\+P\+I\+Handler\+::\+\_\+listener\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+cpprestsdk A\+PI 서버 리스너 
+
+
+
+restapi\+\_\+handler.\+h 파일의 46 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classRestAPIHandler_aff2f0cf0af12b790857cebd47d4bc1c7}\label{classRestAPIHandler_aff2f0cf0af12b790857cebd47d4bc1c7}} 
+\index{RestAPIHandler@{RestAPIHandler}!\_tables@{\_tables}}
+\index{\_tables@{\_tables}!RestAPIHandler@{RestAPIHandler}}
+\doxysubsubsection{\texorpdfstring{\_tables}{\_tables}}
+{\footnotesize\ttfamily std\+::map$<$utility\+::string\+\_\+t, \mbox{\hyperlink{restapi__handler_8h_a622eaad3757b7958bc2ec8745663d270}{end\+\_\+point\+\_\+handle\+\_\+t}}$>$ Rest\+A\+P\+I\+Handler\+::\+\_\+tables\mbox{[}\mbox{\hyperlink{restapi__handler_8h_a98c8bf3ad96ddc55f238880c201b4073a9261722746d6f8680495eaadadd11325}{A\+P\+I\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+S\+I\+ZE}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A\+PI 동작 정의 테이블 (G\+E\+T/\+P\+O\+S\+T/\+P\+U\+T/\+D\+EL 각 각 정의) 
+
+
+
+restapi\+\_\+handler.\+h 파일의 48 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{restapi__handler_8h}{restapi\+\_\+handler.\+h}}\item 
+src/\mbox{\hyperlink{restapi__handler_8cpp}{restapi\+\_\+handler.\+cpp}}\end{DoxyCompactItemize}

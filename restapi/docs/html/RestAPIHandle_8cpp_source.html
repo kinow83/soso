@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ModuleRestAPI: src/RestAPIHandle.cpp 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ModuleRestAPI
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'검색');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','검색');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">RestAPIHandle.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="RestAPIHandle_8cpp.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="RestAPIHandle_8h.html">RestAPIHandle.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using namespace </span>web;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using namespace </span>http;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using namespace </span>utility;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">using namespace </span>http::experimental::listener;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classRestAPIHandler.html#a653c5a6edb7a6c4fd4ad68d7b695be3c">    9</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classRestAPIHandler.html#a653c5a6edb7a6c4fd4ad68d7b695be3c">RestAPIHandler::addEndpoint</a>(<a class="code" href="RestAPIHandle_8h.html#a98c8bf3ad96ddc55f238880c201b4073">API_METHOD</a> method,   <span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;                                 <span class="keyword">const</span> string_t path, <span class="comment">//</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;                                 <a class="code" href="RestAPIHandle_8h.html#a31a694d35a9b4051e3d3f1c27f01f6e6">EndPointHandle</a> handle) {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="keyword">auto</span> &amp;endpoint = tables[method];</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keywordflow">if</span> (endpoint.find(path) != endpoint.end()) {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  }</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  endpoint[path] = handle;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classRestAPIHandler.html#a4675bc7fbc4e7f5eadfda8ab11909fed">   20</a></span>&#160;<a class="code" href="RestAPIHandle_8h.html#a31a694d35a9b4051e3d3f1c27f01f6e6">EndPointHandle</a> *<a class="code" href="classRestAPIHandler.html#a4675bc7fbc4e7f5eadfda8ab11909fed">RestAPIHandler::getEndpoint</a>(<a class="code" href="RestAPIHandle_8h.html#a98c8bf3ad96ddc55f238880c201b4073">API_METHOD</a> method, <span class="comment">//</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                                            <span class="keyword">const</span> string_t path) {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keyword">auto</span> &amp;endpoint = tables[method];</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keywordflow">if</span> (endpoint.find(path) == endpoint.end()) {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keywordflow">return</span> &amp;endpoint[path];</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classRestAPIHandler.html#ae5ba0976bd9d37b628cdb8ba801ae94c">   29</a></span>&#160;<a class="code" href="classRestAPIHandler.html#ae5ba0976bd9d37b628cdb8ba801ae94c">RestAPIHandler::RestAPIHandler</a>() {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="comment">//</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classRestAPIHandler.html#a5bb0eaeace60131f9e75de73d809a7a1">   32</a></span>&#160;<a class="code" href="classRestAPIHandler.html#a5bb0eaeace60131f9e75de73d809a7a1">RestAPIHandler::~RestAPIHandler</a>() {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="comment">//</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classRestAPIHandler.html#a6c979b15d25f42a05bbbdf7e740dcc73">   36</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classRestAPIHandler.html#a6c979b15d25f42a05bbbdf7e740dcc73">RestAPIHandler::post</a>(http_request message) {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  ucout &lt;&lt; message.to_string() &lt;&lt; endl;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  message.reply(status_codes::OK, message.to_string());</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;};</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classRestAPIHandler.html#aaefe4923028655a0b29e5bf96cb6bce1">   43</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classRestAPIHandler.html#aaefe4923028655a0b29e5bf96cb6bce1">RestAPIHandler::del</a>(http_request message) {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  ucout &lt;&lt; message.to_string() &lt;&lt; endl;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordtype">string</span> rep = U(<span class="stringliteral">&quot;WRITE YOUR OWN DELETE OPERATION&quot;</span>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  message.reply(status_codes::OK, rep);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classRestAPIHandler.html#a0f7c54b435bc2ecb70671acbfd9597c3">   51</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classRestAPIHandler.html#a0f7c54b435bc2ecb70671acbfd9597c3">RestAPIHandler::put</a>(http_request message) {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  ucout &lt;&lt; message.to_string() &lt;&lt; endl;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordtype">string</span> rep = U(<span class="stringliteral">&quot;WRITE YOUR OWN PUT OPERATION&quot;</span>);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  message.reply(status_codes::OK, rep);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;};</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="RestAPIHandle_8cpp.html#af4ca837ad588eef0425c917ae9574e99">   58</a></span>&#160;json::value &amp;<a class="code" href="RestAPIHandle_8cpp.html#af4ca837ad588eef0425c917ae9574e99">appendJSON</a>(json::value &amp;json, <span class="keyword">const</span> map&lt;string_t, string_t&gt; &amp;map) {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span> m : map) {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    json[m.first] = json::value::parse(m.second);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordflow">return</span> json;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classRestAPIHandler.html#ab24afb50cbe9cc1dd72e8afe33f89af1">   65</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classRestAPIHandler.html#ab24afb50cbe9cc1dd72e8afe33f89af1">RestAPIHandler::get</a>(http_request message) {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <a class="code" href="RestAPIHandle_8h.html#a31a694d35a9b4051e3d3f1c27f01f6e6">EndPointHandle</a> *endpoint_handle = NULL;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  string_t url = http::uri::decode(message.relative_uri().path());</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  string_t resp = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="comment">// ucout &lt;&lt; url &lt;&lt; endl;</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  endpoint_handle = getEndpoint(<a class="code" href="RestAPIHandle_8h.html#a98c8bf3ad96ddc55f238880c201b4073a12a8dcf59c16b5aadfda3a08ba67d529">GET</a>, url);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keywordflow">if</span> (endpoint_handle) {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">auto</span> p = message.extract_json().get();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> &amp;q = http::uri::split_query(message.relative_uri().query());</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    resp = (*endpoint_handle)(message, <a class="code" href="RestAPIHandle_8cpp.html#af4ca837ad588eef0425c917ae9574e99">appendJSON</a>(p, q));</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keywordflow">if</span> (resp == <span class="stringliteral">&quot;&quot;</span>) {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="comment">// ucout &lt;&lt; &quot;404&quot; &lt;&lt; endl;</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    message.reply(status_codes::NotFound);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="comment">// ucout &lt;&lt; resp &lt;&lt; endl;</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    message.reply(status_codes::OK, resp);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classRestAPIHandler.html#aa4d787c641b316b26799e6e53cc79bae">   91</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classRestAPIHandler.html#aa4d787c641b316b26799e6e53cc79bae">RestAPIHandler::error</a>(pplx::task&lt;void&gt; &amp;t) {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    t.get();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  } <span class="keywordflow">catch</span> (...) {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="comment">// Ignore the error, Log it if a logger is available</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="classRestAPIHandler.html#a3051faaef751ae97f53f811fee1223c9">   99</a></span>&#160;<a class="code" href="classRestAPIHandler.html#ae5ba0976bd9d37b628cdb8ba801ae94c">RestAPIHandler::RestAPIHandler</a>(utility::string_t url) : listener(url) {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <a class="code" href="classRestAPIHandler.html#ad4abf17f541f2f97250e18f4449c77ff">listener</a>.support(<a class="code" href="RestAPIHandle_8h.html#a98c8bf3ad96ddc55f238880c201b4073a12a8dcf59c16b5aadfda3a08ba67d529">methods::GET</a>,</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                   bind(&amp;<a class="code" href="classRestAPIHandler.html#ab24afb50cbe9cc1dd72e8afe33f89af1">RestAPIHandler::get</a>, <span class="keyword">this</span>, placeholders::_1));</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <a class="code" href="classRestAPIHandler.html#ad4abf17f541f2f97250e18f4449c77ff">listener</a>.support(<a class="code" href="RestAPIHandle_8h.html#a98c8bf3ad96ddc55f238880c201b4073afec39d40e8bc9e12afa614df5ddb9fa9">methods::PUT</a>,</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                   bind(&amp;<a class="code" href="classRestAPIHandler.html#a0f7c54b435bc2ecb70671acbfd9597c3">RestAPIHandler::put</a>, <span class="keyword">this</span>, placeholders::_1));</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <a class="code" href="classRestAPIHandler.html#ad4abf17f541f2f97250e18f4449c77ff">listener</a>.support(<a class="code" href="RestAPIHandle_8h.html#a98c8bf3ad96ddc55f238880c201b4073a368c5bc07109370b819193871352b926">methods::POST</a>,</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                   bind(&amp;<a class="code" href="classRestAPIHandler.html#a6c979b15d25f42a05bbbdf7e740dcc73">RestAPIHandler::post</a>, <span class="keyword">this</span>, placeholders::_1));</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <a class="code" href="classRestAPIHandler.html#ad4abf17f541f2f97250e18f4449c77ff">listener</a>.support(<a class="code" href="RestAPIHandle_8h.html#a98c8bf3ad96ddc55f238880c201b4073a11563127ec3be864b514a1784c5d37a6">methods::DEL</a>,</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                   bind(&amp;<a class="code" href="classRestAPIHandler.html#aaefe4923028655a0b29e5bf96cb6bce1">RestAPIHandler::del</a>, <span class="keyword">this</span>, placeholders::_1));</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aRestAPIHandle_8cpp_html_af4ca837ad588eef0425c917ae9574e99"><div class="ttname"><a href="RestAPIHandle_8cpp.html#af4ca837ad588eef0425c917ae9574e99">appendJSON</a></div><div class="ttdeci">json::value &amp; appendJSON(json::value &amp;json, const map&lt; string_t, string_t &gt; &amp;map)</div><div class="ttdef"><b>Definition:</b> <a href="RestAPIHandle_8cpp_source.html#l00058">RestAPIHandle.cpp:58</a></div></div>
+<div class="ttc" id="aclassRestAPIHandler_html_a653c5a6edb7a6c4fd4ad68d7b695be3c"><div class="ttname"><a href="classRestAPIHandler.html#a653c5a6edb7a6c4fd4ad68d7b695be3c">RestAPIHandler::addEndpoint</a></div><div class="ttdeci">bool addEndpoint(API_METHOD method, const utility::string_t path, EndPointHandle handle)</div><div class="ttdef"><b>Definition:</b> <a href="RestAPIHandle_8cpp_source.html#l00009">RestAPIHandle.cpp:9</a></div></div>
+<div class="ttc" id="aclassRestAPIHandler_html_a6c979b15d25f42a05bbbdf7e740dcc73"><div class="ttname"><a href="classRestAPIHandler.html#a6c979b15d25f42a05bbbdf7e740dcc73">RestAPIHandler::post</a></div><div class="ttdeci">void post(web::http::http_request message)</div><div class="ttdef"><b>Definition:</b> <a href="RestAPIHandle_8cpp_source.html#l00036">RestAPIHandle.cpp:36</a></div></div>
+<div class="ttc" id="aclassRestAPIHandler_html_a4675bc7fbc4e7f5eadfda8ab11909fed"><div class="ttname"><a href="classRestAPIHandler.html#a4675bc7fbc4e7f5eadfda8ab11909fed">RestAPIHandler::getEndpoint</a></div><div class="ttdeci">EndPointHandle * getEndpoint(API_METHOD method, const utility::string_t path)</div><div class="ttdef"><b>Definition:</b> <a href="RestAPIHandle_8cpp_source.html#l00020">RestAPIHandle.cpp:20</a></div></div>
+<div class="ttc" id="aclassRestAPIHandler_html_ae5ba0976bd9d37b628cdb8ba801ae94c"><div class="ttname"><a href="classRestAPIHandler.html#ae5ba0976bd9d37b628cdb8ba801ae94c">RestAPIHandler::RestAPIHandler</a></div><div class="ttdeci">RestAPIHandler()</div><div class="ttdef"><b>Definition:</b> <a href="RestAPIHandle_8cpp_source.html#l00029">RestAPIHandle.cpp:29</a></div></div>
+<div class="ttc" id="aclassRestAPIHandler_html_ad4abf17f541f2f97250e18f4449c77ff"><div class="ttname"><a href="classRestAPIHandler.html#ad4abf17f541f2f97250e18f4449c77ff">RestAPIHandler::listener</a></div><div class="ttdeci">web::http::experimental::listener::http_listener listener</div><div class="ttdoc">cpprestsdk API 서버 리스너</div><div class="ttdef"><b>Definition:</b> <a href="RestAPIHandle_8h_source.html#l00055">RestAPIHandle.h:55</a></div></div>
+<div class="ttc" id="aRestAPIHandle_8h_html_a98c8bf3ad96ddc55f238880c201b4073a11563127ec3be864b514a1784c5d37a6"><div class="ttname"><a href="RestAPIHandle_8h.html#a98c8bf3ad96ddc55f238880c201b4073a11563127ec3be864b514a1784c5d37a6">DEL</a></div><div class="ttdeci">@ DEL</div><div class="ttdef"><b>Definition:</b> <a href="RestAPIHandle_8h_source.html#l00025">RestAPIHandle.h:25</a></div></div>
+<div class="ttc" id="aRestAPIHandle_8h_html"><div class="ttname"><a href="RestAPIHandle_8h.html">RestAPIHandle.h</a></div></div>
+<div class="ttc" id="aclassRestAPIHandler_html_aa4d787c641b316b26799e6e53cc79bae"><div class="ttname"><a href="classRestAPIHandler.html#aa4d787c641b316b26799e6e53cc79bae">RestAPIHandler::error</a></div><div class="ttdeci">void error(pplx::task&lt; void &gt; &amp;t)</div><div class="ttdef"><b>Definition:</b> <a href="RestAPIHandle_8cpp_source.html#l00091">RestAPIHandle.cpp:91</a></div></div>
+<div class="ttc" id="aclassRestAPIHandler_html_aaefe4923028655a0b29e5bf96cb6bce1"><div class="ttname"><a href="classRestAPIHandler.html#aaefe4923028655a0b29e5bf96cb6bce1">RestAPIHandler::del</a></div><div class="ttdeci">void del(web::http::http_request message)</div><div class="ttdef"><b>Definition:</b> <a href="RestAPIHandle_8cpp_source.html#l00043">RestAPIHandle.cpp:43</a></div></div>
+<div class="ttc" id="aclassRestAPIHandler_html_a5bb0eaeace60131f9e75de73d809a7a1"><div class="ttname"><a href="classRestAPIHandler.html#a5bb0eaeace60131f9e75de73d809a7a1">RestAPIHandler::~RestAPIHandler</a></div><div class="ttdeci">virtual ~RestAPIHandler()</div><div class="ttdef"><b>Definition:</b> <a href="RestAPIHandle_8cpp_source.html#l00032">RestAPIHandle.cpp:32</a></div></div>
+<div class="ttc" id="aRestAPIHandle_8h_html_a98c8bf3ad96ddc55f238880c201b4073afec39d40e8bc9e12afa614df5ddb9fa9"><div class="ttname"><a href="RestAPIHandle_8h.html#a98c8bf3ad96ddc55f238880c201b4073afec39d40e8bc9e12afa614df5ddb9fa9">PUT</a></div><div class="ttdeci">@ PUT</div><div class="ttdef"><b>Definition:</b> <a href="RestAPIHandle_8h_source.html#l00023">RestAPIHandle.h:23</a></div></div>
+<div class="ttc" id="aclassRestAPIHandler_html_a0f7c54b435bc2ecb70671acbfd9597c3"><div class="ttname"><a href="classRestAPIHandler.html#a0f7c54b435bc2ecb70671acbfd9597c3">RestAPIHandler::put</a></div><div class="ttdeci">void put(web::http::http_request message)</div><div class="ttdef"><b>Definition:</b> <a href="RestAPIHandle_8cpp_source.html#l00051">RestAPIHandle.cpp:51</a></div></div>
+<div class="ttc" id="aRestAPIHandle_8h_html_a98c8bf3ad96ddc55f238880c201b4073a368c5bc07109370b819193871352b926"><div class="ttname"><a href="RestAPIHandle_8h.html#a98c8bf3ad96ddc55f238880c201b4073a368c5bc07109370b819193871352b926">POST</a></div><div class="ttdeci">@ POST</div><div class="ttdef"><b>Definition:</b> <a href="RestAPIHandle_8h_source.html#l00024">RestAPIHandle.h:24</a></div></div>
+<div class="ttc" id="aRestAPIHandle_8h_html_a31a694d35a9b4051e3d3f1c27f01f6e6"><div class="ttname"><a href="RestAPIHandle_8h.html#a31a694d35a9b4051e3d3f1c27f01f6e6">EndPointHandle</a></div><div class="ttdeci">std::function&lt; const utility::string_t(const web::http::http_request &amp;, const web::json::value &amp;)&gt; EndPointHandle</div><div class="ttdef"><b>Definition:</b> <a href="RestAPIHandle_8h_source.html#l00016">RestAPIHandle.h:16</a></div></div>
+<div class="ttc" id="aclassRestAPIHandler_html_ab24afb50cbe9cc1dd72e8afe33f89af1"><div class="ttname"><a href="classRestAPIHandler.html#ab24afb50cbe9cc1dd72e8afe33f89af1">RestAPIHandler::get</a></div><div class="ttdeci">void get(web::http::http_request message)</div><div class="ttdef"><b>Definition:</b> <a href="RestAPIHandle_8cpp_source.html#l00065">RestAPIHandle.cpp:65</a></div></div>
+<div class="ttc" id="aRestAPIHandle_8h_html_a98c8bf3ad96ddc55f238880c201b4073"><div class="ttname"><a href="RestAPIHandle_8h.html#a98c8bf3ad96ddc55f238880c201b4073">API_METHOD</a></div><div class="ttdeci">API_METHOD</div><div class="ttdoc">API 호출 시 HTTP Method 정의</div><div class="ttdef"><b>Definition:</b> <a href="RestAPIHandle_8h_source.html#l00021">RestAPIHandle.h:21</a></div></div>
+<div class="ttc" id="aRestAPIHandle_8h_html_a98c8bf3ad96ddc55f238880c201b4073a12a8dcf59c16b5aadfda3a08ba67d529"><div class="ttname"><a href="RestAPIHandle_8h.html#a98c8bf3ad96ddc55f238880c201b4073a12a8dcf59c16b5aadfda3a08ba67d529">GET</a></div><div class="ttdeci">@ GET</div><div class="ttdef"><b>Definition:</b> <a href="RestAPIHandle_8h_source.html#l00022">RestAPIHandle.h:22</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

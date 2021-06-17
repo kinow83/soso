@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ModuleRestAPI: src/ModuleRestAPI.cpp 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ModuleRestAPI
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'검색');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','검색');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ModuleRestAPI.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="ModuleRestAPI_8cpp.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ModuleRestAPI_8h.html">ModuleRestAPI.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * reference</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * https://github.com/Meenapintu/Restweb</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * https://github.com/microsoft/cpprestsdk</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">using namespace </span>web;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">using namespace </span>http;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">using namespace </span>utility;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">using namespace </span>http::experimental::listener;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classModuleRestAPI.html#a07bbfe8f0f0d29fa899f24c30460e070">   15</a></span>&#160;<a class="code" href="classModuleRestAPI.html#a07bbfe8f0f0d29fa899f24c30460e070">ModuleRestAPI::ModuleRestAPI</a>() { api_handler = <span class="keyword">nullptr</span>; }</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classModuleRestAPI.html#a31344e46dab7ca219057ba72ddbf53ea">   17</a></span>&#160;<a class="code" href="classModuleRestAPI.html#a07bbfe8f0f0d29fa899f24c30460e070">ModuleRestAPI::ModuleRestAPI</a>(<span class="keyword">const</span> std::string &amp;address) : address(address) {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <a class="code" href="classModuleRestAPI.html#a114b036e14eb367cf3c4f460ba1a8462">setAddress</a>(<a class="code" href="classModuleRestAPI.html#a8a896fec13dfda7805c38d796711ff18">address</a>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classModuleRestAPI.html#a282ef7839c82cd0c9bf8b52b3cbfd28f">   21</a></span>&#160;<a class="code" href="classModuleRestAPI.html#a282ef7839c82cd0c9bf8b52b3cbfd28f">ModuleRestAPI::~ModuleRestAPI</a>() {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classModuleRestAPI.html#a7345597f9fb7aa2c9ce7a0f52d9cd013">api_handler</a> != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classModuleRestAPI.html#a32a6cf936a22b7913e895b28419932c5">on_shutdown</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classModuleRestAPI.html#a114b036e14eb367cf3c4f460ba1a8462">   27</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classModuleRestAPI.html#a114b036e14eb367cf3c4f460ba1a8462">ModuleRestAPI::setAddress</a>(<span class="keyword">const</span> std::string &amp;address) {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  uri_builder uri(<a class="code" href="classModuleRestAPI.html#a8a896fec13dfda7805c38d796711ff18">address</a>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keyword">auto</span> addr = uri.to_uri().to_string();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <a class="code" href="classModuleRestAPI.html#a7345597f9fb7aa2c9ce7a0f52d9cd013">api_handler</a> = std::unique_ptr&lt;RestAPIHandler&gt;(<span class="keyword">new</span> <a class="code" href="classRestAPIHandler.html">RestAPIHandler</a>(addr));</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classModuleRestAPI.html#a1e7486a5269774811d2dcc75181cef3a">   33</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classModuleRestAPI.html#a1e7486a5269774811d2dcc75181cef3a">ModuleRestAPI::on_initialize</a>() { <span class="comment">//</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  assert(<a class="code" href="classModuleRestAPI.html#a7345597f9fb7aa2c9ce7a0f52d9cd013">api_handler</a> != <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <a class="code" href="classModuleRestAPI.html#a7345597f9fb7aa2c9ce7a0f52d9cd013">api_handler</a>-&gt;open().wait();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classModuleRestAPI.html#a32a6cf936a22b7913e895b28419932c5">   39</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classModuleRestAPI.html#a32a6cf936a22b7913e895b28419932c5">ModuleRestAPI::on_shutdown</a>() { <span class="comment">//</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <a class="code" href="classModuleRestAPI.html#a7345597f9fb7aa2c9ce7a0f52d9cd013">api_handler</a>-&gt;close().wait();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <a class="code" href="classModuleRestAPI.html#a7345597f9fb7aa2c9ce7a0f52d9cd013">api_handler</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassModuleRestAPI_html_a114b036e14eb367cf3c4f460ba1a8462"><div class="ttname"><a href="classModuleRestAPI.html#a114b036e14eb367cf3c4f460ba1a8462">ModuleRestAPI::setAddress</a></div><div class="ttdeci">void setAddress(const std::string &amp;address)</div><div class="ttdoc">API url 주소 입력</div><div class="ttdef"><b>Definition:</b> <a href="ModuleRestAPI_8cpp_source.html#l00027">ModuleRestAPI.cpp:27</a></div></div>
+<div class="ttc" id="aclassModuleRestAPI_html_a282ef7839c82cd0c9bf8b52b3cbfd28f"><div class="ttname"><a href="classModuleRestAPI.html#a282ef7839c82cd0c9bf8b52b3cbfd28f">ModuleRestAPI::~ModuleRestAPI</a></div><div class="ttdeci">~ModuleRestAPI()</div><div class="ttdoc">ModuleRestAPI 소멸자</div><div class="ttdef"><b>Definition:</b> <a href="ModuleRestAPI_8cpp_source.html#l00021">ModuleRestAPI.cpp:21</a></div></div>
+<div class="ttc" id="aModuleRestAPI_8h_html"><div class="ttname"><a href="ModuleRestAPI_8h.html">ModuleRestAPI.h</a></div></div>
+<div class="ttc" id="aclassModuleRestAPI_html_a8a896fec13dfda7805c38d796711ff18"><div class="ttname"><a href="classModuleRestAPI.html#a8a896fec13dfda7805c38d796711ff18">ModuleRestAPI::address</a></div><div class="ttdeci">const std::string address</div><div class="ttdoc">API 서버 주소 (포트까지 포함)</div><div class="ttdef"><b>Definition:</b> <a href="ModuleRestAPI_8h_source.html#l00014">ModuleRestAPI.h:14</a></div></div>
+<div class="ttc" id="aclassRestAPIHandler_html"><div class="ttname"><a href="classRestAPIHandler.html">RestAPIHandler</a></div><div class="ttdoc">RestAPIHandler</div><div class="ttdef"><b>Definition:</b> <a href="RestAPIHandle_8h_source.html#l00032">RestAPIHandle.h:32</a></div></div>
+<div class="ttc" id="aclassModuleRestAPI_html_a7345597f9fb7aa2c9ce7a0f52d9cd013"><div class="ttname"><a href="classModuleRestAPI.html#a7345597f9fb7aa2c9ce7a0f52d9cd013">ModuleRestAPI::api_handler</a></div><div class="ttdeci">std::unique_ptr&lt; RestAPIHandler &gt; api_handler</div><div class="ttdoc">URL에 맵핑된 API 호출 동작 정의 객체</div><div class="ttdef"><b>Definition:</b> <a href="ModuleRestAPI_8h_source.html#l00016">ModuleRestAPI.h:16</a></div></div>
+<div class="ttc" id="aclassModuleRestAPI_html_a32a6cf936a22b7913e895b28419932c5"><div class="ttname"><a href="classModuleRestAPI.html#a32a6cf936a22b7913e895b28419932c5">ModuleRestAPI::on_shutdown</a></div><div class="ttdeci">void on_shutdown()</div><div class="ttdoc">API 서버 종료</div><div class="ttdef"><b>Definition:</b> <a href="ModuleRestAPI_8cpp_source.html#l00039">ModuleRestAPI.cpp:39</a></div></div>
+<div class="ttc" id="aclassModuleRestAPI_html_a07bbfe8f0f0d29fa899f24c30460e070"><div class="ttname"><a href="classModuleRestAPI.html#a07bbfe8f0f0d29fa899f24c30460e070">ModuleRestAPI::ModuleRestAPI</a></div><div class="ttdeci">ModuleRestAPI()</div><div class="ttdoc">ModuleRestAPI 생성자</div><div class="ttdef"><b>Definition:</b> <a href="ModuleRestAPI_8cpp_source.html#l00015">ModuleRestAPI.cpp:15</a></div></div>
+<div class="ttc" id="aclassModuleRestAPI_html_a1e7486a5269774811d2dcc75181cef3a"><div class="ttname"><a href="classModuleRestAPI.html#a1e7486a5269774811d2dcc75181cef3a">ModuleRestAPI::on_initialize</a></div><div class="ttdeci">void on_initialize()</div><div class="ttdoc">API 서버 실행</div><div class="ttdef"><b>Definition:</b> <a href="ModuleRestAPI_8cpp_source.html#l00033">ModuleRestAPI.cpp:33</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

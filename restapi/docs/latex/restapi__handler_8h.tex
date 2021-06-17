@@ -1,0 +1,103 @@
+\hypertarget{restapi__handler_8h}{}\doxysection{include/restapi\+\_\+handler.h 파일 참조}
+\label{restapi__handler_8h}\index{include/restapi\_handler.h@{include/restapi\_handler.h}}
+{\ttfamily \#include \char`\"{}cpprest/asyncrt\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cpprest/containerstream.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cpprest/filestream.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cpprest/http\+\_\+listener.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cpprest/json.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cpprest/producerconsumerstream.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cpprest/uri.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+restapi\+\_\+handler.\+h에 대한 include 의존 그래프\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{restapi__handler_8h__incl}
+\end{center}
+\end{figure}
+이 그래프는 이 파일을 직/간접적으로 include 하는 파일들을 보여줍니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{restapi__handler_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{클래스}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classRestApiHandler}{Rest\+Api\+Handler}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classRestApiHandler}{Rest\+Api\+Handler}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{타입정의}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::function$<$ const utility\+::string\+\_\+t(const web\+::http\+::http\+\_\+request \&, const web\+::json\+::value \&)$>$ \mbox{\hyperlink{restapi__handler_8h_a622eaad3757b7958bc2ec8745663d270}{end\+\_\+point\+\_\+handle\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em rest api 수행 함수 타입 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{열거형 타입}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{restapi__handler_8h_a98c8bf3ad96ddc55f238880c201b4073}{A\+P\+I\+\_\+\+M\+E\+T\+H\+OD}} \{ \newline
+\mbox{\hyperlink{restapi__handler_8h_a98c8bf3ad96ddc55f238880c201b4073a55eb88a85028e64c158c11b3dd0f6388}{A\+P\+I\+\_\+\+G\+ET}} = 0, 
+\mbox{\hyperlink{restapi__handler_8h_a98c8bf3ad96ddc55f238880c201b4073a7336ca479c74d6dd1d4a81dd74bdf5ed}{A\+P\+I\+\_\+\+P\+UT}}, 
+\mbox{\hyperlink{restapi__handler_8h_a98c8bf3ad96ddc55f238880c201b4073aa2ecfda5504b52c2a640a74cd43da85e}{A\+P\+I\+\_\+\+P\+O\+ST}}, 
+\mbox{\hyperlink{restapi__handler_8h_a98c8bf3ad96ddc55f238880c201b4073af84309bb818c4bf288590ba62db2fc34}{A\+P\+I\+\_\+\+D\+EL}}, 
+\newline
+\mbox{\hyperlink{restapi__handler_8h_a98c8bf3ad96ddc55f238880c201b4073a9261722746d6f8680495eaadadd11325}{A\+P\+I\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+S\+I\+ZE}}
+ \}
+\begin{DoxyCompactList}\small\item\em A\+PI 호출 시 H\+T\+TP Method 정의 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{타입정의 문서화}
+\mbox{\Hypertarget{restapi__handler_8h_a622eaad3757b7958bc2ec8745663d270}\label{restapi__handler_8h_a622eaad3757b7958bc2ec8745663d270}} 
+\index{restapi\_handler.h@{restapi\_handler.h}!end\_point\_handle\_t@{end\_point\_handle\_t}}
+\index{end\_point\_handle\_t@{end\_point\_handle\_t}!restapi\_handler.h@{restapi\_handler.h}}
+\doxysubsubsection{\texorpdfstring{end\_point\_handle\_t}{end\_point\_handle\_t}}
+{\footnotesize\ttfamily typedef std\+::function$<$ const utility\+::string\+\_\+t( const web\+::http\+::http\+\_\+request \&, const web\+::json\+::value \&)$>$ \mbox{\hyperlink{restapi__handler_8h_a622eaad3757b7958bc2ec8745663d270}{end\+\_\+point\+\_\+handle\+\_\+t}}}
+
+
+
+rest api 수행 함수 타입 
+
+
+
+restapi\+\_\+handler.\+h 파일의 20 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{열거형 타입 문서화}
+\mbox{\Hypertarget{restapi__handler_8h_a98c8bf3ad96ddc55f238880c201b4073}\label{restapi__handler_8h_a98c8bf3ad96ddc55f238880c201b4073}} 
+\index{restapi\_handler.h@{restapi\_handler.h}!API\_METHOD@{API\_METHOD}}
+\index{API\_METHOD@{API\_METHOD}!restapi\_handler.h@{restapi\_handler.h}}
+\doxysubsubsection{\texorpdfstring{API\_METHOD}{API\_METHOD}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{restapi__handler_8h_a98c8bf3ad96ddc55f238880c201b4073}{A\+P\+I\+\_\+\+M\+E\+T\+H\+OD}}}
+
+
+
+A\+PI 호출 시 H\+T\+TP Method 정의 
+
+\begin{DoxyEnumFields}{열거형 멤버}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{API\_GET@{API\_GET}!restapi\_handler.h@{restapi\_handler.h}}\index{restapi\_handler.h@{restapi\_handler.h}!API\_GET@{API\_GET}}}\mbox{\Hypertarget{restapi__handler_8h_a98c8bf3ad96ddc55f238880c201b4073a55eb88a85028e64c158c11b3dd0f6388}\label{restapi__handler_8h_a98c8bf3ad96ddc55f238880c201b4073a55eb88a85028e64c158c11b3dd0f6388}} 
+A\+P\+I\+\_\+\+G\+ET&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{API\_PUT@{API\_PUT}!restapi\_handler.h@{restapi\_handler.h}}\index{restapi\_handler.h@{restapi\_handler.h}!API\_PUT@{API\_PUT}}}\mbox{\Hypertarget{restapi__handler_8h_a98c8bf3ad96ddc55f238880c201b4073a7336ca479c74d6dd1d4a81dd74bdf5ed}\label{restapi__handler_8h_a98c8bf3ad96ddc55f238880c201b4073a7336ca479c74d6dd1d4a81dd74bdf5ed}} 
+A\+P\+I\+\_\+\+P\+UT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{API\_POST@{API\_POST}!restapi\_handler.h@{restapi\_handler.h}}\index{restapi\_handler.h@{restapi\_handler.h}!API\_POST@{API\_POST}}}\mbox{\Hypertarget{restapi__handler_8h_a98c8bf3ad96ddc55f238880c201b4073aa2ecfda5504b52c2a640a74cd43da85e}\label{restapi__handler_8h_a98c8bf3ad96ddc55f238880c201b4073aa2ecfda5504b52c2a640a74cd43da85e}} 
+A\+P\+I\+\_\+\+P\+O\+ST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{API\_DEL@{API\_DEL}!restapi\_handler.h@{restapi\_handler.h}}\index{restapi\_handler.h@{restapi\_handler.h}!API\_DEL@{API\_DEL}}}\mbox{\Hypertarget{restapi__handler_8h_a98c8bf3ad96ddc55f238880c201b4073af84309bb818c4bf288590ba62db2fc34}\label{restapi__handler_8h_a98c8bf3ad96ddc55f238880c201b4073af84309bb818c4bf288590ba62db2fc34}} 
+A\+P\+I\+\_\+\+D\+EL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{API\_METHOD\_SIZE@{API\_METHOD\_SIZE}!restapi\_handler.h@{restapi\_handler.h}}\index{restapi\_handler.h@{restapi\_handler.h}!API\_METHOD\_SIZE@{API\_METHOD\_SIZE}}}\mbox{\Hypertarget{restapi__handler_8h_a98c8bf3ad96ddc55f238880c201b4073a9261722746d6f8680495eaadadd11325}\label{restapi__handler_8h_a98c8bf3ad96ddc55f238880c201b4073a9261722746d6f8680495eaadadd11325}} 
+A\+P\+I\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+S\+I\+ZE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+restapi\+\_\+handler.\+h 파일의 25 번째 라인에서 정의되었습니다.
+

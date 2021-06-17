@@ -1,0 +1,99 @@
+\hypertarget{RestAPIHandle_8h}{}\doxysection{include/\+Rest\+A\+P\+I\+Handle.h 파일 참조}
+\label{RestAPIHandle_8h}\index{include/RestAPIHandle.h@{include/RestAPIHandle.h}}
+{\ttfamily \#include \char`\"{}cpprest/asyncrt\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cpprest/containerstream.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cpprest/filestream.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cpprest/http\+\_\+listener.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cpprest/json.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cpprest/producerconsumerstream.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cpprest/uri.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+Rest\+A\+P\+I\+Handle.\+h에 대한 include 의존 그래프\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{RestAPIHandle_8h__incl}
+\end{center}
+\end{figure}
+이 그래프는 이 파일을 직/간접적으로 include 하는 파일들을 보여줍니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{RestAPIHandle_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{클래스}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classRestAPIHandler}{Rest\+A\+P\+I\+Handler}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classRestAPIHandler}{Rest\+A\+P\+I\+Handler}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{타입정의}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::function$<$ const utility\+::string\+\_\+t(const web\+::http\+::http\+\_\+request \&, const web\+::json\+::value \&)$>$ \mbox{\hyperlink{RestAPIHandle_8h_a31a694d35a9b4051e3d3f1c27f01f6e6}{End\+Point\+Handle}}
+\end{DoxyCompactItemize}
+\doxysubsection*{열거형 타입}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{RestAPIHandle_8h_a98c8bf3ad96ddc55f238880c201b4073}{A\+P\+I\+\_\+\+M\+E\+T\+H\+OD}} \{ \newline
+\mbox{\hyperlink{RestAPIHandle_8h_a98c8bf3ad96ddc55f238880c201b4073a12a8dcf59c16b5aadfda3a08ba67d529}{G\+ET}} = 0, 
+\mbox{\hyperlink{RestAPIHandle_8h_a98c8bf3ad96ddc55f238880c201b4073afec39d40e8bc9e12afa614df5ddb9fa9}{P\+UT}}, 
+\mbox{\hyperlink{RestAPIHandle_8h_a98c8bf3ad96ddc55f238880c201b4073a368c5bc07109370b819193871352b926}{P\+O\+ST}}, 
+\mbox{\hyperlink{RestAPIHandle_8h_a98c8bf3ad96ddc55f238880c201b4073a11563127ec3be864b514a1784c5d37a6}{D\+EL}}, 
+\newline
+\mbox{\hyperlink{RestAPIHandle_8h_a98c8bf3ad96ddc55f238880c201b4073a9261722746d6f8680495eaadadd11325}{A\+P\+I\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+S\+I\+ZE}}
+ \}
+\begin{DoxyCompactList}\small\item\em A\+PI 호출 시 H\+T\+TP Method 정의 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{타입정의 문서화}
+\mbox{\Hypertarget{RestAPIHandle_8h_a31a694d35a9b4051e3d3f1c27f01f6e6}\label{RestAPIHandle_8h_a31a694d35a9b4051e3d3f1c27f01f6e6}} 
+\index{RestAPIHandle.h@{RestAPIHandle.h}!EndPointHandle@{EndPointHandle}}
+\index{EndPointHandle@{EndPointHandle}!RestAPIHandle.h@{RestAPIHandle.h}}
+\doxysubsubsection{\texorpdfstring{EndPointHandle}{EndPointHandle}}
+{\footnotesize\ttfamily typedef std\+::function$<$const utility\+::string\+\_\+t(const web\+::http\+::http\+\_\+request \&, const web\+::json\+::value \&)$>$ \mbox{\hyperlink{RestAPIHandle_8h_a31a694d35a9b4051e3d3f1c27f01f6e6}{End\+Point\+Handle}}}
+
+
+
+Rest\+A\+P\+I\+Handle.\+h 파일의 16 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{열거형 타입 문서화}
+\mbox{\Hypertarget{RestAPIHandle_8h_a98c8bf3ad96ddc55f238880c201b4073}\label{RestAPIHandle_8h_a98c8bf3ad96ddc55f238880c201b4073}} 
+\index{RestAPIHandle.h@{RestAPIHandle.h}!API\_METHOD@{API\_METHOD}}
+\index{API\_METHOD@{API\_METHOD}!RestAPIHandle.h@{RestAPIHandle.h}}
+\doxysubsubsection{\texorpdfstring{API\_METHOD}{API\_METHOD}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{RestAPIHandle_8h_a98c8bf3ad96ddc55f238880c201b4073}{A\+P\+I\+\_\+\+M\+E\+T\+H\+OD}}}
+
+
+
+A\+PI 호출 시 H\+T\+TP Method 정의 
+
+\begin{DoxyEnumFields}{열거형 멤버}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GET@{GET}!RestAPIHandle.h@{RestAPIHandle.h}}\index{RestAPIHandle.h@{RestAPIHandle.h}!GET@{GET}}}\mbox{\Hypertarget{RestAPIHandle_8h_a98c8bf3ad96ddc55f238880c201b4073a12a8dcf59c16b5aadfda3a08ba67d529}\label{RestAPIHandle_8h_a98c8bf3ad96ddc55f238880c201b4073a12a8dcf59c16b5aadfda3a08ba67d529}} 
+G\+ET&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PUT@{PUT}!RestAPIHandle.h@{RestAPIHandle.h}}\index{RestAPIHandle.h@{RestAPIHandle.h}!PUT@{PUT}}}\mbox{\Hypertarget{RestAPIHandle_8h_a98c8bf3ad96ddc55f238880c201b4073afec39d40e8bc9e12afa614df5ddb9fa9}\label{RestAPIHandle_8h_a98c8bf3ad96ddc55f238880c201b4073afec39d40e8bc9e12afa614df5ddb9fa9}} 
+P\+UT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{POST@{POST}!RestAPIHandle.h@{RestAPIHandle.h}}\index{RestAPIHandle.h@{RestAPIHandle.h}!POST@{POST}}}\mbox{\Hypertarget{RestAPIHandle_8h_a98c8bf3ad96ddc55f238880c201b4073a368c5bc07109370b819193871352b926}\label{RestAPIHandle_8h_a98c8bf3ad96ddc55f238880c201b4073a368c5bc07109370b819193871352b926}} 
+P\+O\+ST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEL@{DEL}!RestAPIHandle.h@{RestAPIHandle.h}}\index{RestAPIHandle.h@{RestAPIHandle.h}!DEL@{DEL}}}\mbox{\Hypertarget{RestAPIHandle_8h_a98c8bf3ad96ddc55f238880c201b4073a11563127ec3be864b514a1784c5d37a6}\label{RestAPIHandle_8h_a98c8bf3ad96ddc55f238880c201b4073a11563127ec3be864b514a1784c5d37a6}} 
+D\+EL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{API\_METHOD\_SIZE@{API\_METHOD\_SIZE}!RestAPIHandle.h@{RestAPIHandle.h}}\index{RestAPIHandle.h@{RestAPIHandle.h}!API\_METHOD\_SIZE@{API\_METHOD\_SIZE}}}\mbox{\Hypertarget{RestAPIHandle_8h_a98c8bf3ad96ddc55f238880c201b4073a9261722746d6f8680495eaadadd11325}\label{RestAPIHandle_8h_a98c8bf3ad96ddc55f238880c201b4073a9261722746d6f8680495eaadadd11325}} 
+A\+P\+I\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+S\+I\+ZE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Rest\+A\+P\+I\+Handle.\+h 파일의 21 번째 라인에서 정의되었습니다.
+

@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>restapi: include/restapi_handler.h 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">restapi
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'검색');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','검색');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">restapi_handler.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="restapi__handler_8h.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __REST_API_HANDLE__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __REST_API_HANDLE__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;cpprest/asyncrt_utils.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;cpprest/containerstream.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;cpprest/filestream.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;cpprest/http_listener.h&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;cpprest/json.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;cpprest/producerconsumerstream.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;cpprest/uri.h&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">typedef</span> std::function&lt;       <span class="comment">//</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">const</span> utility::string_t( <span class="comment">//</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keyword">const</span> web::http::http_request &amp;, <span class="keyword">const</span> web::json::value &amp;)&gt;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="restapi__handler_8h.html#a622eaad3757b7958bc2ec8745663d270">   20</a></span>&#160;    <a class="code" href="restapi__handler_8h.html#a622eaad3757b7958bc2ec8745663d270">end_point_handle_t</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="restapi__handler_8h.html#a98c8bf3ad96ddc55f238880c201b4073">   25</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="restapi__handler_8h.html#a98c8bf3ad96ddc55f238880c201b4073">API_METHOD</a> { <span class="comment">//</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="restapi__handler_8h.html#a98c8bf3ad96ddc55f238880c201b4073a55eb88a85028e64c158c11b3dd0f6388">   26</a></span>&#160;  <a class="code" href="restapi__handler_8h.html#a98c8bf3ad96ddc55f238880c201b4073a55eb88a85028e64c158c11b3dd0f6388">API_GET</a> = 0,</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="restapi__handler_8h.html#a98c8bf3ad96ddc55f238880c201b4073a7336ca479c74d6dd1d4a81dd74bdf5ed">   27</a></span>&#160;  <a class="code" href="restapi__handler_8h.html#a98c8bf3ad96ddc55f238880c201b4073a7336ca479c74d6dd1d4a81dd74bdf5ed">API_PUT</a>,</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="restapi__handler_8h.html#a98c8bf3ad96ddc55f238880c201b4073aa2ecfda5504b52c2a640a74cd43da85e">   28</a></span>&#160;  <a class="code" href="restapi__handler_8h.html#a98c8bf3ad96ddc55f238880c201b4073aa2ecfda5504b52c2a640a74cd43da85e">API_POST</a>,</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="restapi__handler_8h.html#a98c8bf3ad96ddc55f238880c201b4073af84309bb818c4bf288590ba62db2fc34">   29</a></span>&#160;  <a class="code" href="restapi__handler_8h.html#a98c8bf3ad96ddc55f238880c201b4073af84309bb818c4bf288590ba62db2fc34">API_DEL</a>,</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="restapi__handler_8h.html#a98c8bf3ad96ddc55f238880c201b4073a9261722746d6f8680495eaadadd11325">   30</a></span>&#160;  <a class="code" href="restapi__handler_8h.html#a98c8bf3ad96ddc55f238880c201b4073a9261722746d6f8680495eaadadd11325">API_METHOD_SIZE</a></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;};</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classRestApiHandler.html">   36</a></span>&#160;<span class="keyword">class </span><a class="code" href="classRestApiHandler.html">RestApiHandler</a> {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classRestApiHandler.html#a701593c81d2c750a86b67d8fe83b252e">get</a>(web::http::http_request message);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classRestApiHandler.html#a99e3268e471864720fa50bfe53e51ce0">put</a>(web::http::http_request message);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classRestApiHandler.html#a369641d999668b545d8c6942e1b49508">post</a>(web::http::http_request message);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classRestApiHandler.html#aaeacfe92c18d166e88a4caf2e918ab53">del</a>(web::http::http_request message);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classRestApiHandler.html#a9bc91822c5dc0cafc2db4a1a882d8ea6">callapi</a>(<a class="code" href="restapi__handler_8h.html#a98c8bf3ad96ddc55f238880c201b4073">API_METHOD</a> method, web::http::http_request message);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classRestApiHandler.html#a6bb491428ba81624e6145873f1eff6d2">   46</a></span>&#160;  web::http::experimental::listener::http_listener <a class="code" href="classRestApiHandler.html#a6bb491428ba81624e6145873f1eff6d2">_listener</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classRestApiHandler.html#a099467d255b8c52a7b181ce523567d2c">   48</a></span>&#160;  std::map&lt;utility::string_t, end_point_handle_t&gt; <a class="code" href="classRestApiHandler.html#a099467d255b8c52a7b181ce523567d2c">_tables</a>[<a class="code" href="restapi__handler_8h.html#a98c8bf3ad96ddc55f238880c201b4073a9261722746d6f8680495eaadadd11325">API_METHOD_SIZE</a>];</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <a class="code" href="classRestApiHandler.html#ad290e7edff6f79c4365d821ab78cb2b0">RestApiHandler</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <a class="code" href="classRestApiHandler.html#ad290e7edff6f79c4365d821ab78cb2b0">RestApiHandler</a>(utility::string_t url);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classRestApiHandler.html#a218678806b25e200edb8c0411416bebb">~RestApiHandler</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classRestApiHandler.html#a425ee56233203ca0254042213a8e8c06">   59</a></span>&#160;  pplx::task&lt;void&gt; <a class="code" href="classRestApiHandler.html#a425ee56233203ca0254042213a8e8c06">open</a>() { <span class="keywordflow">return</span> <a class="code" href="classRestApiHandler.html#a6bb491428ba81624e6145873f1eff6d2">_listener</a>.open(); }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classRestApiHandler.html#a0b3a88b413d89311f6a2350c7f85fd77">   65</a></span>&#160;  pplx::task&lt;void&gt; <a class="code" href="classRestApiHandler.html#a0b3a88b413d89311f6a2350c7f85fd77">close</a>() { <span class="keywordflow">return</span> <a class="code" href="classRestApiHandler.html#a6bb491428ba81624e6145873f1eff6d2">_listener</a>.close(); }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classRestApiHandler.html#a17fd400eb55eab1038a3dd0674a6b2a7">addEndpoint</a>(<a class="code" href="restapi__handler_8h.html#a98c8bf3ad96ddc55f238880c201b4073">API_METHOD</a> method,            <span class="comment">//</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                   <span class="keyword">const</span> utility::string_t path, <span class="comment">//</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                   <a class="code" href="restapi__handler_8h.html#a622eaad3757b7958bc2ec8745663d270">end_point_handle_t</a> handle);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <a class="code" href="restapi__handler_8h.html#a622eaad3757b7958bc2ec8745663d270">end_point_handle_t</a> *                 <span class="comment">//</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <a class="code" href="classRestApiHandler.html#a5588ed29755175b32e49dd9437203f52">getEndpointHandle</a>(<a class="code" href="restapi__handler_8h.html#a98c8bf3ad96ddc55f238880c201b4073">API_METHOD</a> method, <span class="comment">//</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                    <span class="keyword">const</span> utility::string_t path);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;};</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="arestapi__handler_8h_html_a622eaad3757b7958bc2ec8745663d270"><div class="ttname"><a href="restapi__handler_8h.html#a622eaad3757b7958bc2ec8745663d270">end_point_handle_t</a></div><div class="ttdeci">std::function&lt; const utility::string_t(const web::http::http_request &amp;, const web::json::value &amp;)&gt; end_point_handle_t</div><div class="ttdoc">rest api 수행 함수 타입</div><div class="ttdef"><b>Definition:</b> <a href="restapi__handler_8h_source.html#l00020">restapi_handler.h:20</a></div></div>
+<div class="ttc" id="arestapi__handler_8h_html_a98c8bf3ad96ddc55f238880c201b4073af84309bb818c4bf288590ba62db2fc34"><div class="ttname"><a href="restapi__handler_8h.html#a98c8bf3ad96ddc55f238880c201b4073af84309bb818c4bf288590ba62db2fc34">API_DEL</a></div><div class="ttdeci">@ API_DEL</div><div class="ttdef"><b>Definition:</b> <a href="restapi__handler_8h_source.html#l00029">restapi_handler.h:29</a></div></div>
+<div class="ttc" id="aclassRestApiHandler_html_aaeacfe92c18d166e88a4caf2e918ab53"><div class="ttname"><a href="classRestApiHandler.html#aaeacfe92c18d166e88a4caf2e918ab53">RestApiHandler::del</a></div><div class="ttdeci">void del(web::http::http_request message)</div><div class="ttdef"><b>Definition:</b> <a href="restapi__handler_8cpp_source.html#l00043">restapi_handler.cpp:43</a></div></div>
+<div class="ttc" id="aclassRestApiHandler_html_a369641d999668b545d8c6942e1b49508"><div class="ttname"><a href="classRestApiHandler.html#a369641d999668b545d8c6942e1b49508">RestApiHandler::post</a></div><div class="ttdeci">void post(web::http::http_request message)</div><div class="ttdef"><b>Definition:</b> <a href="restapi__handler_8cpp_source.html#l00039">restapi_handler.cpp:39</a></div></div>
+<div class="ttc" id="aclassRestApiHandler_html_a425ee56233203ca0254042213a8e8c06"><div class="ttname"><a href="classRestApiHandler.html#a425ee56233203ca0254042213a8e8c06">RestApiHandler::open</a></div><div class="ttdeci">pplx::task&lt; void &gt; open()</div><div class="ttdoc">rest api 서버 시작</div><div class="ttdef"><b>Definition:</b> <a href="restapi__handler_8h_source.html#l00059">restapi_handler.h:59</a></div></div>
+<div class="ttc" id="aclassRestApiHandler_html_a99e3268e471864720fa50bfe53e51ce0"><div class="ttname"><a href="classRestApiHandler.html#a99e3268e471864720fa50bfe53e51ce0">RestApiHandler::put</a></div><div class="ttdeci">void put(web::http::http_request message)</div><div class="ttdef"><b>Definition:</b> <a href="restapi__handler_8cpp_source.html#l00047">restapi_handler.cpp:47</a></div></div>
+<div class="ttc" id="aclassRestApiHandler_html_ad290e7edff6f79c4365d821ab78cb2b0"><div class="ttname"><a href="classRestApiHandler.html#ad290e7edff6f79c4365d821ab78cb2b0">RestApiHandler::RestApiHandler</a></div><div class="ttdeci">RestApiHandler()=default</div></div>
+<div class="ttc" id="arestapi__handler_8h_html_a98c8bf3ad96ddc55f238880c201b4073"><div class="ttname"><a href="restapi__handler_8h.html#a98c8bf3ad96ddc55f238880c201b4073">API_METHOD</a></div><div class="ttdeci">API_METHOD</div><div class="ttdoc">API 호출 시 HTTP Method 정의</div><div class="ttdef"><b>Definition:</b> <a href="restapi__handler_8h_source.html#l00025">restapi_handler.h:25</a></div></div>
+<div class="ttc" id="aclassRestApiHandler_html_a6bb491428ba81624e6145873f1eff6d2"><div class="ttname"><a href="classRestApiHandler.html#a6bb491428ba81624e6145873f1eff6d2">RestApiHandler::_listener</a></div><div class="ttdeci">web::http::experimental::listener::http_listener _listener</div><div class="ttdoc">cpprestsdk API 서버 리스너</div><div class="ttdef"><b>Definition:</b> <a href="restapi__handler_8h_source.html#l00046">restapi_handler.h:46</a></div></div>
+<div class="ttc" id="aclassRestApiHandler_html_a0b3a88b413d89311f6a2350c7f85fd77"><div class="ttname"><a href="classRestApiHandler.html#a0b3a88b413d89311f6a2350c7f85fd77">RestApiHandler::close</a></div><div class="ttdeci">pplx::task&lt; void &gt; close()</div><div class="ttdoc">rest api 서버 종료</div><div class="ttdef"><b>Definition:</b> <a href="restapi__handler_8h_source.html#l00065">restapi_handler.h:65</a></div></div>
+<div class="ttc" id="aclassRestApiHandler_html_a5588ed29755175b32e49dd9437203f52"><div class="ttname"><a href="classRestApiHandler.html#a5588ed29755175b32e49dd9437203f52">RestApiHandler::getEndpointHandle</a></div><div class="ttdeci">end_point_handle_t * getEndpointHandle(API_METHOD method, const utility::string_t path)</div><div class="ttdoc">rest api endpoint 핸들 반환</div><div class="ttdef"><b>Definition:</b> <a href="restapi__handler_8cpp_source.html#l00030">restapi_handler.cpp:30</a></div></div>
+<div class="ttc" id="arestapi__handler_8h_html_a98c8bf3ad96ddc55f238880c201b4073a55eb88a85028e64c158c11b3dd0f6388"><div class="ttname"><a href="restapi__handler_8h.html#a98c8bf3ad96ddc55f238880c201b4073a55eb88a85028e64c158c11b3dd0f6388">API_GET</a></div><div class="ttdeci">@ API_GET</div><div class="ttdef"><b>Definition:</b> <a href="restapi__handler_8h_source.html#l00026">restapi_handler.h:26</a></div></div>
+<div class="ttc" id="aclassRestApiHandler_html_a218678806b25e200edb8c0411416bebb"><div class="ttname"><a href="classRestApiHandler.html#a218678806b25e200edb8c0411416bebb">RestApiHandler::~RestApiHandler</a></div><div class="ttdeci">virtual ~RestApiHandler()</div></div>
+<div class="ttc" id="arestapi__handler_8h_html_a98c8bf3ad96ddc55f238880c201b4073a9261722746d6f8680495eaadadd11325"><div class="ttname"><a href="restapi__handler_8h.html#a98c8bf3ad96ddc55f238880c201b4073a9261722746d6f8680495eaadadd11325">API_METHOD_SIZE</a></div><div class="ttdeci">@ API_METHOD_SIZE</div><div class="ttdef"><b>Definition:</b> <a href="restapi__handler_8h_source.html#l00030">restapi_handler.h:30</a></div></div>
+<div class="ttc" id="aclassRestApiHandler_html"><div class="ttname"><a href="classRestApiHandler.html">RestApiHandler</a></div><div class="ttdoc">RestApiHandler</div><div class="ttdef"><b>Definition:</b> <a href="restapi__handler_8h_source.html#l00036">restapi_handler.h:36</a></div></div>
+<div class="ttc" id="aclassRestApiHandler_html_a9bc91822c5dc0cafc2db4a1a882d8ea6"><div class="ttname"><a href="classRestApiHandler.html#a9bc91822c5dc0cafc2db4a1a882d8ea6">RestApiHandler::callapi</a></div><div class="ttdeci">void callapi(API_METHOD method, web::http::http_request message)</div><div class="ttdef"><b>Definition:</b> <a href="restapi__handler_8cpp_source.html#l00055">restapi_handler.cpp:55</a></div></div>
+<div class="ttc" id="arestapi__handler_8h_html_a98c8bf3ad96ddc55f238880c201b4073a7336ca479c74d6dd1d4a81dd74bdf5ed"><div class="ttname"><a href="restapi__handler_8h.html#a98c8bf3ad96ddc55f238880c201b4073a7336ca479c74d6dd1d4a81dd74bdf5ed">API_PUT</a></div><div class="ttdeci">@ API_PUT</div><div class="ttdef"><b>Definition:</b> <a href="restapi__handler_8h_source.html#l00027">restapi_handler.h:27</a></div></div>
+<div class="ttc" id="aclassRestApiHandler_html_a17fd400eb55eab1038a3dd0674a6b2a7"><div class="ttname"><a href="classRestApiHandler.html#a17fd400eb55eab1038a3dd0674a6b2a7">RestApiHandler::addEndpoint</a></div><div class="ttdeci">bool addEndpoint(API_METHOD method, const utility::string_t path, end_point_handle_t handle)</div><div class="ttdoc">rest api 서비스 등록</div><div class="ttdef"><b>Definition:</b> <a href="restapi__handler_8cpp_source.html#l00018">restapi_handler.cpp:18</a></div></div>
+<div class="ttc" id="arestapi__handler_8h_html_a98c8bf3ad96ddc55f238880c201b4073aa2ecfda5504b52c2a640a74cd43da85e"><div class="ttname"><a href="restapi__handler_8h.html#a98c8bf3ad96ddc55f238880c201b4073aa2ecfda5504b52c2a640a74cd43da85e">API_POST</a></div><div class="ttdeci">@ API_POST</div><div class="ttdef"><b>Definition:</b> <a href="restapi__handler_8h_source.html#l00028">restapi_handler.h:28</a></div></div>
+<div class="ttc" id="aclassRestApiHandler_html_a701593c81d2c750a86b67d8fe83b252e"><div class="ttname"><a href="classRestApiHandler.html#a701593c81d2c750a86b67d8fe83b252e">RestApiHandler::get</a></div><div class="ttdeci">void get(web::http::http_request message)</div><div class="ttdef"><b>Definition:</b> <a href="restapi__handler_8cpp_source.html#l00051">restapi_handler.cpp:51</a></div></div>
+<div class="ttc" id="aclassRestApiHandler_html_a099467d255b8c52a7b181ce523567d2c"><div class="ttname"><a href="classRestApiHandler.html#a099467d255b8c52a7b181ce523567d2c">RestApiHandler::_tables</a></div><div class="ttdeci">std::map&lt; utility::string_t, end_point_handle_t &gt; _tables[API_METHOD_SIZE]</div><div class="ttdoc">API 동작 정의 테이블 (GET/POST/PUT/DEL 각 각 정의)</div><div class="ttdef"><b>Definition:</b> <a href="restapi__handler_8h_source.html#l00048">restapi_handler.h:48</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>
