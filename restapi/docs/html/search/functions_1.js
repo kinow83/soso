@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['callapi_40',['callapi',['../classEndpoint.html#a8d295b433f06c0d58b6bdd2c4853d751',1,'Endpoint']]],
-  ['close_41',['close',['../classEndpoint.html#aadbaabe49e0ad5467a3197604ff0a0f8',1,'Endpoint']]]
+  ['callapi_42',['callapi',['../classsoso_1_1Endpoint.html#a8d295b433f06c0d58b6bdd2c4853d751',1,'soso::Endpoint']]],
+  ['close_43',['close',['../classsoso_1_1Endpoint.html#ae1a905a2bbb108c831ea67eb3844fe57',1,'soso::Endpoint']]]
 ];

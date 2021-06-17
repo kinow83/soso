@@ -11,6 +11,8 @@
 #include <functional>
 #include <map>
 
+namespace soso {
+
 /**
  * @brief rest api 수행 함수 타입
  */
@@ -85,5 +87,5 @@ public:
   getEndpoint(API_METHOD method, //
               const utility::string_t path);
 };
-
+}; // namespace soso
 #endif

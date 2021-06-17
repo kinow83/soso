@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['api_5fmethod_60',['API_METHOD',['../endpoint_8h.html#a98c8bf3ad96ddc55f238880c201b4073',1,'endpoint.h']]]
+  ['api_5fmethod_62',['API_METHOD',['../namespacesoso.html#a34a64ddd825095a3654e7f1f0d1f8c7d',1,'soso']]]
 ];

@@ -6,6 +6,7 @@ using namespace std;
 using namespace web;
 using namespace http;
 using namespace utility;
+using namespace soso;
 
 int main() {
   RestApi api("http://127.0.0.1:8888");

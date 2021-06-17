@@ -9,6 +9,7 @@
 using namespace std;
 using namespace web;
 using namespace http;
+using namespace soso;
 using namespace utility;
 using namespace http::experimental::listener;
 

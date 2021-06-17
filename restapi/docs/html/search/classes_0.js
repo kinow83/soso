@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['endpoint_32',['Endpoint',['../classEndpoint.html',1,'']]]
+  ['endpoint_33',['Endpoint',['../classsoso_1_1Endpoint.html',1,'soso']]]
 ];

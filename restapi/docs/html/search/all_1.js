@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['addapi_4',['addAPI',['../classRestApi.html#a5cbc92d415aca2b3449468b290608868',1,'RestApi']]],
-  ['addendpoint_5',['addEndpoint',['../classEndpoint.html#a67ccfb626e00cf065b7d6bfe840cecd5',1,'Endpoint']]],
-  ['api_5fdel_6',['API_DEL',['../endpoint_8h.html#a98c8bf3ad96ddc55f238880c201b4073af84309bb818c4bf288590ba62db2fc34',1,'endpoint.h']]],
-  ['api_5fget_7',['API_GET',['../endpoint_8h.html#a98c8bf3ad96ddc55f238880c201b4073a55eb88a85028e64c158c11b3dd0f6388',1,'endpoint.h']]],
-  ['api_5fmethod_8',['API_METHOD',['../endpoint_8h.html#a98c8bf3ad96ddc55f238880c201b4073',1,'endpoint.h']]],
-  ['api_5fmethod_5fsize_9',['API_METHOD_SIZE',['../endpoint_8h.html#a98c8bf3ad96ddc55f238880c201b4073a9261722746d6f8680495eaadadd11325',1,'endpoint.h']]],
-  ['api_5fpost_10',['API_POST',['../endpoint_8h.html#a98c8bf3ad96ddc55f238880c201b4073aa2ecfda5504b52c2a640a74cd43da85e',1,'endpoint.h']]],
-  ['api_5fput_11',['API_PUT',['../endpoint_8h.html#a98c8bf3ad96ddc55f238880c201b4073a7336ca479c74d6dd1d4a81dd74bdf5ed',1,'endpoint.h']]]
+  ['addapi_4',['addAPI',['../classsoso_1_1RestApi.html#a7964dd59bbc79edce700f4ef2f791953',1,'soso::RestApi']]],
+  ['addendpoint_5',['addEndpoint',['../classsoso_1_1Endpoint.html#a67ccfb626e00cf065b7d6bfe840cecd5',1,'soso::Endpoint']]],
+  ['api_5fdel_6',['API_DEL',['../namespacesoso.html#a34a64ddd825095a3654e7f1f0d1f8c7daddace735b43c841b47fddd5e0238778b',1,'soso']]],
+  ['api_5fget_7',['API_GET',['../namespacesoso.html#a34a64ddd825095a3654e7f1f0d1f8c7da59a955e05d9192689526f352e1ea9c18',1,'soso']]],
+  ['api_5fmethod_8',['API_METHOD',['../namespacesoso.html#a34a64ddd825095a3654e7f1f0d1f8c7d',1,'soso']]],
+  ['api_5fmethod_5fsize_9',['API_METHOD_SIZE',['../namespacesoso.html#a34a64ddd825095a3654e7f1f0d1f8c7da866c5cccce012bed0d1081d27390b03a',1,'soso']]],
+  ['api_5fpost_10',['API_POST',['../namespacesoso.html#a34a64ddd825095a3654e7f1f0d1f8c7daf42874ba67453a2cec648bd4422ae5f6',1,'soso']]],
+  ['api_5fput_11',['API_PUT',['../namespacesoso.html#a34a64ddd825095a3654e7f1f0d1f8c7dace88ae4075fcdb10a848894f573baac4',1,'soso']]]
 ];

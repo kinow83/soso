@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['addapi_38',['addAPI',['../classRestApi.html#a5cbc92d415aca2b3449468b290608868',1,'RestApi']]],
-  ['addendpoint_39',['addEndpoint',['../classEndpoint.html#a67ccfb626e00cf065b7d6bfe840cecd5',1,'Endpoint']]]
+  ['addapi_40',['addAPI',['../classsoso_1_1RestApi.html#a7964dd59bbc79edce700f4ef2f791953',1,'soso::RestApi']]],
+  ['addendpoint_41',['addEndpoint',['../classsoso_1_1Endpoint.html#a67ccfb626e00cf065b7d6bfe840cecd5',1,'soso::Endpoint']]]
 ];

@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['_5faddress_55',['_address',['../classRestApi.html#a43cb82ad18e7790a8104b7059cfd23a4',1,'RestApi']]],
-  ['_5fendpoint_56',['_endpoint',['../classRestApi.html#a7f71e83a9e0331fde9fa57ae74ad4f97',1,'RestApi']]],
-  ['_5flistener_57',['_listener',['../classEndpoint.html#a9d17e565f17787697ed494dc1fc1d379',1,'Endpoint']]],
-  ['_5ftables_58',['_tables',['../classEndpoint.html#afa0e0c53f01d781c3d18a964249bf944',1,'Endpoint']]]
+  ['_5faddress_57',['_address',['../classsoso_1_1RestApi.html#a88985d941139692801e383f184dd7177',1,'soso::RestApi']]],
+  ['_5fendpoint_58',['_endpoint',['../classsoso_1_1RestApi.html#af01380c2f35881fd24f4a61e71a0da5c',1,'soso::RestApi']]],
+  ['_5flistener_59',['_listener',['../classsoso_1_1Endpoint.html#afe5e0d92caefaad5dfa8065245c3f6a7',1,'soso::Endpoint']]],
+  ['_5ftables_60',['_tables',['../classsoso_1_1Endpoint.html#a4afd78cd6efc858e6ff0ce920b296e0b',1,'soso::Endpoint']]]
 ];

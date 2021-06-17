@@ -4,6 +4,8 @@
 #include "endpoint.h"
 #include <iostream>
 
+namespace soso {
+
 /**
  * @brief RestApi 정의된 API를 추가하고 서버를 동작시킨다.
  */
@@ -61,5 +63,6 @@ public:
     return _endpoint->addEndpoint(method, path, handle);
   }
 };
+}; // namespace soso
 
 #endif
