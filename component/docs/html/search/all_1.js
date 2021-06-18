@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['callcomponent_10',['callComponent',['../classsoso_1_1ComponentChain.html#a90f6157c59fc3089314b85d57abab43c',1,'soso::ComponentChain']]],
-  ['callschedule_11',['callSchedule',['../classsoso_1_1ComponentChain.html#ac9617aa3ea17528e6cb93d935db40724',1,'soso::ComponentChain']]],
-  ['chronoscheckpoint_12',['chronosCheckPoint',['../classsoso_1_1ComponentChain.html#a0ba98388f8fa74514f4c139992ece189',1,'soso::ComponentChain']]],
+  ['callcomponent_9',['callComponent',['../classsoso_1_1ComponentChain.html#a90f6157c59fc3089314b85d57abab43c',1,'soso::ComponentChain']]],
+  ['callschedule_10',['callSchedule',['../classsoso_1_1ComponentChain.html#ac9617aa3ea17528e6cb93d935db40724',1,'soso::ComponentChain']]],
+  ['chronoscheckpoint_11',['chronosCheckPoint',['../classsoso_1_1ComponentChain.html#a0ba98388f8fa74514f4c139992ece189',1,'soso::ComponentChain']]],
+  ['chronosmonitoring_12',['chronosMonitoring',['../classsoso_1_1ComponentChain.html#a2137ad5cdcd2b12f9e41b348e5fe7152',1,'soso::ComponentChain']]],
   ['clientmodulecall_13',['clientModuleCall',['../namespacesoso.html#a527fae4279f7c402f6b95f324a9bdf2a',1,'soso']]],
   ['component_14',['Component',['../classsoso_1_1Component.html',1,'soso::Component'],['../classsoso_1_1Component.html#aa51b455cf021cf121ed4eb9b79a2c8d3',1,'soso::Component::Component()']]],
   ['component_2ecpp_15',['component.cpp',['../component_8cpp.html',1,'']]],

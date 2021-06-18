@@ -1,0 +1,5 @@
+<map id="그래픽컬한 클래스 계통도" name="그래픽컬한 클래스 계통도">
+<area shape="rect" id="node1" href="$classsoso_1_1Request.html" title="모듈 컴포넌트에 전달되는 정보 Class 수신된 패킷 또는 메타정보등을 추가할 수 있다. Request Class를 상속 받아 구현에 맞게 커스터마이징 필요" alt="" coords="5,31,119,57"/>
+<area shape="rect" id="node2" href="$classsoso_1_1PcapRequest.html" title="pcap 모델 request 정의" alt="" coords="167,5,311,32"/>
+<area shape="rect" id="node3" href="$classsoso_1_1ScRequest.html" title="server&#45;client 모델 request 정의" alt="" coords="175,56,303,83"/>
+</map>

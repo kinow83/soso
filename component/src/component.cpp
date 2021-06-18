@@ -6,11 +6,12 @@ using namespace std;
 using namespace soso;
 
 ComponentChain::ComponentChain() {
-  _chrono_stack.push_back(ChronoStack("init", 100));
-  _chrono_stack.push_back(ChronoStack("prepare", 100));
-  _chrono_stack.push_back(ChronoStack("process", 100));
-  _chrono_stack.push_back(ChronoStack("post", 100));
-  _chrono_stack.push_back(ChronoStack("schedule", 100));
+  size_t max_point = 100;
+  _chrono_stack.push_back(ChronosStack("init", max_point));
+  _chrono_stack.push_back(ChronosStack("prepare", max_point));
+  _chrono_stack.push_back(ChronosStack("process", max_point));
+  _chrono_stack.push_back(ChronosStack("post", max_point));
+  _chrono_stack.push_back(ChronosStack("schedule", max_point));
 }
 
 void ComponentChain::registers(shared_ptr<Component> component) {
@@ -47,6 +48,11 @@ void ComponentChain::remove(const string name) {
   }
 }
 
+void ComponentChain::chronosMonitoring(COMPONENT_IDX comp_idx,
+                                       std::function<void(ChronosStack &)> f) {
+  _chrono_stack[comp_idx].monitoring(f);
+}
+
 bool ComponentChain::chronosCheckPoint(const string comp_name, int comp_idx,
                                        std::function<bool(void)> logic) {
   bool result;
@@ -54,13 +60,10 @@ bool ComponentChain::chronosCheckPoint(const string comp_name, int comp_idx,
     return logic();
   }
 
-  Chrono chrono(comp_name);
+  Chronos chrono(comp_name);
   result = logic();
   chrono.end();
-
-  _chrono_lock.lock();
-  _chrono_stack[comp_idx].addChrono(chrono);
-  _chrono_lock.unlock();
+  _chrono_stack[comp_idx].addChronos(chrono);
 
   return result;
 }

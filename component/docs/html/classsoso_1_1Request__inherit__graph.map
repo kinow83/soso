@@ -1,0 +1,5 @@
+<map id="soso::Request" name="soso::Request">
+<area shape="rect" id="node1" title="모듈 컴포넌트에 전달되는 정보 Class 수신된 패킷 또는 메타정보등을 추가할 수 있다. Request Class를 상속 받아 구현에 맞게 커스터마이징 필요" alt="" coords="101,5,214,32"/>
+<area shape="rect" id="node2" href="$classsoso_1_1PcapRequest.html" title="pcap 모델 request 정의" alt="" coords="5,80,149,107"/>
+<area shape="rect" id="node3" href="$classsoso_1_1ScRequest.html" title="server&#45;client 모델 request 정의" alt="" coords="173,80,301,107"/>
+</map>

@@ -1,8 +1,0 @@
-digraph "그래픽컬한 클래스 계통도"
-{
- // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="soso::ComponentChain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsoso_1_1ComponentChain.html",tooltip="컴포넌트을 체인으로 관리하여 각 컴포넌트을 호출 및 관리하는 Class"];
-}

@@ -2,9 +2,8 @@
 #define __SOSO_COMPONENT_H__
 
 #include "request.h"
-#include <chrono.hpp>
+#include <chronos.h>
 #include <memory>
-#include <mutex>
 #include <stdexcept>
 #include <string>
 #include <thread>
@@ -95,8 +94,7 @@ public:
  */
 class ComponentChain {
 private:
-  std::vector<ChronoStack> _chrono_stack;
-  std::mutex _chrono_lock;
+  std::vector<ChronosStack> _chrono_stack;
   bool _trace_chrono = true;
 
   /// 컴포넌트 구성요청 체인 리스트
@@ -110,14 +108,16 @@ public:
   size_t componentSize() { return _chains.size(); }
 
   const std::string getChronoResult() {
-    const std::lock_guard<std::mutex> lock(_chrono_lock);
     std::string results = "";
 
-    for (ChronoStack &c : _chrono_stack) {
+    for (ChronosStack &c : _chrono_stack) {
       results += c.toString();
     }
     return results;
   }
+
+  void chronosMonitoring(COMPONENT_IDX comp_idx,
+                         std::function<void(ChronosStack &)> f);
 
   /**
    * @brief 컴포넌트 추가

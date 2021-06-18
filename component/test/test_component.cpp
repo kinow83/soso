@@ -14,14 +14,17 @@ public:
     return noop();
   }
   bool prepare(std::shared_ptr<Request> request) { //
+    request = request;
     usleep(100);
     return noop();
   }
   bool process(std::shared_ptr<Request> request) { //
+    request = request;
     usleep(100);
     return noop();
   }
   bool post(std::shared_ptr<Request> request) { //
+    request = request;
     usleep(100);
     return noop();
   }
@@ -46,8 +49,18 @@ int main(void) { //
   chain.callSchedule();
 
   cout << chain.getChronoResult() << endl;
-
   cout << chain.componentSize() << endl;
+
+  chain.chronosMonitoring( //
+      COMPONENT_PROCESS,   //
+      [](ChronosStack &stack) {
+        cout << "monitoring: " << stack.title() << endl;
+        if (stack.getTotal().tv_usec > 10) {
+          cout << "BAD process" << endl;
+        } else {
+          cout << "GOOD process" << endl;
+        }
+      });
 
   return 0;
 }
