@@ -1,4 +1,4 @@
-# TimeDiffer
+# chronos
 ---
 1. [doxygen](https://kinow83.github.io/TimeDiffer/html/annotated.html)
 
