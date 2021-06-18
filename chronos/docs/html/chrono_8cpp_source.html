@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>chronos: src/chrono.cpp 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">chronos
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'검색');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','검색');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">chrono.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="chrono_8cpp.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="chrono_8h.html">chrono.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacesoso.html">soso</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="classsoso_1_1Chrono.html#a5ecb280736be21730ded4975d5da82e4">    5</a></span>&#160;<a class="code" href="classsoso_1_1Chrono.html#a5ecb280736be21730ded4975d5da82e4">Chrono::Chrono</a>(<span class="keyword">const</span> std::string &amp;desc) {</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  <a class="code" href="classsoso_1_1Chrono.html#adcaddb2e93ee1b8c7197fb8d5bd0116f">_desc</a> = <a class="code" href="classsoso_1_1Chrono.html#a68a50e0ea6416050ad9ec58d594c88e2">desc</a>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  gettimeofday(&amp;<a class="code" href="classsoso_1_1Chrono.html#aa98569d85c27f44130aa76fc77cc279d">_begin</a>, NULL);</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  timerclear(&amp;<a class="code" href="classsoso_1_1Chrono.html#ac0c30c5a68de750ca3a2b42eb643b2a0">_end</a>);</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  timerclear(&amp;<a class="code" href="classsoso_1_1Chrono.html#a962af9d8eebb10b13c8d9269fe9e8c28">_diff</a>);</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;}</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classsoso_1_1Chrono.html#a68a50e0ea6416050ad9ec58d594c88e2">   12</a></span>&#160;<span class="keyword">const</span> std::string <a class="code" href="classsoso_1_1Chrono.html#a68a50e0ea6416050ad9ec58d594c88e2">Chrono::desc</a>() { <span class="comment">//</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classsoso_1_1Chrono.html#adcaddb2e93ee1b8c7197fb8d5bd0116f">_desc</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classsoso_1_1Chrono.html#afa622f1995e29506717f5040653052f6">   16</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsoso_1_1Chrono.html#afa622f1995e29506717f5040653052f6">Chrono::begin</a>() { <span class="comment">//</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  gettimeofday(&amp;<a class="code" href="classsoso_1_1Chrono.html#aa98569d85c27f44130aa76fc77cc279d">_begin</a>, NULL);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classsoso_1_1Chrono.html#a9620cf4fdf2d4bc7160ca46ff1c9b2c7">   20</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsoso_1_1Chrono.html#a9620cf4fdf2d4bc7160ca46ff1c9b2c7">Chrono::end</a>() { <span class="comment">//</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  gettimeofday(&amp;<a class="code" href="classsoso_1_1Chrono.html#ac0c30c5a68de750ca3a2b42eb643b2a0">_end</a>, NULL);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  timersub(&amp;<a class="code" href="classsoso_1_1Chrono.html#ac0c30c5a68de750ca3a2b42eb643b2a0">_end</a>, &amp;<a class="code" href="classsoso_1_1Chrono.html#aa98569d85c27f44130aa76fc77cc279d">_begin</a>, &amp;<a class="code" href="classsoso_1_1Chrono.html#a962af9d8eebb10b13c8d9269fe9e8c28">_diff</a>);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classsoso_1_1Chrono.html#a4a6a91532d1eca3e74774637fd940767">   25</a></span>&#160;<span class="keyword">struct </span>timeval &amp;<a class="code" href="classsoso_1_1Chrono.html#a4a6a91532d1eca3e74774637fd940767">Chrono::diff</a>() { <span class="comment">//</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classsoso_1_1Chrono.html#a962af9d8eebb10b13c8d9269fe9e8c28">_diff</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classsoso_1_1ChronoStack.html#a048159cc8249dd0e426ee9688039f883">   29</a></span>&#160;<a class="code" href="classsoso_1_1ChronoStack.html#a048159cc8249dd0e426ee9688039f883">ChronoStack::ChronoStack</a>(<span class="keyword">const</span> std::string &amp;title, <span class="keywordtype">size_t</span> max_point) { <span class="comment">//</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <a class="code" href="classsoso_1_1ChronoStack.html#a2df2a0702d78882c9cdc44417aa466d8">_title</a> = title;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <a class="code" href="classsoso_1_1ChronoStack.html#ac9e80d3114c4ebb0dca07b4bbe966821">_max_point</a> = max_point;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classsoso_1_1ChronoStack.html#ac9e80d3114c4ebb0dca07b4bbe966821">_max_point</a> == 0) {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="classsoso_1_1ChronoStack.html#ac9e80d3114c4ebb0dca07b4bbe966821">_max_point</a> = 1;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  timerclear(&amp;<a class="code" href="classsoso_1_1ChronoStack.html#af538dc73d02545318b46456c1dc664c9">_total</a>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  timerclear(&amp;<a class="code" href="classsoso_1_1ChronoStack.html#a2a270f29f8f9e5cc443c801265622808">_avg</a>);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classsoso_1_1ChronoStack.html#aa863cefe695de5f733929defc4b0681d">   39</a></span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="classsoso_1_1ChronoStack.html#aa863cefe695de5f733929defc4b0681d">ChronoStack::checkedCount</a>() { <span class="comment">//</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classsoso_1_1ChronoStack.html#a2b92a61a0cf1890051416509fb4f4f7a">_add_count</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classsoso_1_1ChronoStack.html#a3710dad9f46a80e216644bbfa9aa8227">   43</a></span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="classsoso_1_1ChronoStack.html#a3710dad9f46a80e216644bbfa9aa8227">ChronoStack::pointSize</a>() { <span class="comment">//</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classsoso_1_1ChronoStack.html#ae799dc1ae1c95c41fa676b1c83af0008">_points</a>.size();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classsoso_1_1ChronoStack.html#a2adf1c99be9f7b9cf4814feceb97ed0f">   47</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsoso_1_1ChronoStack.html#a2adf1c99be9f7b9cf4814feceb97ed0f">ChronoStack::addChrono</a>(<a class="code" href="classsoso_1_1Chrono.html">Chrono</a> &amp;chrono) {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keyword">const</span> std::lock_guard&lt;std::mutex&gt; lock(<a class="code" href="classsoso_1_1ChronoStack.html#ae86dff927ba6aa65e0a69ce6c7e62f95">_lock</a>);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <a class="code" href="classsoso_1_1ChronoStack.html#a2b92a61a0cf1890051416509fb4f4f7a">_add_count</a>++;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classsoso_1_1ChronoStack.html#ae799dc1ae1c95c41fa676b1c83af0008">_points</a>.size() &gt; <a class="code" href="classsoso_1_1ChronoStack.html#ac9e80d3114c4ebb0dca07b4bbe966821">_max_point</a>) {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">auto</span> &amp;last = <a class="code" href="classsoso_1_1ChronoStack.html#ae799dc1ae1c95c41fa676b1c83af0008">_points</a>.back();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">if</span> (timercmp(&amp;last.diff(), &amp;chrono.<a class="code" href="classsoso_1_1Chrono.html#a4a6a91532d1eca3e74774637fd940767">diff</a>(), &lt;)) {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      <a class="code" href="classsoso_1_1ChronoStack.html#ae799dc1ae1c95c41fa676b1c83af0008">_points</a>.push_front(chrono);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      <a class="code" href="classsoso_1_1ChronoStack.html#ae799dc1ae1c95c41fa676b1c83af0008">_points</a>.pop_back();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="classsoso_1_1ChronoStack.html#ae799dc1ae1c95c41fa676b1c83af0008">_points</a>.push_back(chrono);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="comment">// sort desc</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <a class="code" href="classsoso_1_1ChronoStack.html#ae799dc1ae1c95c41fa676b1c83af0008">_points</a>.sort([](<a class="code" href="classsoso_1_1Chrono.html">Chrono</a> &amp;a, <a class="code" href="classsoso_1_1Chrono.html">Chrono</a> &amp;b) {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">if</span> (a.<a class="code" href="classsoso_1_1Chrono.html#a4a6a91532d1eca3e74774637fd940767">diff</a>().tv_sec == b.<a class="code" href="classsoso_1_1Chrono.html#a4a6a91532d1eca3e74774637fd940767">diff</a>().tv_sec) {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      return (b.diff().tv_usec &lt; a.diff().tv_usec);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    return (b.<a class="code" href="classsoso_1_1Chrono.html#a4a6a91532d1eca3e74774637fd940767">diff</a>().tv_sec &lt; a.<a class="code" href="classsoso_1_1Chrono.html#a4a6a91532d1eca3e74774637fd940767">diff</a>().tv_sec);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  });</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  timeradd(&amp;<a class="code" href="classsoso_1_1ChronoStack.html#af538dc73d02545318b46456c1dc664c9">_total</a>, &amp;chrono.<a class="code" href="classsoso_1_1Chrono.html#a4a6a91532d1eca3e74774637fd940767">diff</a>(), &amp;<a class="code" href="classsoso_1_1ChronoStack.html#af538dc73d02545318b46456c1dc664c9">_total</a>);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  uint64_t avg_time =</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      (((<a class="code" href="classsoso_1_1ChronoStack.html#af538dc73d02545318b46456c1dc664c9">_total</a>.tv_sec * 1000000) + <a class="code" href="classsoso_1_1ChronoStack.html#af538dc73d02545318b46456c1dc664c9">_total</a>.tv_usec) / <a class="code" href="classsoso_1_1ChronoStack.html#a2b92a61a0cf1890051416509fb4f4f7a">_add_count</a>);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <a class="code" href="classsoso_1_1ChronoStack.html#a2a270f29f8f9e5cc443c801265622808">_avg</a>.tv_sec = avg_time / 1000000;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <a class="code" href="classsoso_1_1ChronoStack.html#a2a270f29f8f9e5cc443c801265622808">_avg</a>.tv_usec = avg_time % 1000000;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classsoso_1_1ChronoStack.html#a5f808d4911b789e765329c43e5ecdce1">   80</a></span>&#160;<span class="keyword">const</span> std::string <a class="code" href="classsoso_1_1ChronoStack.html#a5f808d4911b789e765329c43e5ecdce1">ChronoStack::toString</a>() {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keyword">const</span> std::lock_guard&lt;std::mutex&gt; lock(<a class="code" href="classsoso_1_1ChronoStack.html#ae86dff927ba6aa65e0a69ce6c7e62f95">_lock</a>);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  std::string results = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  std::string total;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  std::string avg;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keywordtype">size_t</span> i;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  total = std::to_string(<a class="code" href="classsoso_1_1ChronoStack.html#af538dc73d02545318b46456c1dc664c9">_total</a>.tv_sec) + <span class="stringliteral">&quot;.&quot;</span> + <span class="comment">//</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;          fmt::format(<span class="stringliteral">&quot;{0:0&gt;7}&quot;</span>, std::to_string(<a class="code" href="classsoso_1_1ChronoStack.html#af538dc73d02545318b46456c1dc664c9">_total</a>.tv_usec));</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  avg = std::to_string(<a class="code" href="classsoso_1_1ChronoStack.html#a2a270f29f8f9e5cc443c801265622808">_avg</a>.tv_sec) + <span class="stringliteral">&quot;.&quot;</span> + <span class="comment">//</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        fmt::format(<span class="stringliteral">&quot;{0:0&gt;7}&quot;</span>, std::to_string(<a class="code" href="classsoso_1_1ChronoStack.html#a2a270f29f8f9e5cc443c801265622808">_avg</a>.tv_usec));</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  results += fmt::format(<span class="stringliteral">&quot;[{}] total:{}, avg:{}\n&quot;</span>, <a class="code" href="classsoso_1_1ChronoStack.html#a2df2a0702d78882c9cdc44417aa466d8">_title</a>, total, avg);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  i = 0;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span> p : <a class="code" href="classsoso_1_1ChronoStack.html#ae799dc1ae1c95c41fa676b1c83af0008">_points</a>) {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    results += <span class="stringliteral">&quot;(&quot;</span> + std::to_string(++i) + <span class="stringliteral">&quot;) &quot;</span> +      <span class="comment">//</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;               p.desc() + <span class="stringliteral">&quot;: &quot;</span> +                       <span class="comment">//</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;               std::to_string(p.diff().tv_sec) + <span class="stringliteral">&quot;.&quot;</span> + <span class="comment">//</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;               fmt::format(<span class="stringliteral">&quot;{0:0&gt;7}&quot;</span>, std::to_string(p.diff().tv_usec)) + <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="keywordflow">return</span> results;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclasssoso_1_1Chrono_html_ac0c30c5a68de750ca3a2b42eb643b2a0"><div class="ttname"><a href="classsoso_1_1Chrono.html#ac0c30c5a68de750ca3a2b42eb643b2a0">soso::Chrono::_end</a></div><div class="ttdeci">struct timeval _end</div><div class="ttdef"><b>Definition:</b> <a href="chrono_8h_source.html#l00026">chrono.h:26</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Chrono_html_aa98569d85c27f44130aa76fc77cc279d"><div class="ttname"><a href="classsoso_1_1Chrono.html#aa98569d85c27f44130aa76fc77cc279d">soso::Chrono::_begin</a></div><div class="ttdeci">struct timeval _begin</div><div class="ttdoc">측정 시점 시각</div><div class="ttdef"><b>Definition:</b> <a href="chrono_8h_source.html#l00025">chrono.h:25</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Chrono_html"><div class="ttname"><a href="classsoso_1_1Chrono.html">soso::Chrono</a></div><div class="ttdoc">소요 시간 측정 class</div><div class="ttdef"><b>Definition:</b> <a href="chrono_8h_source.html#l00020">chrono.h:20</a></div></div>
+<div class="ttc" id="aclasssoso_1_1ChronoStack_html_a3710dad9f46a80e216644bbfa9aa8227"><div class="ttname"><a href="classsoso_1_1ChronoStack.html#a3710dad9f46a80e216644bbfa9aa8227">soso::ChronoStack::pointSize</a></div><div class="ttdeci">size_t pointSize()</div><div class="ttdef"><b>Definition:</b> <a href="chrono_8cpp_source.html#l00043">chrono.cpp:43</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Chrono_html_adcaddb2e93ee1b8c7197fb8d5bd0116f"><div class="ttname"><a href="classsoso_1_1Chrono.html#adcaddb2e93ee1b8c7197fb8d5bd0116f">soso::Chrono::_desc</a></div><div class="ttdeci">std::string _desc</div><div class="ttdoc">소요 시간 측정 설명</div><div class="ttdef"><b>Definition:</b> <a href="chrono_8h_source.html#l00023">chrono.h:23</a></div></div>
+<div class="ttc" id="anamespacesoso_html"><div class="ttname"><a href="namespacesoso.html">soso</a></div><div class="ttdef"><b>Definition:</b> <a href="chrono_8h_source.html#l00015">chrono.h:15</a></div></div>
+<div class="ttc" id="aclasssoso_1_1ChronoStack_html_aa863cefe695de5f733929defc4b0681d"><div class="ttname"><a href="classsoso_1_1ChronoStack.html#aa863cefe695de5f733929defc4b0681d">soso::ChronoStack::checkedCount</a></div><div class="ttdeci">size_t checkedCount()</div><div class="ttdef"><b>Definition:</b> <a href="chrono_8cpp_source.html#l00039">chrono.cpp:39</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Chrono_html_a68a50e0ea6416050ad9ec58d594c88e2"><div class="ttname"><a href="classsoso_1_1Chrono.html#a68a50e0ea6416050ad9ec58d594c88e2">soso::Chrono::desc</a></div><div class="ttdeci">const std::string desc()</div><div class="ttdef"><b>Definition:</b> <a href="chrono_8cpp_source.html#l00012">chrono.cpp:12</a></div></div>
+<div class="ttc" id="aclasssoso_1_1ChronoStack_html_ae799dc1ae1c95c41fa676b1c83af0008"><div class="ttname"><a href="classsoso_1_1ChronoStack.html#ae799dc1ae1c95c41fa676b1c83af0008">soso::ChronoStack::_points</a></div><div class="ttdeci">std::list&lt; Chrono &gt; _points</div><div class="ttdef"><b>Definition:</b> <a href="chrono_8h_source.html#l00045">chrono.h:45</a></div></div>
+<div class="ttc" id="achrono_8h_html"><div class="ttname"><a href="chrono_8h.html">chrono.h</a></div></div>
+<div class="ttc" id="aclasssoso_1_1ChronoStack_html_af538dc73d02545318b46456c1dc664c9"><div class="ttname"><a href="classsoso_1_1ChronoStack.html#af538dc73d02545318b46456c1dc664c9">soso::ChronoStack::_total</a></div><div class="ttdeci">struct timeval _total</div><div class="ttdef"><b>Definition:</b> <a href="chrono_8h_source.html#l00049">chrono.h:49</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Chrono_html_a5ecb280736be21730ded4975d5da82e4"><div class="ttname"><a href="classsoso_1_1Chrono.html#a5ecb280736be21730ded4975d5da82e4">soso::Chrono::Chrono</a></div><div class="ttdeci">Chrono(const std::string &amp;desc)</div><div class="ttdef"><b>Definition:</b> <a href="chrono_8cpp_source.html#l00005">chrono.cpp:5</a></div></div>
+<div class="ttc" id="aclasssoso_1_1ChronoStack_html_a2a270f29f8f9e5cc443c801265622808"><div class="ttname"><a href="classsoso_1_1ChronoStack.html#a2a270f29f8f9e5cc443c801265622808">soso::ChronoStack::_avg</a></div><div class="ttdeci">struct timeval _avg</div><div class="ttdef"><b>Definition:</b> <a href="chrono_8h_source.html#l00050">chrono.h:50</a></div></div>
+<div class="ttc" id="aclasssoso_1_1ChronoStack_html_a2adf1c99be9f7b9cf4814feceb97ed0f"><div class="ttname"><a href="classsoso_1_1ChronoStack.html#a2adf1c99be9f7b9cf4814feceb97ed0f">soso::ChronoStack::addChrono</a></div><div class="ttdeci">void addChrono(Chrono &amp;chrono)</div><div class="ttdef"><b>Definition:</b> <a href="chrono_8cpp_source.html#l00047">chrono.cpp:47</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Chrono_html_a9620cf4fdf2d4bc7160ca46ff1c9b2c7"><div class="ttname"><a href="classsoso_1_1Chrono.html#a9620cf4fdf2d4bc7160ca46ff1c9b2c7">soso::Chrono::end</a></div><div class="ttdeci">void end()</div><div class="ttdef"><b>Definition:</b> <a href="chrono_8cpp_source.html#l00020">chrono.cpp:20</a></div></div>
+<div class="ttc" id="aclasssoso_1_1ChronoStack_html_a2df2a0702d78882c9cdc44417aa466d8"><div class="ttname"><a href="classsoso_1_1ChronoStack.html#a2df2a0702d78882c9cdc44417aa466d8">soso::ChronoStack::_title</a></div><div class="ttdeci">std::string _title</div><div class="ttdef"><b>Definition:</b> <a href="chrono_8h_source.html#l00044">chrono.h:44</a></div></div>
+<div class="ttc" id="aclasssoso_1_1ChronoStack_html_ac9e80d3114c4ebb0dca07b4bbe966821"><div class="ttname"><a href="classsoso_1_1ChronoStack.html#ac9e80d3114c4ebb0dca07b4bbe966821">soso::ChronoStack::_max_point</a></div><div class="ttdeci">size_t _max_point</div><div class="ttdef"><b>Definition:</b> <a href="chrono_8h_source.html#l00047">chrono.h:47</a></div></div>
+<div class="ttc" id="aclasssoso_1_1ChronoStack_html_a5f808d4911b789e765329c43e5ecdce1"><div class="ttname"><a href="classsoso_1_1ChronoStack.html#a5f808d4911b789e765329c43e5ecdce1">soso::ChronoStack::toString</a></div><div class="ttdeci">const std::string toString()</div><div class="ttdef"><b>Definition:</b> <a href="chrono_8cpp_source.html#l00080">chrono.cpp:80</a></div></div>
+<div class="ttc" id="aclasssoso_1_1ChronoStack_html_a2b92a61a0cf1890051416509fb4f4f7a"><div class="ttname"><a href="classsoso_1_1ChronoStack.html#a2b92a61a0cf1890051416509fb4f4f7a">soso::ChronoStack::_add_count</a></div><div class="ttdeci">size_t _add_count</div><div class="ttdef"><b>Definition:</b> <a href="chrono_8h_source.html#l00051">chrono.h:51</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Chrono_html_a4a6a91532d1eca3e74774637fd940767"><div class="ttname"><a href="classsoso_1_1Chrono.html#a4a6a91532d1eca3e74774637fd940767">soso::Chrono::diff</a></div><div class="ttdeci">struct timeval &amp; diff()</div><div class="ttdef"><b>Definition:</b> <a href="chrono_8cpp_source.html#l00025">chrono.cpp:25</a></div></div>
+<div class="ttc" id="aclasssoso_1_1ChronoStack_html_ae86dff927ba6aa65e0a69ce6c7e62f95"><div class="ttname"><a href="classsoso_1_1ChronoStack.html#ae86dff927ba6aa65e0a69ce6c7e62f95">soso::ChronoStack::_lock</a></div><div class="ttdeci">std::mutex _lock</div><div class="ttdef"><b>Definition:</b> <a href="chrono_8h_source.html#l00046">chrono.h:46</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Chrono_html_afa622f1995e29506717f5040653052f6"><div class="ttname"><a href="classsoso_1_1Chrono.html#afa622f1995e29506717f5040653052f6">soso::Chrono::begin</a></div><div class="ttdeci">void begin()</div><div class="ttdef"><b>Definition:</b> <a href="chrono_8cpp_source.html#l00016">chrono.cpp:16</a></div></div>
+<div class="ttc" id="aclasssoso_1_1ChronoStack_html_a048159cc8249dd0e426ee9688039f883"><div class="ttname"><a href="classsoso_1_1ChronoStack.html#a048159cc8249dd0e426ee9688039f883">soso::ChronoStack::ChronoStack</a></div><div class="ttdeci">ChronoStack(const std::string &amp;title, size_t max_point)</div><div class="ttdef"><b>Definition:</b> <a href="chrono_8cpp_source.html#l00029">chrono.cpp:29</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Chrono_html_a962af9d8eebb10b13c8d9269fe9e8c28"><div class="ttname"><a href="classsoso_1_1Chrono.html#a962af9d8eebb10b13c8d9269fe9e8c28">soso::Chrono::_diff</a></div><div class="ttdeci">struct timeval _diff</div><div class="ttdoc">소요 시간 측정 값</div><div class="ttdef"><b>Definition:</b> <a href="chrono_8h_source.html#l00028">chrono.h:28</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

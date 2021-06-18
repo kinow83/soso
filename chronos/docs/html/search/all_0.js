@@ -9,11 +9,12 @@ var searchData=
   ['_5fdiff_6',['_diff',['../classsoso_1_1Chrono.html#a962af9d8eebb10b13c8d9269fe9e8c28',1,'soso::Chrono']]],
   ['_5fdifftime_7',['_difftime',['../structsoso_1_1ChronosCheckPoint.html#a0a2032f9fc98ab938aae9aac82c916db',1,'soso::ChronosCheckPoint']]],
   ['_5fend_8',['_end',['../classsoso_1_1Chrono.html#ac0c30c5a68de750ca3a2b42eb643b2a0',1,'soso::Chrono']]],
-  ['_5flong_5ftime_5fpoints_9',['_long_time_points',['../classsoso_1_1Chronos.html#a89af7955e4ee52eff1b4b9ece9eaa37d',1,'soso::Chronos']]],
-  ['_5fmax_5fcheck_5fpoint_10',['_max_check_point',['../classsoso_1_1Chronos.html#a8a6e23e876bb5a24c7664d9003a77de2',1,'soso::Chronos']]],
-  ['_5fmax_5flong_5ftime_5fpoint_11',['_max_long_time_point',['../classsoso_1_1Chronos.html#a21b35847059e3fa596ed83eea3c3829f',1,'soso::Chronos']]],
-  ['_5fmax_5fpoint_12',['_max_point',['../classsoso_1_1ChronoStack.html#ac9e80d3114c4ebb0dca07b4bbe966821',1,'soso::ChronoStack']]],
-  ['_5fpoints_13',['_points',['../classsoso_1_1ChronoStack.html#ae799dc1ae1c95c41fa676b1c83af0008',1,'soso::ChronoStack::_points()'],['../classsoso_1_1Chronos.html#ab893742847e9cbacc9ae55b2d21a777e',1,'soso::Chronos::_points()']]],
-  ['_5ftitle_14',['_title',['../classsoso_1_1ChronoStack.html#a2df2a0702d78882c9cdc44417aa466d8',1,'soso::ChronoStack::_title()'],['../classsoso_1_1Chronos.html#a00651c562eef463354f3163b1baa9d3e',1,'soso::Chronos::_title()']]],
-  ['_5ftotal_15',['_total',['../classsoso_1_1ChronoStack.html#af538dc73d02545318b46456c1dc664c9',1,'soso::ChronoStack::_total()'],['../classsoso_1_1Chronos.html#acddc0f5b3b232cfb41639dcf605b2066',1,'soso::Chronos::_total()']]]
+  ['_5flock_9',['_lock',['../classsoso_1_1ChronoStack.html#ae86dff927ba6aa65e0a69ce6c7e62f95',1,'soso::ChronoStack']]],
+  ['_5flong_5ftime_5fpoints_10',['_long_time_points',['../classsoso_1_1Chronos.html#a89af7955e4ee52eff1b4b9ece9eaa37d',1,'soso::Chronos']]],
+  ['_5fmax_5fcheck_5fpoint_11',['_max_check_point',['../classsoso_1_1Chronos.html#a8a6e23e876bb5a24c7664d9003a77de2',1,'soso::Chronos']]],
+  ['_5fmax_5flong_5ftime_5fpoint_12',['_max_long_time_point',['../classsoso_1_1Chronos.html#a21b35847059e3fa596ed83eea3c3829f',1,'soso::Chronos']]],
+  ['_5fmax_5fpoint_13',['_max_point',['../classsoso_1_1ChronoStack.html#ac9e80d3114c4ebb0dca07b4bbe966821',1,'soso::ChronoStack']]],
+  ['_5fpoints_14',['_points',['../classsoso_1_1ChronoStack.html#ae799dc1ae1c95c41fa676b1c83af0008',1,'soso::ChronoStack::_points()'],['../classsoso_1_1Chronos.html#ab893742847e9cbacc9ae55b2d21a777e',1,'soso::Chronos::_points()']]],
+  ['_5ftitle_15',['_title',['../classsoso_1_1ChronoStack.html#a2df2a0702d78882c9cdc44417aa466d8',1,'soso::ChronoStack::_title()'],['../classsoso_1_1Chronos.html#a00651c562eef463354f3163b1baa9d3e',1,'soso::Chronos::_title()']]],
+  ['_5ftotal_16',['_total',['../classsoso_1_1ChronoStack.html#af538dc73d02545318b46456c1dc664c9',1,'soso::ChronoStack::_total()'],['../classsoso_1_1Chronos.html#acddc0f5b3b232cfb41639dcf605b2066',1,'soso::Chronos::_total()']]]
 ];

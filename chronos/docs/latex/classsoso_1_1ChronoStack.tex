@@ -2,16 +2,25 @@
 \label{classsoso_1_1ChronoStack}\index{soso::ChronoStack@{soso::ChronoStack}}
 
 
-{\ttfamily \#include $<$chrono.\+hpp$>$}
+소요 시간 측정 요소 관리  
+
+
+
+
+{\ttfamily \#include $<$chrono.\+h$>$}
 
 \doxysubsection*{Public 멤버 함수}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classsoso_1_1ChronoStack_a749c5878b6cc5e83c99db9aa6aed0655}{Chrono\+Stack}} (const std\+::string \&title, size\+\_\+t max\+\_\+point)
+\mbox{\hyperlink{classsoso_1_1ChronoStack_a048159cc8249dd0e426ee9688039f883}{Chrono\+Stack}} (const std\+::string \&title, size\+\_\+t max\+\_\+point)
 \item 
-void \mbox{\hyperlink{classsoso_1_1ChronoStack_aab92351ad7abc12ac033d2c907c6e543}{add\+Chrono}} (\mbox{\hyperlink{classsoso_1_1Chrono}{Chrono}} \&chrono)
+void \mbox{\hyperlink{classsoso_1_1ChronoStack_a2adf1c99be9f7b9cf4814feceb97ed0f}{add\+Chrono}} (\mbox{\hyperlink{classsoso_1_1Chrono}{Chrono}} \&chrono)
 \item 
-const std\+::string \mbox{\hyperlink{classsoso_1_1ChronoStack_a82fbd3d5a568b340b0933c47dad53f79}{to\+String}} ()
+const std\+::string \mbox{\hyperlink{classsoso_1_1ChronoStack_a5f808d4911b789e765329c43e5ecdce1}{to\+String}} ()
+\item 
+size\+\_\+t \mbox{\hyperlink{classsoso_1_1ChronoStack_aa863cefe695de5f733929defc4b0681d}{checked\+Count}} ()
+\item 
+size\+\_\+t \mbox{\hyperlink{classsoso_1_1ChronoStack_a3710dad9f46a80e216644bbfa9aa8227}{point\+Size}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Private 속성}
 \begin{DoxyCompactItemize}
@@ -20,7 +29,9 @@ std\+::string \mbox{\hyperlink{classsoso_1_1ChronoStack_a2df2a0702d78882c9cdc444
 \item 
 std\+::list$<$ \mbox{\hyperlink{classsoso_1_1Chrono}{Chrono}} $>$ \mbox{\hyperlink{classsoso_1_1ChronoStack_ae799dc1ae1c95c41fa676b1c83af0008}{\+\_\+points}}
 \item 
-size\+\_\+t \mbox{\hyperlink{classsoso_1_1ChronoStack_ac9e80d3114c4ebb0dca07b4bbe966821}{\+\_\+max\+\_\+point}} = 100
+std\+::mutex \mbox{\hyperlink{classsoso_1_1ChronoStack_ae86dff927ba6aa65e0a69ce6c7e62f95}{\+\_\+lock}}
+\item 
+size\+\_\+t \mbox{\hyperlink{classsoso_1_1ChronoStack_ac9e80d3114c4ebb0dca07b4bbe966821}{\+\_\+max\+\_\+point}}
 \item 
 struct timeval \mbox{\hyperlink{classsoso_1_1ChronoStack_af538dc73d02545318b46456c1dc664c9}{\+\_\+total}}
 \item 
@@ -31,49 +42,69 @@ size\+\_\+t \mbox{\hyperlink{classsoso_1_1ChronoStack_a2b92a61a0cf1890051416509f
 
 
 \doxysubsection{상세한 설명}
+소요 시간 측정 요소 관리 
 
 
-chrono.\+hpp 파일의 52 번째 라인에서 정의되었습니다.
+
+chrono.\+h 파일의 42 번째 라인에서 정의되었습니다.
 
 
 
 \doxysubsection{생성자 \& 소멸자 문서화}
-\mbox{\Hypertarget{classsoso_1_1ChronoStack_a749c5878b6cc5e83c99db9aa6aed0655}\label{classsoso_1_1ChronoStack_a749c5878b6cc5e83c99db9aa6aed0655}} 
+\mbox{\Hypertarget{classsoso_1_1ChronoStack_a048159cc8249dd0e426ee9688039f883}\label{classsoso_1_1ChronoStack_a048159cc8249dd0e426ee9688039f883}} 
 \index{soso::ChronoStack@{soso::ChronoStack}!ChronoStack@{ChronoStack}}
 \index{ChronoStack@{ChronoStack}!soso::ChronoStack@{soso::ChronoStack}}
 \doxysubsubsection{\texorpdfstring{ChronoStack()}{ChronoStack()}}
-{\footnotesize\ttfamily soso\+::\+Chrono\+Stack\+::\+Chrono\+Stack (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{title,  }\item[{size\+\_\+t}]{max\+\_\+point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily Chrono\+Stack\+::\+Chrono\+Stack (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{title,  }\item[{size\+\_\+t}]{max\+\_\+point }\end{DoxyParamCaption})}
 
 
 
-chrono.\+hpp 파일의 63 번째 라인에서 정의되었습니다.
+chrono.\+cpp 파일의 29 번째 라인에서 정의되었습니다.
 
 
 
 \doxysubsection{멤버 함수 문서화}
-\mbox{\Hypertarget{classsoso_1_1ChronoStack_aab92351ad7abc12ac033d2c907c6e543}\label{classsoso_1_1ChronoStack_aab92351ad7abc12ac033d2c907c6e543}} 
+\mbox{\Hypertarget{classsoso_1_1ChronoStack_a2adf1c99be9f7b9cf4814feceb97ed0f}\label{classsoso_1_1ChronoStack_a2adf1c99be9f7b9cf4814feceb97ed0f}} 
 \index{soso::ChronoStack@{soso::ChronoStack}!addChrono@{addChrono}}
 \index{addChrono@{addChrono}!soso::ChronoStack@{soso::ChronoStack}}
 \doxysubsubsection{\texorpdfstring{addChrono()}{addChrono()}}
-{\footnotesize\ttfamily void soso\+::\+Chrono\+Stack\+::add\+Chrono (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsoso_1_1Chrono}{Chrono}} \&}]{chrono }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-T\+O\+DO\+: 추후 성능 개선
+{\footnotesize\ttfamily void Chrono\+Stack\+::add\+Chrono (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsoso_1_1Chrono}{Chrono}} \&}]{chrono }\end{DoxyParamCaption})}
 
 total
 
 avg
 
-chrono.\+hpp 파일의 70 번째 라인에서 정의되었습니다.
+chrono.\+cpp 파일의 47 번째 라인에서 정의되었습니다.
 
-\mbox{\Hypertarget{classsoso_1_1ChronoStack_a82fbd3d5a568b340b0933c47dad53f79}\label{classsoso_1_1ChronoStack_a82fbd3d5a568b340b0933c47dad53f79}} 
+\mbox{\Hypertarget{classsoso_1_1ChronoStack_aa863cefe695de5f733929defc4b0681d}\label{classsoso_1_1ChronoStack_aa863cefe695de5f733929defc4b0681d}} 
+\index{soso::ChronoStack@{soso::ChronoStack}!checkedCount@{checkedCount}}
+\index{checkedCount@{checkedCount}!soso::ChronoStack@{soso::ChronoStack}}
+\doxysubsubsection{\texorpdfstring{checkedCount()}{checkedCount()}}
+{\footnotesize\ttfamily size\+\_\+t Chrono\+Stack\+::checked\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+chrono.\+cpp 파일의 39 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1ChronoStack_a3710dad9f46a80e216644bbfa9aa8227}\label{classsoso_1_1ChronoStack_a3710dad9f46a80e216644bbfa9aa8227}} 
+\index{soso::ChronoStack@{soso::ChronoStack}!pointSize@{pointSize}}
+\index{pointSize@{pointSize}!soso::ChronoStack@{soso::ChronoStack}}
+\doxysubsubsection{\texorpdfstring{pointSize()}{pointSize()}}
+{\footnotesize\ttfamily size\+\_\+t Chrono\+Stack\+::point\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+chrono.\+cpp 파일의 43 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1ChronoStack_a5f808d4911b789e765329c43e5ecdce1}\label{classsoso_1_1ChronoStack_a5f808d4911b789e765329c43e5ecdce1}} 
 \index{soso::ChronoStack@{soso::ChronoStack}!toString@{toString}}
 \index{toString@{toString}!soso::ChronoStack@{soso::ChronoStack}}
 \doxysubsubsection{\texorpdfstring{toString()}{toString()}}
-{\footnotesize\ttfamily const std\+::string soso\+::\+Chrono\+Stack\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily const std\+::string Chrono\+Stack\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-chrono.\+hpp 파일의 97 번째 라인에서 정의되었습니다.
+chrono.\+cpp 파일의 80 번째 라인에서 정의되었습니다.
 
 
 
@@ -86,7 +117,7 @@ chrono.\+hpp 파일의 97 번째 라인에서 정의되었습니다.
 
 
 
-chrono.\+hpp 파일의 60 번째 라인에서 정의되었습니다.
+chrono.\+h 파일의 51 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{classsoso_1_1ChronoStack_a2a270f29f8f9e5cc443c801265622808}\label{classsoso_1_1ChronoStack_a2a270f29f8f9e5cc443c801265622808}} 
 \index{soso::ChronoStack@{soso::ChronoStack}!\_avg@{\_avg}}
@@ -96,17 +127,27 @@ chrono.\+hpp 파일의 60 번째 라인에서 정의되었습니다.
 
 
 
-chrono.\+hpp 파일의 59 번째 라인에서 정의되었습니다.
+chrono.\+h 파일의 50 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1ChronoStack_ae86dff927ba6aa65e0a69ce6c7e62f95}\label{classsoso_1_1ChronoStack_ae86dff927ba6aa65e0a69ce6c7e62f95}} 
+\index{soso::ChronoStack@{soso::ChronoStack}!\_lock@{\_lock}}
+\index{\_lock@{\_lock}!soso::ChronoStack@{soso::ChronoStack}}
+\doxysubsubsection{\texorpdfstring{\_lock}{\_lock}}
+{\footnotesize\ttfamily std\+::mutex soso\+::\+Chrono\+Stack\+::\+\_\+lock\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+chrono.\+h 파일의 46 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{classsoso_1_1ChronoStack_ac9e80d3114c4ebb0dca07b4bbe966821}\label{classsoso_1_1ChronoStack_ac9e80d3114c4ebb0dca07b4bbe966821}} 
 \index{soso::ChronoStack@{soso::ChronoStack}!\_max\_point@{\_max\_point}}
 \index{\_max\_point@{\_max\_point}!soso::ChronoStack@{soso::ChronoStack}}
 \doxysubsubsection{\texorpdfstring{\_max\_point}{\_max\_point}}
-{\footnotesize\ttfamily size\+\_\+t soso\+::\+Chrono\+Stack\+::\+\_\+max\+\_\+point = 100\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily size\+\_\+t soso\+::\+Chrono\+Stack\+::\+\_\+max\+\_\+point\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-chrono.\+hpp 파일의 56 번째 라인에서 정의되었습니다.
+chrono.\+h 파일의 47 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{classsoso_1_1ChronoStack_ae799dc1ae1c95c41fa676b1c83af0008}\label{classsoso_1_1ChronoStack_ae799dc1ae1c95c41fa676b1c83af0008}} 
 \index{soso::ChronoStack@{soso::ChronoStack}!\_points@{\_points}}
@@ -116,7 +157,7 @@ chrono.\+hpp 파일의 56 번째 라인에서 정의되었습니다.
 
 
 
-chrono.\+hpp 파일의 55 번째 라인에서 정의되었습니다.
+chrono.\+h 파일의 45 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{classsoso_1_1ChronoStack_a2df2a0702d78882c9cdc44417aa466d8}\label{classsoso_1_1ChronoStack_a2df2a0702d78882c9cdc44417aa466d8}} 
 \index{soso::ChronoStack@{soso::ChronoStack}!\_title@{\_title}}
@@ -126,7 +167,7 @@ chrono.\+hpp 파일의 55 번째 라인에서 정의되었습니다.
 
 
 
-chrono.\+hpp 파일의 54 번째 라인에서 정의되었습니다.
+chrono.\+h 파일의 44 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{classsoso_1_1ChronoStack_af538dc73d02545318b46456c1dc664c9}\label{classsoso_1_1ChronoStack_af538dc73d02545318b46456c1dc664c9}} 
 \index{soso::ChronoStack@{soso::ChronoStack}!\_total@{\_total}}
@@ -136,10 +177,11 @@ chrono.\+hpp 파일의 54 번째 라인에서 정의되었습니다.
 
 
 
-chrono.\+hpp 파일의 58 번째 라인에서 정의되었습니다.
+chrono.\+h 파일의 49 번째 라인에서 정의되었습니다.
 
 
 
-이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
 \item 
-include/\mbox{\hyperlink{chrono_8hpp}{chrono.\+hpp}}\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{chrono_8h}{chrono.\+h}}\item 
+src/\mbox{\hyperlink{chrono_8cpp}{chrono.\+cpp}}\end{DoxyCompactItemize}

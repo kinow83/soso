@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['addchrono_16',['addChrono',['../classsoso_1_1ChronoStack.html#aab92351ad7abc12ac033d2c907c6e543',1,'soso::ChronoStack']]]
+  ['addchrono_17',['addChrono',['../classsoso_1_1ChronoStack.html#a2adf1c99be9f7b9cf4814feceb97ed0f',1,'soso::ChronoStack']]]
 ];

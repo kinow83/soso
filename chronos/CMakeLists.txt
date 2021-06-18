@@ -16,12 +16,17 @@ find_package(fmt REQUIRED)
 ###############################
 # for hpp
 ###############################
-add_library(chronos INTERFACE)
-target_sources(chronos INTERFACE chronos.hpp chrono.hpp)
+add_library(chronos SHARED)
+target_sources(chronos 
+PRIVATE
+    src/chrono.cpp
+PUBLIC 
+    include/chrono.h
+)
+
 target_include_directories (chronos
-INTERFACE
-    ${CMAKE_CURRENT_SOURCE_DIR}/include
-    ${fmt_SOURCE_DIR}/include)
+PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 # auto link library fmt
 target_link_libraries(chronos

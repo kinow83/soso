@@ -35,6 +35,7 @@ var menudata={children:[
 {text:"c",url:"functions.html#index_c"},
 {text:"d",url:"functions.html#index_d"},
 {text:"e",url:"functions.html#index_e"},
+{text:"p",url:"functions.html#index_p"},
 {text:"s",url:"functions.html#index_s"},
 {text:"t",url:"functions.html#index_t"},
 {text:"u",url:"functions.html#index_u"}]},

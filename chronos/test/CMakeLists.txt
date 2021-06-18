@@ -5,23 +5,24 @@ FetchContent_Declare(gtest
 )
 FetchContent_MakeAvailable(gtest)
 
-add_executable(chronos_unit_test
-    test_chronos.cpp)
+add_executable(chrono_unit_test
+    test_chrono.cpp)
 
 
-target_include_directories(chronos_unit_test
+target_include_directories(chrono_unit_test
 PRIVATE
     ${CMAKE_CURRENT_LIST_DIR}
-    ${chronos_SOURCE_DIR}/include
+    ${chrono_SOURCE_DIR}/include
 )
 
-target_link_libraries(chronos_unit_test
+target_link_libraries(chrono_unit_test
 PRIVATE
-    gtest_main chronos
+    gtest_main
+    chronos
 )
 
 include(GoogleTest)
-gtest_discover_tests(chronos_unit_test
+gtest_discover_tests(chrono_unit_test
   PROPERTIES
     LABELS "unit test"
 )
