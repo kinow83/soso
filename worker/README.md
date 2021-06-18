@@ -1,4 +1,4 @@
-# ModuleWorker
+# worker
 ---
 1. [doxygen](https://kinow83.github.io/ModuleWorker/html/annotated.html)
 
