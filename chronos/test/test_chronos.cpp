@@ -1,47 +1,36 @@
-#include "chronos.hpp"
+#include "chronos.h"
 #include <iostream>
 #include <unistd.h>
 
 using namespace std;
 using namespace soso;
 
-void delay(int ms) { usleep(ms); }
-
 int main(void) {
-  Chronos chronos("Test");
-  chronos.setMaxCheckPoint(5);
+  ChronosStack cstack("Test", 4);
+  Chronos chronoss[] = {
+      Chronos("factor#1"),  //
+      Chronos("factor#2"),  //
+      Chronos("factor#3"),  //
+      Chronos("factor#4"),  //
+      Chronos("factor#5"),  //
+      Chronos("factor#6"),  //
+      Chronos("factor#7"),  //
+      Chronos("factor#8"),  //
+      Chronos("factor#9"),  //
+      Chronos("factor#10"), //
+  };
 
-  chronos.checkpoint("1) check #100 ");
-  delay(100);
+  for (auto &c : chronoss) {
+    c.begin();
+    usleep(10);
+    c.end();
 
-  chronos.checkpoint("2) check #1000");
-  delay(1000);
+    cstack.addChronos(c);
+  }
 
-  chronos.checkpoint("3) check #300 ");
-  delay(300);
-
-  chronos.checkpoint("4) check #50  ");
-  delay(50);
-
-  chronos.checkpoint("5) check #500 ");
-  delay(500);
-
-  chronos.checkpoint("6) check #700 ");
-  delay(700);
-
-  chronos.checkpoint("7) check #2000");
-  delay(2000);
-
-  chronos.checkpoint();
-
-  cout << chronos.toString() << "\n";
-
-  ChronosCheckPoint p1("p1");
-  usleep(500);
-  ChronosCheckPoint p2("p2");
-
-  cout << p1.checkTimeGT(p2) << "\n";
-  cout << p1.checkTimeLT(p2) << "\n";
+  cout << cstack.toString();
+  cout << cstack.checkedCount() << endl;
+  cout << cstack.pointSize() << endl;
 
   return 0;
 }

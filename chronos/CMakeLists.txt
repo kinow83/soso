@@ -19,9 +19,9 @@ find_package(fmt REQUIRED)
 add_library(chronos SHARED)
 target_sources(chronos 
 PRIVATE
-    src/chrono.cpp
+    src/chronos.cpp
 PUBLIC 
-    include/chrono.h
+    include/chronos.h
 )
 
 target_include_directories (chronos

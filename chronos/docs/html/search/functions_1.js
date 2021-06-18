@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['begin_52',['begin',['../classsoso_1_1Chrono.html#afa622f1995e29506717f5040653052f6',1,'soso::Chrono']]]
+  ['begin_50',['begin',['../classsoso_1_1Chronos.html#a63ecb2adb3938895d792929a5e80b11e',1,'soso::Chronos']]]
 ];

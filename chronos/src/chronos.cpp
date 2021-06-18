@@ -1,32 +1,32 @@
-#include "chrono.h"
+#include "chronos.h"
 
 using namespace soso;
 
-Chrono::Chrono(const std::string &desc) {
+Chronos::Chronos(const std::string &desc) {
   _desc = desc;
   gettimeofday(&_begin, NULL);
   timerclear(&_end);
   timerclear(&_diff);
 }
 
-const std::string Chrono::desc() { //
+const std::string Chronos::desc() { //
   return _desc;
 }
 
-void Chrono::begin() { //
+void Chronos::begin() { //
   gettimeofday(&_begin, NULL);
 }
 
-void Chrono::end() { //
+void Chronos::end() { //
   gettimeofday(&_end, NULL);
   timersub(&_end, &_begin, &_diff);
 }
 
-struct timeval &Chrono::diff() { //
+struct timeval &Chronos::diff() { //
   return _diff;
 }
 
-ChronoStack::ChronoStack(const std::string &title, size_t max_point) { //
+ChronosStack::ChronosStack(const std::string &title, size_t max_point) { //
   _title = title;
   _max_point = max_point;
   if (_max_point == 0) {
@@ -36,31 +36,40 @@ ChronoStack::ChronoStack(const std::string &title, size_t max_point) { //
   timerclear(&_avg);
 }
 
-size_t ChronoStack::checkedCount() { //
+ChronosStack::ChronosStack(const ChronosStack &cs) : _lock() {
+  _title = cs._title;
+  _points = cs._points;
+  _max_point = cs._max_point;
+  _total = cs._total;
+  _avg = cs._avg;
+  _add_count = cs._add_count;
+}
+
+size_t ChronosStack::checkedCount() { //
   return _add_count;
 }
 
-size_t ChronoStack::pointSize() { //
+size_t ChronosStack::pointSize() { //
   return _points.size();
 }
 
-void ChronoStack::addChrono(Chrono &chrono) {
+void ChronosStack::addChronos(Chronos &chronos) {
   const std::lock_guard<std::mutex> lock(_lock);
 
   _add_count++;
 
   if (_points.size() > _max_point) {
     auto &last = _points.back();
-    if (timercmp(&last.diff(), &chrono.diff(), <)) {
-      _points.push_front(chrono);
+    if (timercmp(&last.diff(), &chronos.diff(), <)) {
+      _points.push_front(chronos);
       _points.pop_back();
     }
   } else {
-    _points.push_back(chrono);
+    _points.push_back(chronos);
   }
 
   // sort desc
-  _points.sort([](Chrono &a, Chrono &b) {
+  _points.sort([](Chronos &a, Chronos &b) {
     if (a.diff().tv_sec == b.diff().tv_sec) {
       return (b.diff().tv_usec < a.diff().tv_usec);
     }
@@ -68,7 +77,7 @@ void ChronoStack::addChrono(Chrono &chrono) {
   });
 
   /// total
-  timeradd(&_total, &chrono.diff(), &_total);
+  timeradd(&_total, &chronos.diff(), &_total);
 
   /// avg
   uint64_t avg_time =
@@ -77,7 +86,7 @@ void ChronoStack::addChrono(Chrono &chrono) {
   _avg.tv_usec = avg_time % 1000000;
 }
 
-const std::string ChronoStack::toString() {
+const std::string ChronosStack::toString() {
   const std::lock_guard<std::mutex> lock(_lock);
 
   std::string results = "";

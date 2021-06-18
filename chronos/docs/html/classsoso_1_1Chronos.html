@@ -74,23 +74,32 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>프로그램 시간 소요 시간 측정<br  />
-<a class="el" href="classsoso_1_1Chronos.html#a29ea9559a6e40d39f4d9d6202a67f862" title="측정 종료">checkpoint()</a>를 호출할 때마다 소요된 시간 측정 값을 저장  
+<p>소요 시간 측정 class  
  <a href="classsoso_1_1Chronos.html#details">더 자세히 ...</a></p>
 
-<p><code>#include &lt;<a class="el" href="chronos_8hpp_source.html">chronos.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="chronos_8h_source.html">chronos.h</a>&gt;</code></p>
 <div class="dynheader">
 soso::Chronos에 대한 협력 다이어그램:</div>
 <div class="dyncontent">
 <div class="center"><img src="classsoso_1_1Chronos__coll__graph.png" border="0" usemap="#soso_1_1Chronos_coll__map" alt="Collaboration graph"/></div>
 <map name="soso_1_1Chronos_coll__map" id="soso_1_1Chronos_coll__map">
-<area shape="rect" title="프로그램 시간 소요 시간 측정 checkpoint()를 호출할 때마다 소요된 시간 측정 값을 저장" alt="" coords="42,109,155,136"/>
+<area shape="rect" title="소요 시간 측정 class" alt="" coords="42,109,155,136"/>
 <area shape="rect" href="structsoso_1_1ChronosCheckPoint.html" title="소요 시간 측정 class" alt="" coords="5,5,192,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">범례</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
+<tr class="memitem:a1c4c3d91b3ada01560cfd7598caff7b6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Chronos.html#a1c4c3d91b3ada01560cfd7598caff7b6">Chronos</a> (const std::string &amp;<a class="el" href="classsoso_1_1Chronos.html#a2ba34c90276675c2e74050c9cf706e42">desc</a>)</td></tr>
+<tr class="separator:a1c4c3d91b3ada01560cfd7598caff7b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63ecb2adb3938895d792929a5e80b11e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Chronos.html#a63ecb2adb3938895d792929a5e80b11e">begin</a> ()</td></tr>
+<tr class="separator:a63ecb2adb3938895d792929a5e80b11e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add9b8cd7e22ccd7ad1874f9069de06f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Chronos.html#add9b8cd7e22ccd7ad1874f9069de06f1">end</a> ()</td></tr>
+<tr class="separator:add9b8cd7e22ccd7ad1874f9069de06f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af30b30a2631eca2bbe90a419d016373c"><td class="memItemLeft" align="right" valign="top">struct timeval &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Chronos.html#af30b30a2631eca2bbe90a419d016373c">diff</a> ()</td></tr>
+<tr class="separator:af30b30a2631eca2bbe90a419d016373c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ba34c90276675c2e74050c9cf706e42"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Chronos.html#a2ba34c90276675c2e74050c9cf706e42">desc</a> ()</td></tr>
+<tr class="separator:a2ba34c90276675c2e74050c9cf706e42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b376cc4f61246b173551d12a8184c88"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Chronos.html#a7b376cc4f61246b173551d12a8184c88">Chronos</a> ()</td></tr>
 <tr class="memdesc:a7b376cc4f61246b173551d12a8184c88"><td class="mdescLeft">&#160;</td><td class="mdescRight">TimeDiffer 생성자  <a href="classsoso_1_1Chronos.html#a7b376cc4f61246b173551d12a8184c88">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:a7b376cc4f61246b173551d12a8184c88"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -109,7 +118,7 @@ Public 멤버 함수</h2></td></tr>
 <tr class="memitem:a29ea9559a6e40d39f4d9d6202a67f862"><td class="memItemLeft" align="right" valign="top">struct timeval&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Chronos.html#a29ea9559a6e40d39f4d9d6202a67f862">checkpoint</a> ()</td></tr>
 <tr class="memdesc:a29ea9559a6e40d39f4d9d6202a67f862"><td class="mdescLeft">&#160;</td><td class="mdescRight">측정 종료  <a href="classsoso_1_1Chronos.html#a29ea9559a6e40d39f4d9d6202a67f862">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:a29ea9559a6e40d39f4d9d6202a67f862"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7a4ee93d606d185a0661c30a7e02ab1"><td class="memItemLeft" align="right" valign="top">struct timeval&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Chronos.html#af7a4ee93d606d185a0661c30a7e02ab1">checkpoint</a> (const std::string &amp;desc, bool continuous=true)</td></tr>
+<tr class="memitem:af7a4ee93d606d185a0661c30a7e02ab1"><td class="memItemLeft" align="right" valign="top">struct timeval&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Chronos.html#af7a4ee93d606d185a0661c30a7e02ab1">checkpoint</a> (const std::string &amp;<a class="el" href="classsoso_1_1Chronos.html#a2ba34c90276675c2e74050c9cf706e42">desc</a>, bool continuous=true)</td></tr>
 <tr class="memdesc:af7a4ee93d606d185a0661c30a7e02ab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">호출 시 마다 현재 시각과 이전 시간과의 차이를 기록함  <a href="classsoso_1_1Chronos.html#af7a4ee93d606d185a0661c30a7e02ab1">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:af7a4ee93d606d185a0661c30a7e02ab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a124add76f416fe09e5907654f321c93e"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Chronos.html#a124add76f416fe09e5907654f321c93e">toString</a> ()</td></tr>
@@ -118,6 +127,17 @@ Public 멤버 함수</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private 속성</h2></td></tr>
+<tr class="memitem:aeef52391473d03248f3ede07e8788e97"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Chronos.html#aeef52391473d03248f3ede07e8788e97">_desc</a></td></tr>
+<tr class="memdesc:aeef52391473d03248f3ede07e8788e97"><td class="mdescLeft">&#160;</td><td class="mdescRight">소요 시간 측정 설명  <a href="classsoso_1_1Chronos.html#aeef52391473d03248f3ede07e8788e97">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:aeef52391473d03248f3ede07e8788e97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca341e9167b021c31abde18cac89360c"><td class="memItemLeft" align="right" valign="top">struct timeval&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Chronos.html#aca341e9167b021c31abde18cac89360c">_begin</a></td></tr>
+<tr class="memdesc:aca341e9167b021c31abde18cac89360c"><td class="mdescLeft">&#160;</td><td class="mdescRight">측정 시점 시각  <a href="classsoso_1_1Chronos.html#aca341e9167b021c31abde18cac89360c">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:aca341e9167b021c31abde18cac89360c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9957ce51433c4cf5bffd84ba7468a543"><td class="memItemLeft" align="right" valign="top">struct timeval&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Chronos.html#a9957ce51433c4cf5bffd84ba7468a543">_end</a></td></tr>
+<tr class="separator:a9957ce51433c4cf5bffd84ba7468a543"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41fe70f443d31f6e7eb8d8d16911f6ac"><td class="memItemLeft" align="right" valign="top">struct timeval&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Chronos.html#a41fe70f443d31f6e7eb8d8d16911f6ac">_diff</a></td></tr>
+<tr class="memdesc:a41fe70f443d31f6e7eb8d8d16911f6ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">소요 시간 측정 값  <a href="classsoso_1_1Chronos.html#a41fe70f443d31f6e7eb8d8d16911f6ac">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a41fe70f443d31f6e7eb8d8d16911f6ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00651c562eef463354f3163b1baa9d3e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Chronos.html#a00651c562eef463354f3163b1baa9d3e">_title</a></td></tr>
 <tr class="memdesc:a00651c562eef463354f3163b1baa9d3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">시간 측정 키워드  <a href="classsoso_1_1Chronos.html#a00651c562eef463354f3163b1baa9d3e">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:a00651c562eef463354f3163b1baa9d3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -144,13 +164,34 @@ Private 속성</h2></td></tr>
 <tr class="separator:a21b35847059e3fa596ed83eea3c3829f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
-<div class="textblock"><p>프로그램 시간 소요 시간 측정<br  />
+<div class="textblock"><p>소요 시간 측정 class </p>
+<p>프로그램 시간 소요 시간 측정<br  />
 <a class="el" href="classsoso_1_1Chronos.html#a29ea9559a6e40d39f4d9d6202a67f862" title="측정 종료">checkpoint()</a>를 호출할 때마다 소요된 시간 측정 값을 저장 </p>
 
-<p class="definition"><a class="el" href="chronos_8hpp_source.html">chronos.hpp</a> 파일의 <a class="el" href="chronos_8hpp_source.html#l00093">93</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="chronos_8h_source.html">chronos.h</a> 파일의 <a class="el" href="chronos_8h_source.html#l00020">20</a> 번째 라인에서 정의되었습니다.</p>
 </div><h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
+<a id="a1c4c3d91b3ada01560cfd7598caff7b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c4c3d91b3ada01560cfd7598caff7b6">&#9670;&nbsp;</a></span>Chronos() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Chronos::Chronos </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>desc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="chronos_8cpp_source.html">chronos.cpp</a> 파일의 <a class="el" href="chronos_8cpp_source.html#l00005">5</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
 <a id="a7b376cc4f61246b173551d12a8184c88"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b376cc4f61246b173551d12a8184c88">&#9670;&nbsp;</a></span>Chronos() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b376cc4f61246b173551d12a8184c88">&#9670;&nbsp;</a></span>Chronos() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -179,7 +220,7 @@ Private 속성</h2></td></tr>
 </div>
 </div>
 <a id="adac55a084606514c4c9032c01fda083a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adac55a084606514c4c9032c01fda083a">&#9670;&nbsp;</a></span>Chronos() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adac55a084606514c4c9032c01fda083a">&#9670;&nbsp;</a></span>Chronos() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -215,6 +256,25 @@ Private 속성</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="a63ecb2adb3938895d792929a5e80b11e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63ecb2adb3938895d792929a5e80b11e">&#9670;&nbsp;</a></span>begin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Chronos::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="chronos_8cpp_source.html">chronos.cpp</a> 파일의 <a class="el" href="chronos_8cpp_source.html#l00016">16</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
 <a id="a29ea9559a6e40d39f4d9d6202a67f862"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a29ea9559a6e40d39f4d9d6202a67f862">&#9670;&nbsp;</a></span>checkpoint() <span class="overload">[1/2]</span></h2>
 
@@ -291,6 +351,63 @@ Private 속성</h2></td></tr>
 <p>avg elapsed</p>
 
 <p class="definition"><a class="el" href="chronos_8hpp_source.html">chronos.hpp</a> 파일의 <a class="el" href="chronos_8hpp_source.html#l00166">166</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a2ba34c90276675c2e74050c9cf706e42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ba34c90276675c2e74050c9cf706e42">&#9670;&nbsp;</a></span>desc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string Chronos::desc </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="chronos_8cpp_source.html">chronos.cpp</a> 파일의 <a class="el" href="chronos_8cpp_source.html#l00012">12</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="af30b30a2631eca2bbe90a419d016373c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af30b30a2631eca2bbe90a419d016373c">&#9670;&nbsp;</a></span>diff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct timeval &amp; Chronos::diff </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="chronos_8cpp_source.html">chronos.cpp</a> 파일의 <a class="el" href="chronos_8cpp_source.html#l00025">25</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="add9b8cd7e22ccd7ad1874f9069de06f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add9b8cd7e22ccd7ad1874f9069de06f1">&#9670;&nbsp;</a></span>end()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Chronos::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="chronos_8cpp_source.html">chronos.cpp</a> 파일의 <a class="el" href="chronos_8cpp_source.html#l00020">20</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -459,6 +576,32 @@ Private 속성</h2></td></tr>
 
 </div>
 </div>
+<a id="aca341e9167b021c31abde18cac89360c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca341e9167b021c31abde18cac89360c">&#9670;&nbsp;</a></span>_begin</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct timeval soso::Chronos::_begin</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>측정 시점 시각 </p>
+
+<p class="definition"><a class="el" href="chronos_8h_source.html">chronos.h</a> 파일의 <a class="el" href="chronos_8h_source.html#l00025">25</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
 <a id="a02be39853f319996a554c9d3b0a5c3c8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a02be39853f319996a554c9d3b0a5c3c8">&#9670;&nbsp;</a></span>_checked_count</h2>
 
@@ -482,6 +625,82 @@ Private 속성</h2></td></tr>
 <p>checkpoint 호출 횟수 </p>
 
 <p class="definition"><a class="el" href="chronos_8hpp_source.html">chronos.hpp</a> 파일의 <a class="el" href="chronos_8hpp_source.html#l00102">102</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="aeef52391473d03248f3ede07e8788e97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeef52391473d03248f3ede07e8788e97">&#9670;&nbsp;</a></span>_desc</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string soso::Chronos::_desc</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>소요 시간 측정 설명 </p>
+
+<p class="definition"><a class="el" href="chronos_8h_source.html">chronos.h</a> 파일의 <a class="el" href="chronos_8h_source.html#l00023">23</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a41fe70f443d31f6e7eb8d8d16911f6ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41fe70f443d31f6e7eb8d8d16911f6ac">&#9670;&nbsp;</a></span>_diff</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct timeval soso::Chronos::_diff</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>소요 시간 측정 값 </p>
+
+<p class="definition"><a class="el" href="chronos_8h_source.html">chronos.h</a> 파일의 <a class="el" href="chronos_8h_source.html#l00028">28</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a9957ce51433c4cf5bffd84ba7468a543"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9957ce51433c4cf5bffd84ba7468a543">&#9670;&nbsp;</a></span>_end</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct timeval soso::Chronos::_end</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="chronos_8h_source.html">chronos.h</a> 파일의 <a class="el" href="chronos_8h_source.html#l00026">26</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -641,8 +860,10 @@ Private 속성</h2></td></tr>
 
 </div>
 </div>
-<hr/>이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
+<hr/>이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.:<ul>
+<li>include/<a class="el" href="chronos_8h_source.html">chronos.h</a></li>
 <li>include/<a class="el" href="chronos_8hpp_source.html">chronos.hpp</a></li>
+<li>src/<a class="el" href="chronos_8cpp_source.html">chronos.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

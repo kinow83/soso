@@ -2,13 +2,12 @@
 \label{classsoso_1_1Chronos}\index{soso::Chronos@{soso::Chronos}}
 
 
-프로그램 시간 소요 시간 측정~\newline
-\mbox{\hyperlink{classsoso_1_1Chronos_a29ea9559a6e40d39f4d9d6202a67f862}{checkpoint()}}를 호출할 때마다 소요된 시간 측정 값을 저장  
+소요 시간 측정 class  
 
 
 
 
-{\ttfamily \#include $<$chronos.\+hpp$>$}
+{\ttfamily \#include $<$chronos.\+h$>$}
 
 
 
@@ -22,6 +21,16 @@ soso\+::Chronos에 대한 협력 다이어그램\+:\nopagebreak
 \doxysubsection*{Public 멤버 함수}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{classsoso_1_1Chronos_a1c4c3d91b3ada01560cfd7598caff7b6}{Chronos}} (const std\+::string \&\mbox{\hyperlink{classsoso_1_1Chronos_a2ba34c90276675c2e74050c9cf706e42}{desc}})
+\item 
+void \mbox{\hyperlink{classsoso_1_1Chronos_a63ecb2adb3938895d792929a5e80b11e}{begin}} ()
+\item 
+void \mbox{\hyperlink{classsoso_1_1Chronos_add9b8cd7e22ccd7ad1874f9069de06f1}{end}} ()
+\item 
+struct timeval \& \mbox{\hyperlink{classsoso_1_1Chronos_af30b30a2631eca2bbe90a419d016373c}{diff}} ()
+\item 
+const std\+::string \mbox{\hyperlink{classsoso_1_1Chronos_a2ba34c90276675c2e74050c9cf706e42}{desc}} ()
+\item 
 \mbox{\hyperlink{classsoso_1_1Chronos_a7b376cc4f61246b173551d12a8184c88}{Chronos}} ()
 \begin{DoxyCompactList}\small\item\em Time\+Differ 생성자 \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classsoso_1_1Chronos_adac55a084606514c4c9032c01fda083a}{Chronos}} (const std\+::string \&title)
@@ -34,13 +43,21 @@ void \mbox{\hyperlink{classsoso_1_1Chronos_aee264aad10a2be46313e52a53637ec35}{se
 \begin{DoxyCompactList}\small\item\em 시간 측정 키워드 지정 \end{DoxyCompactList}\item 
 struct timeval \mbox{\hyperlink{classsoso_1_1Chronos_a29ea9559a6e40d39f4d9d6202a67f862}{checkpoint}} ()
 \begin{DoxyCompactList}\small\item\em 측정 종료 \end{DoxyCompactList}\item 
-struct timeval \mbox{\hyperlink{classsoso_1_1Chronos_af7a4ee93d606d185a0661c30a7e02ab1}{checkpoint}} (const std\+::string \&desc, bool continuous=true)
+struct timeval \mbox{\hyperlink{classsoso_1_1Chronos_af7a4ee93d606d185a0661c30a7e02ab1}{checkpoint}} (const std\+::string \&\mbox{\hyperlink{classsoso_1_1Chronos_a2ba34c90276675c2e74050c9cf706e42}{desc}}, bool continuous=true)
 \begin{DoxyCompactList}\small\item\em 호출 시 마다 현재 시각과 이전 시간과의 차이를 기록함 \end{DoxyCompactList}\item 
 const std\+::string \mbox{\hyperlink{classsoso_1_1Chronos_a124add76f416fe09e5907654f321c93e}{to\+String}} ()
 \begin{DoxyCompactList}\small\item\em 최종 시간 측정 값 출력 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private 속성}
 \begin{DoxyCompactItemize}
 \item 
+std\+::string \mbox{\hyperlink{classsoso_1_1Chronos_aeef52391473d03248f3ede07e8788e97}{\+\_\+desc}}
+\begin{DoxyCompactList}\small\item\em 소요 시간 측정 설명 \end{DoxyCompactList}\item 
+struct timeval \mbox{\hyperlink{classsoso_1_1Chronos_aca341e9167b021c31abde18cac89360c}{\+\_\+begin}}
+\begin{DoxyCompactList}\small\item\em 측정 시점 시각 \end{DoxyCompactList}\item 
+struct timeval \mbox{\hyperlink{classsoso_1_1Chronos_a9957ce51433c4cf5bffd84ba7468a543}{\+\_\+end}}
+\item 
+struct timeval \mbox{\hyperlink{classsoso_1_1Chronos_a41fe70f443d31f6e7eb8d8d16911f6ac}{\+\_\+diff}}
+\begin{DoxyCompactList}\small\item\em 소요 시간 측정 값 \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classsoso_1_1Chronos_a00651c562eef463354f3163b1baa9d3e}{\+\_\+title}}
 \begin{DoxyCompactList}\small\item\em 시간 측정 키워드 \end{DoxyCompactList}\item 
 std\+::list$<$ \mbox{\hyperlink{structsoso_1_1ChronosCheckPoint}{Chronos\+Check\+Point}} $>$ \mbox{\hyperlink{classsoso_1_1Chronos_ab893742847e9cbacc9ae55b2d21a777e}{\+\_\+points}}
@@ -60,18 +77,30 @@ size\+\_\+t \mbox{\hyperlink{classsoso_1_1Chronos_a21b35847059e3fa596ed83eea3c38
 
 
 \doxysubsection{상세한 설명}
+소요 시간 측정 class 
+
 프로그램 시간 소요 시간 측정~\newline
 \mbox{\hyperlink{classsoso_1_1Chronos_a29ea9559a6e40d39f4d9d6202a67f862}{checkpoint()}}를 호출할 때마다 소요된 시간 측정 값을 저장 
 
-chronos.\+hpp 파일의 93 번째 라인에서 정의되었습니다.
+chronos.\+h 파일의 20 번째 라인에서 정의되었습니다.
 
 
 
 \doxysubsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{classsoso_1_1Chronos_a1c4c3d91b3ada01560cfd7598caff7b6}\label{classsoso_1_1Chronos_a1c4c3d91b3ada01560cfd7598caff7b6}} 
+\index{soso::Chronos@{soso::Chronos}!Chronos@{Chronos}}
+\index{Chronos@{Chronos}!soso::Chronos@{soso::Chronos}}
+\doxysubsubsection{\texorpdfstring{Chronos()}{Chronos()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Chronos\+::\+Chronos (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{desc }\end{DoxyParamCaption})}
+
+
+
+chronos.\+cpp 파일의 5 번째 라인에서 정의되었습니다.
+
 \mbox{\Hypertarget{classsoso_1_1Chronos_a7b376cc4f61246b173551d12a8184c88}\label{classsoso_1_1Chronos_a7b376cc4f61246b173551d12a8184c88}} 
 \index{soso::Chronos@{soso::Chronos}!Chronos@{Chronos}}
 \index{Chronos@{Chronos}!soso::Chronos@{soso::Chronos}}
-\doxysubsubsection{\texorpdfstring{Chronos()}{Chronos()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{Chronos()}{Chronos()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
 {\footnotesize\ttfamily soso\+::\+Chronos\+::\+Chronos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
@@ -85,7 +114,7 @@ chronos.\+hpp 파일의 116 번째 라인에서 정의되었습니다.
 \mbox{\Hypertarget{classsoso_1_1Chronos_adac55a084606514c4c9032c01fda083a}\label{classsoso_1_1Chronos_adac55a084606514c4c9032c01fda083a}} 
 \index{soso::Chronos@{soso::Chronos}!Chronos@{Chronos}}
 \index{Chronos@{Chronos}!soso::Chronos@{soso::Chronos}}
-\doxysubsubsection{\texorpdfstring{Chronos()}{Chronos()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\doxysubsubsection{\texorpdfstring{Chronos()}{Chronos()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
 {\footnotesize\ttfamily soso\+::\+Chronos\+::\+Chronos (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{title }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
@@ -104,6 +133,16 @@ chronos.\+hpp 파일의 122 번째 라인에서 정의되었습니다.
 
 
 \doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{classsoso_1_1Chronos_a63ecb2adb3938895d792929a5e80b11e}\label{classsoso_1_1Chronos_a63ecb2adb3938895d792929a5e80b11e}} 
+\index{soso::Chronos@{soso::Chronos}!begin@{begin}}
+\index{begin@{begin}!soso::Chronos@{soso::Chronos}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily void Chronos\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+chronos.\+cpp 파일의 16 번째 라인에서 정의되었습니다.
+
 \mbox{\Hypertarget{classsoso_1_1Chronos_a29ea9559a6e40d39f4d9d6202a67f862}\label{classsoso_1_1Chronos_a29ea9559a6e40d39f4d9d6202a67f862}} 
 \index{soso::Chronos@{soso::Chronos}!checkpoint@{checkpoint}}
 \index{checkpoint@{checkpoint}!soso::Chronos@{soso::Chronos}}
@@ -143,6 +182,36 @@ total elapsed
 avg elapsed
 
 chronos.\+hpp 파일의 166 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1Chronos_a2ba34c90276675c2e74050c9cf706e42}\label{classsoso_1_1Chronos_a2ba34c90276675c2e74050c9cf706e42}} 
+\index{soso::Chronos@{soso::Chronos}!desc@{desc}}
+\index{desc@{desc}!soso::Chronos@{soso::Chronos}}
+\doxysubsubsection{\texorpdfstring{desc()}{desc()}}
+{\footnotesize\ttfamily const std\+::string Chronos\+::desc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+chronos.\+cpp 파일의 12 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1Chronos_af30b30a2631eca2bbe90a419d016373c}\label{classsoso_1_1Chronos_af30b30a2631eca2bbe90a419d016373c}} 
+\index{soso::Chronos@{soso::Chronos}!diff@{diff}}
+\index{diff@{diff}!soso::Chronos@{soso::Chronos}}
+\doxysubsubsection{\texorpdfstring{diff()}{diff()}}
+{\footnotesize\ttfamily struct timeval \& Chronos\+::diff (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+chronos.\+cpp 파일의 25 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1Chronos_add9b8cd7e22ccd7ad1874f9069de06f1}\label{classsoso_1_1Chronos_add9b8cd7e22ccd7ad1874f9069de06f1}} 
+\index{soso::Chronos@{soso::Chronos}!end@{end}}
+\index{end@{end}!soso::Chronos@{soso::Chronos}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily void Chronos\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+chronos.\+cpp 파일의 20 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{classsoso_1_1Chronos_ad6ab181b5289543d7ef625d794bc0007}\label{classsoso_1_1Chronos_ad6ab181b5289543d7ef625d794bc0007}} 
 \index{soso::Chronos@{soso::Chronos}!setMaxCheckPoint@{setMaxCheckPoint}}
@@ -235,6 +304,20 @@ chronos.\+hpp 파일의 239 번째 라인에서 정의되었습니다.
 
 chronos.\+hpp 파일의 104 번째 라인에서 정의되었습니다.
 
+\mbox{\Hypertarget{classsoso_1_1Chronos_aca341e9167b021c31abde18cac89360c}\label{classsoso_1_1Chronos_aca341e9167b021c31abde18cac89360c}} 
+\index{soso::Chronos@{soso::Chronos}!\_begin@{\_begin}}
+\index{\_begin@{\_begin}!soso::Chronos@{soso::Chronos}}
+\doxysubsubsection{\texorpdfstring{\_begin}{\_begin}}
+{\footnotesize\ttfamily struct timeval soso\+::\+Chronos\+::\+\_\+begin\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+측정 시점 시각 
+
+
+
+chronos.\+h 파일의 25 번째 라인에서 정의되었습니다.
+
 \mbox{\Hypertarget{classsoso_1_1Chronos_a02be39853f319996a554c9d3b0a5c3c8}\label{classsoso_1_1Chronos_a02be39853f319996a554c9d3b0a5c3c8}} 
 \index{soso::Chronos@{soso::Chronos}!\_checked\_count@{\_checked\_count}}
 \index{\_checked\_count@{\_checked\_count}!soso::Chronos@{soso::Chronos}}
@@ -248,6 +331,44 @@ checkpoint 호출 횟수
 
 
 chronos.\+hpp 파일의 102 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1Chronos_aeef52391473d03248f3ede07e8788e97}\label{classsoso_1_1Chronos_aeef52391473d03248f3ede07e8788e97}} 
+\index{soso::Chronos@{soso::Chronos}!\_desc@{\_desc}}
+\index{\_desc@{\_desc}!soso::Chronos@{soso::Chronos}}
+\doxysubsubsection{\texorpdfstring{\_desc}{\_desc}}
+{\footnotesize\ttfamily std\+::string soso\+::\+Chronos\+::\+\_\+desc\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+소요 시간 측정 설명 
+
+
+
+chronos.\+h 파일의 23 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1Chronos_a41fe70f443d31f6e7eb8d8d16911f6ac}\label{classsoso_1_1Chronos_a41fe70f443d31f6e7eb8d8d16911f6ac}} 
+\index{soso::Chronos@{soso::Chronos}!\_diff@{\_diff}}
+\index{\_diff@{\_diff}!soso::Chronos@{soso::Chronos}}
+\doxysubsubsection{\texorpdfstring{\_diff}{\_diff}}
+{\footnotesize\ttfamily struct timeval soso\+::\+Chronos\+::\+\_\+diff\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+소요 시간 측정 값 
+
+
+
+chronos.\+h 파일의 28 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1Chronos_a9957ce51433c4cf5bffd84ba7468a543}\label{classsoso_1_1Chronos_a9957ce51433c4cf5bffd84ba7468a543}} 
+\index{soso::Chronos@{soso::Chronos}!\_end@{\_end}}
+\index{\_end@{\_end}!soso::Chronos@{soso::Chronos}}
+\doxysubsubsection{\texorpdfstring{\_end}{\_end}}
+{\footnotesize\ttfamily struct timeval soso\+::\+Chronos\+::\+\_\+end\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+chronos.\+h 파일의 26 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{classsoso_1_1Chronos_a89af7955e4ee52eff1b4b9ece9eaa37d}\label{classsoso_1_1Chronos_a89af7955e4ee52eff1b4b9ece9eaa37d}} 
 \index{soso::Chronos@{soso::Chronos}!\_long\_time\_points@{\_long\_time\_points}}
@@ -335,6 +456,8 @@ chronos.\+hpp 파일의 106 번째 라인에서 정의되었습니다.
 
 
 
-이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
 \item 
-include/\mbox{\hyperlink{chronos_8hpp}{chronos.\+hpp}}\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{chronos_8h}{chronos.\+h}}\item 
+include/\mbox{\hyperlink{chronos_8hpp}{chronos.\+hpp}}\item 
+src/\mbox{\hyperlink{chronos_8cpp}{chronos.\+cpp}}\end{DoxyCompactItemize}
