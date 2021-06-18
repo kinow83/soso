@@ -12,7 +12,7 @@
 \doxysubsection*{Public 멤버 함수}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classsoso_1_1ChronosStack_af9f8949036c2ba30f3932f7c67a78bdb}{Chronos\+Stack}} (const std\+::string \&title, size\+\_\+t max\+\_\+point)
+\mbox{\hyperlink{classsoso_1_1ChronosStack_af9f8949036c2ba30f3932f7c67a78bdb}{Chronos\+Stack}} (const std\+::string \&\mbox{\hyperlink{classsoso_1_1ChronosStack_aa0d722b98f20ead281415c6795aa5799}{title}}, size\+\_\+t max\+\_\+point)
 \begin{DoxyCompactList}\small\item\em Chrono\+Stack 생성자 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classsoso_1_1ChronosStack_a7989c46c5bbae9ebaef99312da2e7c72}{add\+Chronos}} (\mbox{\hyperlink{classsoso_1_1Chronos}{Chronos}} \&chronos)
 \begin{DoxyCompactList}\small\item\em 시간 측정 값을 stack에 추가 (thread-\/safe) \end{DoxyCompactList}\item 
@@ -23,6 +23,16 @@ const std\+::string \mbox{\hyperlink{classsoso_1_1ChronosStack_a5adcb0043127a058
 size\+\_\+t \mbox{\hyperlink{classsoso_1_1ChronosStack_a6dfde382e02dfbdb0c3fd9e08fac1350}{checked\+Count}} ()
 \item 
 size\+\_\+t \mbox{\hyperlink{classsoso_1_1ChronosStack_a64aa963f0d9267af54bf59547f5d7cbd}{point\+Size}} ()
+\item 
+void \mbox{\hyperlink{classsoso_1_1ChronosStack_ac6883e83ca8ca58052216c4a98912fb2}{monitoring}} (std\+::function$<$ void(\mbox{\hyperlink{classsoso_1_1ChronosStack}{Chronos\+Stack}} \&)$>$ f)
+\item 
+std\+::list$<$ \mbox{\hyperlink{classsoso_1_1Chronos}{Chronos}} $>$ \& \mbox{\hyperlink{classsoso_1_1ChronosStack_a351b1b6bf2fc54cbf0d0b12bb89af47c}{get\+Points}} ()
+\item 
+const std\+::string \mbox{\hyperlink{classsoso_1_1ChronosStack_aa0d722b98f20ead281415c6795aa5799}{title}} ()
+\item 
+struct timeval \mbox{\hyperlink{classsoso_1_1ChronosStack_ab9932baac16a82903a1168f2c491fdcb}{get\+Total}} ()
+\item 
+struct timeval \mbox{\hyperlink{classsoso_1_1ChronosStack_a94d56df6d99007bf565600ca962a2bd5}{get\+Avg}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Private 속성}
 \begin{DoxyCompactItemize}
@@ -118,6 +128,46 @@ chronos.\+cpp 파일의 56 번째 라인에서 정의되었습니다.
 
 chronos.\+cpp 파일의 48 번째 라인에서 정의되었습니다.
 
+\mbox{\Hypertarget{classsoso_1_1ChronosStack_a94d56df6d99007bf565600ca962a2bd5}\label{classsoso_1_1ChronosStack_a94d56df6d99007bf565600ca962a2bd5}} 
+\index{soso::ChronosStack@{soso::ChronosStack}!getAvg@{getAvg}}
+\index{getAvg@{getAvg}!soso::ChronosStack@{soso::ChronosStack}}
+\doxysubsubsection{\texorpdfstring{getAvg()}{getAvg()}}
+{\footnotesize\ttfamily struct timeval Chronos\+Stack\+::get\+Avg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+chronos.\+cpp 파일의 131 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1ChronosStack_a351b1b6bf2fc54cbf0d0b12bb89af47c}\label{classsoso_1_1ChronosStack_a351b1b6bf2fc54cbf0d0b12bb89af47c}} 
+\index{soso::ChronosStack@{soso::ChronosStack}!getPoints@{getPoints}}
+\index{getPoints@{getPoints}!soso::ChronosStack@{soso::ChronosStack}}
+\doxysubsubsection{\texorpdfstring{getPoints()}{getPoints()}}
+{\footnotesize\ttfamily std\+::list$<$ \mbox{\hyperlink{classsoso_1_1Chronos}{Chronos}} $>$ \& Chronos\+Stack\+::get\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+chronos.\+cpp 파일의 119 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1ChronosStack_ab9932baac16a82903a1168f2c491fdcb}\label{classsoso_1_1ChronosStack_ab9932baac16a82903a1168f2c491fdcb}} 
+\index{soso::ChronosStack@{soso::ChronosStack}!getTotal@{getTotal}}
+\index{getTotal@{getTotal}!soso::ChronosStack@{soso::ChronosStack}}
+\doxysubsubsection{\texorpdfstring{getTotal()}{getTotal()}}
+{\footnotesize\ttfamily struct timeval Chronos\+Stack\+::get\+Total (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+chronos.\+cpp 파일의 127 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1ChronosStack_ac6883e83ca8ca58052216c4a98912fb2}\label{classsoso_1_1ChronosStack_ac6883e83ca8ca58052216c4a98912fb2}} 
+\index{soso::ChronosStack@{soso::ChronosStack}!monitoring@{monitoring}}
+\index{monitoring@{monitoring}!soso::ChronosStack@{soso::ChronosStack}}
+\doxysubsubsection{\texorpdfstring{monitoring()}{monitoring()}}
+{\footnotesize\ttfamily void Chronos\+Stack\+::monitoring (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(\mbox{\hyperlink{classsoso_1_1ChronosStack}{Chronos\+Stack}} \&)$>$}]{f }\end{DoxyParamCaption})}
+
+
+
+chronos.\+cpp 파일의 114 번째 라인에서 정의되었습니다.
+
 \mbox{\Hypertarget{classsoso_1_1ChronosStack_a64aa963f0d9267af54bf59547f5d7cbd}\label{classsoso_1_1ChronosStack_a64aa963f0d9267af54bf59547f5d7cbd}} 
 \index{soso::ChronosStack@{soso::ChronosStack}!pointSize@{pointSize}}
 \index{pointSize@{pointSize}!soso::ChronosStack@{soso::ChronosStack}}
@@ -127,6 +177,16 @@ chronos.\+cpp 파일의 48 번째 라인에서 정의되었습니다.
 
 
 chronos.\+cpp 파일의 52 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1ChronosStack_aa0d722b98f20ead281415c6795aa5799}\label{classsoso_1_1ChronosStack_aa0d722b98f20ead281415c6795aa5799}} 
+\index{soso::ChronosStack@{soso::ChronosStack}!title@{title}}
+\index{title@{title}!soso::ChronosStack@{soso::ChronosStack}}
+\doxysubsubsection{\texorpdfstring{title()}{title()}}
+{\footnotesize\ttfamily const std\+::string Chronos\+Stack\+::title (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+chronos.\+cpp 파일의 123 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{classsoso_1_1ChronosStack_a5adcb0043127a058f484a015d8b0b61a}\label{classsoso_1_1ChronosStack_a5adcb0043127a058f484a015d8b0b61a}} 
 \index{soso::ChronosStack@{soso::ChronosStack}!toString@{toString}}

@@ -110,3 +110,24 @@ const std::string ChronosStack::toString() {
   }
   return results;
 }
+
+void ChronosStack::monitoring(std::function<void(ChronosStack &)> f) {
+  const std::lock_guard<std::mutex> lock(_lock);
+  f(*this);
+}
+
+std::list<Chronos> &ChronosStack::getPoints() { //
+  return _points;
+}
+
+const std::string ChronosStack::title() { //
+  return _title;
+}
+
+struct timeval ChronosStack::getTotal() {
+  return _total;
+}
+
+struct timeval ChronosStack::getAvg() {
+  return _avg;
+}

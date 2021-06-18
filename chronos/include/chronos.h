@@ -67,6 +67,11 @@ public:
   const std::string toString();
   size_t checkedCount();
   size_t pointSize();
+  void monitoring(std::function<void(ChronosStack &)> f);
+  std::list<Chronos> &getPoints();
+  const std::string title();
+  struct timeval getTotal();
+  struct timeval getAvg();
 };
 
 }; // namespace soso

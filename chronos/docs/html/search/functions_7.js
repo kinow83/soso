@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tostring_68',['toString',['../classsoso_1_1ChronosStack.html#a5adcb0043127a058f484a015d8b0b61a',1,'soso::ChronosStack::toString()'],['../classsoso_1_1Chronos.html#a124add76f416fe09e5907654f321c93e',1,'soso::Chronos::toString()']]]
+  ['pointsize_72',['pointSize',['../classsoso_1_1ChronosStack.html#a64aa963f0d9267af54bf59547f5d7cbd',1,'soso::ChronosStack']]]
 ];
