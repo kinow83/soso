@@ -1,0 +1,2559 @@
+\hypertarget{ieee80211__elements_8h}{}\doxysection{include/ieee80211\+\_\+elements.h 파일 참조}
+\label{ieee80211__elements_8h}\index{include/ieee80211\_elements.h@{include/ieee80211\_elements.h}}
+이 그래프는 이 파일을 직/간접적으로 include 하는 파일들을 보여줍니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ieee80211__elements_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{매크로}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a18488b85ed34e9816900461c4ae43caf}{wlan\+\_\+tag\+\_\+ssid}}~0
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a229f73946b4d2be351939b472ef835b1}{wlan\+\_\+tag\+\_\+supp\+\_\+rates}}~1
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_aca46d027df0c3b2a33c03e3201078bb8}{wlan\+\_\+tag\+\_\+ds\+\_\+params}}~3
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_af3d0620765197cc29b17ad4ca13fe176}{wlan\+\_\+tag\+\_\+cf\+\_\+params}}~4
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_ad906049d6c4b1786386544e68ca7e169}{wlan\+\_\+tag\+\_\+tim}}~5
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_af683e1f5e692770be026d762cc11cb66}{wlan\+\_\+tag\+\_\+ibss\+\_\+params}}~6
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_ad7b6dba3dc2a4543354ed5ec96be94c3}{wlan\+\_\+tag\+\_\+country}}~7
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_adbdf84824a1fba1a0e903f6a6a7e8c5e}{wlan\+\_\+tag\+\_\+request}}~10
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a66735666d354a030c70230fb105a6a76}{wlan\+\_\+tag\+\_\+bss\+\_\+load}}~11
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a63b45a07f5d676838e6cd49441af05cc}{wlan\+\_\+tag\+\_\+edca\+\_\+param\+\_\+set}}~12
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_abd7194d8bf70028aeddb5b302342dbe1}{wlan\+\_\+tag\+\_\+tspec}}~13
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a15a96d11dc99c2d8c2bd39dd76aa1090}{wlan\+\_\+tag\+\_\+tclas}}~14
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a7aecb829671a6d177326e022b99a4479}{wlan\+\_\+tag\+\_\+schedule}}~15
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_af5fc98f90090d70b0362f76556e25983}{wlan\+\_\+tag\+\_\+challenge}}~16
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a6ec29d3b93c3f056aea41d4da86bd315}{wlan\+\_\+tag\+\_\+pwr\+\_\+constraint}}~32
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a1c50627bf68d187f2d35d21d6a496ad4}{wlan\+\_\+tag\+\_\+pwr\+\_\+capability}}~33
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a3041f2e8815a3d41e8cf10c60791fd79}{wlan\+\_\+tag\+\_\+tpc\+\_\+request}}~34
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a9df1392f3430091195dabe501037cde0}{wlan\+\_\+tag\+\_\+tpc\+\_\+report}}~35
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_abce61a0104e55839d62d5074093458f8}{wlan\+\_\+tag\+\_\+supported\+\_\+channels}}~36
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a7669eff17e49a615485f74847fde94a6}{wlan\+\_\+tag\+\_\+channel\+\_\+switch}}~37
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a451a082266721659fc54ecd30231a748}{wlan\+\_\+tag\+\_\+measure\+\_\+request}}~38
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a66a5c9e04208de3eaa8032fd7cf66a70}{wlan\+\_\+tag\+\_\+measure\+\_\+report}}~39
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a7af5ef7afdd1ec6a601eb1c6dcc6948c}{wlan\+\_\+tag\+\_\+quiet}}~40
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a33679efce3b2c0b4be3b19b20a536eb9}{wlan\+\_\+tag\+\_\+ibss\+\_\+dfs}}~41
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_ab49655e50ac643736989bea9e9222920}{wlan\+\_\+tag\+\_\+erp\+\_\+info}}~42
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a70d65750f2a0bdd15c777a3fb7d4fe20}{wlan\+\_\+tag\+\_\+ts\+\_\+delay}}~43
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a12fc50adfb61041e62352e03830ca3a9}{wlan\+\_\+tag\+\_\+tclas\+\_\+processing}}~44
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a21780f7fc051fa39bd6de56e3ce99090}{wlan\+\_\+tag\+\_\+ht\+\_\+cap}}~45
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a8c9a306cd337630dbe2cb6097a16269a}{wlan\+\_\+tag\+\_\+qos}}~46
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a47065875efab169899fd4dbcb2b03d97}{wlan\+\_\+tag\+\_\+rsn}}~48
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_ada0f599f27a946ac1bb1f5ea0d97f99e}{wlan\+\_\+tag\+\_\+ext\+\_\+supp\+\_\+rates}}~50
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a8858665f4a41d7f69fe88c62d64af4f7}{wlan\+\_\+tag\+\_\+ap\+\_\+channel\+\_\+report}}~51
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a0a2ad8e68dc54fb7c0eb80e03eacdb41}{wlan\+\_\+tag\+\_\+neighbor\+\_\+report}}~52
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a85b9e3454200cef63094c7c7e91da031}{wlan\+\_\+tag\+\_\+rcpi}}~53
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a4acf8bfedf600f932328087726ef651f}{wlan\+\_\+tag\+\_\+mobility\+\_\+domain}}~54
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a1b9ec34f042e09fe61a3f9bf0f9c4e42}{wlan\+\_\+tag\+\_\+fast\+\_\+bss\+\_\+transition}}~55
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_aff5d08e4e60acbea444cb77a2f857c0e}{wlan\+\_\+tag\+\_\+timeout\+\_\+interval}}~56
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a150526db8dc10b70177a23f6273cd108}{wlan\+\_\+tag\+\_\+ric\+\_\+data}}~57
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a1cbf94603d43abe6386cfbd591573586}{wlan\+\_\+tag\+\_\+dse\+\_\+registered\+\_\+location}}~58
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a7644283ccf13b28bdaf71566a55bb880}{wlan\+\_\+tag\+\_\+supported\+\_\+operating\+\_\+classes}}~59
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a8f997db4b14c0314fafbc87a82600423}{wlan\+\_\+tag\+\_\+ext\+\_\+chanswitch\+\_\+ann}}~60
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_aee1c1a319137e90c91efcb1a650eaa01}{wlan\+\_\+tag\+\_\+ht\+\_\+operation}}~61
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a666cf7d6d9709f69bb4159b489e3c68f}{wlan\+\_\+tag\+\_\+secondary\+\_\+channel\+\_\+offset}}~62
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a30b1e71ab4ec0f9af261c97a21f307b9}{wlan\+\_\+tag\+\_\+bss\+\_\+average\+\_\+access\+\_\+delay}}~63
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_ae3e05a72110481e454a98cee7782b577}{wlan\+\_\+tag\+\_\+antenna}}~64
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a93a87b0e5389cb586256e73bec6bcfd5}{wlan\+\_\+tag\+\_\+rsni}}~65
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_af0311bdd69748ad0e82a5f8fd3106106}{wlan\+\_\+tag\+\_\+measurement\+\_\+pilot\+\_\+transmission}}~66
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a51a67929af7017d4536549bee2d3f4de}{wlan\+\_\+tag\+\_\+bss\+\_\+available\+\_\+adm\+\_\+capa}}~67
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a5ad2027b375d1b911b0a8ef8bb40923a}{wlan\+\_\+tag\+\_\+bss\+\_\+ac\+\_\+access\+\_\+delay}}~68 /$\ast$ note\+: also used by wapi $\ast$/
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a875cc49eabff89987611f77bb66f8d94}{wlan\+\_\+tag\+\_\+time\+\_\+advertisement}}~69
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a348f770b78aa12cc6966e477624d1905}{wlan\+\_\+tag\+\_\+rrm\+\_\+enabled\+\_\+capabilities}}~70
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a3fec5098532e70526661d425568cd119}{wlan\+\_\+tag\+\_\+multiple\+\_\+bssid}}~71
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_ac8db7333e9711c049c7395fa0fc9e69a}{wlan\+\_\+tag\+\_\+20\+\_\+40\+\_\+bss\+\_\+coexistence}}~72
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a9160d1c3d24a90f09ee3f6343f77361a}{wlan\+\_\+tag\+\_\+20\+\_\+40\+\_\+bss\+\_\+intolerant}}~73
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a15d68d1d1834fece8062d451fd17a686}{wlan\+\_\+tag\+\_\+overlapping\+\_\+bss\+\_\+scan\+\_\+params}}~74
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a8f812dfa82d7f84ea139299a2c73e754}{wlan\+\_\+tag\+\_\+ric\+\_\+descriptor}}~75
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_aa8f5568e3efeecb78df1e1d3a5c9b25e}{wlan\+\_\+tag\+\_\+mmie}}~76
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a756e8d7145fa0eaf6576f3cc67a049ca}{wlan\+\_\+tag\+\_\+event\+\_\+request}}~78
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_aef4a1b64dd5acf74469ec79891e6bdc0}{wlan\+\_\+tag\+\_\+event\+\_\+report}}~79
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a2058cef143bddad243c8764f8b674b69}{wlan\+\_\+tag\+\_\+diagnostic\+\_\+request}}~80
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_aa02ea14c0300d074f8447ac8663df466}{wlan\+\_\+tag\+\_\+diagnostic\+\_\+report}}~81
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_afb03cf8ee3f914afd92b3e767fc6b8d2}{wlan\+\_\+tag\+\_\+location\+\_\+parameters}}~82
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_af0d7d983cce02d8a8885983921e54c0c}{wlan\+\_\+tag\+\_\+nontransmitted\+\_\+bssid\+\_\+capa}}~83
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a8c40dae9efe58a75716f31025309ba0c}{wlan\+\_\+tag\+\_\+ssid\+\_\+list}}~84
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a53c3a25a324b1dbec18c92754e39d0bf}{wlan\+\_\+tag\+\_\+multiple\+\_\+bssid\+\_\+index}}~85
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_ae7572ee5b478579dfcc71dc61d523c3f}{wlan\+\_\+tag\+\_\+fms\+\_\+descriptor}}~86
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a58126768ce21fdf3ea62f7cccae10300}{wlan\+\_\+tag\+\_\+fms\+\_\+request}}~87
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a4af1e63a2b676077ba9a93b234561587}{wlan\+\_\+tag\+\_\+fms\+\_\+response}}~88
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a86782977629e1c3302fc5272509f55f4}{wlan\+\_\+tag\+\_\+qos\+\_\+traffic\+\_\+capability}}~89
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a5f60856e357c7bf8fe22d80c6890d19e}{wlan\+\_\+tag\+\_\+bss\+\_\+max\+\_\+idle\+\_\+period}}~90
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_af28985617d83364c58cdddfdb9d48423}{wlan\+\_\+tag\+\_\+tfs\+\_\+req}}~91
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_af465c13849c231fe32b5de815a86c1b9}{wlan\+\_\+tag\+\_\+tfs\+\_\+resp}}~92
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a70630539e089aad9b8e59931dd835eac}{wlan\+\_\+tag\+\_\+wnmsleep}}~93
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_ac46bac28b5637ce2eeb6137e89d7b615}{wlan\+\_\+tag\+\_\+tim\+\_\+broadcast\+\_\+request}}~94
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_ad1818bd2527d8fbac1fdbbefbdfd085c}{wlan\+\_\+tag\+\_\+tim\+\_\+broadcast\+\_\+response}}~95
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_afb9325cf88690245eb9d9c0579975fcf}{wlan\+\_\+tag\+\_\+collocated\+\_\+interference\+\_\+report}}~96
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a3aec3c21a6e468107808f013880e5434}{wlan\+\_\+tag\+\_\+channel\+\_\+usage}}~97
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_ae27384f986defed08686161f111e5478}{wlan\+\_\+tag\+\_\+time\+\_\+zone}}~98
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_aa45d37d6cc5f3106e135ada23d7f70e9}{wlan\+\_\+tag\+\_\+dms\+\_\+request}}~99
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a0164e8880422ca8ccfe15c02fdb8e53c}{wlan\+\_\+tag\+\_\+dms\+\_\+response}}~100
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_afd362569249d8c563f1badd9d9046290}{wlan\+\_\+tag\+\_\+link\+\_\+id}}~101
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a3b19506461f14df84c04f58f7513af8e}{wlan\+\_\+tag\+\_\+wakeup\+\_\+schedule}}~102
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_aa220c16c473a0d460c22b0a0c2cf9027}{wlan\+\_\+tag\+\_\+channel\+\_\+switch\+\_\+timing}}~104
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a5a943cfa6a512c8f8cff42c1456d1822}{wlan\+\_\+tag\+\_\+pti\+\_\+control}}~105
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a39516ad40319e7f92e73f0223af3aa9d}{wlan\+\_\+tag\+\_\+tpu\+\_\+buffer\+\_\+status}}~106
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a1e482200dad166d435dcac0bda6edb68}{wlan\+\_\+tag\+\_\+interworking}}~107
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a12141a924d3d10de5246ea92922b0898}{wlan\+\_\+tag\+\_\+adv\+\_\+proto}}~108
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_ab2212d8a2c08727c61f55aacc6e71bbd}{wlan\+\_\+tag\+\_\+expedited\+\_\+bandwidth\+\_\+req}}~109
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a662e633eb0615c14d4317bf479eced26}{wlan\+\_\+tag\+\_\+qos\+\_\+map\+\_\+set}}~110
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a4bd0ac74d3a27c9e4259b19ca2ff6ece}{wlan\+\_\+tag\+\_\+roaming\+\_\+consortium}}~111
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a550abfbb0bf517baf18763d7b7ea49b6}{wlan\+\_\+tag\+\_\+emergency\+\_\+alert\+\_\+id}}~112
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a850e48fbe10e57594da829d5b65c4d77}{wlan\+\_\+tag\+\_\+mesh\+\_\+config}}~113
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_ab06fcba07af9e7fe88d75456f057d7e2}{wlan\+\_\+tag\+\_\+mesh\+\_\+id}}~114
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_ad3f7519c5ac8f68c420ba9e51c2a84b8}{wlan\+\_\+tag\+\_\+mesh\+\_\+link\+\_\+metric\+\_\+report}}~115
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_ad7f50b7944698fe15b0cd891548889bf}{wlan\+\_\+tag\+\_\+congestion\+\_\+notification}}~116
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_ab28c20878f1f1e13c7f17ec870bed23a}{wlan\+\_\+tag\+\_\+peer\+\_\+mgmt}}~117
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a62b0e4c6507a527a08954075bd549386}{wlan\+\_\+tag\+\_\+mesh\+\_\+channel\+\_\+switch\+\_\+parameters}}~118
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a1f96a95dda63eec3832179a84be7e140}{wlan\+\_\+tag\+\_\+mesh\+\_\+awake\+\_\+window}}~119
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_abaf0d9791e1d26e6159e8d726607c1d1}{wlan\+\_\+tag\+\_\+beacon\+\_\+timing}}~120
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_ae5b2c21ad3eff1322d2e1e54d37730a7}{wlan\+\_\+tag\+\_\+mccaop\+\_\+setup\+\_\+request}}~121
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_ae28abf05a10825cc835f3c63faa8ba2d}{wlan\+\_\+tag\+\_\+mccaop\+\_\+setup\+\_\+reply}}~122
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a5847f5d676f4caf0ac1f3ea81ff77a98}{wlan\+\_\+tag\+\_\+mccaop\+\_\+advertisement}}~123
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a24b9e8894a4c53a963716fa1971ae82d}{wlan\+\_\+tag\+\_\+mccaop\+\_\+teardown}}~124
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_ae76add47c3d1f49e01ffc4b094d79086}{wlan\+\_\+tag\+\_\+gann}}~125
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a5013640559cbb310c3d3b35fec96422d}{wlan\+\_\+tag\+\_\+rann}}~126
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a5416ca97d67bd373984e2d73f265230f}{wlan\+\_\+tag\+\_\+ext\+\_\+capab}}~127
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_ad0f5875f2fccef11b8677c58499752a4}{wlan\+\_\+tag\+\_\+preq}}~130
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_ac9e0e5fddc90399b784857ba22833964}{wlan\+\_\+tag\+\_\+prep}}~131
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a162deb0655c5af513d80c5ed49763c97}{wlan\+\_\+tag\+\_\+perr}}~132
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_ada8731fa8158bf98bcd89a0440dd9be8}{wlan\+\_\+tag\+\_\+pxu}}~137
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_af91084be9fd132bc28ca2d358253618f}{wlan\+\_\+tag\+\_\+pxuc}}~138
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a444dc13fce0f1701aa557e613ec2ae97}{wlan\+\_\+tag\+\_\+ampe}}~139
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a59de3f0782999729dbc51be2430b8fba}{wlan\+\_\+tag\+\_\+mic}}~140
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a960b2fac71fa884d1e1f8fbcbe8df7bf}{wlan\+\_\+tag\+\_\+destination\+\_\+uri}}~141
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_ab137107002393f01c6e0261615721e75}{wlan\+\_\+tag\+\_\+u\+\_\+apsd\+\_\+coex}}~142
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a0b5f1dd343d2767933885c465fde4247}{wlan\+\_\+tag\+\_\+dmg\+\_\+wakeup\+\_\+schedule}}~143
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a2623c0c3b81755d80f7ba30fec6ce30c}{wlan\+\_\+tag\+\_\+extended\+\_\+schedule}}~144
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a72868be3f4af4d0156ecf95f92b2b48a}{wlan\+\_\+tag\+\_\+sta\+\_\+availability}}~145
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a271e8951b4f1e94baf0af97536150e54}{wlan\+\_\+tag\+\_\+dmg\+\_\+tspec}}~146
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_aa109eeb0fdedba07a82ed998ceee96e5}{wlan\+\_\+tag\+\_\+next\+\_\+dmg\+\_\+ati}}~147
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_ac64d004801e51d8a0619265fa80ad675}{wlan\+\_\+tag\+\_\+dmg\+\_\+capabilities}}~148
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a7afb3abb12226725a812ca6c7ed10c85}{wlan\+\_\+tag\+\_\+dmg\+\_\+operation}}~151
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_aec9cccf39d6c8a8ac80479ca47ecb816}{wlan\+\_\+tag\+\_\+dmg\+\_\+bss\+\_\+parameter\+\_\+change}}~152
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_acbbd9640c25218a11a6879c66e00b57d}{wlan\+\_\+tag\+\_\+dmg\+\_\+beam\+\_\+refinement}}~153
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a0f2d9c42516c82336f4c4b3c477b9473}{wlan\+\_\+tag\+\_\+channel\+\_\+measurement\+\_\+feedback}}~154
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_ab036622d978067524da5b47e77528745}{wlan\+\_\+tag\+\_\+cckm}}~156
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_ab4ef9a6eb6f9e6cdb710ddfdf9e75e74}{wlan\+\_\+tag\+\_\+awake\+\_\+window}}~157
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_ab0cc15d14bbdddc93a21236e050102b0}{wlan\+\_\+tag\+\_\+multi\+\_\+band}}~158
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a30189fa1d8583021a901fb99d05d3450}{wlan\+\_\+tag\+\_\+addba\+\_\+extension}}~159
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_ab67ed66f5830549f300657d146183f4d}{wlan\+\_\+tag\+\_\+nextpcp\+\_\+list}}~160
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a4b76f867d6ac48e5910f6777f9e2111a}{wlan\+\_\+tag\+\_\+pcp\+\_\+handover}}~161
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a5bb148103eacc89c90fcaaa0a1495290}{wlan\+\_\+tag\+\_\+dmg\+\_\+link\+\_\+margin}}~162
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a08a028ef4ead37c80c002d65c9e4f430}{wlan\+\_\+tag\+\_\+switching\+\_\+stream}}~163
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_afbc804d21a691ac24deaef2812d47e02}{wlan\+\_\+tag\+\_\+session\+\_\+transition}}~164
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a07e3e0e66b53d1216da503f48d00e8e9}{wlan\+\_\+tag\+\_\+dynamic\+\_\+tone\+\_\+pairing\+\_\+report}}~165
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a5eb0d1faa01e38a3f1214a8bb77b0b13}{wlan\+\_\+tag\+\_\+cluster\+\_\+report}}~166
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_aa9ed422c750c42fbac6cbba3ee0a2206}{wlan\+\_\+tag\+\_\+replay\+\_\+capabilities}}~167
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a4832aaac6fdfceab91e7df4c56fc9b58}{wlan\+\_\+tag\+\_\+relay\+\_\+transfer\+\_\+param\+\_\+set}}~168
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_ab6ef11231b55b9554fc16ca8f4720ff2}{wlan\+\_\+tag\+\_\+beamlink\+\_\+maintenance}}~169
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a1632e893d0f51efd21f25dde1cecad72}{wlan\+\_\+tag\+\_\+multiple\+\_\+mac\+\_\+sublayers}}~170
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_ac18420a81cd75bf411af2a760296c218}{wlan\+\_\+tag\+\_\+u\+\_\+pid}}~171
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a079140b923396bb605c340fd9dd6abea}{wlan\+\_\+tag\+\_\+dmg\+\_\+link\+\_\+adaptation\+\_\+ack}}~172
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a9b00ea9f1da8963f6a5be7f27ab3882c}{wlan\+\_\+tag\+\_\+mccaop\+\_\+advertisement\+\_\+overview}}~174
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a495b7700cef204e2a7bea0c10d685034}{wlan\+\_\+tag\+\_\+quiet\+\_\+period\+\_\+request}}~175
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a054ebcd2dcde5f742b3d6faded58f469}{wlan\+\_\+tag\+\_\+quiet\+\_\+period\+\_\+response}}~177
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a83f949d45367b9b127d3134a25dd503f}{wlan\+\_\+tag\+\_\+qmf\+\_\+policy}}~181
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_acc970513cc470376df19fe608f11c110}{wlan\+\_\+tag\+\_\+ecapc\+\_\+policy}}~182
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a4a7317bc0b47564205bf32aaf1b17e7f}{wlan\+\_\+tag\+\_\+cluster\+\_\+time\+\_\+offset}}~183
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a8f2fb7f568864f3a15d8b87e8d5c2364}{wlan\+\_\+tag\+\_\+intra\+\_\+access\+\_\+category\+\_\+priority}}~184
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a19773c91b57d51cbd65434d4fa4e2b75}{wlan\+\_\+tag\+\_\+scs\+\_\+descriptor}}~185
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a4b5741ab6d33c1ad1ae818068da7ff00}{wlan\+\_\+tag\+\_\+qload\+\_\+report}}~186
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_aa580c138f6da618ba2998eceeff66639}{wlan\+\_\+tag\+\_\+hcca\+\_\+txop\+\_\+update\+\_\+count}}~187
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a43fe3a78cab006d779ae0fc3b375840d}{wlan\+\_\+tag\+\_\+higher\+\_\+layer\+\_\+stream\+\_\+id}}~188
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_ac20d4614041aacc0133c35be77baf479}{wlan\+\_\+tag\+\_\+gcr\+\_\+group\+\_\+address}}~189
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_aed73d4ec8759f655998d2671b19e9161}{wlan\+\_\+tag\+\_\+antenna\+\_\+sector\+\_\+id\+\_\+pattern}}~190
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_ad6364597e8479e09bf4af887942b85dd}{wlan\+\_\+tag\+\_\+vht\+\_\+cap}}~191
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a7c73cb4912ae9bc42e8b45325f9ee1c4}{wlan\+\_\+tag\+\_\+vht\+\_\+operation}}~192
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a0023e8d1c2a132273502f7ce041e1184}{wlan\+\_\+tag\+\_\+vht\+\_\+extended\+\_\+bss\+\_\+load}}~193
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a8531e58a3148aedb5d3e910127b231cf}{wlan\+\_\+tag\+\_\+vht\+\_\+wide\+\_\+bw\+\_\+chswitch}}~194
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_ad791a74425490b866513e5918f3665d3}{wlan\+\_\+tag\+\_\+transmit\+\_\+power\+\_\+envelope}}~195
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a526e79df86df134ad22e28afc90b73d6}{wlan\+\_\+tag\+\_\+vht\+\_\+channel\+\_\+switch\+\_\+wrapper}}~196
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a070b4d3d1a1bc47ae10b4178cb3fe444}{wlan\+\_\+tag\+\_\+vht\+\_\+aid}}~197
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a9a7088afdcb1a5676f3496df3f2fba10}{wlan\+\_\+tag\+\_\+vht\+\_\+quiet\+\_\+channel}}~198
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_ad6b436a616ed7c8d2101bbf09974cd9c}{wlan\+\_\+tag\+\_\+vht\+\_\+operating\+\_\+mode\+\_\+notification}}~199
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a7254a69ebd77afad470c54234f506a5d}{wlan\+\_\+tag\+\_\+upsim}}~200
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a1fd5136b0a130ad8e17fd274b19a5180}{wlan\+\_\+tag\+\_\+reduced\+\_\+neighbor\+\_\+report}}~201
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_aa64ff87fdc37a88ee9312935b52d5247}{wlan\+\_\+tag\+\_\+tvht\+\_\+operation}}~202
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_af6a2adbfe015bc7460bdc29dc6d09813}{wlan\+\_\+tag\+\_\+device\+\_\+location}}~204
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_aaa1ee08a2bceef66fdd1c926c3eb0039}{wlan\+\_\+tag\+\_\+white\+\_\+space\+\_\+map}}~205
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_add59b22ca6d1ab6f8fb246767a92a54f}{wlan\+\_\+tag\+\_\+ftm\+\_\+parameters}}~206
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a1b0a0c7924666f5d1149c47fc82c2eb4}{wlan\+\_\+tag\+\_\+s1g\+\_\+bcn\+\_\+compat}}~213
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a5dcfea90660926afc0cbb52b5980badd}{wlan\+\_\+tag\+\_\+twt}}~216
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a5b0c74313a8fdb20d321523b465722c2}{wlan\+\_\+tag\+\_\+s1g\+\_\+capabilities}}~217
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a696f0bbdd8259ba9071ac5667f00130b}{wlan\+\_\+tag\+\_\+vendor\+\_\+specific}}~221
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a56f7e37cc0e8268f9da8f82ca3d426aa}{wlan\+\_\+tag\+\_\+s1g\+\_\+operation}}~232
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_abf421929dc1bf8624a53ee3ad944e80e}{wlan\+\_\+tag\+\_\+cag\+\_\+number}}~237
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a9e53efcc06e59d5b0ed0871212c0dd5a}{wlan\+\_\+tag\+\_\+ap\+\_\+csn}}~239
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_afdcb3cdb4f3d1ec7dccd1022723504a5}{wlan\+\_\+tag\+\_\+fils\+\_\+indication}}~240
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a62e44257db77a750525980554dd8e9bf}{wlan\+\_\+tag\+\_\+dils}}~241
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_aa08c4ce8c79870d200130e2a35592619}{wlan\+\_\+tag\+\_\+fragment}}~242
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_ab90f67b30751a0c2e723fed43c4efbc8}{wlan\+\_\+tag\+\_\+rsnx}}~244
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a543f3ef09867daed599edabc722b92f3}{wlan\+\_\+tag\+\_\+extension}}~255
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a199da3457c7c1865ac22705ce31dc2e9}{wlan\+\_\+tag\+\_\+ext\+\_\+assoc\+\_\+delay\+\_\+info}}~1
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_ae09e9f4e1d7ec78f0f082eab27a59a01}{wlan\+\_\+tag\+\_\+ext\+\_\+fils\+\_\+req\+\_\+params}}~2
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_acfd862658b13bac952785d2aa579dbec}{wlan\+\_\+tag\+\_\+ext\+\_\+fils\+\_\+key\+\_\+confirm}}~3
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a00ece2d458f852e49a781d33d72c464c}{wlan\+\_\+tag\+\_\+ext\+\_\+fils\+\_\+session}}~4
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a139af07dd69a9cac3b5584b61e0990fd}{wlan\+\_\+tag\+\_\+ext\+\_\+fils\+\_\+hlp\+\_\+container}}~5
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_ac369602cd621859eac08defa7f6eea76}{wlan\+\_\+tag\+\_\+ext\+\_\+fils\+\_\+ip\+\_\+addr\+\_\+assign}}~6
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_abd008f87caa3c1ff1225325e0fd40edd}{wlan\+\_\+tag\+\_\+ext\+\_\+key\+\_\+delivery}}~7
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_ab43aaa7cfa7ccf39c62827fd810ac31c}{wlan\+\_\+tag\+\_\+ext\+\_\+wrapped\+\_\+data}}~8
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_aea7c246c8120a1a825a14b5011f5b534}{wlan\+\_\+tag\+\_\+ext\+\_\+ftm\+\_\+sync\+\_\+info}}~9
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_ac1cce240015fdf18a62b099d6fa46cc2}{wlan\+\_\+tag\+\_\+ext\+\_\+extended\+\_\+request}}~10
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a8e5a6f4f42ac0c696ecf0260764405f9}{wlan\+\_\+tag\+\_\+ext\+\_\+estimated\+\_\+service\+\_\+params}}~11
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_aa534d6733f7ccb1bb14344b18fcb7673}{wlan\+\_\+tag\+\_\+ext\+\_\+fils\+\_\+public\+\_\+key}}~12
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_acfa658dbc5394840b6458fd0b01cdc6c}{wlan\+\_\+tag\+\_\+ext\+\_\+fils\+\_\+nonce}}~13
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a6a3617871d3df546cd2813f90d86e61e}{wlan\+\_\+tag\+\_\+ext\+\_\+future\+\_\+channel\+\_\+guidance}}~14
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_ac44ade1dc8c06fb185249f83bfaf1d2a}{wlan\+\_\+tag\+\_\+ext\+\_\+owe\+\_\+dh\+\_\+param}}~32
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_aac08669e6e3f382eeca7a0a731a380ef}{wlan\+\_\+tag\+\_\+ext\+\_\+password\+\_\+identifier}}~33
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a8dae1f98e53501728f92c58fac790065}{wlan\+\_\+tag\+\_\+ext\+\_\+he\+\_\+capabilities}}~35
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a425ad42a84c4dd50d6ba1d13fdf0a29b}{wlan\+\_\+tag\+\_\+ext\+\_\+he\+\_\+operation}}~36
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a08790393c08047f539eb10be4a120e31}{wlan\+\_\+tag\+\_\+ext\+\_\+he\+\_\+mu\+\_\+edca\+\_\+params}}~38
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a615bc38f5f776c3e328d72aba4984665}{wlan\+\_\+tag\+\_\+ext\+\_\+spatial\+\_\+reuse}}~39
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_ac53eeec915b48890da4ede50d0741a80}{wlan\+\_\+tag\+\_\+ext\+\_\+ocv\+\_\+oci}}~54
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a623f0d9350cc5f59f1813cd985e1bd8b}{wlan\+\_\+tag\+\_\+ext\+\_\+short\+\_\+ssid\+\_\+list}}~58
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_afb2bc98240d34a766c765db465948ad8}{wlan\+\_\+tag\+\_\+ext\+\_\+he\+\_\+6ghz\+\_\+band\+\_\+cap}}~59
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_acb9c073e6d7789277a1252da3c5761fe}{wlan\+\_\+tag\+\_\+ext\+\_\+edmg\+\_\+capabilities}}~61
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a775529e1989eddb89d6151c271937384}{wlan\+\_\+tag\+\_\+ext\+\_\+edmg\+\_\+operation}}~62
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a67caa1d3c6606cb43216f80ba65de086}{wlan\+\_\+tag\+\_\+ext\+\_\+mscs\+\_\+descriptor}}~88
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a266430ec84d78c571da9afe773444c59}{wlan\+\_\+tag\+\_\+ext\+\_\+tclas\+\_\+mask}}~89
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_aa09c7c308f7fc48d5d98849f60c78f13}{wlan\+\_\+tag\+\_\+ext\+\_\+rejected\+\_\+groups}}~92
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_a0133dba192c6f4164b831761cdc40697}{wlan\+\_\+tag\+\_\+ext\+\_\+anti\+\_\+clogging\+\_\+token}}~93
+\item 
+\#define \mbox{\hyperlink{ieee80211__elements_8h_ac455bf9f3983e924b2419f31d11d4f08}{wlan\+\_\+tag\+\_\+ext\+\_\+pasn\+\_\+params}}~100
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{매크로 문서화}
+\mbox{\Hypertarget{ieee80211__elements_8h_ac8db7333e9711c049c7395fa0fc9e69a}\label{ieee80211__elements_8h_ac8db7333e9711c049c7395fa0fc9e69a}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_20\_40\_bss\_coexistence@{wlan\_tag\_20\_40\_bss\_coexistence}}
+\index{wlan\_tag\_20\_40\_bss\_coexistence@{wlan\_tag\_20\_40\_bss\_coexistence}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_20\_40\_bss\_coexistence}{wlan\_tag\_20\_40\_bss\_coexistence}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+20\+\_\+40\+\_\+bss\+\_\+coexistence~72}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 58 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a9160d1c3d24a90f09ee3f6343f77361a}\label{ieee80211__elements_8h_a9160d1c3d24a90f09ee3f6343f77361a}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_20\_40\_bss\_intolerant@{wlan\_tag\_20\_40\_bss\_intolerant}}
+\index{wlan\_tag\_20\_40\_bss\_intolerant@{wlan\_tag\_20\_40\_bss\_intolerant}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_20\_40\_bss\_intolerant}{wlan\_tag\_20\_40\_bss\_intolerant}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+20\+\_\+40\+\_\+bss\+\_\+intolerant~73}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 59 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a30189fa1d8583021a901fb99d05d3450}\label{ieee80211__elements_8h_a30189fa1d8583021a901fb99d05d3450}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_addba\_extension@{wlan\_tag\_addba\_extension}}
+\index{wlan\_tag\_addba\_extension@{wlan\_tag\_addba\_extension}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_addba\_extension}{wlan\_tag\_addba\_extension}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+addba\+\_\+extension~159}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 134 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a12141a924d3d10de5246ea92922b0898}\label{ieee80211__elements_8h_a12141a924d3d10de5246ea92922b0898}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_adv\_proto@{wlan\_tag\_adv\_proto}}
+\index{wlan\_tag\_adv\_proto@{wlan\_tag\_adv\_proto}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_adv\_proto}{wlan\_tag\_adv\_proto}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+adv\+\_\+proto~108}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 92 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a444dc13fce0f1701aa557e613ec2ae97}\label{ieee80211__elements_8h_a444dc13fce0f1701aa557e613ec2ae97}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ampe@{wlan\_tag\_ampe}}
+\index{wlan\_tag\_ampe@{wlan\_tag\_ampe}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ampe}{wlan\_tag\_ampe}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ampe~139}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 117 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_ae3e05a72110481e454a98cee7782b577}\label{ieee80211__elements_8h_ae3e05a72110481e454a98cee7782b577}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_antenna@{wlan\_tag\_antenna}}
+\index{wlan\_tag\_antenna@{wlan\_tag\_antenna}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_antenna}{wlan\_tag\_antenna}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+antenna~64}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 50 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_aed73d4ec8759f655998d2671b19e9161}\label{ieee80211__elements_8h_aed73d4ec8759f655998d2671b19e9161}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_antenna\_sector\_id\_pattern@{wlan\_tag\_antenna\_sector\_id\_pattern}}
+\index{wlan\_tag\_antenna\_sector\_id\_pattern@{wlan\_tag\_antenna\_sector\_id\_pattern}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_antenna\_sector\_id\_pattern}{wlan\_tag\_antenna\_sector\_id\_pattern}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+antenna\+\_\+sector\+\_\+id\+\_\+pattern~190}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 160 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a8858665f4a41d7f69fe88c62d64af4f7}\label{ieee80211__elements_8h_a8858665f4a41d7f69fe88c62d64af4f7}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ap\_channel\_report@{wlan\_tag\_ap\_channel\_report}}
+\index{wlan\_tag\_ap\_channel\_report@{wlan\_tag\_ap\_channel\_report}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ap\_channel\_report}{wlan\_tag\_ap\_channel\_report}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ap\+\_\+channel\+\_\+report~51}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 37 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a9e53efcc06e59d5b0ed0871212c0dd5a}\label{ieee80211__elements_8h_a9e53efcc06e59d5b0ed0871212c0dd5a}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ap\_csn@{wlan\_tag\_ap\_csn}}
+\index{wlan\_tag\_ap\_csn@{wlan\_tag\_ap\_csn}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ap\_csn}{wlan\_tag\_ap\_csn}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ap\+\_\+csn~239}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 182 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_ab4ef9a6eb6f9e6cdb710ddfdf9e75e74}\label{ieee80211__elements_8h_ab4ef9a6eb6f9e6cdb710ddfdf9e75e74}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_awake\_window@{wlan\_tag\_awake\_window}}
+\index{wlan\_tag\_awake\_window@{wlan\_tag\_awake\_window}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_awake\_window}{wlan\_tag\_awake\_window}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+awake\+\_\+window~157}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 132 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_abaf0d9791e1d26e6159e8d726607c1d1}\label{ieee80211__elements_8h_abaf0d9791e1d26e6159e8d726607c1d1}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_beacon\_timing@{wlan\_tag\_beacon\_timing}}
+\index{wlan\_tag\_beacon\_timing@{wlan\_tag\_beacon\_timing}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_beacon\_timing}{wlan\_tag\_beacon\_timing}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+beacon\+\_\+timing~120}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 104 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_ab6ef11231b55b9554fc16ca8f4720ff2}\label{ieee80211__elements_8h_ab6ef11231b55b9554fc16ca8f4720ff2}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_beamlink\_maintenance@{wlan\_tag\_beamlink\_maintenance}}
+\index{wlan\_tag\_beamlink\_maintenance@{wlan\_tag\_beamlink\_maintenance}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_beamlink\_maintenance}{wlan\_tag\_beamlink\_maintenance}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+beamlink\+\_\+maintenance~169}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 144 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a5ad2027b375d1b911b0a8ef8bb40923a}\label{ieee80211__elements_8h_a5ad2027b375d1b911b0a8ef8bb40923a}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_bss\_ac\_access\_delay@{wlan\_tag\_bss\_ac\_access\_delay}}
+\index{wlan\_tag\_bss\_ac\_access\_delay@{wlan\_tag\_bss\_ac\_access\_delay}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_bss\_ac\_access\_delay}{wlan\_tag\_bss\_ac\_access\_delay}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+bss\+\_\+ac\+\_\+access\+\_\+delay~68 /$\ast$ note\+: also used by wapi $\ast$/}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 54 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a51a67929af7017d4536549bee2d3f4de}\label{ieee80211__elements_8h_a51a67929af7017d4536549bee2d3f4de}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_bss\_available\_adm\_capa@{wlan\_tag\_bss\_available\_adm\_capa}}
+\index{wlan\_tag\_bss\_available\_adm\_capa@{wlan\_tag\_bss\_available\_adm\_capa}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_bss\_available\_adm\_capa}{wlan\_tag\_bss\_available\_adm\_capa}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+bss\+\_\+available\+\_\+adm\+\_\+capa~67}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 53 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a30b1e71ab4ec0f9af261c97a21f307b9}\label{ieee80211__elements_8h_a30b1e71ab4ec0f9af261c97a21f307b9}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_bss\_average\_access\_delay@{wlan\_tag\_bss\_average\_access\_delay}}
+\index{wlan\_tag\_bss\_average\_access\_delay@{wlan\_tag\_bss\_average\_access\_delay}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_bss\_average\_access\_delay}{wlan\_tag\_bss\_average\_access\_delay}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+bss\+\_\+average\+\_\+access\+\_\+delay~63}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 49 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a66735666d354a030c70230fb105a6a76}\label{ieee80211__elements_8h_a66735666d354a030c70230fb105a6a76}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_bss\_load@{wlan\_tag\_bss\_load}}
+\index{wlan\_tag\_bss\_load@{wlan\_tag\_bss\_load}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_bss\_load}{wlan\_tag\_bss\_load}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+bss\+\_\+load~11}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 14 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a5f60856e357c7bf8fe22d80c6890d19e}\label{ieee80211__elements_8h_a5f60856e357c7bf8fe22d80c6890d19e}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_bss\_max\_idle\_period@{wlan\_tag\_bss\_max\_idle\_period}}
+\index{wlan\_tag\_bss\_max\_idle\_period@{wlan\_tag\_bss\_max\_idle\_period}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_bss\_max\_idle\_period}{wlan\_tag\_bss\_max\_idle\_period}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+bss\+\_\+max\+\_\+idle\+\_\+period~90}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 75 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_abf421929dc1bf8624a53ee3ad944e80e}\label{ieee80211__elements_8h_abf421929dc1bf8624a53ee3ad944e80e}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_cag\_number@{wlan\_tag\_cag\_number}}
+\index{wlan\_tag\_cag\_number@{wlan\_tag\_cag\_number}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_cag\_number}{wlan\_tag\_cag\_number}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+cag\+\_\+number~237}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 181 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_ab036622d978067524da5b47e77528745}\label{ieee80211__elements_8h_ab036622d978067524da5b47e77528745}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_cckm@{wlan\_tag\_cckm}}
+\index{wlan\_tag\_cckm@{wlan\_tag\_cckm}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_cckm}{wlan\_tag\_cckm}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+cckm~156}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 131 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_af3d0620765197cc29b17ad4ca13fe176}\label{ieee80211__elements_8h_af3d0620765197cc29b17ad4ca13fe176}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_cf\_params@{wlan\_tag\_cf\_params}}
+\index{wlan\_tag\_cf\_params@{wlan\_tag\_cf\_params}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_cf\_params}{wlan\_tag\_cf\_params}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+cf\+\_\+params~4}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 9 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_af5fc98f90090d70b0362f76556e25983}\label{ieee80211__elements_8h_af5fc98f90090d70b0362f76556e25983}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_challenge@{wlan\_tag\_challenge}}
+\index{wlan\_tag\_challenge@{wlan\_tag\_challenge}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_challenge}{wlan\_tag\_challenge}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+challenge~16}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 19 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a0f2d9c42516c82336f4c4b3c477b9473}\label{ieee80211__elements_8h_a0f2d9c42516c82336f4c4b3c477b9473}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_channel\_measurement\_feedback@{wlan\_tag\_channel\_measurement\_feedback}}
+\index{wlan\_tag\_channel\_measurement\_feedback@{wlan\_tag\_channel\_measurement\_feedback}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_channel\_measurement\_feedback}{wlan\_tag\_channel\_measurement\_feedback}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+channel\+\_\+measurement\+\_\+feedback~154}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 130 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a7669eff17e49a615485f74847fde94a6}\label{ieee80211__elements_8h_a7669eff17e49a615485f74847fde94a6}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_channel\_switch@{wlan\_tag\_channel\_switch}}
+\index{wlan\_tag\_channel\_switch@{wlan\_tag\_channel\_switch}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_channel\_switch}{wlan\_tag\_channel\_switch}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+channel\+\_\+switch~37}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 25 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_aa220c16c473a0d460c22b0a0c2cf9027}\label{ieee80211__elements_8h_aa220c16c473a0d460c22b0a0c2cf9027}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_channel\_switch\_timing@{wlan\_tag\_channel\_switch\_timing}}
+\index{wlan\_tag\_channel\_switch\_timing@{wlan\_tag\_channel\_switch\_timing}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_channel\_switch\_timing}{wlan\_tag\_channel\_switch\_timing}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+channel\+\_\+switch\+\_\+timing~104}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 88 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a3aec3c21a6e468107808f013880e5434}\label{ieee80211__elements_8h_a3aec3c21a6e468107808f013880e5434}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_channel\_usage@{wlan\_tag\_channel\_usage}}
+\index{wlan\_tag\_channel\_usage@{wlan\_tag\_channel\_usage}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_channel\_usage}{wlan\_tag\_channel\_usage}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+channel\+\_\+usage~97}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 82 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a5eb0d1faa01e38a3f1214a8bb77b0b13}\label{ieee80211__elements_8h_a5eb0d1faa01e38a3f1214a8bb77b0b13}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_cluster\_report@{wlan\_tag\_cluster\_report}}
+\index{wlan\_tag\_cluster\_report@{wlan\_tag\_cluster\_report}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_cluster\_report}{wlan\_tag\_cluster\_report}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+cluster\+\_\+report~166}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 141 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a4a7317bc0b47564205bf32aaf1b17e7f}\label{ieee80211__elements_8h_a4a7317bc0b47564205bf32aaf1b17e7f}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_cluster\_time\_offset@{wlan\_tag\_cluster\_time\_offset}}
+\index{wlan\_tag\_cluster\_time\_offset@{wlan\_tag\_cluster\_time\_offset}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_cluster\_time\_offset}{wlan\_tag\_cluster\_time\_offset}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+cluster\+\_\+time\+\_\+offset~183}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 153 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_afb9325cf88690245eb9d9c0579975fcf}\label{ieee80211__elements_8h_afb9325cf88690245eb9d9c0579975fcf}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_collocated\_interference\_report@{wlan\_tag\_collocated\_interference\_report}}
+\index{wlan\_tag\_collocated\_interference\_report@{wlan\_tag\_collocated\_interference\_report}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_collocated\_interference\_report}{wlan\_tag\_collocated\_interference\_report}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+collocated\+\_\+interference\+\_\+report~96}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 81 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_ad7f50b7944698fe15b0cd891548889bf}\label{ieee80211__elements_8h_ad7f50b7944698fe15b0cd891548889bf}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_congestion\_notification@{wlan\_tag\_congestion\_notification}}
+\index{wlan\_tag\_congestion\_notification@{wlan\_tag\_congestion\_notification}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_congestion\_notification}{wlan\_tag\_congestion\_notification}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+congestion\+\_\+notification~116}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 100 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_ad7b6dba3dc2a4543354ed5ec96be94c3}\label{ieee80211__elements_8h_ad7b6dba3dc2a4543354ed5ec96be94c3}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_country@{wlan\_tag\_country}}
+\index{wlan\_tag\_country@{wlan\_tag\_country}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_country}{wlan\_tag\_country}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+country~7}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 12 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a960b2fac71fa884d1e1f8fbcbe8df7bf}\label{ieee80211__elements_8h_a960b2fac71fa884d1e1f8fbcbe8df7bf}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_destination\_uri@{wlan\_tag\_destination\_uri}}
+\index{wlan\_tag\_destination\_uri@{wlan\_tag\_destination\_uri}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_destination\_uri}{wlan\_tag\_destination\_uri}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+destination\+\_\+uri~141}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 119 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_af6a2adbfe015bc7460bdc29dc6d09813}\label{ieee80211__elements_8h_af6a2adbfe015bc7460bdc29dc6d09813}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_device\_location@{wlan\_tag\_device\_location}}
+\index{wlan\_tag\_device\_location@{wlan\_tag\_device\_location}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_device\_location}{wlan\_tag\_device\_location}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+device\+\_\+location~204}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 173 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_aa02ea14c0300d074f8447ac8663df466}\label{ieee80211__elements_8h_aa02ea14c0300d074f8447ac8663df466}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_diagnostic\_report@{wlan\_tag\_diagnostic\_report}}
+\index{wlan\_tag\_diagnostic\_report@{wlan\_tag\_diagnostic\_report}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_diagnostic\_report}{wlan\_tag\_diagnostic\_report}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+diagnostic\+\_\+report~81}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 66 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a2058cef143bddad243c8764f8b674b69}\label{ieee80211__elements_8h_a2058cef143bddad243c8764f8b674b69}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_diagnostic\_request@{wlan\_tag\_diagnostic\_request}}
+\index{wlan\_tag\_diagnostic\_request@{wlan\_tag\_diagnostic\_request}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_diagnostic\_request}{wlan\_tag\_diagnostic\_request}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+diagnostic\+\_\+request~80}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 65 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a62e44257db77a750525980554dd8e9bf}\label{ieee80211__elements_8h_a62e44257db77a750525980554dd8e9bf}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_dils@{wlan\_tag\_dils}}
+\index{wlan\_tag\_dils@{wlan\_tag\_dils}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_dils}{wlan\_tag\_dils}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+dils~241}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 184 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_acbbd9640c25218a11a6879c66e00b57d}\label{ieee80211__elements_8h_acbbd9640c25218a11a6879c66e00b57d}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_dmg\_beam\_refinement@{wlan\_tag\_dmg\_beam\_refinement}}
+\index{wlan\_tag\_dmg\_beam\_refinement@{wlan\_tag\_dmg\_beam\_refinement}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_dmg\_beam\_refinement}{wlan\_tag\_dmg\_beam\_refinement}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+dmg\+\_\+beam\+\_\+refinement~153}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 129 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_aec9cccf39d6c8a8ac80479ca47ecb816}\label{ieee80211__elements_8h_aec9cccf39d6c8a8ac80479ca47ecb816}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_dmg\_bss\_parameter\_change@{wlan\_tag\_dmg\_bss\_parameter\_change}}
+\index{wlan\_tag\_dmg\_bss\_parameter\_change@{wlan\_tag\_dmg\_bss\_parameter\_change}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_dmg\_bss\_parameter\_change}{wlan\_tag\_dmg\_bss\_parameter\_change}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+dmg\+\_\+bss\+\_\+parameter\+\_\+change~152}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 128 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_ac64d004801e51d8a0619265fa80ad675}\label{ieee80211__elements_8h_ac64d004801e51d8a0619265fa80ad675}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_dmg\_capabilities@{wlan\_tag\_dmg\_capabilities}}
+\index{wlan\_tag\_dmg\_capabilities@{wlan\_tag\_dmg\_capabilities}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_dmg\_capabilities}{wlan\_tag\_dmg\_capabilities}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+dmg\+\_\+capabilities~148}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 126 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a079140b923396bb605c340fd9dd6abea}\label{ieee80211__elements_8h_a079140b923396bb605c340fd9dd6abea}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_dmg\_link\_adaptation\_ack@{wlan\_tag\_dmg\_link\_adaptation\_ack}}
+\index{wlan\_tag\_dmg\_link\_adaptation\_ack@{wlan\_tag\_dmg\_link\_adaptation\_ack}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_dmg\_link\_adaptation\_ack}{wlan\_tag\_dmg\_link\_adaptation\_ack}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+dmg\+\_\+link\+\_\+adaptation\+\_\+ack~172}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 147 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a5bb148103eacc89c90fcaaa0a1495290}\label{ieee80211__elements_8h_a5bb148103eacc89c90fcaaa0a1495290}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_dmg\_link\_margin@{wlan\_tag\_dmg\_link\_margin}}
+\index{wlan\_tag\_dmg\_link\_margin@{wlan\_tag\_dmg\_link\_margin}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_dmg\_link\_margin}{wlan\_tag\_dmg\_link\_margin}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+dmg\+\_\+link\+\_\+margin~162}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 137 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a7afb3abb12226725a812ca6c7ed10c85}\label{ieee80211__elements_8h_a7afb3abb12226725a812ca6c7ed10c85}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_dmg\_operation@{wlan\_tag\_dmg\_operation}}
+\index{wlan\_tag\_dmg\_operation@{wlan\_tag\_dmg\_operation}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_dmg\_operation}{wlan\_tag\_dmg\_operation}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+dmg\+\_\+operation~151}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 127 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a271e8951b4f1e94baf0af97536150e54}\label{ieee80211__elements_8h_a271e8951b4f1e94baf0af97536150e54}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_dmg\_tspec@{wlan\_tag\_dmg\_tspec}}
+\index{wlan\_tag\_dmg\_tspec@{wlan\_tag\_dmg\_tspec}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_dmg\_tspec}{wlan\_tag\_dmg\_tspec}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+dmg\+\_\+tspec~146}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 124 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a0b5f1dd343d2767933885c465fde4247}\label{ieee80211__elements_8h_a0b5f1dd343d2767933885c465fde4247}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_dmg\_wakeup\_schedule@{wlan\_tag\_dmg\_wakeup\_schedule}}
+\index{wlan\_tag\_dmg\_wakeup\_schedule@{wlan\_tag\_dmg\_wakeup\_schedule}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_dmg\_wakeup\_schedule}{wlan\_tag\_dmg\_wakeup\_schedule}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+dmg\+\_\+wakeup\+\_\+schedule~143}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 121 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_aa45d37d6cc5f3106e135ada23d7f70e9}\label{ieee80211__elements_8h_aa45d37d6cc5f3106e135ada23d7f70e9}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_dms\_request@{wlan\_tag\_dms\_request}}
+\index{wlan\_tag\_dms\_request@{wlan\_tag\_dms\_request}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_dms\_request}{wlan\_tag\_dms\_request}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+dms\+\_\+request~99}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 84 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a0164e8880422ca8ccfe15c02fdb8e53c}\label{ieee80211__elements_8h_a0164e8880422ca8ccfe15c02fdb8e53c}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_dms\_response@{wlan\_tag\_dms\_response}}
+\index{wlan\_tag\_dms\_response@{wlan\_tag\_dms\_response}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_dms\_response}{wlan\_tag\_dms\_response}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+dms\+\_\+response~100}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 85 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_aca46d027df0c3b2a33c03e3201078bb8}\label{ieee80211__elements_8h_aca46d027df0c3b2a33c03e3201078bb8}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ds\_params@{wlan\_tag\_ds\_params}}
+\index{wlan\_tag\_ds\_params@{wlan\_tag\_ds\_params}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ds\_params}{wlan\_tag\_ds\_params}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ds\+\_\+params~3}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 8 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a1cbf94603d43abe6386cfbd591573586}\label{ieee80211__elements_8h_a1cbf94603d43abe6386cfbd591573586}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_dse\_registered\_location@{wlan\_tag\_dse\_registered\_location}}
+\index{wlan\_tag\_dse\_registered\_location@{wlan\_tag\_dse\_registered\_location}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_dse\_registered\_location}{wlan\_tag\_dse\_registered\_location}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+dse\+\_\+registered\+\_\+location~58}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 44 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a07e3e0e66b53d1216da503f48d00e8e9}\label{ieee80211__elements_8h_a07e3e0e66b53d1216da503f48d00e8e9}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_dynamic\_tone\_pairing\_report@{wlan\_tag\_dynamic\_tone\_pairing\_report}}
+\index{wlan\_tag\_dynamic\_tone\_pairing\_report@{wlan\_tag\_dynamic\_tone\_pairing\_report}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_dynamic\_tone\_pairing\_report}{wlan\_tag\_dynamic\_tone\_pairing\_report}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+dynamic\+\_\+tone\+\_\+pairing\+\_\+report~165}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 140 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_acc970513cc470376df19fe608f11c110}\label{ieee80211__elements_8h_acc970513cc470376df19fe608f11c110}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ecapc\_policy@{wlan\_tag\_ecapc\_policy}}
+\index{wlan\_tag\_ecapc\_policy@{wlan\_tag\_ecapc\_policy}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ecapc\_policy}{wlan\_tag\_ecapc\_policy}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ecapc\+\_\+policy~182}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 152 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a63b45a07f5d676838e6cd49441af05cc}\label{ieee80211__elements_8h_a63b45a07f5d676838e6cd49441af05cc}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_edca\_param\_set@{wlan\_tag\_edca\_param\_set}}
+\index{wlan\_tag\_edca\_param\_set@{wlan\_tag\_edca\_param\_set}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_edca\_param\_set}{wlan\_tag\_edca\_param\_set}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+edca\+\_\+param\+\_\+set~12}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 15 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a550abfbb0bf517baf18763d7b7ea49b6}\label{ieee80211__elements_8h_a550abfbb0bf517baf18763d7b7ea49b6}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_emergency\_alert\_id@{wlan\_tag\_emergency\_alert\_id}}
+\index{wlan\_tag\_emergency\_alert\_id@{wlan\_tag\_emergency\_alert\_id}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_emergency\_alert\_id}{wlan\_tag\_emergency\_alert\_id}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+emergency\+\_\+alert\+\_\+id~112}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 96 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_ab49655e50ac643736989bea9e9222920}\label{ieee80211__elements_8h_ab49655e50ac643736989bea9e9222920}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_erp\_info@{wlan\_tag\_erp\_info}}
+\index{wlan\_tag\_erp\_info@{wlan\_tag\_erp\_info}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_erp\_info}{wlan\_tag\_erp\_info}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+erp\+\_\+info~42}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 30 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_aef4a1b64dd5acf74469ec79891e6bdc0}\label{ieee80211__elements_8h_aef4a1b64dd5acf74469ec79891e6bdc0}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_event\_report@{wlan\_tag\_event\_report}}
+\index{wlan\_tag\_event\_report@{wlan\_tag\_event\_report}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_event\_report}{wlan\_tag\_event\_report}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+event\+\_\+report~79}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 64 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a756e8d7145fa0eaf6576f3cc67a049ca}\label{ieee80211__elements_8h_a756e8d7145fa0eaf6576f3cc67a049ca}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_event\_request@{wlan\_tag\_event\_request}}
+\index{wlan\_tag\_event\_request@{wlan\_tag\_event\_request}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_event\_request}{wlan\_tag\_event\_request}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+event\+\_\+request~78}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 63 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_ab2212d8a2c08727c61f55aacc6e71bbd}\label{ieee80211__elements_8h_ab2212d8a2c08727c61f55aacc6e71bbd}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_expedited\_bandwidth\_req@{wlan\_tag\_expedited\_bandwidth\_req}}
+\index{wlan\_tag\_expedited\_bandwidth\_req@{wlan\_tag\_expedited\_bandwidth\_req}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_expedited\_bandwidth\_req}{wlan\_tag\_expedited\_bandwidth\_req}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+expedited\+\_\+bandwidth\+\_\+req~109}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 93 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a0133dba192c6f4164b831761cdc40697}\label{ieee80211__elements_8h_a0133dba192c6f4164b831761cdc40697}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ext\_anti\_clogging\_token@{wlan\_tag\_ext\_anti\_clogging\_token}}
+\index{wlan\_tag\_ext\_anti\_clogging\_token@{wlan\_tag\_ext\_anti\_clogging\_token}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ext\_anti\_clogging\_token}{wlan\_tag\_ext\_anti\_clogging\_token}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ext\+\_\+anti\+\_\+clogging\+\_\+token~93}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 218 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a199da3457c7c1865ac22705ce31dc2e9}\label{ieee80211__elements_8h_a199da3457c7c1865ac22705ce31dc2e9}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ext\_assoc\_delay\_info@{wlan\_tag\_ext\_assoc\_delay\_info}}
+\index{wlan\_tag\_ext\_assoc\_delay\_info@{wlan\_tag\_ext\_assoc\_delay\_info}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ext\_assoc\_delay\_info}{wlan\_tag\_ext\_assoc\_delay\_info}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ext\+\_\+assoc\+\_\+delay\+\_\+info~1}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 190 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a5416ca97d67bd373984e2d73f265230f}\label{ieee80211__elements_8h_a5416ca97d67bd373984e2d73f265230f}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ext\_capab@{wlan\_tag\_ext\_capab}}
+\index{wlan\_tag\_ext\_capab@{wlan\_tag\_ext\_capab}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ext\_capab}{wlan\_tag\_ext\_capab}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ext\+\_\+capab~127}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 111 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a8f997db4b14c0314fafbc87a82600423}\label{ieee80211__elements_8h_a8f997db4b14c0314fafbc87a82600423}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ext\_chanswitch\_ann@{wlan\_tag\_ext\_chanswitch\_ann}}
+\index{wlan\_tag\_ext\_chanswitch\_ann@{wlan\_tag\_ext\_chanswitch\_ann}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ext\_chanswitch\_ann}{wlan\_tag\_ext\_chanswitch\_ann}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ext\+\_\+chanswitch\+\_\+ann~60}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 46 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_acb9c073e6d7789277a1252da3c5761fe}\label{ieee80211__elements_8h_acb9c073e6d7789277a1252da3c5761fe}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ext\_edmg\_capabilities@{wlan\_tag\_ext\_edmg\_capabilities}}
+\index{wlan\_tag\_ext\_edmg\_capabilities@{wlan\_tag\_ext\_edmg\_capabilities}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ext\_edmg\_capabilities}{wlan\_tag\_ext\_edmg\_capabilities}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ext\+\_\+edmg\+\_\+capabilities~61}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 213 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a775529e1989eddb89d6151c271937384}\label{ieee80211__elements_8h_a775529e1989eddb89d6151c271937384}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ext\_edmg\_operation@{wlan\_tag\_ext\_edmg\_operation}}
+\index{wlan\_tag\_ext\_edmg\_operation@{wlan\_tag\_ext\_edmg\_operation}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ext\_edmg\_operation}{wlan\_tag\_ext\_edmg\_operation}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ext\+\_\+edmg\+\_\+operation~62}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 214 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a8e5a6f4f42ac0c696ecf0260764405f9}\label{ieee80211__elements_8h_a8e5a6f4f42ac0c696ecf0260764405f9}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ext\_estimated\_service\_params@{wlan\_tag\_ext\_estimated\_service\_params}}
+\index{wlan\_tag\_ext\_estimated\_service\_params@{wlan\_tag\_ext\_estimated\_service\_params}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ext\_estimated\_service\_params}{wlan\_tag\_ext\_estimated\_service\_params}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ext\+\_\+estimated\+\_\+service\+\_\+params~11}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 200 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_ac1cce240015fdf18a62b099d6fa46cc2}\label{ieee80211__elements_8h_ac1cce240015fdf18a62b099d6fa46cc2}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ext\_extended\_request@{wlan\_tag\_ext\_extended\_request}}
+\index{wlan\_tag\_ext\_extended\_request@{wlan\_tag\_ext\_extended\_request}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ext\_extended\_request}{wlan\_tag\_ext\_extended\_request}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ext\+\_\+extended\+\_\+request~10}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 199 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a139af07dd69a9cac3b5584b61e0990fd}\label{ieee80211__elements_8h_a139af07dd69a9cac3b5584b61e0990fd}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ext\_fils\_hlp\_container@{wlan\_tag\_ext\_fils\_hlp\_container}}
+\index{wlan\_tag\_ext\_fils\_hlp\_container@{wlan\_tag\_ext\_fils\_hlp\_container}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ext\_fils\_hlp\_container}{wlan\_tag\_ext\_fils\_hlp\_container}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ext\+\_\+fils\+\_\+hlp\+\_\+container~5}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 194 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_ac369602cd621859eac08defa7f6eea76}\label{ieee80211__elements_8h_ac369602cd621859eac08defa7f6eea76}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ext\_fils\_ip\_addr\_assign@{wlan\_tag\_ext\_fils\_ip\_addr\_assign}}
+\index{wlan\_tag\_ext\_fils\_ip\_addr\_assign@{wlan\_tag\_ext\_fils\_ip\_addr\_assign}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ext\_fils\_ip\_addr\_assign}{wlan\_tag\_ext\_fils\_ip\_addr\_assign}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ext\+\_\+fils\+\_\+ip\+\_\+addr\+\_\+assign~6}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 195 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_acfd862658b13bac952785d2aa579dbec}\label{ieee80211__elements_8h_acfd862658b13bac952785d2aa579dbec}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ext\_fils\_key\_confirm@{wlan\_tag\_ext\_fils\_key\_confirm}}
+\index{wlan\_tag\_ext\_fils\_key\_confirm@{wlan\_tag\_ext\_fils\_key\_confirm}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ext\_fils\_key\_confirm}{wlan\_tag\_ext\_fils\_key\_confirm}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ext\+\_\+fils\+\_\+key\+\_\+confirm~3}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 192 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_acfa658dbc5394840b6458fd0b01cdc6c}\label{ieee80211__elements_8h_acfa658dbc5394840b6458fd0b01cdc6c}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ext\_fils\_nonce@{wlan\_tag\_ext\_fils\_nonce}}
+\index{wlan\_tag\_ext\_fils\_nonce@{wlan\_tag\_ext\_fils\_nonce}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ext\_fils\_nonce}{wlan\_tag\_ext\_fils\_nonce}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ext\+\_\+fils\+\_\+nonce~13}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 202 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_aa534d6733f7ccb1bb14344b18fcb7673}\label{ieee80211__elements_8h_aa534d6733f7ccb1bb14344b18fcb7673}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ext\_fils\_public\_key@{wlan\_tag\_ext\_fils\_public\_key}}
+\index{wlan\_tag\_ext\_fils\_public\_key@{wlan\_tag\_ext\_fils\_public\_key}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ext\_fils\_public\_key}{wlan\_tag\_ext\_fils\_public\_key}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ext\+\_\+fils\+\_\+public\+\_\+key~12}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 201 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_ae09e9f4e1d7ec78f0f082eab27a59a01}\label{ieee80211__elements_8h_ae09e9f4e1d7ec78f0f082eab27a59a01}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ext\_fils\_req\_params@{wlan\_tag\_ext\_fils\_req\_params}}
+\index{wlan\_tag\_ext\_fils\_req\_params@{wlan\_tag\_ext\_fils\_req\_params}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ext\_fils\_req\_params}{wlan\_tag\_ext\_fils\_req\_params}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ext\+\_\+fils\+\_\+req\+\_\+params~2}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 191 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a00ece2d458f852e49a781d33d72c464c}\label{ieee80211__elements_8h_a00ece2d458f852e49a781d33d72c464c}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ext\_fils\_session@{wlan\_tag\_ext\_fils\_session}}
+\index{wlan\_tag\_ext\_fils\_session@{wlan\_tag\_ext\_fils\_session}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ext\_fils\_session}{wlan\_tag\_ext\_fils\_session}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ext\+\_\+fils\+\_\+session~4}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 193 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_aea7c246c8120a1a825a14b5011f5b534}\label{ieee80211__elements_8h_aea7c246c8120a1a825a14b5011f5b534}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ext\_ftm\_sync\_info@{wlan\_tag\_ext\_ftm\_sync\_info}}
+\index{wlan\_tag\_ext\_ftm\_sync\_info@{wlan\_tag\_ext\_ftm\_sync\_info}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ext\_ftm\_sync\_info}{wlan\_tag\_ext\_ftm\_sync\_info}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ext\+\_\+ftm\+\_\+sync\+\_\+info~9}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 198 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a6a3617871d3df546cd2813f90d86e61e}\label{ieee80211__elements_8h_a6a3617871d3df546cd2813f90d86e61e}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ext\_future\_channel\_guidance@{wlan\_tag\_ext\_future\_channel\_guidance}}
+\index{wlan\_tag\_ext\_future\_channel\_guidance@{wlan\_tag\_ext\_future\_channel\_guidance}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ext\_future\_channel\_guidance}{wlan\_tag\_ext\_future\_channel\_guidance}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ext\+\_\+future\+\_\+channel\+\_\+guidance~14}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 203 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_afb2bc98240d34a766c765db465948ad8}\label{ieee80211__elements_8h_afb2bc98240d34a766c765db465948ad8}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ext\_he\_6ghz\_band\_cap@{wlan\_tag\_ext\_he\_6ghz\_band\_cap}}
+\index{wlan\_tag\_ext\_he\_6ghz\_band\_cap@{wlan\_tag\_ext\_he\_6ghz\_band\_cap}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ext\_he\_6ghz\_band\_cap}{wlan\_tag\_ext\_he\_6ghz\_band\_cap}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ext\+\_\+he\+\_\+6ghz\+\_\+band\+\_\+cap~59}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 212 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a8dae1f98e53501728f92c58fac790065}\label{ieee80211__elements_8h_a8dae1f98e53501728f92c58fac790065}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ext\_he\_capabilities@{wlan\_tag\_ext\_he\_capabilities}}
+\index{wlan\_tag\_ext\_he\_capabilities@{wlan\_tag\_ext\_he\_capabilities}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ext\_he\_capabilities}{wlan\_tag\_ext\_he\_capabilities}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ext\+\_\+he\+\_\+capabilities~35}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 206 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a08790393c08047f539eb10be4a120e31}\label{ieee80211__elements_8h_a08790393c08047f539eb10be4a120e31}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ext\_he\_mu\_edca\_params@{wlan\_tag\_ext\_he\_mu\_edca\_params}}
+\index{wlan\_tag\_ext\_he\_mu\_edca\_params@{wlan\_tag\_ext\_he\_mu\_edca\_params}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ext\_he\_mu\_edca\_params}{wlan\_tag\_ext\_he\_mu\_edca\_params}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ext\+\_\+he\+\_\+mu\+\_\+edca\+\_\+params~38}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 208 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a425ad42a84c4dd50d6ba1d13fdf0a29b}\label{ieee80211__elements_8h_a425ad42a84c4dd50d6ba1d13fdf0a29b}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ext\_he\_operation@{wlan\_tag\_ext\_he\_operation}}
+\index{wlan\_tag\_ext\_he\_operation@{wlan\_tag\_ext\_he\_operation}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ext\_he\_operation}{wlan\_tag\_ext\_he\_operation}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ext\+\_\+he\+\_\+operation~36}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 207 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_abd008f87caa3c1ff1225325e0fd40edd}\label{ieee80211__elements_8h_abd008f87caa3c1ff1225325e0fd40edd}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ext\_key\_delivery@{wlan\_tag\_ext\_key\_delivery}}
+\index{wlan\_tag\_ext\_key\_delivery@{wlan\_tag\_ext\_key\_delivery}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ext\_key\_delivery}{wlan\_tag\_ext\_key\_delivery}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ext\+\_\+key\+\_\+delivery~7}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 196 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a67caa1d3c6606cb43216f80ba65de086}\label{ieee80211__elements_8h_a67caa1d3c6606cb43216f80ba65de086}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ext\_mscs\_descriptor@{wlan\_tag\_ext\_mscs\_descriptor}}
+\index{wlan\_tag\_ext\_mscs\_descriptor@{wlan\_tag\_ext\_mscs\_descriptor}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ext\_mscs\_descriptor}{wlan\_tag\_ext\_mscs\_descriptor}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ext\+\_\+mscs\+\_\+descriptor~88}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 215 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_ac53eeec915b48890da4ede50d0741a80}\label{ieee80211__elements_8h_ac53eeec915b48890da4ede50d0741a80}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ext\_ocv\_oci@{wlan\_tag\_ext\_ocv\_oci}}
+\index{wlan\_tag\_ext\_ocv\_oci@{wlan\_tag\_ext\_ocv\_oci}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ext\_ocv\_oci}{wlan\_tag\_ext\_ocv\_oci}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ext\+\_\+ocv\+\_\+oci~54}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 210 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_ac44ade1dc8c06fb185249f83bfaf1d2a}\label{ieee80211__elements_8h_ac44ade1dc8c06fb185249f83bfaf1d2a}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ext\_owe\_dh\_param@{wlan\_tag\_ext\_owe\_dh\_param}}
+\index{wlan\_tag\_ext\_owe\_dh\_param@{wlan\_tag\_ext\_owe\_dh\_param}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ext\_owe\_dh\_param}{wlan\_tag\_ext\_owe\_dh\_param}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ext\+\_\+owe\+\_\+dh\+\_\+param~32}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 204 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_ac455bf9f3983e924b2419f31d11d4f08}\label{ieee80211__elements_8h_ac455bf9f3983e924b2419f31d11d4f08}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ext\_pasn\_params@{wlan\_tag\_ext\_pasn\_params}}
+\index{wlan\_tag\_ext\_pasn\_params@{wlan\_tag\_ext\_pasn\_params}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ext\_pasn\_params}{wlan\_tag\_ext\_pasn\_params}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ext\+\_\+pasn\+\_\+params~100}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 219 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_aac08669e6e3f382eeca7a0a731a380ef}\label{ieee80211__elements_8h_aac08669e6e3f382eeca7a0a731a380ef}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ext\_password\_identifier@{wlan\_tag\_ext\_password\_identifier}}
+\index{wlan\_tag\_ext\_password\_identifier@{wlan\_tag\_ext\_password\_identifier}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ext\_password\_identifier}{wlan\_tag\_ext\_password\_identifier}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ext\+\_\+password\+\_\+identifier~33}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 205 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_aa09c7c308f7fc48d5d98849f60c78f13}\label{ieee80211__elements_8h_aa09c7c308f7fc48d5d98849f60c78f13}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ext\_rejected\_groups@{wlan\_tag\_ext\_rejected\_groups}}
+\index{wlan\_tag\_ext\_rejected\_groups@{wlan\_tag\_ext\_rejected\_groups}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ext\_rejected\_groups}{wlan\_tag\_ext\_rejected\_groups}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ext\+\_\+rejected\+\_\+groups~92}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 217 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a623f0d9350cc5f59f1813cd985e1bd8b}\label{ieee80211__elements_8h_a623f0d9350cc5f59f1813cd985e1bd8b}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ext\_short\_ssid\_list@{wlan\_tag\_ext\_short\_ssid\_list}}
+\index{wlan\_tag\_ext\_short\_ssid\_list@{wlan\_tag\_ext\_short\_ssid\_list}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ext\_short\_ssid\_list}{wlan\_tag\_ext\_short\_ssid\_list}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ext\+\_\+short\+\_\+ssid\+\_\+list~58}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 211 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a615bc38f5f776c3e328d72aba4984665}\label{ieee80211__elements_8h_a615bc38f5f776c3e328d72aba4984665}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ext\_spatial\_reuse@{wlan\_tag\_ext\_spatial\_reuse}}
+\index{wlan\_tag\_ext\_spatial\_reuse@{wlan\_tag\_ext\_spatial\_reuse}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ext\_spatial\_reuse}{wlan\_tag\_ext\_spatial\_reuse}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ext\+\_\+spatial\+\_\+reuse~39}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 209 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_ada0f599f27a946ac1bb1f5ea0d97f99e}\label{ieee80211__elements_8h_ada0f599f27a946ac1bb1f5ea0d97f99e}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ext\_supp\_rates@{wlan\_tag\_ext\_supp\_rates}}
+\index{wlan\_tag\_ext\_supp\_rates@{wlan\_tag\_ext\_supp\_rates}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ext\_supp\_rates}{wlan\_tag\_ext\_supp\_rates}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ext\+\_\+supp\+\_\+rates~50}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 36 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a266430ec84d78c571da9afe773444c59}\label{ieee80211__elements_8h_a266430ec84d78c571da9afe773444c59}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ext\_tclas\_mask@{wlan\_tag\_ext\_tclas\_mask}}
+\index{wlan\_tag\_ext\_tclas\_mask@{wlan\_tag\_ext\_tclas\_mask}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ext\_tclas\_mask}{wlan\_tag\_ext\_tclas\_mask}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ext\+\_\+tclas\+\_\+mask~89}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 216 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_ab43aaa7cfa7ccf39c62827fd810ac31c}\label{ieee80211__elements_8h_ab43aaa7cfa7ccf39c62827fd810ac31c}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ext\_wrapped\_data@{wlan\_tag\_ext\_wrapped\_data}}
+\index{wlan\_tag\_ext\_wrapped\_data@{wlan\_tag\_ext\_wrapped\_data}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ext\_wrapped\_data}{wlan\_tag\_ext\_wrapped\_data}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ext\+\_\+wrapped\+\_\+data~8}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 197 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a2623c0c3b81755d80f7ba30fec6ce30c}\label{ieee80211__elements_8h_a2623c0c3b81755d80f7ba30fec6ce30c}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_extended\_schedule@{wlan\_tag\_extended\_schedule}}
+\index{wlan\_tag\_extended\_schedule@{wlan\_tag\_extended\_schedule}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_extended\_schedule}{wlan\_tag\_extended\_schedule}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+extended\+\_\+schedule~144}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 122 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a543f3ef09867daed599edabc722b92f3}\label{ieee80211__elements_8h_a543f3ef09867daed599edabc722b92f3}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_extension@{wlan\_tag\_extension}}
+\index{wlan\_tag\_extension@{wlan\_tag\_extension}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_extension}{wlan\_tag\_extension}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+extension~255}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 187 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a1b9ec34f042e09fe61a3f9bf0f9c4e42}\label{ieee80211__elements_8h_a1b9ec34f042e09fe61a3f9bf0f9c4e42}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_fast\_bss\_transition@{wlan\_tag\_fast\_bss\_transition}}
+\index{wlan\_tag\_fast\_bss\_transition@{wlan\_tag\_fast\_bss\_transition}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_fast\_bss\_transition}{wlan\_tag\_fast\_bss\_transition}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+fast\+\_\+bss\+\_\+transition~55}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 41 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_afdcb3cdb4f3d1ec7dccd1022723504a5}\label{ieee80211__elements_8h_afdcb3cdb4f3d1ec7dccd1022723504a5}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_fils\_indication@{wlan\_tag\_fils\_indication}}
+\index{wlan\_tag\_fils\_indication@{wlan\_tag\_fils\_indication}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_fils\_indication}{wlan\_tag\_fils\_indication}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+fils\+\_\+indication~240}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 183 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_ae7572ee5b478579dfcc71dc61d523c3f}\label{ieee80211__elements_8h_ae7572ee5b478579dfcc71dc61d523c3f}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_fms\_descriptor@{wlan\_tag\_fms\_descriptor}}
+\index{wlan\_tag\_fms\_descriptor@{wlan\_tag\_fms\_descriptor}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_fms\_descriptor}{wlan\_tag\_fms\_descriptor}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+fms\+\_\+descriptor~86}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 71 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a58126768ce21fdf3ea62f7cccae10300}\label{ieee80211__elements_8h_a58126768ce21fdf3ea62f7cccae10300}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_fms\_request@{wlan\_tag\_fms\_request}}
+\index{wlan\_tag\_fms\_request@{wlan\_tag\_fms\_request}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_fms\_request}{wlan\_tag\_fms\_request}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+fms\+\_\+request~87}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 72 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a4af1e63a2b676077ba9a93b234561587}\label{ieee80211__elements_8h_a4af1e63a2b676077ba9a93b234561587}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_fms\_response@{wlan\_tag\_fms\_response}}
+\index{wlan\_tag\_fms\_response@{wlan\_tag\_fms\_response}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_fms\_response}{wlan\_tag\_fms\_response}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+fms\+\_\+response~88}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 73 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_aa08c4ce8c79870d200130e2a35592619}\label{ieee80211__elements_8h_aa08c4ce8c79870d200130e2a35592619}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_fragment@{wlan\_tag\_fragment}}
+\index{wlan\_tag\_fragment@{wlan\_tag\_fragment}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_fragment}{wlan\_tag\_fragment}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+fragment~242}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 185 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_add59b22ca6d1ab6f8fb246767a92a54f}\label{ieee80211__elements_8h_add59b22ca6d1ab6f8fb246767a92a54f}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ftm\_parameters@{wlan\_tag\_ftm\_parameters}}
+\index{wlan\_tag\_ftm\_parameters@{wlan\_tag\_ftm\_parameters}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ftm\_parameters}{wlan\_tag\_ftm\_parameters}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ftm\+\_\+parameters~206}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 175 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_ae76add47c3d1f49e01ffc4b094d79086}\label{ieee80211__elements_8h_ae76add47c3d1f49e01ffc4b094d79086}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_gann@{wlan\_tag\_gann}}
+\index{wlan\_tag\_gann@{wlan\_tag\_gann}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_gann}{wlan\_tag\_gann}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+gann~125}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 109 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_ac20d4614041aacc0133c35be77baf479}\label{ieee80211__elements_8h_ac20d4614041aacc0133c35be77baf479}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_gcr\_group\_address@{wlan\_tag\_gcr\_group\_address}}
+\index{wlan\_tag\_gcr\_group\_address@{wlan\_tag\_gcr\_group\_address}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_gcr\_group\_address}{wlan\_tag\_gcr\_group\_address}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+gcr\+\_\+group\+\_\+address~189}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 159 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_aa580c138f6da618ba2998eceeff66639}\label{ieee80211__elements_8h_aa580c138f6da618ba2998eceeff66639}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_hcca\_txop\_update\_count@{wlan\_tag\_hcca\_txop\_update\_count}}
+\index{wlan\_tag\_hcca\_txop\_update\_count@{wlan\_tag\_hcca\_txop\_update\_count}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_hcca\_txop\_update\_count}{wlan\_tag\_hcca\_txop\_update\_count}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+hcca\+\_\+txop\+\_\+update\+\_\+count~187}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 157 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a43fe3a78cab006d779ae0fc3b375840d}\label{ieee80211__elements_8h_a43fe3a78cab006d779ae0fc3b375840d}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_higher\_layer\_stream\_id@{wlan\_tag\_higher\_layer\_stream\_id}}
+\index{wlan\_tag\_higher\_layer\_stream\_id@{wlan\_tag\_higher\_layer\_stream\_id}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_higher\_layer\_stream\_id}{wlan\_tag\_higher\_layer\_stream\_id}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+higher\+\_\+layer\+\_\+stream\+\_\+id~188}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 158 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a21780f7fc051fa39bd6de56e3ce99090}\label{ieee80211__elements_8h_a21780f7fc051fa39bd6de56e3ce99090}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ht\_cap@{wlan\_tag\_ht\_cap}}
+\index{wlan\_tag\_ht\_cap@{wlan\_tag\_ht\_cap}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ht\_cap}{wlan\_tag\_ht\_cap}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ht\+\_\+cap~45}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 33 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_aee1c1a319137e90c91efcb1a650eaa01}\label{ieee80211__elements_8h_aee1c1a319137e90c91efcb1a650eaa01}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ht\_operation@{wlan\_tag\_ht\_operation}}
+\index{wlan\_tag\_ht\_operation@{wlan\_tag\_ht\_operation}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ht\_operation}{wlan\_tag\_ht\_operation}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ht\+\_\+operation~61}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 47 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a33679efce3b2c0b4be3b19b20a536eb9}\label{ieee80211__elements_8h_a33679efce3b2c0b4be3b19b20a536eb9}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ibss\_dfs@{wlan\_tag\_ibss\_dfs}}
+\index{wlan\_tag\_ibss\_dfs@{wlan\_tag\_ibss\_dfs}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ibss\_dfs}{wlan\_tag\_ibss\_dfs}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ibss\+\_\+dfs~41}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 29 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_af683e1f5e692770be026d762cc11cb66}\label{ieee80211__elements_8h_af683e1f5e692770be026d762cc11cb66}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ibss\_params@{wlan\_tag\_ibss\_params}}
+\index{wlan\_tag\_ibss\_params@{wlan\_tag\_ibss\_params}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ibss\_params}{wlan\_tag\_ibss\_params}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ibss\+\_\+params~6}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 11 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a1e482200dad166d435dcac0bda6edb68}\label{ieee80211__elements_8h_a1e482200dad166d435dcac0bda6edb68}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_interworking@{wlan\_tag\_interworking}}
+\index{wlan\_tag\_interworking@{wlan\_tag\_interworking}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_interworking}{wlan\_tag\_interworking}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+interworking~107}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 91 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a8f2fb7f568864f3a15d8b87e8d5c2364}\label{ieee80211__elements_8h_a8f2fb7f568864f3a15d8b87e8d5c2364}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_intra\_access\_category\_priority@{wlan\_tag\_intra\_access\_category\_priority}}
+\index{wlan\_tag\_intra\_access\_category\_priority@{wlan\_tag\_intra\_access\_category\_priority}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_intra\_access\_category\_priority}{wlan\_tag\_intra\_access\_category\_priority}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+intra\+\_\+access\+\_\+category\+\_\+priority~184}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 154 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_afd362569249d8c563f1badd9d9046290}\label{ieee80211__elements_8h_afd362569249d8c563f1badd9d9046290}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_link\_id@{wlan\_tag\_link\_id}}
+\index{wlan\_tag\_link\_id@{wlan\_tag\_link\_id}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_link\_id}{wlan\_tag\_link\_id}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+link\+\_\+id~101}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 86 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_afb03cf8ee3f914afd92b3e767fc6b8d2}\label{ieee80211__elements_8h_afb03cf8ee3f914afd92b3e767fc6b8d2}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_location\_parameters@{wlan\_tag\_location\_parameters}}
+\index{wlan\_tag\_location\_parameters@{wlan\_tag\_location\_parameters}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_location\_parameters}{wlan\_tag\_location\_parameters}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+location\+\_\+parameters~82}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 67 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a5847f5d676f4caf0ac1f3ea81ff77a98}\label{ieee80211__elements_8h_a5847f5d676f4caf0ac1f3ea81ff77a98}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_mccaop\_advertisement@{wlan\_tag\_mccaop\_advertisement}}
+\index{wlan\_tag\_mccaop\_advertisement@{wlan\_tag\_mccaop\_advertisement}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_mccaop\_advertisement}{wlan\_tag\_mccaop\_advertisement}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+mccaop\+\_\+advertisement~123}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 107 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a9b00ea9f1da8963f6a5be7f27ab3882c}\label{ieee80211__elements_8h_a9b00ea9f1da8963f6a5be7f27ab3882c}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_mccaop\_advertisement\_overview@{wlan\_tag\_mccaop\_advertisement\_overview}}
+\index{wlan\_tag\_mccaop\_advertisement\_overview@{wlan\_tag\_mccaop\_advertisement\_overview}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_mccaop\_advertisement\_overview}{wlan\_tag\_mccaop\_advertisement\_overview}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+mccaop\+\_\+advertisement\+\_\+overview~174}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 148 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_ae28abf05a10825cc835f3c63faa8ba2d}\label{ieee80211__elements_8h_ae28abf05a10825cc835f3c63faa8ba2d}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_mccaop\_setup\_reply@{wlan\_tag\_mccaop\_setup\_reply}}
+\index{wlan\_tag\_mccaop\_setup\_reply@{wlan\_tag\_mccaop\_setup\_reply}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_mccaop\_setup\_reply}{wlan\_tag\_mccaop\_setup\_reply}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+mccaop\+\_\+setup\+\_\+reply~122}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 106 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_ae5b2c21ad3eff1322d2e1e54d37730a7}\label{ieee80211__elements_8h_ae5b2c21ad3eff1322d2e1e54d37730a7}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_mccaop\_setup\_request@{wlan\_tag\_mccaop\_setup\_request}}
+\index{wlan\_tag\_mccaop\_setup\_request@{wlan\_tag\_mccaop\_setup\_request}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_mccaop\_setup\_request}{wlan\_tag\_mccaop\_setup\_request}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+mccaop\+\_\+setup\+\_\+request~121}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 105 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a24b9e8894a4c53a963716fa1971ae82d}\label{ieee80211__elements_8h_a24b9e8894a4c53a963716fa1971ae82d}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_mccaop\_teardown@{wlan\_tag\_mccaop\_teardown}}
+\index{wlan\_tag\_mccaop\_teardown@{wlan\_tag\_mccaop\_teardown}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_mccaop\_teardown}{wlan\_tag\_mccaop\_teardown}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+mccaop\+\_\+teardown~124}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 108 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a66a5c9e04208de3eaa8032fd7cf66a70}\label{ieee80211__elements_8h_a66a5c9e04208de3eaa8032fd7cf66a70}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_measure\_report@{wlan\_tag\_measure\_report}}
+\index{wlan\_tag\_measure\_report@{wlan\_tag\_measure\_report}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_measure\_report}{wlan\_tag\_measure\_report}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+measure\+\_\+report~39}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 27 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a451a082266721659fc54ecd30231a748}\label{ieee80211__elements_8h_a451a082266721659fc54ecd30231a748}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_measure\_request@{wlan\_tag\_measure\_request}}
+\index{wlan\_tag\_measure\_request@{wlan\_tag\_measure\_request}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_measure\_request}{wlan\_tag\_measure\_request}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+measure\+\_\+request~38}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 26 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_af0311bdd69748ad0e82a5f8fd3106106}\label{ieee80211__elements_8h_af0311bdd69748ad0e82a5f8fd3106106}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_measurement\_pilot\_transmission@{wlan\_tag\_measurement\_pilot\_transmission}}
+\index{wlan\_tag\_measurement\_pilot\_transmission@{wlan\_tag\_measurement\_pilot\_transmission}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_measurement\_pilot\_transmission}{wlan\_tag\_measurement\_pilot\_transmission}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+measurement\+\_\+pilot\+\_\+transmission~66}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 52 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a1f96a95dda63eec3832179a84be7e140}\label{ieee80211__elements_8h_a1f96a95dda63eec3832179a84be7e140}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_mesh\_awake\_window@{wlan\_tag\_mesh\_awake\_window}}
+\index{wlan\_tag\_mesh\_awake\_window@{wlan\_tag\_mesh\_awake\_window}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_mesh\_awake\_window}{wlan\_tag\_mesh\_awake\_window}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+mesh\+\_\+awake\+\_\+window~119}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 103 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a62b0e4c6507a527a08954075bd549386}\label{ieee80211__elements_8h_a62b0e4c6507a527a08954075bd549386}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_mesh\_channel\_switch\_parameters@{wlan\_tag\_mesh\_channel\_switch\_parameters}}
+\index{wlan\_tag\_mesh\_channel\_switch\_parameters@{wlan\_tag\_mesh\_channel\_switch\_parameters}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_mesh\_channel\_switch\_parameters}{wlan\_tag\_mesh\_channel\_switch\_parameters}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+mesh\+\_\+channel\+\_\+switch\+\_\+parameters~118}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 102 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a850e48fbe10e57594da829d5b65c4d77}\label{ieee80211__elements_8h_a850e48fbe10e57594da829d5b65c4d77}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_mesh\_config@{wlan\_tag\_mesh\_config}}
+\index{wlan\_tag\_mesh\_config@{wlan\_tag\_mesh\_config}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_mesh\_config}{wlan\_tag\_mesh\_config}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+mesh\+\_\+config~113}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 97 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_ab06fcba07af9e7fe88d75456f057d7e2}\label{ieee80211__elements_8h_ab06fcba07af9e7fe88d75456f057d7e2}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_mesh\_id@{wlan\_tag\_mesh\_id}}
+\index{wlan\_tag\_mesh\_id@{wlan\_tag\_mesh\_id}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_mesh\_id}{wlan\_tag\_mesh\_id}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+mesh\+\_\+id~114}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 98 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_ad3f7519c5ac8f68c420ba9e51c2a84b8}\label{ieee80211__elements_8h_ad3f7519c5ac8f68c420ba9e51c2a84b8}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_mesh\_link\_metric\_report@{wlan\_tag\_mesh\_link\_metric\_report}}
+\index{wlan\_tag\_mesh\_link\_metric\_report@{wlan\_tag\_mesh\_link\_metric\_report}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_mesh\_link\_metric\_report}{wlan\_tag\_mesh\_link\_metric\_report}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+mesh\+\_\+link\+\_\+metric\+\_\+report~115}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 99 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a59de3f0782999729dbc51be2430b8fba}\label{ieee80211__elements_8h_a59de3f0782999729dbc51be2430b8fba}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_mic@{wlan\_tag\_mic}}
+\index{wlan\_tag\_mic@{wlan\_tag\_mic}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_mic}{wlan\_tag\_mic}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+mic~140}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 118 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_aa8f5568e3efeecb78df1e1d3a5c9b25e}\label{ieee80211__elements_8h_aa8f5568e3efeecb78df1e1d3a5c9b25e}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_mmie@{wlan\_tag\_mmie}}
+\index{wlan\_tag\_mmie@{wlan\_tag\_mmie}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_mmie}{wlan\_tag\_mmie}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+mmie~76}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 62 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a4acf8bfedf600f932328087726ef651f}\label{ieee80211__elements_8h_a4acf8bfedf600f932328087726ef651f}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_mobility\_domain@{wlan\_tag\_mobility\_domain}}
+\index{wlan\_tag\_mobility\_domain@{wlan\_tag\_mobility\_domain}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_mobility\_domain}{wlan\_tag\_mobility\_domain}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+mobility\+\_\+domain~54}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 40 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_ab0cc15d14bbdddc93a21236e050102b0}\label{ieee80211__elements_8h_ab0cc15d14bbdddc93a21236e050102b0}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_multi\_band@{wlan\_tag\_multi\_band}}
+\index{wlan\_tag\_multi\_band@{wlan\_tag\_multi\_band}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_multi\_band}{wlan\_tag\_multi\_band}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+multi\+\_\+band~158}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 133 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a3fec5098532e70526661d425568cd119}\label{ieee80211__elements_8h_a3fec5098532e70526661d425568cd119}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_multiple\_bssid@{wlan\_tag\_multiple\_bssid}}
+\index{wlan\_tag\_multiple\_bssid@{wlan\_tag\_multiple\_bssid}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_multiple\_bssid}{wlan\_tag\_multiple\_bssid}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+multiple\+\_\+bssid~71}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 57 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a53c3a25a324b1dbec18c92754e39d0bf}\label{ieee80211__elements_8h_a53c3a25a324b1dbec18c92754e39d0bf}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_multiple\_bssid\_index@{wlan\_tag\_multiple\_bssid\_index}}
+\index{wlan\_tag\_multiple\_bssid\_index@{wlan\_tag\_multiple\_bssid\_index}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_multiple\_bssid\_index}{wlan\_tag\_multiple\_bssid\_index}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+multiple\+\_\+bssid\+\_\+index~85}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 70 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a1632e893d0f51efd21f25dde1cecad72}\label{ieee80211__elements_8h_a1632e893d0f51efd21f25dde1cecad72}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_multiple\_mac\_sublayers@{wlan\_tag\_multiple\_mac\_sublayers}}
+\index{wlan\_tag\_multiple\_mac\_sublayers@{wlan\_tag\_multiple\_mac\_sublayers}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_multiple\_mac\_sublayers}{wlan\_tag\_multiple\_mac\_sublayers}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+multiple\+\_\+mac\+\_\+sublayers~170}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 145 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a0a2ad8e68dc54fb7c0eb80e03eacdb41}\label{ieee80211__elements_8h_a0a2ad8e68dc54fb7c0eb80e03eacdb41}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_neighbor\_report@{wlan\_tag\_neighbor\_report}}
+\index{wlan\_tag\_neighbor\_report@{wlan\_tag\_neighbor\_report}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_neighbor\_report}{wlan\_tag\_neighbor\_report}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+neighbor\+\_\+report~52}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 38 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_aa109eeb0fdedba07a82ed998ceee96e5}\label{ieee80211__elements_8h_aa109eeb0fdedba07a82ed998ceee96e5}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_next\_dmg\_ati@{wlan\_tag\_next\_dmg\_ati}}
+\index{wlan\_tag\_next\_dmg\_ati@{wlan\_tag\_next\_dmg\_ati}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_next\_dmg\_ati}{wlan\_tag\_next\_dmg\_ati}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+next\+\_\+dmg\+\_\+ati~147}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 125 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_ab67ed66f5830549f300657d146183f4d}\label{ieee80211__elements_8h_ab67ed66f5830549f300657d146183f4d}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_nextpcp\_list@{wlan\_tag\_nextpcp\_list}}
+\index{wlan\_tag\_nextpcp\_list@{wlan\_tag\_nextpcp\_list}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_nextpcp\_list}{wlan\_tag\_nextpcp\_list}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+nextpcp\+\_\+list~160}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 135 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_af0d7d983cce02d8a8885983921e54c0c}\label{ieee80211__elements_8h_af0d7d983cce02d8a8885983921e54c0c}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_nontransmitted\_bssid\_capa@{wlan\_tag\_nontransmitted\_bssid\_capa}}
+\index{wlan\_tag\_nontransmitted\_bssid\_capa@{wlan\_tag\_nontransmitted\_bssid\_capa}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_nontransmitted\_bssid\_capa}{wlan\_tag\_nontransmitted\_bssid\_capa}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+nontransmitted\+\_\+bssid\+\_\+capa~83}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 68 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a15d68d1d1834fece8062d451fd17a686}\label{ieee80211__elements_8h_a15d68d1d1834fece8062d451fd17a686}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_overlapping\_bss\_scan\_params@{wlan\_tag\_overlapping\_bss\_scan\_params}}
+\index{wlan\_tag\_overlapping\_bss\_scan\_params@{wlan\_tag\_overlapping\_bss\_scan\_params}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_overlapping\_bss\_scan\_params}{wlan\_tag\_overlapping\_bss\_scan\_params}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+overlapping\+\_\+bss\+\_\+scan\+\_\+params~74}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 60 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a4b76f867d6ac48e5910f6777f9e2111a}\label{ieee80211__elements_8h_a4b76f867d6ac48e5910f6777f9e2111a}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_pcp\_handover@{wlan\_tag\_pcp\_handover}}
+\index{wlan\_tag\_pcp\_handover@{wlan\_tag\_pcp\_handover}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_pcp\_handover}{wlan\_tag\_pcp\_handover}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+pcp\+\_\+handover~161}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 136 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_ab28c20878f1f1e13c7f17ec870bed23a}\label{ieee80211__elements_8h_ab28c20878f1f1e13c7f17ec870bed23a}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_peer\_mgmt@{wlan\_tag\_peer\_mgmt}}
+\index{wlan\_tag\_peer\_mgmt@{wlan\_tag\_peer\_mgmt}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_peer\_mgmt}{wlan\_tag\_peer\_mgmt}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+peer\+\_\+mgmt~117}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 101 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a162deb0655c5af513d80c5ed49763c97}\label{ieee80211__elements_8h_a162deb0655c5af513d80c5ed49763c97}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_perr@{wlan\_tag\_perr}}
+\index{wlan\_tag\_perr@{wlan\_tag\_perr}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_perr}{wlan\_tag\_perr}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+perr~132}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 114 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_ac9e0e5fddc90399b784857ba22833964}\label{ieee80211__elements_8h_ac9e0e5fddc90399b784857ba22833964}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_prep@{wlan\_tag\_prep}}
+\index{wlan\_tag\_prep@{wlan\_tag\_prep}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_prep}{wlan\_tag\_prep}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+prep~131}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 113 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_ad0f5875f2fccef11b8677c58499752a4}\label{ieee80211__elements_8h_ad0f5875f2fccef11b8677c58499752a4}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_preq@{wlan\_tag\_preq}}
+\index{wlan\_tag\_preq@{wlan\_tag\_preq}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_preq}{wlan\_tag\_preq}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+preq~130}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 112 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a5a943cfa6a512c8f8cff42c1456d1822}\label{ieee80211__elements_8h_a5a943cfa6a512c8f8cff42c1456d1822}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_pti\_control@{wlan\_tag\_pti\_control}}
+\index{wlan\_tag\_pti\_control@{wlan\_tag\_pti\_control}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_pti\_control}{wlan\_tag\_pti\_control}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+pti\+\_\+control~105}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 89 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a1c50627bf68d187f2d35d21d6a496ad4}\label{ieee80211__elements_8h_a1c50627bf68d187f2d35d21d6a496ad4}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_pwr\_capability@{wlan\_tag\_pwr\_capability}}
+\index{wlan\_tag\_pwr\_capability@{wlan\_tag\_pwr\_capability}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_pwr\_capability}{wlan\_tag\_pwr\_capability}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+pwr\+\_\+capability~33}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 21 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a6ec29d3b93c3f056aea41d4da86bd315}\label{ieee80211__elements_8h_a6ec29d3b93c3f056aea41d4da86bd315}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_pwr\_constraint@{wlan\_tag\_pwr\_constraint}}
+\index{wlan\_tag\_pwr\_constraint@{wlan\_tag\_pwr\_constraint}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_pwr\_constraint}{wlan\_tag\_pwr\_constraint}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+pwr\+\_\+constraint~32}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 20 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_ada8731fa8158bf98bcd89a0440dd9be8}\label{ieee80211__elements_8h_ada8731fa8158bf98bcd89a0440dd9be8}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_pxu@{wlan\_tag\_pxu}}
+\index{wlan\_tag\_pxu@{wlan\_tag\_pxu}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_pxu}{wlan\_tag\_pxu}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+pxu~137}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 115 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_af91084be9fd132bc28ca2d358253618f}\label{ieee80211__elements_8h_af91084be9fd132bc28ca2d358253618f}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_pxuc@{wlan\_tag\_pxuc}}
+\index{wlan\_tag\_pxuc@{wlan\_tag\_pxuc}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_pxuc}{wlan\_tag\_pxuc}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+pxuc~138}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 116 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a4b5741ab6d33c1ad1ae818068da7ff00}\label{ieee80211__elements_8h_a4b5741ab6d33c1ad1ae818068da7ff00}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_qload\_report@{wlan\_tag\_qload\_report}}
+\index{wlan\_tag\_qload\_report@{wlan\_tag\_qload\_report}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_qload\_report}{wlan\_tag\_qload\_report}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+qload\+\_\+report~186}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 156 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a83f949d45367b9b127d3134a25dd503f}\label{ieee80211__elements_8h_a83f949d45367b9b127d3134a25dd503f}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_qmf\_policy@{wlan\_tag\_qmf\_policy}}
+\index{wlan\_tag\_qmf\_policy@{wlan\_tag\_qmf\_policy}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_qmf\_policy}{wlan\_tag\_qmf\_policy}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+qmf\+\_\+policy~181}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 151 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a8c9a306cd337630dbe2cb6097a16269a}\label{ieee80211__elements_8h_a8c9a306cd337630dbe2cb6097a16269a}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_qos@{wlan\_tag\_qos}}
+\index{wlan\_tag\_qos@{wlan\_tag\_qos}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_qos}{wlan\_tag\_qos}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+qos~46}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 34 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a662e633eb0615c14d4317bf479eced26}\label{ieee80211__elements_8h_a662e633eb0615c14d4317bf479eced26}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_qos\_map\_set@{wlan\_tag\_qos\_map\_set}}
+\index{wlan\_tag\_qos\_map\_set@{wlan\_tag\_qos\_map\_set}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_qos\_map\_set}{wlan\_tag\_qos\_map\_set}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+qos\+\_\+map\+\_\+set~110}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 94 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a86782977629e1c3302fc5272509f55f4}\label{ieee80211__elements_8h_a86782977629e1c3302fc5272509f55f4}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_qos\_traffic\_capability@{wlan\_tag\_qos\_traffic\_capability}}
+\index{wlan\_tag\_qos\_traffic\_capability@{wlan\_tag\_qos\_traffic\_capability}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_qos\_traffic\_capability}{wlan\_tag\_qos\_traffic\_capability}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+qos\+\_\+traffic\+\_\+capability~89}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 74 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a7af5ef7afdd1ec6a601eb1c6dcc6948c}\label{ieee80211__elements_8h_a7af5ef7afdd1ec6a601eb1c6dcc6948c}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_quiet@{wlan\_tag\_quiet}}
+\index{wlan\_tag\_quiet@{wlan\_tag\_quiet}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_quiet}{wlan\_tag\_quiet}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+quiet~40}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 28 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a495b7700cef204e2a7bea0c10d685034}\label{ieee80211__elements_8h_a495b7700cef204e2a7bea0c10d685034}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_quiet\_period\_request@{wlan\_tag\_quiet\_period\_request}}
+\index{wlan\_tag\_quiet\_period\_request@{wlan\_tag\_quiet\_period\_request}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_quiet\_period\_request}{wlan\_tag\_quiet\_period\_request}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+quiet\+\_\+period\+\_\+request~175}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 149 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a054ebcd2dcde5f742b3d6faded58f469}\label{ieee80211__elements_8h_a054ebcd2dcde5f742b3d6faded58f469}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_quiet\_period\_response@{wlan\_tag\_quiet\_period\_response}}
+\index{wlan\_tag\_quiet\_period\_response@{wlan\_tag\_quiet\_period\_response}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_quiet\_period\_response}{wlan\_tag\_quiet\_period\_response}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+quiet\+\_\+period\+\_\+response~177}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 150 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a5013640559cbb310c3d3b35fec96422d}\label{ieee80211__elements_8h_a5013640559cbb310c3d3b35fec96422d}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_rann@{wlan\_tag\_rann}}
+\index{wlan\_tag\_rann@{wlan\_tag\_rann}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_rann}{wlan\_tag\_rann}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+rann~126}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 110 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a85b9e3454200cef63094c7c7e91da031}\label{ieee80211__elements_8h_a85b9e3454200cef63094c7c7e91da031}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_rcpi@{wlan\_tag\_rcpi}}
+\index{wlan\_tag\_rcpi@{wlan\_tag\_rcpi}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_rcpi}{wlan\_tag\_rcpi}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+rcpi~53}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 39 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a1fd5136b0a130ad8e17fd274b19a5180}\label{ieee80211__elements_8h_a1fd5136b0a130ad8e17fd274b19a5180}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_reduced\_neighbor\_report@{wlan\_tag\_reduced\_neighbor\_report}}
+\index{wlan\_tag\_reduced\_neighbor\_report@{wlan\_tag\_reduced\_neighbor\_report}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_reduced\_neighbor\_report}{wlan\_tag\_reduced\_neighbor\_report}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+reduced\+\_\+neighbor\+\_\+report~201}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 171 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a4832aaac6fdfceab91e7df4c56fc9b58}\label{ieee80211__elements_8h_a4832aaac6fdfceab91e7df4c56fc9b58}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_relay\_transfer\_param\_set@{wlan\_tag\_relay\_transfer\_param\_set}}
+\index{wlan\_tag\_relay\_transfer\_param\_set@{wlan\_tag\_relay\_transfer\_param\_set}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_relay\_transfer\_param\_set}{wlan\_tag\_relay\_transfer\_param\_set}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+relay\+\_\+transfer\+\_\+param\+\_\+set~168}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 143 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_aa9ed422c750c42fbac6cbba3ee0a2206}\label{ieee80211__elements_8h_aa9ed422c750c42fbac6cbba3ee0a2206}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_replay\_capabilities@{wlan\_tag\_replay\_capabilities}}
+\index{wlan\_tag\_replay\_capabilities@{wlan\_tag\_replay\_capabilities}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_replay\_capabilities}{wlan\_tag\_replay\_capabilities}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+replay\+\_\+capabilities~167}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 142 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_adbdf84824a1fba1a0e903f6a6a7e8c5e}\label{ieee80211__elements_8h_adbdf84824a1fba1a0e903f6a6a7e8c5e}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_request@{wlan\_tag\_request}}
+\index{wlan\_tag\_request@{wlan\_tag\_request}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_request}{wlan\_tag\_request}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+request~10}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 13 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a150526db8dc10b70177a23f6273cd108}\label{ieee80211__elements_8h_a150526db8dc10b70177a23f6273cd108}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ric\_data@{wlan\_tag\_ric\_data}}
+\index{wlan\_tag\_ric\_data@{wlan\_tag\_ric\_data}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ric\_data}{wlan\_tag\_ric\_data}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ric\+\_\+data~57}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 43 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a8f812dfa82d7f84ea139299a2c73e754}\label{ieee80211__elements_8h_a8f812dfa82d7f84ea139299a2c73e754}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ric\_descriptor@{wlan\_tag\_ric\_descriptor}}
+\index{wlan\_tag\_ric\_descriptor@{wlan\_tag\_ric\_descriptor}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ric\_descriptor}{wlan\_tag\_ric\_descriptor}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ric\+\_\+descriptor~75}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 61 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a4bd0ac74d3a27c9e4259b19ca2ff6ece}\label{ieee80211__elements_8h_a4bd0ac74d3a27c9e4259b19ca2ff6ece}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_roaming\_consortium@{wlan\_tag\_roaming\_consortium}}
+\index{wlan\_tag\_roaming\_consortium@{wlan\_tag\_roaming\_consortium}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_roaming\_consortium}{wlan\_tag\_roaming\_consortium}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+roaming\+\_\+consortium~111}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 95 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a348f770b78aa12cc6966e477624d1905}\label{ieee80211__elements_8h_a348f770b78aa12cc6966e477624d1905}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_rrm\_enabled\_capabilities@{wlan\_tag\_rrm\_enabled\_capabilities}}
+\index{wlan\_tag\_rrm\_enabled\_capabilities@{wlan\_tag\_rrm\_enabled\_capabilities}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_rrm\_enabled\_capabilities}{wlan\_tag\_rrm\_enabled\_capabilities}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+rrm\+\_\+enabled\+\_\+capabilities~70}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 56 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a47065875efab169899fd4dbcb2b03d97}\label{ieee80211__elements_8h_a47065875efab169899fd4dbcb2b03d97}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_rsn@{wlan\_tag\_rsn}}
+\index{wlan\_tag\_rsn@{wlan\_tag\_rsn}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_rsn}{wlan\_tag\_rsn}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+rsn~48}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 35 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a93a87b0e5389cb586256e73bec6bcfd5}\label{ieee80211__elements_8h_a93a87b0e5389cb586256e73bec6bcfd5}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_rsni@{wlan\_tag\_rsni}}
+\index{wlan\_tag\_rsni@{wlan\_tag\_rsni}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_rsni}{wlan\_tag\_rsni}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+rsni~65}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 51 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_ab90f67b30751a0c2e723fed43c4efbc8}\label{ieee80211__elements_8h_ab90f67b30751a0c2e723fed43c4efbc8}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_rsnx@{wlan\_tag\_rsnx}}
+\index{wlan\_tag\_rsnx@{wlan\_tag\_rsnx}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_rsnx}{wlan\_tag\_rsnx}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+rsnx~244}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 186 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a1b0a0c7924666f5d1149c47fc82c2eb4}\label{ieee80211__elements_8h_a1b0a0c7924666f5d1149c47fc82c2eb4}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_s1g\_bcn\_compat@{wlan\_tag\_s1g\_bcn\_compat}}
+\index{wlan\_tag\_s1g\_bcn\_compat@{wlan\_tag\_s1g\_bcn\_compat}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_s1g\_bcn\_compat}{wlan\_tag\_s1g\_bcn\_compat}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+s1g\+\_\+bcn\+\_\+compat~213}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 176 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a5b0c74313a8fdb20d321523b465722c2}\label{ieee80211__elements_8h_a5b0c74313a8fdb20d321523b465722c2}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_s1g\_capabilities@{wlan\_tag\_s1g\_capabilities}}
+\index{wlan\_tag\_s1g\_capabilities@{wlan\_tag\_s1g\_capabilities}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_s1g\_capabilities}{wlan\_tag\_s1g\_capabilities}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+s1g\+\_\+capabilities~217}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 178 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a56f7e37cc0e8268f9da8f82ca3d426aa}\label{ieee80211__elements_8h_a56f7e37cc0e8268f9da8f82ca3d426aa}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_s1g\_operation@{wlan\_tag\_s1g\_operation}}
+\index{wlan\_tag\_s1g\_operation@{wlan\_tag\_s1g\_operation}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_s1g\_operation}{wlan\_tag\_s1g\_operation}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+s1g\+\_\+operation~232}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 180 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a7aecb829671a6d177326e022b99a4479}\label{ieee80211__elements_8h_a7aecb829671a6d177326e022b99a4479}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_schedule@{wlan\_tag\_schedule}}
+\index{wlan\_tag\_schedule@{wlan\_tag\_schedule}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_schedule}{wlan\_tag\_schedule}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+schedule~15}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 18 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a19773c91b57d51cbd65434d4fa4e2b75}\label{ieee80211__elements_8h_a19773c91b57d51cbd65434d4fa4e2b75}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_scs\_descriptor@{wlan\_tag\_scs\_descriptor}}
+\index{wlan\_tag\_scs\_descriptor@{wlan\_tag\_scs\_descriptor}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_scs\_descriptor}{wlan\_tag\_scs\_descriptor}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+scs\+\_\+descriptor~185}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 155 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a666cf7d6d9709f69bb4159b489e3c68f}\label{ieee80211__elements_8h_a666cf7d6d9709f69bb4159b489e3c68f}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_secondary\_channel\_offset@{wlan\_tag\_secondary\_channel\_offset}}
+\index{wlan\_tag\_secondary\_channel\_offset@{wlan\_tag\_secondary\_channel\_offset}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_secondary\_channel\_offset}{wlan\_tag\_secondary\_channel\_offset}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+secondary\+\_\+channel\+\_\+offset~62}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 48 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_afbc804d21a691ac24deaef2812d47e02}\label{ieee80211__elements_8h_afbc804d21a691ac24deaef2812d47e02}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_session\_transition@{wlan\_tag\_session\_transition}}
+\index{wlan\_tag\_session\_transition@{wlan\_tag\_session\_transition}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_session\_transition}{wlan\_tag\_session\_transition}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+session\+\_\+transition~164}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 139 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a18488b85ed34e9816900461c4ae43caf}\label{ieee80211__elements_8h_a18488b85ed34e9816900461c4ae43caf}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ssid@{wlan\_tag\_ssid}}
+\index{wlan\_tag\_ssid@{wlan\_tag\_ssid}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ssid}{wlan\_tag\_ssid}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ssid~0}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 6 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a8c40dae9efe58a75716f31025309ba0c}\label{ieee80211__elements_8h_a8c40dae9efe58a75716f31025309ba0c}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ssid\_list@{wlan\_tag\_ssid\_list}}
+\index{wlan\_tag\_ssid\_list@{wlan\_tag\_ssid\_list}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ssid\_list}{wlan\_tag\_ssid\_list}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ssid\+\_\+list~84}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 69 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a72868be3f4af4d0156ecf95f92b2b48a}\label{ieee80211__elements_8h_a72868be3f4af4d0156ecf95f92b2b48a}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_sta\_availability@{wlan\_tag\_sta\_availability}}
+\index{wlan\_tag\_sta\_availability@{wlan\_tag\_sta\_availability}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_sta\_availability}{wlan\_tag\_sta\_availability}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+sta\+\_\+availability~145}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 123 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a229f73946b4d2be351939b472ef835b1}\label{ieee80211__elements_8h_a229f73946b4d2be351939b472ef835b1}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_supp\_rates@{wlan\_tag\_supp\_rates}}
+\index{wlan\_tag\_supp\_rates@{wlan\_tag\_supp\_rates}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_supp\_rates}{wlan\_tag\_supp\_rates}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+supp\+\_\+rates~1}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 7 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_abce61a0104e55839d62d5074093458f8}\label{ieee80211__elements_8h_abce61a0104e55839d62d5074093458f8}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_supported\_channels@{wlan\_tag\_supported\_channels}}
+\index{wlan\_tag\_supported\_channels@{wlan\_tag\_supported\_channels}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_supported\_channels}{wlan\_tag\_supported\_channels}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+supported\+\_\+channels~36}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 24 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a7644283ccf13b28bdaf71566a55bb880}\label{ieee80211__elements_8h_a7644283ccf13b28bdaf71566a55bb880}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_supported\_operating\_classes@{wlan\_tag\_supported\_operating\_classes}}
+\index{wlan\_tag\_supported\_operating\_classes@{wlan\_tag\_supported\_operating\_classes}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_supported\_operating\_classes}{wlan\_tag\_supported\_operating\_classes}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+supported\+\_\+operating\+\_\+classes~59}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 45 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a08a028ef4ead37c80c002d65c9e4f430}\label{ieee80211__elements_8h_a08a028ef4ead37c80c002d65c9e4f430}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_switching\_stream@{wlan\_tag\_switching\_stream}}
+\index{wlan\_tag\_switching\_stream@{wlan\_tag\_switching\_stream}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_switching\_stream}{wlan\_tag\_switching\_stream}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+switching\+\_\+stream~163}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 138 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a15a96d11dc99c2d8c2bd39dd76aa1090}\label{ieee80211__elements_8h_a15a96d11dc99c2d8c2bd39dd76aa1090}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_tclas@{wlan\_tag\_tclas}}
+\index{wlan\_tag\_tclas@{wlan\_tag\_tclas}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_tclas}{wlan\_tag\_tclas}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+tclas~14}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 17 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a12fc50adfb61041e62352e03830ca3a9}\label{ieee80211__elements_8h_a12fc50adfb61041e62352e03830ca3a9}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_tclas\_processing@{wlan\_tag\_tclas\_processing}}
+\index{wlan\_tag\_tclas\_processing@{wlan\_tag\_tclas\_processing}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_tclas\_processing}{wlan\_tag\_tclas\_processing}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+tclas\+\_\+processing~44}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 32 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_af28985617d83364c58cdddfdb9d48423}\label{ieee80211__elements_8h_af28985617d83364c58cdddfdb9d48423}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_tfs\_req@{wlan\_tag\_tfs\_req}}
+\index{wlan\_tag\_tfs\_req@{wlan\_tag\_tfs\_req}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_tfs\_req}{wlan\_tag\_tfs\_req}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+tfs\+\_\+req~91}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 76 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_af465c13849c231fe32b5de815a86c1b9}\label{ieee80211__elements_8h_af465c13849c231fe32b5de815a86c1b9}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_tfs\_resp@{wlan\_tag\_tfs\_resp}}
+\index{wlan\_tag\_tfs\_resp@{wlan\_tag\_tfs\_resp}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_tfs\_resp}{wlan\_tag\_tfs\_resp}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+tfs\+\_\+resp~92}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 77 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_ad906049d6c4b1786386544e68ca7e169}\label{ieee80211__elements_8h_ad906049d6c4b1786386544e68ca7e169}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_tim@{wlan\_tag\_tim}}
+\index{wlan\_tag\_tim@{wlan\_tag\_tim}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_tim}{wlan\_tag\_tim}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+tim~5}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 10 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_ac46bac28b5637ce2eeb6137e89d7b615}\label{ieee80211__elements_8h_ac46bac28b5637ce2eeb6137e89d7b615}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_tim\_broadcast\_request@{wlan\_tag\_tim\_broadcast\_request}}
+\index{wlan\_tag\_tim\_broadcast\_request@{wlan\_tag\_tim\_broadcast\_request}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_tim\_broadcast\_request}{wlan\_tag\_tim\_broadcast\_request}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+tim\+\_\+broadcast\+\_\+request~94}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 79 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_ad1818bd2527d8fbac1fdbbefbdfd085c}\label{ieee80211__elements_8h_ad1818bd2527d8fbac1fdbbefbdfd085c}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_tim\_broadcast\_response@{wlan\_tag\_tim\_broadcast\_response}}
+\index{wlan\_tag\_tim\_broadcast\_response@{wlan\_tag\_tim\_broadcast\_response}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_tim\_broadcast\_response}{wlan\_tag\_tim\_broadcast\_response}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+tim\+\_\+broadcast\+\_\+response~95}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 80 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a875cc49eabff89987611f77bb66f8d94}\label{ieee80211__elements_8h_a875cc49eabff89987611f77bb66f8d94}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_time\_advertisement@{wlan\_tag\_time\_advertisement}}
+\index{wlan\_tag\_time\_advertisement@{wlan\_tag\_time\_advertisement}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_time\_advertisement}{wlan\_tag\_time\_advertisement}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+time\+\_\+advertisement~69}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 55 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_ae27384f986defed08686161f111e5478}\label{ieee80211__elements_8h_ae27384f986defed08686161f111e5478}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_time\_zone@{wlan\_tag\_time\_zone}}
+\index{wlan\_tag\_time\_zone@{wlan\_tag\_time\_zone}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_time\_zone}{wlan\_tag\_time\_zone}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+time\+\_\+zone~98}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 83 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_aff5d08e4e60acbea444cb77a2f857c0e}\label{ieee80211__elements_8h_aff5d08e4e60acbea444cb77a2f857c0e}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_timeout\_interval@{wlan\_tag\_timeout\_interval}}
+\index{wlan\_tag\_timeout\_interval@{wlan\_tag\_timeout\_interval}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_timeout\_interval}{wlan\_tag\_timeout\_interval}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+timeout\+\_\+interval~56}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 42 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a9df1392f3430091195dabe501037cde0}\label{ieee80211__elements_8h_a9df1392f3430091195dabe501037cde0}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_tpc\_report@{wlan\_tag\_tpc\_report}}
+\index{wlan\_tag\_tpc\_report@{wlan\_tag\_tpc\_report}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_tpc\_report}{wlan\_tag\_tpc\_report}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+tpc\+\_\+report~35}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 23 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a3041f2e8815a3d41e8cf10c60791fd79}\label{ieee80211__elements_8h_a3041f2e8815a3d41e8cf10c60791fd79}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_tpc\_request@{wlan\_tag\_tpc\_request}}
+\index{wlan\_tag\_tpc\_request@{wlan\_tag\_tpc\_request}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_tpc\_request}{wlan\_tag\_tpc\_request}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+tpc\+\_\+request~34}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 22 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a39516ad40319e7f92e73f0223af3aa9d}\label{ieee80211__elements_8h_a39516ad40319e7f92e73f0223af3aa9d}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_tpu\_buffer\_status@{wlan\_tag\_tpu\_buffer\_status}}
+\index{wlan\_tag\_tpu\_buffer\_status@{wlan\_tag\_tpu\_buffer\_status}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_tpu\_buffer\_status}{wlan\_tag\_tpu\_buffer\_status}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+tpu\+\_\+buffer\+\_\+status~106}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 90 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_ad791a74425490b866513e5918f3665d3}\label{ieee80211__elements_8h_ad791a74425490b866513e5918f3665d3}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_transmit\_power\_envelope@{wlan\_tag\_transmit\_power\_envelope}}
+\index{wlan\_tag\_transmit\_power\_envelope@{wlan\_tag\_transmit\_power\_envelope}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_transmit\_power\_envelope}{wlan\_tag\_transmit\_power\_envelope}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+transmit\+\_\+power\+\_\+envelope~195}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 165 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a70d65750f2a0bdd15c777a3fb7d4fe20}\label{ieee80211__elements_8h_a70d65750f2a0bdd15c777a3fb7d4fe20}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_ts\_delay@{wlan\_tag\_ts\_delay}}
+\index{wlan\_tag\_ts\_delay@{wlan\_tag\_ts\_delay}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_ts\_delay}{wlan\_tag\_ts\_delay}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+ts\+\_\+delay~43}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 31 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_abd7194d8bf70028aeddb5b302342dbe1}\label{ieee80211__elements_8h_abd7194d8bf70028aeddb5b302342dbe1}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_tspec@{wlan\_tag\_tspec}}
+\index{wlan\_tag\_tspec@{wlan\_tag\_tspec}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_tspec}{wlan\_tag\_tspec}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+tspec~13}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 16 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_aa64ff87fdc37a88ee9312935b52d5247}\label{ieee80211__elements_8h_aa64ff87fdc37a88ee9312935b52d5247}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_tvht\_operation@{wlan\_tag\_tvht\_operation}}
+\index{wlan\_tag\_tvht\_operation@{wlan\_tag\_tvht\_operation}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_tvht\_operation}{wlan\_tag\_tvht\_operation}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+tvht\+\_\+operation~202}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 172 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a5dcfea90660926afc0cbb52b5980badd}\label{ieee80211__elements_8h_a5dcfea90660926afc0cbb52b5980badd}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_twt@{wlan\_tag\_twt}}
+\index{wlan\_tag\_twt@{wlan\_tag\_twt}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_twt}{wlan\_tag\_twt}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+twt~216}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 177 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_ab137107002393f01c6e0261615721e75}\label{ieee80211__elements_8h_ab137107002393f01c6e0261615721e75}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_u\_apsd\_coex@{wlan\_tag\_u\_apsd\_coex}}
+\index{wlan\_tag\_u\_apsd\_coex@{wlan\_tag\_u\_apsd\_coex}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_u\_apsd\_coex}{wlan\_tag\_u\_apsd\_coex}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+u\+\_\+apsd\+\_\+coex~142}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 120 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_ac18420a81cd75bf411af2a760296c218}\label{ieee80211__elements_8h_ac18420a81cd75bf411af2a760296c218}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_u\_pid@{wlan\_tag\_u\_pid}}
+\index{wlan\_tag\_u\_pid@{wlan\_tag\_u\_pid}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_u\_pid}{wlan\_tag\_u\_pid}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+u\+\_\+pid~171}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 146 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a7254a69ebd77afad470c54234f506a5d}\label{ieee80211__elements_8h_a7254a69ebd77afad470c54234f506a5d}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_upsim@{wlan\_tag\_upsim}}
+\index{wlan\_tag\_upsim@{wlan\_tag\_upsim}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_upsim}{wlan\_tag\_upsim}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+upsim~200}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 170 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a696f0bbdd8259ba9071ac5667f00130b}\label{ieee80211__elements_8h_a696f0bbdd8259ba9071ac5667f00130b}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_vendor\_specific@{wlan\_tag\_vendor\_specific}}
+\index{wlan\_tag\_vendor\_specific@{wlan\_tag\_vendor\_specific}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_vendor\_specific}{wlan\_tag\_vendor\_specific}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+vendor\+\_\+specific~221}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 179 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a070b4d3d1a1bc47ae10b4178cb3fe444}\label{ieee80211__elements_8h_a070b4d3d1a1bc47ae10b4178cb3fe444}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_vht\_aid@{wlan\_tag\_vht\_aid}}
+\index{wlan\_tag\_vht\_aid@{wlan\_tag\_vht\_aid}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_vht\_aid}{wlan\_tag\_vht\_aid}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+vht\+\_\+aid~197}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 167 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_ad6364597e8479e09bf4af887942b85dd}\label{ieee80211__elements_8h_ad6364597e8479e09bf4af887942b85dd}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_vht\_cap@{wlan\_tag\_vht\_cap}}
+\index{wlan\_tag\_vht\_cap@{wlan\_tag\_vht\_cap}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_vht\_cap}{wlan\_tag\_vht\_cap}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+vht\+\_\+cap~191}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 161 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a526e79df86df134ad22e28afc90b73d6}\label{ieee80211__elements_8h_a526e79df86df134ad22e28afc90b73d6}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_vht\_channel\_switch\_wrapper@{wlan\_tag\_vht\_channel\_switch\_wrapper}}
+\index{wlan\_tag\_vht\_channel\_switch\_wrapper@{wlan\_tag\_vht\_channel\_switch\_wrapper}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_vht\_channel\_switch\_wrapper}{wlan\_tag\_vht\_channel\_switch\_wrapper}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+vht\+\_\+channel\+\_\+switch\+\_\+wrapper~196}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 166 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a0023e8d1c2a132273502f7ce041e1184}\label{ieee80211__elements_8h_a0023e8d1c2a132273502f7ce041e1184}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_vht\_extended\_bss\_load@{wlan\_tag\_vht\_extended\_bss\_load}}
+\index{wlan\_tag\_vht\_extended\_bss\_load@{wlan\_tag\_vht\_extended\_bss\_load}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_vht\_extended\_bss\_load}{wlan\_tag\_vht\_extended\_bss\_load}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+vht\+\_\+extended\+\_\+bss\+\_\+load~193}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 163 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_ad6b436a616ed7c8d2101bbf09974cd9c}\label{ieee80211__elements_8h_ad6b436a616ed7c8d2101bbf09974cd9c}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_vht\_operating\_mode\_notification@{wlan\_tag\_vht\_operating\_mode\_notification}}
+\index{wlan\_tag\_vht\_operating\_mode\_notification@{wlan\_tag\_vht\_operating\_mode\_notification}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_vht\_operating\_mode\_notification}{wlan\_tag\_vht\_operating\_mode\_notification}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+vht\+\_\+operating\+\_\+mode\+\_\+notification~199}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 169 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a7c73cb4912ae9bc42e8b45325f9ee1c4}\label{ieee80211__elements_8h_a7c73cb4912ae9bc42e8b45325f9ee1c4}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_vht\_operation@{wlan\_tag\_vht\_operation}}
+\index{wlan\_tag\_vht\_operation@{wlan\_tag\_vht\_operation}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_vht\_operation}{wlan\_tag\_vht\_operation}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+vht\+\_\+operation~192}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 162 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a9a7088afdcb1a5676f3496df3f2fba10}\label{ieee80211__elements_8h_a9a7088afdcb1a5676f3496df3f2fba10}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_vht\_quiet\_channel@{wlan\_tag\_vht\_quiet\_channel}}
+\index{wlan\_tag\_vht\_quiet\_channel@{wlan\_tag\_vht\_quiet\_channel}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_vht\_quiet\_channel}{wlan\_tag\_vht\_quiet\_channel}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+vht\+\_\+quiet\+\_\+channel~198}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 168 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a8531e58a3148aedb5d3e910127b231cf}\label{ieee80211__elements_8h_a8531e58a3148aedb5d3e910127b231cf}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_vht\_wide\_bw\_chswitch@{wlan\_tag\_vht\_wide\_bw\_chswitch}}
+\index{wlan\_tag\_vht\_wide\_bw\_chswitch@{wlan\_tag\_vht\_wide\_bw\_chswitch}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_vht\_wide\_bw\_chswitch}{wlan\_tag\_vht\_wide\_bw\_chswitch}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+vht\+\_\+wide\+\_\+bw\+\_\+chswitch~194}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 164 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a3b19506461f14df84c04f58f7513af8e}\label{ieee80211__elements_8h_a3b19506461f14df84c04f58f7513af8e}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_wakeup\_schedule@{wlan\_tag\_wakeup\_schedule}}
+\index{wlan\_tag\_wakeup\_schedule@{wlan\_tag\_wakeup\_schedule}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_wakeup\_schedule}{wlan\_tag\_wakeup\_schedule}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+wakeup\+\_\+schedule~102}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 87 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_aaa1ee08a2bceef66fdd1c926c3eb0039}\label{ieee80211__elements_8h_aaa1ee08a2bceef66fdd1c926c3eb0039}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_white\_space\_map@{wlan\_tag\_white\_space\_map}}
+\index{wlan\_tag\_white\_space\_map@{wlan\_tag\_white\_space\_map}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_white\_space\_map}{wlan\_tag\_white\_space\_map}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+white\+\_\+space\+\_\+map~205}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 174 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{ieee80211__elements_8h_a70630539e089aad9b8e59931dd835eac}\label{ieee80211__elements_8h_a70630539e089aad9b8e59931dd835eac}} 
+\index{ieee80211\_elements.h@{ieee80211\_elements.h}!wlan\_tag\_wnmsleep@{wlan\_tag\_wnmsleep}}
+\index{wlan\_tag\_wnmsleep@{wlan\_tag\_wnmsleep}!ieee80211\_elements.h@{ieee80211\_elements.h}}
+\doxysubsubsection{\texorpdfstring{wlan\_tag\_wnmsleep}{wlan\_tag\_wnmsleep}}
+{\footnotesize\ttfamily \#define wlan\+\_\+tag\+\_\+wnmsleep~93}
+
+
+
+ieee80211\+\_\+elements.\+h 파일의 78 번째 라인에서 정의되었습니다.
+

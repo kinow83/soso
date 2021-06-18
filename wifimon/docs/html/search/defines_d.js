@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['s1g_5fact_5faid_5fswitch_5frequest_3281',['S1G_ACT_AID_SWITCH_REQUEST',['../ieee802__11__defs_8h.html#ab143c379ae324de66cf2c0095e5a3b42',1,'ieee802_11_defs.h']]],
+  ['s1g_5fact_5faid_5fswitch_5fresponse_3282',['S1G_ACT_AID_SWITCH_RESPONSE',['../ieee802__11__defs_8h.html#af8cc603ef4db40ecb2541b6f1cbc6994',1,'ieee802_11_defs.h']]],
+  ['s1g_5fact_5fedca_5fparam_5fset_3283',['S1G_ACT_EDCA_PARAM_SET',['../ieee802__11__defs_8h.html#a3949668a3bcd6c758e5e775cfd13f683',1,'ieee802_11_defs.h']]],
+  ['s1g_5fact_5fel_5foperation_3284',['S1G_ACT_EL_OPERATION',['../ieee802__11__defs_8h.html#a1b31c468653ac96c8e68a49d95d6a922',1,'ieee802_11_defs.h']]],
+  ['s1g_5fact_5fsect_5fgroup_5fid_5flist_3285',['S1G_ACT_SECT_GROUP_ID_LIST',['../ieee802__11__defs_8h.html#a6a269f72b05b0f907226e8cfa706327b',1,'ieee802_11_defs.h']]],
+  ['s1g_5fact_5fsect_5fid_5ffeedback_3286',['S1G_ACT_SECT_ID_FEEDBACK',['../ieee802__11__defs_8h.html#af0c69e82f012ee387a58a57e730c4d1f',1,'ieee802_11_defs.h']]],
+  ['s1g_5fact_5fsta_5finfo_5fannounce_3287',['S1G_ACT_STA_INFO_ANNOUNCE',['../ieee802__11__defs_8h.html#a68e5c01f47c16ed8b148bb087dc84e7c',1,'ieee802_11_defs.h']]],
+  ['s1g_5fact_5fsync_5fcontrol_3288',['S1G_ACT_SYNC_CONTROL',['../ieee802__11__defs_8h.html#a2e62bfd4e4aef40959915eb7c1fc86fa',1,'ieee802_11_defs.h']]],
+  ['s1g_5fact_5ftwt_5finformation_3289',['S1G_ACT_TWT_INFORMATION',['../ieee802__11__defs_8h.html#a6c80574c968dc8537fd9b6b0a89d53cc',1,'ieee802_11_defs.h']]],
+  ['s1g_5fact_5ftwt_5fsetup_3290',['S1G_ACT_TWT_SETUP',['../ieee802__11__defs_8h.html#a5db3f28d63243cfa158b4ed9802f7c8d',1,'ieee802_11_defs.h']]],
+  ['s1g_5fact_5ftwt_5fteardown_3291',['S1G_ACT_TWT_TEARDOWN',['../ieee802__11__defs_8h.html#a272ff63ea96fb428b57f982d057860d6',1,'ieee802_11_defs.h']]],
+  ['sae_5fpk_5fie_5fvendor_5ftype_3292',['SAE_PK_IE_VENDOR_TYPE',['../ieee802__11__defs_8h.html#a1fdd4b83e70773a622bef95879376086',1,'ieee802_11_defs.h']]],
+  ['sae_5fpk_5foui_5ftype_3293',['SAE_PK_OUI_TYPE',['../ieee802__11__defs_8h.html#a46c98dc4e312cbbe95cd2ee9a47e1208',1,'ieee802_11_defs.h']]],
+  ['spatial_5freuse_5fhesiga_5fsr_5fval15_5fallowed_3294',['SPATIAL_REUSE_HESIGA_SR_VAL15_ALLOWED',['../ieee802__11__defs_8h.html#a9231348da8a093ee2981cd9445de21d7',1,'ieee802_11_defs.h']]],
+  ['spatial_5freuse_5fnon_5fsrg_5fobss_5fpd_5fsr_5fdisallowed_3295',['SPATIAL_REUSE_NON_SRG_OBSS_PD_SR_DISALLOWED',['../ieee802__11__defs_8h.html#ad144495c4fe9ad219bca13563ede7eb1',1,'ieee802_11_defs.h']]],
+  ['spatial_5freuse_5fnon_5fsrg_5foffset_5fpresent_3296',['SPATIAL_REUSE_NON_SRG_OFFSET_PRESENT',['../ieee802__11__defs_8h.html#a18fc9dd45c2a191027fd232e80b30b9a',1,'ieee802_11_defs.h']]],
+  ['spatial_5freuse_5fsrg_5finformation_5fpresent_3297',['SPATIAL_REUSE_SRG_INFORMATION_PRESENT',['../ieee802__11__defs_8h.html#a4f28f074f35ee2363c2e55254cbe3a49',1,'ieee802_11_defs.h']]],
+  ['spatial_5freuse_5fsrp_5fdisallowed_3298',['SPATIAL_REUSE_SRP_DISALLOWED',['../ieee802__11__defs_8h.html#a11b211515c54eb403b3d59e34a6d4ce7',1,'ieee802_11_defs.h']]]
+];

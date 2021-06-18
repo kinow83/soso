@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ModuleWorker: include/wifi_defs.h 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ModuleWorker
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'검색');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','검색');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">wifi_defs.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="wifi__defs_8h.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __SOSO_WIFI_DEFS_H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __SOSO_WIFI_DEFS_H__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="wifi__defs_8h.html#a2872371c64ef97583cc1ffedf3867508">    4</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="wifi__defs_8h.html#a2872371c64ef97583cc1ffedf3867508">wifi_80211_type</a> {</div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="wifi__defs_8h.html#a2872371c64ef97583cc1ffedf3867508a3921b3570b48be5f92f39f25fd42d0e0">    5</a></span>&#160;  <a class="code" href="wifi__defs_8h.html#a2872371c64ef97583cc1ffedf3867508a3921b3570b48be5f92f39f25fd42d0e0">wifi_type_management</a> = 0,</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="wifi__defs_8h.html#a2872371c64ef97583cc1ffedf3867508ad487f7c70e89edfb92597f5e17e4bb21">    6</a></span>&#160;  <a class="code" href="wifi__defs_8h.html#a2872371c64ef97583cc1ffedf3867508ad487f7c70e89edfb92597f5e17e4bb21">wifi_type_control</a> = 1,</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="wifi__defs_8h.html#a2872371c64ef97583cc1ffedf3867508abe3c25c7b433bff9072045d2ebe5ac27">    7</a></span>&#160;  <a class="code" href="wifi__defs_8h.html#a2872371c64ef97583cc1ffedf3867508abe3c25c7b433bff9072045d2ebe5ac27">wifi_type_data</a> = 2</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;};</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9">   10</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9">wifi_80211_subtype</a> {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="comment">// Management subtypes</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9a0263bda98ccc967eaea0aaace3032d29">   12</a></span>&#160;  <a class="code" href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9a0263bda98ccc967eaea0aaace3032d29">wifi_subtype_association_req</a> = 1,</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9a527f10e5d28e5458fbda36d6c8962024">   13</a></span>&#160;  <a class="code" href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9a527f10e5d28e5458fbda36d6c8962024">wifi_subtype_association_resp</a> = 2,</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9a9faaa6bb4fcca4d6fddb12ef57109fbe">   14</a></span>&#160;  <a class="code" href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9a9faaa6bb4fcca4d6fddb12ef57109fbe">wifi_subtype_reassociation_req</a> = 3,</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9a947c02544ce7fa6946ff55e030f7b57e">   15</a></span>&#160;  <a class="code" href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9a947c02544ce7fa6946ff55e030f7b57e">wifi_subtype_reassociation_resp</a> = 4,</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9acbf2bef1ba2fe7aba38c91903d1b0b68">   16</a></span>&#160;  <a class="code" href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9acbf2bef1ba2fe7aba38c91903d1b0b68">wifi_subtype_probe_req</a> = 5,</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9a88263d300ab5b6a34758600e82019d81">   17</a></span>&#160;  <a class="code" href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9a88263d300ab5b6a34758600e82019d81">wifi_subtype_probe_resp</a> = 6,</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9a04035a3db8c8bdb279aaecdad4f1808d">   18</a></span>&#160;  <a class="code" href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9a04035a3db8c8bdb279aaecdad4f1808d">wifi_subtype_beacon</a> = 7,</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9a10fb128d418d61a402b0cc4c26e6008a">   19</a></span>&#160;  <a class="code" href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9a10fb128d418d61a402b0cc4c26e6008a">wifi_subtype_disassociation</a> = 8,</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9af7a19de25bab16f945d3cf4b0de61895">   20</a></span>&#160;  <a class="code" href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9af7a19de25bab16f945d3cf4b0de61895">wifi_subtype_authentication</a> = 9,</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9adf01fc3bb4f418e9fb7d68d88550e15d">   21</a></span>&#160;  <a class="code" href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9adf01fc3bb4f418e9fb7d68d88550e15d">wifi_subtype_deauthentication</a> = 10,</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9ab2c83ecbf17f0dd7bf3c25b909582981">   22</a></span>&#160;  <a class="code" href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9ab2c83ecbf17f0dd7bf3c25b909582981">wifi_subtype_action</a> = 11,</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="comment">// wifi_subtype_timing_advertisement = 12,</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="comment">// wifi_subtype_atim = 13,</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="comment">// Phy subtypes</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9ad2f35c88b93b0d92a7729c329d12ed2a">   27</a></span>&#160;  <a class="code" href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9ad2f35c88b93b0d92a7729c329d12ed2a">wifi_subtype_cts</a> = 1,</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9a599c68c52a6f0530a2870132ad3db235">   28</a></span>&#160;  <a class="code" href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9a599c68c52a6f0530a2870132ad3db235">wifi_subtype_rts</a> = 2,</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9a413f4d295536deeb1f6f9fc990f3c62c">   29</a></span>&#160;  <a class="code" href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9a413f4d295536deeb1f6f9fc990f3c62c">wifi_subtype_block_ack_req</a> = 3,</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9a64de440c16ea6ad894b0960ff2480f0e">   30</a></span>&#160;  <a class="code" href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9a64de440c16ea6ad894b0960ff2480f0e">wifi_subtype_block_ack</a> = 4,</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9a67b91c32bcf105156ff0c2ccdd4ff4cb">   31</a></span>&#160;  <a class="code" href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9a67b91c32bcf105156ff0c2ccdd4ff4cb">wifi_subtype_pspoll</a> = 5,</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9a841bc4bc0d26d494da0705a17d7e8343">   32</a></span>&#160;  <a class="code" href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9a841bc4bc0d26d494da0705a17d7e8343">wifi_subtype_trigger</a> = 6,</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9a6e8bc9a56171b5ad022db9b906b2b0dd">   33</a></span>&#160;  <a class="code" href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9a6e8bc9a56171b5ad022db9b906b2b0dd">wifi_subtype_ndp_announcement</a> = 7,</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="comment">// wifi_subtype_ack = 8,</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="comment">// Data subtypes</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9a38bea6730a887e54e9fae237b31d3e10">   37</a></span>&#160;  <a class="code" href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9a38bea6730a887e54e9fae237b31d3e10">wifi_subtype_data</a> = 1,</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9a59df53b3d0f9e3d5e5aebfeba8bc4467">   38</a></span>&#160;  <a class="code" href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9a59df53b3d0f9e3d5e5aebfeba8bc4467">wifi_subtype_data_null</a> = 2,</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;};</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="awifi__defs_8h_html_afcbc2ade5de076791577a642f3d5eef9a04035a3db8c8bdb279aaecdad4f1808d"><div class="ttname"><a href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9a04035a3db8c8bdb279aaecdad4f1808d">wifi_subtype_beacon</a></div><div class="ttdeci">@ wifi_subtype_beacon</div><div class="ttdef"><b>Definition:</b> <a href="wifi__defs_8h_source.html#l00018">wifi_defs.h:18</a></div></div>
+<div class="ttc" id="awifi__defs_8h_html_afcbc2ade5de076791577a642f3d5eef9a413f4d295536deeb1f6f9fc990f3c62c"><div class="ttname"><a href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9a413f4d295536deeb1f6f9fc990f3c62c">wifi_subtype_block_ack_req</a></div><div class="ttdeci">@ wifi_subtype_block_ack_req</div><div class="ttdef"><b>Definition:</b> <a href="wifi__defs_8h_source.html#l00029">wifi_defs.h:29</a></div></div>
+<div class="ttc" id="awifi__defs_8h_html_afcbc2ade5de076791577a642f3d5eef9ad2f35c88b93b0d92a7729c329d12ed2a"><div class="ttname"><a href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9ad2f35c88b93b0d92a7729c329d12ed2a">wifi_subtype_cts</a></div><div class="ttdeci">@ wifi_subtype_cts</div><div class="ttdef"><b>Definition:</b> <a href="wifi__defs_8h_source.html#l00027">wifi_defs.h:27</a></div></div>
+<div class="ttc" id="awifi__defs_8h_html_afcbc2ade5de076791577a642f3d5eef9ab2c83ecbf17f0dd7bf3c25b909582981"><div class="ttname"><a href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9ab2c83ecbf17f0dd7bf3c25b909582981">wifi_subtype_action</a></div><div class="ttdeci">@ wifi_subtype_action</div><div class="ttdef"><b>Definition:</b> <a href="wifi__defs_8h_source.html#l00022">wifi_defs.h:22</a></div></div>
+<div class="ttc" id="awifi__defs_8h_html_afcbc2ade5de076791577a642f3d5eef9a9faaa6bb4fcca4d6fddb12ef57109fbe"><div class="ttname"><a href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9a9faaa6bb4fcca4d6fddb12ef57109fbe">wifi_subtype_reassociation_req</a></div><div class="ttdeci">@ wifi_subtype_reassociation_req</div><div class="ttdef"><b>Definition:</b> <a href="wifi__defs_8h_source.html#l00014">wifi_defs.h:14</a></div></div>
+<div class="ttc" id="awifi__defs_8h_html_afcbc2ade5de076791577a642f3d5eef9a67b91c32bcf105156ff0c2ccdd4ff4cb"><div class="ttname"><a href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9a67b91c32bcf105156ff0c2ccdd4ff4cb">wifi_subtype_pspoll</a></div><div class="ttdeci">@ wifi_subtype_pspoll</div><div class="ttdef"><b>Definition:</b> <a href="wifi__defs_8h_source.html#l00031">wifi_defs.h:31</a></div></div>
+<div class="ttc" id="awifi__defs_8h_html_afcbc2ade5de076791577a642f3d5eef9a599c68c52a6f0530a2870132ad3db235"><div class="ttname"><a href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9a599c68c52a6f0530a2870132ad3db235">wifi_subtype_rts</a></div><div class="ttdeci">@ wifi_subtype_rts</div><div class="ttdef"><b>Definition:</b> <a href="wifi__defs_8h_source.html#l00028">wifi_defs.h:28</a></div></div>
+<div class="ttc" id="awifi__defs_8h_html_afcbc2ade5de076791577a642f3d5eef9a64de440c16ea6ad894b0960ff2480f0e"><div class="ttname"><a href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9a64de440c16ea6ad894b0960ff2480f0e">wifi_subtype_block_ack</a></div><div class="ttdeci">@ wifi_subtype_block_ack</div><div class="ttdef"><b>Definition:</b> <a href="wifi__defs_8h_source.html#l00030">wifi_defs.h:30</a></div></div>
+<div class="ttc" id="awifi__defs_8h_html_afcbc2ade5de076791577a642f3d5eef9af7a19de25bab16f945d3cf4b0de61895"><div class="ttname"><a href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9af7a19de25bab16f945d3cf4b0de61895">wifi_subtype_authentication</a></div><div class="ttdeci">@ wifi_subtype_authentication</div><div class="ttdef"><b>Definition:</b> <a href="wifi__defs_8h_source.html#l00020">wifi_defs.h:20</a></div></div>
+<div class="ttc" id="awifi__defs_8h_html_afcbc2ade5de076791577a642f3d5eef9a947c02544ce7fa6946ff55e030f7b57e"><div class="ttname"><a href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9a947c02544ce7fa6946ff55e030f7b57e">wifi_subtype_reassociation_resp</a></div><div class="ttdeci">@ wifi_subtype_reassociation_resp</div><div class="ttdef"><b>Definition:</b> <a href="wifi__defs_8h_source.html#l00015">wifi_defs.h:15</a></div></div>
+<div class="ttc" id="awifi__defs_8h_html_a2872371c64ef97583cc1ffedf3867508"><div class="ttname"><a href="wifi__defs_8h.html#a2872371c64ef97583cc1ffedf3867508">wifi_80211_type</a></div><div class="ttdeci">wifi_80211_type</div><div class="ttdef"><b>Definition:</b> <a href="wifi__defs_8h_source.html#l00004">wifi_defs.h:4</a></div></div>
+<div class="ttc" id="awifi__defs_8h_html_afcbc2ade5de076791577a642f3d5eef9a841bc4bc0d26d494da0705a17d7e8343"><div class="ttname"><a href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9a841bc4bc0d26d494da0705a17d7e8343">wifi_subtype_trigger</a></div><div class="ttdeci">@ wifi_subtype_trigger</div><div class="ttdef"><b>Definition:</b> <a href="wifi__defs_8h_source.html#l00032">wifi_defs.h:32</a></div></div>
+<div class="ttc" id="awifi__defs_8h_html_afcbc2ade5de076791577a642f3d5eef9a88263d300ab5b6a34758600e82019d81"><div class="ttname"><a href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9a88263d300ab5b6a34758600e82019d81">wifi_subtype_probe_resp</a></div><div class="ttdeci">@ wifi_subtype_probe_resp</div><div class="ttdef"><b>Definition:</b> <a href="wifi__defs_8h_source.html#l00017">wifi_defs.h:17</a></div></div>
+<div class="ttc" id="awifi__defs_8h_html_afcbc2ade5de076791577a642f3d5eef9a38bea6730a887e54e9fae237b31d3e10"><div class="ttname"><a href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9a38bea6730a887e54e9fae237b31d3e10">wifi_subtype_data</a></div><div class="ttdeci">@ wifi_subtype_data</div><div class="ttdef"><b>Definition:</b> <a href="wifi__defs_8h_source.html#l00037">wifi_defs.h:37</a></div></div>
+<div class="ttc" id="awifi__defs_8h_html_afcbc2ade5de076791577a642f3d5eef9"><div class="ttname"><a href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9">wifi_80211_subtype</a></div><div class="ttdeci">wifi_80211_subtype</div><div class="ttdef"><b>Definition:</b> <a href="wifi__defs_8h_source.html#l00010">wifi_defs.h:10</a></div></div>
+<div class="ttc" id="awifi__defs_8h_html_afcbc2ade5de076791577a642f3d5eef9a10fb128d418d61a402b0cc4c26e6008a"><div class="ttname"><a href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9a10fb128d418d61a402b0cc4c26e6008a">wifi_subtype_disassociation</a></div><div class="ttdeci">@ wifi_subtype_disassociation</div><div class="ttdef"><b>Definition:</b> <a href="wifi__defs_8h_source.html#l00019">wifi_defs.h:19</a></div></div>
+<div class="ttc" id="awifi__defs_8h_html_afcbc2ade5de076791577a642f3d5eef9a0263bda98ccc967eaea0aaace3032d29"><div class="ttname"><a href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9a0263bda98ccc967eaea0aaace3032d29">wifi_subtype_association_req</a></div><div class="ttdeci">@ wifi_subtype_association_req</div><div class="ttdef"><b>Definition:</b> <a href="wifi__defs_8h_source.html#l00012">wifi_defs.h:12</a></div></div>
+<div class="ttc" id="awifi__defs_8h_html_afcbc2ade5de076791577a642f3d5eef9a59df53b3d0f9e3d5e5aebfeba8bc4467"><div class="ttname"><a href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9a59df53b3d0f9e3d5e5aebfeba8bc4467">wifi_subtype_data_null</a></div><div class="ttdeci">@ wifi_subtype_data_null</div><div class="ttdef"><b>Definition:</b> <a href="wifi__defs_8h_source.html#l00038">wifi_defs.h:38</a></div></div>
+<div class="ttc" id="awifi__defs_8h_html_afcbc2ade5de076791577a642f3d5eef9adf01fc3bb4f418e9fb7d68d88550e15d"><div class="ttname"><a href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9adf01fc3bb4f418e9fb7d68d88550e15d">wifi_subtype_deauthentication</a></div><div class="ttdeci">@ wifi_subtype_deauthentication</div><div class="ttdef"><b>Definition:</b> <a href="wifi__defs_8h_source.html#l00021">wifi_defs.h:21</a></div></div>
+<div class="ttc" id="awifi__defs_8h_html_afcbc2ade5de076791577a642f3d5eef9a6e8bc9a56171b5ad022db9b906b2b0dd"><div class="ttname"><a href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9a6e8bc9a56171b5ad022db9b906b2b0dd">wifi_subtype_ndp_announcement</a></div><div class="ttdeci">@ wifi_subtype_ndp_announcement</div><div class="ttdef"><b>Definition:</b> <a href="wifi__defs_8h_source.html#l00033">wifi_defs.h:33</a></div></div>
+<div class="ttc" id="awifi__defs_8h_html_a2872371c64ef97583cc1ffedf3867508a3921b3570b48be5f92f39f25fd42d0e0"><div class="ttname"><a href="wifi__defs_8h.html#a2872371c64ef97583cc1ffedf3867508a3921b3570b48be5f92f39f25fd42d0e0">wifi_type_management</a></div><div class="ttdeci">@ wifi_type_management</div><div class="ttdef"><b>Definition:</b> <a href="wifi__defs_8h_source.html#l00005">wifi_defs.h:5</a></div></div>
+<div class="ttc" id="awifi__defs_8h_html_afcbc2ade5de076791577a642f3d5eef9a527f10e5d28e5458fbda36d6c8962024"><div class="ttname"><a href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9a527f10e5d28e5458fbda36d6c8962024">wifi_subtype_association_resp</a></div><div class="ttdeci">@ wifi_subtype_association_resp</div><div class="ttdef"><b>Definition:</b> <a href="wifi__defs_8h_source.html#l00013">wifi_defs.h:13</a></div></div>
+<div class="ttc" id="awifi__defs_8h_html_a2872371c64ef97583cc1ffedf3867508abe3c25c7b433bff9072045d2ebe5ac27"><div class="ttname"><a href="wifi__defs_8h.html#a2872371c64ef97583cc1ffedf3867508abe3c25c7b433bff9072045d2ebe5ac27">wifi_type_data</a></div><div class="ttdeci">@ wifi_type_data</div><div class="ttdef"><b>Definition:</b> <a href="wifi__defs_8h_source.html#l00007">wifi_defs.h:7</a></div></div>
+<div class="ttc" id="awifi__defs_8h_html_a2872371c64ef97583cc1ffedf3867508ad487f7c70e89edfb92597f5e17e4bb21"><div class="ttname"><a href="wifi__defs_8h.html#a2872371c64ef97583cc1ffedf3867508ad487f7c70e89edfb92597f5e17e4bb21">wifi_type_control</a></div><div class="ttdeci">@ wifi_type_control</div><div class="ttdef"><b>Definition:</b> <a href="wifi__defs_8h_source.html#l00006">wifi_defs.h:6</a></div></div>
+<div class="ttc" id="awifi__defs_8h_html_afcbc2ade5de076791577a642f3d5eef9acbf2bef1ba2fe7aba38c91903d1b0b68"><div class="ttname"><a href="wifi__defs_8h.html#afcbc2ade5de076791577a642f3d5eef9acbf2bef1ba2fe7aba38c91903d1b0b68">wifi_subtype_probe_req</a></div><div class="ttdeci">@ wifi_subtype_probe_req</div><div class="ttdef"><b>Definition:</b> <a href="wifi__defs_8h_source.html#l00016">wifi_defs.h:16</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

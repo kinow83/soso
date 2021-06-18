@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['tx_5fbf_5fcap_5fcalib_5foffset_3299',['TX_BF_CAP_CALIB_OFFSET',['../ieee802__11__defs_8h.html#a18804321042d6cdcedb449070bd71234',1,'ieee802_11_defs.h']]],
+  ['tx_5fbf_5fcap_5fcalibration_5fmask_3300',['TX_BF_CAP_CALIBRATION_MASK',['../ieee802__11__defs_8h.html#a434d6110b51424a50acd8885c6e36ec7',1,'ieee802_11_defs.h']]],
+  ['tx_5fbf_5fcap_5fchannel_5festimation_5fcap_5fmask_3301',['TX_BF_CAP_CHANNEL_ESTIMATION_CAP_MASK',['../ieee802__11__defs_8h.html#af40a427a7dd14cd9c921e92cf7d0ee42',1,'ieee802_11_defs.h']]],
+  ['tx_5fbf_5fcap_5fchannel_5festimation_5fcap_5foffset_3302',['TX_BF_CAP_CHANNEL_ESTIMATION_CAP_OFFSET',['../ieee802__11__defs_8h.html#a1d328fb4ead993f76717604f2555caee',1,'ieee802_11_defs.h']]],
+  ['tx_5fbf_5fcap_5fcompressed_5fsteering_5fmatrix_5fbeamformer_5fant_5foffset_3303',['TX_BF_CAP_COMPRESSED_STEERING_MATRIX_BEAMFORMER_ANT_OFFSET',['../ieee802__11__defs_8h.html#a21d2f9b039845ad1ee049c35ea9b4eb9',1,'ieee802_11_defs.h']]],
+  ['tx_5fbf_5fcap_5fcsi_5fnum_5fbeamformer_5fant_5foffset_3304',['TX_BF_CAP_CSI_NUM_BEAMFORMER_ANT_OFFSET',['../ieee802__11__defs_8h.html#a0f218e78af13290497b04a3d19831a67',1,'ieee802_11_defs.h']]],
+  ['tx_5fbf_5fcap_5fexplicit_5fbf_5fcsi_5ffeedback_5foffset_3305',['TX_BF_CAP_EXPLICIT_BF_CSI_FEEDBACK_OFFSET',['../ieee802__11__defs_8h.html#a075060b94e919f34b4af56b23ead97f6',1,'ieee802_11_defs.h']]],
+  ['tx_5fbf_5fcap_5fexplicit_5fcompr_5fsteering_5fcap_3306',['TX_BF_CAP_EXPLICIT_COMPR_STEERING_CAP',['../ieee802__11__defs_8h.html#ac0dfacdf81bb994ff7d756871d7f301f',1,'ieee802_11_defs.h']]],
+  ['tx_5fbf_5fcap_5fexplicit_5fcompressed_5fsteering_5fmatrix_5ffeedback_5foffset_3307',['TX_BF_CAP_EXPLICIT_COMPRESSED_STEERING_MATRIX_FEEDBACK_OFFSET',['../ieee802__11__defs_8h.html#a2dc3d55a95fabe2e05a11c38fa88cd1b',1,'ieee802_11_defs.h']]],
+  ['tx_5fbf_5fcap_5fexplicit_5fcsi_5ftxbf_5fcap_3308',['TX_BF_CAP_EXPLICIT_CSI_TXBF_CAP',['../ieee802__11__defs_8h.html#a2fca445e880518cb613035f4b29f37fa',1,'ieee802_11_defs.h']]],
+  ['tx_5fbf_5fcap_5fexplicit_5fnoncompr_5fsteering_5fcap_3309',['TX_BF_CAP_EXPLICIT_NONCOMPR_STEERING_CAP',['../ieee802__11__defs_8h.html#a17e22176c2154d57b43b92bc36c1bddd',1,'ieee802_11_defs.h']]],
+  ['tx_5fbf_5fcap_5fexplicit_5ftx_5fbf_5fcsi_5ffeedback_5fmask_3310',['TX_BF_CAP_EXPLICIT_TX_BF_CSI_FEEDBACK_MASK',['../ieee802__11__defs_8h.html#aee5eb805188864d1508116bfc814bdd9',1,'ieee802_11_defs.h']]],
+  ['tx_5fbf_5fcap_5fexplicit_5funcompr_5fsteering_5fmatrix_5ffeedback_5foffset_3311',['TX_BF_CAP_EXPLICIT_UNCOMPR_STEERING_MATRIX_FEEDBACK_OFFSET',['../ieee802__11__defs_8h.html#a3931bb248a9e5eb88fae46740c774a72',1,'ieee802_11_defs.h']]],
+  ['tx_5fbf_5fcap_5fimplicit_5ftx_5fbf_5fcap_3312',['TX_BF_CAP_IMPLICIT_TX_BF_CAP',['../ieee802__11__defs_8h.html#ab6aab737b60eefc7d247cb5326dab289',1,'ieee802_11_defs.h']]],
+  ['tx_5fbf_5fcap_5fimplicit_5ftxbf_5frx_5fcap_3313',['TX_BF_CAP_IMPLICIT_TXBF_RX_CAP',['../ieee802__11__defs_8h.html#ab00f8ed75e708c18c9eca4a1ff0c0813',1,'ieee802_11_defs.h']]],
+  ['tx_5fbf_5fcap_5fminimal_5fgrouping_5foffset_3314',['TX_BF_CAP_MINIMAL_GROUPING_OFFSET',['../ieee802__11__defs_8h.html#a9433f84114d1c03f1689bd18132c705a',1,'ieee802_11_defs.h']]],
+  ['tx_5fbf_5fcap_5frx_5fndp_5fcap_3315',['TX_BF_CAP_RX_NDP_CAP',['../ieee802__11__defs_8h.html#ae2ba6bc32cccbfb4e3fe93eee7188f3d',1,'ieee802_11_defs.h']]],
+  ['tx_5fbf_5fcap_5frx_5fstaggered_5fsounding_5fcap_3316',['TX_BF_CAP_RX_STAGGERED_SOUNDING_CAP',['../ieee802__11__defs_8h.html#a76ceaf33ceedaf30c77e5149cc1fae13',1,'ieee802_11_defs.h']]],
+  ['tx_5fbf_5fcap_5fsci_5fmax_5fof_5frows_5fbeanformer_5fsupported_5foffset_3317',['TX_BF_CAP_SCI_MAX_OF_ROWS_BEANFORMER_SUPPORTED_OFFSET',['../ieee802__11__defs_8h.html#a24a322b62aca3c23eaf9941c707198bd',1,'ieee802_11_defs.h']]],
+  ['tx_5fbf_5fcap_5ftx_5fndp_5fcap_3318',['TX_BF_CAP_TX_NDP_CAP',['../ieee802__11__defs_8h.html#adfbfb80715427ad58589def6e0791616',1,'ieee802_11_defs.h']]],
+  ['tx_5fbf_5fcap_5ftx_5fstaggered_5fsounding_5fcap_3319',['TX_BF_CAP_TX_STAGGERED_SOUNDING_CAP',['../ieee802__11__defs_8h.html#ae15bfb1efafd7f675d76233b458bb1ed',1,'ieee802_11_defs.h']]],
+  ['tx_5fbf_5fcap_5funcompressed_5fsteering_5fmatrix_5fbeamformer_5fant_5foffset_3320',['TX_BF_CAP_UNCOMPRESSED_STEERING_MATRIX_BEAMFORMER_ANT_OFFSET',['../ieee802__11__defs_8h.html#aef0fa7faa8ae1282b7b5b3cefaa9613e',1,'ieee802_11_defs.h']]]
+];

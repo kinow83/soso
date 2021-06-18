@@ -23,10 +23,7 @@ for the JavaScript code in this file
 var menudata={children:[
 {text:"메인 페이지",url:"index.html"},
 {text:"네임스페이스",url:"namespaces.html",children:[
-{text:"네임스페이스 목록",url:"namespaces.html"},
-{text:"네임스페이스 멤버",url:"namespacemembers.html",children:[
-{text:"모두",url:"namespacemembers.html"},
-{text:"함수",url:"namespacemembers_func.html"}]}]},
+{text:"네임스페이스 목록",url:"namespaces.html"}]},
 {text:"클래스",url:"annotated.html",children:[
 {text:"클래스 목록",url:"annotated.html"},
 {text:"클래스 색인",url:"classes.html"},

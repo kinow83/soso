@@ -1,0 +1,213 @@
+\hypertarget{classsoso_1_1Component80211}{}\doxysection{soso\+::Component80211 클래스 참조}
+\label{classsoso_1_1Component80211}\index{soso::Component80211@{soso::Component80211}}
+
+
+{\ttfamily \#include $<$component80211.\+h$>$}
+
+
+
+soso\+::Component80211에 대한 상속 다이어그램 \+: \nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classsoso_1_1Component80211__inherit__graph}
+\end{center}
+\end{figure}
+
+
+soso\+::Component80211에 대한 협력 다이어그램\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classsoso_1_1Component80211__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsoso_1_1Component80211_a4879190bdfb490d19c936c169e461d48}{Component80211}} (std\+::string name)
+\item 
+\mbox{\hyperlink{classsoso_1_1Component80211_aeaa30dc572efce1d15f3812b12f2c417}{$\sim$\+Component80211}} ()
+\item 
+bool \mbox{\hyperlink{classsoso_1_1Component80211_ae6cce1044cfd4439a6151c37e015d64c}{init}} ()
+\item 
+bool \mbox{\hyperlink{classsoso_1_1Component80211_a3b2961e418d08889a418688a7deba50a}{prepare}} (Request $\ast$request)
+\item 
+bool \mbox{\hyperlink{classsoso_1_1Component80211_a09c599d9ebd26061b57a98f66e34a433}{process}} (Request $\ast$request)
+\item 
+bool \mbox{\hyperlink{classsoso_1_1Component80211_a2867392812b11790acefd1847379c221}{post}} (Request $\ast$request)
+\item 
+void \mbox{\hyperlink{classsoso_1_1Component80211_a5269208ebcf73faf6940364cdfe1178e}{schedule}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+const uint8\+\_\+t $\ast$ \mbox{\hyperlink{classsoso_1_1Component80211_ae911a53482c544518a03573bb1eef71d}{parser\+Radio}} (\mbox{\hyperlink{classsoso_1_1PcapRequest}{Pcap\+Request}} $\ast$request, const struct pcap\+\_\+pkthdr $\ast$header, const \mbox{\hyperlink{structradiotap__t}{radiotap\+\_\+t}} $\ast$radiotap)
+\item 
+const uint8\+\_\+t $\ast$ \mbox{\hyperlink{classsoso_1_1Component80211_a9cc1e97c1f596823bf78e56ce9f01063}{parser\+Frame\+Control}} (\mbox{\hyperlink{classsoso_1_1PcapRequest}{Pcap\+Request}} $\ast$request, const frame\+\_\+control\+\_\+t $\ast$fc\+\_\+packet)
+\item 
+bool \mbox{\hyperlink{classsoso_1_1Component80211_a5b7a31c41ff91b828dbf18594907e8f2}{parser\+Management\+Frame}} (\mbox{\hyperlink{classsoso_1_1PcapRequest}{Pcap\+Request}} $\ast$request, const uint8\+\_\+t $\ast$frame, size\+\_\+t frame\+\_\+len)
+\item 
+bool \mbox{\hyperlink{classsoso_1_1Component80211_a0ef7417964377d2ec000a5321f49e4b6}{parser\+Control\+Frame}} (\mbox{\hyperlink{classsoso_1_1PcapRequest}{Pcap\+Request}} $\ast$request, const uint8\+\_\+t $\ast$frame, size\+\_\+t frame\+\_\+len)
+\item 
+bool \mbox{\hyperlink{classsoso_1_1Component80211_a2ca196a47a7f10bef0b00738746e9105}{parser\+Data\+Frame}} (\mbox{\hyperlink{classsoso_1_1PcapRequest}{Pcap\+Request}} $\ast$request, const uint8\+\_\+t $\ast$frame, size\+\_\+t frame\+\_\+len)
+\item 
+void \mbox{\hyperlink{classsoso_1_1Component80211_acc34504ad6a2a1dbb4865a63181d04a6}{parser\+Tagged\+Parameters}} (\mbox{\hyperlink{classsoso_1_1PcapRequest}{Pcap\+Request}} $\ast$request, const uint8\+\_\+t $\ast$tag\+\_\+packet, size\+\_\+t packetlen)
+\item 
+bool \mbox{\hyperlink{classsoso_1_1Component80211_ac4972845278505c97690cf6c2e9d6a61}{verify\+Packet\+Length}} (\mbox{\hyperlink{classsoso_1_1PcapRequest}{Pcap\+Request}} $\ast$request)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+component80211.\+h 파일의 12 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{classsoso_1_1Component80211_a4879190bdfb490d19c936c169e461d48}\label{classsoso_1_1Component80211_a4879190bdfb490d19c936c169e461d48}} 
+\index{soso::Component80211@{soso::Component80211}!Component80211@{Component80211}}
+\index{Component80211@{Component80211}!soso::Component80211@{soso::Component80211}}
+\doxysubsubsection{\texorpdfstring{Component80211()}{Component80211()}}
+{\footnotesize\ttfamily soso\+::\+Component80211\+::\+Component80211 (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+component80211.\+h 파일의 30 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1Component80211_aeaa30dc572efce1d15f3812b12f2c417}\label{classsoso_1_1Component80211_aeaa30dc572efce1d15f3812b12f2c417}} 
+\index{soso::Component80211@{soso::Component80211}!````~Component80211@{$\sim$Component80211}}
+\index{````~Component80211@{$\sim$Component80211}!soso::Component80211@{soso::Component80211}}
+\doxysubsubsection{\texorpdfstring{$\sim$Component80211()}{~Component80211()}}
+{\footnotesize\ttfamily Component80211\+::$\sim$\+Component80211 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+component80211.\+cpp 파일의 226 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{classsoso_1_1Component80211_ae6cce1044cfd4439a6151c37e015d64c}\label{classsoso_1_1Component80211_ae6cce1044cfd4439a6151c37e015d64c}} 
+\index{soso::Component80211@{soso::Component80211}!init@{init}}
+\index{init@{init}!soso::Component80211@{soso::Component80211}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool Component80211\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+component80211.\+cpp 파일의 163 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1Component80211_a0ef7417964377d2ec000a5321f49e4b6}\label{classsoso_1_1Component80211_a0ef7417964377d2ec000a5321f49e4b6}} 
+\index{soso::Component80211@{soso::Component80211}!parserControlFrame@{parserControlFrame}}
+\index{parserControlFrame@{parserControlFrame}!soso::Component80211@{soso::Component80211}}
+\doxysubsubsection{\texorpdfstring{parserControlFrame()}{parserControlFrame()}}
+{\footnotesize\ttfamily bool Component80211\+::parser\+Control\+Frame (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsoso_1_1PcapRequest}{Pcap\+Request}} $\ast$}]{request,  }\item[{const uint8\+\_\+t $\ast$}]{frame,  }\item[{size\+\_\+t}]{frame\+\_\+len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+component80211.\+cpp 파일의 147 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1Component80211_a2ca196a47a7f10bef0b00738746e9105}\label{classsoso_1_1Component80211_a2ca196a47a7f10bef0b00738746e9105}} 
+\index{soso::Component80211@{soso::Component80211}!parserDataFrame@{parserDataFrame}}
+\index{parserDataFrame@{parserDataFrame}!soso::Component80211@{soso::Component80211}}
+\doxysubsubsection{\texorpdfstring{parserDataFrame()}{parserDataFrame()}}
+{\footnotesize\ttfamily bool Component80211\+::parser\+Data\+Frame (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsoso_1_1PcapRequest}{Pcap\+Request}} $\ast$}]{request,  }\item[{const uint8\+\_\+t $\ast$}]{frame,  }\item[{size\+\_\+t}]{frame\+\_\+len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+component80211.\+cpp 파일의 155 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1Component80211_a9cc1e97c1f596823bf78e56ce9f01063}\label{classsoso_1_1Component80211_a9cc1e97c1f596823bf78e56ce9f01063}} 
+\index{soso::Component80211@{soso::Component80211}!parserFrameControl@{parserFrameControl}}
+\index{parserFrameControl@{parserFrameControl}!soso::Component80211@{soso::Component80211}}
+\doxysubsubsection{\texorpdfstring{parserFrameControl()}{parserFrameControl()}}
+{\footnotesize\ttfamily const uint8\+\_\+t $\ast$ Component80211\+::parser\+Frame\+Control (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsoso_1_1PcapRequest}{Pcap\+Request}} $\ast$}]{request,  }\item[{const frame\+\_\+control\+\_\+t $\ast$}]{fc\+\_\+packet }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+component80211.\+cpp 파일의 41 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1Component80211_a5b7a31c41ff91b828dbf18594907e8f2}\label{classsoso_1_1Component80211_a5b7a31c41ff91b828dbf18594907e8f2}} 
+\index{soso::Component80211@{soso::Component80211}!parserManagementFrame@{parserManagementFrame}}
+\index{parserManagementFrame@{parserManagementFrame}!soso::Component80211@{soso::Component80211}}
+\doxysubsubsection{\texorpdfstring{parserManagementFrame()}{parserManagementFrame()}}
+{\footnotesize\ttfamily bool Component80211\+::parser\+Management\+Frame (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsoso_1_1PcapRequest}{Pcap\+Request}} $\ast$}]{request,  }\item[{const uint8\+\_\+t $\ast$}]{frame,  }\item[{size\+\_\+t}]{frame\+\_\+len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+component80211.\+cpp 파일의 82 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1Component80211_ae911a53482c544518a03573bb1eef71d}\label{classsoso_1_1Component80211_ae911a53482c544518a03573bb1eef71d}} 
+\index{soso::Component80211@{soso::Component80211}!parserRadio@{parserRadio}}
+\index{parserRadio@{parserRadio}!soso::Component80211@{soso::Component80211}}
+\doxysubsubsection{\texorpdfstring{parserRadio()}{parserRadio()}}
+{\footnotesize\ttfamily const uint8\+\_\+t $\ast$ Component80211\+::parser\+Radio (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsoso_1_1PcapRequest}{Pcap\+Request}} $\ast$}]{request,  }\item[{const struct pcap\+\_\+pkthdr $\ast$}]{header,  }\item[{const \mbox{\hyperlink{structradiotap__t}{radiotap\+\_\+t}} $\ast$}]{radiotap }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+component80211.\+cpp 파일의 22 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1Component80211_acc34504ad6a2a1dbb4865a63181d04a6}\label{classsoso_1_1Component80211_acc34504ad6a2a1dbb4865a63181d04a6}} 
+\index{soso::Component80211@{soso::Component80211}!parserTaggedParameters@{parserTaggedParameters}}
+\index{parserTaggedParameters@{parserTaggedParameters}!soso::Component80211@{soso::Component80211}}
+\doxysubsubsection{\texorpdfstring{parserTaggedParameters()}{parserTaggedParameters()}}
+{\footnotesize\ttfamily void Component80211\+::parser\+Tagged\+Parameters (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsoso_1_1PcapRequest}{Pcap\+Request}} $\ast$}]{request,  }\item[{const uint8\+\_\+t $\ast$}]{tag\+\_\+packet,  }\item[{size\+\_\+t}]{packetlen }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+component80211.\+cpp 파일의 47 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1Component80211_a2867392812b11790acefd1847379c221}\label{classsoso_1_1Component80211_a2867392812b11790acefd1847379c221}} 
+\index{soso::Component80211@{soso::Component80211}!post@{post}}
+\index{post@{post}!soso::Component80211@{soso::Component80211}}
+\doxysubsubsection{\texorpdfstring{post()}{post()}}
+{\footnotesize\ttfamily bool Component80211\+::post (\begin{DoxyParamCaption}\item[{Request $\ast$}]{request }\end{DoxyParamCaption})}
+
+
+
+component80211.\+cpp 파일의 212 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1Component80211_a3b2961e418d08889a418688a7deba50a}\label{classsoso_1_1Component80211_a3b2961e418d08889a418688a7deba50a}} 
+\index{soso::Component80211@{soso::Component80211}!prepare@{prepare}}
+\index{prepare@{prepare}!soso::Component80211@{soso::Component80211}}
+\doxysubsubsection{\texorpdfstring{prepare()}{prepare()}}
+{\footnotesize\ttfamily bool Component80211\+::prepare (\begin{DoxyParamCaption}\item[{Request $\ast$}]{request }\end{DoxyParamCaption})}
+
+
+
+component80211.\+cpp 파일의 167 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1Component80211_a09c599d9ebd26061b57a98f66e34a433}\label{classsoso_1_1Component80211_a09c599d9ebd26061b57a98f66e34a433}} 
+\index{soso::Component80211@{soso::Component80211}!process@{process}}
+\index{process@{process}!soso::Component80211@{soso::Component80211}}
+\doxysubsubsection{\texorpdfstring{process()}{process()}}
+{\footnotesize\ttfamily bool Component80211\+::process (\begin{DoxyParamCaption}\item[{Request $\ast$}]{request }\end{DoxyParamCaption})}
+
+
+
+component80211.\+cpp 파일의 172 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1Component80211_a5269208ebcf73faf6940364cdfe1178e}\label{classsoso_1_1Component80211_a5269208ebcf73faf6940364cdfe1178e}} 
+\index{soso::Component80211@{soso::Component80211}!schedule@{schedule}}
+\index{schedule@{schedule}!soso::Component80211@{soso::Component80211}}
+\doxysubsubsection{\texorpdfstring{schedule()}{schedule()}}
+{\footnotesize\ttfamily void Component80211\+::schedule (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+component80211.\+cpp 파일의 222 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1Component80211_ac4972845278505c97690cf6c2e9d6a61}\label{classsoso_1_1Component80211_ac4972845278505c97690cf6c2e9d6a61}} 
+\index{soso::Component80211@{soso::Component80211}!verifyPacketLength@{verifyPacketLength}}
+\index{verifyPacketLength@{verifyPacketLength}!soso::Component80211@{soso::Component80211}}
+\doxysubsubsection{\texorpdfstring{verifyPacketLength()}{verifyPacketLength()}}
+{\footnotesize\ttfamily bool soso\+::\+Component80211\+::verify\+Packet\+Length (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsoso_1_1PcapRequest}{Pcap\+Request}} $\ast$}]{request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{component80211_8h}{component80211.\+h}}\item 
+src/\mbox{\hyperlink{component80211_8cpp}{component80211.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ModuleWorker: include/pcap_request.h 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ModuleWorker
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'검색');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','검색');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">pcap_request.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="pcap__request_8h.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __PCAP_REQUEST_H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __PCAP_REQUEST_H__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ieee80211_8h.html">ieee80211.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;request.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;pcap.h&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacesoso.html">soso</a> {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="pcap__request_8h.html#a102d776705a0384f0f7c922bf1741e68">   11</a></span>&#160;<span class="preprocessor">#define MAX_PCAP_CAPSIZE 1500</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="structsoso_1_1ap__info__t.html">   13</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structsoso_1_1ap__info__t.html">ap_info_t</a> {</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="structsoso_1_1ap__info__t.html#a2366935f1abc4262812cb60d50a0ad25">   14</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="structsoso_1_1ap__info__t.html#a2366935f1abc4262812cb60d50a0ad25">seen</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="structsoso_1_1ap__info__t.html#a6d7dd6bfd23216ccf796a51d85ba185a">   15</a></span>&#160;  uint8_t <a class="code" href="structsoso_1_1ap__info__t.html#a6d7dd6bfd23216ccf796a51d85ba185a">band</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="structsoso_1_1ap__info__t.html#a4d3077962658f6790e3463f86cc589ce">   16</a></span>&#160;  uint8_t <a class="code" href="structsoso_1_1ap__info__t.html#a4d3077962658f6790e3463f86cc589ce">bssid</a>[6];</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="structsoso_1_1ap__info__t.html#a9c28a78c6d35c12a210e9bc3209e5f4d">   17</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="structsoso_1_1ap__info__t.html#a9c28a78c6d35c12a210e9bc3209e5f4d">channel</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="structsoso_1_1ap__info__t.html#a980d0037185632ae535dab7e0aaa0029">   18</a></span>&#160;  <span class="keywordtype">char</span> <a class="code" href="structsoso_1_1ap__info__t.html#a980d0037185632ae535dab7e0aaa0029">ssid</a>[33];</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="structsoso_1_1ap__info__t.html#abd4bda133646bfa432cf73065e5c0ceb">   19</a></span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="structsoso_1_1ap__info__t.html#abd4bda133646bfa432cf73065e5c0ceb">ssid_len</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structsoso_1_1ap__info__t.html#a73e2783d2c31dd3321a0a1228751e363">   20</a></span>&#160;  uint8_t <a class="code" href="structsoso_1_1ap__info__t.html#a73e2783d2c31dd3321a0a1228751e363">ssid_broadcast</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;} <a class="code" href="namespacesoso.html#a5152e003da9ca6192e69be8d3656c6b9">ap_info_t</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="structsoso_1_1st__info__t.html">   23</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structsoso_1_1st__info__t.html">st_info_t</a> {</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structsoso_1_1st__info__t.html#aa6cd38191ebde45b8fbfc853df7ccd98">   24</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="structsoso_1_1st__info__t.html#aa6cd38191ebde45b8fbfc853df7ccd98">seen</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structsoso_1_1st__info__t.html#ad086a2bd3ec9167850d18be4d22fe216">   25</a></span>&#160;  uint8_t <a class="code" href="structsoso_1_1st__info__t.html#ad086a2bd3ec9167850d18be4d22fe216">mac</a>[6];</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structsoso_1_1st__info__t.html#a880191765718acaac5475ccebf226d03">   26</a></span>&#160;  uint8_t <a class="code" href="structsoso_1_1st__info__t.html#a880191765718acaac5475ccebf226d03">band</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structsoso_1_1st__info__t.html#a5ac140ab4ccbd107eb635fc1a0fe2c78">   27</a></span>&#160;  uint8_t <a class="code" href="structsoso_1_1st__info__t.html#a5ac140ab4ccbd107eb635fc1a0fe2c78">bssid</a>[6];</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;} <a class="code" href="namespacesoso.html#a3b50b9c8db76c0a6b41bd76625f60e5b">st_info_t</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="structsoso_1_1pkt__len__t.html">   30</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structsoso_1_1pkt__len__t.html">pkt_len_t</a> {</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structsoso_1_1pkt__len__t.html#afe4ca032538dcb4adf3d3af5cca1bfe9">   31</a></span>&#160;  uint32_t <a class="code" href="structsoso_1_1pkt__len__t.html#afe4ca032538dcb4adf3d3af5cca1bfe9">len</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="structsoso_1_1pkt__len__t.html#ac5b6e5c762eeabf8adec413ec6a5d538">   32</a></span>&#160;  uint32_t <a class="code" href="structsoso_1_1pkt__len__t.html#ac5b6e5c762eeabf8adec413ec6a5d538">caplen</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structsoso_1_1pkt__len__t.html#a32db6a0fa0389dc108a8f0ade0728ff9">   33</a></span>&#160;  uint32_t <a class="code" href="structsoso_1_1pkt__len__t.html#a32db6a0fa0389dc108a8f0ade0728ff9">framelen</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="structsoso_1_1pkt__len__t.html#ab8aacc51761c841679dea2c5f5aec1fd">   34</a></span>&#160;  uint32_t <a class="code" href="structsoso_1_1pkt__len__t.html#ab8aacc51761c841679dea2c5f5aec1fd">framecaplen</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;} <a class="code" href="namespacesoso.html#a18ce4d72cabcf25c317f7253875fbf2e">pkt_len_t</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classsoso_1_1PcapRequest.html">   37</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsoso_1_1PcapRequest.html">PcapRequest</a> : <span class="keyword">public</span> Request {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classsoso_1_1PcapRequest.html#aaebac3298d3069160c5cd16e6105d21d">   39</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="classsoso_1_1PcapRequest.html#aaebac3298d3069160c5cd16e6105d21d">pcap_pkthdr</a> <a class="code" href="classsoso_1_1PcapRequest.html#aaebac3298d3069160c5cd16e6105d21d">pcap_pkthdr</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classsoso_1_1PcapRequest.html#aa07b6b80ea7fa2620e1dd398d4766502">   40</a></span>&#160;  u_char <a class="code" href="classsoso_1_1PcapRequest.html#aa07b6b80ea7fa2620e1dd398d4766502">packet</a>[<a class="code" href="pcap__request_8h.html#a102d776705a0384f0f7c922bf1741e68">MAX_PCAP_CAPSIZE</a>];</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classsoso_1_1PcapRequest.html#ab396fd6033f342a8b38d956641935cc0">   42</a></span>&#160;  <a class="code" href="structsoso_1_1pkt__len__t.html">pkt_len_t</a> <a class="code" href="classsoso_1_1PcapRequest.html#ab396fd6033f342a8b38d956641935cc0">pkt_len</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classsoso_1_1PcapRequest.html#a5645c0a9f176ae78c1106f145a810eb0">   43</a></span>&#160;  frame_control_t <a class="code" href="classsoso_1_1PcapRequest.html#a5645c0a9f176ae78c1106f145a810eb0">fc</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classsoso_1_1PcapRequest.html#ac5675127a08343c7f03d9f835adc4217">   45</a></span>&#160;  <a class="code" href="structsoso_1_1ap__info__t.html">ap_info_t</a> <a class="code" href="classsoso_1_1PcapRequest.html#ac5675127a08343c7f03d9f835adc4217">ap</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classsoso_1_1PcapRequest.html#ad509c0b8fe50c33d2bb4cecfee02a217">   46</a></span>&#160;  <a class="code" href="structsoso_1_1st__info__t.html">st_info_t</a> <a class="code" href="classsoso_1_1PcapRequest.html#ad509c0b8fe50c33d2bb4cecfee02a217">sta</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classsoso_1_1PcapRequest.html#a97a71d83cc3cc4383e8c387628102f37">   47</a></span>&#160;  <a class="code" href="structsoso_1_1st__info__t.html">st_info_t</a> <a class="code" href="classsoso_1_1PcapRequest.html#a97a71d83cc3cc4383e8c387628102f37">remote</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classsoso_1_1PcapRequest.html#ae13ccd1043e8341a9fc48cabfa74a511">   50</a></span>&#160;  <a class="code" href="classsoso_1_1PcapRequest.html#ae13ccd1043e8341a9fc48cabfa74a511">PcapRequest</a>() : Request() {}</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classsoso_1_1PcapRequest.html#ae5ba3346332502f7b49bf70cc93ddb89">   51</a></span>&#160;  <a class="code" href="classsoso_1_1PcapRequest.html#ae5ba3346332502f7b49bf70cc93ddb89">PcapRequest</a>(<span class="keyword">const</span> <span class="keyword">struct</span> <a class="code" href="classsoso_1_1PcapRequest.html#aaebac3298d3069160c5cd16e6105d21d">pcap_pkthdr</a> *pheader, <span class="keyword">const</span> u_char *ppacket)</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      : Request(0) {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    memcpy(&amp;<a class="code" href="classsoso_1_1PcapRequest.html#aaebac3298d3069160c5cd16e6105d21d">pcap_pkthdr</a>, pheader, <span class="keyword">sizeof</span>(<a class="code" href="classsoso_1_1PcapRequest.html#aaebac3298d3069160c5cd16e6105d21d">pcap_pkthdr</a>));</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    memcpy(<a class="code" href="classsoso_1_1PcapRequest.html#aa07b6b80ea7fa2620e1dd398d4766502">packet</a>, ppacket, <span class="keyword">sizeof</span>(<a class="code" href="classsoso_1_1PcapRequest.html#aa07b6b80ea7fa2620e1dd398d4766502">packet</a>));</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;};</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}; <span class="comment">// namespace soso</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astructsoso_1_1ap__info__t_html_a4d3077962658f6790e3463f86cc589ce"><div class="ttname"><a href="structsoso_1_1ap__info__t.html#a4d3077962658f6790e3463f86cc589ce">soso::ap_info_t::bssid</a></div><div class="ttdeci">uint8_t bssid[6]</div><div class="ttdef"><b>Definition:</b> <a href="pcap__request_8h_source.html#l00016">pcap_request.h:16</a></div></div>
+<div class="ttc" id="astructsoso_1_1ap__info__t_html_a2366935f1abc4262812cb60d50a0ad25"><div class="ttname"><a href="structsoso_1_1ap__info__t.html#a2366935f1abc4262812cb60d50a0ad25">soso::ap_info_t::seen</a></div><div class="ttdeci">bool seen</div><div class="ttdef"><b>Definition:</b> <a href="pcap__request_8h_source.html#l00014">pcap_request.h:14</a></div></div>
+<div class="ttc" id="astructsoso_1_1st__info__t_html"><div class="ttname"><a href="structsoso_1_1st__info__t.html">soso::st_info_t</a></div><div class="ttdef"><b>Definition:</b> <a href="pcap__request_8h_source.html#l00023">pcap_request.h:23</a></div></div>
+<div class="ttc" id="aclasssoso_1_1PcapRequest_html_ac5675127a08343c7f03d9f835adc4217"><div class="ttname"><a href="classsoso_1_1PcapRequest.html#ac5675127a08343c7f03d9f835adc4217">soso::PcapRequest::ap</a></div><div class="ttdeci">ap_info_t ap</div><div class="ttdef"><b>Definition:</b> <a href="pcap__request_8h_source.html#l00045">pcap_request.h:45</a></div></div>
+<div class="ttc" id="astructsoso_1_1pkt__len__t_html"><div class="ttname"><a href="structsoso_1_1pkt__len__t.html">soso::pkt_len_t</a></div><div class="ttdef"><b>Definition:</b> <a href="pcap__request_8h_source.html#l00030">pcap_request.h:30</a></div></div>
+<div class="ttc" id="aclasssoso_1_1PcapRequest_html_ae13ccd1043e8341a9fc48cabfa74a511"><div class="ttname"><a href="classsoso_1_1PcapRequest.html#ae13ccd1043e8341a9fc48cabfa74a511">soso::PcapRequest::PcapRequest</a></div><div class="ttdeci">PcapRequest()</div><div class="ttdef"><b>Definition:</b> <a href="pcap__request_8h_source.html#l00050">pcap_request.h:50</a></div></div>
+<div class="ttc" id="astructsoso_1_1ap__info__t_html_a6d7dd6bfd23216ccf796a51d85ba185a"><div class="ttname"><a href="structsoso_1_1ap__info__t.html#a6d7dd6bfd23216ccf796a51d85ba185a">soso::ap_info_t::band</a></div><div class="ttdeci">uint8_t band</div><div class="ttdef"><b>Definition:</b> <a href="pcap__request_8h_source.html#l00015">pcap_request.h:15</a></div></div>
+<div class="ttc" id="anamespacesoso_html"><div class="ttname"><a href="namespacesoso.html">soso</a></div><div class="ttdef"><b>Definition:</b> <a href="hstruct_8h_source.html#l00006">hstruct.h:6</a></div></div>
+<div class="ttc" id="aclasssoso_1_1PcapRequest_html_ae5ba3346332502f7b49bf70cc93ddb89"><div class="ttname"><a href="classsoso_1_1PcapRequest.html#ae5ba3346332502f7b49bf70cc93ddb89">soso::PcapRequest::PcapRequest</a></div><div class="ttdeci">PcapRequest(const struct pcap_pkthdr *pheader, const u_char *ppacket)</div><div class="ttdef"><b>Definition:</b> <a href="pcap__request_8h_source.html#l00051">pcap_request.h:51</a></div></div>
+<div class="ttc" id="aclasssoso_1_1PcapRequest_html_ad509c0b8fe50c33d2bb4cecfee02a217"><div class="ttname"><a href="classsoso_1_1PcapRequest.html#ad509c0b8fe50c33d2bb4cecfee02a217">soso::PcapRequest::sta</a></div><div class="ttdeci">st_info_t sta</div><div class="ttdef"><b>Definition:</b> <a href="pcap__request_8h_source.html#l00046">pcap_request.h:46</a></div></div>
+<div class="ttc" id="astructsoso_1_1pkt__len__t_html_ac5b6e5c762eeabf8adec413ec6a5d538"><div class="ttname"><a href="structsoso_1_1pkt__len__t.html#ac5b6e5c762eeabf8adec413ec6a5d538">soso::pkt_len_t::caplen</a></div><div class="ttdeci">uint32_t caplen</div><div class="ttdef"><b>Definition:</b> <a href="pcap__request_8h_source.html#l00032">pcap_request.h:32</a></div></div>
+<div class="ttc" id="aclasssoso_1_1PcapRequest_html_a97a71d83cc3cc4383e8c387628102f37"><div class="ttname"><a href="classsoso_1_1PcapRequest.html#a97a71d83cc3cc4383e8c387628102f37">soso::PcapRequest::remote</a></div><div class="ttdeci">st_info_t remote</div><div class="ttdef"><b>Definition:</b> <a href="pcap__request_8h_source.html#l00047">pcap_request.h:47</a></div></div>
+<div class="ttc" id="astructsoso_1_1ap__info__t_html_a73e2783d2c31dd3321a0a1228751e363"><div class="ttname"><a href="structsoso_1_1ap__info__t.html#a73e2783d2c31dd3321a0a1228751e363">soso::ap_info_t::ssid_broadcast</a></div><div class="ttdeci">uint8_t ssid_broadcast</div><div class="ttdef"><b>Definition:</b> <a href="pcap__request_8h_source.html#l00020">pcap_request.h:20</a></div></div>
+<div class="ttc" id="astructsoso_1_1pkt__len__t_html_a32db6a0fa0389dc108a8f0ade0728ff9"><div class="ttname"><a href="structsoso_1_1pkt__len__t.html#a32db6a0fa0389dc108a8f0ade0728ff9">soso::pkt_len_t::framelen</a></div><div class="ttdeci">uint32_t framelen</div><div class="ttdef"><b>Definition:</b> <a href="pcap__request_8h_source.html#l00033">pcap_request.h:33</a></div></div>
+<div class="ttc" id="astructsoso_1_1pkt__len__t_html_afe4ca032538dcb4adf3d3af5cca1bfe9"><div class="ttname"><a href="structsoso_1_1pkt__len__t.html#afe4ca032538dcb4adf3d3af5cca1bfe9">soso::pkt_len_t::len</a></div><div class="ttdeci">uint32_t len</div><div class="ttdef"><b>Definition:</b> <a href="pcap__request_8h_source.html#l00031">pcap_request.h:31</a></div></div>
+<div class="ttc" id="aclasssoso_1_1PcapRequest_html_aa07b6b80ea7fa2620e1dd398d4766502"><div class="ttname"><a href="classsoso_1_1PcapRequest.html#aa07b6b80ea7fa2620e1dd398d4766502">soso::PcapRequest::packet</a></div><div class="ttdeci">u_char packet[MAX_PCAP_CAPSIZE]</div><div class="ttdef"><b>Definition:</b> <a href="pcap__request_8h_source.html#l00040">pcap_request.h:40</a></div></div>
+<div class="ttc" id="anamespacesoso_html_a18ce4d72cabcf25c317f7253875fbf2e"><div class="ttname"><a href="namespacesoso.html#a18ce4d72cabcf25c317f7253875fbf2e">soso::pkt_len_t</a></div><div class="ttdeci">struct soso::pkt_len_t pkt_len_t</div></div>
+<div class="ttc" id="astructsoso_1_1st__info__t_html_a5ac140ab4ccbd107eb635fc1a0fe2c78"><div class="ttname"><a href="structsoso_1_1st__info__t.html#a5ac140ab4ccbd107eb635fc1a0fe2c78">soso::st_info_t::bssid</a></div><div class="ttdeci">uint8_t bssid[6]</div><div class="ttdef"><b>Definition:</b> <a href="pcap__request_8h_source.html#l00027">pcap_request.h:27</a></div></div>
+<div class="ttc" id="astructsoso_1_1st__info__t_html_aa6cd38191ebde45b8fbfc853df7ccd98"><div class="ttname"><a href="structsoso_1_1st__info__t.html#aa6cd38191ebde45b8fbfc853df7ccd98">soso::st_info_t::seen</a></div><div class="ttdeci">bool seen</div><div class="ttdef"><b>Definition:</b> <a href="pcap__request_8h_source.html#l00024">pcap_request.h:24</a></div></div>
+<div class="ttc" id="aclasssoso_1_1PcapRequest_html"><div class="ttname"><a href="classsoso_1_1PcapRequest.html">soso::PcapRequest</a></div><div class="ttdef"><b>Definition:</b> <a href="pcap__request_8h_source.html#l00037">pcap_request.h:37</a></div></div>
+<div class="ttc" id="aclasssoso_1_1PcapRequest_html_aaebac3298d3069160c5cd16e6105d21d"><div class="ttname"><a href="classsoso_1_1PcapRequest.html#aaebac3298d3069160c5cd16e6105d21d">soso::PcapRequest::pcap_pkthdr</a></div><div class="ttdeci">struct pcap_pkthdr pcap_pkthdr</div><div class="ttdef"><b>Definition:</b> <a href="pcap__request_8h_source.html#l00039">pcap_request.h:39</a></div></div>
+<div class="ttc" id="astructsoso_1_1ap__info__t_html"><div class="ttname"><a href="structsoso_1_1ap__info__t.html">soso::ap_info_t</a></div><div class="ttdef"><b>Definition:</b> <a href="pcap__request_8h_source.html#l00013">pcap_request.h:13</a></div></div>
+<div class="ttc" id="anamespacesoso_html_a5152e003da9ca6192e69be8d3656c6b9"><div class="ttname"><a href="namespacesoso.html#a5152e003da9ca6192e69be8d3656c6b9">soso::ap_info_t</a></div><div class="ttdeci">struct soso::ap_info_t ap_info_t</div></div>
+<div class="ttc" id="aclasssoso_1_1PcapRequest_html_a5645c0a9f176ae78c1106f145a810eb0"><div class="ttname"><a href="classsoso_1_1PcapRequest.html#a5645c0a9f176ae78c1106f145a810eb0">soso::PcapRequest::fc</a></div><div class="ttdeci">frame_control_t fc</div><div class="ttdef"><b>Definition:</b> <a href="pcap__request_8h_source.html#l00043">pcap_request.h:43</a></div></div>
+<div class="ttc" id="astructsoso_1_1st__info__t_html_ad086a2bd3ec9167850d18be4d22fe216"><div class="ttname"><a href="structsoso_1_1st__info__t.html#ad086a2bd3ec9167850d18be4d22fe216">soso::st_info_t::mac</a></div><div class="ttdeci">uint8_t mac[6]</div><div class="ttdef"><b>Definition:</b> <a href="pcap__request_8h_source.html#l00025">pcap_request.h:25</a></div></div>
+<div class="ttc" id="aclasssoso_1_1PcapRequest_html_ab396fd6033f342a8b38d956641935cc0"><div class="ttname"><a href="classsoso_1_1PcapRequest.html#ab396fd6033f342a8b38d956641935cc0">soso::PcapRequest::pkt_len</a></div><div class="ttdeci">pkt_len_t pkt_len</div><div class="ttdef"><b>Definition:</b> <a href="pcap__request_8h_source.html#l00042">pcap_request.h:42</a></div></div>
+<div class="ttc" id="astructsoso_1_1st__info__t_html_a880191765718acaac5475ccebf226d03"><div class="ttname"><a href="structsoso_1_1st__info__t.html#a880191765718acaac5475ccebf226d03">soso::st_info_t::band</a></div><div class="ttdeci">uint8_t band</div><div class="ttdef"><b>Definition:</b> <a href="pcap__request_8h_source.html#l00026">pcap_request.h:26</a></div></div>
+<div class="ttc" id="aieee80211_8h_html"><div class="ttname"><a href="ieee80211_8h.html">ieee80211.h</a></div></div>
+<div class="ttc" id="apcap__request_8h_html_a102d776705a0384f0f7c922bf1741e68"><div class="ttname"><a href="pcap__request_8h.html#a102d776705a0384f0f7c922bf1741e68">MAX_PCAP_CAPSIZE</a></div><div class="ttdeci">#define MAX_PCAP_CAPSIZE</div><div class="ttdef"><b>Definition:</b> <a href="pcap__request_8h_source.html#l00011">pcap_request.h:11</a></div></div>
+<div class="ttc" id="anamespacesoso_html_a3b50b9c8db76c0a6b41bd76625f60e5b"><div class="ttname"><a href="namespacesoso.html#a3b50b9c8db76c0a6b41bd76625f60e5b">soso::st_info_t</a></div><div class="ttdeci">struct soso::st_info_t st_info_t</div></div>
+<div class="ttc" id="astructsoso_1_1ap__info__t_html_abd4bda133646bfa432cf73065e5c0ceb"><div class="ttname"><a href="structsoso_1_1ap__info__t.html#abd4bda133646bfa432cf73065e5c0ceb">soso::ap_info_t::ssid_len</a></div><div class="ttdeci">size_t ssid_len</div><div class="ttdef"><b>Definition:</b> <a href="pcap__request_8h_source.html#l00019">pcap_request.h:19</a></div></div>
+<div class="ttc" id="astructsoso_1_1ap__info__t_html_a980d0037185632ae535dab7e0aaa0029"><div class="ttname"><a href="structsoso_1_1ap__info__t.html#a980d0037185632ae535dab7e0aaa0029">soso::ap_info_t::ssid</a></div><div class="ttdeci">char ssid[33]</div><div class="ttdef"><b>Definition:</b> <a href="pcap__request_8h_source.html#l00018">pcap_request.h:18</a></div></div>
+<div class="ttc" id="astructsoso_1_1ap__info__t_html_a9c28a78c6d35c12a210e9bc3209e5f4d"><div class="ttname"><a href="structsoso_1_1ap__info__t.html#a9c28a78c6d35c12a210e9bc3209e5f4d">soso::ap_info_t::channel</a></div><div class="ttdeci">int channel</div><div class="ttdef"><b>Definition:</b> <a href="pcap__request_8h_source.html#l00017">pcap_request.h:17</a></div></div>
+<div class="ttc" id="astructsoso_1_1pkt__len__t_html_ab8aacc51761c841679dea2c5f5aec1fd"><div class="ttname"><a href="structsoso_1_1pkt__len__t.html#ab8aacc51761c841679dea2c5f5aec1fd">soso::pkt_len_t::framecaplen</a></div><div class="ttdeci">uint32_t framecaplen</div><div class="ttdef"><b>Definition:</b> <a href="pcap__request_8h_source.html#l00034">pcap_request.h:34</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

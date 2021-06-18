@@ -13,17 +13,17 @@ public:
     usleep(100);
     return noop();
   }
-  bool prepare(std::shared_ptr<Request> request) { //
+  bool prepare(Request *request) { //
     request = request;
     usleep(100);
     return noop();
   }
-  bool process(std::shared_ptr<Request> request) { //
+  bool process(Request *request) { //
     request = request;
     usleep(100);
     return noop();
   }
-  bool post(std::shared_ptr<Request> request) { //
+  bool post(Request *request) { //
     request = request;
     usleep(100);
     return noop();
@@ -37,15 +37,16 @@ public:
 int main(void) { //
 
   ComponentChain chain;
+  Request *request = new Request();
 
-  chain.registers(make_shared<ComponentTest>(ComponentTest("test#1")));
-  chain.registers(make_shared<ComponentTest>(ComponentTest("test#2")));
-  chain.registers(make_shared<ComponentTest>(ComponentTest("test#3")));
-  chain.registers(make_shared<ComponentTest>(ComponentTest("test#4")));
-  chain.registers(make_shared<ComponentTest>(ComponentTest("test#5")));
+  chain.registers(new ComponentTest("test#1"));
+  chain.registers(new ComponentTest("test#2"));
+  chain.registers(new ComponentTest("test#3"));
+  chain.registers(new ComponentTest("test#4"));
+  chain.registers(new ComponentTest("test#5"));
 
   chain.initComponent();
-  chain.callComponent(make_shared<Request>(Request()));
+  chain.callComponent(request);
   chain.callSchedule();
 
   cout << chain.getChronoResult() << endl;

@@ -1,8 +1,8 @@
 #ifndef __SOSO_COMPONENT_H__
 #define __SOSO_COMPONENT_H__
 
+#include "chronos.h"
 #include "request.h"
-#include <chronos.h>
 #include <memory>
 #include <stdexcept>
 #include <string>
@@ -26,7 +26,7 @@ enum COMPONENT_IDX {
 class Component {
 private:
   /// 컴포넌트 이름
-  const std::string _name;
+  std::string _name;
 
 protected:
   /// No operation (Next 컴포넌트 호출)
@@ -37,13 +37,13 @@ public:
    * @brief Component 생성자
    * @param name
    */
-  Component(std::string name) : _name(name) { //
+  Component(const std::string name) : _name(name) { //
   }
   /**
    * @brief 컴포넌트 이름 반환
    * @return const std::string
    */
-  const std::string getName() { return this->_name; }
+  const std::string getName() { return _name; }
 
   /**
    * @brief Component 소멸자 가상 멤버 함수
@@ -63,7 +63,7 @@ public:
    * @return true
    * @return false
    */
-  virtual bool prepare(std::shared_ptr<Request> request) = 0;
+  virtual bool prepare(Request *request) = 0;
 
   /**
    * @brief 컴포넌트 수행 가상 멤버 함수
@@ -71,7 +71,7 @@ public:
    * @return true
    * @return false
    */
-  virtual bool process(std::shared_ptr<Request> request) = 0;
+  virtual bool process(Request *request) = 0;
 
   /**
    * @brief 컴포넌트 후처리 가상 멤버 함수
@@ -79,7 +79,7 @@ public:
    * @return true
    * @return false
    */
-  virtual bool post(std::shared_ptr<Request> request) = 0;
+  virtual bool post(Request *request) = 0;
 
   /**
    * @brief 컴포넌트 스케줄러 가상 멤버 함수\n
@@ -98,12 +98,12 @@ private:
   bool _trace_chrono = true;
 
   /// 컴포넌트 구성요청 체인 리스트
-  std::vector<std::shared_ptr<Component>> _chains;
+  std::vector<Component *> _chains;
 
 public:
   ComponentChain();
 
-  ~ComponentChain() = default;
+  virtual ~ComponentChain();
 
   size_t componentSize() { return _chains.size(); }
 
@@ -123,14 +123,14 @@ public:
    * @brief 컴포넌트 추가
    * @param component
    */
-  void registers(std::shared_ptr<Component> component);
+  void registers(Component *component);
 
   /**
    * @brief 컴포넌트 접근자
    * @param name
-   * @return std::shared_ptr<Component>
+   * @return Component&
    */
-  std::shared_ptr<Component> operator[](const std::string name);
+  Component *operator[](const std::string name);
 
   /**
    * @brief 컴포넌트 제거
@@ -151,17 +151,12 @@ public:
    * 호출 순서: prepare -> process -> post
    * @param request
    */
-  void callComponent(std::shared_ptr<Request> request);
+  void callComponent(Request *request);
 
   /**
    * @brief 컴포넌트의 schedule(단일 스레드로 동작해야 할)을 호출
    */
   void callSchedule(void);
-
-  /**
-   * @brief 컴포넌트 정보 출력 (디버깅용)
-   */
-  void showComponent();
 
   bool chronosCheckPoint(const std::string comp_name, int comp_idx,
                          std::function<bool(void)> logic);

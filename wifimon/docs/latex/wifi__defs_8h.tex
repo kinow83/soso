@@ -1,0 +1,163 @@
+\hypertarget{wifi__defs_8h}{}\doxysection{include/wifi\+\_\+defs.h 파일 참조}
+\label{wifi__defs_8h}\index{include/wifi\_defs.h@{include/wifi\_defs.h}}
+이 그래프는 이 파일을 직/간접적으로 include 하는 파일들을 보여줍니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{wifi__defs_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{열거형 타입}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{wifi__defs_8h_a2872371c64ef97583cc1ffedf3867508}{wifi\+\_\+80211\+\_\+type}} \{ \mbox{\hyperlink{wifi__defs_8h_a2872371c64ef97583cc1ffedf3867508a3921b3570b48be5f92f39f25fd42d0e0}{wifi\+\_\+type\+\_\+management}} = 0, 
+\mbox{\hyperlink{wifi__defs_8h_a2872371c64ef97583cc1ffedf3867508ad487f7c70e89edfb92597f5e17e4bb21}{wifi\+\_\+type\+\_\+control}} = 1, 
+\mbox{\hyperlink{wifi__defs_8h_a2872371c64ef97583cc1ffedf3867508abe3c25c7b433bff9072045d2ebe5ac27}{wifi\+\_\+type\+\_\+data}} = 2
+ \}
+\item 
+enum \mbox{\hyperlink{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9}{wifi\+\_\+80211\+\_\+subtype}} \{ \newline
+\mbox{\hyperlink{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9a0263bda98ccc967eaea0aaace3032d29}{wifi\+\_\+subtype\+\_\+association\+\_\+req}} = 1, 
+\mbox{\hyperlink{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9a527f10e5d28e5458fbda36d6c8962024}{wifi\+\_\+subtype\+\_\+association\+\_\+resp}} = 2, 
+\mbox{\hyperlink{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9a9faaa6bb4fcca4d6fddb12ef57109fbe}{wifi\+\_\+subtype\+\_\+reassociation\+\_\+req}} = 3, 
+\mbox{\hyperlink{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9a947c02544ce7fa6946ff55e030f7b57e}{wifi\+\_\+subtype\+\_\+reassociation\+\_\+resp}} = 4, 
+\newline
+\mbox{\hyperlink{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9acbf2bef1ba2fe7aba38c91903d1b0b68}{wifi\+\_\+subtype\+\_\+probe\+\_\+req}} = 5, 
+\mbox{\hyperlink{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9a88263d300ab5b6a34758600e82019d81}{wifi\+\_\+subtype\+\_\+probe\+\_\+resp}} = 6, 
+\mbox{\hyperlink{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9a04035a3db8c8bdb279aaecdad4f1808d}{wifi\+\_\+subtype\+\_\+beacon}} = 7, 
+\mbox{\hyperlink{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9a10fb128d418d61a402b0cc4c26e6008a}{wifi\+\_\+subtype\+\_\+disassociation}} = 8, 
+\newline
+\mbox{\hyperlink{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9af7a19de25bab16f945d3cf4b0de61895}{wifi\+\_\+subtype\+\_\+authentication}} = 9, 
+\mbox{\hyperlink{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9adf01fc3bb4f418e9fb7d68d88550e15d}{wifi\+\_\+subtype\+\_\+deauthentication}} = 10, 
+\mbox{\hyperlink{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9ab2c83ecbf17f0dd7bf3c25b909582981}{wifi\+\_\+subtype\+\_\+action}} = 11, 
+\mbox{\hyperlink{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9ad2f35c88b93b0d92a7729c329d12ed2a}{wifi\+\_\+subtype\+\_\+cts}} = 1, 
+\newline
+\mbox{\hyperlink{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9a599c68c52a6f0530a2870132ad3db235}{wifi\+\_\+subtype\+\_\+rts}} = 2, 
+\mbox{\hyperlink{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9a413f4d295536deeb1f6f9fc990f3c62c}{wifi\+\_\+subtype\+\_\+block\+\_\+ack\+\_\+req}} = 3, 
+\mbox{\hyperlink{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9a64de440c16ea6ad894b0960ff2480f0e}{wifi\+\_\+subtype\+\_\+block\+\_\+ack}} = 4, 
+\mbox{\hyperlink{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9a67b91c32bcf105156ff0c2ccdd4ff4cb}{wifi\+\_\+subtype\+\_\+pspoll}} = 5, 
+\newline
+\mbox{\hyperlink{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9a841bc4bc0d26d494da0705a17d7e8343}{wifi\+\_\+subtype\+\_\+trigger}} = 6, 
+\mbox{\hyperlink{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9a6e8bc9a56171b5ad022db9b906b2b0dd}{wifi\+\_\+subtype\+\_\+ndp\+\_\+announcement}} = 7, 
+\mbox{\hyperlink{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9a38bea6730a887e54e9fae237b31d3e10}{wifi\+\_\+subtype\+\_\+data}} = 1, 
+\mbox{\hyperlink{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9a59df53b3d0f9e3d5e5aebfeba8bc4467}{wifi\+\_\+subtype\+\_\+data\+\_\+null}} = 2
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{열거형 타입 문서화}
+\mbox{\Hypertarget{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9}\label{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9}} 
+\index{wifi\_defs.h@{wifi\_defs.h}!wifi\_80211\_subtype@{wifi\_80211\_subtype}}
+\index{wifi\_80211\_subtype@{wifi\_80211\_subtype}!wifi\_defs.h@{wifi\_defs.h}}
+\doxysubsubsection{\texorpdfstring{wifi\_80211\_subtype}{wifi\_80211\_subtype}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9}{wifi\+\_\+80211\+\_\+subtype}}}
+
+\begin{DoxyEnumFields}{열거형 멤버}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{wifi\_subtype\_association\_req@{wifi\_subtype\_association\_req}!wifi\_defs.h@{wifi\_defs.h}}\index{wifi\_defs.h@{wifi\_defs.h}!wifi\_subtype\_association\_req@{wifi\_subtype\_association\_req}}}\mbox{\Hypertarget{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9a0263bda98ccc967eaea0aaace3032d29}\label{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9a0263bda98ccc967eaea0aaace3032d29}} 
+wifi\+\_\+subtype\+\_\+association\+\_\+req&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{wifi\_subtype\_association\_resp@{wifi\_subtype\_association\_resp}!wifi\_defs.h@{wifi\_defs.h}}\index{wifi\_defs.h@{wifi\_defs.h}!wifi\_subtype\_association\_resp@{wifi\_subtype\_association\_resp}}}\mbox{\Hypertarget{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9a527f10e5d28e5458fbda36d6c8962024}\label{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9a527f10e5d28e5458fbda36d6c8962024}} 
+wifi\+\_\+subtype\+\_\+association\+\_\+resp&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{wifi\_subtype\_reassociation\_req@{wifi\_subtype\_reassociation\_req}!wifi\_defs.h@{wifi\_defs.h}}\index{wifi\_defs.h@{wifi\_defs.h}!wifi\_subtype\_reassociation\_req@{wifi\_subtype\_reassociation\_req}}}\mbox{\Hypertarget{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9a9faaa6bb4fcca4d6fddb12ef57109fbe}\label{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9a9faaa6bb4fcca4d6fddb12ef57109fbe}} 
+wifi\+\_\+subtype\+\_\+reassociation\+\_\+req&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{wifi\_subtype\_reassociation\_resp@{wifi\_subtype\_reassociation\_resp}!wifi\_defs.h@{wifi\_defs.h}}\index{wifi\_defs.h@{wifi\_defs.h}!wifi\_subtype\_reassociation\_resp@{wifi\_subtype\_reassociation\_resp}}}\mbox{\Hypertarget{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9a947c02544ce7fa6946ff55e030f7b57e}\label{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9a947c02544ce7fa6946ff55e030f7b57e}} 
+wifi\+\_\+subtype\+\_\+reassociation\+\_\+resp&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{wifi\_subtype\_probe\_req@{wifi\_subtype\_probe\_req}!wifi\_defs.h@{wifi\_defs.h}}\index{wifi\_defs.h@{wifi\_defs.h}!wifi\_subtype\_probe\_req@{wifi\_subtype\_probe\_req}}}\mbox{\Hypertarget{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9acbf2bef1ba2fe7aba38c91903d1b0b68}\label{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9acbf2bef1ba2fe7aba38c91903d1b0b68}} 
+wifi\+\_\+subtype\+\_\+probe\+\_\+req&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{wifi\_subtype\_probe\_resp@{wifi\_subtype\_probe\_resp}!wifi\_defs.h@{wifi\_defs.h}}\index{wifi\_defs.h@{wifi\_defs.h}!wifi\_subtype\_probe\_resp@{wifi\_subtype\_probe\_resp}}}\mbox{\Hypertarget{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9a88263d300ab5b6a34758600e82019d81}\label{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9a88263d300ab5b6a34758600e82019d81}} 
+wifi\+\_\+subtype\+\_\+probe\+\_\+resp&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{wifi\_subtype\_beacon@{wifi\_subtype\_beacon}!wifi\_defs.h@{wifi\_defs.h}}\index{wifi\_defs.h@{wifi\_defs.h}!wifi\_subtype\_beacon@{wifi\_subtype\_beacon}}}\mbox{\Hypertarget{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9a04035a3db8c8bdb279aaecdad4f1808d}\label{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9a04035a3db8c8bdb279aaecdad4f1808d}} 
+wifi\+\_\+subtype\+\_\+beacon&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{wifi\_subtype\_disassociation@{wifi\_subtype\_disassociation}!wifi\_defs.h@{wifi\_defs.h}}\index{wifi\_defs.h@{wifi\_defs.h}!wifi\_subtype\_disassociation@{wifi\_subtype\_disassociation}}}\mbox{\Hypertarget{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9a10fb128d418d61a402b0cc4c26e6008a}\label{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9a10fb128d418d61a402b0cc4c26e6008a}} 
+wifi\+\_\+subtype\+\_\+disassociation&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{wifi\_subtype\_authentication@{wifi\_subtype\_authentication}!wifi\_defs.h@{wifi\_defs.h}}\index{wifi\_defs.h@{wifi\_defs.h}!wifi\_subtype\_authentication@{wifi\_subtype\_authentication}}}\mbox{\Hypertarget{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9af7a19de25bab16f945d3cf4b0de61895}\label{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9af7a19de25bab16f945d3cf4b0de61895}} 
+wifi\+\_\+subtype\+\_\+authentication&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{wifi\_subtype\_deauthentication@{wifi\_subtype\_deauthentication}!wifi\_defs.h@{wifi\_defs.h}}\index{wifi\_defs.h@{wifi\_defs.h}!wifi\_subtype\_deauthentication@{wifi\_subtype\_deauthentication}}}\mbox{\Hypertarget{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9adf01fc3bb4f418e9fb7d68d88550e15d}\label{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9adf01fc3bb4f418e9fb7d68d88550e15d}} 
+wifi\+\_\+subtype\+\_\+deauthentication&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{wifi\_subtype\_action@{wifi\_subtype\_action}!wifi\_defs.h@{wifi\_defs.h}}\index{wifi\_defs.h@{wifi\_defs.h}!wifi\_subtype\_action@{wifi\_subtype\_action}}}\mbox{\Hypertarget{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9ab2c83ecbf17f0dd7bf3c25b909582981}\label{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9ab2c83ecbf17f0dd7bf3c25b909582981}} 
+wifi\+\_\+subtype\+\_\+action&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{wifi\_subtype\_cts@{wifi\_subtype\_cts}!wifi\_defs.h@{wifi\_defs.h}}\index{wifi\_defs.h@{wifi\_defs.h}!wifi\_subtype\_cts@{wifi\_subtype\_cts}}}\mbox{\Hypertarget{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9ad2f35c88b93b0d92a7729c329d12ed2a}\label{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9ad2f35c88b93b0d92a7729c329d12ed2a}} 
+wifi\+\_\+subtype\+\_\+cts&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{wifi\_subtype\_rts@{wifi\_subtype\_rts}!wifi\_defs.h@{wifi\_defs.h}}\index{wifi\_defs.h@{wifi\_defs.h}!wifi\_subtype\_rts@{wifi\_subtype\_rts}}}\mbox{\Hypertarget{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9a599c68c52a6f0530a2870132ad3db235}\label{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9a599c68c52a6f0530a2870132ad3db235}} 
+wifi\+\_\+subtype\+\_\+rts&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{wifi\_subtype\_block\_ack\_req@{wifi\_subtype\_block\_ack\_req}!wifi\_defs.h@{wifi\_defs.h}}\index{wifi\_defs.h@{wifi\_defs.h}!wifi\_subtype\_block\_ack\_req@{wifi\_subtype\_block\_ack\_req}}}\mbox{\Hypertarget{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9a413f4d295536deeb1f6f9fc990f3c62c}\label{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9a413f4d295536deeb1f6f9fc990f3c62c}} 
+wifi\+\_\+subtype\+\_\+block\+\_\+ack\+\_\+req&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{wifi\_subtype\_block\_ack@{wifi\_subtype\_block\_ack}!wifi\_defs.h@{wifi\_defs.h}}\index{wifi\_defs.h@{wifi\_defs.h}!wifi\_subtype\_block\_ack@{wifi\_subtype\_block\_ack}}}\mbox{\Hypertarget{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9a64de440c16ea6ad894b0960ff2480f0e}\label{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9a64de440c16ea6ad894b0960ff2480f0e}} 
+wifi\+\_\+subtype\+\_\+block\+\_\+ack&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{wifi\_subtype\_pspoll@{wifi\_subtype\_pspoll}!wifi\_defs.h@{wifi\_defs.h}}\index{wifi\_defs.h@{wifi\_defs.h}!wifi\_subtype\_pspoll@{wifi\_subtype\_pspoll}}}\mbox{\Hypertarget{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9a67b91c32bcf105156ff0c2ccdd4ff4cb}\label{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9a67b91c32bcf105156ff0c2ccdd4ff4cb}} 
+wifi\+\_\+subtype\+\_\+pspoll&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{wifi\_subtype\_trigger@{wifi\_subtype\_trigger}!wifi\_defs.h@{wifi\_defs.h}}\index{wifi\_defs.h@{wifi\_defs.h}!wifi\_subtype\_trigger@{wifi\_subtype\_trigger}}}\mbox{\Hypertarget{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9a841bc4bc0d26d494da0705a17d7e8343}\label{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9a841bc4bc0d26d494da0705a17d7e8343}} 
+wifi\+\_\+subtype\+\_\+trigger&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{wifi\_subtype\_ndp\_announcement@{wifi\_subtype\_ndp\_announcement}!wifi\_defs.h@{wifi\_defs.h}}\index{wifi\_defs.h@{wifi\_defs.h}!wifi\_subtype\_ndp\_announcement@{wifi\_subtype\_ndp\_announcement}}}\mbox{\Hypertarget{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9a6e8bc9a56171b5ad022db9b906b2b0dd}\label{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9a6e8bc9a56171b5ad022db9b906b2b0dd}} 
+wifi\+\_\+subtype\+\_\+ndp\+\_\+announcement&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{wifi\_subtype\_data@{wifi\_subtype\_data}!wifi\_defs.h@{wifi\_defs.h}}\index{wifi\_defs.h@{wifi\_defs.h}!wifi\_subtype\_data@{wifi\_subtype\_data}}}\mbox{\Hypertarget{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9a38bea6730a887e54e9fae237b31d3e10}\label{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9a38bea6730a887e54e9fae237b31d3e10}} 
+wifi\+\_\+subtype\+\_\+data&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{wifi\_subtype\_data\_null@{wifi\_subtype\_data\_null}!wifi\_defs.h@{wifi\_defs.h}}\index{wifi\_defs.h@{wifi\_defs.h}!wifi\_subtype\_data\_null@{wifi\_subtype\_data\_null}}}\mbox{\Hypertarget{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9a59df53b3d0f9e3d5e5aebfeba8bc4467}\label{wifi__defs_8h_afcbc2ade5de076791577a642f3d5eef9a59df53b3d0f9e3d5e5aebfeba8bc4467}} 
+wifi\+\_\+subtype\+\_\+data\+\_\+null&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+wifi\+\_\+defs.\+h 파일의 10 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{wifi__defs_8h_a2872371c64ef97583cc1ffedf3867508}\label{wifi__defs_8h_a2872371c64ef97583cc1ffedf3867508}} 
+\index{wifi\_defs.h@{wifi\_defs.h}!wifi\_80211\_type@{wifi\_80211\_type}}
+\index{wifi\_80211\_type@{wifi\_80211\_type}!wifi\_defs.h@{wifi\_defs.h}}
+\doxysubsubsection{\texorpdfstring{wifi\_80211\_type}{wifi\_80211\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{wifi__defs_8h_a2872371c64ef97583cc1ffedf3867508}{wifi\+\_\+80211\+\_\+type}}}
+
+\begin{DoxyEnumFields}{열거형 멤버}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{wifi\_type\_management@{wifi\_type\_management}!wifi\_defs.h@{wifi\_defs.h}}\index{wifi\_defs.h@{wifi\_defs.h}!wifi\_type\_management@{wifi\_type\_management}}}\mbox{\Hypertarget{wifi__defs_8h_a2872371c64ef97583cc1ffedf3867508a3921b3570b48be5f92f39f25fd42d0e0}\label{wifi__defs_8h_a2872371c64ef97583cc1ffedf3867508a3921b3570b48be5f92f39f25fd42d0e0}} 
+wifi\+\_\+type\+\_\+management&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{wifi\_type\_control@{wifi\_type\_control}!wifi\_defs.h@{wifi\_defs.h}}\index{wifi\_defs.h@{wifi\_defs.h}!wifi\_type\_control@{wifi\_type\_control}}}\mbox{\Hypertarget{wifi__defs_8h_a2872371c64ef97583cc1ffedf3867508ad487f7c70e89edfb92597f5e17e4bb21}\label{wifi__defs_8h_a2872371c64ef97583cc1ffedf3867508ad487f7c70e89edfb92597f5e17e4bb21}} 
+wifi\+\_\+type\+\_\+control&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{wifi\_type\_data@{wifi\_type\_data}!wifi\_defs.h@{wifi\_defs.h}}\index{wifi\_defs.h@{wifi\_defs.h}!wifi\_type\_data@{wifi\_type\_data}}}\mbox{\Hypertarget{wifi__defs_8h_a2872371c64ef97583cc1ffedf3867508abe3c25c7b433bff9072045d2ebe5ac27}\label{wifi__defs_8h_a2872371c64ef97583cc1ffedf3867508abe3c25c7b433bff9072045d2ebe5ac27}} 
+wifi\+\_\+type\+\_\+data&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+wifi\+\_\+defs.\+h 파일의 4 번째 라인에서 정의되었습니다.
+

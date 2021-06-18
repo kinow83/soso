@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ModuleWorker: src/pcapmon.cpp 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ModuleWorker
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'검색');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','검색');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">pcapmon.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="pcapmon_8cpp.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pcapmon_8h.html">pcapmon.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;echo.h&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pcap__request_8h.html">pcap_request.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;pcap.h&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacesoso.html">soso</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> pcap_callback(u_char *args,                     <span class="comment">//</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;                          <span class="keyword">const</span> <span class="keyword">struct</span> pcap_pkthdr *header, <span class="comment">//</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                          <span class="keyword">const</span> u_char *packet) {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <a class="code" href="classsoso_1_1PcapMon.html">PcapMon</a> *pcapmon = <span class="keyword">reinterpret_cast&lt;</span><a class="code" href="classsoso_1_1PcapMon.html">PcapMon</a> *<span class="keyword">&gt;</span>(args);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  ComponentChain *chain = pcapmon-&gt;<a class="code" href="classsoso_1_1PcapMon.html#a691d3106daa2dd38f2fc20e167e3e19e">getComponentChain</a>();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  WorkerManager *worker_manager = pcapmon-&gt;<a class="code" href="classsoso_1_1PcapMon.html#a7731026159485063ca323ac1cdc43aea">getWorkerManager</a>();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <a class="code" href="classsoso_1_1PcapRequest.html">PcapRequest</a> request(header, packet);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  worker_manager-&gt;addJobMultiWorker( <span class="comment">//</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;      <span class="stringliteral">&quot;pcap wifi monitoring&quot;</span>,        <span class="comment">//</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;      [&amp;request, chain](std::shared_ptr&lt;Worker&gt; worker,</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                        std::shared_ptr&lt;Job&gt; job) {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        (void)(worker);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        (void)(job);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        chain-&gt;callComponent(&amp;request);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      });</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">static</span> pcap_t *create_pcap(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;source) {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keywordtype">char</span> errbuf[PCAP_ERRBUF_SIZE];</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  pcap_t *pcap;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordtype">int</span> promisc = 1;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordtype">int</span> to_ms = 10;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordflow">if</span> (strstr(source.c_str(), <span class="stringliteral">&quot;.pcap&quot;</span>)) { <span class="comment">// .pcap, .pcapng</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    pcap = pcap_open_offline(source.c_str(), errbuf);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    pcap = pcap_open_live(source.c_str(), BUFSIZ, promisc, to_ms, errbuf);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordflow">if</span> (!pcap) {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    echo.F(<span class="stringliteral">&quot;pcap create fail: %s&quot;</span>, errbuf);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  pcap_setnonblock(pcap, 1, errbuf);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordflow">return</span> pcap;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classsoso_1_1PcapMon.html#a83cad9f52000abb94371fcd13c0bd75e">   46</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsoso_1_1PcapMon.html#a83cad9f52000abb94371fcd13c0bd75e">PcapMon::run</a>(<span class="keywordtype">bool</span> block) {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  pcap_t *pcap;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordtype">size_t</span> captured = 0;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  pcap = create_pcap(_source);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordflow">if</span> (!pcap) {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">goto</span> end;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordflow">if</span> (!_chain-&gt;initComponent()) {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">goto</span> end;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  _running = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keywordflow">while</span> (_running) {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    captured = pcap_dispatch(pcap, 1, pcap_callback, (u_char *)<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">if</span> (captured == 0) {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      <span class="keywordflow">if</span> (!block) {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      usleep(10);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;end:</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordflow">if</span> (pcap)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    pcap_close(pcap);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="anamespacesoso_html"><div class="ttname"><a href="namespacesoso.html">soso</a></div><div class="ttdef"><b>Definition:</b> <a href="hstruct_8h_source.html#l00006">hstruct.h:6</a></div></div>
+<div class="ttc" id="apcapmon_8h_html"><div class="ttname"><a href="pcapmon_8h.html">pcapmon.h</a></div></div>
+<div class="ttc" id="aclasssoso_1_1PcapMon_html"><div class="ttname"><a href="classsoso_1_1PcapMon.html">soso::PcapMon</a></div><div class="ttdef"><b>Definition:</b> <a href="pcapmon_8h_source.html#l00011">pcapmon.h:11</a></div></div>
+<div class="ttc" id="aclasssoso_1_1PcapMon_html_a7731026159485063ca323ac1cdc43aea"><div class="ttname"><a href="classsoso_1_1PcapMon.html#a7731026159485063ca323ac1cdc43aea">soso::PcapMon::getWorkerManager</a></div><div class="ttdeci">WorkerManager * getWorkerManager()</div><div class="ttdef"><b>Definition:</b> <a href="pcapmon_8h_source.html#l00035">pcapmon.h:35</a></div></div>
+<div class="ttc" id="apcap__request_8h_html"><div class="ttname"><a href="pcap__request_8h.html">pcap_request.h</a></div></div>
+<div class="ttc" id="aclasssoso_1_1PcapRequest_html"><div class="ttname"><a href="classsoso_1_1PcapRequest.html">soso::PcapRequest</a></div><div class="ttdef"><b>Definition:</b> <a href="pcap__request_8h_source.html#l00037">pcap_request.h:37</a></div></div>
+<div class="ttc" id="aclasssoso_1_1PcapMon_html_a83cad9f52000abb94371fcd13c0bd75e"><div class="ttname"><a href="classsoso_1_1PcapMon.html#a83cad9f52000abb94371fcd13c0bd75e">soso::PcapMon::run</a></div><div class="ttdeci">void run(bool block)</div><div class="ttdef"><b>Definition:</b> <a href="pcapmon_8cpp_source.html#l00046">pcapmon.cpp:46</a></div></div>
+<div class="ttc" id="aclasssoso_1_1PcapMon_html_a691d3106daa2dd38f2fc20e167e3e19e"><div class="ttname"><a href="classsoso_1_1PcapMon.html#a691d3106daa2dd38f2fc20e167e3e19e">soso::PcapMon::getComponentChain</a></div><div class="ttdeci">ComponentChain * getComponentChain()</div><div class="ttdef"><b>Definition:</b> <a href="pcapmon_8h_source.html#l00039">pcapmon.h:39</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

@@ -1,5 +1,4 @@
 #include "component.h"
-#include "echo.h"
 #include <unistd.h>
 
 using namespace std;
@@ -14,16 +13,22 @@ ComponentChain::ComponentChain() {
   _chrono_stack.push_back(ChronosStack("schedule", max_point));
 }
 
-void ComponentChain::registers(shared_ptr<Component> component) {
+ComponentChain::~ComponentChain() {
+  for (auto c : _chains) {
+    delete c;
+  }
+}
+
+void ComponentChain::registers(Component *component) {
   for (auto c : _chains) {
     if (c->getName() == component->getName()) {
       throw runtime_error("already registered component: " + c->getName());
     }
   }
-  this->_chains.push_back(component);
+  _chains.push_back(component);
 }
 
-shared_ptr<Component> ComponentChain::operator[](const string name) {
+Component *ComponentChain::operator[](const string name) {
   for (auto c : _chains) {
     if (c->getName() == name) {
       return c;
@@ -34,13 +39,13 @@ shared_ptr<Component> ComponentChain::operator[](const string name) {
 
 void ComponentChain::remove(const string name) {
   int removed = 0;
-  auto iter = _chains.begin();
-  while (iter != _chains.end()) {
-    if ((*iter)->getName() == name) {
-      _chains.erase(iter);
+  auto it = _chains.begin();
+  while (it != _chains.end()) {
+    if ((*it)->getName() == name) {
+      _chains.erase(it);
       removed++;
     } else {
-      ++iter;
+      ++it;
     }
   }
   if (removed == 0) {
@@ -73,9 +78,8 @@ bool ComponentChain::initComponent() {
   for (auto c : _chains) {
     ok = chronosCheckPoint(c->getName(),   //
                            COMPONENT_INIT, //
-                           [&c](void) { return c->init(); });
+                           [c](void) { return c->init(); });
     if (!ok) {
-      echo.e("Fail init for '%s' component", c->getName());
       return ok;
     }
   }
@@ -87,66 +91,55 @@ void ComponentChain::callSchedule(void) {
   for (auto c : _chains) {
     ok = chronosCheckPoint(c->getName(),       //
                            COMPONENT_SCHEDULE, //
-                           [&c](void) {
+                           [c](void) {
                              c->schedule();
                              return true;
                            });
     if (!ok) {
-      echo.e("Fail schedule for '%s' component", c->getName());
       return;
     }
   }
   return;
 }
 
-void ComponentChain::callComponent(shared_ptr<Request> request) {
+void ComponentChain::callComponent(Request *request) {
   bool ok;
   if (request == nullptr)
     return;
 
   // prepare
   for (auto c : _chains) {
-    ok = chronosCheckPoint(c->getName(),          //
-                           COMPONENT_PREPARE,     //
-                           [&c, &request](void) { //
+    ok = chronosCheckPoint(c->getName(),         //
+                           COMPONENT_PREPARE,    //
+                           [c, &request](void) { //
                              return c->prepare(request);
                            });
     if (!ok) {
-      echo.e("Fail prepare for '%s' component", c->getName());
       return;
     }
   }
 
   // process
   for (auto c : _chains) {
-    ok = chronosCheckPoint(c->getName(),          //
-                           COMPONENT_PROCESS,     //
-                           [&c, &request](void) { //
+    ok = chronosCheckPoint(c->getName(),         //
+                           COMPONENT_PROCESS,    //
+                           [c, &request](void) { //
                              return c->process(request);
                            });
     if (!ok) {
-      echo.e("Fail process for '%s' component", c->getName());
       return;
     }
   }
 
   // post
   for (auto c : _chains) {
-    ok = chronosCheckPoint(c->getName(),          //
-                           COMPONENT_POST,        //
-                           [&c, &request](void) { //
+    ok = chronosCheckPoint(c->getName(),         //
+                           COMPONENT_POST,       //
+                           [c, &request](void) { //
                              return c->post(request);
                            });
     if (!ok) {
-      echo.e("Fail post for '%s' component", c->getName());
       return;
     }
-  }
-}
-
-void ComponentChain::showComponent() {
-  echo.t("[module chains]-------\n");
-  for (auto c : _chains) {
-    echo.t("[%s]\n", c->getName());
   }
 }

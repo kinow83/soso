@@ -1,0 +1,119 @@
+\hypertarget{wifiutils_8cpp}{}\doxysection{src/wifiutils.cpp 파일 참조}
+\label{wifiutils_8cpp}\index{src/wifiutils.cpp@{src/wifiutils.cpp}}
+{\ttfamily \#include \char`\"{}wifiutils.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$fmt/format.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+wifiutils.\+cpp에 대한 include 의존 그래프\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{wifiutils_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{wifiutils_8cpp_a677b5296f0e4e8c2f14bcde545036bc7}{freq\+\_\+to\+\_\+channel}} (int freq)
+\item 
+bool \mbox{\hyperlink{wifiutils_8cpp_af39fe83fbe20604357d7938c1607024c}{is\+\_\+nullmac}} (const uint8\+\_\+t $\ast$mac)
+\item 
+bool \mbox{\hyperlink{wifiutils_8cpp_a7e1561ac7dca7b5313f41106287888fa}{is\+\_\+broadcastmac}} (const uint8\+\_\+t $\ast$mac)
+\item 
+bool \mbox{\hyperlink{wifiutils_8cpp_a125447330659870e29b18aa7cbb061c1}{maccmp}} (const uint8\+\_\+t $\ast$mac1, const uint8\+\_\+t $\ast$mac2)
+\item 
+void \mbox{\hyperlink{wifiutils_8cpp_aee60dd29b2d77b8a1f5449c2f673bd36}{maccpy}} (uint8\+\_\+t $\ast$to, const uint8\+\_\+t $\ast$from)
+\item 
+size\+\_\+t \mbox{\hyperlink{wifiutils_8cpp_a711a0931d97ba6edc8e528616076959e}{ssidcpy}} (char $\ast$to, const char $\ast$from, size\+\_\+t len)
+\end{DoxyCompactItemize}
+\doxysubsection*{변수}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{wifiutils_8cpp_a54b0c1ba33bb7c0fa6ff2bea32b18ef3}{wifi\+\_\+channel\+\_\+freq\+\_\+table}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{함수 문서화}
+\mbox{\Hypertarget{wifiutils_8cpp_a677b5296f0e4e8c2f14bcde545036bc7}\label{wifiutils_8cpp_a677b5296f0e4e8c2f14bcde545036bc7}} 
+\index{wifiutils.cpp@{wifiutils.cpp}!freq\_to\_channel@{freq\_to\_channel}}
+\index{freq\_to\_channel@{freq\_to\_channel}!wifiutils.cpp@{wifiutils.cpp}}
+\doxysubsubsection{\texorpdfstring{freq\_to\_channel()}{freq\_to\_channel()}}
+{\footnotesize\ttfamily uint8\+\_\+t freq\+\_\+to\+\_\+channel (\begin{DoxyParamCaption}\item[{int}]{freq }\end{DoxyParamCaption})}
+
+
+
+wifiutils.\+cpp 파일의 13 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{wifiutils_8cpp_a7e1561ac7dca7b5313f41106287888fa}\label{wifiutils_8cpp_a7e1561ac7dca7b5313f41106287888fa}} 
+\index{wifiutils.cpp@{wifiutils.cpp}!is\_broadcastmac@{is\_broadcastmac}}
+\index{is\_broadcastmac@{is\_broadcastmac}!wifiutils.cpp@{wifiutils.cpp}}
+\doxysubsubsection{\texorpdfstring{is\_broadcastmac()}{is\_broadcastmac()}}
+{\footnotesize\ttfamily bool is\+\_\+broadcastmac (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{mac }\end{DoxyParamCaption})}
+
+
+
+wifiutils.\+cpp 파일의 25 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{wifiutils_8cpp_af39fe83fbe20604357d7938c1607024c}\label{wifiutils_8cpp_af39fe83fbe20604357d7938c1607024c}} 
+\index{wifiutils.cpp@{wifiutils.cpp}!is\_nullmac@{is\_nullmac}}
+\index{is\_nullmac@{is\_nullmac}!wifiutils.cpp@{wifiutils.cpp}}
+\doxysubsubsection{\texorpdfstring{is\_nullmac()}{is\_nullmac()}}
+{\footnotesize\ttfamily bool is\+\_\+nullmac (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{mac }\end{DoxyParamCaption})}
+
+
+
+wifiutils.\+cpp 파일의 20 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{wifiutils_8cpp_a125447330659870e29b18aa7cbb061c1}\label{wifiutils_8cpp_a125447330659870e29b18aa7cbb061c1}} 
+\index{wifiutils.cpp@{wifiutils.cpp}!maccmp@{maccmp}}
+\index{maccmp@{maccmp}!wifiutils.cpp@{wifiutils.cpp}}
+\doxysubsubsection{\texorpdfstring{maccmp()}{maccmp()}}
+{\footnotesize\ttfamily bool maccmp (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{mac1,  }\item[{const uint8\+\_\+t $\ast$}]{mac2 }\end{DoxyParamCaption})}
+
+
+
+wifiutils.\+cpp 파일의 30 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{wifiutils_8cpp_aee60dd29b2d77b8a1f5449c2f673bd36}\label{wifiutils_8cpp_aee60dd29b2d77b8a1f5449c2f673bd36}} 
+\index{wifiutils.cpp@{wifiutils.cpp}!maccpy@{maccpy}}
+\index{maccpy@{maccpy}!wifiutils.cpp@{wifiutils.cpp}}
+\doxysubsubsection{\texorpdfstring{maccpy()}{maccpy()}}
+{\footnotesize\ttfamily void maccpy (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{to,  }\item[{const uint8\+\_\+t $\ast$}]{from }\end{DoxyParamCaption})}
+
+
+
+wifiutils.\+cpp 파일의 34 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{wifiutils_8cpp_a711a0931d97ba6edc8e528616076959e}\label{wifiutils_8cpp_a711a0931d97ba6edc8e528616076959e}} 
+\index{wifiutils.cpp@{wifiutils.cpp}!ssidcpy@{ssidcpy}}
+\index{ssidcpy@{ssidcpy}!wifiutils.cpp@{wifiutils.cpp}}
+\doxysubsubsection{\texorpdfstring{ssidcpy()}{ssidcpy()}}
+{\footnotesize\ttfamily size\+\_\+t ssidcpy (\begin{DoxyParamCaption}\item[{char $\ast$}]{to,  }\item[{const char $\ast$}]{from,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+
+
+wifiutils.\+cpp 파일의 39 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{변수 문서화}
+\mbox{\Hypertarget{wifiutils_8cpp_a54b0c1ba33bb7c0fa6ff2bea32b18ef3}\label{wifiutils_8cpp_a54b0c1ba33bb7c0fa6ff2bea32b18ef3}} 
+\index{wifiutils.cpp@{wifiutils.cpp}!wifi\_channel\_freq\_table@{wifi\_channel\_freq\_table}}
+\index{wifi\_channel\_freq\_table@{wifi\_channel\_freq\_table}!wifiutils.cpp@{wifiutils.cpp}}
+\doxysubsubsection{\texorpdfstring{wifi\_channel\_freq\_table}{wifi\_channel\_freq\_table}}
+{\footnotesize\ttfamily int wifi\+\_\+channel\+\_\+freq\+\_\+table\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries 초기값\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    \{1, 2412\},  \{2, 2417\},  \{3, 2422\},  \{4, 2427\},  \{5, 2432\},}
+\DoxyCodeLine{    \{6, 2437\},  \{7, 2442\},  \{8, 2447\},  \{9, 2452\},  \{10, 2457\},}
+\DoxyCodeLine{    \{11, 2462\}, \{12, 2467\}, \{13, 2472\}, \{14, 2484\},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+wifiutils.\+cpp 파일의 7 번째 라인에서 정의되었습니다.
+

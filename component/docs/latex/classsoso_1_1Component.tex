@@ -12,7 +12,7 @@
 \doxysubsection*{Public 멤버 함수}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classsoso_1_1Component_aa51b455cf021cf121ed4eb9b79a2c8d3}{Component}} (std\+::string name)
+\mbox{\hyperlink{classsoso_1_1Component_a345e50232b225a8f17712540e7e07385}{Component}} (const std\+::string name)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classsoso_1_1Component}{Component}} 생성자 \end{DoxyCompactList}\item 
 const std\+::string \mbox{\hyperlink{classsoso_1_1Component_a39f2df35f9c64532c65bd04949f9f6c2}{get\+Name}} ()
 \begin{DoxyCompactList}\small\item\em 컴포넌트 이름 반환 \end{DoxyCompactList}\item 
@@ -20,11 +20,11 @@ virtual \mbox{\hyperlink{classsoso_1_1Component_a938eedb53bb41d71f4b7b47fec963b0
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classsoso_1_1Component}{Component}} 소멸자 가상 멤버 함수 \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{classsoso_1_1Component_a9ba2dc919ec264fb2efe0a26531273e3}{init}} ()=0
 \begin{DoxyCompactList}\small\item\em 컴포넌트 초기화 가상 멤버 함수 \end{DoxyCompactList}\item 
-virtual bool \mbox{\hyperlink{classsoso_1_1Component_aaf97110181a444bca4bc52a368d5cada}{prepare}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsoso_1_1Request}{Request}} $>$ request)=0
+virtual bool \mbox{\hyperlink{classsoso_1_1Component_a4995b454662f0964deb02dc2d3e1aa9a}{prepare}} (\mbox{\hyperlink{classsoso_1_1Request}{Request}} $\ast$request)=0
 \begin{DoxyCompactList}\small\item\em 컴포넌트 사전 처리 가상 멤버 함수 \end{DoxyCompactList}\item 
-virtual bool \mbox{\hyperlink{classsoso_1_1Component_af6a2ed84928ca83d8323640bc41d1956}{process}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsoso_1_1Request}{Request}} $>$ request)=0
+virtual bool \mbox{\hyperlink{classsoso_1_1Component_a29b3365d432ec4745e372b49de37723b}{process}} (\mbox{\hyperlink{classsoso_1_1Request}{Request}} $\ast$request)=0
 \begin{DoxyCompactList}\small\item\em 컴포넌트 수행 가상 멤버 함수 \end{DoxyCompactList}\item 
-virtual bool \mbox{\hyperlink{classsoso_1_1Component_acca54280cc7daffaad59c6cf94fdc712}{post}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsoso_1_1Request}{Request}} $>$ request)=0
+virtual bool \mbox{\hyperlink{classsoso_1_1Component_aac0456d1c1bed46f5929137b4aafafe8}{post}} (\mbox{\hyperlink{classsoso_1_1Request}{Request}} $\ast$request)=0
 \begin{DoxyCompactList}\small\item\em 컴포넌트 후처리 가상 멤버 함수 \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classsoso_1_1Component_aee7a1fdff6412fbf9317e86d6bf313f0}{schedule}} ()=0
 \begin{DoxyCompactList}\small\item\em 컴포넌트 스케줄러 가상 멤버 함수~\newline
@@ -38,7 +38,7 @@ bool \mbox{\hyperlink{classsoso_1_1Component_a8170611bd45d7ec714286da2cd550212}{
 \doxysubsection*{Private 속성}
 \begin{DoxyCompactItemize}
 \item 
-const std\+::string \mbox{\hyperlink{classsoso_1_1Component_aac81779ea2e00c1e3aa1868cd85ad442}{\+\_\+name}}
+std\+::string \mbox{\hyperlink{classsoso_1_1Component_a65acc96a4185ba48648abab8c73d2da0}{\+\_\+name}}
 \begin{DoxyCompactList}\small\item\em 컴포넌트 이름 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -50,11 +50,11 @@ component.\+h 파일의 26 번째 라인에서 정의되었습니다.
 
 
 \doxysubsection{생성자 \& 소멸자 문서화}
-\mbox{\Hypertarget{classsoso_1_1Component_aa51b455cf021cf121ed4eb9b79a2c8d3}\label{classsoso_1_1Component_aa51b455cf021cf121ed4eb9b79a2c8d3}} 
+\mbox{\Hypertarget{classsoso_1_1Component_a345e50232b225a8f17712540e7e07385}\label{classsoso_1_1Component_a345e50232b225a8f17712540e7e07385}} 
 \index{soso::Component@{soso::Component}!Component@{Component}}
 \index{Component@{Component}!soso::Component@{soso::Component}}
 \doxysubsubsection{\texorpdfstring{Component()}{Component()}}
-{\footnotesize\ttfamily soso\+::\+Component\+::\+Component (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily soso\+::\+Component\+::\+Component (\begin{DoxyParamCaption}\item[{const std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -132,11 +132,11 @@ No operation (Next 컴포넌트 호출)
 
 component.\+h 파일의 33 번째 라인에서 정의되었습니다.
 
-\mbox{\Hypertarget{classsoso_1_1Component_acca54280cc7daffaad59c6cf94fdc712}\label{classsoso_1_1Component_acca54280cc7daffaad59c6cf94fdc712}} 
+\mbox{\Hypertarget{classsoso_1_1Component_aac0456d1c1bed46f5929137b4aafafe8}\label{classsoso_1_1Component_aac0456d1c1bed46f5929137b4aafafe8}} 
 \index{soso::Component@{soso::Component}!post@{post}}
 \index{post@{post}!soso::Component@{soso::Component}}
 \doxysubsubsection{\texorpdfstring{post()}{post()}}
-{\footnotesize\ttfamily virtual bool soso\+::\+Component\+::post (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsoso_1_1Request}{Request}} $>$}]{request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual bool soso\+::\+Component\+::post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsoso_1_1Request}{Request}} $\ast$}]{request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -152,11 +152,11 @@ true
 
 false 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classsoso_1_1Component_aaf97110181a444bca4bc52a368d5cada}\label{classsoso_1_1Component_aaf97110181a444bca4bc52a368d5cada}} 
+\mbox{\Hypertarget{classsoso_1_1Component_a4995b454662f0964deb02dc2d3e1aa9a}\label{classsoso_1_1Component_a4995b454662f0964deb02dc2d3e1aa9a}} 
 \index{soso::Component@{soso::Component}!prepare@{prepare}}
 \index{prepare@{prepare}!soso::Component@{soso::Component}}
 \doxysubsubsection{\texorpdfstring{prepare()}{prepare()}}
-{\footnotesize\ttfamily virtual bool soso\+::\+Component\+::prepare (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsoso_1_1Request}{Request}} $>$}]{request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual bool soso\+::\+Component\+::prepare (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsoso_1_1Request}{Request}} $\ast$}]{request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -172,11 +172,11 @@ true
 
 false 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classsoso_1_1Component_af6a2ed84928ca83d8323640bc41d1956}\label{classsoso_1_1Component_af6a2ed84928ca83d8323640bc41d1956}} 
+\mbox{\Hypertarget{classsoso_1_1Component_a29b3365d432ec4745e372b49de37723b}\label{classsoso_1_1Component_a29b3365d432ec4745e372b49de37723b}} 
 \index{soso::Component@{soso::Component}!process@{process}}
 \index{process@{process}!soso::Component@{soso::Component}}
 \doxysubsubsection{\texorpdfstring{process()}{process()}}
-{\footnotesize\ttfamily virtual bool soso\+::\+Component\+::process (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsoso_1_1Request}{Request}} $>$}]{request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual bool soso\+::\+Component\+::process (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsoso_1_1Request}{Request}} $\ast$}]{request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -207,11 +207,11 @@ false
 
 
 \doxysubsection{멤버 데이터 문서화}
-\mbox{\Hypertarget{classsoso_1_1Component_aac81779ea2e00c1e3aa1868cd85ad442}\label{classsoso_1_1Component_aac81779ea2e00c1e3aa1868cd85ad442}} 
+\mbox{\Hypertarget{classsoso_1_1Component_a65acc96a4185ba48648abab8c73d2da0}\label{classsoso_1_1Component_a65acc96a4185ba48648abab8c73d2da0}} 
 \index{soso::Component@{soso::Component}!\_name@{\_name}}
 \index{\_name@{\_name}!soso::Component@{soso::Component}}
 \doxysubsubsection{\texorpdfstring{\_name}{\_name}}
-{\footnotesize\ttfamily const std\+::string soso\+::\+Component\+::\+\_\+name\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily std\+::string soso\+::\+Component\+::\+\_\+name\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

@@ -147,13 +147,6 @@ public:
    */
   void tx(uint8_t *hex, size_t len, const char *fmt, ...);
 };
-
-/**
- * @brief 기본 echo 객체에 대한 로그 레벨 설정
- * @param lv
- */
-void default_echo_level(int lv);
-
 }; // namespace soso
 
 /**
@@ -161,5 +154,11 @@ void default_echo_level(int lv);
  * 주의! static 변수이므로 오브젝트 마다 echo 객체가 생성됨
  */
 extern soso::Echo echo;
+
+/**
+ * @brief 기본 echo 객체에 대한 로그 레벨 설정
+ * @param lv
+ */
+void default_echo_level(int lv);
 
 #endif

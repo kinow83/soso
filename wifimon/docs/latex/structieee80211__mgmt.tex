@@ -1,0 +1,767 @@
+\hypertarget{structieee80211__mgmt}{}\doxysection{ieee80211\+\_\+mgmt 구조체 참조}
+\label{structieee80211__mgmt}\index{ieee80211\_mgmt@{ieee80211\_mgmt}}
+
+
+{\ttfamily \#include $<$ieee802\+\_\+11\+\_\+defs.\+h$>$}
+
+\doxysubsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+le16 \mbox{\hyperlink{structieee80211__mgmt_a79efa66ae892c4685af9fe2ced2a0153}{frame\+\_\+control}}
+\item 
+le16 \mbox{\hyperlink{structieee80211__mgmt_a25f4df07ae3081d7d37726b059aa6a0e}{duration}}
+\item 
+u8 \mbox{\hyperlink{structieee80211__mgmt_a4c18dc4a47a10b48ae9df9efa44958a1}{da}} \mbox{[}6\mbox{]}
+\item 
+u8 \mbox{\hyperlink{structieee80211__mgmt_afbdc2a89b5e2ccea2dbee8012a3f70fa}{sa}} \mbox{[}6\mbox{]}
+\item 
+u8 \mbox{\hyperlink{structieee80211__mgmt_a9025cafcb6ad53fb4e9b09be2c53ba1f}{bssid}} \mbox{[}6\mbox{]}
+\item 
+le16 \mbox{\hyperlink{structieee80211__mgmt_a85aa81672f023669da8c7eedc2997b2e}{seq\+\_\+ctrl}}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>le16 \mbox{\hyperlink{structieee80211__mgmt_a7be036cab01e08d4a023f7639d8a0bb1}{auth\_alg}}\\
+\>\>le16 \mbox{\hyperlink{structieee80211__mgmt_a3a0eaf099495f62068517eb9346a7787}{auth\_transaction}}\\
+\>\>le16 \mbox{\hyperlink{structieee80211__mgmt_ac7be41bde888e55ea9771ddaeceb1bad}{status\_code}}\\
+\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_ad9d9e64eb4bc5e54f6d8b0e6ac801aba}{variable}} \mbox{[}$\,$\mbox{]}\\
+\>\} \mbox{\hyperlink{structieee80211__mgmt_aa75866d98d66dcf5c0c606b7d7b765ee}{auth}}\\
+\>struct \{\\
+\>\>le16 \mbox{\hyperlink{structieee80211__mgmt_a86792fdd91dc2ad406d928973e9acd5b}{reason\_code}}\\
+\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_ad9d9e64eb4bc5e54f6d8b0e6ac801aba}{variable}} \mbox{[}$\,$\mbox{]}\\
+\>\} \mbox{\hyperlink{structieee80211__mgmt_a28550d689526a864c41436d63c212450}{deauth}}\\
+\>struct \{\\
+\>\>le16 \mbox{\hyperlink{structieee80211__mgmt_a345791b873fb4a04bf4dfb058bbd1bd4}{capab\_info}}\\
+\>\>le16 \mbox{\hyperlink{structieee80211__mgmt_abcfdc3c54b5bb2e7ad9e62a1132a5bc4}{listen\_interval}}\\
+\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_ad9d9e64eb4bc5e54f6d8b0e6ac801aba}{variable}} \mbox{[}$\,$\mbox{]}\\
+\>\} \mbox{\hyperlink{structieee80211__mgmt_affaf38b00419b80915ab20c366be266a}{assoc\_req}}\\
+\>struct \{\\
+\>\>le16 \mbox{\hyperlink{structieee80211__mgmt_a345791b873fb4a04bf4dfb058bbd1bd4}{capab\_info}}\\
+\>\>le16 \mbox{\hyperlink{structieee80211__mgmt_ac7be41bde888e55ea9771ddaeceb1bad}{status\_code}}\\
+\>\>le16 \mbox{\hyperlink{structieee80211__mgmt_a093c815925a8118dd20f10885125b8e7}{aid}}\\
+\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_ad9d9e64eb4bc5e54f6d8b0e6ac801aba}{variable}} \mbox{[}$\,$\mbox{]}\\
+\>\} \mbox{\hyperlink{structieee80211__mgmt_af1bc0efe1b5bc0c0eb2f0790f955db7c}{assoc\_resp}}\\
+\>struct \{\\
+\>\>le16 \mbox{\hyperlink{structieee80211__mgmt_a345791b873fb4a04bf4dfb058bbd1bd4}{capab\_info}}\\
+\>\>le16 \mbox{\hyperlink{structieee80211__mgmt_ac7be41bde888e55ea9771ddaeceb1bad}{status\_code}}\\
+\>\>le16 \mbox{\hyperlink{structieee80211__mgmt_a093c815925a8118dd20f10885125b8e7}{aid}}\\
+\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_ad9d9e64eb4bc5e54f6d8b0e6ac801aba}{variable}} \mbox{[}$\,$\mbox{]}\\
+\>\} \mbox{\hyperlink{structieee80211__mgmt_a851a709af1ea6c00f77ea6e813b7f44c}{reassoc\_resp}}\\
+\>struct \{\\
+\>\>le16 \mbox{\hyperlink{structieee80211__mgmt_a345791b873fb4a04bf4dfb058bbd1bd4}{capab\_info}}\\
+\>\>le16 \mbox{\hyperlink{structieee80211__mgmt_abcfdc3c54b5bb2e7ad9e62a1132a5bc4}{listen\_interval}}\\
+\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_a93aa2b04305d761eb507e4260eb6573a}{current\_ap}} \mbox{[}6\mbox{]}\\
+\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_ad9d9e64eb4bc5e54f6d8b0e6ac801aba}{variable}} \mbox{[}$\,$\mbox{]}\\
+\>\} \mbox{\hyperlink{structieee80211__mgmt_a203e30760cccea6bff2708b872c488b5}{reassoc\_req}}\\
+\>struct \{\\
+\>\>le16 \mbox{\hyperlink{structieee80211__mgmt_a86792fdd91dc2ad406d928973e9acd5b}{reason\_code}}\\
+\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_ad9d9e64eb4bc5e54f6d8b0e6ac801aba}{variable}} \mbox{[}$\,$\mbox{]}\\
+\>\} \mbox{\hyperlink{structieee80211__mgmt_a633afc17060734b47a6083888229f086}{disassoc}}\\
+\>struct \{\\
+\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_afaeae089021478571143f18fd6ed1a85}{timestamp}} \mbox{[}8\mbox{]}\\
+\>\>le16 \mbox{\hyperlink{structieee80211__mgmt_a163b7b0e8ff8763571e82b5e780173d3}{beacon\_int}}\\
+\>\>le16 \mbox{\hyperlink{structieee80211__mgmt_a345791b873fb4a04bf4dfb058bbd1bd4}{capab\_info}}\\
+\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_ad9d9e64eb4bc5e54f6d8b0e6ac801aba}{variable}} \mbox{[}$\,$\mbox{]}\\
+\>\} \mbox{\hyperlink{structieee80211__mgmt_ac14f84660c54b772202415415a0eedd7}{beacon}}\\
+\>struct \{\\
+\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_afaeae089021478571143f18fd6ed1a85}{timestamp}} \mbox{[}8\mbox{]}\\
+\>\>le16 \mbox{\hyperlink{structieee80211__mgmt_a163b7b0e8ff8763571e82b5e780173d3}{beacon\_int}}\\
+\>\>le16 \mbox{\hyperlink{structieee80211__mgmt_a345791b873fb4a04bf4dfb058bbd1bd4}{capab\_info}}\\
+\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_ad9d9e64eb4bc5e54f6d8b0e6ac801aba}{variable}} \mbox{[}$\,$\mbox{]}\\
+\>\} \mbox{\hyperlink{structieee80211__mgmt_a457b424b4c6ee774bd5735450f3f094a}{probe\_resp}}\\
+\>struct \{\\
+\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_a7a928076e9b272a4efad528a9acc786f}{category}}\\
+\>\>union \{\\
+\>\>\>struct \{\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_a54f06bbab0c18ca76b5ecb09e9926a88}{action\_code}}\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_a0ce2b96cf424fe90297821d5ecf9fc49}{dialog\_token}}\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_ad5b0008eecbc5304d4230290073d3ea6}{status\_code}}\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_ad9d9e64eb4bc5e54f6d8b0e6ac801aba}{variable}} \mbox{[}$\,$\mbox{]}\\
+\>\>\>\} \mbox{\hyperlink{structieee80211__mgmt_a3c669b8b5882adf8d24644f41270e306}{wmm\_action}}\\
+\>\>\>struct \{\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_a54f06bbab0c18ca76b5ecb09e9926a88}{action\_code}}\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_ae275183868c5d351b64c91ebaaad5609}{element\_id}}\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_a81e1270e0bf4a673ed426de1d094bd87}{length}}\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_ad265d61ff4ce1ce455ff835eeafc3a03}{switch\_mode}}\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_af06cd5860994ec70c795f6535273e576}{new\_chan}}\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_a8b741d01d7c5683a4ee0b03b4df67d6c}{switch\_count}}\\
+\>\>\>\} \mbox{\hyperlink{structieee80211__mgmt_a9a3223a4cf8c1f0c58d8053f241e9b5c}{chan\_switch}}\\
+\>\>\>struct \{\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_af5a7aac07818c92bf0c66d43b452fe6c}{action}}\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_a1f14e8979360a46ceda2c184e74884fe}{sta\_addr}} \mbox{[}ETH\_ALEN\mbox{]}\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_affff692d6d6bf8ca87e9db8a432e8b7a}{target\_ap\_addr}} \mbox{[}ETH\_ALEN\mbox{]}\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_ad9d9e64eb4bc5e54f6d8b0e6ac801aba}{variable}} \mbox{[}$\,$\mbox{]}\\
+\>\>\>\} \mbox{\hyperlink{structieee80211__mgmt_a24f0b52f52690efb1aaa5ad3609cfc8e}{ft\_action\_req}}\\
+\>\>\>struct \{\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_af5a7aac07818c92bf0c66d43b452fe6c}{action}}\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_a1f14e8979360a46ceda2c184e74884fe}{sta\_addr}} \mbox{[}ETH\_ALEN\mbox{]}\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_affff692d6d6bf8ca87e9db8a432e8b7a}{target\_ap\_addr}} \mbox{[}ETH\_ALEN\mbox{]}\\
+\>\>\>\>le16 \mbox{\hyperlink{structieee80211__mgmt_ac7be41bde888e55ea9771ddaeceb1bad}{status\_code}}\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_ad9d9e64eb4bc5e54f6d8b0e6ac801aba}{variable}} \mbox{[}$\,$\mbox{]}\\
+\>\>\>\} \mbox{\hyperlink{structieee80211__mgmt_a64a7b6dd6402289a43eb6917abb72e9f}{ft\_action\_resp}}\\
+\>\>\>struct \{\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_af5a7aac07818c92bf0c66d43b452fe6c}{action}}\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_af162017f429937e49c95a66bf888ad70}{trans\_id}} \mbox{[}\mbox{\hyperlink{ieee802__11__defs_8h_a3ba2d7228c1e6f28b33cc7814170b7bc}{WLAN\_SA\_QUERY\_TR\_ID\_LEN}}\mbox{]}\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_ad9d9e64eb4bc5e54f6d8b0e6ac801aba}{variable}} \mbox{[}$\,$\mbox{]}\\
+\>\>\>\} \mbox{\hyperlink{structieee80211__mgmt_a2d1e1b4f16a19f8ce16690c41d19217c}{sa\_query\_req}}\\
+\>\>\>struct \{\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_af5a7aac07818c92bf0c66d43b452fe6c}{action}}\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_af162017f429937e49c95a66bf888ad70}{trans\_id}} \mbox{[}\mbox{\hyperlink{ieee802__11__defs_8h_a3ba2d7228c1e6f28b33cc7814170b7bc}{WLAN\_SA\_QUERY\_TR\_ID\_LEN}}\mbox{]}\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_ad9d9e64eb4bc5e54f6d8b0e6ac801aba}{variable}} \mbox{[}$\,$\mbox{]}\\
+\>\>\>\} \mbox{\hyperlink{structieee80211__mgmt_ad90c5631bb97c1a5c8e9887340ac52c3}{sa\_query\_resp}}\\
+\>\>\>struct \{\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_af5a7aac07818c92bf0c66d43b452fe6c}{action}}\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_ad68bccc1e49aadfed2688ea7c54f11e3}{dialogtoken}}\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_ad9d9e64eb4bc5e54f6d8b0e6ac801aba}{variable}} \mbox{[}$\,$\mbox{]}\\
+\>\>\>\} \mbox{\hyperlink{structieee80211__mgmt_ab4d7e39fa89353967ce27c746543f620}{wnm\_sleep\_req}}\\
+\>\>\>struct \{\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_af5a7aac07818c92bf0c66d43b452fe6c}{action}}\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_ad68bccc1e49aadfed2688ea7c54f11e3}{dialogtoken}}\\
+\>\>\>\>le16 \mbox{\hyperlink{structieee80211__mgmt_a85bce8c7ff363efc5f6cb34697c12206}{keydata\_len}}\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_ad9d9e64eb4bc5e54f6d8b0e6ac801aba}{variable}} \mbox{[}$\,$\mbox{]}\\
+\>\>\>\} \mbox{\hyperlink{structieee80211__mgmt_a0adc897fbc9dc726a8a9ea5cc4a58637}{wnm\_sleep\_resp}}\\
+\>\>\>struct \{\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_af5a7aac07818c92bf0c66d43b452fe6c}{action}}\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_ad9d9e64eb4bc5e54f6d8b0e6ac801aba}{variable}} \mbox{[}$\,$\mbox{]}\\
+\>\>\>\} \mbox{\hyperlink{structieee80211__mgmt_a75a56f4d9654cf4e7656f9dbd6a7773f}{public\_action}}\\
+\>\>\>struct \{\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_af5a7aac07818c92bf0c66d43b452fe6c}{action}}\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_a9cc4285a6d2dff5a9eeda4f6c36029cb}{oui}} \mbox{[}3\mbox{]}\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_ad9d9e64eb4bc5e54f6d8b0e6ac801aba}{variable}} \mbox{[}$\,$\mbox{]}\\
+\>\>\>\} \mbox{\hyperlink{structieee80211__mgmt_a5d51e32176dc7c4831c3e7bdd0e693f0}{vs\_public\_action}}\\
+\>\>\>struct \{\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_af5a7aac07818c92bf0c66d43b452fe6c}{action}}\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_a0ce2b96cf424fe90297821d5ecf9fc49}{dialog\_token}}\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_a9d24d7d13b70ad9ba9f1b2f6e6eb3d18}{req\_mode}}\\
+\>\>\>\>le16 \mbox{\hyperlink{structieee80211__mgmt_a596316929f5d58129ba74f0851c3f6fb}{disassoc\_timer}}\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_a3910b29c1dbf1bdbc5bc0adab2f7ca51}{validity\_interval}}\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_ad9d9e64eb4bc5e54f6d8b0e6ac801aba}{variable}} \mbox{[}$\,$\mbox{]}\\
+\>\>\>\} \mbox{\hyperlink{structieee80211__mgmt_ae704e1b77cdc5d1cd9067868f7f027ac}{bss\_tm\_req}}\\
+\>\>\>struct \{\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_af5a7aac07818c92bf0c66d43b452fe6c}{action}}\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_a0ce2b96cf424fe90297821d5ecf9fc49}{dialog\_token}}\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_ad5b0008eecbc5304d4230290073d3ea6}{status\_code}}\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_a6d7a2ec6c8fb3746276fa4089eb5ef5c}{bss\_termination\_delay}}\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_ad9d9e64eb4bc5e54f6d8b0e6ac801aba}{variable}} \mbox{[}$\,$\mbox{]}\\
+\>\>\>\} \mbox{\hyperlink{structieee80211__mgmt_a554430f0feed1e52c8f3671a20987f3e}{bss\_tm\_resp}}\\
+\>\>\>struct \{\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_af5a7aac07818c92bf0c66d43b452fe6c}{action}}\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_a0ce2b96cf424fe90297821d5ecf9fc49}{dialog\_token}}\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_a2ccd33905bac9900ef6f3b335b4303f2}{query\_reason}}\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_ad9d9e64eb4bc5e54f6d8b0e6ac801aba}{variable}} \mbox{[}$\,$\mbox{]}\\
+\>\>\>\} \mbox{\hyperlink{structieee80211__mgmt_a9ff4a63caceabac20d11d0f637bb6f5b}{bss\_tm\_query}}\\
+\>\>\>struct \{\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_af5a7aac07818c92bf0c66d43b452fe6c}{action}}\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_a0ce2b96cf424fe90297821d5ecf9fc49}{dialog\_token}}\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_ab93203c15d859fadf79d4d3b46038b42}{req\_info}}\\
+\>\>\>\} \mbox{\hyperlink{structieee80211__mgmt_a5ba5ebf410f23700a5b348b69803af69}{coloc\_intf\_req}}\\
+\>\>\>struct \{\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_af5a7aac07818c92bf0c66d43b452fe6c}{action}}\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_a0ce2b96cf424fe90297821d5ecf9fc49}{dialog\_token}}\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_ad9d9e64eb4bc5e54f6d8b0e6ac801aba}{variable}} \mbox{[}$\,$\mbox{]}\\
+\>\>\>\} \mbox{\hyperlink{structieee80211__mgmt_a16d95968b4c8c37641ae837ca056f5b1}{coloc\_intf\_report}}\\
+\>\>\>struct \{\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_af5a7aac07818c92bf0c66d43b452fe6c}{action}}\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_ad9d9e64eb4bc5e54f6d8b0e6ac801aba}{variable}} \mbox{[}$\,$\mbox{]}\\
+\>\>\>\} \mbox{\hyperlink{structieee80211__mgmt_a60129cf411344661be808c40b6e8614e}{slf\_prot\_action}}\\
+\>\>\>struct \{\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_af5a7aac07818c92bf0c66d43b452fe6c}{action}}\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_ad9d9e64eb4bc5e54f6d8b0e6ac801aba}{variable}} \mbox{[}$\,$\mbox{]}\\
+\>\>\>\} \mbox{\hyperlink{structieee80211__mgmt_acd8fd87862621ef40e29984c7f14d680}{fst\_action}}\\
+\>\>\>struct \{\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_af5a7aac07818c92bf0c66d43b452fe6c}{action}}\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_a0ce2b96cf424fe90297821d5ecf9fc49}{dialog\_token}}\\
+\>\>\>\>u8 \mbox{\hyperlink{structieee80211__mgmt_ad9d9e64eb4bc5e54f6d8b0e6ac801aba}{variable}} \mbox{[}$\,$\mbox{]}\\
+\>\>\>\} \mbox{\hyperlink{structieee80211__mgmt_a7661b7355fa072e7c0bf44bc471da3a4}{rrm}}\\
+\>\>\} \mbox{\hyperlink{structieee80211__mgmt_afb97498f273b489aa3c4e6f4337a03a1}{u}}\\
+\>\} \mbox{\hyperlink{structieee80211__mgmt_a9b476c4d6e659074bb482568a6586b62}{action}}\\
+\} \mbox{\hyperlink{structieee80211__mgmt_af11978ada2c434669048f5c2e8af9180}{u}}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+ieee802\+\_\+11\+\_\+defs.\+h 파일의 908 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{structieee80211__mgmt_af5a7aac07818c92bf0c66d43b452fe6c}\label{structieee80211__mgmt_af5a7aac07818c92bf0c66d43b452fe6c}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!action@{action}}
+\index{action@{action}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{action}{action}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily u8 ieee80211\+\_\+mgmt\+::action}
+
+
+
+ieee802\+\_\+11\+\_\+defs.\+h 파일의 986 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structieee80211__mgmt_a9b476c4d6e659074bb482568a6586b62}\label{structieee80211__mgmt_a9b476c4d6e659074bb482568a6586b62}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!action@{action}}
+\index{action@{action}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{action}{action}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily struct \{ ... \}  ieee80211\+\_\+mgmt\+::action}
+
+\mbox{\Hypertarget{structieee80211__mgmt_a54f06bbab0c18ca76b5ecb09e9926a88}\label{structieee80211__mgmt_a54f06bbab0c18ca76b5ecb09e9926a88}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!action\_code@{action\_code}}
+\index{action\_code@{action\_code}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{action\_code}{action\_code}}
+{\footnotesize\ttfamily u8 ieee80211\+\_\+mgmt\+::action\+\_\+code}
+
+
+
+ieee802\+\_\+11\+\_\+defs.\+h 파일의 972 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structieee80211__mgmt_a093c815925a8118dd20f10885125b8e7}\label{structieee80211__mgmt_a093c815925a8118dd20f10885125b8e7}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!aid@{aid}}
+\index{aid@{aid}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{aid}{aid}}
+{\footnotesize\ttfamily le16 ieee80211\+\_\+mgmt\+::aid}
+
+
+
+ieee802\+\_\+11\+\_\+defs.\+h 파일의 936 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structieee80211__mgmt_affaf38b00419b80915ab20c366be266a}\label{structieee80211__mgmt_affaf38b00419b80915ab20c366be266a}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!assoc\_req@{assoc\_req}}
+\index{assoc\_req@{assoc\_req}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{assoc\_req}{assoc\_req}}
+{\footnotesize\ttfamily struct \{ ... \}  ieee80211\+\_\+mgmt\+::assoc\+\_\+req}
+
+\mbox{\Hypertarget{structieee80211__mgmt_af1bc0efe1b5bc0c0eb2f0790f955db7c}\label{structieee80211__mgmt_af1bc0efe1b5bc0c0eb2f0790f955db7c}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!assoc\_resp@{assoc\_resp}}
+\index{assoc\_resp@{assoc\_resp}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{assoc\_resp}{assoc\_resp}}
+{\footnotesize\ttfamily struct \{ ... \}  ieee80211\+\_\+mgmt\+::assoc\+\_\+resp}
+
+\mbox{\Hypertarget{structieee80211__mgmt_aa75866d98d66dcf5c0c606b7d7b765ee}\label{structieee80211__mgmt_aa75866d98d66dcf5c0c606b7d7b765ee}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!auth@{auth}}
+\index{auth@{auth}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{auth}{auth}}
+{\footnotesize\ttfamily struct \{ ... \}  ieee80211\+\_\+mgmt\+::auth}
+
+\mbox{\Hypertarget{structieee80211__mgmt_a7be036cab01e08d4a023f7639d8a0bb1}\label{structieee80211__mgmt_a7be036cab01e08d4a023f7639d8a0bb1}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!auth\_alg@{auth\_alg}}
+\index{auth\_alg@{auth\_alg}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{auth\_alg}{auth\_alg}}
+{\footnotesize\ttfamily le16 ieee80211\+\_\+mgmt\+::auth\+\_\+alg}
+
+
+
+ieee802\+\_\+11\+\_\+defs.\+h 파일의 917 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structieee80211__mgmt_a3a0eaf099495f62068517eb9346a7787}\label{structieee80211__mgmt_a3a0eaf099495f62068517eb9346a7787}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!auth\_transaction@{auth\_transaction}}
+\index{auth\_transaction@{auth\_transaction}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{auth\_transaction}{auth\_transaction}}
+{\footnotesize\ttfamily le16 ieee80211\+\_\+mgmt\+::auth\+\_\+transaction}
+
+
+
+ieee802\+\_\+11\+\_\+defs.\+h 파일의 918 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structieee80211__mgmt_ac14f84660c54b772202415415a0eedd7}\label{structieee80211__mgmt_ac14f84660c54b772202415415a0eedd7}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!beacon@{beacon}}
+\index{beacon@{beacon}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{beacon}{beacon}}
+{\footnotesize\ttfamily struct \{ ... \}  ieee80211\+\_\+mgmt\+::beacon}
+
+\mbox{\Hypertarget{structieee80211__mgmt_a163b7b0e8ff8763571e82b5e780173d3}\label{structieee80211__mgmt_a163b7b0e8ff8763571e82b5e780173d3}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!beacon\_int@{beacon\_int}}
+\index{beacon\_int@{beacon\_int}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{beacon\_int}{beacon\_int}}
+{\footnotesize\ttfamily le16 ieee80211\+\_\+mgmt\+::beacon\+\_\+int}
+
+
+
+ieee802\+\_\+11\+\_\+defs.\+h 파일의 953 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structieee80211__mgmt_a6d7a2ec6c8fb3746276fa4089eb5ef5c}\label{structieee80211__mgmt_a6d7a2ec6c8fb3746276fa4089eb5ef5c}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!bss\_termination\_delay@{bss\_termination\_delay}}
+\index{bss\_termination\_delay@{bss\_termination\_delay}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{bss\_termination\_delay}{bss\_termination\_delay}}
+{\footnotesize\ttfamily u8 ieee80211\+\_\+mgmt\+::bss\+\_\+termination\+\_\+delay}
+
+
+
+ieee802\+\_\+11\+\_\+defs.\+h 파일의 1045 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structieee80211__mgmt_a9ff4a63caceabac20d11d0f637bb6f5b}\label{structieee80211__mgmt_a9ff4a63caceabac20d11d0f637bb6f5b}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!bss\_tm\_query@{bss\_tm\_query}}
+\index{bss\_tm\_query@{bss\_tm\_query}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{bss\_tm\_query}{bss\_tm\_query}}
+{\footnotesize\ttfamily struct \{ ... \}  ieee80211\+\_\+mgmt\+::bss\+\_\+tm\+\_\+query}
+
+\mbox{\Hypertarget{structieee80211__mgmt_ae704e1b77cdc5d1cd9067868f7f027ac}\label{structieee80211__mgmt_ae704e1b77cdc5d1cd9067868f7f027ac}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!bss\_tm\_req@{bss\_tm\_req}}
+\index{bss\_tm\_req@{bss\_tm\_req}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{bss\_tm\_req}{bss\_tm\_req}}
+{\footnotesize\ttfamily struct \{ ... \}  ieee80211\+\_\+mgmt\+::bss\+\_\+tm\+\_\+req}
+
+\mbox{\Hypertarget{structieee80211__mgmt_a554430f0feed1e52c8f3671a20987f3e}\label{structieee80211__mgmt_a554430f0feed1e52c8f3671a20987f3e}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!bss\_tm\_resp@{bss\_tm\_resp}}
+\index{bss\_tm\_resp@{bss\_tm\_resp}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{bss\_tm\_resp}{bss\_tm\_resp}}
+{\footnotesize\ttfamily struct \{ ... \}  ieee80211\+\_\+mgmt\+::bss\+\_\+tm\+\_\+resp}
+
+\mbox{\Hypertarget{structieee80211__mgmt_a9025cafcb6ad53fb4e9b09be2c53ba1f}\label{structieee80211__mgmt_a9025cafcb6ad53fb4e9b09be2c53ba1f}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!bssid@{bssid}}
+\index{bssid@{bssid}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{bssid}{bssid}}
+{\footnotesize\ttfamily u8 ieee80211\+\_\+mgmt\+::bssid\mbox{[}6\mbox{]}}
+
+
+
+ieee802\+\_\+11\+\_\+defs.\+h 파일의 913 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structieee80211__mgmt_a345791b873fb4a04bf4dfb058bbd1bd4}\label{structieee80211__mgmt_a345791b873fb4a04bf4dfb058bbd1bd4}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!capab\_info@{capab\_info}}
+\index{capab\_info@{capab\_info}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{capab\_info}{capab\_info}}
+{\footnotesize\ttfamily le16 ieee80211\+\_\+mgmt\+::capab\+\_\+info}
+
+
+
+ieee802\+\_\+11\+\_\+defs.\+h 파일의 928 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structieee80211__mgmt_a7a928076e9b272a4efad528a9acc786f}\label{structieee80211__mgmt_a7a928076e9b272a4efad528a9acc786f}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!category@{category}}
+\index{category@{category}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{category}{category}}
+{\footnotesize\ttfamily u8 ieee80211\+\_\+mgmt\+::category}
+
+
+
+ieee802\+\_\+11\+\_\+defs.\+h 파일의 969 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structieee80211__mgmt_a9a3223a4cf8c1f0c58d8053f241e9b5c}\label{structieee80211__mgmt_a9a3223a4cf8c1f0c58d8053f241e9b5c}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!chan\_switch@{chan\_switch}}
+\index{chan\_switch@{chan\_switch}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{chan\_switch}{chan\_switch}}
+{\footnotesize\ttfamily struct \{ ... \}  ieee80211\+\_\+mgmt\+::chan\+\_\+switch}
+
+\mbox{\Hypertarget{structieee80211__mgmt_a16d95968b4c8c37641ae837ca056f5b1}\label{structieee80211__mgmt_a16d95968b4c8c37641ae837ca056f5b1}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!coloc\_intf\_report@{coloc\_intf\_report}}
+\index{coloc\_intf\_report@{coloc\_intf\_report}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{coloc\_intf\_report}{coloc\_intf\_report}}
+{\footnotesize\ttfamily struct \{ ... \}  ieee80211\+\_\+mgmt\+::coloc\+\_\+intf\+\_\+report}
+
+\mbox{\Hypertarget{structieee80211__mgmt_a5ba5ebf410f23700a5b348b69803af69}\label{structieee80211__mgmt_a5ba5ebf410f23700a5b348b69803af69}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!coloc\_intf\_req@{coloc\_intf\_req}}
+\index{coloc\_intf\_req@{coloc\_intf\_req}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{coloc\_intf\_req}{coloc\_intf\_req}}
+{\footnotesize\ttfamily struct \{ ... \}  ieee80211\+\_\+mgmt\+::coloc\+\_\+intf\+\_\+req}
+
+\mbox{\Hypertarget{structieee80211__mgmt_a93aa2b04305d761eb507e4260eb6573a}\label{structieee80211__mgmt_a93aa2b04305d761eb507e4260eb6573a}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!current\_ap@{current\_ap}}
+\index{current\_ap@{current\_ap}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{current\_ap}{current\_ap}}
+{\footnotesize\ttfamily u8 ieee80211\+\_\+mgmt\+::current\+\_\+ap\mbox{[}6\mbox{]}}
+
+
+
+ieee802\+\_\+11\+\_\+defs.\+h 파일의 943 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structieee80211__mgmt_a4c18dc4a47a10b48ae9df9efa44958a1}\label{structieee80211__mgmt_a4c18dc4a47a10b48ae9df9efa44958a1}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!da@{da}}
+\index{da@{da}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{da}{da}}
+{\footnotesize\ttfamily u8 ieee80211\+\_\+mgmt\+::da\mbox{[}6\mbox{]}}
+
+
+
+ieee802\+\_\+11\+\_\+defs.\+h 파일의 911 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structieee80211__mgmt_a28550d689526a864c41436d63c212450}\label{structieee80211__mgmt_a28550d689526a864c41436d63c212450}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!deauth@{deauth}}
+\index{deauth@{deauth}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{deauth}{deauth}}
+{\footnotesize\ttfamily struct \{ ... \}  ieee80211\+\_\+mgmt\+::deauth}
+
+\mbox{\Hypertarget{structieee80211__mgmt_a0ce2b96cf424fe90297821d5ecf9fc49}\label{structieee80211__mgmt_a0ce2b96cf424fe90297821d5ecf9fc49}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!dialog\_token@{dialog\_token}}
+\index{dialog\_token@{dialog\_token}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{dialog\_token}{dialog\_token}}
+{\footnotesize\ttfamily u8 ieee80211\+\_\+mgmt\+::dialog\+\_\+token}
+
+
+
+ieee802\+\_\+11\+\_\+defs.\+h 파일의 973 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structieee80211__mgmt_ad68bccc1e49aadfed2688ea7c54f11e3}\label{structieee80211__mgmt_ad68bccc1e49aadfed2688ea7c54f11e3}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!dialogtoken@{dialogtoken}}
+\index{dialogtoken@{dialogtoken}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{dialogtoken}{dialogtoken}}
+{\footnotesize\ttfamily u8 ieee80211\+\_\+mgmt\+::dialogtoken}
+
+
+
+ieee802\+\_\+11\+\_\+defs.\+h 파일의 1010 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structieee80211__mgmt_a633afc17060734b47a6083888229f086}\label{structieee80211__mgmt_a633afc17060734b47a6083888229f086}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!disassoc@{disassoc}}
+\index{disassoc@{disassoc}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{disassoc}{disassoc}}
+{\footnotesize\ttfamily struct \{ ... \}  ieee80211\+\_\+mgmt\+::disassoc}
+
+\mbox{\Hypertarget{structieee80211__mgmt_a596316929f5d58129ba74f0851c3f6fb}\label{structieee80211__mgmt_a596316929f5d58129ba74f0851c3f6fb}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!disassoc\_timer@{disassoc\_timer}}
+\index{disassoc\_timer@{disassoc\_timer}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{disassoc\_timer}{disassoc\_timer}}
+{\footnotesize\ttfamily le16 ieee80211\+\_\+mgmt\+::disassoc\+\_\+timer}
+
+
+
+ieee802\+\_\+11\+\_\+defs.\+h 파일의 1033 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structieee80211__mgmt_a25f4df07ae3081d7d37726b059aa6a0e}\label{structieee80211__mgmt_a25f4df07ae3081d7d37726b059aa6a0e}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!duration@{duration}}
+\index{duration@{duration}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{duration}{duration}}
+{\footnotesize\ttfamily le16 ieee80211\+\_\+mgmt\+::duration}
+
+
+
+ieee802\+\_\+11\+\_\+defs.\+h 파일의 910 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structieee80211__mgmt_ae275183868c5d351b64c91ebaaad5609}\label{structieee80211__mgmt_ae275183868c5d351b64c91ebaaad5609}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!element\_id@{element\_id}}
+\index{element\_id@{element\_id}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{element\_id}{element\_id}}
+{\footnotesize\ttfamily u8 ieee80211\+\_\+mgmt\+::element\+\_\+id}
+
+
+
+ieee802\+\_\+11\+\_\+defs.\+h 파일의 979 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structieee80211__mgmt_a79efa66ae892c4685af9fe2ced2a0153}\label{structieee80211__mgmt_a79efa66ae892c4685af9fe2ced2a0153}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!frame\_control@{frame\_control}}
+\index{frame\_control@{frame\_control}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{frame\_control}{frame\_control}}
+{\footnotesize\ttfamily le16 ieee80211\+\_\+mgmt\+::frame\+\_\+control}
+
+
+
+ieee802\+\_\+11\+\_\+defs.\+h 파일의 909 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structieee80211__mgmt_acd8fd87862621ef40e29984c7f14d680}\label{structieee80211__mgmt_acd8fd87862621ef40e29984c7f14d680}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!fst\_action@{fst\_action}}
+\index{fst\_action@{fst\_action}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{fst\_action}{fst\_action}}
+{\footnotesize\ttfamily struct \{ ... \}  ieee80211\+\_\+mgmt\+::fst\+\_\+action}
+
+\mbox{\Hypertarget{structieee80211__mgmt_a24f0b52f52690efb1aaa5ad3609cfc8e}\label{structieee80211__mgmt_a24f0b52f52690efb1aaa5ad3609cfc8e}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!ft\_action\_req@{ft\_action\_req}}
+\index{ft\_action\_req@{ft\_action\_req}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{ft\_action\_req}{ft\_action\_req}}
+{\footnotesize\ttfamily struct \{ ... \}  ieee80211\+\_\+mgmt\+::ft\+\_\+action\+\_\+req}
+
+\mbox{\Hypertarget{structieee80211__mgmt_a64a7b6dd6402289a43eb6917abb72e9f}\label{structieee80211__mgmt_a64a7b6dd6402289a43eb6917abb72e9f}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!ft\_action\_resp@{ft\_action\_resp}}
+\index{ft\_action\_resp@{ft\_action\_resp}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{ft\_action\_resp}{ft\_action\_resp}}
+{\footnotesize\ttfamily struct \{ ... \}  ieee80211\+\_\+mgmt\+::ft\+\_\+action\+\_\+resp}
+
+\mbox{\Hypertarget{structieee80211__mgmt_a85bce8c7ff363efc5f6cb34697c12206}\label{structieee80211__mgmt_a85bce8c7ff363efc5f6cb34697c12206}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!keydata\_len@{keydata\_len}}
+\index{keydata\_len@{keydata\_len}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{keydata\_len}{keydata\_len}}
+{\footnotesize\ttfamily le16 ieee80211\+\_\+mgmt\+::keydata\+\_\+len}
+
+
+
+ieee802\+\_\+11\+\_\+defs.\+h 파일의 1016 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structieee80211__mgmt_a81e1270e0bf4a673ed426de1d094bd87}\label{structieee80211__mgmt_a81e1270e0bf4a673ed426de1d094bd87}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!length@{length}}
+\index{length@{length}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{length}{length}}
+{\footnotesize\ttfamily u8 ieee80211\+\_\+mgmt\+::length}
+
+
+
+ieee802\+\_\+11\+\_\+defs.\+h 파일의 980 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structieee80211__mgmt_abcfdc3c54b5bb2e7ad9e62a1132a5bc4}\label{structieee80211__mgmt_abcfdc3c54b5bb2e7ad9e62a1132a5bc4}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!listen\_interval@{listen\_interval}}
+\index{listen\_interval@{listen\_interval}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{listen\_interval}{listen\_interval}}
+{\footnotesize\ttfamily le16 ieee80211\+\_\+mgmt\+::listen\+\_\+interval}
+
+
+
+ieee802\+\_\+11\+\_\+defs.\+h 파일의 929 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structieee80211__mgmt_af06cd5860994ec70c795f6535273e576}\label{structieee80211__mgmt_af06cd5860994ec70c795f6535273e576}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!new\_chan@{new\_chan}}
+\index{new\_chan@{new\_chan}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{new\_chan}{new\_chan}}
+{\footnotesize\ttfamily u8 ieee80211\+\_\+mgmt\+::new\+\_\+chan}
+
+
+
+ieee802\+\_\+11\+\_\+defs.\+h 파일의 982 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structieee80211__mgmt_a9cc4285a6d2dff5a9eeda4f6c36029cb}\label{structieee80211__mgmt_a9cc4285a6d2dff5a9eeda4f6c36029cb}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!oui@{oui}}
+\index{oui@{oui}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{oui}{oui}}
+{\footnotesize\ttfamily u8 ieee80211\+\_\+mgmt\+::oui\mbox{[}3\mbox{]}}
+
+
+
+ieee802\+\_\+11\+\_\+defs.\+h 파일의 1025 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structieee80211__mgmt_a457b424b4c6ee774bd5735450f3f094a}\label{structieee80211__mgmt_a457b424b4c6ee774bd5735450f3f094a}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!probe\_resp@{probe\_resp}}
+\index{probe\_resp@{probe\_resp}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{probe\_resp}{probe\_resp}}
+{\footnotesize\ttfamily struct \{ ... \}  ieee80211\+\_\+mgmt\+::probe\+\_\+resp}
+
+\mbox{\Hypertarget{structieee80211__mgmt_a75a56f4d9654cf4e7656f9dbd6a7773f}\label{structieee80211__mgmt_a75a56f4d9654cf4e7656f9dbd6a7773f}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!public\_action@{public\_action}}
+\index{public\_action@{public\_action}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{public\_action}{public\_action}}
+{\footnotesize\ttfamily struct \{ ... \}  ieee80211\+\_\+mgmt\+::public\+\_\+action}
+
+\mbox{\Hypertarget{structieee80211__mgmt_a2ccd33905bac9900ef6f3b335b4303f2}\label{structieee80211__mgmt_a2ccd33905bac9900ef6f3b335b4303f2}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!query\_reason@{query\_reason}}
+\index{query\_reason@{query\_reason}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{query\_reason}{query\_reason}}
+{\footnotesize\ttfamily u8 ieee80211\+\_\+mgmt\+::query\+\_\+reason}
+
+
+
+ieee802\+\_\+11\+\_\+defs.\+h 파일의 1054 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structieee80211__mgmt_a86792fdd91dc2ad406d928973e9acd5b}\label{structieee80211__mgmt_a86792fdd91dc2ad406d928973e9acd5b}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!reason\_code@{reason\_code}}
+\index{reason\_code@{reason\_code}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{reason\_code}{reason\_code}}
+{\footnotesize\ttfamily le16 ieee80211\+\_\+mgmt\+::reason\+\_\+code}
+
+
+
+ieee802\+\_\+11\+\_\+defs.\+h 파일의 924 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structieee80211__mgmt_a203e30760cccea6bff2708b872c488b5}\label{structieee80211__mgmt_a203e30760cccea6bff2708b872c488b5}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!reassoc\_req@{reassoc\_req}}
+\index{reassoc\_req@{reassoc\_req}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{reassoc\_req}{reassoc\_req}}
+{\footnotesize\ttfamily struct \{ ... \}  ieee80211\+\_\+mgmt\+::reassoc\+\_\+req}
+
+\mbox{\Hypertarget{structieee80211__mgmt_a851a709af1ea6c00f77ea6e813b7f44c}\label{structieee80211__mgmt_a851a709af1ea6c00f77ea6e813b7f44c}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!reassoc\_resp@{reassoc\_resp}}
+\index{reassoc\_resp@{reassoc\_resp}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{reassoc\_resp}{reassoc\_resp}}
+{\footnotesize\ttfamily struct \{ ... \}  ieee80211\+\_\+mgmt\+::reassoc\+\_\+resp}
+
+\mbox{\Hypertarget{structieee80211__mgmt_ab93203c15d859fadf79d4d3b46038b42}\label{structieee80211__mgmt_ab93203c15d859fadf79d4d3b46038b42}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!req\_info@{req\_info}}
+\index{req\_info@{req\_info}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{req\_info}{req\_info}}
+{\footnotesize\ttfamily u8 ieee80211\+\_\+mgmt\+::req\+\_\+info}
+
+
+
+ieee802\+\_\+11\+\_\+defs.\+h 파일의 1062 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structieee80211__mgmt_a9d24d7d13b70ad9ba9f1b2f6e6eb3d18}\label{structieee80211__mgmt_a9d24d7d13b70ad9ba9f1b2f6e6eb3d18}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!req\_mode@{req\_mode}}
+\index{req\_mode@{req\_mode}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{req\_mode}{req\_mode}}
+{\footnotesize\ttfamily u8 ieee80211\+\_\+mgmt\+::req\+\_\+mode}
+
+
+
+ieee802\+\_\+11\+\_\+defs.\+h 파일의 1032 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structieee80211__mgmt_a7661b7355fa072e7c0bf44bc471da3a4}\label{structieee80211__mgmt_a7661b7355fa072e7c0bf44bc471da3a4}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!rrm@{rrm}}
+\index{rrm@{rrm}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{rrm}{rrm}}
+{\footnotesize\ttfamily struct \{ ... \}  ieee80211\+\_\+mgmt\+::rrm}
+
+\mbox{\Hypertarget{structieee80211__mgmt_afbdc2a89b5e2ccea2dbee8012a3f70fa}\label{structieee80211__mgmt_afbdc2a89b5e2ccea2dbee8012a3f70fa}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!sa@{sa}}
+\index{sa@{sa}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{sa}{sa}}
+{\footnotesize\ttfamily u8 ieee80211\+\_\+mgmt\+::sa\mbox{[}6\mbox{]}}
+
+
+
+ieee802\+\_\+11\+\_\+defs.\+h 파일의 912 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structieee80211__mgmt_a2d1e1b4f16a19f8ce16690c41d19217c}\label{structieee80211__mgmt_a2d1e1b4f16a19f8ce16690c41d19217c}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!sa\_query\_req@{sa\_query\_req}}
+\index{sa\_query\_req@{sa\_query\_req}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{sa\_query\_req}{sa\_query\_req}}
+{\footnotesize\ttfamily struct \{ ... \}  ieee80211\+\_\+mgmt\+::sa\+\_\+query\+\_\+req}
+
+\mbox{\Hypertarget{structieee80211__mgmt_ad90c5631bb97c1a5c8e9887340ac52c3}\label{structieee80211__mgmt_ad90c5631bb97c1a5c8e9887340ac52c3}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!sa\_query\_resp@{sa\_query\_resp}}
+\index{sa\_query\_resp@{sa\_query\_resp}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{sa\_query\_resp}{sa\_query\_resp}}
+{\footnotesize\ttfamily struct \{ ... \}  ieee80211\+\_\+mgmt\+::sa\+\_\+query\+\_\+resp}
+
+\mbox{\Hypertarget{structieee80211__mgmt_a85aa81672f023669da8c7eedc2997b2e}\label{structieee80211__mgmt_a85aa81672f023669da8c7eedc2997b2e}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!seq\_ctrl@{seq\_ctrl}}
+\index{seq\_ctrl@{seq\_ctrl}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{seq\_ctrl}{seq\_ctrl}}
+{\footnotesize\ttfamily le16 ieee80211\+\_\+mgmt\+::seq\+\_\+ctrl}
+
+
+
+ieee802\+\_\+11\+\_\+defs.\+h 파일의 914 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structieee80211__mgmt_a60129cf411344661be808c40b6e8614e}\label{structieee80211__mgmt_a60129cf411344661be808c40b6e8614e}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!slf\_prot\_action@{slf\_prot\_action}}
+\index{slf\_prot\_action@{slf\_prot\_action}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{slf\_prot\_action}{slf\_prot\_action}}
+{\footnotesize\ttfamily struct \{ ... \}  ieee80211\+\_\+mgmt\+::slf\+\_\+prot\+\_\+action}
+
+\mbox{\Hypertarget{structieee80211__mgmt_a1f14e8979360a46ceda2c184e74884fe}\label{structieee80211__mgmt_a1f14e8979360a46ceda2c184e74884fe}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!sta\_addr@{sta\_addr}}
+\index{sta\_addr@{sta\_addr}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{sta\_addr}{sta\_addr}}
+{\footnotesize\ttfamily u8 ieee80211\+\_\+mgmt\+::sta\+\_\+addr\mbox{[}E\+T\+H\+\_\+\+A\+L\+EN\mbox{]}}
+
+
+
+ieee802\+\_\+11\+\_\+defs.\+h 파일의 987 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structieee80211__mgmt_ac7be41bde888e55ea9771ddaeceb1bad}\label{structieee80211__mgmt_ac7be41bde888e55ea9771ddaeceb1bad}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!status\_code@{status\_code}}
+\index{status\_code@{status\_code}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{status\_code}{status\_code}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily le16 ieee80211\+\_\+mgmt\+::status\+\_\+code}
+
+
+
+ieee802\+\_\+11\+\_\+defs.\+h 파일의 919 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structieee80211__mgmt_ad5b0008eecbc5304d4230290073d3ea6}\label{structieee80211__mgmt_ad5b0008eecbc5304d4230290073d3ea6}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!status\_code@{status\_code}}
+\index{status\_code@{status\_code}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{status\_code}{status\_code}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily u8 ieee80211\+\_\+mgmt\+::status\+\_\+code}
+
+
+
+ieee802\+\_\+11\+\_\+defs.\+h 파일의 974 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structieee80211__mgmt_a8b741d01d7c5683a4ee0b03b4df67d6c}\label{structieee80211__mgmt_a8b741d01d7c5683a4ee0b03b4df67d6c}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!switch\_count@{switch\_count}}
+\index{switch\_count@{switch\_count}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{switch\_count}{switch\_count}}
+{\footnotesize\ttfamily u8 ieee80211\+\_\+mgmt\+::switch\+\_\+count}
+
+
+
+ieee802\+\_\+11\+\_\+defs.\+h 파일의 983 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structieee80211__mgmt_ad265d61ff4ce1ce455ff835eeafc3a03}\label{structieee80211__mgmt_ad265d61ff4ce1ce455ff835eeafc3a03}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!switch\_mode@{switch\_mode}}
+\index{switch\_mode@{switch\_mode}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{switch\_mode}{switch\_mode}}
+{\footnotesize\ttfamily u8 ieee80211\+\_\+mgmt\+::switch\+\_\+mode}
+
+
+
+ieee802\+\_\+11\+\_\+defs.\+h 파일의 981 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structieee80211__mgmt_affff692d6d6bf8ca87e9db8a432e8b7a}\label{structieee80211__mgmt_affff692d6d6bf8ca87e9db8a432e8b7a}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!target\_ap\_addr@{target\_ap\_addr}}
+\index{target\_ap\_addr@{target\_ap\_addr}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{target\_ap\_addr}{target\_ap\_addr}}
+{\footnotesize\ttfamily u8 ieee80211\+\_\+mgmt\+::target\+\_\+ap\+\_\+addr\mbox{[}E\+T\+H\+\_\+\+A\+L\+EN\mbox{]}}
+
+
+
+ieee802\+\_\+11\+\_\+defs.\+h 파일의 988 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structieee80211__mgmt_afaeae089021478571143f18fd6ed1a85}\label{structieee80211__mgmt_afaeae089021478571143f18fd6ed1a85}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!timestamp@{timestamp}}
+\index{timestamp@{timestamp}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{timestamp}{timestamp}}
+{\footnotesize\ttfamily u8 ieee80211\+\_\+mgmt\+::timestamp\mbox{[}8\mbox{]}}
+
+
+
+ieee802\+\_\+11\+\_\+defs.\+h 파일의 952 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structieee80211__mgmt_af162017f429937e49c95a66bf888ad70}\label{structieee80211__mgmt_af162017f429937e49c95a66bf888ad70}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!trans\_id@{trans\_id}}
+\index{trans\_id@{trans\_id}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{trans\_id}{trans\_id}}
+{\footnotesize\ttfamily u8 ieee80211\+\_\+mgmt\+::trans\+\_\+id\mbox{[}\mbox{\hyperlink{ieee802__11__defs_8h_a3ba2d7228c1e6f28b33cc7814170b7bc}{W\+L\+A\+N\+\_\+\+S\+A\+\_\+\+Q\+U\+E\+R\+Y\+\_\+\+T\+R\+\_\+\+I\+D\+\_\+\+L\+EN}}\mbox{]}}
+
+
+
+ieee802\+\_\+11\+\_\+defs.\+h 파일의 1000 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structieee80211__mgmt_afb97498f273b489aa3c4e6f4337a03a1}\label{structieee80211__mgmt_afb97498f273b489aa3c4e6f4337a03a1}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!u@{u}}
+\index{u@{u}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{u}{u}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily union \{ ... \}  ieee80211\+\_\+mgmt\+::u}
+
+\mbox{\Hypertarget{structieee80211__mgmt_af11978ada2c434669048f5c2e8af9180}\label{structieee80211__mgmt_af11978ada2c434669048f5c2e8af9180}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!u@{u}}
+\index{u@{u}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{u}{u}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily union \{ ... \}  ieee80211\+\_\+mgmt\+::u}
+
+\mbox{\Hypertarget{structieee80211__mgmt_a3910b29c1dbf1bdbc5bc0adab2f7ca51}\label{structieee80211__mgmt_a3910b29c1dbf1bdbc5bc0adab2f7ca51}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!validity\_interval@{validity\_interval}}
+\index{validity\_interval@{validity\_interval}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{validity\_interval}{validity\_interval}}
+{\footnotesize\ttfamily u8 ieee80211\+\_\+mgmt\+::validity\+\_\+interval}
+
+
+
+ieee802\+\_\+11\+\_\+defs.\+h 파일의 1034 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structieee80211__mgmt_ad9d9e64eb4bc5e54f6d8b0e6ac801aba}\label{structieee80211__mgmt_ad9d9e64eb4bc5e54f6d8b0e6ac801aba}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!variable@{variable}}
+\index{variable@{variable}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{variable}{variable}}
+{\footnotesize\ttfamily u8 ieee80211\+\_\+mgmt\+::variable\mbox{[}$\,$\mbox{]}}
+
+
+
+ieee802\+\_\+11\+\_\+defs.\+h 파일의 921 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structieee80211__mgmt_a5d51e32176dc7c4831c3e7bdd0e693f0}\label{structieee80211__mgmt_a5d51e32176dc7c4831c3e7bdd0e693f0}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!vs\_public\_action@{vs\_public\_action}}
+\index{vs\_public\_action@{vs\_public\_action}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{vs\_public\_action}{vs\_public\_action}}
+{\footnotesize\ttfamily struct \{ ... \}  ieee80211\+\_\+mgmt\+::vs\+\_\+public\+\_\+action}
+
+\mbox{\Hypertarget{structieee80211__mgmt_a3c669b8b5882adf8d24644f41270e306}\label{structieee80211__mgmt_a3c669b8b5882adf8d24644f41270e306}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!wmm\_action@{wmm\_action}}
+\index{wmm\_action@{wmm\_action}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{wmm\_action}{wmm\_action}}
+{\footnotesize\ttfamily struct \{ ... \}  ieee80211\+\_\+mgmt\+::wmm\+\_\+action}
+
+\mbox{\Hypertarget{structieee80211__mgmt_ab4d7e39fa89353967ce27c746543f620}\label{structieee80211__mgmt_ab4d7e39fa89353967ce27c746543f620}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!wnm\_sleep\_req@{wnm\_sleep\_req}}
+\index{wnm\_sleep\_req@{wnm\_sleep\_req}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{wnm\_sleep\_req}{wnm\_sleep\_req}}
+{\footnotesize\ttfamily struct \{ ... \}  ieee80211\+\_\+mgmt\+::wnm\+\_\+sleep\+\_\+req}
+
+\mbox{\Hypertarget{structieee80211__mgmt_a0adc897fbc9dc726a8a9ea5cc4a58637}\label{structieee80211__mgmt_a0adc897fbc9dc726a8a9ea5cc4a58637}} 
+\index{ieee80211\_mgmt@{ieee80211\_mgmt}!wnm\_sleep\_resp@{wnm\_sleep\_resp}}
+\index{wnm\_sleep\_resp@{wnm\_sleep\_resp}!ieee80211\_mgmt@{ieee80211\_mgmt}}
+\doxysubsubsection{\texorpdfstring{wnm\_sleep\_resp}{wnm\_sleep\_resp}}
+{\footnotesize\ttfamily struct \{ ... \}  ieee80211\+\_\+mgmt\+::wnm\+\_\+sleep\+\_\+resp}
+
+
+
+이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{ieee802__11__defs_8h}{ieee802\+\_\+11\+\_\+defs.\+h}}\end{DoxyCompactItemize}

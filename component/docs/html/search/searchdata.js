@@ -1,14 +1,13 @@
 var indexSectionsWithContent =
 {
-  0: "_cgimnoprs~",
-  1: "cprs",
+  0: "_cginoprs~",
+  1: "cr",
   2: "s",
   3: "cr",
   4: "cginoprs~",
   5: "_",
   6: "c",
-  7: "c",
-  8: "m"
+  7: "c"
 };
 
 var indexSectionNames =
@@ -20,8 +19,7 @@ var indexSectionNames =
   4: "functions",
   5: "variables",
   6: "enums",
-  7: "enumvalues",
-  8: "defines"
+  7: "enumvalues"
 };
 
 var indexSectionLabels =
@@ -33,7 +31,6 @@ var indexSectionLabels =
   4: "함수",
   5: "변수",
   6: "열거형 타입",
-  7: "열거형 멤버",
-  8: "매크로"
+  7: "열거형 멤버"
 };
 
