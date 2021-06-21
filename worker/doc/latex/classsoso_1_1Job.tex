@@ -7,26 +7,26 @@
 
 
 
-{\ttfamily \#include $<$worker.\+hpp$>$}
+{\ttfamily \#include $<$worker.\+h$>$}
 
 \doxysubsection*{Public 멤버 함수}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classsoso_1_1Job_a4fbefbfc997dfa025208a8d494a5c423}{Job}} (const std\+::string \&name, \mbox{\hyperlink{namespacesoso_a5e0f73d41fc3ab920bed09e3254c3d50}{job\+\_\+handler\+\_\+t}} \&handler, bool \mbox{\hyperlink{classsoso_1_1Job_a635bc857423157f60081d7a9434d492c}{affinity}})
+\mbox{\hyperlink{classsoso_1_1Job_a3bd9c02d1b8875def646beaba7921a38}{Job}} (const std\+::string \&name, \mbox{\hyperlink{namespacesoso_a5e0f73d41fc3ab920bed09e3254c3d50}{job\+\_\+handler\+\_\+t}} \&handler, bool \mbox{\hyperlink{classsoso_1_1Job_a25b917278b02da32f7a71e6060c3751b}{affinity}})
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classsoso_1_1Job}{Job}} 생성자 \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classsoso_1_1Job_a635bc857423157f60081d7a9434d492c}{affinity}} ()
+bool \mbox{\hyperlink{classsoso_1_1Job_a25b917278b02da32f7a71e6060c3751b}{affinity}} ()
 \begin{DoxyCompactList}\small\item\em 작업처리 affinity 여부 \end{DoxyCompactList}\item 
-std\+::size\+\_\+t \mbox{\hyperlink{classsoso_1_1Job_a6a682e0def94cc10e5f4da407f28d250}{job\+Hash\+Code}} ()
+std\+::size\+\_\+t \mbox{\hyperlink{classsoso_1_1Job_af83233e8b7065919e033546b826cba28}{job\+Hash\+Code}} ()
 \item 
-\mbox{\hyperlink{namespacesoso_a5e0f73d41fc3ab920bed09e3254c3d50}{job\+\_\+handler\+\_\+t}} \mbox{\hyperlink{classsoso_1_1Job_aae7c4cd3ab79d288256f9bf2412c350e}{get\+Handler}} ()
+\mbox{\hyperlink{namespacesoso_a5e0f73d41fc3ab920bed09e3254c3d50}{job\+\_\+handler\+\_\+t}} \mbox{\hyperlink{classsoso_1_1Job_abd0f5d161fd6f0d8e7dcdd1c529ffe5b}{get\+Handler}} ()
 \begin{DoxyCompactList}\small\item\em 작업 처리 함수 반환 \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classsoso_1_1Job_a9c1a37f26851767233ab4d6f4c931edf}{set\+Worker\+ID}} (std\+::size\+\_\+t worker\+\_\+id)
+void \mbox{\hyperlink{classsoso_1_1Job_a5b72049c26c6864516f98abeda24336d}{set\+Worker\+ID}} (std\+::size\+\_\+t worker\+\_\+id)
 \begin{DoxyCompactList}\small\item\em worker(작업자) ID 할당 \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classsoso_1_1Job_ab5da784abe82a242e9f6d7aa6d0cbbf7}{set\+Job\+ID}} (std\+::size\+\_\+t job\+\_\+id)
+void \mbox{\hyperlink{classsoso_1_1Job_accc8d20d33b6b16b0ea417affc304a45}{set\+Job\+ID}} (std\+::size\+\_\+t job\+\_\+id)
 \begin{DoxyCompactList}\small\item\em job(작업) ID 할당 \end{DoxyCompactList}\item 
-std\+::size\+\_\+t \mbox{\hyperlink{classsoso_1_1Job_a39df281dd998a6eaaf4efa2b174e7e4d}{get\+Worker\+ID}} () const
+std\+::size\+\_\+t \mbox{\hyperlink{classsoso_1_1Job_a9fc7c7895597f32a54db25d2d9ec94ee}{get\+Worker\+ID}} () const
 \begin{DoxyCompactList}\small\item\em 할당된 worker 쓰레드 ID \end{DoxyCompactList}\item 
-std\+::size\+\_\+t \mbox{\hyperlink{classsoso_1_1Job_a974a82003d1af82998fdd41dd3400983}{get\+Job\+ID}} () const
+std\+::size\+\_\+t \mbox{\hyperlink{classsoso_1_1Job_a0b66fb7e531c056b58a49b2b6b8070c3}{get\+Job\+ID}} () const
 \begin{DoxyCompactList}\small\item\em worker(작업자) 쓰레드별 할당 받은 job 순서 번호 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private 속성}
 \begin{DoxyCompactItemize}
@@ -48,16 +48,16 @@ bool \mbox{\hyperlink{classsoso_1_1Job_a71814c8066b0239dfba14bf3536d0083}{\+\_\+
 \doxysubsection{상세한 설명}
 작업 객체 
 
-worker.\+hpp 파일의 117 번째 라인에서 정의되었습니다.
+worker.\+h 파일의 113 번째 라인에서 정의되었습니다.
 
 
 
 \doxysubsection{생성자 \& 소멸자 문서화}
-\mbox{\Hypertarget{classsoso_1_1Job_a4fbefbfc997dfa025208a8d494a5c423}\label{classsoso_1_1Job_a4fbefbfc997dfa025208a8d494a5c423}} 
+\mbox{\Hypertarget{classsoso_1_1Job_a3bd9c02d1b8875def646beaba7921a38}\label{classsoso_1_1Job_a3bd9c02d1b8875def646beaba7921a38}} 
 \index{soso::Job@{soso::Job}!Job@{Job}}
 \index{Job@{Job}!soso::Job@{soso::Job}}
 \doxysubsubsection{\texorpdfstring{Job()}{Job()}}
-{\footnotesize\ttfamily soso\+::\+Job\+::\+Job (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{\mbox{\hyperlink{namespacesoso_a5e0f73d41fc3ab920bed09e3254c3d50}{job\+\_\+handler\+\_\+t}} \&}]{handler,  }\item[{bool}]{affinity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily Job\+::\+Job (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{\mbox{\hyperlink{namespacesoso_a5e0f73d41fc3ab920bed09e3254c3d50}{job\+\_\+handler\+\_\+t}} \&}]{handler,  }\item[{bool}]{affinity }\end{DoxyParamCaption})}
 
 
 
@@ -74,16 +74,16 @@ worker.\+hpp 파일의 117 번째 라인에서 정의되었습니다.
 \end{DoxyParams}
 
 
-worker.\+hpp 파일의 139 번째 라인에서 정의되었습니다.
+job.\+cpp 파일의 8 번째 라인에서 정의되었습니다.
 
 
 
 \doxysubsection{멤버 함수 문서화}
-\mbox{\Hypertarget{classsoso_1_1Job_a635bc857423157f60081d7a9434d492c}\label{classsoso_1_1Job_a635bc857423157f60081d7a9434d492c}} 
+\mbox{\Hypertarget{classsoso_1_1Job_a25b917278b02da32f7a71e6060c3751b}\label{classsoso_1_1Job_a25b917278b02da32f7a71e6060c3751b}} 
 \index{soso::Job@{soso::Job}!affinity@{affinity}}
 \index{affinity@{affinity}!soso::Job@{soso::Job}}
 \doxysubsubsection{\texorpdfstring{affinity()}{affinity()}}
-{\footnotesize\ttfamily bool soso\+::\+Job\+::affinity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily bool Job\+::affinity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -96,13 +96,13 @@ false
 \end{DoxyReturn}
 
 
-worker.\+hpp 파일의 151 번째 라인에서 정의되었습니다.
+job.\+cpp 파일의 15 번째 라인에서 정의되었습니다.
 
-\mbox{\Hypertarget{classsoso_1_1Job_aae7c4cd3ab79d288256f9bf2412c350e}\label{classsoso_1_1Job_aae7c4cd3ab79d288256f9bf2412c350e}} 
+\mbox{\Hypertarget{classsoso_1_1Job_abd0f5d161fd6f0d8e7dcdd1c529ffe5b}\label{classsoso_1_1Job_abd0f5d161fd6f0d8e7dcdd1c529ffe5b}} 
 \index{soso::Job@{soso::Job}!getHandler@{getHandler}}
 \index{getHandler@{getHandler}!soso::Job@{soso::Job}}
 \doxysubsubsection{\texorpdfstring{getHandler()}{getHandler()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{namespacesoso_a5e0f73d41fc3ab920bed09e3254c3d50}{job\+\_\+handler\+\_\+t}} soso\+::\+Job\+::get\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesoso_a5e0f73d41fc3ab920bed09e3254c3d50}{job\+\_\+handler\+\_\+t}} Job\+::get\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -113,13 +113,13 @@ job\+\_\+handler\+\_\+t
 \end{DoxyReturn}
 
 
-worker.\+hpp 파일의 159 번째 라인에서 정의되었습니다.
+job.\+cpp 파일의 23 번째 라인에서 정의되었습니다.
 
-\mbox{\Hypertarget{classsoso_1_1Job_a974a82003d1af82998fdd41dd3400983}\label{classsoso_1_1Job_a974a82003d1af82998fdd41dd3400983}} 
+\mbox{\Hypertarget{classsoso_1_1Job_a0b66fb7e531c056b58a49b2b6b8070c3}\label{classsoso_1_1Job_a0b66fb7e531c056b58a49b2b6b8070c3}} 
 \index{soso::Job@{soso::Job}!getJobID@{getJobID}}
 \index{getJobID@{getJobID}!soso::Job@{soso::Job}}
 \doxysubsubsection{\texorpdfstring{getJobID()}{getJobID()}}
-{\footnotesize\ttfamily std\+::size\+\_\+t soso\+::\+Job\+::get\+Job\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily size\+\_\+t Job\+::get\+Job\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -130,13 +130,13 @@ std\+::size\+\_\+t
 \end{DoxyReturn}
 
 
-worker.\+hpp 파일의 183 번째 라인에서 정의되었습니다.
+job.\+cpp 파일의 39 번째 라인에서 정의되었습니다.
 
-\mbox{\Hypertarget{classsoso_1_1Job_a39df281dd998a6eaaf4efa2b174e7e4d}\label{classsoso_1_1Job_a39df281dd998a6eaaf4efa2b174e7e4d}} 
+\mbox{\Hypertarget{classsoso_1_1Job_a9fc7c7895597f32a54db25d2d9ec94ee}\label{classsoso_1_1Job_a9fc7c7895597f32a54db25d2d9ec94ee}} 
 \index{soso::Job@{soso::Job}!getWorkerID@{getWorkerID}}
 \index{getWorkerID@{getWorkerID}!soso::Job@{soso::Job}}
 \doxysubsubsection{\texorpdfstring{getWorkerID()}{getWorkerID()}}
-{\footnotesize\ttfamily std\+::size\+\_\+t soso\+::\+Job\+::get\+Worker\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily size\+\_\+t Job\+::get\+Worker\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -147,23 +147,23 @@ std\+::size\+\_\+t
 \end{DoxyReturn}
 
 
-worker.\+hpp 파일의 177 번째 라인에서 정의되었습니다.
+job.\+cpp 파일의 35 번째 라인에서 정의되었습니다.
 
-\mbox{\Hypertarget{classsoso_1_1Job_a6a682e0def94cc10e5f4da407f28d250}\label{classsoso_1_1Job_a6a682e0def94cc10e5f4da407f28d250}} 
+\mbox{\Hypertarget{classsoso_1_1Job_af83233e8b7065919e033546b826cba28}\label{classsoso_1_1Job_af83233e8b7065919e033546b826cba28}} 
 \index{soso::Job@{soso::Job}!jobHashCode@{jobHashCode}}
 \index{jobHashCode@{jobHashCode}!soso::Job@{soso::Job}}
 \doxysubsubsection{\texorpdfstring{jobHashCode()}{jobHashCode()}}
-{\footnotesize\ttfamily std\+::size\+\_\+t soso\+::\+Job\+::job\+Hash\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily size\+\_\+t Job\+::job\+Hash\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-worker.\+hpp 파일의 153 번째 라인에서 정의되었습니다.
+job.\+cpp 파일의 19 번째 라인에서 정의되었습니다.
 
-\mbox{\Hypertarget{classsoso_1_1Job_ab5da784abe82a242e9f6d7aa6d0cbbf7}\label{classsoso_1_1Job_ab5da784abe82a242e9f6d7aa6d0cbbf7}} 
+\mbox{\Hypertarget{classsoso_1_1Job_accc8d20d33b6b16b0ea417affc304a45}\label{classsoso_1_1Job_accc8d20d33b6b16b0ea417affc304a45}} 
 \index{soso::Job@{soso::Job}!setJobID@{setJobID}}
 \index{setJobID@{setJobID}!soso::Job@{soso::Job}}
 \doxysubsubsection{\texorpdfstring{setJobID()}{setJobID()}}
-{\footnotesize\ttfamily void soso\+::\+Job\+::set\+Job\+ID (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{job\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily void Job\+::set\+Job\+ID (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{job\+\_\+id }\end{DoxyParamCaption})}
 
 
 
@@ -176,13 +176,13 @@ job(작업) ID 할당
 \end{DoxyParams}
 
 
-worker.\+hpp 파일의 171 번째 라인에서 정의되었습니다.
+job.\+cpp 파일의 31 번째 라인에서 정의되었습니다.
 
-\mbox{\Hypertarget{classsoso_1_1Job_a9c1a37f26851767233ab4d6f4c931edf}\label{classsoso_1_1Job_a9c1a37f26851767233ab4d6f4c931edf}} 
+\mbox{\Hypertarget{classsoso_1_1Job_a5b72049c26c6864516f98abeda24336d}\label{classsoso_1_1Job_a5b72049c26c6864516f98abeda24336d}} 
 \index{soso::Job@{soso::Job}!setWorkerID@{setWorkerID}}
 \index{setWorkerID@{setWorkerID}!soso::Job@{soso::Job}}
 \doxysubsubsection{\texorpdfstring{setWorkerID()}{setWorkerID()}}
-{\footnotesize\ttfamily void soso\+::\+Job\+::set\+Worker\+ID (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{worker\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily void Job\+::set\+Worker\+ID (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{worker\+\_\+id }\end{DoxyParamCaption})}
 
 
 
@@ -195,7 +195,7 @@ worker(작업자) ID 할당
 \end{DoxyParams}
 
 
-worker.\+hpp 파일의 165 번째 라인에서 정의되었습니다.
+job.\+cpp 파일의 27 번째 라인에서 정의되었습니다.
 
 
 
@@ -212,7 +212,7 @@ worker.\+hpp 파일의 165 번째 라인에서 정의되었습니다.
 
 
 
-worker.\+hpp 파일의 130 번째 라인에서 정의되었습니다.
+worker.\+h 파일의 126 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{classsoso_1_1Job_a08d7524b00a8bc0254d5c7d83fbab713}\label{classsoso_1_1Job_a08d7524b00a8bc0254d5c7d83fbab713}} 
 \index{soso::Job@{soso::Job}!\_handler@{\_handler}}
@@ -226,7 +226,7 @@ worker.\+hpp 파일의 130 번째 라인에서 정의되었습니다.
 
 
 
-worker.\+hpp 파일의 120 번째 라인에서 정의되었습니다.
+worker.\+h 파일의 116 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{classsoso_1_1Job_a4d93bd92169cc3e04f0db8caae14d830}\label{classsoso_1_1Job_a4d93bd92169cc3e04f0db8caae14d830}} 
 \index{soso::Job@{soso::Job}!\_hashcode@{\_hashcode}}
@@ -240,7 +240,7 @@ worker.\+hpp 파일의 120 번째 라인에서 정의되었습니다.
 
 
 
-worker.\+hpp 파일의 128 번째 라인에서 정의되었습니다.
+worker.\+h 파일의 124 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{classsoso_1_1Job_a1450617469d1d21ee520405982972618}\label{classsoso_1_1Job_a1450617469d1d21ee520405982972618}} 
 \index{soso::Job@{soso::Job}!\_job\_id@{\_job\_id}}
@@ -254,7 +254,7 @@ job(작업) ID
 
 
 
-worker.\+hpp 파일의 124 번째 라인에서 정의되었습니다.
+worker.\+h 파일의 120 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{classsoso_1_1Job_af52e32af01b2c9e0e870a59f343599e4}\label{classsoso_1_1Job_af52e32af01b2c9e0e870a59f343599e4}} 
 \index{soso::Job@{soso::Job}!\_name@{\_name}}
@@ -268,7 +268,7 @@ worker.\+hpp 파일의 124 번째 라인에서 정의되었습니다.
 
 
 
-worker.\+hpp 파일의 126 번째 라인에서 정의되었습니다.
+worker.\+h 파일의 122 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{classsoso_1_1Job_ad4091e0bb99f9f4f817e27d928de60e1}\label{classsoso_1_1Job_ad4091e0bb99f9f4f817e27d928de60e1}} 
 \index{soso::Job@{soso::Job}!\_worker\_id@{\_worker\_id}}
@@ -282,10 +282,11 @@ job(작업)을 할당 받은 작업자(worker) ID
 
 
 
-worker.\+hpp 파일의 122 번째 라인에서 정의되었습니다.
+worker.\+h 파일의 118 번째 라인에서 정의되었습니다.
 
 
 
-이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
 \item 
-include/\mbox{\hyperlink{worker_8hpp}{worker.\+hpp}}\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{worker_8h}{worker.\+h}}\item 
+src/\mbox{\hyperlink{job_8cpp}{job.\+cpp}}\end{DoxyCompactItemize}

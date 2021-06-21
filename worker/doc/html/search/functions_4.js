@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['job_63',['Job',['../classsoso_1_1Job.html#a4fbefbfc997dfa025208a8d494a5c423',1,'soso::Job']]],
-  ['jobhashcode_64',['jobHashCode',['../classsoso_1_1Job.html#a6a682e0def94cc10e5f4da407f28d250',1,'soso::Job']]],
-  ['join_65',['join',['../classsoso_1_1WorkerManager.html#a0d21a295ec60035ae8de22f1e7f880e3',1,'soso::WorkerManager']]]
+  ['job_70',['Job',['../classsoso_1_1Job.html#a3bd9c02d1b8875def646beaba7921a38',1,'soso::Job']]],
+  ['jobhashcode_71',['jobHashCode',['../classsoso_1_1Job.html#af83233e8b7065919e033546b826cba28',1,'soso::Job']]],
+  ['join_72',['join',['../classsoso_1_1WorkerManager.html#aad8c187ba5a3788b0cde3c9d18f23763',1,'soso::WorkerManager']]]
 ];

@@ -1,0 +1,32 @@
+\hypertarget{worker__manager_8h}{}\doxysection{include/worker\+\_\+manager.h 파일 참조}
+\label{worker__manager_8h}\index{include/worker\_manager.h@{include/worker\_manager.h}}
+{\ttfamily \#include \char`\"{}job.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}worker.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$condition\+\_\+variable$>$}\newline
+{\ttfamily \#include $<$deque$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+worker\+\_\+manager.\+h에 대한 include 의존 그래프\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{worker__manager_8h__incl}
+\end{center}
+\end{figure}
+이 그래프는 이 파일을 직/간접적으로 include 하는 파일들을 보여줍니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{worker__manager_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{클래스}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsoso_1_1WorkerManager}{soso\+::\+Worker\+Manager}}
+\begin{DoxyCompactList}\small\item\em worker(작업자) 스레드가 job(작업)을 처리하는 라이브러리. 하나의 job이 Queue(큐)에 추가되면 여러개의 worker 중 하나의 worker가 선택되어 job을 처리한다. 여기서 어떠한 worker가 선택될지는 모른다. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{네임스페이스}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacesoso}{soso}}
+\end{DoxyCompactItemize}

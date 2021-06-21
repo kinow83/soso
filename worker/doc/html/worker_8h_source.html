@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>worker: include/worker.h 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">worker
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'검색');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','검색');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">worker.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="worker_8h.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __SOSO_WORKER_H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __SOSO_WORKER_H__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;chrono&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;condition_variable&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;deque&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;mutex&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;thread&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="namespacesoso.html">   17</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacesoso.html">soso</a> {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">class </span><a class="code" href="classsoso_1_1WorkerManager.html">WorkerManager</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">class </span><a class="code" href="classsoso_1_1Worker.html">Worker</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">class </span><a class="code" href="classsoso_1_1Job.html">Job</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="namespacesoso.html#a390399d33ffd04660776fff91e506a43">   26</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="namespacesoso.html#a390399d33ffd04660776fff91e506a43">JOB_QUEUE_TYPE</a> {</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="namespacesoso.html#a390399d33ffd04660776fff91e506a43ab02ede17e2689a850c85da32d3d3fafe">   28</a></span>&#160;  <a class="code" href="namespacesoso.html#a390399d33ffd04660776fff91e506a43ab02ede17e2689a850c85da32d3d3fafe">MULTI_WORKER</a> = 0,</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="namespacesoso.html#a390399d33ffd04660776fff91e506a43a4597cecd2d612feb57b8e5abb5f5a780">   30</a></span>&#160;  <a class="code" href="namespacesoso.html#a390399d33ffd04660776fff91e506a43a4597cecd2d612feb57b8e5abb5f5a780">SINGLE_WORKER</a>,</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="namespacesoso.html#a390399d33ffd04660776fff91e506a43aceb3ab4797d35f9e480d8e471378de9a">   32</a></span>&#160;  <a class="code" href="namespacesoso.html#a390399d33ffd04660776fff91e506a43aceb3ab4797d35f9e480d8e471378de9a">JOB_QUEUE_TYPE_SIZE</a></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">using</span> <a class="code" href="namespacesoso.html#a5e0f73d41fc3ab920bed09e3254c3d50">job_handler_t</a> =</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="namespacesoso.html#a5e0f73d41fc3ab920bed09e3254c3d50">   39</a></span>&#160;    std::function&lt;void(std::shared_ptr&lt;Worker&gt;, std::shared_ptr&lt;Job&gt;)&gt;;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classsoso_1_1Worker.html">   44</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsoso_1_1Worker.html">Worker</a> {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classsoso_1_1Worker.html#acefe478cac41dde6c5966b804a2bfe98">   47</a></span>&#160;  std::size_t <a class="code" href="classsoso_1_1Worker.html#acefe478cac41dde6c5966b804a2bfe98">_worker_id</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classsoso_1_1Worker.html#a2d873969129bf44f8c35d3f91875dd1d">   49</a></span>&#160;  std::size_t <a class="code" href="classsoso_1_1Worker.html#a2d873969129bf44f8c35d3f91875dd1d">_completed_jobs</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classsoso_1_1Worker.html#a4d14a9741b5de134c758fea01800ce08">   51</a></span>&#160;  <a class="code" href="classsoso_1_1WorkerManager.html">WorkerManager</a> *<a class="code" href="classsoso_1_1Worker.html#a4d14a9741b5de134c758fea01800ce08">_worker_manager</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classsoso_1_1Worker.html#a58f521c08a6748ebf70e088cf1cc1c70">   53</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classsoso_1_1Worker.html#a58f521c08a6748ebf70e088cf1cc1c70">_running</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classsoso_1_1Worker.html#a0d7964172c9bdefc560dd82135d79a7b">   55</a></span>&#160;  <a class="code" href="namespacesoso.html#a390399d33ffd04660776fff91e506a43">JOB_QUEUE_TYPE</a> <a class="code" href="classsoso_1_1Worker.html#a0d7964172c9bdefc560dd82135d79a7b">_job_type</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <a class="code" href="classsoso_1_1Worker.html#a1f01729b4bade159219e170a96951e4e">Worker</a>(<a class="code" href="classsoso_1_1WorkerManager.html">WorkerManager</a> *worker_manager, <span class="comment">//</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;         <span class="keywordtype">int</span> worker_id,                 <span class="comment">//</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;         <a class="code" href="namespacesoso.html#a390399d33ffd04660776fff91e506a43">JOB_QUEUE_TYPE</a> job_type);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <a class="code" href="namespacesoso.html#a390399d33ffd04660776fff91e506a43">JOB_QUEUE_TYPE</a> <a class="code" href="classsoso_1_1Worker.html#ac3257e86c086cdbdaff150b56d735262">getJobType</a>();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keyword">const</span> <a class="code" href="classsoso_1_1WorkerManager.html">WorkerManager</a> *<a class="code" href="classsoso_1_1Worker.html#a75c95a11431169fd640b4619fe2b77d6">getWorkerManager</a>();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classsoso_1_1Worker.html#a7d84269bb2ee56c12eb5889c908f677a">finished</a>();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsoso_1_1Worker.html#a87ed5c03d94de44fe6de8628c2b1a622">terminate</a>();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  std::size_t <a class="code" href="classsoso_1_1Worker.html#ae616fb7f83bef3e4d2d31ba49bb69eee">getWorkerID</a>();</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  std::size_t <a class="code" href="classsoso_1_1Worker.html#a1ae90463ac95cc86ebfb2f0fa42ed830">getCompletedJobs</a>();</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  std::size_t <a class="code" href="classsoso_1_1Worker.html#a310dd41902e57f9ed0a919d61392a161">incCompletedJobs</a>();</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;};</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="classsoso_1_1Job.html">  113</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsoso_1_1Job.html">Job</a> {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="classsoso_1_1Job.html#a08d7524b00a8bc0254d5c7d83fbab713">  116</a></span>&#160;  <a class="code" href="namespacesoso.html#a5e0f73d41fc3ab920bed09e3254c3d50">job_handler_t</a> <a class="code" href="classsoso_1_1Job.html#a08d7524b00a8bc0254d5c7d83fbab713">_handler</a>;</div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="classsoso_1_1Job.html#ad4091e0bb99f9f4f817e27d928de60e1">  118</a></span>&#160;  std::size_t <a class="code" href="classsoso_1_1Job.html#ad4091e0bb99f9f4f817e27d928de60e1">_worker_id</a> = 0;</div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="classsoso_1_1Job.html#a1450617469d1d21ee520405982972618">  120</a></span>&#160;  std::size_t <a class="code" href="classsoso_1_1Job.html#a1450617469d1d21ee520405982972618">_job_id</a> = 0;</div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="classsoso_1_1Job.html#af52e32af01b2c9e0e870a59f343599e4">  122</a></span>&#160;  std::string <a class="code" href="classsoso_1_1Job.html#af52e32af01b2c9e0e870a59f343599e4">_name</a>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="classsoso_1_1Job.html#a4d93bd92169cc3e04f0db8caae14d830">  124</a></span>&#160;  std::size_t <a class="code" href="classsoso_1_1Job.html#a4d93bd92169cc3e04f0db8caae14d830">_hashcode</a>;</div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="classsoso_1_1Job.html#a71814c8066b0239dfba14bf3536d0083">  126</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classsoso_1_1Job.html#a71814c8066b0239dfba14bf3536d0083">_affinity</a>;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  <a class="code" href="classsoso_1_1Job.html#a3bd9c02d1b8875def646beaba7921a38">Job</a>(<span class="keyword">const</span> std::string &amp;name, <a class="code" href="namespacesoso.html#a5e0f73d41fc3ab920bed09e3254c3d50">job_handler_t</a> &amp;handler, <span class="keywordtype">bool</span> <a class="code" href="classsoso_1_1Job.html#a25b917278b02da32f7a71e6060c3751b">affinity</a>);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classsoso_1_1Job.html#a25b917278b02da32f7a71e6060c3751b">affinity</a>();</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  std::size_t <a class="code" href="classsoso_1_1Job.html#af83233e8b7065919e033546b826cba28">jobHashCode</a>();</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  <a class="code" href="namespacesoso.html#a5e0f73d41fc3ab920bed09e3254c3d50">job_handler_t</a> <a class="code" href="classsoso_1_1Job.html#abd0f5d161fd6f0d8e7dcdd1c529ffe5b">getHandler</a>();</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsoso_1_1Job.html#a5b72049c26c6864516f98abeda24336d">setWorkerID</a>(std::size_t worker_id);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsoso_1_1Job.html#accc8d20d33b6b16b0ea417affc304a45">setJobID</a>(std::size_t job_id);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  std::size_t <a class="code" href="classsoso_1_1Job.html#a9fc7c7895597f32a54db25d2d9ec94ee">getWorkerID</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  std::size_t <a class="code" href="classsoso_1_1Job.html#a0b66fb7e531c056b58a49b2b6b8070c3">getJobID</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;};</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160; </div>
+<div class="line"><a name="l00182"></a><span class="lineno"><a class="line" href="classsoso_1_1WorkerManager.html">  182</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsoso_1_1WorkerManager.html">WorkerManager</a> {</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00185"></a><span class="lineno"><a class="line" href="classsoso_1_1WorkerManager.html#ad87994fce4b6b805b7f90657a88387d5">  185</a></span>&#160;  std::deque&lt;std::shared_ptr&lt;Job&gt;&gt; <a class="code" href="classsoso_1_1WorkerManager.html#ad87994fce4b6b805b7f90657a88387d5">_job_Q</a>[<a class="code" href="namespacesoso.html#a390399d33ffd04660776fff91e506a43aceb3ab4797d35f9e480d8e471378de9a">JOB_QUEUE_TYPE_SIZE</a>];</div>
+<div class="line"><a name="l00187"></a><span class="lineno"><a class="line" href="classsoso_1_1WorkerManager.html#a64ebdaab8cbd968782051a069283412a">  187</a></span>&#160;  std::mutex <a class="code" href="classsoso_1_1WorkerManager.html#a64ebdaab8cbd968782051a069283412a">_job_Q_mutex</a>[<a class="code" href="namespacesoso.html#a390399d33ffd04660776fff91e506a43aceb3ab4797d35f9e480d8e471378de9a">JOB_QUEUE_TYPE_SIZE</a>];</div>
+<div class="line"><a name="l00189"></a><span class="lineno"><a class="line" href="classsoso_1_1WorkerManager.html#a0da63a1c9924c2dc6f62c672c3166690">  189</a></span>&#160;  std::condition_variable <a class="code" href="classsoso_1_1WorkerManager.html#a0da63a1c9924c2dc6f62c672c3166690">_job_Q_cv</a>[<a class="code" href="namespacesoso.html#a390399d33ffd04660776fff91e506a43aceb3ab4797d35f9e480d8e471378de9a">JOB_QUEUE_TYPE_SIZE</a>];</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
+<div class="line"><a name="l00192"></a><span class="lineno"><a class="line" href="classsoso_1_1WorkerManager.html#a60801da07320a26e32c0a536e545f35d">  192</a></span>&#160;  std::vector&lt;std::shared_ptr&lt;Worker&gt;&gt; <a class="code" href="classsoso_1_1WorkerManager.html#a60801da07320a26e32c0a536e545f35d">_workers</a>;</div>
+<div class="line"><a name="l00194"></a><span class="lineno"><a class="line" href="classsoso_1_1WorkerManager.html#a4b6db249486a712e60cc4659c1c3f973">  194</a></span>&#160;  std::vector&lt;std::shared_ptr&lt;std::thread&gt;&gt; <a class="code" href="classsoso_1_1WorkerManager.html#a4b6db249486a712e60cc4659c1c3f973">_worker_threads</a>;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
+<div class="line"><a name="l00198"></a><span class="lineno"><a class="line" href="classsoso_1_1WorkerManager.html#ae1f1f281a5095799669fc93c6b78049a">  198</a></span>&#160;  std::chrono::milliseconds <a class="code" href="classsoso_1_1WorkerManager.html#ae1f1f281a5095799669fc93c6b78049a">_wait_for_ms</a>;</div>
+<div class="line"><a name="l00200"></a><span class="lineno"><a class="line" href="classsoso_1_1WorkerManager.html#afb1b57feefac977d1e6072a36001531d">  200</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classsoso_1_1WorkerManager.html#afb1b57feefac977d1e6072a36001531d">_running</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00202"></a><span class="lineno"><a class="line" href="classsoso_1_1WorkerManager.html#a09ee79136dd9891871cb812693acc8b3">  202</a></span>&#160;  std::size_t <a class="code" href="classsoso_1_1WorkerManager.html#a09ee79136dd9891871cb812693acc8b3">_worker_num</a>;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsoso_1_1WorkerManager.html#aed16b2f919fec0205d58dbbb575e30b8">workerThreadFunc</a>(std::shared_ptr&lt;Worker&gt; worker);</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsoso_1_1WorkerManager.html#a27e252aa48026d42b35423b2824173be">addJob</a>(<span class="keyword">const</span> std::string &amp;name, <a class="code" href="namespacesoso.html#a5e0f73d41fc3ab920bed09e3254c3d50">job_handler_t</a> handler,</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;              <a class="code" href="namespacesoso.html#a390399d33ffd04660776fff91e506a43">JOB_QUEUE_TYPE</a> type, <span class="keywordtype">bool</span> affinity);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsoso_1_1WorkerManager.html#aad7bd0c4f55450f385380d7df2909d82">terminate</a>(<span class="keywordtype">bool</span> with_join);</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsoso_1_1WorkerManager.html#aad8c187ba5a3788b0cde3c9d18f23763">join</a>();</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  <a class="code" href="classsoso_1_1WorkerManager.html#a0db4812d50f0f2404c3d2c763beea8a5">WorkerManager</a>(<span class="keywordtype">int</span> worker_num, <span class="keywordtype">int</span> wait_for_ms);</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; </div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  std::string <a class="code" href="classsoso_1_1WorkerManager.html#aa07a5f7e112982808f0a458fa23f06dd">report</a>();</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsoso_1_1WorkerManager.html#a7474644256e08c4322677e9803002815">addJobSingleWorker</a>(<span class="keyword">const</span> std::string &amp;name, <a class="code" href="namespacesoso.html#a5e0f73d41fc3ab920bed09e3254c3d50">job_handler_t</a> handler);</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsoso_1_1WorkerManager.html#a3e05f4b80c5c16bf3466c928f97d6c3a">addJobMultiWorker</a>(<span class="keyword">const</span> std::string &amp;name, <a class="code" href="namespacesoso.html#a5e0f73d41fc3ab920bed09e3254c3d50">job_handler_t</a> handler,</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                         <span class="keywordtype">bool</span> affinity = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsoso_1_1WorkerManager.html#aaede6dc10d3ae31b34cebd426429ea3b">run</a>(<span class="keywordtype">bool</span> block = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;};</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;} <span class="comment">// namespace soso</span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclasssoso_1_1Job_html_accc8d20d33b6b16b0ea417affc304a45"><div class="ttname"><a href="classsoso_1_1Job.html#accc8d20d33b6b16b0ea417affc304a45">soso::Job::setJobID</a></div><div class="ttdeci">void setJobID(std::size_t job_id)</div><div class="ttdoc">job(작업) ID 할당</div><div class="ttdef"><b>Definition:</b> <a href="job_8cpp_source.html#l00031">job.cpp:31</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Worker_html_a0d7964172c9bdefc560dd82135d79a7b"><div class="ttname"><a href="classsoso_1_1Worker.html#a0d7964172c9bdefc560dd82135d79a7b">soso::Worker::_job_type</a></div><div class="ttdeci">JOB_QUEUE_TYPE _job_type</div><div class="ttdoc">작업 타입 (single, multi)</div><div class="ttdef"><b>Definition:</b> <a href="worker_8h_source.html#l00055">worker.h:55</a></div></div>
+<div class="ttc" id="aclasssoso_1_1WorkerManager_html_a60801da07320a26e32c0a536e545f35d"><div class="ttname"><a href="classsoso_1_1WorkerManager.html#a60801da07320a26e32c0a536e545f35d">soso::WorkerManager::_workers</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; Worker &gt; &gt; _workers</div><div class="ttdoc">작업자(worker) 목록</div><div class="ttdef"><b>Definition:</b> <a href="worker_8h_source.html#l00192">worker.h:192</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Job_html_af52e32af01b2c9e0e870a59f343599e4"><div class="ttname"><a href="classsoso_1_1Job.html#af52e32af01b2c9e0e870a59f343599e4">soso::Job::_name</a></div><div class="ttdeci">std::string _name</div><div class="ttdoc">작업 이름</div><div class="ttdef"><b>Definition:</b> <a href="worker_8h_source.html#l00122">worker.h:122</a></div></div>
+<div class="ttc" id="aclasssoso_1_1WorkerManager_html_a4b6db249486a712e60cc4659c1c3f973"><div class="ttname"><a href="classsoso_1_1WorkerManager.html#a4b6db249486a712e60cc4659c1c3f973">soso::WorkerManager::_worker_threads</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; std::thread &gt; &gt; _worker_threads</div><div class="ttdoc">작업자(worker) 스레드 목록</div><div class="ttdef"><b>Definition:</b> <a href="worker_8h_source.html#l00194">worker.h:194</a></div></div>
+<div class="ttc" id="aclasssoso_1_1WorkerManager_html_aad8c187ba5a3788b0cde3c9d18f23763"><div class="ttname"><a href="classsoso_1_1WorkerManager.html#aad8c187ba5a3788b0cde3c9d18f23763">soso::WorkerManager::join</a></div><div class="ttdeci">void join()</div><div class="ttdoc">worker thread가 모두 종료 될 때 까지 대기</div><div class="ttdef"><b>Definition:</b> <a href="worker__manager_8cpp_source.html#l00088">worker_manager.cpp:88</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Job_html_ad4091e0bb99f9f4f817e27d928de60e1"><div class="ttname"><a href="classsoso_1_1Job.html#ad4091e0bb99f9f4f817e27d928de60e1">soso::Job::_worker_id</a></div><div class="ttdeci">std::size_t _worker_id</div><div class="ttdoc">job(작업)을 할당 받은 작업자(worker) ID</div><div class="ttdef"><b>Definition:</b> <a href="worker_8h_source.html#l00118">worker.h:118</a></div></div>
+<div class="ttc" id="anamespacesoso_html"><div class="ttname"><a href="namespacesoso.html">soso</a></div><div class="ttdef"><b>Definition:</b> <a href="worker_8h_source.html#l00017">worker.h:17</a></div></div>
+<div class="ttc" id="aclasssoso_1_1WorkerManager_html_a3e05f4b80c5c16bf3466c928f97d6c3a"><div class="ttname"><a href="classsoso_1_1WorkerManager.html#a3e05f4b80c5c16bf3466c928f97d6c3a">soso::WorkerManager::addJobMultiWorker</a></div><div class="ttdeci">void addJobMultiWorker(const std::string &amp;name, job_handler_t handler, bool affinity=false)</div><div class="ttdoc">여러 worker 중 하나의 worker에게 작업 요청</div><div class="ttdef"><b>Definition:</b> <a href="worker__manager_8cpp_source.html#l00148">worker_manager.cpp:148</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Worker_html_a75c95a11431169fd640b4619fe2b77d6"><div class="ttname"><a href="classsoso_1_1Worker.html#a75c95a11431169fd640b4619fe2b77d6">soso::Worker::getWorkerManager</a></div><div class="ttdeci">const WorkerManager * getWorkerManager()</div><div class="ttdoc">작업 관리자 반환</div><div class="ttdef"><b>Definition:</b> <a href="worker_8cpp_source.html#l00031">worker.cpp:31</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Job_html_abd0f5d161fd6f0d8e7dcdd1c529ffe5b"><div class="ttname"><a href="classsoso_1_1Job.html#abd0f5d161fd6f0d8e7dcdd1c529ffe5b">soso::Job::getHandler</a></div><div class="ttdeci">job_handler_t getHandler()</div><div class="ttdoc">작업 처리 함수 반환</div><div class="ttdef"><b>Definition:</b> <a href="job_8cpp_source.html#l00023">job.cpp:23</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Worker_html_acefe478cac41dde6c5966b804a2bfe98"><div class="ttname"><a href="classsoso_1_1Worker.html#acefe478cac41dde6c5966b804a2bfe98">soso::Worker::_worker_id</a></div><div class="ttdeci">std::size_t _worker_id</div><div class="ttdoc">worker ID</div><div class="ttdef"><b>Definition:</b> <a href="worker_8h_source.html#l00047">worker.h:47</a></div></div>
+<div class="ttc" id="aclasssoso_1_1WorkerManager_html_a09ee79136dd9891871cb812693acc8b3"><div class="ttname"><a href="classsoso_1_1WorkerManager.html#a09ee79136dd9891871cb812693acc8b3">soso::WorkerManager::_worker_num</a></div><div class="ttdeci">std::size_t _worker_num</div><div class="ttdoc">worker(작업자) 수</div><div class="ttdef"><b>Definition:</b> <a href="worker_8h_source.html#l00202">worker.h:202</a></div></div>
+<div class="ttc" id="aclasssoso_1_1WorkerManager_html_ae1f1f281a5095799669fc93c6b78049a"><div class="ttname"><a href="classsoso_1_1WorkerManager.html#ae1f1f281a5095799669fc93c6b78049a">soso::WorkerManager::_wait_for_ms</a></div><div class="ttdeci">std::chrono::milliseconds _wait_for_ms</div><div class="ttdef"><b>Definition:</b> <a href="worker_8h_source.html#l00198">worker.h:198</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Worker_html_a4d14a9741b5de134c758fea01800ce08"><div class="ttname"><a href="classsoso_1_1Worker.html#a4d14a9741b5de134c758fea01800ce08">soso::Worker::_worker_manager</a></div><div class="ttdeci">WorkerManager * _worker_manager</div><div class="ttdoc">작업 관리자</div><div class="ttdef"><b>Definition:</b> <a href="worker_8h_source.html#l00051">worker.h:51</a></div></div>
+<div class="ttc" id="aclasssoso_1_1WorkerManager_html_a64ebdaab8cbd968782051a069283412a"><div class="ttname"><a href="classsoso_1_1WorkerManager.html#a64ebdaab8cbd968782051a069283412a">soso::WorkerManager::_job_Q_mutex</a></div><div class="ttdeci">std::mutex _job_Q_mutex[JOB_QUEUE_TYPE_SIZE]</div><div class="ttdoc">worker(작업자) 선택 대기 Queue 동시 접근을 위한 lock</div><div class="ttdef"><b>Definition:</b> <a href="worker_8h_source.html#l00187">worker.h:187</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Worker_html"><div class="ttname"><a href="classsoso_1_1Worker.html">soso::Worker</a></div><div class="ttdoc">job(작업)를 처리하기 worker(작업)를 관리하기 위한 객체</div><div class="ttdef"><b>Definition:</b> <a href="worker_8h_source.html#l00044">worker.h:44</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Job_html_a3bd9c02d1b8875def646beaba7921a38"><div class="ttname"><a href="classsoso_1_1Job.html#a3bd9c02d1b8875def646beaba7921a38">soso::Job::Job</a></div><div class="ttdeci">Job(const std::string &amp;name, job_handler_t &amp;handler, bool affinity)</div><div class="ttdoc">Job 생성자</div><div class="ttdef"><b>Definition:</b> <a href="job_8cpp_source.html#l00008">job.cpp:8</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Job_html_a1450617469d1d21ee520405982972618"><div class="ttname"><a href="classsoso_1_1Job.html#a1450617469d1d21ee520405982972618">soso::Job::_job_id</a></div><div class="ttdeci">std::size_t _job_id</div><div class="ttdoc">job(작업) ID</div><div class="ttdef"><b>Definition:</b> <a href="worker_8h_source.html#l00120">worker.h:120</a></div></div>
+<div class="ttc" id="anamespacesoso_html_a390399d33ffd04660776fff91e506a43aceb3ab4797d35f9e480d8e471378de9a"><div class="ttname"><a href="namespacesoso.html#a390399d33ffd04660776fff91e506a43aceb3ab4797d35f9e480d8e471378de9a">soso::JOB_QUEUE_TYPE_SIZE</a></div><div class="ttdeci">@ JOB_QUEUE_TYPE_SIZE</div><div class="ttdoc">{ return ++_completed_jobs; }</div><div class="ttdef"><b>Definition:</b> <a href="worker_8h_source.html#l00032">worker.h:32</a></div></div>
+<div class="ttc" id="aclasssoso_1_1WorkerManager_html_aed16b2f919fec0205d58dbbb575e30b8"><div class="ttname"><a href="classsoso_1_1WorkerManager.html#aed16b2f919fec0205d58dbbb575e30b8">soso::WorkerManager::workerThreadFunc</a></div><div class="ttdeci">void workerThreadFunc(std::shared_ptr&lt; Worker &gt; worker)</div><div class="ttdoc">worker thread 동작 함수 worker(작업자) thread는 작업큐에서 job(작업)을 가져와 작업 함수(job_handle)를 수행한다.</div><div class="ttdef"><b>Definition:</b> <a href="worker__manager_8cpp_source.html#l00006">worker_manager.cpp:6</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Job_html_a71814c8066b0239dfba14bf3536d0083"><div class="ttname"><a href="classsoso_1_1Job.html#a71814c8066b0239dfba14bf3536d0083">soso::Job::_affinity</a></div><div class="ttdeci">bool _affinity</div><div class="ttdoc">작업 처리를 특정 worker에게 할당 여부</div><div class="ttdef"><b>Definition:</b> <a href="worker_8h_source.html#l00126">worker.h:126</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Job_html_a9fc7c7895597f32a54db25d2d9ec94ee"><div class="ttname"><a href="classsoso_1_1Job.html#a9fc7c7895597f32a54db25d2d9ec94ee">soso::Job::getWorkerID</a></div><div class="ttdeci">std::size_t getWorkerID() const</div><div class="ttdoc">할당된 worker 쓰레드 ID</div><div class="ttdef"><b>Definition:</b> <a href="job_8cpp_source.html#l00035">job.cpp:35</a></div></div>
+<div class="ttc" id="aclasssoso_1_1WorkerManager_html_a0da63a1c9924c2dc6f62c672c3166690"><div class="ttname"><a href="classsoso_1_1WorkerManager.html#a0da63a1c9924c2dc6f62c672c3166690">soso::WorkerManager::_job_Q_cv</a></div><div class="ttdeci">std::condition_variable _job_Q_cv[JOB_QUEUE_TYPE_SIZE]</div><div class="ttdoc">worker(작업자) 선택 대기 Queue 동시 접근 변수</div><div class="ttdef"><b>Definition:</b> <a href="worker_8h_source.html#l00189">worker.h:189</a></div></div>
+<div class="ttc" id="aclasssoso_1_1WorkerManager_html_a0db4812d50f0f2404c3d2c763beea8a5"><div class="ttname"><a href="classsoso_1_1WorkerManager.html#a0db4812d50f0f2404c3d2c763beea8a5">soso::WorkerManager::WorkerManager</a></div><div class="ttdeci">WorkerManager(int worker_num, int wait_for_ms)</div><div class="ttdoc">ModuleWorker 생성자</div><div class="ttdef"><b>Definition:</b> <a href="worker__manager_8cpp_source.html#l00104">worker_manager.cpp:104</a></div></div>
+<div class="ttc" id="anamespacesoso_html_a390399d33ffd04660776fff91e506a43"><div class="ttname"><a href="namespacesoso.html#a390399d33ffd04660776fff91e506a43">soso::JOB_QUEUE_TYPE</a></div><div class="ttdeci">JOB_QUEUE_TYPE</div><div class="ttdoc">작업 처리 타입</div><div class="ttdef"><b>Definition:</b> <a href="worker_8h_source.html#l00026">worker.h:26</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Job_html_af83233e8b7065919e033546b826cba28"><div class="ttname"><a href="classsoso_1_1Job.html#af83233e8b7065919e033546b826cba28">soso::Job::jobHashCode</a></div><div class="ttdeci">std::size_t jobHashCode()</div><div class="ttdef"><b>Definition:</b> <a href="job_8cpp_source.html#l00019">job.cpp:19</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Job_html"><div class="ttname"><a href="classsoso_1_1Job.html">soso::Job</a></div><div class="ttdoc">작업 객체</div><div class="ttdef"><b>Definition:</b> <a href="worker_8h_source.html#l00113">worker.h:113</a></div></div>
+<div class="ttc" id="aclasssoso_1_1WorkerManager_html_aaede6dc10d3ae31b34cebd426429ea3b"><div class="ttname"><a href="classsoso_1_1WorkerManager.html#aaede6dc10d3ae31b34cebd426429ea3b">soso::WorkerManager::run</a></div><div class="ttdeci">void run(bool block=false)</div><div class="ttdoc">ModuleWorker 수행</div><div class="ttdef"><b>Definition:</b> <a href="worker__manager_8cpp_source.html#l00159">worker_manager.cpp:159</a></div></div>
+<div class="ttc" id="aclasssoso_1_1WorkerManager_html_a7474644256e08c4322677e9803002815"><div class="ttname"><a href="classsoso_1_1WorkerManager.html#a7474644256e08c4322677e9803002815">soso::WorkerManager::addJobSingleWorker</a></div><div class="ttdeci">void addJobSingleWorker(const std::string &amp;name, job_handler_t handler)</div><div class="ttdoc">single worker에게 작업 요청</div><div class="ttdef"><b>Definition:</b> <a href="worker__manager_8cpp_source.html#l00137">worker_manager.cpp:137</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Worker_html_a310dd41902e57f9ed0a919d61392a161"><div class="ttname"><a href="classsoso_1_1Worker.html#a310dd41902e57f9ed0a919d61392a161">soso::Worker::incCompletedJobs</a></div><div class="ttdeci">std::size_t incCompletedJobs()</div><div class="ttdoc">worker가 완료 처리한 job(작업) 수 1 증가</div><div class="ttdef"><b>Definition:</b> <a href="worker_8cpp_source.html#l00051">worker.cpp:51</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Worker_html_ae616fb7f83bef3e4d2d31ba49bb69eee"><div class="ttname"><a href="classsoso_1_1Worker.html#ae616fb7f83bef3e4d2d31ba49bb69eee">soso::Worker::getWorkerID</a></div><div class="ttdeci">std::size_t getWorkerID()</div><div class="ttdoc">worker ID를 반환</div><div class="ttdef"><b>Definition:</b> <a href="worker_8cpp_source.html#l00043">worker.cpp:43</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Worker_html_a87ed5c03d94de44fe6de8628c2b1a622"><div class="ttname"><a href="classsoso_1_1Worker.html#a87ed5c03d94de44fe6de8628c2b1a622">soso::Worker::terminate</a></div><div class="ttdeci">void terminate()</div><div class="ttdoc">worker(작업자) thread를 종료하라고 알림</div><div class="ttdef"><b>Definition:</b> <a href="worker_8cpp_source.html#l00039">worker.cpp:39</a></div></div>
+<div class="ttc" id="anamespacesoso_html_a390399d33ffd04660776fff91e506a43ab02ede17e2689a850c85da32d3d3fafe"><div class="ttname"><a href="namespacesoso.html#a390399d33ffd04660776fff91e506a43ab02ede17e2689a850c85da32d3d3fafe">soso::MULTI_WORKER</a></div><div class="ttdeci">@ MULTI_WORKER</div><div class="ttdoc">여러 worker thread가 job을 처리함</div><div class="ttdef"><b>Definition:</b> <a href="worker_8h_source.html#l00028">worker.h:28</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Job_html_a4d93bd92169cc3e04f0db8caae14d830"><div class="ttname"><a href="classsoso_1_1Job.html#a4d93bd92169cc3e04f0db8caae14d830">soso::Job::_hashcode</a></div><div class="ttdeci">std::size_t _hashcode</div><div class="ttdoc">작업 객체 해쉬 값</div><div class="ttdef"><b>Definition:</b> <a href="worker_8h_source.html#l00124">worker.h:124</a></div></div>
+<div class="ttc" id="aclasssoso_1_1WorkerManager_html_aa07a5f7e112982808f0a458fa23f06dd"><div class="ttname"><a href="classsoso_1_1WorkerManager.html#aa07a5f7e112982808f0a458fa23f06dd">soso::WorkerManager::report</a></div><div class="ttdeci">std::string report()</div><div class="ttdef"><b>Definition:</b> <a href="worker__manager_8cpp_source.html#l00118">worker_manager.cpp:118</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Worker_html_ac3257e86c086cdbdaff150b56d735262"><div class="ttname"><a href="classsoso_1_1Worker.html#ac3257e86c086cdbdaff150b56d735262">soso::Worker::getJobType</a></div><div class="ttdeci">JOB_QUEUE_TYPE getJobType()</div><div class="ttdoc">작업 처리 타입</div><div class="ttdef"><b>Definition:</b> <a href="worker_8cpp_source.html#l00027">worker.cpp:27</a></div></div>
+<div class="ttc" id="aclasssoso_1_1WorkerManager_html_a27e252aa48026d42b35423b2824173be"><div class="ttname"><a href="classsoso_1_1WorkerManager.html#a27e252aa48026d42b35423b2824173be">soso::WorkerManager::addJob</a></div><div class="ttdeci">void addJob(const std::string &amp;name, job_handler_t handler, JOB_QUEUE_TYPE type, bool affinity)</div><div class="ttdoc">worker에게 작업 요청</div><div class="ttdef"><b>Definition:</b> <a href="worker__manager_8cpp_source.html#l00064">worker_manager.cpp:64</a></div></div>
+<div class="ttc" id="aclasssoso_1_1WorkerManager_html_aad7bd0c4f55450f385380d7df2909d82"><div class="ttname"><a href="classsoso_1_1WorkerManager.html#aad7bd0c4f55450f385380d7df2909d82">soso::WorkerManager::terminate</a></div><div class="ttdeci">void terminate(bool with_join)</div><div class="ttdoc">모든 worker(작업자) thread 종료할 것을 알림</div><div class="ttdef"><b>Definition:</b> <a href="worker__manager_8cpp_source.html#l00078">worker_manager.cpp:78</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Job_html_a25b917278b02da32f7a71e6060c3751b"><div class="ttname"><a href="classsoso_1_1Job.html#a25b917278b02da32f7a71e6060c3751b">soso::Job::affinity</a></div><div class="ttdeci">bool affinity()</div><div class="ttdoc">작업처리 affinity 여부</div><div class="ttdef"><b>Definition:</b> <a href="job_8cpp_source.html#l00015">job.cpp:15</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Job_html_a5b72049c26c6864516f98abeda24336d"><div class="ttname"><a href="classsoso_1_1Job.html#a5b72049c26c6864516f98abeda24336d">soso::Job::setWorkerID</a></div><div class="ttdeci">void setWorkerID(std::size_t worker_id)</div><div class="ttdoc">worker(작업자) ID 할당</div><div class="ttdef"><b>Definition:</b> <a href="job_8cpp_source.html#l00027">job.cpp:27</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Worker_html_a1f01729b4bade159219e170a96951e4e"><div class="ttname"><a href="classsoso_1_1Worker.html#a1f01729b4bade159219e170a96951e4e">soso::Worker::Worker</a></div><div class="ttdeci">Worker(WorkerManager *worker_manager, int worker_id, JOB_QUEUE_TYPE job_type)</div><div class="ttdoc">Worker 생성자</div><div class="ttdef"><b>Definition:</b> <a href="worker_8cpp_source.html#l00017">worker.cpp:17</a></div></div>
+<div class="ttc" id="anamespacesoso_html_a5e0f73d41fc3ab920bed09e3254c3d50"><div class="ttname"><a href="namespacesoso.html#a5e0f73d41fc3ab920bed09e3254c3d50">soso::job_handler_t</a></div><div class="ttdeci">std::function&lt; void(std::shared_ptr&lt; Worker &gt;, std::shared_ptr&lt; Job &gt;)&gt; job_handler_t</div><div class="ttdoc">job(작업) 처리 함수 타입</div><div class="ttdef"><b>Definition:</b> <a href="worker_8h_source.html#l00039">worker.h:39</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Worker_html_a7d84269bb2ee56c12eb5889c908f677a"><div class="ttname"><a href="classsoso_1_1Worker.html#a7d84269bb2ee56c12eb5889c908f677a">soso::Worker::finished</a></div><div class="ttdeci">bool finished()</div><div class="ttdoc">worker thread 종료 여부</div><div class="ttdef"><b>Definition:</b> <a href="worker_8cpp_source.html#l00035">worker.cpp:35</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Job_html_a08d7524b00a8bc0254d5c7d83fbab713"><div class="ttname"><a href="classsoso_1_1Job.html#a08d7524b00a8bc0254d5c7d83fbab713">soso::Job::_handler</a></div><div class="ttdeci">job_handler_t _handler</div><div class="ttdoc">작업 처리 함수</div><div class="ttdef"><b>Definition:</b> <a href="worker_8h_source.html#l00116">worker.h:116</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Worker_html_a2d873969129bf44f8c35d3f91875dd1d"><div class="ttname"><a href="classsoso_1_1Worker.html#a2d873969129bf44f8c35d3f91875dd1d">soso::Worker::_completed_jobs</a></div><div class="ttdeci">std::size_t _completed_jobs</div><div class="ttdoc">처리 완료된 작업 수</div><div class="ttdef"><b>Definition:</b> <a href="worker_8h_source.html#l00049">worker.h:49</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Job_html_a0b66fb7e531c056b58a49b2b6b8070c3"><div class="ttname"><a href="classsoso_1_1Job.html#a0b66fb7e531c056b58a49b2b6b8070c3">soso::Job::getJobID</a></div><div class="ttdeci">std::size_t getJobID() const</div><div class="ttdoc">worker(작업자) 쓰레드별 할당 받은 job 순서 번호</div><div class="ttdef"><b>Definition:</b> <a href="job_8cpp_source.html#l00039">job.cpp:39</a></div></div>
+<div class="ttc" id="aclasssoso_1_1WorkerManager_html"><div class="ttname"><a href="classsoso_1_1WorkerManager.html">soso::WorkerManager</a></div><div class="ttdoc">worker(작업자) 스레드가 job(작업)을 처리하는 라이브러리. 하나의 job이 Queue(큐)에 추가되면 여러개의 worker 중 하나의 worker가 선택되어 job을 처리한...</div><div class="ttdef"><b>Definition:</b> <a href="worker_8h_source.html#l00182">worker.h:182</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Worker_html_a1ae90463ac95cc86ebfb2f0fa42ed830"><div class="ttname"><a href="classsoso_1_1Worker.html#a1ae90463ac95cc86ebfb2f0fa42ed830">soso::Worker::getCompletedJobs</a></div><div class="ttdeci">std::size_t getCompletedJobs()</div><div class="ttdoc">worker가 완료 처리한 job(작업) 수를 반환</div><div class="ttdef"><b>Definition:</b> <a href="worker_8cpp_source.html#l00047">worker.cpp:47</a></div></div>
+<div class="ttc" id="anamespacesoso_html_a390399d33ffd04660776fff91e506a43a4597cecd2d612feb57b8e5abb5f5a780"><div class="ttname"><a href="namespacesoso.html#a390399d33ffd04660776fff91e506a43a4597cecd2d612feb57b8e5abb5f5a780">soso::SINGLE_WORKER</a></div><div class="ttdeci">@ SINGLE_WORKER</div><div class="ttdoc">하나의 worker thread가 job을 처리함</div><div class="ttdef"><b>Definition:</b> <a href="worker_8h_source.html#l00030">worker.h:30</a></div></div>
+<div class="ttc" id="aclasssoso_1_1WorkerManager_html_afb1b57feefac977d1e6072a36001531d"><div class="ttname"><a href="classsoso_1_1WorkerManager.html#afb1b57feefac977d1e6072a36001531d">soso::WorkerManager::_running</a></div><div class="ttdeci">bool _running</div><div class="ttdoc">모든 worker(작업자) thread 실행 여부</div><div class="ttdef"><b>Definition:</b> <a href="worker_8h_source.html#l00200">worker.h:200</a></div></div>
+<div class="ttc" id="aclasssoso_1_1Worker_html_a58f521c08a6748ebf70e088cf1cc1c70"><div class="ttname"><a href="classsoso_1_1Worker.html#a58f521c08a6748ebf70e088cf1cc1c70">soso::Worker::_running</a></div><div class="ttdeci">bool _running</div><div class="ttdoc">worker(작업자) thread 종료되었는지 여부</div><div class="ttdef"><b>Definition:</b> <a href="worker_8h_source.html#l00053">worker.h:53</a></div></div>
+<div class="ttc" id="aclasssoso_1_1WorkerManager_html_ad87994fce4b6b805b7f90657a88387d5"><div class="ttname"><a href="classsoso_1_1WorkerManager.html#ad87994fce4b6b805b7f90657a88387d5">soso::WorkerManager::_job_Q</a></div><div class="ttdeci">std::deque&lt; std::shared_ptr&lt; Job &gt; &gt; _job_Q[JOB_QUEUE_TYPE_SIZE]</div><div class="ttdoc">worker(작업자)에게 할당을 요청하는 선택 대기 Queue(큐)</div><div class="ttdef"><b>Definition:</b> <a href="worker_8h_source.html#l00185">worker.h:185</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

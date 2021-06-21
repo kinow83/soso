@@ -1,0 +1,35 @@
+\hypertarget{job_8h}{}\doxysection{include/job.h 파일 참조}
+\label{job_8h}\index{include/job.h@{include/job.h}}
+{\ttfamily \#include \char`\"{}worker.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+job.\+h에 대한 include 의존 그래프\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{job_8h__incl}
+\end{center}
+\end{figure}
+이 그래프는 이 파일을 직/간접적으로 include 하는 파일들을 보여줍니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{job_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{클래스}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsoso_1_1Job}{soso\+::\+Job}}
+\begin{DoxyCompactList}\small\item\em 작업 객체 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{네임스페이스}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacesoso}{soso}}
+\end{DoxyCompactItemize}
+\doxysubsection*{타입정의}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacesoso_a5e0f73d41fc3ab920bed09e3254c3d50}{soso\+::job\+\_\+handler\+\_\+t}} = std\+::function$<$ void(std\+::shared\+\_\+ptr$<$ Worker $>$, std\+::shared\+\_\+ptr$<$ Job $>$)$>$
+\begin{DoxyCompactList}\small\item\em job(작업) 처리 함수 타입 \end{DoxyCompactList}\end{DoxyCompactItemize}

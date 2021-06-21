@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['terminate_41',['terminate',['../classsoso_1_1Worker.html#a0d621552c5e21e273004a558b9716e96',1,'soso::Worker::terminate()'],['../classsoso_1_1WorkerManager.html#a130ed99a428029e226f02b2b09fd293f',1,'soso::WorkerManager::terminate()']]]
+  ['terminate_43',['terminate',['../classsoso_1_1Worker.html#a87ed5c03d94de44fe6de8628c2b1a622',1,'soso::Worker::terminate()'],['../classsoso_1_1WorkerManager.html#aad7bd0c4f55450f385380d7df2909d82',1,'soso::WorkerManager::terminate()']]]
 ];

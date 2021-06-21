@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['setjobid_67',['setJobID',['../classsoso_1_1Job.html#ab5da784abe82a242e9f6d7aa6d0cbbf7',1,'soso::Job']]],
-  ['setworkerid_68',['setWorkerID',['../classsoso_1_1Job.html#a9c1a37f26851767233ab4d6f4c931edf',1,'soso::Job']]]
+  ['setjobid_75',['setJobID',['../classsoso_1_1Job.html#accc8d20d33b6b16b0ea417affc304a45',1,'soso::Job']]],
+  ['setworkerid_76',['setWorkerID',['../classsoso_1_1Job.html#a5b72049c26c6864516f98abeda24336d',1,'soso::Job']]]
 ];

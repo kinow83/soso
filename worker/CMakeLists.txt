@@ -13,10 +13,18 @@ include_directories(include)
 ###############################
 # for hpp
 ###############################
-add_library(worker INTERFACE)
-target_sources(worker INTERFACE worker.hpp)
+add_library(worker SHARED)
+target_sources(worker
+PRIVATE
+    src/worker.cpp
+    src/job.cpp
+    src/worker_manager.cpp
+PUBLIC
+    include/worker.h
+)
+
 target_include_directories (worker
-INTERFACE
+PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 ###############################

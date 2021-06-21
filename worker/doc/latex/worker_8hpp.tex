@@ -8,6 +8,7 @@
 {\ttfamily \#include $<$memory$>$}\newline
 {\ttfamily \#include $<$mutex$>$}\newline
 {\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
 {\ttfamily \#include $<$thread$>$}\newline
 {\ttfamily \#include $<$unistd.\+h$>$}\newline
 {\ttfamily \#include $<$vector$>$}\newline
@@ -32,16 +33,16 @@ class \mbox{\hyperlink{classsoso_1_1WorkerManager}{soso\+::\+Worker\+Manager}}
 \item 
  \mbox{\hyperlink{namespacesoso}{soso}}
 \end{DoxyCompactItemize}
-\doxysubsection*{타입정의}
-\begin{DoxyCompactItemize}
-\item 
-using \mbox{\hyperlink{namespacesoso_a5e0f73d41fc3ab920bed09e3254c3d50}{soso\+::job\+\_\+handler\+\_\+t}} = std\+::function$<$ void(std\+::shared\+\_\+ptr$<$ Worker $>$, std\+::shared\+\_\+ptr$<$ Job $>$)$>$
-\begin{DoxyCompactList}\small\item\em job(작업) 처리 함수 타입 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{열거형 타입}
 \begin{DoxyCompactItemize}
 \item 
-enum \mbox{\hyperlink{namespacesoso_a390399d33ffd04660776fff91e506a43}{soso\+::\+J\+O\+B\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+T\+Y\+PE}} \{ \mbox{\hyperlink{namespacesoso_a390399d33ffd04660776fff91e506a43ab02ede17e2689a850c85da32d3d3fafe}{soso\+::\+M\+U\+L\+T\+I\+\_\+\+W\+O\+R\+K\+ER}} = 0, 
-\mbox{\hyperlink{namespacesoso_a390399d33ffd04660776fff91e506a43a4597cecd2d612feb57b8e5abb5f5a780}{soso\+::\+S\+I\+N\+G\+L\+E\+\_\+\+W\+O\+R\+K\+ER}}, 
-\mbox{\hyperlink{namespacesoso_a390399d33ffd04660776fff91e506a43aceb3ab4797d35f9e480d8e471378de9a}{soso\+::\+J\+O\+B\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+I\+ZE}}
+enum \mbox{\hyperlink{namespacesoso_a390399d33ffd04660776fff91e506a43}{soso\+::\+J\+O\+B\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+T\+Y\+PE}} \{ \newline
+\mbox{\hyperlink{namespacesoso_a390399d33ffd04660776fff91e506a43a2b4e478e0db60256b9d4aad3e1388bc2}{soso\+::\+M\+U\+L\+T\+I\+\_\+\+W\+O\+R\+K\+ER}} = 0, 
+\mbox{\hyperlink{namespacesoso_a390399d33ffd04660776fff91e506a43a700dde0043c378840b5c358f644a9a9a}{soso\+::\+S\+I\+N\+G\+L\+E\+\_\+\+W\+O\+R\+K\+ER}}, 
+\mbox{\hyperlink{namespacesoso_a390399d33ffd04660776fff91e506a43acb89260fe54dafb1863a367bff8a8eb0}{soso\+::\+J\+O\+B\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+I\+ZE}}, 
+\mbox{\hyperlink{namespacesoso_a390399d33ffd04660776fff91e506a43a2b4e478e0db60256b9d4aad3e1388bc2}{soso\+::\+M\+U\+L\+T\+I\+\_\+\+W\+O\+R\+K\+ER}} = 0, 
+\newline
+\mbox{\hyperlink{namespacesoso_a390399d33ffd04660776fff91e506a43a700dde0043c378840b5c358f644a9a9a}{soso\+::\+S\+I\+N\+G\+L\+E\+\_\+\+W\+O\+R\+K\+ER}}, 
+\mbox{\hyperlink{namespacesoso_a390399d33ffd04660776fff91e506a43acb89260fe54dafb1863a367bff8a8eb0}{soso\+::\+J\+O\+B\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+I\+ZE}}
  \}
 \begin{DoxyCompactList}\small\item\em 작업 처리 타입 \end{DoxyCompactList}\end{DoxyCompactItemize}
