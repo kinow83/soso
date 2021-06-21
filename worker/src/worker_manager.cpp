@@ -32,8 +32,6 @@ WorkerManager::WorkerManager(const std::string &name, int worker_num,
   _s_worker = make_shared<Worker>(this, i, SINGLE_WORKER);
   _job_s_M = make_shared<mutex>();
   _job_s_CV = make_shared<condition_variable>();
-  ///
-  _job_id_M = make_shared<mutex>();
 }
 
 void WorkerManager::workerThreadFunc(shared_ptr<Worker> worker,
@@ -166,19 +164,18 @@ void WorkerManager::addJob(const string &name,    //
   shared_ptr<mutex> M;
   deque<shared_ptr<Job>> *Q;
 
+  /// job_id 구하기 (MUST thread-safe)
+  job_id = _job_seq.fetch_add(1);
+  // printf("job_id: %ld\n", job_id);
+
   /// select worker
   /// TODO: job 분뱁 RR(Round Robin)
-  _job_id_M->lock();
-  {
-    job_id = _job_count++;
-    if (affinity) {
-      auto hashcode = hash<string>{}(name);
-      worker_id = hashcode % _worker_num;
-    } else {
-      worker_id = job_id % _worker_num;
-    }
+  if (affinity) {
+    auto hashcode = hash<string>{}(name);
+    worker_id = hashcode % _worker_num;
+  } else {
+    worker_id = job_id % _worker_num;
   }
-  _job_id_M->unlock();
 
   if (type == MULTI_WORKER) {
     Q = &_job_m_Q[worker_id];

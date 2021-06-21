@@ -1,6 +1,7 @@
 #ifndef __SOSO_WORKER_H__
 #define __SOSO_WORKER_H__
 
+#include <atomic>
 #include <chrono>
 #include <condition_variable>
 #include <deque>
@@ -200,8 +201,7 @@ private:
   bool _running = true;
   /// worker(작업자) 수
   std::size_t _worker_num;
-  ///
-  std::shared_ptr<std::mutex> _job_id_M;
+  std::atomic<size_t> _job_seq;
   ///
   size_t _job_count = 0;
 
