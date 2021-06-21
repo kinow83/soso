@@ -26,7 +26,6 @@ var menudata={children:[
 {text:"네임스페이스 목록",url:"namespaces.html"},
 {text:"네임스페이스 멤버",url:"namespacemembers.html",children:[
 {text:"모두",url:"namespacemembers.html"},
-{text:"함수",url:"namespacemembers_func.html"},
 {text:"열거형 타입",url:"namespacemembers_enum.html"},
 {text:"열거형 멤버",url:"namespacemembers_eval.html"}]}]},
 {text:"클래스",url:"annotated.html",children:[

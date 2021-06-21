@@ -162,43 +162,6 @@ public:
                          std::function<bool(void)> logic);
 };
 
-/**
- * @brief PCAP을 이용하여 패킷 수신 시 등록된 컴포넌트를 호출
- * @param chain
- * @param pcap_resource
- * @param thread_num
- * @param forever
- * @return true
- * @return false
- */
-bool pcapModuleCall(ComponentChain &chain, const char *pcap_resource,
-                    int thread_num, bool forever);
-
-/**
- * @brief 서버-클라이언트 구조로 클라이언트로 부터 수신 시 컴포넌트를
- * 호출
- * @param chain
- * @param thread_num
- * @param port
- * @return true
- * @return false
- */
-bool serverModuleCall(ComponentChain &chain, int thread_num, int port);
-
-/**
- * @brief 서버-클라이언트 구조로 서버로 접속 시 컴포넌트를 호출
- *
- * @param chain
- * @param thread_num
- * @param port
- * @param terminate_tv
- * @param monitor_tv
- * @return true
- * @return false
- */
-bool clientModuleCall(ComponentChain &chain, int thread_num, int port,
-                      struct timeval *terminate_tv = NULL,
-                      struct timeval *monitor_tv = NULL);
 }; // namespace soso
 
 #endif
