@@ -22,7 +22,7 @@ PRIVATE
 )
 
 include(GoogleTest)
-gtest_discover_tests(worker_unit_test
-  PROPERTIES
-    LABELS "unit test"
-)
+#gtest_discover_tests(worker_unit_test
+#  PROPERTIES
+#    LABELS "unit test"
+#)

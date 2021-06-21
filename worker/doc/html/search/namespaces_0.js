@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['soso_53',['soso',['../namespacesoso.html',1,'']]]
+  ['soso_58',['soso',['../namespacesoso.html',1,'']]]
 ];

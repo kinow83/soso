@@ -5,19 +5,15 @@
 using namespace std;
 using namespace soso;
 
-Job::Job(const std::string &name, job_handler_t &handler, bool affinity) { //
-  _name = name;
+Job::Job(size_t job_id, job_handler_t &handler,
+         bool affinity) { //
+  _job_id = job_id;
   _handler = handler;
-  _hashcode = std::hash<std::string>{}(name);
   _affinity = affinity;
 }
 
 bool Job::affinity() { //
   return _affinity;
-}
-
-size_t Job::jobHashCode() { //
-  return _hashcode;
 }
 
 job_handler_t Job::getHandler() { //

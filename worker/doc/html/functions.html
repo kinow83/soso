@@ -73,30 +73,48 @@ $(function() {
 <li>_handler
 : <a class="el" href="classsoso_1_1Job.html#a08d7524b00a8bc0254d5c7d83fbab713">soso::Job</a>
 </li>
-<li>_hashcode
-: <a class="el" href="classsoso_1_1Job.html#a4d93bd92169cc3e04f0db8caae14d830">soso::Job</a>
+<li>_job_count
+: <a class="el" href="classsoso_1_1WorkerManager.html#ac5a644d9546ea28aa2a7cb138877d94b">soso::WorkerManager</a>
 </li>
 <li>_job_id
 : <a class="el" href="classsoso_1_1Job.html#a1450617469d1d21ee520405982972618">soso::Job</a>
 </li>
-<li>_job_Q
-: <a class="el" href="classsoso_1_1WorkerManager.html#ad87994fce4b6b805b7f90657a88387d5">soso::WorkerManager</a>
+<li>_job_id_M
+: <a class="el" href="classsoso_1_1WorkerManager.html#a8523c08ffbe4570dede52aa01c1557d4">soso::WorkerManager</a>
 </li>
-<li>_job_Q_cv
-: <a class="el" href="classsoso_1_1WorkerManager.html#a0da63a1c9924c2dc6f62c672c3166690">soso::WorkerManager</a>
+<li>_job_m_CV
+: <a class="el" href="classsoso_1_1WorkerManager.html#a8c2de3c45e5390492448cba4ac5ded93">soso::WorkerManager</a>
 </li>
-<li>_job_Q_mutex
-: <a class="el" href="classsoso_1_1WorkerManager.html#a64ebdaab8cbd968782051a069283412a">soso::WorkerManager</a>
+<li>_job_m_M
+: <a class="el" href="classsoso_1_1WorkerManager.html#aaf7bbd40c1412a50a17eef93c4477ea8">soso::WorkerManager</a>
+</li>
+<li>_job_m_Q
+: <a class="el" href="classsoso_1_1WorkerManager.html#ab26cda155ac8dd84cb950e192f327d82">soso::WorkerManager</a>
+</li>
+<li>_job_s_CV
+: <a class="el" href="classsoso_1_1WorkerManager.html#a32a63b02318ca4382a169d348e172c78">soso::WorkerManager</a>
+</li>
+<li>_job_s_M
+: <a class="el" href="classsoso_1_1WorkerManager.html#aebf18c5731614408336f68f84572d833">soso::WorkerManager</a>
+</li>
+<li>_job_s_Q
+: <a class="el" href="classsoso_1_1WorkerManager.html#a6f657536e5d1da6f80498ceb7c27c8c3">soso::WorkerManager</a>
 </li>
 <li>_job_type
 : <a class="el" href="classsoso_1_1Worker.html#a0d7964172c9bdefc560dd82135d79a7b">soso::Worker</a>
 </li>
+<li>_m_workers
+: <a class="el" href="classsoso_1_1WorkerManager.html#a85ea26caa491c4834c79d9f7abc294a9">soso::WorkerManager</a>
+</li>
 <li>_name
-: <a class="el" href="classsoso_1_1Job.html#af52e32af01b2c9e0e870a59f343599e4">soso::Job</a>
+: <a class="el" href="classsoso_1_1WorkerManager.html#a3c3123328c7b082f166000823ee64dd8">soso::WorkerManager</a>
 </li>
 <li>_running
 : <a class="el" href="classsoso_1_1Worker.html#a58f521c08a6748ebf70e088cf1cc1c70">soso::Worker</a>
 , <a class="el" href="classsoso_1_1WorkerManager.html#afb1b57feefac977d1e6072a36001531d">soso::WorkerManager</a>
+</li>
+<li>_s_worker
+: <a class="el" href="classsoso_1_1WorkerManager.html#a10d4dcc3deac3a2aefa67acd90679e29">soso::WorkerManager</a>
 </li>
 <li>_wait_for_ms
 : <a class="el" href="classsoso_1_1WorkerManager.html#ae1f1f281a5095799669fc93c6b78049a">soso::WorkerManager</a>
@@ -113,9 +131,6 @@ $(function() {
 </li>
 <li>_worker_threads
 : <a class="el" href="classsoso_1_1WorkerManager.html#a4b6db249486a712e60cc4659c1c3f973">soso::WorkerManager</a>
-</li>
-<li>_workers
-: <a class="el" href="classsoso_1_1WorkerManager.html#a60801da07320a26e32c0a536e545f35d">soso::WorkerManager</a>
 </li>
 </ul>
 
@@ -175,10 +190,7 @@ $(function() {
 
 <h3><a id="index_j"></a>- j -</h3><ul>
 <li>Job()
-: <a class="el" href="classsoso_1_1Job.html#a3bd9c02d1b8875def646beaba7921a38">soso::Job</a>
-</li>
-<li>jobHashCode()
-: <a class="el" href="classsoso_1_1Job.html#af83233e8b7065919e033546b826cba28">soso::Job</a>
+: <a class="el" href="classsoso_1_1Job.html#aac57d22c56592eb419922fcc74c57b59">soso::Job</a>
 </li>
 <li>join()
 : <a class="el" href="classsoso_1_1WorkerManager.html#aad8c187ba5a3788b0cde3c9d18f23763">soso::WorkerManager</a>
@@ -219,10 +231,13 @@ $(function() {
 : <a class="el" href="classsoso_1_1Worker.html#a1f01729b4bade159219e170a96951e4e">soso::Worker</a>
 </li>
 <li>WorkerManager()
-: <a class="el" href="classsoso_1_1WorkerManager.html#a0db4812d50f0f2404c3d2c763beea8a5">soso::WorkerManager</a>
+: <a class="el" href="classsoso_1_1WorkerManager.html#ae46071087eb74f526e2ef7c7f238dfbf">soso::WorkerManager</a>
+</li>
+<li>workerName()
+: <a class="el" href="classsoso_1_1WorkerManager.html#a88bf2aa8b2517170de50c559ea865433">soso::WorkerManager</a>
 </li>
 <li>workerThreadFunc()
-: <a class="el" href="classsoso_1_1WorkerManager.html#aed16b2f919fec0205d58dbbb575e30b8">soso::WorkerManager</a>
+: <a class="el" href="classsoso_1_1WorkerManager.html#a22190f8e8a367dc26fcd581b8639c620">soso::WorkerManager</a>
 </li>
 </ul>
 </div><!-- contents -->

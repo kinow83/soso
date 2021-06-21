@@ -70,7 +70,7 @@ public:
   JOB_QUEUE_TYPE getJobType();
 
   /**
-   * @brief 작업 관리자 반환
+   * @brief 작업 관리자 반환WorkerManager
    * @return const WorkerManager*
    */
   const WorkerManager *getWorkerManager();
@@ -118,10 +118,6 @@ private:
   std::size_t _worker_id = 0;
   /// job(작업) ID
   std::size_t _job_id = 0;
-  /// 작업 이름
-  std::string _name;
-  /// 작업 객체 해쉬 값
-  std::size_t _hashcode;
   /// 작업 처리를 특정 worker에게 할당 여부
   bool _affinity;
 
@@ -132,7 +128,7 @@ public:
    * @param handler 작업 처리 함수
    * @param affinity 작업 처리 특정 worker에게 할당 할지 여부
    */
-  Job(const std::string &name, job_handler_t &handler, bool affinity);
+  Job(size_t job_id, job_handler_t &handler, bool affinity);
 
   /**
    * @brief 작업처리 affinity 여부
@@ -140,8 +136,6 @@ public:
    * @return false
    */
   bool affinity();
-
-  std::size_t jobHashCode();
 
   /**
    * @brief 작업 처리 함수 반환
@@ -181,15 +175,21 @@ public:
  */
 class WorkerManager {
 private:
+  std::string _name;
   /// worker(작업자)에게 할당을 요청하는 선택 대기 Queue(큐)
-  std::deque<std::shared_ptr<Job>> _job_Q[JOB_QUEUE_TYPE_SIZE];
+  std::vector<std::deque<std::shared_ptr<Job>>> _job_m_Q;
+  std::deque<std::shared_ptr<Job>> _job_s_Q;
   /// worker(작업자) 선택 대기 Queue 동시 접근을 위한 lock
-  std::mutex _job_Q_mutex[JOB_QUEUE_TYPE_SIZE];
+  std::vector<std::shared_ptr<std::mutex>> _job_m_M;
+  std::shared_ptr<std::mutex> _job_s_M;
   /// worker(작업자) 선택 대기 Queue 동시 접근 변수
-  std::condition_variable _job_Q_cv[JOB_QUEUE_TYPE_SIZE];
+  std::vector<std::shared_ptr<std::condition_variable>> _job_m_CV;
+  std::shared_ptr<std::condition_variable> _job_s_CV;
 
   /// 작업자(worker) 목록
-  std::vector<std::shared_ptr<Worker>> _workers;
+  std::vector<std::shared_ptr<Worker>> _m_workers;
+  std::shared_ptr<Worker> _s_worker;
+
   /// 작업자(worker) 스레드 목록
   std::vector<std::shared_ptr<std::thread>> _worker_threads;
 
@@ -200,6 +200,10 @@ private:
   bool _running = true;
   /// worker(작업자) 수
   std::size_t _worker_num;
+  ///
+  std::shared_ptr<std::mutex> _job_id_M;
+  ///
+  size_t _job_count = 0;
 
 private:
   /**
@@ -208,7 +212,10 @@ private:
    * 함수(job_handle)를 수행한다.
    * @param worker 작업자
    */
-  void workerThreadFunc(std::shared_ptr<Worker> worker);
+  void workerThreadFunc(std::shared_ptr<Worker> worker,      //
+                        std::deque<std::shared_ptr<Job>> *Q, //
+                        std::shared_ptr<std::mutex> M,       //
+                        std::shared_ptr<std::condition_variable> CV);
 
   /**
    * @brief worker에게 작업 요청
@@ -237,7 +244,9 @@ public:
    * @param worker_num worker(작업자) 수
    * @param wait_for_ms job(작업) 용처 대기 시간 (millisecond)
    */
-  WorkerManager(int worker_num, int wait_for_ms);
+  WorkerManager(const std::string &name, int worker_num, int wait_for_ms);
+
+  std::string workerName();
 
   std::string report();
 
