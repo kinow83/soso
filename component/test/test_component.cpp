@@ -39,11 +39,11 @@ int main(void) { //
   ComponentChain chain;
   Request *request = new Request();
 
-  chain.registers(new ComponentTest("test#1"));
-  chain.registers(new ComponentTest("test#2"));
-  chain.registers(new ComponentTest("test#3"));
-  chain.registers(new ComponentTest("test#4"));
-  chain.registers(new ComponentTest("test#5"));
+  chain.registers(make_shared<Component>("test#1"));
+  chain.registers(make_shared<Component>("test#2"));
+  chain.registers(make_shared<Component>("test#3"));
+  chain.registers(make_shared<Component>("test#4"));
+  chain.registers(make_shared<Component>("test#5"));
 
   chain.initComponent();
   chain.callComponent(request);

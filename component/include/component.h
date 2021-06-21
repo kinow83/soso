@@ -37,7 +37,7 @@ public:
    * @brief Component 생성자
    * @param name
    */
-  Component(const std::string name) : _name(name) { //
+  Component(const std::string &name) : _name(name) { //
   }
   /**
    * @brief 컴포넌트 이름 반환
@@ -98,7 +98,7 @@ private:
   bool _trace_chrono = true;
 
   /// 컴포넌트 구성요청 체인 리스트
-  std::vector<Component *> _chains;
+  std::vector<std::shared_ptr<Component>> _chains;
 
 public:
   ComponentChain();
@@ -123,14 +123,14 @@ public:
    * @brief 컴포넌트 추가
    * @param component
    */
-  void registers(Component *component);
+  void registers(std::shared_ptr<Component> component);
 
   /**
    * @brief 컴포넌트 접근자
    * @param name
    * @return Component&
    */
-  Component *operator[](const std::string name);
+  std::shared_ptr<Component> operator[](const std::string name);
 
   /**
    * @brief 컴포넌트 제거

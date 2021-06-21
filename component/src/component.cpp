@@ -13,13 +13,9 @@ ComponentChain::ComponentChain() {
   _chrono_stack.push_back(ChronosStack("schedule", max_point));
 }
 
-ComponentChain::~ComponentChain() {
-  for (auto c : _chains) {
-    delete c;
-  }
-}
+ComponentChain::~ComponentChain() {}
 
-void ComponentChain::registers(Component *component) {
+void ComponentChain::registers(std::shared_ptr<Component> component) {
   for (auto c : _chains) {
     if (c->getName() == component->getName()) {
       throw runtime_error("already registered component: " + c->getName());
@@ -28,7 +24,7 @@ void ComponentChain::registers(Component *component) {
   _chains.push_back(component);
 }
 
-Component *ComponentChain::operator[](const string name) {
+std::shared_ptr<Component> ComponentChain::operator[](const string name) {
   for (auto c : _chains) {
     if (c->getName() == name) {
       return c;
@@ -109,9 +105,9 @@ void ComponentChain::callComponent(Request *request) {
 
   // prepare
   for (auto c : _chains) {
-    ok = chronosCheckPoint(c->getName(),         //
-                           COMPONENT_PREPARE,    //
-                           [c, &request](void) { //
+    ok = chronosCheckPoint(c->getName(),        //
+                           COMPONENT_PREPARE,   //
+                           [c, request](void) { //
                              return c->prepare(request);
                            });
     if (!ok) {
@@ -121,9 +117,9 @@ void ComponentChain::callComponent(Request *request) {
 
   // process
   for (auto c : _chains) {
-    ok = chronosCheckPoint(c->getName(),         //
-                           COMPONENT_PROCESS,    //
-                           [c, &request](void) { //
+    ok = chronosCheckPoint(c->getName(),        //
+                           COMPONENT_PROCESS,   //
+                           [c, request](void) { //
                              return c->process(request);
                            });
     if (!ok) {
@@ -133,9 +129,9 @@ void ComponentChain::callComponent(Request *request) {
 
   // post
   for (auto c : _chains) {
-    ok = chronosCheckPoint(c->getName(),         //
-                           COMPONENT_POST,       //
-                           [c, &request](void) { //
+    ok = chronosCheckPoint(c->getName(),        //
+                           COMPONENT_POST,      //
+                           [c, request](void) { //
                              return c->post(request);
                            });
     if (!ok) {

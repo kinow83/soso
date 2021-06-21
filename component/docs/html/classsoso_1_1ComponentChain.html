@@ -91,12 +91,12 @@ Public 멤버 함수</h2></td></tr>
 <tr class="separator:a835149f6e49ad0e0f778d05f9bb479a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2137ad5cdcd2b12f9e41b348e5fe7152"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1ComponentChain.html#a2137ad5cdcd2b12f9e41b348e5fe7152">chronosMonitoring</a> (<a class="el" href="namespacesoso.html#a6f2db82b33e65eff7d46c08d41d0a71e">COMPONENT_IDX</a> comp_idx, std::function&lt; void(ChronosStack &amp;)&gt; f)</td></tr>
 <tr class="separator:a2137ad5cdcd2b12f9e41b348e5fe7152"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86d6dbceb6ef3a1bbdedf26431cf7523"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1ComponentChain.html#a86d6dbceb6ef3a1bbdedf26431cf7523">registers</a> (<a class="el" href="classsoso_1_1Component.html">Component</a> *component)</td></tr>
-<tr class="memdesc:a86d6dbceb6ef3a1bbdedf26431cf7523"><td class="mdescLeft">&#160;</td><td class="mdescRight">컴포넌트 추가  <a href="classsoso_1_1ComponentChain.html#a86d6dbceb6ef3a1bbdedf26431cf7523">더 자세히 ...</a><br /></td></tr>
-<tr class="separator:a86d6dbceb6ef3a1bbdedf26431cf7523"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0225136cf30c5d70e2f9a81164cdaee6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsoso_1_1Component.html">Component</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1ComponentChain.html#a0225136cf30c5d70e2f9a81164cdaee6">operator[]</a> (const std::string name)</td></tr>
-<tr class="memdesc:a0225136cf30c5d70e2f9a81164cdaee6"><td class="mdescLeft">&#160;</td><td class="mdescRight">컴포넌트 접근자  <a href="classsoso_1_1ComponentChain.html#a0225136cf30c5d70e2f9a81164cdaee6">더 자세히 ...</a><br /></td></tr>
-<tr class="separator:a0225136cf30c5d70e2f9a81164cdaee6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa30c87b6b132e73ea8741c1dde6bc8f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1ComponentChain.html#aa30c87b6b132e73ea8741c1dde6bc8f3">registers</a> (std::shared_ptr&lt; <a class="el" href="classsoso_1_1Component.html">Component</a> &gt; component)</td></tr>
+<tr class="memdesc:aa30c87b6b132e73ea8741c1dde6bc8f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">컴포넌트 추가  <a href="classsoso_1_1ComponentChain.html#aa30c87b6b132e73ea8741c1dde6bc8f3">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:aa30c87b6b132e73ea8741c1dde6bc8f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a096feea25efa88f5c260d1d0809de68d"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classsoso_1_1Component.html">Component</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1ComponentChain.html#a096feea25efa88f5c260d1d0809de68d">operator[]</a> (const std::string name)</td></tr>
+<tr class="memdesc:a096feea25efa88f5c260d1d0809de68d"><td class="mdescLeft">&#160;</td><td class="mdescRight">컴포넌트 접근자  <a href="classsoso_1_1ComponentChain.html#a096feea25efa88f5c260d1d0809de68d">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a096feea25efa88f5c260d1d0809de68d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0cfbfb25ebbfcc663e36dedcbcd91a46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1ComponentChain.html#a0cfbfb25ebbfcc663e36dedcbcd91a46">remove</a> (const std::string name)</td></tr>
 <tr class="memdesc:a0cfbfb25ebbfcc663e36dedcbcd91a46"><td class="mdescLeft">&#160;</td><td class="mdescRight">컴포넌트 제거  <a href="classsoso_1_1ComponentChain.html#a0cfbfb25ebbfcc663e36dedcbcd91a46">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:a0cfbfb25ebbfcc663e36dedcbcd91a46"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -119,9 +119,9 @@ Private 속성</h2></td></tr>
 <tr class="separator:a398c2cf76fbe5dfd8193cd8d6a83809f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a309c2a0591c42d96b8bc2aef6013e028"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1ComponentChain.html#a309c2a0591c42d96b8bc2aef6013e028">_trace_chrono</a> = true</td></tr>
 <tr class="separator:a309c2a0591c42d96b8bc2aef6013e028"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b1f705ae5e507888345f51fe64bb042"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classsoso_1_1Component.html">Component</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1ComponentChain.html#a2b1f705ae5e507888345f51fe64bb042">_chains</a></td></tr>
-<tr class="memdesc:a2b1f705ae5e507888345f51fe64bb042"><td class="mdescLeft">&#160;</td><td class="mdescRight">컴포넌트 구성요청 체인 리스트  <a href="classsoso_1_1ComponentChain.html#a2b1f705ae5e507888345f51fe64bb042">더 자세히 ...</a><br /></td></tr>
-<tr class="separator:a2b1f705ae5e507888345f51fe64bb042"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79ab7bb941ebbadd95740955fd90099a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classsoso_1_1Component.html">Component</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1ComponentChain.html#a79ab7bb941ebbadd95740955fd90099a">_chains</a></td></tr>
+<tr class="memdesc:a79ab7bb941ebbadd95740955fd90099a"><td class="mdescLeft">&#160;</td><td class="mdescRight">컴포넌트 구성요청 체인 리스트  <a href="classsoso_1_1ComponentChain.html#a79ab7bb941ebbadd95740955fd90099a">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a79ab7bb941ebbadd95740955fd90099a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
 <div class="textblock"><p>컴포넌트을 체인으로 관리하여 각 컴포넌트을 호출 및 관리하는 Class </p>
@@ -200,7 +200,7 @@ Private 속성</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition"><a class="el" href="component_8cpp_source.html">component.cpp</a> 파일의 <a class="el" href="component_8cpp_source.html#l00105">105</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="component_8cpp_source.html">component.cpp</a> 파일의 <a class="el" href="component_8cpp_source.html#l00101">101</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -222,7 +222,7 @@ Private 속성</h2></td></tr>
 
 <p>컴포넌트의 schedule(단일 스레드로 동작해야 할)을 호출 </p>
 
-<p class="definition"><a class="el" href="component_8cpp_source.html">component.cpp</a> 파일의 <a class="el" href="component_8cpp_source.html#l00089">89</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="component_8cpp_source.html">component.cpp</a> 파일의 <a class="el" href="component_8cpp_source.html#l00085">85</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -258,7 +258,7 @@ Private 속성</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="component_8cpp_source.html">component.cpp</a> 파일의 <a class="el" href="component_8cpp_source.html#l00061">61</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="component_8cpp_source.html">component.cpp</a> 파일의 <a class="el" href="component_8cpp_source.html#l00057">57</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -288,7 +288,7 @@ Private 속성</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="component_8cpp_source.html">component.cpp</a> 파일의 <a class="el" href="component_8cpp_source.html#l00056">56</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="component_8cpp_source.html">component.cpp</a> 파일의 <a class="el" href="component_8cpp_source.html#l00052">52</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -366,18 +366,18 @@ Private 속성</h2></td></tr>
 <dd>
 false </dd></dl>
 
-<p class="definition"><a class="el" href="component_8cpp_source.html">component.cpp</a> 파일의 <a class="el" href="component_8cpp_source.html#l00076">76</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="component_8cpp_source.html">component.cpp</a> 파일의 <a class="el" href="component_8cpp_source.html#l00072">72</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
-<a id="a0225136cf30c5d70e2f9a81164cdaee6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0225136cf30c5d70e2f9a81164cdaee6">&#9670;&nbsp;</a></span>operator[]()</h2>
+<a id="a096feea25efa88f5c260d1d0809de68d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a096feea25efa88f5c260d1d0809de68d">&#9670;&nbsp;</a></span>operator[]()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classsoso_1_1Component.html">Component</a> * ComponentChain::operator[] </td>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="classsoso_1_1Component.html">Component</a> &gt; ComponentChain::operator[] </td>
           <td>(</td>
           <td class="paramtype">const std::string&#160;</td>
           <td class="paramname"><em>name</em></td><td>)</td>
@@ -395,12 +395,12 @@ false </dd></dl>
 </dl>
 <dl class="section return"><dt>반환값</dt><dd><a class="el" href="classsoso_1_1Component.html" title="컴포넌트 구성 요소 Class">Component</a>&amp; </dd></dl>
 
-<p class="definition"><a class="el" href="component_8cpp_source.html">component.cpp</a> 파일의 <a class="el" href="component_8cpp_source.html#l00031">31</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="component_8cpp_source.html">component.cpp</a> 파일의 <a class="el" href="component_8cpp_source.html#l00027">27</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
-<a id="a86d6dbceb6ef3a1bbdedf26431cf7523"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a86d6dbceb6ef3a1bbdedf26431cf7523">&#9670;&nbsp;</a></span>registers()</h2>
+<a id="aa30c87b6b132e73ea8741c1dde6bc8f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa30c87b6b132e73ea8741c1dde6bc8f3">&#9670;&nbsp;</a></span>registers()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -408,7 +408,7 @@ false </dd></dl>
         <tr>
           <td class="memname">void ComponentChain::registers </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classsoso_1_1Component.html">Component</a> *&#160;</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classsoso_1_1Component.html">Component</a> &gt;&#160;</td>
           <td class="paramname"><em>component</em></td><td>)</td>
           <td></td>
         </tr>
@@ -423,7 +423,7 @@ false </dd></dl>
   </dd>
 </dl>
 
-<p class="definition"><a class="el" href="component_8cpp_source.html">component.cpp</a> 파일의 <a class="el" href="component_8cpp_source.html#l00022">22</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="component_8cpp_source.html">component.cpp</a> 파일의 <a class="el" href="component_8cpp_source.html#l00018">18</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -451,13 +451,13 @@ false </dd></dl>
   </dd>
 </dl>
 
-<p class="definition"><a class="el" href="component_8cpp_source.html">component.cpp</a> 파일의 <a class="el" href="component_8cpp_source.html#l00040">40</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="component_8cpp_source.html">component.cpp</a> 파일의 <a class="el" href="component_8cpp_source.html#l00036">36</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
 <h2 class="groupheader">멤버 데이터 문서화</h2>
-<a id="a2b1f705ae5e507888345f51fe64bb042"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2b1f705ae5e507888345f51fe64bb042">&#9670;&nbsp;</a></span>_chains</h2>
+<a id="a79ab7bb941ebbadd95740955fd90099a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79ab7bb941ebbadd95740955fd90099a">&#9670;&nbsp;</a></span>_chains</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -466,7 +466,7 @@ false </dd></dl>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="classsoso_1_1Component.html">Component</a> *&gt; soso::ComponentChain::_chains</td>
+          <td class="memname">std::vector&lt;std::shared_ptr&lt;<a class="el" href="classsoso_1_1Component.html">Component</a>&gt; &gt; soso::ComponentChain::_chains</td>
         </tr>
       </table>
   </td>
