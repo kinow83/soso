@@ -18,7 +18,7 @@ namespace soso {
  * @brief
  * @tparam T
  */
-template <typename T> class Hash {
+template <typename T> class KHash {
   /**
    * @brief
    */
@@ -42,7 +42,7 @@ private:
   ///
   long num_buckets;
   ///
-  Hash<T>::Node **buckets;
+  KHash<T>::Node **buckets;
   ///
   pthread_mutex_t *bucket_lock;
   ///
@@ -85,13 +85,13 @@ public:
    * @param fnToString 데이터 출력 함수
    * @param replace 중복 key 추가 시 데이터 교체 여부
    */
-  Hash(long num_buckets,                     //
-       long (*fnHash)(T &a),                 //
-       int (*fnCompare)(T &a, T &b),         //
-       void (*fnDataFree)(T &a),             //
-       std::optional<T> (*fnDataCopy)(T &a), //
-       std::string (*fnToString)(T &a),      //
-       bool replace) {
+  KHash(long num_buckets,                     //
+        long (*fnHash)(T &a),                 //
+        int (*fnCompare)(T &a, T &b),         //
+        void (*fnDataFree)(T &a),             //
+        std::optional<T> (*fnDataCopy)(T &a), //
+        std::string (*fnToString)(T &a),      //
+        bool replace) {
 
     pthread_mutexattr_t lock_attr;
 
@@ -117,7 +117,7 @@ public:
     }
 
     // buckets
-    buckets = new Hash<T>::Node *[num_buckets];
+    buckets = new KHash<T>::Node *[num_buckets];
     assert(buckets != NULL);
     for (int i = 0; i < num_buckets; i++) {
       buckets[i] = nullptr;
@@ -140,8 +140,8 @@ public:
   /**
    * @brief HashTable 소멸자
    */
-  ~Hash() {
-    Hash<T>::Node *cur, *next;
+  ~KHash() {
+    KHash<T>::Node *cur, *next;
 
     if (this->fnDataFree) {
       for (long i = 0; i < num_buckets; i++) {
@@ -167,7 +167,7 @@ public:
    * @return false
    */
   bool insert(T &data) {
-    Hash<T>::Node *cur, *newnode;
+    KHash<T>::Node *cur, *newnode;
     long index;
     int result;
 
@@ -213,7 +213,7 @@ public:
    * @return false
    */
   bool remove(T &data) {
-    Hash<T>::Node *cur;
+    KHash<T>::Node *cur;
     long index;
     int result;
 
@@ -256,7 +256,7 @@ public:
    * @return std::optional<T>data_copy
    */
   std::optional<T> pop(T &data) {
-    Hash<T>::Node *cur;
+    KHash<T>::Node *cur;
     long index;
     int result;
     T finddata;
@@ -299,7 +299,7 @@ public:
    * @return false
    */
   bool exist(T &data) {
-    Hash<T>::Node *cur;
+    KHash<T>::Node *cur;
     long index;
     int result;
 
@@ -326,7 +326,7 @@ public:
    * @return std::optional<T>
    */
   std::optional<T> copy(T &data) {
-    Hash<T>::Node *cur;
+    KHash<T>::Node *cur;
     long index;
     int result;
     T finddata;
@@ -357,7 +357,7 @@ public:
    * @return std::optional<T>
    */
   std::optional<T> find(T &data) {
-    Hash<T>::Node *cur;
+    KHash<T>::Node *cur;
     long index;
     int result;
     T finddata;
@@ -385,7 +385,7 @@ public:
    * @param outfile
    */
   void show(const char *outfile) {
-    Hash<T>::Node *cur;
+    KHash<T>::Node *cur;
     std::ofstream ofs;
     std::ostream *os;
     long node_count;
@@ -425,7 +425,7 @@ public:
    * @param func
    */
   void loop(std::function<void(T &data)> func) {
-    Hash<T>::Node *cur;
+    KHash<T>::Node *cur;
 
     for (long index = 0; index < num_buckets; index++) {
       pthread_mutex_lock(&bucket_lock[index]);

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7ehash_50',['~Hash',['../classsoso_1_1Hash.html#a5048fe4f263f9dc2b9b4b06e8dbd6faa',1,'soso::Hash']]]
+  ['_7ekhash_50',['~KHash',['../classsoso_1_1KHash.html#a4186282c779933a279f7ca979c055225',1,'soso::KHash']]]
 ];

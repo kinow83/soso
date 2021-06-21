@@ -19,7 +19,7 @@ typedef struct unittest_t {
   char name[64];
 } unittest_t;
 
-Hash<unittest_t *> *ht;
+KHash<unittest_t *> *ht;
 
 long hash_func(unittest_t *&t) { //
   return t->value;
@@ -87,13 +87,13 @@ int main(int argc, char **argv) {
   argc = argc;
   argv = argv;
 
-  ht = new Hash<unittest_t *>(10,           //
-                              hash_func,    //
-                              hash_compare, //
-                              data_free,    //
-                              data_copy,    //
-                              to_string,    //
-                              false);
+  ht = new KHash<unittest_t *>(10,           //
+                               hash_func,    //
+                               hash_compare, //
+                               data_free,    //
+                               data_copy,    //
+                               to_string,    //
+                               false);
 
   for (int i = 0; i < plen; i++) {
     pthread_create(&pid[i], NULL, thread_func, (void *)(i + 1));

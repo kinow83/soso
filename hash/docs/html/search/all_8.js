@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['loop_21',['loop',['../classsoso_1_1Hash.html#a18f5005549077c4b9972510a26ee9202',1,'soso::Hash']]]
+  ['khash_20',['KHash',['../classsoso_1_1KHash.html',1,'soso::KHash&lt; T &gt;'],['../classsoso_1_1KHash.html#af15b7da66a8602c2d19a80544475c561',1,'soso::KHash::KHash()']]]
 ];

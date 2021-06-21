@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['insert_44',['insert',['../classsoso_1_1Hash.html#a66f8d59718aa743b93e1ce6ee0b42951',1,'soso::Hash']]]
+  ['khash_44',['KHash',['../classsoso_1_1KHash.html#af15b7da66a8602c2d19a80544475c561',1,'soso::KHash']]]
 ];

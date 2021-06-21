@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['remove_29',['remove',['../classsoso_1_1Hash.html#a6fb1368097cdd9b0a1a067239392462b',1,'soso::Hash']]],
-  ['replace_30',['replace',['../classsoso_1_1Hash.html#aabfcc19c7e54ff265e39ccf38805bb24',1,'soso::Hash']]]
+  ['pop_27',['pop',['../classsoso_1_1KHash.html#a55d32250d838ea46d88f098dd87d1fc7',1,'soso::KHash']]],
+  ['prev_28',['prev',['../classsoso_1_1KHash_1_1Node.html#a727f0ff3da51c3c6ddcc04170639a18f',1,'soso::KHash::Node']]]
 ];

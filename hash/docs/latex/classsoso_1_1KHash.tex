@@ -1,0 +1,464 @@
+\hypertarget{classsoso_1_1KHash}{}\doxysection{soso\+::K\+Hash$<$ T $>$ 클래스 템플릿 참조}
+\label{classsoso_1_1KHash}\index{soso::KHash$<$ T $>$@{soso::KHash$<$ T $>$}}
+
+
+{\ttfamily \#include $<$hash.\+hpp$>$}
+
+
+
+soso\+::K\+Hash$<$ T $>$에 대한 협력 다이어그램\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsoso_1_1KHash__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{클래스}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsoso_1_1KHash_1_1Node}{Node}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsoso_1_1KHash_af15b7da66a8602c2d19a80544475c561}{K\+Hash}} (long \mbox{\hyperlink{classsoso_1_1KHash_a811d4e1452cb58cfded71ba6b2dc61e6}{num\+\_\+buckets}}, long($\ast$\mbox{\hyperlink{classsoso_1_1KHash_a5e104ba0443bf94ad107e69dccd7a7f0}{fn\+Hash}})(T \&a), int($\ast$\mbox{\hyperlink{classsoso_1_1KHash_a74654cc7ca747e1d0049cef0838f2f5e}{fn\+Compare}})(T \&a, T \&b), void($\ast$\mbox{\hyperlink{classsoso_1_1KHash_ac2921f340437d6af083f383e213a37b5}{fn\+Data\+Free}})(T \&a), std\+::optional$<$ T $>$($\ast$\mbox{\hyperlink{classsoso_1_1KHash_a98cfff8b11cd4476f38357eb63b99b43}{fn\+Data\+Copy}})(T \&a), std\+::string($\ast$\mbox{\hyperlink{classsoso_1_1KHash_aef45a0e0a8510d6147e52db958249a52}{fn\+To\+String}})(T \&a), bool \mbox{\hyperlink{classsoso_1_1KHash_a1d0e93c5fbccc9938e1bdc318b305b31}{replace}})
+\begin{DoxyCompactList}\small\item\em Hash\+Table 생성자 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsoso_1_1KHash_a4186282c779933a279f7ca979c055225}{$\sim$\+K\+Hash}} ()
+\begin{DoxyCompactList}\small\item\em Hash\+Table 소멸자 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsoso_1_1KHash_a36ce611778a57c5d002d609ff875e783}{insert}} (T \&data)
+\begin{DoxyCompactList}\small\item\em 데이터 추가 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsoso_1_1KHash_ac8570b377cb2ca64ae53df53acfa5940}{remove}} (T \&data)
+\begin{DoxyCompactList}\small\item\em 데이터 삭제 \end{DoxyCompactList}\item 
+std\+::optional$<$ T $>$ \mbox{\hyperlink{classsoso_1_1KHash_a55d32250d838ea46d88f098dd87d1fc7}{pop}} (T \&data)
+\begin{DoxyCompactList}\small\item\em 데이터 제거 후 추출 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsoso_1_1KHash_a9376091102f39c7da52c7bb6dd9d1943}{exist}} (T \&data)
+\begin{DoxyCompactList}\small\item\em 데이터 존재 여부 \end{DoxyCompactList}\item 
+std\+::optional$<$ T $>$ \mbox{\hyperlink{classsoso_1_1KHash_aa74a28fecf193a57bc971770c0c4f3bd}{copy}} (T \&data)
+\begin{DoxyCompactList}\small\item\em 데이터 복사 (복사 함수 구현되어야 함 -\/ for thread safe) \end{DoxyCompactList}\item 
+std\+::optional$<$ T $>$ \mbox{\hyperlink{classsoso_1_1KHash_a89affca8dd162012f5ad72337b4f07e9}{find}} (T \&data)
+\begin{DoxyCompactList}\small\item\em 데이터 조회 -\/ thread not safe \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsoso_1_1KHash_a1ad2500bb1ce664907d7d0b8dad90c94}{show}} (const char $\ast$outfile)
+\begin{DoxyCompactList}\small\item\em 해쉬 테이블 정보 디버깅 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsoso_1_1KHash_a8260e281e952f6cbfdb03c499ee36efd}{loop}} (std\+::function$<$ void(T \&data)$>$ func)
+\begin{DoxyCompactList}\small\item\em 해쉬 테이블 전역 데이터를 순회하면서 func을 호출한다.~\newline
+내부적으로 버킷 lock을 걸고 순회하므로 thread-\/safe 함 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structatomic__t}{atomic\+\_\+t}} \mbox{\hyperlink{classsoso_1_1KHash_a98acd7fe2c04187aa2324e81335ac421}{num\+\_\+elements}}
+\item 
+long \mbox{\hyperlink{classsoso_1_1KHash_a811d4e1452cb58cfded71ba6b2dc61e6}{num\+\_\+buckets}}
+\item 
+\mbox{\hyperlink{classsoso_1_1KHash}{K\+Hash}}$<$ T $>$\+::\mbox{\hyperlink{classsoso_1_1KHash_1_1Node}{Node}} $\ast$$\ast$ \mbox{\hyperlink{classsoso_1_1KHash_aec6f04f12f18587c78f3ef13cfcc7311}{buckets}}
+\item 
+pthread\+\_\+mutex\+\_\+t $\ast$ \mbox{\hyperlink{classsoso_1_1KHash_ae6e7208bf51ec753da7b3623619a76f1}{bucket\+\_\+lock}}
+\item 
+pthread\+\_\+mutex\+\_\+t \mbox{\hyperlink{classsoso_1_1KHash_a5a042bb61c396cf211817ba34f40b051}{hash\+\_\+table\+\_\+lock}}
+\item 
+long $\ast$ \mbox{\hyperlink{classsoso_1_1KHash_a9cceaae6e091009cd4f6d9bdc261896e}{num\+\_\+of\+\_\+nodes\+\_\+in\+\_\+bucket}}
+\item 
+bool \mbox{\hyperlink{classsoso_1_1KHash_a1d0e93c5fbccc9938e1bdc318b305b31}{replace}}
+\item 
+long($\ast$ \mbox{\hyperlink{classsoso_1_1KHash_a5e104ba0443bf94ad107e69dccd7a7f0}{fn\+Hash}} )(T \&a)
+\item 
+int($\ast$ \mbox{\hyperlink{classsoso_1_1KHash_a74654cc7ca747e1d0049cef0838f2f5e}{fn\+Compare}} )(T \&a, T \&b)
+\item 
+void($\ast$ \mbox{\hyperlink{classsoso_1_1KHash_ac2921f340437d6af083f383e213a37b5}{fn\+Data\+Free}} )(T \&a)
+\item 
+std\+::optional$<$ T $>$($\ast$ \mbox{\hyperlink{classsoso_1_1KHash_a98cfff8b11cd4476f38357eb63b99b43}{fn\+Data\+Copy}} )(T \&a)
+\item 
+std\+::string($\ast$ \mbox{\hyperlink{classsoso_1_1KHash_aef45a0e0a8510d6147e52db958249a52}{fn\+To\+String}} )(T \&a)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+\subsubsection*{template$<$typename T$>$\newline
+class soso\+::\+K\+Hash$<$ T $>$}
+
+
+\begin{DoxyTemplParams}{템플릿 파라메터}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+
+hash.\+hpp 파일의 21 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{classsoso_1_1KHash_af15b7da66a8602c2d19a80544475c561}\label{classsoso_1_1KHash_af15b7da66a8602c2d19a80544475c561}} 
+\index{soso::KHash$<$ T $>$@{soso::KHash$<$ T $>$}!KHash@{KHash}}
+\index{KHash@{KHash}!soso::KHash$<$ T $>$@{soso::KHash$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{KHash()}{KHash()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classsoso_1_1KHash}{soso\+::\+K\+Hash}}$<$ T $>$\+::\mbox{\hyperlink{classsoso_1_1KHash}{K\+Hash}} (\begin{DoxyParamCaption}\item[{long}]{num\+\_\+buckets,  }\item[{long($\ast$)(T \&a)}]{fn\+Hash,  }\item[{int($\ast$)(T \&a, T \&b)}]{fn\+Compare,  }\item[{void($\ast$)(T \&a)}]{fn\+Data\+Free,  }\item[{std\+::optional$<$ T $>$($\ast$)(T \&a)}]{fn\+Data\+Copy,  }\item[{std\+::string($\ast$)(T \&a)}]{fn\+To\+String,  }\item[{bool}]{replace }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Hash\+Table 생성자 
+
+
+\begin{DoxyParams}{매개변수}
+{\em num\+\_\+buckets} & 해쉬 버킷 수 \\
+\hline
+{\em fn\+Hash} & 해쉬 함수 \\
+\hline
+{\em fn\+Compare} & 데이터 비교 함수 \\
+\hline
+{\em fn\+Data\+Free} & 데이터 메모리 해제 함수 \\
+\hline
+{\em fn\+Data\+Copy} & 데이터 복사 함수 (for thread safe) \\
+\hline
+{\em fn\+To\+String} & 데이터 출력 함수 \\
+\hline
+{\em replace} & 중복 key 추가 시 데이터 교체 여부 \\
+\hline
+\end{DoxyParams}
+
+
+hash.\+hpp 파일의 88 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1KHash_a4186282c779933a279f7ca979c055225}\label{classsoso_1_1KHash_a4186282c779933a279f7ca979c055225}} 
+\index{soso::KHash$<$ T $>$@{soso::KHash$<$ T $>$}!````~KHash@{$\sim$KHash}}
+\index{````~KHash@{$\sim$KHash}!soso::KHash$<$ T $>$@{soso::KHash$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$KHash()}{~KHash()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classsoso_1_1KHash}{soso\+::\+K\+Hash}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{classsoso_1_1KHash}{K\+Hash}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Hash\+Table 소멸자 
+
+
+
+hash.\+hpp 파일의 143 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{classsoso_1_1KHash_aa74a28fecf193a57bc971770c0c4f3bd}\label{classsoso_1_1KHash_aa74a28fecf193a57bc971770c0c4f3bd}} 
+\index{soso::KHash$<$ T $>$@{soso::KHash$<$ T $>$}!copy@{copy}}
+\index{copy@{copy}!soso::KHash$<$ T $>$@{soso::KHash$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::optional$<$T$>$ \mbox{\hyperlink{classsoso_1_1KHash}{soso\+::\+K\+Hash}}$<$ T $>$\+::copy (\begin{DoxyParamCaption}\item[{T \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+데이터 복사 (복사 함수 구현되어야 함 -\/ for thread safe) 
+
+
+\begin{DoxyParams}{매개변수}
+{\em data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+std\+::optional$<$\+T$>$ 
+\end{DoxyReturn}
+
+
+hash.\+hpp 파일의 328 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1KHash_a9376091102f39c7da52c7bb6dd9d1943}\label{classsoso_1_1KHash_a9376091102f39c7da52c7bb6dd9d1943}} 
+\index{soso::KHash$<$ T $>$@{soso::KHash$<$ T $>$}!exist@{exist}}
+\index{exist@{exist}!soso::KHash$<$ T $>$@{soso::KHash$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{exist()}{exist()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classsoso_1_1KHash}{soso\+::\+K\+Hash}}$<$ T $>$\+::exist (\begin{DoxyParamCaption}\item[{T \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+데이터 존재 여부 
+
+
+\begin{DoxyParams}{매개변수}
+{\em data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+hash.\+hpp 파일의 301 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1KHash_a89affca8dd162012f5ad72337b4f07e9}\label{classsoso_1_1KHash_a89affca8dd162012f5ad72337b4f07e9}} 
+\index{soso::KHash$<$ T $>$@{soso::KHash$<$ T $>$}!find@{find}}
+\index{find@{find}!soso::KHash$<$ T $>$@{soso::KHash$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::optional$<$T$>$ \mbox{\hyperlink{classsoso_1_1KHash}{soso\+::\+K\+Hash}}$<$ T $>$\+::find (\begin{DoxyParamCaption}\item[{T \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+데이터 조회 -\/ thread not safe 
+
+
+\begin{DoxyParams}{매개변수}
+{\em data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+std\+::optional$<$\+T$>$ 
+\end{DoxyReturn}
+
+
+hash.\+hpp 파일의 359 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1KHash_a36ce611778a57c5d002d609ff875e783}\label{classsoso_1_1KHash_a36ce611778a57c5d002d609ff875e783}} 
+\index{soso::KHash$<$ T $>$@{soso::KHash$<$ T $>$}!insert@{insert}}
+\index{insert@{insert}!soso::KHash$<$ T $>$@{soso::KHash$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classsoso_1_1KHash}{soso\+::\+K\+Hash}}$<$ T $>$\+::insert (\begin{DoxyParamCaption}\item[{T \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+데이터 추가 
+
+
+\begin{DoxyParams}{매개변수}
+{\em data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+hash.\+hpp 파일의 169 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1KHash_a8260e281e952f6cbfdb03c499ee36efd}\label{classsoso_1_1KHash_a8260e281e952f6cbfdb03c499ee36efd}} 
+\index{soso::KHash$<$ T $>$@{soso::KHash$<$ T $>$}!loop@{loop}}
+\index{loop@{loop}!soso::KHash$<$ T $>$@{soso::KHash$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classsoso_1_1KHash}{soso\+::\+K\+Hash}}$<$ T $>$\+::loop (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(T \&data)$>$}]{func }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+해쉬 테이블 전역 데이터를 순회하면서 func을 호출한다.~\newline
+내부적으로 버킷 lock을 걸고 순회하므로 thread-\/safe 함 
+
+
+\begin{DoxyParams}{매개변수}
+{\em func} & \\
+\hline
+\end{DoxyParams}
+
+
+hash.\+hpp 파일의 427 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1KHash_a55d32250d838ea46d88f098dd87d1fc7}\label{classsoso_1_1KHash_a55d32250d838ea46d88f098dd87d1fc7}} 
+\index{soso::KHash$<$ T $>$@{soso::KHash$<$ T $>$}!pop@{pop}}
+\index{pop@{pop}!soso::KHash$<$ T $>$@{soso::KHash$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::optional$<$T$>$ \mbox{\hyperlink{classsoso_1_1KHash}{soso\+::\+K\+Hash}}$<$ T $>$\+::pop (\begin{DoxyParamCaption}\item[{T \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+데이터 제거 후 추출 
+
+
+\begin{DoxyParams}{매개변수}
+{\em data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+std\+::optional$<$\+T$>$data\+\_\+copy 
+\end{DoxyReturn}
+
+
+hash.\+hpp 파일의 258 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1KHash_ac8570b377cb2ca64ae53df53acfa5940}\label{classsoso_1_1KHash_ac8570b377cb2ca64ae53df53acfa5940}} 
+\index{soso::KHash$<$ T $>$@{soso::KHash$<$ T $>$}!remove@{remove}}
+\index{remove@{remove}!soso::KHash$<$ T $>$@{soso::KHash$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classsoso_1_1KHash}{soso\+::\+K\+Hash}}$<$ T $>$\+::remove (\begin{DoxyParamCaption}\item[{T \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+데이터 삭제 
+
+
+\begin{DoxyParams}{매개변수}
+{\em data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+hash.\+hpp 파일의 215 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1KHash_a1ad2500bb1ce664907d7d0b8dad90c94}\label{classsoso_1_1KHash_a1ad2500bb1ce664907d7d0b8dad90c94}} 
+\index{soso::KHash$<$ T $>$@{soso::KHash$<$ T $>$}!show@{show}}
+\index{show@{show}!soso::KHash$<$ T $>$@{soso::KHash$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classsoso_1_1KHash}{soso\+::\+K\+Hash}}$<$ T $>$\+::show (\begin{DoxyParamCaption}\item[{const char $\ast$}]{outfile }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+해쉬 테이블 정보 디버깅 
+
+
+\begin{DoxyParams}{매개변수}
+{\em outfile} & \\
+\hline
+\end{DoxyParams}
+
+
+hash.\+hpp 파일의 387 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{classsoso_1_1KHash_ae6e7208bf51ec753da7b3623619a76f1}\label{classsoso_1_1KHash_ae6e7208bf51ec753da7b3623619a76f1}} 
+\index{soso::KHash$<$ T $>$@{soso::KHash$<$ T $>$}!bucket\_lock@{bucket\_lock}}
+\index{bucket\_lock@{bucket\_lock}!soso::KHash$<$ T $>$@{soso::KHash$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{bucket\_lock}{bucket\_lock}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+pthread\+\_\+mutex\+\_\+t$\ast$ \mbox{\hyperlink{classsoso_1_1KHash}{soso\+::\+K\+Hash}}$<$ T $>$\+::bucket\+\_\+lock\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+hash.\+hpp 파일의 47 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1KHash_aec6f04f12f18587c78f3ef13cfcc7311}\label{classsoso_1_1KHash_aec6f04f12f18587c78f3ef13cfcc7311}} 
+\index{soso::KHash$<$ T $>$@{soso::KHash$<$ T $>$}!buckets@{buckets}}
+\index{buckets@{buckets}!soso::KHash$<$ T $>$@{soso::KHash$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{buckets}{buckets}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classsoso_1_1KHash}{K\+Hash}}$<$T$>$\+::\mbox{\hyperlink{classsoso_1_1KHash_1_1Node}{Node}}$\ast$$\ast$ \mbox{\hyperlink{classsoso_1_1KHash}{soso\+::\+K\+Hash}}$<$ T $>$\+::buckets\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+hash.\+hpp 파일의 45 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1KHash_a74654cc7ca747e1d0049cef0838f2f5e}\label{classsoso_1_1KHash_a74654cc7ca747e1d0049cef0838f2f5e}} 
+\index{soso::KHash$<$ T $>$@{soso::KHash$<$ T $>$}!fnCompare@{fnCompare}}
+\index{fnCompare@{fnCompare}!soso::KHash$<$ T $>$@{soso::KHash$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{fnCompare}{fnCompare}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int($\ast$ \mbox{\hyperlink{classsoso_1_1KHash}{soso\+::\+K\+Hash}}$<$ T $>$\+::fn\+Compare) (T \&a, T \&b)\hspace{0.3cm}{\ttfamily [private]}}
+
+@briefstd 
+
+hash.\+hpp 파일의 63 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1KHash_a98cfff8b11cd4476f38357eb63b99b43}\label{classsoso_1_1KHash_a98cfff8b11cd4476f38357eb63b99b43}} 
+\index{soso::KHash$<$ T $>$@{soso::KHash$<$ T $>$}!fnDataCopy@{fnDataCopy}}
+\index{fnDataCopy@{fnDataCopy}!soso::KHash$<$ T $>$@{soso::KHash$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{fnDataCopy}{fnDataCopy}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::optional$<$T$>$($\ast$ \mbox{\hyperlink{classsoso_1_1KHash}{soso\+::\+K\+Hash}}$<$ T $>$\+::fn\+Data\+Copy) (T \&a)\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+hash.\+hpp 파일의 71 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1KHash_ac2921f340437d6af083f383e213a37b5}\label{classsoso_1_1KHash_ac2921f340437d6af083f383e213a37b5}} 
+\index{soso::KHash$<$ T $>$@{soso::KHash$<$ T $>$}!fnDataFree@{fnDataFree}}
+\index{fnDataFree@{fnDataFree}!soso::KHash$<$ T $>$@{soso::KHash$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{fnDataFree}{fnDataFree}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void($\ast$ \mbox{\hyperlink{classsoso_1_1KHash}{soso\+::\+K\+Hash}}$<$ T $>$\+::fn\+Data\+Free) (T \&a)\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+hash.\+hpp 파일의 67 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1KHash_a5e104ba0443bf94ad107e69dccd7a7f0}\label{classsoso_1_1KHash_a5e104ba0443bf94ad107e69dccd7a7f0}} 
+\index{soso::KHash$<$ T $>$@{soso::KHash$<$ T $>$}!fnHash@{fnHash}}
+\index{fnHash@{fnHash}!soso::KHash$<$ T $>$@{soso::KHash$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{fnHash}{fnHash}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+long($\ast$ \mbox{\hyperlink{classsoso_1_1KHash}{soso\+::\+K\+Hash}}$<$ T $>$\+::fn\+Hash) (T \&a)\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+hash.\+hpp 파일의 59 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1KHash_aef45a0e0a8510d6147e52db958249a52}\label{classsoso_1_1KHash_aef45a0e0a8510d6147e52db958249a52}} 
+\index{soso::KHash$<$ T $>$@{soso::KHash$<$ T $>$}!fnToString@{fnToString}}
+\index{fnToString@{fnToString}!soso::KHash$<$ T $>$@{soso::KHash$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{fnToString}{fnToString}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::string($\ast$ \mbox{\hyperlink{classsoso_1_1KHash}{soso\+::\+K\+Hash}}$<$ T $>$\+::fn\+To\+String) (T \&a)\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+hash.\+hpp 파일의 75 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1KHash_a5a042bb61c396cf211817ba34f40b051}\label{classsoso_1_1KHash_a5a042bb61c396cf211817ba34f40b051}} 
+\index{soso::KHash$<$ T $>$@{soso::KHash$<$ T $>$}!hash\_table\_lock@{hash\_table\_lock}}
+\index{hash\_table\_lock@{hash\_table\_lock}!soso::KHash$<$ T $>$@{soso::KHash$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{hash\_table\_lock}{hash\_table\_lock}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+pthread\+\_\+mutex\+\_\+t \mbox{\hyperlink{classsoso_1_1KHash}{soso\+::\+K\+Hash}}$<$ T $>$\+::hash\+\_\+table\+\_\+lock\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+hash.\+hpp 파일의 49 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1KHash_a811d4e1452cb58cfded71ba6b2dc61e6}\label{classsoso_1_1KHash_a811d4e1452cb58cfded71ba6b2dc61e6}} 
+\index{soso::KHash$<$ T $>$@{soso::KHash$<$ T $>$}!num\_buckets@{num\_buckets}}
+\index{num\_buckets@{num\_buckets}!soso::KHash$<$ T $>$@{soso::KHash$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{num\_buckets}{num\_buckets}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+long \mbox{\hyperlink{classsoso_1_1KHash}{soso\+::\+K\+Hash}}$<$ T $>$\+::num\+\_\+buckets\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+hash.\+hpp 파일의 43 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1KHash_a98acd7fe2c04187aa2324e81335ac421}\label{classsoso_1_1KHash_a98acd7fe2c04187aa2324e81335ac421}} 
+\index{soso::KHash$<$ T $>$@{soso::KHash$<$ T $>$}!num\_elements@{num\_elements}}
+\index{num\_elements@{num\_elements}!soso::KHash$<$ T $>$@{soso::KHash$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{num\_elements}{num\_elements}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structatomic__t}{atomic\+\_\+t}} \mbox{\hyperlink{classsoso_1_1KHash}{soso\+::\+K\+Hash}}$<$ T $>$\+::num\+\_\+elements\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+hash.\+hpp 파일의 41 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1KHash_a9cceaae6e091009cd4f6d9bdc261896e}\label{classsoso_1_1KHash_a9cceaae6e091009cd4f6d9bdc261896e}} 
+\index{soso::KHash$<$ T $>$@{soso::KHash$<$ T $>$}!num\_of\_nodes\_in\_bucket@{num\_of\_nodes\_in\_bucket}}
+\index{num\_of\_nodes\_in\_bucket@{num\_of\_nodes\_in\_bucket}!soso::KHash$<$ T $>$@{soso::KHash$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{num\_of\_nodes\_in\_bucket}{num\_of\_nodes\_in\_bucket}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+long$\ast$ \mbox{\hyperlink{classsoso_1_1KHash}{soso\+::\+K\+Hash}}$<$ T $>$\+::num\+\_\+of\+\_\+nodes\+\_\+in\+\_\+bucket\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+hash.\+hpp 파일의 51 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1KHash_a1d0e93c5fbccc9938e1bdc318b305b31}\label{classsoso_1_1KHash_a1d0e93c5fbccc9938e1bdc318b305b31}} 
+\index{soso::KHash$<$ T $>$@{soso::KHash$<$ T $>$}!replace@{replace}}
+\index{replace@{replace}!soso::KHash$<$ T $>$@{soso::KHash$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{replace}{replace}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classsoso_1_1KHash}{soso\+::\+K\+Hash}}$<$ T $>$\+::replace\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+hash.\+hpp 파일의 53 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{hash_8hpp}{hash.\+hpp}}\end{DoxyCompactItemize}

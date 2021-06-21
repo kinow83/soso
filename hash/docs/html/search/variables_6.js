@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['prev_65',['prev',['../classsoso_1_1Hash_1_1Node.html#ad8cb8f07b92a082d82b920920aa0b8e6',1,'soso::Hash::Node']]]
+  ['prev_65',['prev',['../classsoso_1_1KHash_1_1Node.html#a727f0ff3da51c3c6ddcc04170639a18f',1,'soso::KHash::Node']]]
 ];

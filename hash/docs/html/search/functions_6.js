@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['node_46',['Node',['../classsoso_1_1Hash_1_1Node.html#ab893913b5e2f49b82f0c903ac1185748',1,'soso::Hash::Node::Node()'],['../classsoso_1_1Hash_1_1Node.html#a4bbb570c40b04dccc2879143c0e9c4e3',1,'soso::Hash::Node::Node(T &amp;data)']]]
+  ['node_46',['Node',['../classsoso_1_1KHash_1_1Node.html#ae4f9709331181d9265600776fd000f03',1,'soso::KHash::Node::Node()'],['../classsoso_1_1KHash_1_1Node.html#abfd5fc6403acac41e3273182b5621721',1,'soso::KHash::Node::Node(T &amp;data)']]]
 ];
