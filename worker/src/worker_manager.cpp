@@ -1,4 +1,5 @@
 #include "worker.h"
+#include <iostream>
 #include <pthread.h>
 
 using namespace std;
@@ -34,6 +35,10 @@ WorkerManager::WorkerManager(const std::string &name, int worker_num,
   _job_s_CV = make_shared<condition_variable>();
 }
 
+void WorkerManager::setWorkerInitialize(worker_init_t handler) {
+  _worker_init_handler = handler;
+}
+
 void WorkerManager::workerThreadFunc(shared_ptr<Worker> worker,
                                      deque<shared_ptr<Job>> *Q,
                                      shared_ptr<mutex> M,
@@ -43,7 +48,10 @@ void WorkerManager::workerThreadFunc(shared_ptr<Worker> worker,
 
   pthread_setname_np(pthread_self(), worker_name.c_str());
 
-  unique_lock<mutex> lock(*M.get());
+  /// worker initialize
+  if (_worker_init_handler) {
+    _worker_init_handler(worker);
+  }
 
   while (true) {
     if (!_running && Q->empty()) {
@@ -51,31 +59,12 @@ void WorkerManager::workerThreadFunc(shared_ptr<Worker> worker,
     }
 
     // wait for job wakeup signal
+
+    unique_lock<mutex> lock(*M.get());
     CV->wait_for(lock, _wait_for_ms);
 
     while (!Q->empty()) {
-#if 0
-      cout << "pop start: worker:#" << worker->getWorkerID() << " " << Q->size()
-           << "\n";
-#endif
       job = Q->front();
-
-#if 0
-      size_t affinity_idx;
-      /// affinity인 경우 worker ID와 작업 hashcode를 비교하여
-      /// worker가 처리해야 할 작업인지 판단
-      /// 현재 worker가 처리해야 할 작업이 아닌 경우 작업 큐에서 꺼내지 않고
-      /// 다른 worker가 처리할 수 있도록 알려(notify)준다.
-      if (job->affinity()) {
-        affinity_idx = job->jobHashCode() % _worker_num;
-        if (worker->getWorkerID() != affinity_idx) {
-          CV->notify_one();
-          /// 다른 worker에게 CPU를 양보한다.
-          this_thread::yield();
-          break;
-        }
-      }
-#endif
 
       job->setWorkerID(worker->getWorkerID());
       auto handler = job->getHandler();
@@ -83,10 +72,6 @@ void WorkerManager::workerThreadFunc(shared_ptr<Worker> worker,
 
       Q->pop_front();
       worker->incCompletedJobs(); // increment completed job count
-#if 0
-      cout << "pop end: worker:#" << worker->getWorkerID() << " " << Q->size()
-           << "\n";
-#endif
     }
   }
 
@@ -127,7 +112,9 @@ void WorkerManager::join() {
   }
 }
 
-string WorkerManager::workerName() { return _name; }
+string WorkerManager::workerName() { //
+  return _name;
+}
 
 string WorkerManager::report() {
   string result = "";
@@ -217,16 +204,21 @@ void WorkerManager::addJobMultiWorker(const string &name,    //
   return addJob(name, handler, MULTI_WORKER, affinity);
 }
 
+void WorkerManager::run(bool block) { //
+  _run(&WorkerManager::workerThreadFunc, block);
+}
+
 /**
  * @brief ModuleWorker 수행
  * @param block YES인 경우 run 함수 block되어 뒤에 실행 코드가 수행 안됨\n
  * FALSE인 경우 run 함수 호출 후 바로 리턴됨
  */
-void WorkerManager::run(bool block) {
+template <typename _Callable> //
+void WorkerManager::_run(_Callable &&__f, bool block) {
   /// create job worker thread
   for (auto worker : _m_workers) {
     // thread create and run
-    auto th = make_shared<thread>(thread(&WorkerManager::workerThreadFunc, //
+    auto th = make_shared<thread>(thread(__f,                              //
                                          this,                             //
                                          worker,                           //
                                          &_job_m_Q[worker->getWorkerID()], //
@@ -235,11 +227,11 @@ void WorkerManager::run(bool block) {
 
     _worker_threads.push_back(th);
   }
-  auto th = make_shared<thread>(thread(&WorkerManager::workerThreadFunc, //
-                                       this,                             //
-                                       _s_worker,                        //
-                                       &_job_s_Q,                        //
-                                       _job_s_M,                         //
+  auto th = make_shared<thread>(thread(__f,       //
+                                       this,      //
+                                       _s_worker, //
+                                       &_job_s_Q, //
+                                       _job_s_M,  //
                                        _job_s_CV));
   _worker_threads.push_back(th);
 

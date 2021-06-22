@@ -1,0 +1,103 @@
+\hypertarget{classsoso_1_1WorkerManager2}{}\doxysection{soso\+::Worker\+Manager2 클래스 참조}
+\label{classsoso_1_1WorkerManager2}\index{soso::WorkerManager2@{soso::WorkerManager2}}
+
+
+{\ttfamily \#include $<$worker.\+h$>$}
+
+
+
+soso\+::Worker\+Manager2에 대한 상속 다이어그램 \+: 
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classsoso_1_1WorkerManager2__inherit__graph}
+\end{center}
+\end{figure}
+
+
+soso\+::Worker\+Manager2에 대한 협력 다이어그램\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classsoso_1_1WorkerManager2__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsoso_1_1WorkerManager2_a56e9c6f8cc43dff19792bd515d063ed5}{Worker\+Manager2}} (const std\+::string \&name, int worker\+\_\+num)
+\begin{DoxyCompactList}\small\item\em Module\+Worker 생성자 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsoso_1_1WorkerManager2_a857f4f59872b35c3c94edc757cdea91f}{run}} (bool block=false)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classsoso_1_1WorkerManager2_a60315674e4d92fe57e90d5d27490ce68}{worker\+Thread\+Func}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsoso_1_1Worker}{Worker}} $>$ worker, std\+::deque$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsoso_1_1Job}{Job}} $>$$>$ $\ast$Q, std\+::shared\+\_\+ptr$<$ std\+::mutex $>$ M, std\+::shared\+\_\+ptr$<$ std\+::condition\+\_\+variable $>$ CV)
+\end{DoxyCompactItemize}
+\doxysubsection*{추가로 상속된 멤버들}
+
+
+\doxysubsection{상세한 설명}
+
+
+worker.\+h 파일의 291 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{classsoso_1_1WorkerManager2_a56e9c6f8cc43dff19792bd515d063ed5}\label{classsoso_1_1WorkerManager2_a56e9c6f8cc43dff19792bd515d063ed5}} 
+\index{soso::WorkerManager2@{soso::WorkerManager2}!WorkerManager2@{WorkerManager2}}
+\index{WorkerManager2@{WorkerManager2}!soso::WorkerManager2@{soso::WorkerManager2}}
+\doxysubsubsection{\texorpdfstring{WorkerManager2()}{WorkerManager2()}}
+{\footnotesize\ttfamily Worker\+Manager2\+::\+Worker\+Manager2 (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{int}]{worker\+\_\+num }\end{DoxyParamCaption})}
+
+
+
+Module\+Worker 생성자 
+
+
+\begin{DoxyParams}{매개변수}
+{\em worker\+\_\+num} & worker(작업자) 수 \\
+\hline
+{\em wait\+\_\+for\+\_\+ms} & job(작업) 용처 대기 시간 (millisecond) \\
+\hline
+\end{DoxyParams}
+
+
+worker\+\_\+manager2.\+cpp 파일의 20 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{classsoso_1_1WorkerManager2_a857f4f59872b35c3c94edc757cdea91f}\label{classsoso_1_1WorkerManager2_a857f4f59872b35c3c94edc757cdea91f}} 
+\index{soso::WorkerManager2@{soso::WorkerManager2}!run@{run}}
+\index{run@{run}!soso::WorkerManager2@{soso::WorkerManager2}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Worker\+Manager2\+::run (\begin{DoxyParamCaption}\item[{bool}]{block = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+worker\+\_\+manager2.\+cpp 파일의 11 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1WorkerManager2_a60315674e4d92fe57e90d5d27490ce68}\label{classsoso_1_1WorkerManager2_a60315674e4d92fe57e90d5d27490ce68}} 
+\index{soso::WorkerManager2@{soso::WorkerManager2}!workerThreadFunc@{workerThreadFunc}}
+\index{workerThreadFunc@{workerThreadFunc}!soso::WorkerManager2@{soso::WorkerManager2}}
+\doxysubsubsection{\texorpdfstring{workerThreadFunc()}{workerThreadFunc()}}
+{\footnotesize\ttfamily void Worker\+Manager2\+::worker\+Thread\+Func (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsoso_1_1Worker}{Worker}} $>$}]{worker,  }\item[{std\+::deque$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsoso_1_1Job}{Job}} $>$$>$ $\ast$}]{Q,  }\item[{std\+::shared\+\_\+ptr$<$ std\+::mutex $>$}]{M,  }\item[{std\+::shared\+\_\+ptr$<$ std\+::condition\+\_\+variable $>$}]{CV }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+worker initialize
+
+increment completed job count
+
+worker thread 종료 되었음을 알림
+
+worker\+\_\+manager2.\+cpp 파일의 25 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{worker_8h}{worker.\+h}}\item 
+src/\mbox{\hyperlink{worker__manager2_8cpp}{worker\+\_\+manager2.\+cpp}}\end{DoxyCompactItemize}

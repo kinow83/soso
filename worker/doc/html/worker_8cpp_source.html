@@ -95,38 +95,46 @@ $(function() {
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  _completed_jobs = 0;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classsoso_1_1Worker.html#ac3257e86c086cdbdaff150b56d735262">   27</a></span>&#160;<a class="code" href="namespacesoso.html#a390399d33ffd04660776fff91e506a43">JOB_QUEUE_TYPE</a> Worker::getJobType() { <span class="comment">//</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordflow">return</span> _job_type;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classsoso_1_1Worker.html#ac342ba42461e92eda67afa7ebd7ccce1">   27</a></span>&#160;shared_ptr&lt;void&gt; Worker::getCTX() { <span class="comment">//</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordflow">return</span> _ctx;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classsoso_1_1Worker.html#a75c95a11431169fd640b4619fe2b77d6">   31</a></span>&#160;<span class="keyword">const</span> <a class="code" href="classsoso_1_1WorkerManager.html">WorkerManager</a> *Worker::getWorkerManager() { <span class="comment">//</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordflow">return</span> _worker_manager;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classsoso_1_1Worker.html#af2e9706d939ce9177a25ab1cae1b1921">   31</a></span>&#160;<span class="keywordtype">void</span> Worker::setCTX(shared_ptr&lt;void&gt; ctx) { <span class="comment">//</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  _ctx = ctx;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classsoso_1_1Worker.html#a7d84269bb2ee56c12eb5889c908f677a">   35</a></span>&#160;<span class="keywordtype">bool</span> Worker::finished() { <span class="comment">//</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordflow">return</span> (_running == <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classsoso_1_1Worker.html#ac3257e86c086cdbdaff150b56d735262">   35</a></span>&#160;<a class="code" href="namespacesoso.html#a390399d33ffd04660776fff91e506a43">JOB_QUEUE_TYPE</a> Worker::getJobType() { <span class="comment">//</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordflow">return</span> _job_type;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classsoso_1_1Worker.html#a87ed5c03d94de44fe6de8628c2b1a622">   39</a></span>&#160;<span class="keywordtype">void</span> Worker::terminate() { <span class="comment">//</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  _running = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classsoso_1_1Worker.html#a75c95a11431169fd640b4619fe2b77d6">   39</a></span>&#160;<span class="keyword">const</span> <a class="code" href="classsoso_1_1WorkerManager.html">WorkerManager</a> *Worker::getWorkerManager() { <span class="comment">//</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordflow">return</span> _worker_manager;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classsoso_1_1Worker.html#ae616fb7f83bef3e4d2d31ba49bb69eee">   43</a></span>&#160;std::size_t Worker::getWorkerID() { <span class="comment">//</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordflow">return</span> _worker_id;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classsoso_1_1Worker.html#a7d84269bb2ee56c12eb5889c908f677a">   43</a></span>&#160;<span class="keywordtype">bool</span> Worker::finished() { <span class="comment">//</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordflow">return</span> (_running == <span class="keyword">false</span>);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classsoso_1_1Worker.html#a1ae90463ac95cc86ebfb2f0fa42ed830">   47</a></span>&#160;std::size_t Worker::getCompletedJobs() { <span class="comment">//</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordflow">return</span> _completed_jobs;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classsoso_1_1Worker.html#a87ed5c03d94de44fe6de8628c2b1a622">   47</a></span>&#160;<span class="keywordtype">void</span> Worker::terminate() { <span class="comment">//</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  _running = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classsoso_1_1Worker.html#a310dd41902e57f9ed0a919d61392a161">   51</a></span>&#160;std::size_t Worker::incCompletedJobs() { <span class="comment">//</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordflow">return</span> ++_completed_jobs;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classsoso_1_1Worker.html#ae616fb7f83bef3e4d2d31ba49bb69eee">   51</a></span>&#160;std::size_t Worker::getWorkerID() { <span class="comment">//</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordflow">return</span> _worker_id;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classsoso_1_1Worker.html#a1ae90463ac95cc86ebfb2f0fa42ed830">   55</a></span>&#160;std::size_t Worker::getCompletedJobs() { <span class="comment">//</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keywordflow">return</span> _completed_jobs;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classsoso_1_1Worker.html#a310dd41902e57f9ed0a919d61392a161">   59</a></span>&#160;std::size_t Worker::incCompletedJobs() { <span class="comment">//</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keywordflow">return</span> ++_completed_jobs;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespacesoso_html"><div class="ttname"><a href="namespacesoso.html">soso</a></div><div class="ttdef"><b>Definition:</b> <a href="worker_8h_source.html#l00018">worker.h:18</a></div></div>
 <div class="ttc" id="aworker_8h_html"><div class="ttname"><a href="worker_8h.html">worker.h</a></div></div>
 <div class="ttc" id="anamespacesoso_html_a390399d33ffd04660776fff91e506a43"><div class="ttname"><a href="namespacesoso.html#a390399d33ffd04660776fff91e506a43">soso::JOB_QUEUE_TYPE</a></div><div class="ttdeci">JOB_QUEUE_TYPE</div><div class="ttdoc">작업 처리 타입</div><div class="ttdef"><b>Definition:</b> <a href="worker_8h_source.html#l00027">worker.h:27</a></div></div>
-<div class="ttc" id="aclasssoso_1_1WorkerManager_html"><div class="ttname"><a href="classsoso_1_1WorkerManager.html">soso::WorkerManager</a></div><div class="ttdoc">worker(작업자) 스레드가 job(작업)을 처리하는 라이브러리. 하나의 job이 Queue(큐)에 추가되면 여러개의 worker 중 하나의 worker가 선택되어 job을 처리한...</div><div class="ttdef"><b>Definition:</b> <a href="worker_8h_source.html#l00177">worker.h:177</a></div></div>
+<div class="ttc" id="aclasssoso_1_1WorkerManager_html"><div class="ttname"><a href="classsoso_1_1WorkerManager.html">soso::WorkerManager</a></div><div class="ttdoc">worker(작업자) 스레드가 job(작업)을 처리하는 라이브러리. 하나의 job이 Queue(큐)에 추가되면 여러개의 worker 중 하나의 worker가 선택되어 job을 처리한...</div><div class="ttdef"><b>Definition:</b> <a href="worker_8h_source.html#l00184">worker.h:184</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">

@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['terminate_81',['terminate',['../classsoso_1_1Worker.html#a87ed5c03d94de44fe6de8628c2b1a622',1,'soso::Worker::terminate()'],['../classsoso_1_1WorkerManager.html#aad7bd0c4f55450f385380d7df2909d82',1,'soso::WorkerManager::terminate()']]]
+  ['setctx_92',['setCTX',['../classsoso_1_1Worker.html#af2e9706d939ce9177a25ab1cae1b1921',1,'soso::Worker']]],
+  ['setjobid_93',['setJobID',['../classsoso_1_1Job.html#accc8d20d33b6b16b0ea417affc304a45',1,'soso::Job']]],
+  ['setworkerid_94',['setWorkerID',['../classsoso_1_1Job.html#a5b72049c26c6864516f98abeda24336d',1,'soso::Job']]],
+  ['setworkerinitialize_95',['setWorkerInitialize',['../classsoso_1_1WorkerManager.html#aaf7fc13a9c5d86f3e8c2b89f6d866f99',1,'soso::WorkerManager']]]
 ];

@@ -1,0 +1,4 @@
+<map id="그래픽컬한 클래스 계통도" name="그래픽컬한 클래스 계통도">
+<area shape="rect" id="node1" href="$classsoso_1_1WorkerManager.html" title="worker(작업자) 스레드가 job(작업)을 처리하는 라이브러리. 하나의 job이 Queue(큐)에 추가되면 여러개의 worker 중 하나의 worker가 선택되어 job을 처리한..." alt="" coords="5,5,168,32"/>
+<area shape="rect" id="node2" href="$classsoso_1_1WorkerManager2.html" title=" " alt="" coords="216,5,387,32"/>
+</map>

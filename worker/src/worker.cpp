@@ -24,6 +24,14 @@ Worker::Worker(WorkerManager *worker_manager, //
   _completed_jobs = 0;
 }
 
+shared_ptr<void> Worker::getCTX() { //
+  return _ctx;
+}
+
+void Worker::setCTX(shared_ptr<void> ctx) { //
+  _ctx = ctx;
+}
+
 JOB_QUEUE_TYPE Worker::getJobType() { //
   return _job_type;
 }

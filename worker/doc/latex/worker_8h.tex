@@ -35,7 +35,9 @@ class \mbox{\hyperlink{classsoso_1_1Worker}{soso\+::\+Worker}}
 class \mbox{\hyperlink{classsoso_1_1Job}{soso\+::\+Job}}
 \begin{DoxyCompactList}\small\item\em 작업 객체 \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classsoso_1_1WorkerManager}{soso\+::\+Worker\+Manager}}
-\begin{DoxyCompactList}\small\item\em worker(작업자) 스레드가 job(작업)을 처리하는 라이브러리. 하나의 job이 Queue(큐)에 추가되면 여러개의 worker 중 하나의 worker가 선택되어 job을 처리한다. 여기서 어떠한 worker가 선택될지는 모른다. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em worker(작업자) 스레드가 job(작업)을 처리하는 라이브러리. 하나의 job이 Queue(큐)에 추가되면 여러개의 worker 중 하나의 worker가 선택되어 job을 처리한다. 여기서 어떠한 worker가 선택될지는 모른다. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsoso_1_1WorkerManager2}{soso\+::\+Worker\+Manager2}}
+\end{DoxyCompactItemize}
 \doxysubsection*{네임스페이스}
 \begin{DoxyCompactItemize}
 \item 
@@ -45,7 +47,9 @@ class \mbox{\hyperlink{classsoso_1_1WorkerManager}{soso\+::\+Worker\+Manager}}
 \begin{DoxyCompactItemize}
 \item 
 using \mbox{\hyperlink{namespacesoso_a5e0f73d41fc3ab920bed09e3254c3d50}{soso\+::job\+\_\+handler\+\_\+t}} = std\+::function$<$ void(std\+::shared\+\_\+ptr$<$ Worker $>$, std\+::shared\+\_\+ptr$<$ Job $>$)$>$
-\begin{DoxyCompactList}\small\item\em job(작업) 처리 함수 타입 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em job(작업) 처리 함수 타입 \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{namespacesoso_a88b606ab3c7c2c1dde6f55abde2f404f}{soso\+::worker\+\_\+init\+\_\+t}} = std\+::function$<$ void(std\+::shared\+\_\+ptr$<$ Worker $>$)$>$
+\end{DoxyCompactItemize}
 \doxysubsection*{열거형 타입}
 \begin{DoxyCompactItemize}
 \item 

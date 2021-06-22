@@ -28,6 +28,8 @@ int main(int argc, char **argv) {
       manager->addJobMultiWorker(
           "test1", //
           [](std::shared_ptr<Worker> worker, std::shared_ptr<Job> job) {
+            (void)(worker);
+            (void)(job);
             this_thread::sleep_for(1s);
             /*
             cout << "[multi] worker:" << worker->getWorkerID()
@@ -57,6 +59,8 @@ int main(int argc, char **argv) {
       manager->addJobMultiWorker(
           "test2", //
           [](std::shared_ptr<Worker> worker, std::shared_ptr<Job> job) {
+            (void)(worker);
+            (void)(job);
             cout << "[multi] worker:" << worker->getWorkerID()
                  << ", job :" << job->getJobID() << endl;
           },
@@ -76,6 +80,8 @@ int main(int argc, char **argv) {
       manager->addJobMultiWorker(
           "testtest2", //
           [](std::shared_ptr<Worker> worker, std::shared_ptr<Job> job) {
+            (void)(worker);
+            (void)(job);
             cout << "[multi] worker:" << worker->getWorkerID()
                  << ", job :" << job->getJobID() << endl;
           },
@@ -99,6 +105,8 @@ int main(int argc, char **argv) {
       manager->addJobSingleWorker(
           "test3", //
           [](std::shared_ptr<Worker> worker, std::shared_ptr<Job> job) {
+            (void)(worker);
+            (void)(job);
             this_thread::sleep_for(1s);
             /*
             cout << "[single] worker:" << worker->getWorkerID()

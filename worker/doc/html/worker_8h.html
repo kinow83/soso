@@ -113,10 +113,11 @@ worker.h에 대한 include 의존 그래프</div>
 <div class="dyncontent">
 <div class="center"><img src="worker_8h__dep__incl.png" border="0" usemap="#include_2worker_8hdep" alt=""/></div>
 <map name="include_2worker_8hdep" id="include_2worker_8hdep">
-<area shape="rect" title=" " alt="" coords="115,5,243,32"/>
+<area shape="rect" title=" " alt="" coords="201,5,329,32"/>
 <area shape="rect" href="job_8cpp.html" title=" " alt="" coords="5,80,97,107"/>
 <area shape="rect" href="worker_8cpp.html" title=" " alt="" coords="122,80,237,107"/>
 <area shape="rect" href="worker__manager_8cpp.html" title=" " alt="" coords="261,80,441,107"/>
+<area shape="rect" href="worker__manager2_8cpp.html" title=" " alt="" coords="466,80,655,107"/>
 </map>
 </div>
 </div>
@@ -133,6 +134,8 @@ worker.h에 대한 include 의존 그래프</div>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1WorkerManager.html">soso::WorkerManager</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">worker(작업자) 스레드가 job(작업)을 처리하는 라이브러리. 하나의 job이 Queue(큐)에 추가되면 여러개의 worker 중 하나의 worker가 선택되어 job을 처리한다. 여기서 어떠한 worker가 선택될지는 모른다.  <a href="classsoso_1_1WorkerManager.html#details">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1WorkerManager2.html">soso::WorkerManager2</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 네임스페이스</h2></td></tr>
@@ -144,6 +147,8 @@ worker.h에 대한 include 의존 그래프</div>
 <tr class="memitem:a5e0f73d41fc3ab920bed09e3254c3d50"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesoso.html#a5e0f73d41fc3ab920bed09e3254c3d50">soso::job_handler_t</a> = std::function&lt; void(std::shared_ptr&lt; Worker &gt;, std::shared_ptr&lt; Job &gt;)&gt;</td></tr>
 <tr class="memdesc:a5e0f73d41fc3ab920bed09e3254c3d50"><td class="mdescLeft">&#160;</td><td class="mdescRight">job(작업) 처리 함수 타입  <a href="namespacesoso.html#a5e0f73d41fc3ab920bed09e3254c3d50">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:a5e0f73d41fc3ab920bed09e3254c3d50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88b606ab3c7c2c1dde6f55abde2f404f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesoso.html#a88b606ab3c7c2c1dde6f55abde2f404f">soso::worker_init_t</a> = std::function&lt; void(std::shared_ptr&lt; Worker &gt;)&gt;</td></tr>
+<tr class="separator:a88b606ab3c7c2c1dde6f55abde2f404f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 열거형 타입</h2></td></tr>

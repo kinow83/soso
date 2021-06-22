@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['report_77',['report',['../classsoso_1_1WorkerManager.html#aa07a5f7e112982808f0a458fa23f06dd',1,'soso::WorkerManager']]],
-  ['run_78',['run',['../classsoso_1_1WorkerManager.html#aaede6dc10d3ae31b34cebd426429ea3b',1,'soso::WorkerManager']]]
+  ['job_88',['Job',['../classsoso_1_1Job.html#aac57d22c56592eb419922fcc74c57b59',1,'soso::Job']]],
+  ['join_89',['join',['../classsoso_1_1WorkerManager.html#aad8c187ba5a3788b0cde3c9d18f23763',1,'soso::WorkerManager']]]
 ];

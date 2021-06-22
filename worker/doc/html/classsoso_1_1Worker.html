@@ -93,6 +93,10 @@ Public 멤버 함수</h2></td></tr>
 <tr class="memitem:a1f01729b4bade159219e170a96951e4e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Worker.html#a1f01729b4bade159219e170a96951e4e">Worker</a> (<a class="el" href="classsoso_1_1WorkerManager.html">WorkerManager</a> *worker_manager, int worker_id, <a class="el" href="namespacesoso.html#a390399d33ffd04660776fff91e506a43">JOB_QUEUE_TYPE</a> job_type)</td></tr>
 <tr class="memdesc:a1f01729b4bade159219e170a96951e4e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classsoso_1_1Worker.html" title="job(작업)를 처리하기 worker(작업)를 관리하기 위한 객체">Worker</a> 생성자  <a href="classsoso_1_1Worker.html#a1f01729b4bade159219e170a96951e4e">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:a1f01729b4bade159219e170a96951e4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac342ba42461e92eda67afa7ebd7ccce1"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Worker.html#ac342ba42461e92eda67afa7ebd7ccce1">getCTX</a> ()</td></tr>
+<tr class="separator:ac342ba42461e92eda67afa7ebd7ccce1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2e9706d939ce9177a25ab1cae1b1921"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Worker.html#af2e9706d939ce9177a25ab1cae1b1921">setCTX</a> (std::shared_ptr&lt; void &gt; ctx)</td></tr>
+<tr class="separator:af2e9706d939ce9177a25ab1cae1b1921"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3257e86c086cdbdaff150b56d735262"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacesoso.html#a390399d33ffd04660776fff91e506a43">JOB_QUEUE_TYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Worker.html#ac3257e86c086cdbdaff150b56d735262">getJobType</a> ()</td></tr>
 <tr class="memdesc:ac3257e86c086cdbdaff150b56d735262"><td class="mdescLeft">&#160;</td><td class="mdescRight">작업 처리 타입  <a href="classsoso_1_1Worker.html#ac3257e86c086cdbdaff150b56d735262">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:ac3257e86c086cdbdaff150b56d735262"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -132,11 +136,13 @@ Private 속성</h2></td></tr>
 <tr class="memitem:a0d7964172c9bdefc560dd82135d79a7b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacesoso.html#a390399d33ffd04660776fff91e506a43">JOB_QUEUE_TYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Worker.html#a0d7964172c9bdefc560dd82135d79a7b">_job_type</a></td></tr>
 <tr class="memdesc:a0d7964172c9bdefc560dd82135d79a7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">작업 타입 (single, multi)  <a href="classsoso_1_1Worker.html#a0d7964172c9bdefc560dd82135d79a7b">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:a0d7964172c9bdefc560dd82135d79a7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fb42cba6d1c3ed95edb913ae1de623d"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Worker.html#a3fb42cba6d1c3ed95edb913ae1de623d">_ctx</a></td></tr>
+<tr class="separator:a3fb42cba6d1c3ed95edb913ae1de623d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
 <div class="textblock"><p>job(작업)를 처리하기 worker(작업)를 관리하기 위한 객체 </p>
 
-<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00045">45</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00046">46</a> 번째 라인에서 정의되었습니다.</p>
 </div><h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
 <a id="a1f01729b4bade159219e170a96951e4e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1f01729b4bade159219e170a96951e4e">&#9670;&nbsp;</a></span>Worker()</h2>
@@ -203,7 +209,7 @@ Private 속성</h2></td></tr>
 <dd>
 false </dd></dl>
 
-<p class="definition"><a class="el" href="worker_8cpp_source.html">worker.cpp</a> 파일의 <a class="el" href="worker_8cpp_source.html#l00035">35</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="worker_8cpp_source.html">worker.cpp</a> 파일의 <a class="el" href="worker_8cpp_source.html#l00043">43</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -225,7 +231,26 @@ false </dd></dl>
 <p>worker가 완료 처리한 job(작업) 수를 반환 </p>
 <dl class="section return"><dt>반환값</dt><dd>std::size_t </dd></dl>
 
-<p class="definition"><a class="el" href="worker_8cpp_source.html">worker.cpp</a> 파일의 <a class="el" href="worker_8cpp_source.html#l00047">47</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="worker_8cpp_source.html">worker.cpp</a> 파일의 <a class="el" href="worker_8cpp_source.html#l00055">55</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ac342ba42461e92eda67afa7ebd7ccce1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac342ba42461e92eda67afa7ebd7ccce1">&#9670;&nbsp;</a></span>getCTX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">shared_ptr&lt; void &gt; Worker::getCTX </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="worker_8cpp_source.html">worker.cpp</a> 파일의 <a class="el" href="worker_8cpp_source.html#l00027">27</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -247,7 +272,7 @@ false </dd></dl>
 <p>작업 처리 타입 </p>
 <dl class="section return"><dt>반환값</dt><dd>JOB_QUEUE_TYPE </dd></dl>
 
-<p class="definition"><a class="el" href="worker_8cpp_source.html">worker.cpp</a> 파일의 <a class="el" href="worker_8cpp_source.html#l00027">27</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="worker_8cpp_source.html">worker.cpp</a> 파일의 <a class="el" href="worker_8cpp_source.html#l00035">35</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -269,7 +294,7 @@ false </dd></dl>
 <p>worker ID를 반환 </p>
 <dl class="section return"><dt>반환값</dt><dd>std::size_t </dd></dl>
 
-<p class="definition"><a class="el" href="worker_8cpp_source.html">worker.cpp</a> 파일의 <a class="el" href="worker_8cpp_source.html#l00043">43</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="worker_8cpp_source.html">worker.cpp</a> 파일의 <a class="el" href="worker_8cpp_source.html#l00051">51</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -291,7 +316,7 @@ false </dd></dl>
 <p>작업 관리자 반환WorkerManager </p>
 <dl class="section return"><dt>반환값</dt><dd>const WorkerManager* </dd></dl>
 
-<p class="definition"><a class="el" href="worker_8cpp_source.html">worker.cpp</a> 파일의 <a class="el" href="worker_8cpp_source.html#l00031">31</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="worker_8cpp_source.html">worker.cpp</a> 파일의 <a class="el" href="worker_8cpp_source.html#l00039">39</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -312,7 +337,27 @@ false </dd></dl>
 
 <p>worker가 완료 처리한 job(작업) 수 1 증가 </p>
 
-<p class="definition"><a class="el" href="worker_8cpp_source.html">worker.cpp</a> 파일의 <a class="el" href="worker_8cpp_source.html#l00051">51</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="worker_8cpp_source.html">worker.cpp</a> 파일의 <a class="el" href="worker_8cpp_source.html#l00059">59</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="af2e9706d939ce9177a25ab1cae1b1921"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2e9706d939ce9177a25ab1cae1b1921">&#9670;&nbsp;</a></span>setCTX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Worker::setCTX </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; void &gt;&#160;</td>
+          <td class="paramname"><em>ctx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="worker_8cpp_source.html">worker.cpp</a> 파일의 <a class="el" href="worker_8cpp_source.html#l00031">31</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -336,7 +381,7 @@ false </dd></dl>
 <dd>
 false </dd></dl>
 
-<p class="definition"><a class="el" href="worker_8cpp_source.html">worker.cpp</a> 파일의 <a class="el" href="worker_8cpp_source.html#l00039">39</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="worker_8cpp_source.html">worker.cpp</a> 파일의 <a class="el" href="worker_8cpp_source.html#l00047">47</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -363,7 +408,31 @@ false </dd></dl>
 
 <p>처리 완료된 작업 수 </p>
 
-<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00050">50</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00051">51</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a3fb42cba6d1c3ed95edb913ae1de623d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fb42cba6d1c3ed95edb913ae1de623d">&#9670;&nbsp;</a></span>_ctx</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;void&gt; soso::Worker::_ctx</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00059">59</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -389,7 +458,7 @@ false </dd></dl>
 
 <p>작업 타입 (single, multi) </p>
 
-<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00056">56</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00057">57</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -415,7 +484,7 @@ false </dd></dl>
 
 <p>worker(작업자) thread 종료되었는지 여부 </p>
 
-<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00054">54</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00055">55</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -441,7 +510,7 @@ false </dd></dl>
 
 <p>worker ID </p>
 
-<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00048">48</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00049">49</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -467,7 +536,7 @@ false </dd></dl>
 
 <p>작업 관리자 </p>
 
-<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00052">52</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00053">53</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>

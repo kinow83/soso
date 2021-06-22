@@ -18,6 +18,7 @@ target_sources(worker
 PRIVATE
     src/worker.cpp
     src/job.cpp
+    src/worker_manager2.cpp
     src/worker_manager.cpp
 PUBLIC
     include/worker.h

@@ -32,6 +32,7 @@ var menudata={children:[
 {text:"클래스",url:"annotated.html",children:[
 {text:"클래스 목록",url:"annotated.html"},
 {text:"클래스 색인",url:"classes.html"},
+{text:"클래스 계통도",url:"inherits.html"},
 {text:"클래스 멤버",url:"functions.html",children:[
 {text:"모두",url:"functions.html",children:[
 {text:"_",url:"functions.html#index__5F"},
@@ -44,7 +45,17 @@ var menudata={children:[
 {text:"s",url:"functions.html#index_s"},
 {text:"t",url:"functions.html#index_t"},
 {text:"w",url:"functions.html#index_w"}]},
-{text:"함수",url:"functions_func.html"},
+{text:"함수",url:"functions_func.html",children:[
+{text:"_",url:"functions_func.html#index__5F"},
+{text:"a",url:"functions_func.html#index_a"},
+{text:"f",url:"functions_func.html#index_f"},
+{text:"g",url:"functions_func.html#index_g"},
+{text:"i",url:"functions_func.html#index_i"},
+{text:"j",url:"functions_func.html#index_j"},
+{text:"r",url:"functions_func.html#index_r"},
+{text:"s",url:"functions_func.html#index_s"},
+{text:"t",url:"functions_func.html#index_t"},
+{text:"w",url:"functions_func.html#index_w"}]},
 {text:"변수",url:"functions_vars.html"}]}]},
 {text:"파일들",url:"files.html",children:[
 {text:"파일 목록",url:"files.html"}]}]}

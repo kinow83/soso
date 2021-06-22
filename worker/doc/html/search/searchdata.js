@@ -4,9 +4,9 @@ var indexSectionsWithContent =
   1: "jw",
   2: "s",
   3: "jw",
-  4: "afgijrstw",
+  4: "_afgijrstw",
   5: "_",
-  6: "j",
+  6: "jw",
   7: "j",
   8: "jms"
 };

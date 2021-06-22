@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>worker: src/worker_manager2.cpp 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">worker
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'검색');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','검색');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">worker_manager2.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="worker__manager2_8cpp.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="worker_8h.html">worker.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;pthread.h&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacesoso.html">soso</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *job_type_str[] = { <span class="comment">//</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="stringliteral">&quot;m_worker&quot;</span>,                       <span class="comment">//</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="stringliteral">&quot;s_worker&quot;</span>};</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classsoso_1_1WorkerManager2.html#a857f4f59872b35c3c94edc757cdea91f">   11</a></span>&#160;<span class="keywordtype">void</span> WorkerManager2::run(<span class="keywordtype">bool</span> block) { <span class="comment">//</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  _run(&amp;WorkerManager2::workerThreadFunc, block);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classsoso_1_1WorkerManager2.html#a56e9c6f8cc43dff19792bd515d063ed5">   20</a></span>&#160;WorkerManager2::WorkerManager2(<span class="keyword">const</span> std::string &amp;name, <span class="keywordtype">int</span> worker_num)</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    : <a class="code" href="classsoso_1_1WorkerManager.html">WorkerManager</a>(name, worker_num, 10) {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="comment">//</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classsoso_1_1WorkerManager2.html#a60315674e4d92fe57e90d5d27490ce68">   25</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsoso_1_1WorkerManager2.html#a60315674e4d92fe57e90d5d27490ce68">WorkerManager2::workerThreadFunc</a>(shared_ptr&lt;Worker&gt; worker,</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                                      deque&lt;shared_ptr&lt;Job&gt;&gt; *Q,</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                                      shared_ptr&lt;mutex&gt; M,</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                                      shared_ptr&lt;condition_variable&gt; CV) {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  shared_ptr&lt;Job&gt; job;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">string</span> worker_name = <a class="code" href="classsoso_1_1WorkerManager.html#a3c3123328c7b082f166000823ee64dd8">_name</a> + <span class="stringliteral">&quot;_&quot;</span> + job_type_str[worker-&gt;getJobType()];</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <a class="code" href="namespacesoso.html#a5e0f73d41fc3ab920bed09e3254c3d50">job_handler_t</a> handler;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  pthread_setname_np(pthread_self(), worker_name.c_str());</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classsoso_1_1WorkerManager.html#ab766754061eae1659b2f82d12eff15b6">_worker_init_handler</a>) {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classsoso_1_1WorkerManager.html#ab766754061eae1659b2f82d12eff15b6">_worker_init_handler</a>(worker);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;---------------\n&quot;</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      unique_lock&lt;mutex&gt; lock(*M.get());</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      <span class="comment">// wait for job wakeup signal</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      CV-&gt;wait(lock,</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;               [&amp;]() { <span class="comment">//</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                 <span class="keywordflow">return</span> (!Q-&gt;empty() || !<a class="code" href="classsoso_1_1WorkerManager.html#afb1b57feefac977d1e6072a36001531d">_running</a>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;               });</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      <span class="keywordflow">if</span> (!<a class="code" href="classsoso_1_1WorkerManager.html#afb1b57feefac977d1e6072a36001531d">_running</a> &amp;&amp; Q-&gt;empty()) {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      job = Q-&gt;front();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      job-&gt;setWorkerID(worker-&gt;getWorkerID());</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      handler = job-&gt;getHandler();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      Q-&gt;pop_front();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      worker-&gt;incCompletedJobs();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    handler(worker, job); <span class="comment">// call job user defined function</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  worker-&gt;terminate();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  pthread_exit(NULL);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="anamespacesoso_html"><div class="ttname"><a href="namespacesoso.html">soso</a></div><div class="ttdef"><b>Definition:</b> <a href="worker_8h_source.html#l00018">worker.h:18</a></div></div>
+<div class="ttc" id="aworker_8h_html"><div class="ttname"><a href="worker_8h.html">worker.h</a></div></div>
+<div class="ttc" id="aclasssoso_1_1WorkerManager2_html_a60315674e4d92fe57e90d5d27490ce68"><div class="ttname"><a href="classsoso_1_1WorkerManager2.html#a60315674e4d92fe57e90d5d27490ce68">soso::WorkerManager2::workerThreadFunc</a></div><div class="ttdeci">void workerThreadFunc(std::shared_ptr&lt; Worker &gt; worker, std::deque&lt; std::shared_ptr&lt; Job &gt;&gt; *Q, std::shared_ptr&lt; std::mutex &gt; M, std::shared_ptr&lt; std::condition_variable &gt; CV)</div><div class="ttdef"><b>Definition:</b> <a href="worker__manager2_8cpp_source.html#l00025">worker_manager2.cpp:25</a></div></div>
+<div class="ttc" id="anamespacesoso_html_a5e0f73d41fc3ab920bed09e3254c3d50"><div class="ttname"><a href="namespacesoso.html#a5e0f73d41fc3ab920bed09e3254c3d50">soso::job_handler_t</a></div><div class="ttdeci">std::function&lt; void(std::shared_ptr&lt; Worker &gt;, std::shared_ptr&lt; Job &gt;)&gt; job_handler_t</div><div class="ttdoc">job(작업) 처리 함수 타입</div><div class="ttdef"><b>Definition:</b> <a href="worker_8h_source.html#l00040">worker.h:40</a></div></div>
+<div class="ttc" id="aclasssoso_1_1WorkerManager_html"><div class="ttname"><a href="classsoso_1_1WorkerManager.html">soso::WorkerManager</a></div><div class="ttdoc">worker(작업자) 스레드가 job(작업)을 처리하는 라이브러리. 하나의 job이 Queue(큐)에 추가되면 여러개의 worker 중 하나의 worker가 선택되어 job을 처리한...</div><div class="ttdef"><b>Definition:</b> <a href="worker_8h_source.html#l00184">worker.h:184</a></div></div>
+<div class="ttc" id="aclasssoso_1_1WorkerManager_html_afb1b57feefac977d1e6072a36001531d"><div class="ttname"><a href="classsoso_1_1WorkerManager.html#afb1b57feefac977d1e6072a36001531d">soso::WorkerManager::_running</a></div><div class="ttdeci">bool _running</div><div class="ttdoc">모든 worker(작업자) thread 실행 여부</div><div class="ttdef"><b>Definition:</b> <a href="worker_8h_source.html#l00209">worker.h:209</a></div></div>
+<div class="ttc" id="aclasssoso_1_1WorkerManager_html_a3c3123328c7b082f166000823ee64dd8"><div class="ttname"><a href="classsoso_1_1WorkerManager.html#a3c3123328c7b082f166000823ee64dd8">soso::WorkerManager::_name</a></div><div class="ttdeci">std::string _name</div><div class="ttdoc">작업 관리 이름</div><div class="ttdef"><b>Definition:</b> <a href="worker_8h_source.html#l00187">worker.h:187</a></div></div>
+<div class="ttc" id="aclasssoso_1_1WorkerManager_html_ab766754061eae1659b2f82d12eff15b6"><div class="ttname"><a href="classsoso_1_1WorkerManager.html#ab766754061eae1659b2f82d12eff15b6">soso::WorkerManager::_worker_init_handler</a></div><div class="ttdeci">worker_init_t _worker_init_handler</div><div class="ttdef"><b>Definition:</b> <a href="worker_8h_source.html#l00216">worker.h:216</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

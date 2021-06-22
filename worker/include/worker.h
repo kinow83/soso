@@ -39,6 +39,7 @@ enum JOB_QUEUE_TYPE {
 using job_handler_t =
     std::function<void(std::shared_ptr<Worker>, std::shared_ptr<Job>)>;
 
+using worker_init_t = std::function<void(std::shared_ptr<Worker>)>;
 /**
  * @brief job(작업)를 처리하기 worker(작업)를 관리하기 위한 객체
  */
@@ -54,6 +55,8 @@ private:
   bool _running = true;
   /// 작업 타입 (single, multi)
   JOB_QUEUE_TYPE _job_type;
+  ///
+  std::shared_ptr<void> _ctx;
 
 public:
   /**
@@ -63,6 +66,10 @@ public:
   Worker(WorkerManager *worker_manager, //
          int worker_id,                 //
          JOB_QUEUE_TYPE job_type);
+
+  std::shared_ptr<void> getCTX();
+
+  void setCTX(std::shared_ptr<void> ctx);
 
   /**
    * @brief 작업 처리 타입
@@ -175,7 +182,8 @@ public:
  * job을 처리한다. 여기서 어떠한 worker가 선택될지는 모른다.
  */
 class WorkerManager {
-private:
+protected:
+  /// 작업 관리 이름
   std::string _name;
   /// worker(작업자)에게 할당을 요청하는 선택 대기 Queue(큐)
   std::vector<std::deque<std::shared_ptr<Job>>> _job_m_Q;
@@ -204,8 +212,10 @@ private:
   std::atomic<size_t> _job_seq;
   ///
   size_t _job_count = 0;
+  ///
+  worker_init_t _worker_init_handler = nullptr;
 
-private:
+protected:
   /**
    * @brief worker thread 동작 함수\n
    * worker(작업자) thread는 작업큐에서 job(작업)을 가져와 작업
@@ -228,6 +238,8 @@ private:
               JOB_QUEUE_TYPE type, bool affinity);
 
 public:
+  void setWorkerInitialize(worker_init_t handler);
+
   /**
    * @brief 모든 worker(작업자) thread 종료할 것을 알림
    * @param with_join 모든 worker가 종료될 때 까지 대기할지 여부
@@ -270,7 +282,23 @@ public:
    * @param block YES인 경우 run 함수 block되어 뒤에 실행 코드가 수행 안됨\n
    * FALSE인 경우 run 함수 호출 후 바로 리턴됨
    */
+  template <typename _Callable> //
+  void _run(_Callable &&__f, bool block = false);
+
   void run(bool block = false);
+};
+
+class WorkerManager2 : public WorkerManager {
+public:
+  WorkerManager2(const std::string &name, int worker_num);
+
+  void run(bool block = false);
+
+private:
+  void workerThreadFunc(std::shared_ptr<Worker> worker,      //
+                        std::deque<std::shared_ptr<Job>> *Q, //
+                        std::shared_ptr<std::mutex> M,       //
+                        std::shared_ptr<std::condition_variable> CV);
 };
 
 } // namespace soso
