@@ -48,9 +48,11 @@ private:
   web::http::experimental::listener::http_listener _listener;
   /// API 동작 정의 테이블 (GET/POST/PUT/DEL 각 각 정의)
   std::map<utility::string_t, endpoint_handler_t> _tables[API_METHOD_SIZE];
+  ///
+  size_t _listen_thread_num;
 
 public:
-  Endpoint(utility::string_t url);
+  Endpoint(utility::string_t url, size_t listen_thread_num = 4);
   virtual ~Endpoint() {}
 
   /**

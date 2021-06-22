@@ -9,7 +9,7 @@ using namespace utility;
 using namespace soso;
 
 int main() {
-  RestApi api("http://127.0.0.1:8888");
+  RestApi api("http://127.0.0.1:8888", "test");
   auto f = [](const http::http_request &r, const json::value &v) {
     (void)r;
     nlohmann::json j;

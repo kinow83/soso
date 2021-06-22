@@ -11,22 +11,18 @@ namespace soso {
  */
 class RestApi {
 private:
+  std::string _name;
   /// API 서버 주소 (포트까지 포함)
-  const std::string _address;
+  std::string _address;
   /// URL에 맵핑된 API 호출 동작 정의 객체
   std::unique_ptr<Endpoint> _endpoint;
 
 public:
   /**
    * @brief RestAPI 생성자
-   */
-  RestApi();
-
-  /**
-   * @brief RestAPI 생성자
    * @param address
    */
-  RestApi(const std::string &address);
+  RestApi(const std::string &address, const std::string &name);
 
   /**
    * @brief RestAPI 소멸자

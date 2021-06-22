@@ -12,7 +12,7 @@
 \doxysubsection*{Public 멤버 함수}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classsoso_1_1Endpoint_a04d29b9b96e610807e9736b6833ee39e}{Endpoint}} (utility\+::string\+\_\+t url)
+\mbox{\hyperlink{classsoso_1_1Endpoint_a98f734acc05014f6fecf53befad70b90}{Endpoint}} (utility\+::string\+\_\+t url, size\+\_\+t listen\+\_\+thread\+\_\+num=4)
 \item 
 virtual \mbox{\hyperlink{classsoso_1_1Endpoint_ae7a2e4ab8d19f8f559fb538c796b6f67}{$\sim$\+Endpoint}} ()
 \item 
@@ -43,7 +43,9 @@ void \mbox{\hyperlink{classsoso_1_1Endpoint_a8d295b433f06c0d58b6bdd2c4853d751}{c
 web\+::http\+::experimental\+::listener\+::http\+\_\+listener \mbox{\hyperlink{classsoso_1_1Endpoint_afe5e0d92caefaad5dfa8065245c3f6a7}{\+\_\+listener}}
 \begin{DoxyCompactList}\small\item\em cpprestsdk A\+PI 서버 리스너 \end{DoxyCompactList}\item 
 std\+::map$<$ utility\+::string\+\_\+t, \mbox{\hyperlink{namespacesoso_a767499e7b94b6a4c2709a26cb0deb3ef}{endpoint\+\_\+handler\+\_\+t}} $>$ \mbox{\hyperlink{classsoso_1_1Endpoint_a4afd78cd6efc858e6ff0ce920b296e0b}{\+\_\+tables}} \mbox{[}\mbox{\hyperlink{namespacesoso_a34a64ddd825095a3654e7f1f0d1f8c7da866c5cccce012bed0d1081d27390b03a}{A\+P\+I\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+S\+I\+ZE}}\mbox{]}
-\begin{DoxyCompactList}\small\item\em A\+PI 동작 정의 테이블 (G\+E\+T/\+P\+O\+S\+T/\+P\+U\+T/\+D\+EL 각 각 정의) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em A\+PI 동작 정의 테이블 (G\+E\+T/\+P\+O\+S\+T/\+P\+U\+T/\+D\+EL 각 각 정의) \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classsoso_1_1Endpoint_afd6d75e19b60500ee903bc6613efb7b5}{\+\_\+listen\+\_\+thread\+\_\+num}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{상세한 설명}
@@ -54,15 +56,15 @@ endpoint.\+h 파일의 38 번째 라인에서 정의되었습니다.
 
 
 \doxysubsection{생성자 \& 소멸자 문서화}
-\mbox{\Hypertarget{classsoso_1_1Endpoint_a04d29b9b96e610807e9736b6833ee39e}\label{classsoso_1_1Endpoint_a04d29b9b96e610807e9736b6833ee39e}} 
+\mbox{\Hypertarget{classsoso_1_1Endpoint_a98f734acc05014f6fecf53befad70b90}\label{classsoso_1_1Endpoint_a98f734acc05014f6fecf53befad70b90}} 
 \index{soso::Endpoint@{soso::Endpoint}!Endpoint@{Endpoint}}
 \index{Endpoint@{Endpoint}!soso::Endpoint@{soso::Endpoint}}
 \doxysubsubsection{\texorpdfstring{Endpoint()}{Endpoint()}}
-{\footnotesize\ttfamily Endpoint\+::\+Endpoint (\begin{DoxyParamCaption}\item[{utility\+::string\+\_\+t}]{url }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Endpoint\+::\+Endpoint (\begin{DoxyParamCaption}\item[{utility\+::string\+\_\+t}]{url,  }\item[{size\+\_\+t}]{listen\+\_\+thread\+\_\+num = {\ttfamily 4} }\end{DoxyParamCaption})}
 
+T\+O\+DO\+: \href{https://github.com/microsoft/cpprestsdk/blob/master/Release/src/pplx/threadpool.cpp}{\texttt{ https\+://github.\+com/microsoft/cpprestsdk/blob/master/\+Release/src/pplx/threadpool.\+cpp}} initialize\+\_\+shared\+\_\+threadpool std\+::call\+\_\+once
 
-
-endpoint.\+cpp 파일의 73 번째 라인에서 정의되었습니다.
+endpoint.\+cpp 파일의 12 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{classsoso_1_1Endpoint_ae7a2e4ab8d19f8f559fb538c796b6f67}\label{classsoso_1_1Endpoint_ae7a2e4ab8d19f8f559fb538c796b6f67}} 
 \index{soso::Endpoint@{soso::Endpoint}!````~Endpoint@{$\sim$Endpoint}}
@@ -72,7 +74,7 @@ endpoint.\+cpp 파일의 73 번째 라인에서 정의되었습니다.
 
 
 
-endpoint.\+h 파일의 54 번째 라인에서 정의되었습니다.
+endpoint.\+h 파일의 56 번째 라인에서 정의되었습니다.
 
 
 
@@ -103,7 +105,7 @@ false
 \end{DoxyReturn}
 
 
-endpoint.\+cpp 파일의 19 번째 라인에서 정의되었습니다.
+endpoint.\+cpp 파일의 40 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{classsoso_1_1Endpoint_a8d295b433f06c0d58b6bdd2c4853d751}\label{classsoso_1_1Endpoint_a8d295b433f06c0d58b6bdd2c4853d751}} 
 \index{soso::Endpoint@{soso::Endpoint}!callapi@{callapi}}
@@ -117,7 +119,7 @@ query
 
 merge parameters + query
 
-endpoint.\+cpp 파일의 49 번째 라인에서 정의되었습니다.
+endpoint.\+cpp 파일의 70 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{classsoso_1_1Endpoint_ae1a905a2bbb108c831ea67eb3844fe57}\label{classsoso_1_1Endpoint_ae1a905a2bbb108c831ea67eb3844fe57}} 
 \index{soso::Endpoint@{soso::Endpoint}!close@{close}}
@@ -134,7 +136,7 @@ pplx\+::task$<$void$>$
 \end{DoxyReturn}
 
 
-endpoint.\+h 파일의 66 번째 라인에서 정의되었습니다.
+endpoint.\+h 파일의 68 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{classsoso_1_1Endpoint_a1e811ae341ead064bfad2035fb54f713}\label{classsoso_1_1Endpoint_a1e811ae341ead064bfad2035fb54f713}} 
 \index{soso::Endpoint@{soso::Endpoint}!del@{del}}
@@ -144,7 +146,7 @@ endpoint.\+h 파일의 66 번째 라인에서 정의되었습니다.
 
 
 
-endpoint.\+cpp 파일의 43 번째 라인에서 정의되었습니다.
+endpoint.\+cpp 파일의 64 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{classsoso_1_1Endpoint_a6c07b57c4c28d8f1a8393947b8d76ad1}\label{classsoso_1_1Endpoint_a6c07b57c4c28d8f1a8393947b8d76ad1}} 
 \index{soso::Endpoint@{soso::Endpoint}!get@{get}}
@@ -154,7 +156,7 @@ endpoint.\+cpp 파일의 43 번째 라인에서 정의되었습니다.
 
 
 
-endpoint.\+cpp 파일의 47 번째 라인에서 정의되었습니다.
+endpoint.\+cpp 파일의 68 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{classsoso_1_1Endpoint_a7bbbc03ba7d2cb9cde3b5b5bad963a0c}\label{classsoso_1_1Endpoint_a7bbbc03ba7d2cb9cde3b5b5bad963a0c}} 
 \index{soso::Endpoint@{soso::Endpoint}!getEndpoint@{getEndpoint}}
@@ -178,7 +180,7 @@ endpoint\+\_\+handler\+\_\+t$\ast$
 \end{DoxyReturn}
 
 
-endpoint.\+cpp 파일의 30 번째 라인에서 정의되었습니다.
+endpoint.\+cpp 파일의 51 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{classsoso_1_1Endpoint_a860c98dcd541ad94e958eb16a3de826a}\label{classsoso_1_1Endpoint_a860c98dcd541ad94e958eb16a3de826a}} 
 \index{soso::Endpoint@{soso::Endpoint}!open@{open}}
@@ -195,7 +197,7 @@ pplx\+::task$<$void$>$
 \end{DoxyReturn}
 
 
-endpoint.\+h 파일의 60 번째 라인에서 정의되었습니다.
+endpoint.\+h 파일의 62 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{classsoso_1_1Endpoint_a9bea1a169c63b2ee9c84c6b2eba86d0c}\label{classsoso_1_1Endpoint_a9bea1a169c63b2ee9c84c6b2eba86d0c}} 
 \index{soso::Endpoint@{soso::Endpoint}!post@{post}}
@@ -205,7 +207,7 @@ endpoint.\+h 파일의 60 번째 라인에서 정의되었습니다.
 
 
 
-endpoint.\+cpp 파일의 39 번째 라인에서 정의되었습니다.
+endpoint.\+cpp 파일의 60 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{classsoso_1_1Endpoint_af45278a6507f58b0e8439828e2ac7a19}\label{classsoso_1_1Endpoint_af45278a6507f58b0e8439828e2ac7a19}} 
 \index{soso::Endpoint@{soso::Endpoint}!put@{put}}
@@ -215,11 +217,21 @@ endpoint.\+cpp 파일의 39 번째 라인에서 정의되었습니다.
 
 
 
-endpoint.\+cpp 파일의 45 번째 라인에서 정의되었습니다.
+endpoint.\+cpp 파일의 66 번째 라인에서 정의되었습니다.
 
 
 
 \doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{classsoso_1_1Endpoint_afd6d75e19b60500ee903bc6613efb7b5}\label{classsoso_1_1Endpoint_afd6d75e19b60500ee903bc6613efb7b5}} 
+\index{soso::Endpoint@{soso::Endpoint}!\_listen\_thread\_num@{\_listen\_thread\_num}}
+\index{\_listen\_thread\_num@{\_listen\_thread\_num}!soso::Endpoint@{soso::Endpoint}}
+\doxysubsubsection{\texorpdfstring{\_listen\_thread\_num}{\_listen\_thread\_num}}
+{\footnotesize\ttfamily size\+\_\+t soso\+::\+Endpoint\+::\+\_\+listen\+\_\+thread\+\_\+num\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+endpoint.\+h 파일의 52 번째 라인에서 정의되었습니다.
+
 \mbox{\Hypertarget{classsoso_1_1Endpoint_afe5e0d92caefaad5dfa8065245c3f6a7}\label{classsoso_1_1Endpoint_afe5e0d92caefaad5dfa8065245c3f6a7}} 
 \index{soso::Endpoint@{soso::Endpoint}!\_listener@{\_listener}}
 \index{\_listener@{\_listener}!soso::Endpoint@{soso::Endpoint}}

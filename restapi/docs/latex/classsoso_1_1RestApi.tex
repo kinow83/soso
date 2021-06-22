@@ -12,9 +12,7 @@
 \doxysubsection*{Public 멤버 함수}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classsoso_1_1RestApi_ae6b871ddc7a2edd5ab55f7afe419386c}{Rest\+Api}} ()
-\begin{DoxyCompactList}\small\item\em Rest\+A\+PI 생성자 \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classsoso_1_1RestApi_ab3493009a75efe0b9f65621121746ed6}{Rest\+Api}} (const std\+::string \&address)
+\mbox{\hyperlink{classsoso_1_1RestApi_a53a2121998ba822eb86c535547a0ca35}{Rest\+Api}} (const std\+::string \&address, const std\+::string \&name)
 \begin{DoxyCompactList}\small\item\em Rest\+A\+PI 생성자 \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classsoso_1_1RestApi_af2ea2c30a01ab5a544cd78893d76f612}{$\sim$\+Rest\+Api}} ()
 \begin{DoxyCompactList}\small\item\em Rest\+A\+PI 소멸자 \end{DoxyCompactList}\item 
@@ -29,7 +27,9 @@ bool \mbox{\hyperlink{classsoso_1_1RestApi_a7964dd59bbc79edce700f4ef2f791953}{ad
 \doxysubsection*{Private 속성}
 \begin{DoxyCompactItemize}
 \item 
-const std\+::string \mbox{\hyperlink{classsoso_1_1RestApi_a88985d941139692801e383f184dd7177}{\+\_\+address}}
+std\+::string \mbox{\hyperlink{classsoso_1_1RestApi_af76238d8daaab983caac8521b34fe49a}{\+\_\+name}}
+\item 
+std\+::string \mbox{\hyperlink{classsoso_1_1RestApi_a8537d4700085892238e95d114782080f}{\+\_\+address}}
 \begin{DoxyCompactList}\small\item\em A\+PI 서버 주소 (포트까지 포함) \end{DoxyCompactList}\item 
 std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classsoso_1_1Endpoint}{Endpoint}} $>$ \mbox{\hyperlink{classsoso_1_1RestApi_af01380c2f35881fd24f4a61e71a0da5c}{\+\_\+endpoint}}
 \begin{DoxyCompactList}\small\item\em U\+R\+L에 맵핑된 A\+PI 호출 동작 정의 객체 \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -43,25 +43,11 @@ restapi.\+h 파일의 12 번째 라인에서 정의되었습니다.
 
 
 \doxysubsection{생성자 \& 소멸자 문서화}
-\mbox{\Hypertarget{classsoso_1_1RestApi_ae6b871ddc7a2edd5ab55f7afe419386c}\label{classsoso_1_1RestApi_ae6b871ddc7a2edd5ab55f7afe419386c}} 
+\mbox{\Hypertarget{classsoso_1_1RestApi_a53a2121998ba822eb86c535547a0ca35}\label{classsoso_1_1RestApi_a53a2121998ba822eb86c535547a0ca35}} 
 \index{soso::RestApi@{soso::RestApi}!RestApi@{RestApi}}
 \index{RestApi@{RestApi}!soso::RestApi@{soso::RestApi}}
-\doxysubsubsection{\texorpdfstring{RestApi()}{RestApi()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily Rest\+Api\+::\+Rest\+Api (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Rest\+A\+PI 생성자 
-
-
-
-restapi.\+cpp 파일의 16 번째 라인에서 정의되었습니다.
-
-\mbox{\Hypertarget{classsoso_1_1RestApi_ab3493009a75efe0b9f65621121746ed6}\label{classsoso_1_1RestApi_ab3493009a75efe0b9f65621121746ed6}} 
-\index{soso::RestApi@{soso::RestApi}!RestApi@{RestApi}}
-\index{RestApi@{RestApi}!soso::RestApi@{soso::RestApi}}
-\doxysubsubsection{\texorpdfstring{RestApi()}{RestApi()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Rest\+Api\+::\+Rest\+Api (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{address }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{RestApi()}{RestApi()}}
+{\footnotesize\ttfamily Rest\+Api\+::\+Rest\+Api (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{address,  }\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
 
 
 
@@ -74,7 +60,7 @@ Rest\+A\+PI 생성자
 \end{DoxyParams}
 
 
-restapi.\+cpp 파일의 20 번째 라인에서 정의되었습니다.
+restapi.\+cpp 파일의 16 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{classsoso_1_1RestApi_af2ea2c30a01ab5a544cd78893d76f612}\label{classsoso_1_1RestApi_af2ea2c30a01ab5a544cd78893d76f612}} 
 \index{soso::RestApi@{soso::RestApi}!````~RestApi@{$\sim$RestApi}}
@@ -88,7 +74,7 @@ Rest\+A\+PI 소멸자
 
 
 
-restapi.\+cpp 파일의 24 번째 라인에서 정의되었습니다.
+restapi.\+cpp 파일의 21 번째 라인에서 정의되었습니다.
 
 
 
@@ -119,7 +105,7 @@ false\+\_\+api\+\_\+handler
 \end{DoxyReturn}
 
 
-restapi.\+h 파일의 60 번째 라인에서 정의되었습니다.
+restapi.\+h 파일의 56 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{classsoso_1_1RestApi_a8eadb101a37c8962d23f3a95313a4cae}\label{classsoso_1_1RestApi_a8eadb101a37c8962d23f3a95313a4cae}} 
 \index{soso::RestApi@{soso::RestApi}!on\_initialize@{on\_initialize}}
@@ -133,7 +119,7 @@ A\+PI 서버 실행
 
 
 
-restapi.\+cpp 파일의 36 번째 라인에서 정의되었습니다.
+restapi.\+cpp 파일의 34 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{classsoso_1_1RestApi_a4966d7a1535cddc2ffbc01f2b89d6f84}\label{classsoso_1_1RestApi_a4966d7a1535cddc2ffbc01f2b89d6f84}} 
 \index{soso::RestApi@{soso::RestApi}!on\_shutdown@{on\_shutdown}}
@@ -147,7 +133,7 @@ A\+PI 서버 종료
 
 
 
-restapi.\+cpp 파일의 41 번째 라인에서 정의되었습니다.
+restapi.\+cpp 파일의 39 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{classsoso_1_1RestApi_abaa62f4424770ae5aa8a9afadc49f8ac}\label{classsoso_1_1RestApi_abaa62f4424770ae5aa8a9afadc49f8ac}} 
 \index{soso::RestApi@{soso::RestApi}!setAddress@{setAddress}}
@@ -166,16 +152,16 @@ A\+PI url 주소 입력
 \end{DoxyParams}
 
 
-restapi.\+cpp 파일의 30 번째 라인에서 정의되었습니다.
+restapi.\+cpp 파일의 27 번째 라인에서 정의되었습니다.
 
 
 
 \doxysubsection{멤버 데이터 문서화}
-\mbox{\Hypertarget{classsoso_1_1RestApi_a88985d941139692801e383f184dd7177}\label{classsoso_1_1RestApi_a88985d941139692801e383f184dd7177}} 
+\mbox{\Hypertarget{classsoso_1_1RestApi_a8537d4700085892238e95d114782080f}\label{classsoso_1_1RestApi_a8537d4700085892238e95d114782080f}} 
 \index{soso::RestApi@{soso::RestApi}!\_address@{\_address}}
 \index{\_address@{\_address}!soso::RestApi@{soso::RestApi}}
 \doxysubsubsection{\texorpdfstring{\_address}{\_address}}
-{\footnotesize\ttfamily const std\+::string soso\+::\+Rest\+Api\+::\+\_\+address\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily std\+::string soso\+::\+Rest\+Api\+::\+\_\+address\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -183,7 +169,7 @@ A\+PI 서버 주소 (포트까지 포함)
 
 
 
-restapi.\+h 파일의 15 번째 라인에서 정의되었습니다.
+restapi.\+h 파일의 16 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{classsoso_1_1RestApi_af01380c2f35881fd24f4a61e71a0da5c}\label{classsoso_1_1RestApi_af01380c2f35881fd24f4a61e71a0da5c}} 
 \index{soso::RestApi@{soso::RestApi}!\_endpoint@{\_endpoint}}
@@ -197,7 +183,17 @@ U\+R\+L에 맵핑된 A\+PI 호출 동작 정의 객체
 
 
 
-restapi.\+h 파일의 17 번째 라인에서 정의되었습니다.
+restapi.\+h 파일의 18 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1RestApi_af76238d8daaab983caac8521b34fe49a}\label{classsoso_1_1RestApi_af76238d8daaab983caac8521b34fe49a}} 
+\index{soso::RestApi@{soso::RestApi}!\_name@{\_name}}
+\index{\_name@{\_name}!soso::RestApi@{soso::RestApi}}
+\doxysubsubsection{\texorpdfstring{\_name}{\_name}}
+{\footnotesize\ttfamily std\+::string soso\+::\+Rest\+Api\+::\+\_\+name\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+restapi.\+h 파일의 14 번째 라인에서 정의되었습니다.
 
 
 

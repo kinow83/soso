@@ -82,8 +82,8 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:a04d29b9b96e610807e9736b6833ee39e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Endpoint.html#a04d29b9b96e610807e9736b6833ee39e">Endpoint</a> (utility::string_t url)</td></tr>
-<tr class="separator:a04d29b9b96e610807e9736b6833ee39e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98f734acc05014f6fecf53befad70b90"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Endpoint.html#a98f734acc05014f6fecf53befad70b90">Endpoint</a> (utility::string_t url, size_t listen_thread_num=4)</td></tr>
+<tr class="separator:a98f734acc05014f6fecf53befad70b90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7a2e4ab8d19f8f559fb538c796b6f67"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Endpoint.html#ae7a2e4ab8d19f8f559fb538c796b6f67">~Endpoint</a> ()</td></tr>
 <tr class="separator:ae7a2e4ab8d19f8f559fb538c796b6f67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a860c98dcd541ad94e958eb16a3de826a"><td class="memItemLeft" align="right" valign="top">pplx::task&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Endpoint.html#a860c98dcd541ad94e958eb16a3de826a">open</a> ()</td></tr>
@@ -120,14 +120,16 @@ Private 속성</h2></td></tr>
 <tr class="memitem:a4afd78cd6efc858e6ff0ce920b296e0b"><td class="memItemLeft" align="right" valign="top">std::map&lt; utility::string_t, <a class="el" href="namespacesoso.html#a767499e7b94b6a4c2709a26cb0deb3ef">endpoint_handler_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Endpoint.html#a4afd78cd6efc858e6ff0ce920b296e0b">_tables</a> [<a class="el" href="namespacesoso.html#a34a64ddd825095a3654e7f1f0d1f8c7da866c5cccce012bed0d1081d27390b03a">API_METHOD_SIZE</a>]</td></tr>
 <tr class="memdesc:a4afd78cd6efc858e6ff0ce920b296e0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">API 동작 정의 테이블 (GET/POST/PUT/DEL 각 각 정의)  <a href="classsoso_1_1Endpoint.html#a4afd78cd6efc858e6ff0ce920b296e0b">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:a4afd78cd6efc858e6ff0ce920b296e0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd6d75e19b60500ee903bc6613efb7b5"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1Endpoint.html#afd6d75e19b60500ee903bc6613efb7b5">_listen_thread_num</a></td></tr>
+<tr class="separator:afd6d75e19b60500ee903bc6613efb7b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
 <div class="textblock"><p><a class="el" href="classsoso_1_1Endpoint.html" title="Endpoint">Endpoint</a> </p>
 
 <p class="definition"><a class="el" href="endpoint_8h_source.html">endpoint.h</a> 파일의 <a class="el" href="endpoint_8h_source.html#l00038">38</a> 번째 라인에서 정의되었습니다.</p>
 </div><h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
-<a id="a04d29b9b96e610807e9736b6833ee39e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a04d29b9b96e610807e9736b6833ee39e">&#9670;&nbsp;</a></span>Endpoint()</h2>
+<a id="a98f734acc05014f6fecf53befad70b90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98f734acc05014f6fecf53befad70b90">&#9670;&nbsp;</a></span>Endpoint()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -136,13 +138,24 @@ Private 속성</h2></td></tr>
           <td class="memname">Endpoint::Endpoint </td>
           <td>(</td>
           <td class="paramtype">utility::string_t&#160;</td>
-          <td class="paramname"><em>url</em></td><td>)</td>
+          <td class="paramname"><em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>listen_thread_num</em> = <code>4</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>TODO: <a href="https://github.com/microsoft/cpprestsdk/blob/master/Release/src/pplx/threadpool.cpp">https://github.com/microsoft/cpprestsdk/blob/master/Release/src/pplx/threadpool.cpp</a> initialize_shared_threadpool std::call_once</p>
 
-<p class="definition"><a class="el" href="endpoint_8cpp_source.html">endpoint.cpp</a> 파일의 <a class="el" href="endpoint_8cpp_source.html#l00073">73</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="endpoint_8cpp_source.html">endpoint.cpp</a> 파일의 <a class="el" href="endpoint_8cpp_source.html#l00012">12</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -169,7 +182,7 @@ Private 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="endpoint_8h_source.html">endpoint.h</a> 파일의 <a class="el" href="endpoint_8h_source.html#l00054">54</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="endpoint_8h_source.html">endpoint.h</a> 파일의 <a class="el" href="endpoint_8h_source.html#l00056">56</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -219,7 +232,7 @@ Private 속성</h2></td></tr>
 <dd>
 false </dd></dl>
 
-<p class="definition"><a class="el" href="endpoint_8cpp_source.html">endpoint.cpp</a> 파일의 <a class="el" href="endpoint_8cpp_source.html#l00019">19</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="endpoint_8cpp_source.html">endpoint.cpp</a> 파일의 <a class="el" href="endpoint_8cpp_source.html#l00040">40</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -260,7 +273,7 @@ false </dd></dl>
 <p>query</p>
 <p>merge parameters + query</p>
 
-<p class="definition"><a class="el" href="endpoint_8cpp_source.html">endpoint.cpp</a> 파일의 <a class="el" href="endpoint_8cpp_source.html#l00049">49</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="endpoint_8cpp_source.html">endpoint.cpp</a> 파일의 <a class="el" href="endpoint_8cpp_source.html#l00070">70</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -290,7 +303,7 @@ false </dd></dl>
 <p>rest api 서버 종료 </p>
 <dl class="section return"><dt>반환값</dt><dd>pplx::task&lt;void&gt; </dd></dl>
 
-<p class="definition"><a class="el" href="endpoint_8h_source.html">endpoint.h</a> 파일의 <a class="el" href="endpoint_8h_source.html#l00066">66</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="endpoint_8h_source.html">endpoint.h</a> 파일의 <a class="el" href="endpoint_8h_source.html#l00068">68</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -318,7 +331,7 @@ false </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="endpoint_8cpp_source.html">endpoint.cpp</a> 파일의 <a class="el" href="endpoint_8cpp_source.html#l00043">43</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="endpoint_8cpp_source.html">endpoint.cpp</a> 파일의 <a class="el" href="endpoint_8cpp_source.html#l00064">64</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -346,7 +359,7 @@ false </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="endpoint_8cpp_source.html">endpoint.cpp</a> 파일의 <a class="el" href="endpoint_8cpp_source.html#l00047">47</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="endpoint_8cpp_source.html">endpoint.cpp</a> 파일의 <a class="el" href="endpoint_8cpp_source.html#l00068">68</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -386,7 +399,7 @@ false </dd></dl>
 </dl>
 <dl class="section return"><dt>반환값</dt><dd>endpoint_handler_t* </dd></dl>
 
-<p class="definition"><a class="el" href="endpoint_8cpp_source.html">endpoint.cpp</a> 파일의 <a class="el" href="endpoint_8cpp_source.html#l00030">30</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="endpoint_8cpp_source.html">endpoint.cpp</a> 파일의 <a class="el" href="endpoint_8cpp_source.html#l00051">51</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -416,7 +429,7 @@ false </dd></dl>
 <p>rest api 서버 시작 </p>
 <dl class="section return"><dt>반환값</dt><dd>pplx::task&lt;void&gt; </dd></dl>
 
-<p class="definition"><a class="el" href="endpoint_8h_source.html">endpoint.h</a> 파일의 <a class="el" href="endpoint_8h_source.html#l00060">60</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="endpoint_8h_source.html">endpoint.h</a> 파일의 <a class="el" href="endpoint_8h_source.html#l00062">62</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -444,7 +457,7 @@ false </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="endpoint_8cpp_source.html">endpoint.cpp</a> 파일의 <a class="el" href="endpoint_8cpp_source.html#l00039">39</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="endpoint_8cpp_source.html">endpoint.cpp</a> 파일의 <a class="el" href="endpoint_8cpp_source.html#l00060">60</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -472,11 +485,35 @@ false </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="endpoint_8cpp_source.html">endpoint.cpp</a> 파일의 <a class="el" href="endpoint_8cpp_source.html#l00045">45</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="endpoint_8cpp_source.html">endpoint.cpp</a> 파일의 <a class="el" href="endpoint_8cpp_source.html#l00066">66</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
 <h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="afd6d75e19b60500ee903bc6613efb7b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd6d75e19b60500ee903bc6613efb7b5">&#9670;&nbsp;</a></span>_listen_thread_num</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t soso::Endpoint::_listen_thread_num</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="endpoint_8h_source.html">endpoint.h</a> 파일의 <a class="el" href="endpoint_8h_source.html#l00052">52</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
 <a id="afe5e0d92caefaad5dfa8065245c3f6a7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afe5e0d92caefaad5dfa8065245c3f6a7">&#9670;&nbsp;</a></span>_listener</h2>
 

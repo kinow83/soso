@@ -1,4 +1,6 @@
 #include "endpoint.h"
+#include <cpprest/http_listener.h>
+#include <pplx/threadpool.h>
 
 using namespace std;
 using namespace web;
@@ -6,6 +8,25 @@ using namespace http;
 using namespace soso;
 using namespace utility;
 using namespace http::experimental::listener;
+
+Endpoint::Endpoint(utility::string_t url, size_t listen_thread_num) //
+    : _listener(url),                                               //
+      _listen_thread_num(listen_thread_num) {
+  /// TODO:
+  /// https://github.com/microsoft/cpprestsdk/blob/master/Release/src/pplx/threadpool.cpp
+  /// initialize_shared_threadpool
+  /// std::call_once
+  crossplat::threadpool::initialize_with_threads(_listen_thread_num);
+
+  _listener.support(methods::GET, //
+                    bind(&Endpoint::get, this, placeholders::_1));
+  _listener.support(methods::PUT, //
+                    bind(&Endpoint::put, this, placeholders::_1));
+  _listener.support(methods::POST, //
+                    bind(&Endpoint::post, this, placeholders::_1));
+  _listener.support(methods::DEL, //
+                    bind(&Endpoint::del, this, placeholders::_1));
+}
 
 static json::value &appendJSON( //
     json::value &json, const map<string_t, string_t> &map) {
@@ -68,12 +89,4 @@ void Endpoint::callapi(API_METHOD method, http_request message) {
     // ucout << resp << endl;
     message.reply(status_codes::OK, resp);
   }
-}
-
-Endpoint::Endpoint(utility::string_t url) : _listener(url) {
-  _listener.support(methods::GET, bind(&Endpoint::get, this, placeholders::_1));
-  _listener.support(methods::PUT, bind(&Endpoint::put, this, placeholders::_1));
-  _listener.support(methods::POST,
-                    bind(&Endpoint::post, this, placeholders::_1));
-  _listener.support(methods::DEL, bind(&Endpoint::del, this, placeholders::_1));
 }

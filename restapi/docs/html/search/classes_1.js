@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['restapi_34',['RestApi',['../classsoso_1_1RestApi.html',1,'soso']]]
+  ['restapi_36',['RestApi',['../classsoso_1_1RestApi.html',1,'soso']]]
 ];

@@ -1,5 +1,5 @@
 #include "restapi.h"
-
+#include <pthread.h>
 /*
  * reference
  * https://github.com/Meenapintu/Restweb
@@ -13,11 +13,8 @@ using namespace soso;
 using namespace utility;
 using namespace http::experimental::listener;
 
-RestApi::RestApi() { //
-  _endpoint = nullptr;
-}
-
-RestApi::RestApi(const std::string &address) : _address(address) { //
+RestApi::RestApi(const string &address, const string &name) //
+    : _name(name) {
   setAddress(address);
 }
 
@@ -27,10 +24,11 @@ RestApi::~RestApi() {
   }
 }
 
-void RestApi::setAddress(const std::string &address) {
+void RestApi::setAddress(const string &address) {
   uri_builder uri(address);
   auto addr = uri.to_uri().to_string();
-  _endpoint = std::unique_ptr<Endpoint>(new Endpoint(addr));
+  pthread_setname_np(pthread_self(), _name.c_str());
+  _endpoint = unique_ptr<Endpoint>(new Endpoint(addr));
 }
 
 void RestApi::on_initialize() { //
