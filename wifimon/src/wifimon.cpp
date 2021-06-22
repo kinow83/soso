@@ -1,5 +1,6 @@
 
 #include "component80211.h"
+#include "component_session.h"
 #include "pcapmon.h"
 #include <echo.h>
 #include <memory>
@@ -27,11 +28,11 @@ int main(int argc, char **argv) {
     int thread_num = 1;
     bool blocking = true;
     int log_level = L_ALL;
-    string pcapfile;
+    string pcap_source;
   };
   struct opt opt;
 
-  while ((c = getopt(argc, argv, "t:l:bp:")) != -1) {
+  while ((c = getopt(argc, argv, "t:l:p:b")) != -1) {
     switch (c) {
     case 't':
       opt.thread_num = atoi(optarg);
@@ -39,24 +40,28 @@ int main(int argc, char **argv) {
     case 'l':
       opt.log_level = atoi(optarg);
       break;
-    case 'f':
+    case 'b':
       opt.blocking = false;
       break;
     case 'p':
-      opt.pcapfile = optarg;
+      opt.pcap_source = optarg;
       break;
     case '?':
       usage();
     }
   }
 
+  if (opt.pcap_source == "") {
+    usage();
+  }
+
   default_echo_level(opt.log_level);
 
-  ComponentChain chain;
-  chain.registers(new Component80211("80211"));
-  // chain.registers(make_shared<ComponentSession>("session"));
+  shared_ptr<ComponentChain> chain = make_shared<ComponentChain>();
+  chain->registers(make_shared<Component80211>("80211"));
+  chain->registers(make_shared<ComponentSession>("session"));
 
-  PcapMon mon(&chain, opt.pcapfile.c_str(), opt.thread_num);
+  PcapMon mon(chain, opt.pcap_source.c_str(), opt.thread_num, 10);
 
   mon.run(opt.blocking);
 

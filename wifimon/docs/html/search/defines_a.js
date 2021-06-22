@@ -1,14 +1,19 @@
 var searchData=
 [
-  ['oce_5fis_5fnon_5foce_5fap_5fpresent_3242',['OCE_IS_NON_OCE_AP_PRESENT',['../ieee802__11__defs_8h.html#ad5592413f74562fa193e61ea0862157e',1,'ieee802_11_defs.h']]],
-  ['oce_5fis_5fsta_5fcfon_3243',['OCE_IS_STA_CFON',['../ieee802__11__defs_8h.html#a70a3eb766f929a336667303b37699cf4',1,'ieee802_11_defs.h']]],
-  ['oce_5frelease_3244',['OCE_RELEASE',['../ieee802__11__defs_8h.html#a604a847cf21d7a657d3a1dbd90138f51',1,'ieee802_11_defs.h']]],
-  ['oce_5frelease_5fmask_3245',['OCE_RELEASE_MASK',['../ieee802__11__defs_8h.html#a9ae04bf824eba55dadea3585fd1413fb',1,'ieee802_11_defs.h']]],
-  ['osen_5fie_5fvendor_5ftype_3246',['OSEN_IE_VENDOR_TYPE',['../ieee802__11__defs_8h.html#aeb89e7f540b000ce4775d7c57747b22a',1,'ieee802_11_defs.h']]],
-  ['oui_5fbroadcom_3247',['OUI_BROADCOM',['../ieee802__11__defs_8h.html#a73ac4173075cde1c6db864984d2a44b2',1,'ieee802_11_defs.h']]],
-  ['oui_5fmicrosoft_3248',['OUI_MICROSOFT',['../ieee802__11__defs_8h.html#a080a36d4335f5d2d61fa1ac4699bc128',1,'ieee802_11_defs.h']]],
-  ['oui_5fwfa_3249',['OUI_WFA',['../ieee802__11__defs_8h.html#a9a750999a4118de864297bd5374ea869',1,'ieee802_11_defs.h']]],
-  ['overlapping_5fbss_5ftrans_5fdelay_5ffactor_3250',['OVERLAPPING_BSS_TRANS_DELAY_FACTOR',['../ieee802__11__defs_8h.html#a7f4e6564130341a3d6e4b1e7719a410f',1,'ieee802_11_defs.h']]],
-  ['owe_5fie_5fvendor_5ftype_3251',['OWE_IE_VENDOR_TYPE',['../ieee802__11__defs_8h.html#aefeff9b1d55e135e39a3682354ffa573',1,'ieee802_11_defs.h']]],
-  ['owe_5foui_5ftype_3252',['OWE_OUI_TYPE',['../ieee802__11__defs_8h.html#a068aa9ca653da0b65c185d1d70ba848b',1,'ieee802_11_defs.h']]]
+  ['nei_5frep_5fbssid_5finfo_5fap_5fnot_5freach_3265',['NEI_REP_BSSID_INFO_AP_NOT_REACH',['../ieee802__11__defs_8h.html#a8e25ce26648589a3aefa212071bbc961',1,'ieee802_11_defs.h']]],
+  ['nei_5frep_5fbssid_5finfo_5fap_5freachable_3266',['NEI_REP_BSSID_INFO_AP_REACHABLE',['../ieee802__11__defs_8h.html#a17975b98d9e2ab48967a077731743689',1,'ieee802_11_defs.h']]],
+  ['nei_5frep_5fbssid_5finfo_5fap_5funknown_5freach_3267',['NEI_REP_BSSID_INFO_AP_UNKNOWN_REACH',['../ieee802__11__defs_8h.html#a4455e5849fe47b4cd02576af2deed09f',1,'ieee802_11_defs.h']]],
+  ['nei_5frep_5fbssid_5finfo_5fapsd_3268',['NEI_REP_BSSID_INFO_APSD',['../ieee802__11__defs_8h.html#acffd3385e370f7dcf46ae874c2ae1511',1,'ieee802_11_defs.h']]],
+  ['nei_5frep_5fbssid_5finfo_5fdelayed_5fba_3269',['NEI_REP_BSSID_INFO_DELAYED_BA',['../ieee802__11__defs_8h.html#a601e26fdd7bdca3241aac5e6d6593a12',1,'ieee802_11_defs.h']]],
+  ['nei_5frep_5fbssid_5finfo_5fftm_3270',['NEI_REP_BSSID_INFO_FTM',['../ieee802__11__defs_8h.html#a59e433fe59e06f55a63ec12fc9ce9bf3',1,'ieee802_11_defs.h']]],
+  ['nei_5frep_5fbssid_5finfo_5fhe_3271',['NEI_REP_BSSID_INFO_HE',['../ieee802__11__defs_8h.html#ad69d9e21a2ff71b8fee0cb5b7f831249',1,'ieee802_11_defs.h']]],
+  ['nei_5frep_5fbssid_5finfo_5fht_3272',['NEI_REP_BSSID_INFO_HT',['../ieee802__11__defs_8h.html#a18ef0ead35890e5c7e3b9e3a0c8a3ad8',1,'ieee802_11_defs.h']]],
+  ['nei_5frep_5fbssid_5finfo_5fimm_5fba_3273',['NEI_REP_BSSID_INFO_IMM_BA',['../ieee802__11__defs_8h.html#ab95c262df06634e6b8821baf3daca41a',1,'ieee802_11_defs.h']]],
+  ['nei_5frep_5fbssid_5finfo_5fkey_5fscope_3274',['NEI_REP_BSSID_INFO_KEY_SCOPE',['../ieee802__11__defs_8h.html#a06af056563261d08e97639920c0b2483',1,'ieee802_11_defs.h']]],
+  ['nei_5frep_5fbssid_5finfo_5fmobility_5fdomain_3275',['NEI_REP_BSSID_INFO_MOBILITY_DOMAIN',['../ieee802__11__defs_8h.html#adfc56c642fa345d3bb0eb1c290117ef5',1,'ieee802_11_defs.h']]],
+  ['nei_5frep_5fbssid_5finfo_5fqos_3276',['NEI_REP_BSSID_INFO_QOS',['../ieee802__11__defs_8h.html#a0a2c9f05d4dd36e46fced662bdb62c1d',1,'ieee802_11_defs.h']]],
+  ['nei_5frep_5fbssid_5finfo_5frm_3277',['NEI_REP_BSSID_INFO_RM',['../ieee802__11__defs_8h.html#af497504f694e496f8ef92b0bf825aa10',1,'ieee802_11_defs.h']]],
+  ['nei_5frep_5fbssid_5finfo_5fsecurity_3278',['NEI_REP_BSSID_INFO_SECURITY',['../ieee802__11__defs_8h.html#a02fdb3088b8ccb974f5948ccd3dc652b',1,'ieee802_11_defs.h']]],
+  ['nei_5frep_5fbssid_5finfo_5fspectrum_5fmgmt_3279',['NEI_REP_BSSID_INFO_SPECTRUM_MGMT',['../ieee802__11__defs_8h.html#a4a87eabdbae7c4be4a6f220e58e4e9f6',1,'ieee802_11_defs.h']]],
+  ['nei_5frep_5fbssid_5finfo_5fvht_3280',['NEI_REP_BSSID_INFO_VHT',['../ieee802__11__defs_8h.html#a2c7e43753fe14cca427c1e6f0269c050',1,'ieee802_11_defs.h']]]
 ];

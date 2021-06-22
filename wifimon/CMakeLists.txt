@@ -3,7 +3,7 @@ project(wifimon)
 cmake_minimum_required(VERSION 3.16)
 set(CMAKE_CXX_COMPILER /usr/bin/c++)
 set(CMAKE_CXX_FLAGS "-m64 -std=c++17")
-add_compile_options(-W -Wall -g -fpermissive)
+add_compile_options(-W -Wall -g -fpermissive -L/home/secui/git/libpcap)
 
 include_directories(
     include
@@ -11,18 +11,21 @@ include_directories(
     ${echo_SOURCE_DIR}/include
     ${worker_SOURCE_DIR}/include
     ${chronos_SOURCE_DIR}/include
+    ${hash_SOURCE_DIR}/include
+    ${restapi_SOURCE_DIR}/include
     components)
 
 add_executable(wifimon
     src/wifimon.cpp
     src/component80211.cpp
+    src/component_session.cpp
     src/pcapmon.cpp
     src/wifiutils.cpp)
 
 target_link_libraries(wifimon
 PUBLIC
-    component echo worker chronos
-    fmt pcap pthread event
+    component echo worker chronos restapi
+    fmt pthread event pcap
 )
 
 ###############################

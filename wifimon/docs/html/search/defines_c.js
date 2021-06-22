@@ -1,6 +1,28 @@
 var searchData=
 [
-  ['reported_5fframe_5fbody_5fmore_5ffragments_3278',['REPORTED_FRAME_BODY_MORE_FRAGMENTS',['../ieee802__11__defs_8h.html#a7a2af232406b1488c4c8086e4d19d16d',1,'ieee802_11_defs.h']]],
-  ['reported_5fframe_5fbody_5fsubelem_5flen_3279',['REPORTED_FRAME_BODY_SUBELEM_LEN',['../ieee802__11__defs_8h.html#ad61d52a5bb5bca347987b4372400f682',1,'ieee802_11_defs.h']]],
-  ['rrm_5fcapabilities_5fie_5flen_3280',['RRM_CAPABILITIES_IE_LEN',['../ieee802__11__defs_8h.html#ab48476a2a90e1543064bb6d73b40ea75',1,'ieee802_11_defs.h']]]
+  ['p2p_5fdev_5fcapab_5fclient_5fdiscoverability_3292',['P2P_DEV_CAPAB_CLIENT_DISCOVERABILITY',['../ieee802__11__defs_8h.html#aa08596ab57ae78818e917bf6b3018873',1,'ieee802_11_defs.h']]],
+  ['p2p_5fdev_5fcapab_5fconcurrent_5foper_3293',['P2P_DEV_CAPAB_CONCURRENT_OPER',['../ieee802__11__defs_8h.html#a17c53a368ee2a97315c2c48120897ff8',1,'ieee802_11_defs.h']]],
+  ['p2p_5fdev_5fcapab_5fdevice_5flimit_3294',['P2P_DEV_CAPAB_DEVICE_LIMIT',['../ieee802__11__defs_8h.html#a4bee9cd6d7ff8285d7d2465ff4d1b5bd',1,'ieee802_11_defs.h']]],
+  ['p2p_5fdev_5fcapab_5finfra_5fmanaged_3295',['P2P_DEV_CAPAB_INFRA_MANAGED',['../ieee802__11__defs_8h.html#a0441f1dd3d85950fd742a8c418c4db51',1,'ieee802_11_defs.h']]],
+  ['p2p_5fdev_5fcapab_5finvitation_5fprocedure_3296',['P2P_DEV_CAPAB_INVITATION_PROCEDURE',['../ieee802__11__defs_8h.html#a63d21acda34e5954f4dec48ef6a03a85',1,'ieee802_11_defs.h']]],
+  ['p2p_5fdev_5fcapab_5fservice_5fdiscovery_3297',['P2P_DEV_CAPAB_SERVICE_DISCOVERY',['../ieee802__11__defs_8h.html#a9e8658e3ebd4520209888423916c5e36',1,'ieee802_11_defs.h']]],
+  ['p2p_5fgroup_5fcapab_5fcross_5fconn_3298',['P2P_GROUP_CAPAB_CROSS_CONN',['../ieee802__11__defs_8h.html#a6f2446392b3ac4e7c7ccb338cd3103a0',1,'ieee802_11_defs.h']]],
+  ['p2p_5fgroup_5fcapab_5fgroup_5fformation_3299',['P2P_GROUP_CAPAB_GROUP_FORMATION',['../ieee802__11__defs_8h.html#a1c3551dd93dde33208efc2bd3c600ea8',1,'ieee802_11_defs.h']]],
+  ['p2p_5fgroup_5fcapab_5fgroup_5flimit_3300',['P2P_GROUP_CAPAB_GROUP_LIMIT',['../ieee802__11__defs_8h.html#ae8f3e56746746a403a421ec31b7421a4',1,'ieee802_11_defs.h']]],
+  ['p2p_5fgroup_5fcapab_5fgroup_5fowner_3301',['P2P_GROUP_CAPAB_GROUP_OWNER',['../ieee802__11__defs_8h.html#ade7eb34838c5f6bedb395014b2fcc3d4',1,'ieee802_11_defs.h']]],
+  ['p2p_5fgroup_5fcapab_5fintra_5fbss_5fdist_3302',['P2P_GROUP_CAPAB_INTRA_BSS_DIST',['../ieee802__11__defs_8h.html#a316372350e2f5f22bc0e42025365591f',1,'ieee802_11_defs.h']]],
+  ['p2p_5fgroup_5fcapab_5fip_5faddr_5fallocation_3303',['P2P_GROUP_CAPAB_IP_ADDR_ALLOCATION',['../ieee802__11__defs_8h.html#a516e22d138e5bf60b9cdcea31252e5dd',1,'ieee802_11_defs.h']]],
+  ['p2p_5fgroup_5fcapab_5fpersistent_5fgroup_3304',['P2P_GROUP_CAPAB_PERSISTENT_GROUP',['../ieee802__11__defs_8h.html#afa6e1eb8477e48faabe7e6e58ae893d0',1,'ieee802_11_defs.h']]],
+  ['p2p_5fgroup_5fcapab_5fpersistent_5freconn_3305',['P2P_GROUP_CAPAB_PERSISTENT_RECONN',['../ieee802__11__defs_8h.html#ab9e13223d75677eb7239bc535b396704',1,'ieee802_11_defs.h']]],
+  ['p2p_5fie_5fvendor_5ftype_3306',['P2P_IE_VENDOR_TYPE',['../ieee802__11__defs_8h.html#a2f8c8d5245b523b43593af1c1a3167cf',1,'ieee802_11_defs.h']]],
+  ['p2p_5finvitation_5fflags_5ftype_3307',['P2P_INVITATION_FLAGS_TYPE',['../ieee802__11__defs_8h.html#a68fe23132800514fe0d2db08e1a8893a',1,'ieee802_11_defs.h']]],
+  ['p2p_5fman_5fcoexistence_5foptional_3308',['P2P_MAN_COEXISTENCE_OPTIONAL',['../ieee802__11__defs_8h.html#ae41ec69f39a359275177e2674a0ccb87',1,'ieee802_11_defs.h']]],
+  ['p2p_5fman_5fcross_5fconnection_5fpermitted_3309',['P2P_MAN_CROSS_CONNECTION_PERMITTED',['../ieee802__11__defs_8h.html#a0bd6b5af0d4febc37fd882f486a5e1a2',1,'ieee802_11_defs.h']]],
+  ['p2p_5fman_5fdevice_5fmanagement_3310',['P2P_MAN_DEVICE_MANAGEMENT',['../ieee802__11__defs_8h.html#a8cba5d5f2d8fa88105b8750250221d23',1,'ieee802_11_defs.h']]],
+  ['p2p_5fmax_5fgo_5fintent_3311',['P2P_MAX_GO_INTENT',['../ieee802__11__defs_8h.html#abfbee1f2ed9e7257369c6ec85726fcfb',1,'ieee802_11_defs.h']]],
+  ['p2p_5foui_5ftype_3312',['P2P_OUI_TYPE',['../ieee802__11__defs_8h.html#ad35a5a4ce5ee6811868aa276ae328fe2',1,'ieee802_11_defs.h']]],
+  ['p2p_5fwildcard_5fssid_3313',['P2P_WILDCARD_SSID',['../ieee802__11__defs_8h.html#a2c0558e8e96bf6154640e86552938d5c',1,'ieee802_11_defs.h']]],
+  ['p2p_5fwildcard_5fssid_5flen_3314',['P2P_WILDCARD_SSID_LEN',['../ieee802__11__defs_8h.html#a033122fb411a57f43094bc27427b6659',1,'ieee802_11_defs.h']]],
+  ['p2ps_5ffeature_5fcapab_5fmac_5ftransport_3315',['P2PS_FEATURE_CAPAB_MAC_TRANSPORT',['../ieee802__11__defs_8h.html#afd0a0d62a534e2927b5236179b948e2b',1,'ieee802_11_defs.h']]],
+  ['p2ps_5ffeature_5fcapab_5fudp_5ftransport_3316',['P2PS_FEATURE_CAPAB_UDP_TRANSPORT',['../ieee802__11__defs_8h.html#a3fa372d91641fbef50dcabae7d99050d',1,'ieee802_11_defs.h']]]
 ];

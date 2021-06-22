@@ -1,0 +1,123 @@
+\hypertarget{component__session_8cpp}{}\doxysection{src/component\+\_\+session.cpp 파일 참조}
+\label{component__session_8cpp}\index{src/component\_session.cpp@{src/component\_session.cpp}}
+{\ttfamily \#include \char`\"{}component\+\_\+session.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}echo.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}nlohmann/json.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}request.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}wifiutils.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$fmt/format.\+h$>$}\newline
+{\ttfamily \#include $<$optional$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+component\+\_\+session.\+cpp에 대한 include 의존 그래프\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{component__session_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{매크로}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{component__session_8cpp_a5e83f51c024403109a7e744435a95d89}{libfmtmac}}~\char`\"{}\{\+:02x\}\+:\{\+:02x\}\+:\{\+:02x\}\+:\{\+:02x\}\+:\{\+:02x\}\+:\{\+:02x\}\char`\"{}
+\item 
+\#define \mbox{\hyperlink{component__session_8cpp_a66329b8ada3a3bfe67cfe9428f3bec5c}{libfmtap}}(ap)
+\item 
+\#define \mbox{\hyperlink{component__session_8cpp_a69b38a42df1325397fac5ba0ea31b164}{libfmtst}}(st)~(st).mac\mbox{[}0\mbox{]}, (st).mac\mbox{[}1\mbox{]}, (st).mac\mbox{[}2\mbox{]}, (st).mac\mbox{[}3\mbox{]}, (st).mac\mbox{[}4\mbox{]}, (st).mac\mbox{[}5\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+optional$<$ \mbox{\hyperlink{structsoso_1_1ap__info__t}{ap\+\_\+info\+\_\+t}} $>$ \mbox{\hyperlink{component__session_8cpp_ad4001efe2dd58265e0d8b83146284b98}{ap\+\_\+copy}} (\mbox{\hyperlink{structsoso_1_1ap__info__t}{ap\+\_\+info\+\_\+t}} \&ap)
+\item 
+optional$<$ \mbox{\hyperlink{structsoso_1_1st__info__t}{st\+\_\+info\+\_\+t}} $>$ \mbox{\hyperlink{component__session_8cpp_a9cf54f6bcd69758d8ea1f3ed55c4cabf}{st\+\_\+copy}} (\mbox{\hyperlink{structsoso_1_1st__info__t}{st\+\_\+info\+\_\+t}} \&st)
+\item 
+string \mbox{\hyperlink{component__session_8cpp_ac4bca1003376c8773fb660832b90e026}{ap\+\_\+to\+\_\+string}} (\mbox{\hyperlink{structsoso_1_1ap__info__t}{ap\+\_\+info\+\_\+t}} \&ap)
+\item 
+string \mbox{\hyperlink{component__session_8cpp_a78b11cc70bccf0f5809477fb89d5b43d}{st\+\_\+to\+\_\+string}} (\mbox{\hyperlink{structsoso_1_1st__info__t}{st\+\_\+info\+\_\+t}} \&st)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{매크로 문서화}
+\mbox{\Hypertarget{component__session_8cpp_a66329b8ada3a3bfe67cfe9428f3bec5c}\label{component__session_8cpp_a66329b8ada3a3bfe67cfe9428f3bec5c}} 
+\index{component\_session.cpp@{component\_session.cpp}!libfmtap@{libfmtap}}
+\index{libfmtap@{libfmtap}!component\_session.cpp@{component\_session.cpp}}
+\doxysubsubsection{\texorpdfstring{libfmtap}{libfmtap}}
+{\footnotesize\ttfamily \#define libfmtap(\begin{DoxyParamCaption}\item[{}]{ap }\end{DoxyParamCaption})}
+
+{\bfseries 값\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  (ap).bssid[0], (ap).bssid[1], (ap).bssid[2], (ap).bssid[3], (ap).bssid[4],   \(\backslash\)}
+\DoxyCodeLine{      (ap).bssid[5]}
+
+\end{DoxyCode}
+
+
+component\+\_\+session.\+cpp 파일의 53 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{component__session_8cpp_a5e83f51c024403109a7e744435a95d89}\label{component__session_8cpp_a5e83f51c024403109a7e744435a95d89}} 
+\index{component\_session.cpp@{component\_session.cpp}!libfmtmac@{libfmtmac}}
+\index{libfmtmac@{libfmtmac}!component\_session.cpp@{component\_session.cpp}}
+\doxysubsubsection{\texorpdfstring{libfmtmac}{libfmtmac}}
+{\footnotesize\ttfamily \#define libfmtmac~\char`\"{}\{\+:02x\}\+:\{\+:02x\}\+:\{\+:02x\}\+:\{\+:02x\}\+:\{\+:02x\}\+:\{\+:02x\}\char`\"{}}
+
+
+
+component\+\_\+session.\+cpp 파일의 52 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{component__session_8cpp_a69b38a42df1325397fac5ba0ea31b164}\label{component__session_8cpp_a69b38a42df1325397fac5ba0ea31b164}} 
+\index{component\_session.cpp@{component\_session.cpp}!libfmtst@{libfmtst}}
+\index{libfmtst@{libfmtst}!component\_session.cpp@{component\_session.cpp}}
+\doxysubsubsection{\texorpdfstring{libfmtst}{libfmtst}}
+{\footnotesize\ttfamily \#define libfmtst(\begin{DoxyParamCaption}\item[{}]{st }\end{DoxyParamCaption})~(st).mac\mbox{[}0\mbox{]}, (st).mac\mbox{[}1\mbox{]}, (st).mac\mbox{[}2\mbox{]}, (st).mac\mbox{[}3\mbox{]}, (st).mac\mbox{[}4\mbox{]}, (st).mac\mbox{[}5\mbox{]}}
+
+
+
+component\+\_\+session.\+cpp 파일의 56 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{함수 문서화}
+\mbox{\Hypertarget{component__session_8cpp_ad4001efe2dd58265e0d8b83146284b98}\label{component__session_8cpp_ad4001efe2dd58265e0d8b83146284b98}} 
+\index{component\_session.cpp@{component\_session.cpp}!ap\_copy@{ap\_copy}}
+\index{ap\_copy@{ap\_copy}!component\_session.cpp@{component\_session.cpp}}
+\doxysubsubsection{\texorpdfstring{ap\_copy()}{ap\_copy()}}
+{\footnotesize\ttfamily optional$<$\mbox{\hyperlink{structsoso_1_1ap__info__t}{ap\+\_\+info\+\_\+t}}$>$ ap\+\_\+copy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsoso_1_1ap__info__t}{ap\+\_\+info\+\_\+t}} \&}]{ap }\end{DoxyParamCaption})}
+
+
+
+component\+\_\+session.\+cpp 파일의 31 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{component__session_8cpp_ac4bca1003376c8773fb660832b90e026}\label{component__session_8cpp_ac4bca1003376c8773fb660832b90e026}} 
+\index{component\_session.cpp@{component\_session.cpp}!ap\_to\_string@{ap\_to\_string}}
+\index{ap\_to\_string@{ap\_to\_string}!component\_session.cpp@{component\_session.cpp}}
+\doxysubsubsection{\texorpdfstring{ap\_to\_string()}{ap\_to\_string()}}
+{\footnotesize\ttfamily string ap\+\_\+to\+\_\+string (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsoso_1_1ap__info__t}{ap\+\_\+info\+\_\+t}} \&}]{ap }\end{DoxyParamCaption})}
+
+
+
+component\+\_\+session.\+cpp 파일의 59 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{component__session_8cpp_a9cf54f6bcd69758d8ea1f3ed55c4cabf}\label{component__session_8cpp_a9cf54f6bcd69758d8ea1f3ed55c4cabf}} 
+\index{component\_session.cpp@{component\_session.cpp}!st\_copy@{st\_copy}}
+\index{st\_copy@{st\_copy}!component\_session.cpp@{component\_session.cpp}}
+\doxysubsubsection{\texorpdfstring{st\_copy()}{st\_copy()}}
+{\footnotesize\ttfamily optional$<$\mbox{\hyperlink{structsoso_1_1st__info__t}{st\+\_\+info\+\_\+t}}$>$ st\+\_\+copy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsoso_1_1st__info__t}{st\+\_\+info\+\_\+t}} \&}]{st }\end{DoxyParamCaption})}
+
+
+
+component\+\_\+session.\+cpp 파일의 46 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{component__session_8cpp_a78b11cc70bccf0f5809477fb89d5b43d}\label{component__session_8cpp_a78b11cc70bccf0f5809477fb89d5b43d}} 
+\index{component\_session.cpp@{component\_session.cpp}!st\_to\_string@{st\_to\_string}}
+\index{st\_to\_string@{st\_to\_string}!component\_session.cpp@{component\_session.cpp}}
+\doxysubsubsection{\texorpdfstring{st\_to\_string()}{st\_to\_string()}}
+{\footnotesize\ttfamily string st\+\_\+to\+\_\+string (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsoso_1_1st__info__t}{st\+\_\+info\+\_\+t}} \&}]{st }\end{DoxyParamCaption})}
+
+
+
+component\+\_\+session.\+cpp 파일의 64 번째 라인에서 정의되었습니다.
+

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['freq_5fto_5fchannel_2210',['freq_to_channel',['../wifiutils_8h.html#a677b5296f0e4e8c2f14bcde545036bc7',1,'freq_to_channel(int freq):&#160;wifiutils.cpp'],['../wifiutils_8cpp.html#a677b5296f0e4e8c2f14bcde545036bc7',1,'freq_to_channel(int freq):&#160;wifiutils.cpp']]]
+  ['component80211_2233',['Component80211',['../classsoso_1_1Component80211.html#a829b03457e6f0d9fe42cf4c86f0339ad',1,'soso::Component80211']]],
+  ['componentsession_2234',['ComponentSession',['../classsoso_1_1ComponentSession.html#a67b2860ae7521b44cb09dce245d748ef',1,'soso::ComponentSession']]]
 ];

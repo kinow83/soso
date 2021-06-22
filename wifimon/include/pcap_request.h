@@ -47,11 +47,19 @@ public:
   st_info_t remote;
 
 public:
-  PcapRequest() : Request() {}
-  PcapRequest(const struct pcap_pkthdr *pheader, const u_char *ppacket)
-      : Request(0) {
+  PcapRequest(size_t request_id,                 //
+              const struct pcap_pkthdr *pheader, //
+              const u_char *ppacket)
+      : Request(request_id) {
     memcpy(&pcap_pkthdr, pheader, sizeof(pcap_pkthdr));
     memcpy(packet, ppacket, sizeof(packet));
+
+    memset(&pkt_len, 0, sizeof(pkt_len));
+    memset(&fc, 0, sizeof(fc));
+
+    memset(&ap, 0, sizeof(ap));
+    memset(&sta, 0, sizeof(sta));
+    memset(&remote, 0, sizeof(remote));
   }
 };
 }; // namespace soso

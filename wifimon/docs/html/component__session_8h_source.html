@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ModuleWorker: src/component_session.h 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ModuleWorker
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'검색');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','검색');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">component_session.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="component__session_8h.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __SOSO_COMPONENT_SESSION_H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __SOSO_COMPONENT_SESSION_H__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;component.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;hash.hpp&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pcap__request_8h.html">pcap_request.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;restapi.h&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacesoso.html">soso</a> {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classsoso_1_1ComponentSession.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsoso_1_1ComponentSession.html">ComponentSession</a> : <span class="keyword">public</span> Component {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classsoso_1_1ComponentSession.html#ac68a2559bbe98b022220548a5df299d6">   13</a></span>&#160;  std::shared_ptr&lt;KHash&lt;ap_info_t&gt;&gt; <a class="code" href="classsoso_1_1ComponentSession.html#ac68a2559bbe98b022220548a5df299d6">apDB</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classsoso_1_1ComponentSession.html#a7c52bf8c9ce72ad783aa5b5dabd9b074">   14</a></span>&#160;  std::shared_ptr&lt;KHash&lt;st_info_t&gt;&gt; <a class="code" href="classsoso_1_1ComponentSession.html#a7c52bf8c9ce72ad783aa5b5dabd9b074">stDB</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classsoso_1_1ComponentSession.html#af4336d9d4cfaf1272c1e4b99a4fe2f3e">   15</a></span>&#160;  std::shared_ptr&lt;RestApi&gt; <a class="code" href="classsoso_1_1ComponentSession.html#af4336d9d4cfaf1272c1e4b99a4fe2f3e">api</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsoso_1_1ComponentSession.html#a3a9b0c2a98d42aa9e0497411f80ab257">showAP</a>();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classsoso_1_1ComponentSession.html#af48114bd11216263b6c2d7e5eefac7e2">showST</a>();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classsoso_1_1ComponentSession.html#a67b2860ae7521b44cb09dce245d748ef">   22</a></span>&#160;  <a class="code" href="classsoso_1_1ComponentSession.html#a67b2860ae7521b44cb09dce245d748ef">ComponentSession</a>(<span class="keyword">const</span> std::string &amp;name) : Component(name) {}</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classsoso_1_1ComponentSession.html#a20164765068870f39009f8e4536a7bce">~ComponentSession</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classsoso_1_1ComponentSession.html#af0f268066283a567f35720adaa3fb245">init</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classsoso_1_1ComponentSession.html#a92d8158090d9b443589b1832aad2d873">prepare</a>(Request *request);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classsoso_1_1ComponentSession.html#ab7eb600c826afc898f8961dc2f3bf989">process</a>(Request *request);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classsoso_1_1ComponentSession.html#a4e9a30985a575ed95776e5e7239f35e1">post</a>(Request *request);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classsoso_1_1ComponentSession.html#aa8a1c08cb7c3b7c3863a54374e328fd9">schedule</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;};</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}; <span class="comment">// namespace soso</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclasssoso_1_1ComponentSession_html_ab7eb600c826afc898f8961dc2f3bf989"><div class="ttname"><a href="classsoso_1_1ComponentSession.html#ab7eb600c826afc898f8961dc2f3bf989">soso::ComponentSession::process</a></div><div class="ttdeci">virtual bool process(Request *request)</div><div class="ttdef"><b>Definition:</b> <a href="component__session_8cpp_source.html#l00110">component_session.cpp:110</a></div></div>
+<div class="ttc" id="aclasssoso_1_1ComponentSession_html"><div class="ttname"><a href="classsoso_1_1ComponentSession.html">soso::ComponentSession</a></div><div class="ttdef"><b>Definition:</b> <a href="component__session_8h_source.html#l00011">component_session.h:11</a></div></div>
+<div class="ttc" id="aclasssoso_1_1ComponentSession_html_a7c52bf8c9ce72ad783aa5b5dabd9b074"><div class="ttname"><a href="classsoso_1_1ComponentSession.html#a7c52bf8c9ce72ad783aa5b5dabd9b074">soso::ComponentSession::stDB</a></div><div class="ttdeci">std::shared_ptr&lt; KHash&lt; st_info_t &gt; &gt; stDB</div><div class="ttdef"><b>Definition:</b> <a href="component__session_8h_source.html#l00014">component_session.h:14</a></div></div>
+<div class="ttc" id="aclasssoso_1_1ComponentSession_html_a3a9b0c2a98d42aa9e0497411f80ab257"><div class="ttname"><a href="classsoso_1_1ComponentSession.html#a3a9b0c2a98d42aa9e0497411f80ab257">soso::ComponentSession::showAP</a></div><div class="ttdeci">void showAP()</div><div class="ttdef"><b>Definition:</b> <a href="component__session_8cpp_source.html#l00146">component_session.cpp:146</a></div></div>
+<div class="ttc" id="anamespacesoso_html"><div class="ttname"><a href="namespacesoso.html">soso</a></div><div class="ttdef"><b>Definition:</b> <a href="hstruct_8h_source.html#l00006">hstruct.h:6</a></div></div>
+<div class="ttc" id="aclasssoso_1_1ComponentSession_html_a20164765068870f39009f8e4536a7bce"><div class="ttname"><a href="classsoso_1_1ComponentSession.html#a20164765068870f39009f8e4536a7bce">soso::ComponentSession::~ComponentSession</a></div><div class="ttdeci">virtual ~ComponentSession()</div><div class="ttdef"><b>Definition:</b> <a href="component__session_8cpp_source.html#l00153">component_session.cpp:153</a></div></div>
+<div class="ttc" id="aclasssoso_1_1ComponentSession_html_af0f268066283a567f35720adaa3fb245"><div class="ttname"><a href="classsoso_1_1ComponentSession.html#af0f268066283a567f35720adaa3fb245">soso::ComponentSession::init</a></div><div class="ttdeci">virtual bool init()</div><div class="ttdef"><b>Definition:</b> <a href="component__session_8cpp_source.html#l00069">component_session.cpp:69</a></div></div>
+<div class="ttc" id="aclasssoso_1_1ComponentSession_html_ac68a2559bbe98b022220548a5df299d6"><div class="ttname"><a href="classsoso_1_1ComponentSession.html#ac68a2559bbe98b022220548a5df299d6">soso::ComponentSession::apDB</a></div><div class="ttdeci">std::shared_ptr&lt; KHash&lt; ap_info_t &gt; &gt; apDB</div><div class="ttdef"><b>Definition:</b> <a href="component__session_8h_source.html#l00013">component_session.h:13</a></div></div>
+<div class="ttc" id="apcap__request_8h_html"><div class="ttname"><a href="pcap__request_8h.html">pcap_request.h</a></div></div>
+<div class="ttc" id="aclasssoso_1_1ComponentSession_html_a67b2860ae7521b44cb09dce245d748ef"><div class="ttname"><a href="classsoso_1_1ComponentSession.html#a67b2860ae7521b44cb09dce245d748ef">soso::ComponentSession::ComponentSession</a></div><div class="ttdeci">ComponentSession(const std::string &amp;name)</div><div class="ttdef"><b>Definition:</b> <a href="component__session_8h_source.html#l00022">component_session.h:22</a></div></div>
+<div class="ttc" id="aclasssoso_1_1ComponentSession_html_af48114bd11216263b6c2d7e5eefac7e2"><div class="ttname"><a href="classsoso_1_1ComponentSession.html#af48114bd11216263b6c2d7e5eefac7e2">soso::ComponentSession::showST</a></div><div class="ttdeci">void showST()</div><div class="ttdef"><b>Definition:</b> <a href="component__session_8cpp_source.html#l00149">component_session.cpp:149</a></div></div>
+<div class="ttc" id="aclasssoso_1_1ComponentSession_html_a4e9a30985a575ed95776e5e7239f35e1"><div class="ttname"><a href="classsoso_1_1ComponentSession.html#a4e9a30985a575ed95776e5e7239f35e1">soso::ComponentSession::post</a></div><div class="ttdeci">virtual bool post(Request *request)</div><div class="ttdef"><b>Definition:</b> <a href="component__session_8cpp_source.html#l00135">component_session.cpp:135</a></div></div>
+<div class="ttc" id="aclasssoso_1_1ComponentSession_html_aa8a1c08cb7c3b7c3863a54374e328fd9"><div class="ttname"><a href="classsoso_1_1ComponentSession.html#aa8a1c08cb7c3b7c3863a54374e328fd9">soso::ComponentSession::schedule</a></div><div class="ttdeci">virtual void schedule()</div><div class="ttdef"><b>Definition:</b> <a href="component__session_8cpp_source.html#l00142">component_session.cpp:142</a></div></div>
+<div class="ttc" id="aclasssoso_1_1ComponentSession_html_a92d8158090d9b443589b1832aad2d873"><div class="ttname"><a href="classsoso_1_1ComponentSession.html#a92d8158090d9b443589b1832aad2d873">soso::ComponentSession::prepare</a></div><div class="ttdeci">virtual bool prepare(Request *request)</div><div class="ttdef"><b>Definition:</b> <a href="component__session_8cpp_source.html#l00103">component_session.cpp:103</a></div></div>
+<div class="ttc" id="aclasssoso_1_1ComponentSession_html_af4336d9d4cfaf1272c1e4b99a4fe2f3e"><div class="ttname"><a href="classsoso_1_1ComponentSession.html#af4336d9d4cfaf1272c1e4b99a4fe2f3e">soso::ComponentSession::api</a></div><div class="ttdeci">std::shared_ptr&lt; RestApi &gt; api</div><div class="ttdef"><b>Definition:</b> <a href="component__session_8h_source.html#l00015">component_session.h:15</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

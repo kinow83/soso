@@ -67,7 +67,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 멤버 함수</a> &#124;
-<a href="#pub-attribs">Public 속성</a> &#124;
 <a href="#pri-attribs">Private 속성</a> &#124;
 <a href="classsoso_1_1PcapMon-members.html">모든 멤버 목록</a>  </div>
   <div class="headertitle">
@@ -79,39 +78,104 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:a94ef350d1f76223d8536ed827087d396"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1PcapMon.html#a94ef350d1f76223d8536ed827087d396">PcapMon</a> (ComponentChain *chain, std::string source, size_t worker_num)</td></tr>
-<tr class="separator:a94ef350d1f76223d8536ed827087d396"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36032faad2821b979eecebe37e013938"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1PcapMon.html#a36032faad2821b979eecebe37e013938">~PcapMon</a> ()</td></tr>
-<tr class="separator:a36032faad2821b979eecebe37e013938"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7731026159485063ca323ac1cdc43aea"><td class="memItemLeft" align="right" valign="top">WorkerManager *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1PcapMon.html#a7731026159485063ca323ac1cdc43aea">getWorkerManager</a> ()</td></tr>
-<tr class="separator:a7731026159485063ca323ac1cdc43aea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a691d3106daa2dd38f2fc20e167e3e19e"><td class="memItemLeft" align="right" valign="top">ComponentChain *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1PcapMon.html#a691d3106daa2dd38f2fc20e167e3e19e">getComponentChain</a> ()</td></tr>
-<tr class="separator:a691d3106daa2dd38f2fc20e167e3e19e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a97c11cc2f009964746db0a95681a41"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1PcapMon.html#a8a97c11cc2f009964746db0a95681a41">PcapMon</a> (std::shared_ptr&lt; ComponentChain &gt; chain, const std::string &amp;source, size_t worker_num, int wait_ms)</td></tr>
+<tr class="separator:a8a97c11cc2f009964746db0a95681a41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a0959cb7523decba28022f4e664da5d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1PcapMon.html#a3a0959cb7523decba28022f4e664da5d">~PcapMon</a> ()</td></tr>
+<tr class="separator:a3a0959cb7523decba28022f4e664da5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa4c75b3120552c67ab690deb6e4832f"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; WorkerManager &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1PcapMon.html#aaa4c75b3120552c67ab690deb6e4832f">getWorkerManager</a> ()</td></tr>
+<tr class="separator:aaa4c75b3120552c67ab690deb6e4832f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e38acd88c4fea7327932b63fe75c7c7"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; ComponentChain &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1PcapMon.html#a1e38acd88c4fea7327932b63fe75c7c7">getComponentChain</a> ()</td></tr>
+<tr class="separator:a1e38acd88c4fea7327932b63fe75c7c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83cad9f52000abb94371fcd13c0bd75e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1PcapMon.html#a83cad9f52000abb94371fcd13c0bd75e">run</a> (bool block)</td></tr>
 <tr class="separator:a83cad9f52000abb94371fcd13c0bd75e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public 속성</h2></td></tr>
-<tr class="memitem:a4262b9b10619d5a7b6bb26b69495f6b5"><td class="memItemLeft" align="right" valign="top">WorkerManager *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1PcapMon.html#a4262b9b10619d5a7b6bb26b69495f6b5">_worker_manager</a></td></tr>
-<tr class="separator:a4262b9b10619d5a7b6bb26b69495f6b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private 속성</h2></td></tr>
-<tr class="memitem:ac05c24556526e27a8e81f6d31c525451"><td class="memItemLeft" align="right" valign="top">ComponentChain *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1PcapMon.html#ac05c24556526e27a8e81f6d31c525451">_chain</a></td></tr>
-<tr class="separator:ac05c24556526e27a8e81f6d31c525451"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61d28af60c9762c58eac66e12ed29aaa"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; ComponentChain &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1PcapMon.html#a61d28af60c9762c58eac66e12ed29aaa">_chain</a></td></tr>
+<tr class="separator:a61d28af60c9762c58eac66e12ed29aaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af168692889fcf44d07d662a0227e2338"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; WorkerManager &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1PcapMon.html#af168692889fcf44d07d662a0227e2338">_worker_manager</a></td></tr>
+<tr class="separator:af168692889fcf44d07d662a0227e2338"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a55c05a83cf213aa88b2ba4bbf9c858"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1PcapMon.html#a3a55c05a83cf213aa88b2ba4bbf9c858">_source</a></td></tr>
 <tr class="separator:a3a55c05a83cf213aa88b2ba4bbf9c858"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54aaabd3b535db0daf0a832738cabc33"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1PcapMon.html#a54aaabd3b535db0daf0a832738cabc33">_worker_num</a></td></tr>
 <tr class="separator:a54aaabd3b535db0daf0a832738cabc33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54f94372f6edee77413f9d711c3210b7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1PcapMon.html#a54f94372f6edee77413f9d711c3210b7">_running</a></td></tr>
 <tr class="separator:a54f94372f6edee77413f9d711c3210b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbf9c3c7c8e946fb1fd451e77720ae77"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1PcapMon.html#afbf9c3c7c8e946fb1fd451e77720ae77">_dispatched</a></td></tr>
+<tr class="separator:afbf9c3c7c8e946fb1fd451e77720ae77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae99131db4933ee4f448f2a42df16aa7c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1PcapMon.html#ae99131db4933ee4f448f2a42df16aa7c">_wait_ms</a></td></tr>
+<tr class="separator:ae99131db4933ee4f448f2a42df16aa7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae49a7654cfe28ef5d4abd536bb3c1cf5"><td class="memItemLeft" align="right" valign="top">std::thread&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1PcapMon.html#ae49a7654cfe28ef5d4abd536bb3c1cf5">_schedule_thread</a></td></tr>
+<tr class="separator:ae49a7654cfe28ef5d4abd536bb3c1cf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
 <div class="textblock">
-<p class="definition"><a class="el" href="pcapmon_8h_source.html">pcapmon.h</a> 파일의 <a class="el" href="pcapmon_8h_source.html#l00011">11</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="pcapmon_8h_source.html">pcapmon.h</a> 파일의 <a class="el" href="pcapmon_8h_source.html#l00012">12</a> 번째 라인에서 정의되었습니다.</p>
 </div><h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
-<a id="a94ef350d1f76223d8536ed827087d396"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a94ef350d1f76223d8536ed827087d396">&#9670;&nbsp;</a></span>PcapMon()</h2>
+<a id="a8a97c11cc2f009964746db0a95681a41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a97c11cc2f009964746db0a95681a41">&#9670;&nbsp;</a></span>PcapMon()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PcapMon::PcapMon </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; ComponentChain &gt;&#160;</td>
+          <td class="paramname"><em>chain</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>worker_num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>wait_ms</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="pcapmon_8cpp_source.html">pcapmon.cpp</a> 파일의 <a class="el" href="pcapmon_8cpp_source.html#l00010">10</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a3a0959cb7523decba28022f4e664da5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a0959cb7523decba28022f4e664da5d">&#9670;&nbsp;</a></span>~PcapMon()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PcapMon::~PcapMon </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="pcapmon_8cpp_source.html">pcapmon.cpp</a> 파일의 <a class="el" href="pcapmon_8cpp_source.html#l00022">22</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="a1e38acd88c4fea7327932b63fe75c7c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e38acd88c4fea7327932b63fe75c7c7">&#9670;&nbsp;</a></span>getComponentChain()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -120,27 +184,10 @@ Private 속성</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">soso::PcapMon::PcapMon </td>
+          <td class="memname">std::shared_ptr&lt;ComponentChain&gt; soso::PcapMon::getComponentChain </td>
           <td>(</td>
-          <td class="paramtype">ComponentChain *&#160;</td>
-          <td class="paramname"><em>chain</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>source</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>worker_num</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -150,12 +197,12 @@ Private 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="pcapmon_8h_source.html">pcapmon.h</a> 파일의 <a class="el" href="pcapmon_8h_source.html#l00022">22</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="pcapmon_8h_source.html">pcapmon.h</a> 파일의 <a class="el" href="pcapmon_8h_source.html#l00034">34</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
-<a id="a36032faad2821b979eecebe37e013938"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a36032faad2821b979eecebe37e013938">&#9670;&nbsp;</a></span>~PcapMon()</h2>
+<a id="aaa4c75b3120552c67ab690deb6e4832f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa4c75b3120552c67ab690deb6e4832f">&#9670;&nbsp;</a></span>getWorkerManager()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -164,7 +211,7 @@ Private 속성</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">soso::PcapMon::~PcapMon </td>
+          <td class="memname">std::shared_ptr&lt;WorkerManager&gt; soso::PcapMon::getWorkerManager </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -178,61 +225,6 @@ Private 속성</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition"><a class="el" href="pcapmon_8h_source.html">pcapmon.h</a> 파일의 <a class="el" href="pcapmon_8h_source.html#l00030">30</a> 번째 라인에서 정의되었습니다.</p>
-
-</div>
-</div>
-<h2 class="groupheader">멤버 함수 문서화</h2>
-<a id="a691d3106daa2dd38f2fc20e167e3e19e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a691d3106daa2dd38f2fc20e167e3e19e">&#9670;&nbsp;</a></span>getComponentChain()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">ComponentChain* soso::PcapMon::getComponentChain </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"><a class="el" href="pcapmon_8h_source.html">pcapmon.h</a> 파일의 <a class="el" href="pcapmon_8h_source.html#l00039">39</a> 번째 라인에서 정의되었습니다.</p>
-
-</div>
-</div>
-<a id="a7731026159485063ca323ac1cdc43aea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7731026159485063ca323ac1cdc43aea">&#9670;&nbsp;</a></span>getWorkerManager()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">WorkerManager* soso::PcapMon::getWorkerManager </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"><a class="el" href="pcapmon_8h_source.html">pcapmon.h</a> 파일의 <a class="el" href="pcapmon_8h_source.html#l00035">35</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -252,13 +244,13 @@ Private 속성</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="pcapmon_8cpp_source.html">pcapmon.cpp</a> 파일의 <a class="el" href="pcapmon_8cpp_source.html#l00046">46</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="pcapmon_8cpp_source.html">pcapmon.cpp</a> 파일의 <a class="el" href="pcapmon_8cpp_source.html#l00064">64</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
 <h2 class="groupheader">멤버 데이터 문서화</h2>
-<a id="ac05c24556526e27a8e81f6d31c525451"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac05c24556526e27a8e81f6d31c525451">&#9670;&nbsp;</a></span>_chain</h2>
+<a id="a61d28af60c9762c58eac66e12ed29aaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61d28af60c9762c58eac66e12ed29aaa">&#9670;&nbsp;</a></span>_chain</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -267,7 +259,7 @@ Private 속성</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">ComponentChain* soso::PcapMon::_chain</td>
+          <td class="memname">std::shared_ptr&lt;ComponentChain&gt; soso::PcapMon::_chain</td>
         </tr>
       </table>
   </td>
@@ -277,7 +269,31 @@ Private 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="pcapmon_8h_source.html">pcapmon.h</a> 파일의 <a class="el" href="pcapmon_8h_source.html#l00013">13</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="pcapmon_8h_source.html">pcapmon.h</a> 파일의 <a class="el" href="pcapmon_8h_source.html#l00014">14</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="afbf9c3c7c8e946fb1fd451e77720ae77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbf9c3c7c8e946fb1fd451e77720ae77">&#9670;&nbsp;</a></span>_dispatched</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t soso::PcapMon::_dispatched</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="pcapmon_8h_source.html">pcapmon.h</a> 파일의 <a class="el" href="pcapmon_8h_source.html#l00019">19</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -301,7 +317,31 @@ Private 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="pcapmon_8h_source.html">pcapmon.h</a> 파일의 <a class="el" href="pcapmon_8h_source.html#l00016">16</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="pcapmon_8h_source.html">pcapmon.h</a> 파일의 <a class="el" href="pcapmon_8h_source.html#l00018">18</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ae49a7654cfe28ef5d4abd536bb3c1cf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae49a7654cfe28ef5d4abd536bb3c1cf5">&#9670;&nbsp;</a></span>_schedule_thread</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::thread soso::PcapMon::_schedule_thread</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="pcapmon_8h_source.html">pcapmon.h</a> 파일의 <a class="el" href="pcapmon_8h_source.html#l00021">21</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -325,23 +365,55 @@ Private 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="pcapmon_8h_source.html">pcapmon.h</a> 파일의 <a class="el" href="pcapmon_8h_source.html#l00014">14</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="pcapmon_8h_source.html">pcapmon.h</a> 파일의 <a class="el" href="pcapmon_8h_source.html#l00016">16</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
-<a id="a4262b9b10619d5a7b6bb26b69495f6b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4262b9b10619d5a7b6bb26b69495f6b5">&#9670;&nbsp;</a></span>_worker_manager</h2>
+<a id="ae99131db4933ee4f448f2a42df16aa7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae99131db4933ee4f448f2a42df16aa7c">&#9670;&nbsp;</a></span>_wait_ms</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">WorkerManager* soso::PcapMon::_worker_manager</td>
+          <td class="memname">int soso::PcapMon::_wait_ms</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="pcapmon_8h_source.html">pcapmon.h</a> 파일의 <a class="el" href="pcapmon_8h_source.html#l00019">19</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="pcapmon_8h_source.html">pcapmon.h</a> 파일의 <a class="el" href="pcapmon_8h_source.html#l00020">20</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="af168692889fcf44d07d662a0227e2338"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af168692889fcf44d07d662a0227e2338">&#9670;&nbsp;</a></span>_worker_manager</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;WorkerManager&gt; soso::PcapMon::_worker_manager</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="pcapmon_8h_source.html">pcapmon.h</a> 파일의 <a class="el" href="pcapmon_8h_source.html#l00015">15</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -365,7 +437,7 @@ Private 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="pcapmon_8h_source.html">pcapmon.h</a> 파일의 <a class="el" href="pcapmon_8h_source.html#l00015">15</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="pcapmon_8h_source.html">pcapmon.h</a> 파일의 <a class="el" href="pcapmon_8h_source.html#l00017">17</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>

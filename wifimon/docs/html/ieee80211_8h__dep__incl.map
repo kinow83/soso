@@ -1,8 +1,10 @@
 <map id="include/ieee80211.h" name="include/ieee80211.h">
-<area shape="rect" id="node1" title=" " alt="" coords="172,5,325,32"/>
-<area shape="rect" id="node2" href="$pcap__request_8h.html" title=" " alt="" coords="225,80,397,107"/>
-<area shape="rect" id="node3" href="$component80211_8h.html" title=" " alt="" coords="102,155,273,181"/>
-<area shape="rect" id="node6" href="$pcapmon_8cpp.html" title=" " alt="" coords="297,155,429,181"/>
+<area shape="rect" id="node1" title=" " alt="" coords="203,5,356,32"/>
+<area shape="rect" id="node2" href="$pcap__request_8h.html" title=" " alt="" coords="276,80,448,107"/>
+<area shape="rect" id="node3" href="$component80211_8h.html" title=" " alt="" coords="94,155,265,181"/>
+<area shape="rect" id="node6" href="$component__session_8h.html" title=" " alt="" coords="289,155,475,181"/>
+<area shape="rect" id="node8" href="$pcapmon_8cpp.html" title=" " alt="" coords="500,155,632,181"/>
 <area shape="rect" id="node4" href="$component80211_8cpp.html" title=" " alt="" coords="5,229,191,256"/>
 <area shape="rect" id="node5" href="$wifimon_8cpp.html" title=" " alt="" coords="215,229,339,256"/>
+<area shape="rect" id="node7" href="$component__session_8cpp.html" title=" " alt="" coords="363,229,564,256"/>
 </map>

@@ -1,0 +1,196 @@
+\hypertarget{classsoso_1_1ComponentSession}{}\doxysection{soso\+::Component\+Session 클래스 참조}
+\label{classsoso_1_1ComponentSession}\index{soso::ComponentSession@{soso::ComponentSession}}
+
+
+{\ttfamily \#include $<$component\+\_\+session.\+h$>$}
+
+
+
+soso\+::Component\+Session에 대한 상속 다이어그램 \+: \nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{classsoso_1_1ComponentSession__inherit__graph}
+\end{center}
+\end{figure}
+
+
+soso\+::Component\+Session에 대한 협력 다이어그램\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{classsoso_1_1ComponentSession__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classsoso_1_1ComponentSession_a3a9b0c2a98d42aa9e0497411f80ab257}{show\+AP}} ()
+\item 
+void \mbox{\hyperlink{classsoso_1_1ComponentSession_af48114bd11216263b6c2d7e5eefac7e2}{show\+ST}} ()
+\item 
+\mbox{\hyperlink{classsoso_1_1ComponentSession_a67b2860ae7521b44cb09dce245d748ef}{Component\+Session}} (const std\+::string \&name)
+\item 
+virtual \mbox{\hyperlink{classsoso_1_1ComponentSession_a20164765068870f39009f8e4536a7bce}{$\sim$\+Component\+Session}} ()
+\item 
+virtual bool \mbox{\hyperlink{classsoso_1_1ComponentSession_af0f268066283a567f35720adaa3fb245}{init}} ()
+\item 
+virtual bool \mbox{\hyperlink{classsoso_1_1ComponentSession_a92d8158090d9b443589b1832aad2d873}{prepare}} (Request $\ast$request)
+\item 
+virtual bool \mbox{\hyperlink{classsoso_1_1ComponentSession_ab7eb600c826afc898f8961dc2f3bf989}{process}} (Request $\ast$request)
+\item 
+virtual bool \mbox{\hyperlink{classsoso_1_1ComponentSession_a4e9a30985a575ed95776e5e7239f35e1}{post}} (Request $\ast$request)
+\item 
+virtual void \mbox{\hyperlink{classsoso_1_1ComponentSession_aa8a1c08cb7c3b7c3863a54374e328fd9}{schedule}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ K\+Hash$<$ \mbox{\hyperlink{structsoso_1_1ap__info__t}{ap\+\_\+info\+\_\+t}} $>$ $>$ \mbox{\hyperlink{classsoso_1_1ComponentSession_ac68a2559bbe98b022220548a5df299d6}{ap\+DB}}
+\item 
+std\+::shared\+\_\+ptr$<$ K\+Hash$<$ \mbox{\hyperlink{structsoso_1_1st__info__t}{st\+\_\+info\+\_\+t}} $>$ $>$ \mbox{\hyperlink{classsoso_1_1ComponentSession_a7c52bf8c9ce72ad783aa5b5dabd9b074}{st\+DB}}
+\item 
+std\+::shared\+\_\+ptr$<$ Rest\+Api $>$ \mbox{\hyperlink{classsoso_1_1ComponentSession_af4336d9d4cfaf1272c1e4b99a4fe2f3e}{api}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+component\+\_\+session.\+h 파일의 11 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{classsoso_1_1ComponentSession_a67b2860ae7521b44cb09dce245d748ef}\label{classsoso_1_1ComponentSession_a67b2860ae7521b44cb09dce245d748ef}} 
+\index{soso::ComponentSession@{soso::ComponentSession}!ComponentSession@{ComponentSession}}
+\index{ComponentSession@{ComponentSession}!soso::ComponentSession@{soso::ComponentSession}}
+\doxysubsubsection{\texorpdfstring{ComponentSession()}{ComponentSession()}}
+{\footnotesize\ttfamily soso\+::\+Component\+Session\+::\+Component\+Session (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+component\+\_\+session.\+h 파일의 22 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1ComponentSession_a20164765068870f39009f8e4536a7bce}\label{classsoso_1_1ComponentSession_a20164765068870f39009f8e4536a7bce}} 
+\index{soso::ComponentSession@{soso::ComponentSession}!````~ComponentSession@{$\sim$ComponentSession}}
+\index{````~ComponentSession@{$\sim$ComponentSession}!soso::ComponentSession@{soso::ComponentSession}}
+\doxysubsubsection{\texorpdfstring{$\sim$ComponentSession()}{~ComponentSession()}}
+{\footnotesize\ttfamily Component\+Session\+::$\sim$\+Component\+Session (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+component\+\_\+session.\+cpp 파일의 153 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{classsoso_1_1ComponentSession_af0f268066283a567f35720adaa3fb245}\label{classsoso_1_1ComponentSession_af0f268066283a567f35720adaa3fb245}} 
+\index{soso::ComponentSession@{soso::ComponentSession}!init@{init}}
+\index{init@{init}!soso::ComponentSession@{soso::ComponentSession}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool Component\+Session\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+component\+\_\+session.\+cpp 파일의 69 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1ComponentSession_a4e9a30985a575ed95776e5e7239f35e1}\label{classsoso_1_1ComponentSession_a4e9a30985a575ed95776e5e7239f35e1}} 
+\index{soso::ComponentSession@{soso::ComponentSession}!post@{post}}
+\index{post@{post}!soso::ComponentSession@{soso::ComponentSession}}
+\doxysubsubsection{\texorpdfstring{post()}{post()}}
+{\footnotesize\ttfamily bool Component\+Session\+::post (\begin{DoxyParamCaption}\item[{Request $\ast$}]{request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+component\+\_\+session.\+cpp 파일의 135 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1ComponentSession_a92d8158090d9b443589b1832aad2d873}\label{classsoso_1_1ComponentSession_a92d8158090d9b443589b1832aad2d873}} 
+\index{soso::ComponentSession@{soso::ComponentSession}!prepare@{prepare}}
+\index{prepare@{prepare}!soso::ComponentSession@{soso::ComponentSession}}
+\doxysubsubsection{\texorpdfstring{prepare()}{prepare()}}
+{\footnotesize\ttfamily bool Component\+Session\+::prepare (\begin{DoxyParamCaption}\item[{Request $\ast$}]{request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+component\+\_\+session.\+cpp 파일의 103 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1ComponentSession_ab7eb600c826afc898f8961dc2f3bf989}\label{classsoso_1_1ComponentSession_ab7eb600c826afc898f8961dc2f3bf989}} 
+\index{soso::ComponentSession@{soso::ComponentSession}!process@{process}}
+\index{process@{process}!soso::ComponentSession@{soso::ComponentSession}}
+\doxysubsubsection{\texorpdfstring{process()}{process()}}
+{\footnotesize\ttfamily bool Component\+Session\+::process (\begin{DoxyParamCaption}\item[{Request $\ast$}]{request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+component\+\_\+session.\+cpp 파일의 110 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1ComponentSession_aa8a1c08cb7c3b7c3863a54374e328fd9}\label{classsoso_1_1ComponentSession_aa8a1c08cb7c3b7c3863a54374e328fd9}} 
+\index{soso::ComponentSession@{soso::ComponentSession}!schedule@{schedule}}
+\index{schedule@{schedule}!soso::ComponentSession@{soso::ComponentSession}}
+\doxysubsubsection{\texorpdfstring{schedule()}{schedule()}}
+{\footnotesize\ttfamily void Component\+Session\+::schedule (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+component\+\_\+session.\+cpp 파일의 142 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1ComponentSession_a3a9b0c2a98d42aa9e0497411f80ab257}\label{classsoso_1_1ComponentSession_a3a9b0c2a98d42aa9e0497411f80ab257}} 
+\index{soso::ComponentSession@{soso::ComponentSession}!showAP@{showAP}}
+\index{showAP@{showAP}!soso::ComponentSession@{soso::ComponentSession}}
+\doxysubsubsection{\texorpdfstring{showAP()}{showAP()}}
+{\footnotesize\ttfamily void Component\+Session\+::show\+AP (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+component\+\_\+session.\+cpp 파일의 146 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1ComponentSession_af48114bd11216263b6c2d7e5eefac7e2}\label{classsoso_1_1ComponentSession_af48114bd11216263b6c2d7e5eefac7e2}} 
+\index{soso::ComponentSession@{soso::ComponentSession}!showST@{showST}}
+\index{showST@{showST}!soso::ComponentSession@{soso::ComponentSession}}
+\doxysubsubsection{\texorpdfstring{showST()}{showST()}}
+{\footnotesize\ttfamily void Component\+Session\+::show\+ST (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+component\+\_\+session.\+cpp 파일의 149 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{classsoso_1_1ComponentSession_ac68a2559bbe98b022220548a5df299d6}\label{classsoso_1_1ComponentSession_ac68a2559bbe98b022220548a5df299d6}} 
+\index{soso::ComponentSession@{soso::ComponentSession}!apDB@{apDB}}
+\index{apDB@{apDB}!soso::ComponentSession@{soso::ComponentSession}}
+\doxysubsubsection{\texorpdfstring{apDB}{apDB}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$K\+Hash$<$\mbox{\hyperlink{structsoso_1_1ap__info__t}{ap\+\_\+info\+\_\+t}}$>$ $>$ soso\+::\+Component\+Session\+::ap\+DB\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+component\+\_\+session.\+h 파일의 13 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1ComponentSession_af4336d9d4cfaf1272c1e4b99a4fe2f3e}\label{classsoso_1_1ComponentSession_af4336d9d4cfaf1272c1e4b99a4fe2f3e}} 
+\index{soso::ComponentSession@{soso::ComponentSession}!api@{api}}
+\index{api@{api}!soso::ComponentSession@{soso::ComponentSession}}
+\doxysubsubsection{\texorpdfstring{api}{api}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Rest\+Api$>$ soso\+::\+Component\+Session\+::api\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+component\+\_\+session.\+h 파일의 15 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1ComponentSession_a7c52bf8c9ce72ad783aa5b5dabd9b074}\label{classsoso_1_1ComponentSession_a7c52bf8c9ce72ad783aa5b5dabd9b074}} 
+\index{soso::ComponentSession@{soso::ComponentSession}!stDB@{stDB}}
+\index{stDB@{stDB}!soso::ComponentSession@{soso::ComponentSession}}
+\doxysubsubsection{\texorpdfstring{stDB}{stDB}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$K\+Hash$<$\mbox{\hyperlink{structsoso_1_1st__info__t}{st\+\_\+info\+\_\+t}}$>$ $>$ soso\+::\+Component\+Session\+::st\+DB\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+component\+\_\+session.\+h 파일의 14 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{component__session_8h}{component\+\_\+session.\+h}}\item 
+src/\mbox{\hyperlink{component__session_8cpp}{component\+\_\+session.\+cpp}}\end{DoxyCompactItemize}

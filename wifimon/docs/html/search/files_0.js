@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['component80211_2ecpp_2193',['component80211.cpp',['../component80211_8cpp.html',1,'']]],
-  ['component80211_2eh_2194',['component80211.h',['../component80211_8h.html',1,'']]]
+  ['component80211_2ecpp_2213',['component80211.cpp',['../component80211_8cpp.html',1,'']]],
+  ['component80211_2eh_2214',['component80211.h',['../component80211_8h.html',1,'']]],
+  ['component_5fsession_2ecpp_2215',['component_session.cpp',['../component__session_8cpp.html',1,'']]],
+  ['component_5fsession_2eh_2216',['component_session.h',['../component__session_8h.html',1,'']]]
 ];

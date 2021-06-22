@@ -27,13 +27,13 @@ private:
   bool verifyPacketLength(PcapRequest *request);
 
 public:
-  Component80211(std::string name) : Component(name) {}
-  ~Component80211();
-  bool init();
-  bool prepare(Request *request);
-  bool process(Request *request);
-  bool post(Request *request);
-  void schedule();
+  Component80211(const std::string &name) : Component(name) {}
+  virtual ~Component80211();
+  virtual bool init();
+  virtual bool prepare(Request *request);
+  virtual bool process(Request *request);
+  virtual bool post(Request *request);
+  virtual void schedule();
 };
 
 }; // namespace soso
