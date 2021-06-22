@@ -1,4 +1,5 @@
 <map id="soso::Chronos" name="soso::Chronos">
-<area shape="rect" id="node1" title="소요 시간 측정 class" alt="" coords="42,109,155,136"/>
-<area shape="rect" id="node2" href="$structsoso_1_1ChronosCheckPoint.html" title="소요 시간 측정 class" alt="" coords="5,5,192,32"/>
+<area shape="rect" id="node1" title="소요 시간 측정 class" alt="" coords="119,109,233,136"/>
+<area shape="rect" id="node2" href="$classsoso_1_1ChronosStack.html" title="소요 시간 측정 요소 관리" alt="" coords="5,5,155,32"/>
+<area shape="rect" id="node3" href="$structsoso_1_1ChronosCheckPoint.html" title="소요 시간 측정 class" alt="" coords="179,5,365,32"/>
 </map>

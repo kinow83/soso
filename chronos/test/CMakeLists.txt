@@ -21,8 +21,8 @@ PRIVATE
     chronos
 )
 
-include(GoogleTest)
-gtest_discover_tests(chronos_unit_test
-  PROPERTIES
-    LABELS "unit test"
-)
+#include(GoogleTest)
+#gtest_discover_tests(chronos_unit_test
+#  PROPERTIES
+#    LABELS "unit test"
+#)

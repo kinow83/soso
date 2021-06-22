@@ -1,15 +1,26 @@
 #include "chronos.h"
 
 using namespace soso;
+using namespace std;
 
-Chronos::Chronos(const std::string &desc) {
+Chronos::Chronos(const string &desc, ChronosStack *cstack) {
   _desc = desc;
+  _cstack = cstack;
   gettimeofday(&_begin, NULL);
   timerclear(&_end);
   timerclear(&_diff);
 }
 
-const std::string Chronos::desc() { //
+Chronos::~Chronos() {
+  if (++_once_destructure == 1) {
+    end();
+    if (_cstack != nullptr) {
+      _cstack->addChronos(*this);
+    }
+  }
+}
+
+const string Chronos::desc() { //
   return _desc;
 }
 
@@ -20,13 +31,29 @@ void Chronos::begin() { //
 void Chronos::end() { //
   gettimeofday(&_end, NULL);
   timersub(&_end, &_begin, &_diff);
+
+#if 0
+  string e = to_string(_end.tv_sec) + "." + //
+             fmt::format("{0:0>7}", to_string(_end.tv_usec));
+
+  string b = to_string(_begin.tv_sec) + "." + //
+             fmt::format("{0:0>7}", to_string(_begin.tv_usec));
+
+  string d = to_string(_diff.tv_sec) + "." + //
+             fmt::format("{0:0>7}", to_string(_diff.tv_usec));
+  cout << "chronos\n";
+  cout << "\t" << e << endl;
+  cout << "\t" << b << endl;
+  cout << "\t" << d << endl;
+#endif
 }
 
 struct timeval &Chronos::diff() { //
   return _diff;
 }
 
-ChronosStack::ChronosStack(const std::string &title, size_t max_point) { //
+ChronosStack::ChronosStack(const string &title, size_t max_point) { //
+  _add_count = 0;
   _title = title;
   _max_point = max_point;
   if (_max_point == 0) {
@@ -54,7 +81,7 @@ size_t ChronosStack::pointSize() { //
 }
 
 void ChronosStack::addChronos(Chronos &chronos) {
-  const std::lock_guard<std::mutex> lock(_lock);
+  const lock_guard<mutex> lock(_lock);
 
   _add_count++;
 
@@ -86,41 +113,45 @@ void ChronosStack::addChronos(Chronos &chronos) {
   _avg.tv_usec = avg_time % 1000000;
 }
 
-const std::string ChronosStack::toString() {
-  const std::lock_guard<std::mutex> lock(_lock);
+const string ChronosStack::toString() {
 
-  std::string results = "";
-  std::string total;
-  std::string avg;
+  string results = "";
+  string total;
+  string avg;
   size_t i;
 
-  total = std::to_string(_total.tv_sec) + "." + //
-          fmt::format("{0:0>7}", std::to_string(_total.tv_usec));
+  total = to_string(_total.tv_sec) + "." + //
+          fmt::format("{0:0>7}", to_string(_total.tv_usec));
 
-  avg = std::to_string(_avg.tv_sec) + "." + //
-        fmt::format("{0:0>7}", std::to_string(_avg.tv_usec));
+  avg = to_string(_avg.tv_sec) + "." + //
+        fmt::format("{0:0>7}", to_string(_avg.tv_usec));
 
   results += fmt::format("[{}] total:{}, avg:{}\n", _title, total, avg);
   i = 0;
-  for (auto p : _points) {
-    results += "(" + std::to_string(++i) + ") " +      //
-               p.desc() + ": " +                       //
-               std::to_string(p.diff().tv_sec) + "." + //
-               fmt::format("{0:0>7}", std::to_string(p.diff().tv_usec)) + "\n";
+
+  {
+    const lock_guard<mutex> lock(_lock);
+
+    for (auto &p : _points) {
+      results += "(" + to_string(++i) + ") " +      //
+                 p.desc() + ": " +                  //
+                 to_string(p.diff().tv_sec) + "." + //
+                 fmt::format("{0:0>7}", to_string(p.diff().tv_usec)) + "\n";
+    }
   }
   return results;
 }
 
-void ChronosStack::monitoring(std::function<void(ChronosStack &)> f) {
-  const std::lock_guard<std::mutex> lock(_lock);
+void ChronosStack::monitoring(function<void(ChronosStack &)> f) {
+  const lock_guard<mutex> lock(_lock);
   f(*this);
 }
 
-std::list<Chronos> &ChronosStack::getPoints() { //
+list<Chronos> &ChronosStack::getPoints() { //
   return _points;
 }
 
-const std::string ChronosStack::title() { //
+const string ChronosStack::title() { //
   return _title;
 }
 

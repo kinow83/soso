@@ -14,6 +14,8 @@
 
 namespace soso {
 
+class ChronosStack;
+
 /**
  * @brief 소요 시간 측정 class
  */
@@ -26,9 +28,13 @@ private:
   struct timeval _end;
   /// 소요 시간 측정 값
   struct timeval _diff;
+  ///
+  class ChronosStack *_cstack;
+  size_t _once_destructure = 0;
 
 public:
-  Chronos(const std::string &desc);
+  Chronos(const std::string &desc, ChronosStack *cstack = nullptr);
+  ~Chronos();
   void begin();
   void end();
   struct timeval &diff();
@@ -48,7 +54,7 @@ private:
 
   struct timeval _total;
   struct timeval _avg;
-  size_t _add_count = 0;
+  size_t _add_count;
 
 public:
   /**
@@ -57,13 +63,17 @@ public:
    * @param max_point 시간 측정 값 최대 저장 갯수
    */
   ChronosStack(const std::string &title, size_t max_point);
+  ChronosStack(const ChronosStack &cs);
 
   /**
    * @brief 시간 측정 값을 stack에 추가 (thread-safe)
    * @param chrono
    */
+  void addChronos(Chronos &&chronos) { //
+    addChronos(chronos);
+  }
   void addChronos(Chronos &chronos);
-  ChronosStack(const ChronosStack &cs);
+
   const std::string toString();
   size_t checkedCount();
   size_t pointSize();
