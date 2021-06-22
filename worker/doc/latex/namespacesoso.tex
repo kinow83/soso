@@ -17,6 +17,8 @@ class \mbox{\hyperlink{classsoso_1_1WorkerManager2}{Worker\+Manager2}}
 using \mbox{\hyperlink{namespacesoso_a5e0f73d41fc3ab920bed09e3254c3d50}{job\+\_\+handler\+\_\+t}} = std\+::function$<$ void(std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsoso_1_1Worker}{Worker}} $>$, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsoso_1_1Job}{Job}} $>$)$>$
 \begin{DoxyCompactList}\small\item\em job(작업) 처리 함수 타입 \end{DoxyCompactList}\item 
 using \mbox{\hyperlink{namespacesoso_a88b606ab3c7c2c1dde6f55abde2f404f}{worker\+\_\+init\+\_\+t}} = std\+::function$<$ void(std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsoso_1_1Worker}{Worker}} $>$)$>$
+\item 
+using \mbox{\hyperlink{namespacesoso_a2083a128d5418330a4c09b696b6756ed}{thread\+\_\+handler\+\_\+t}} = std\+::function$<$ void(std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsoso_1_1Worker}{Worker}} $>$, std\+::deque$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsoso_1_1Job}{Job}} $>$ $>$ $\ast$, std\+::shared\+\_\+ptr$<$ std\+::mutex $>$, std\+::shared\+\_\+ptr$<$ std\+::condition\+\_\+variable $>$)$>$
 \end{DoxyCompactItemize}
 \doxysubsection*{열거형 타입}
 \begin{DoxyCompactItemize}
@@ -42,6 +44,16 @@ job(작업) 처리 함수 타입
 
 
 worker.\+h 파일의 40 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{namespacesoso_a2083a128d5418330a4c09b696b6756ed}\label{namespacesoso_a2083a128d5418330a4c09b696b6756ed}} 
+\index{soso@{soso}!thread\_handler\_t@{thread\_handler\_t}}
+\index{thread\_handler\_t@{thread\_handler\_t}!soso@{soso}}
+\doxysubsubsection{\texorpdfstring{thread\_handler\_t}{thread\_handler\_t}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacesoso_a2083a128d5418330a4c09b696b6756ed}{soso\+::thread\+\_\+handler\+\_\+t}} = typedef std\+::function$<$void( std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classsoso_1_1Worker}{Worker}}$>$, std\+::deque$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classsoso_1_1Job}{Job}}$>$ $>$ $\ast$, std\+::shared\+\_\+ptr$<$std\+::mutex$>$, std\+::shared\+\_\+ptr$<$std\+::condition\+\_\+variable$>$)$>$}
+
+
+
+worker.\+h 파일의 46 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{namespacesoso_a88b606ab3c7c2c1dde6f55abde2f404f}\label{namespacesoso_a88b606ab3c7c2c1dde6f55abde2f404f}} 
 \index{soso@{soso}!worker\_init\_t@{worker\_init\_t}}

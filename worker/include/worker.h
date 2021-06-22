@@ -40,6 +40,10 @@ using job_handler_t =
     std::function<void(std::shared_ptr<Worker>, std::shared_ptr<Job>)>;
 
 using worker_init_t = std::function<void(std::shared_ptr<Worker>)>;
+
+using thread_handler_t = std::function<void(
+    std::shared_ptr<Worker>, std::deque<std::shared_ptr<Job>> *,
+    std::shared_ptr<std::mutex>, std::shared_ptr<std::condition_variable>)>;
 /**
  * @brief job(작업)를 처리하기 worker(작업)를 관리하기 위한 객체
  */
@@ -217,17 +221,6 @@ protected:
 
 protected:
   /**
-   * @brief worker thread 동작 함수\n
-   * worker(작업자) thread는 작업큐에서 job(작업)을 가져와 작업
-   * 함수(job_handle)를 수행한다.
-   * @param worker 작업자
-   */
-  void workerThreadFunc(std::shared_ptr<Worker> worker,      //
-                        std::deque<std::shared_ptr<Job>> *Q, //
-                        std::shared_ptr<std::mutex> M,       //
-                        std::shared_ptr<std::condition_variable> CV);
-
-  /**
    * @brief worker에게 작업 요청
    * @param name
    * @param handler
@@ -237,7 +230,20 @@ protected:
   void addJob(const std::string &name, job_handler_t handler,
               JOB_QUEUE_TYPE type, bool affinity);
 
+  void _run(thread_handler_t f, bool block = false);
+
 public:
+  /**
+   * @brief ModuleWorker 생성자
+   * @param worker_num worker(작업자) 수
+   * @param wait_for_ms job(작업) 용처 대기 시간 (millisecond)
+   */
+  WorkerManager(const std::string &name, int worker_num, int wait_for_ms = 10);
+
+  /**
+   * @brief worker thread initialize
+   * @param handler
+   */
   void setWorkerInitialize(worker_init_t handler);
 
   /**
@@ -250,13 +256,6 @@ public:
    * @brief worker thread가 모두 종료 될 때 까지 대기
    */
   void join();
-
-  /**
-   * @brief ModuleWorker 생성자
-   * @param worker_num worker(작업자) 수
-   * @param wait_for_ms job(작업) 용처 대기 시간 (millisecond)
-   */
-  WorkerManager(const std::string &name, int worker_num, int wait_for_ms);
 
   std::string workerName();
 
@@ -282,23 +281,15 @@ public:
    * @param block YES인 경우 run 함수 block되어 뒤에 실행 코드가 수행 안됨\n
    * FALSE인 경우 run 함수 호출 후 바로 리턴됨
    */
-  template <typename _Callable> //
-  void _run(_Callable &&__f, bool block = false);
-
   void run(bool block = false);
 };
 
 class WorkerManager2 : public WorkerManager {
 public:
-  WorkerManager2(const std::string &name, int worker_num);
+  WorkerManager2(const std::string &name, int worker_num, int wait_for_ms = 10)
+      : WorkerManager(name, worker_num, wait_for_ms) {}
 
   void run(bool block = false);
-
-private:
-  void workerThreadFunc(std::shared_ptr<Worker> worker,      //
-                        std::deque<std::shared_ptr<Job>> *Q, //
-                        std::shared_ptr<std::mutex> M,       //
-                        std::shared_ptr<std::condition_variable> CV);
 };
 
 } // namespace soso

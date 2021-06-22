@@ -16,7 +16,7 @@ var searchData=
   ['_5fjob_5ftype_13',['_job_type',['../classsoso_1_1Worker.html#a0d7964172c9bdefc560dd82135d79a7b',1,'soso::Worker']]],
   ['_5fm_5fworkers_14',['_m_workers',['../classsoso_1_1WorkerManager.html#a85ea26caa491c4834c79d9f7abc294a9',1,'soso::WorkerManager']]],
   ['_5fname_15',['_name',['../classsoso_1_1WorkerManager.html#a3c3123328c7b082f166000823ee64dd8',1,'soso::WorkerManager']]],
-  ['_5frun_16',['_run',['../classsoso_1_1WorkerManager.html#a14d7a969bad1472f8fd0df8c4931ff77',1,'soso::WorkerManager']]],
+  ['_5frun_16',['_run',['../classsoso_1_1WorkerManager.html#ac6dae903650dcec38cd418cd91e9cd3b',1,'soso::WorkerManager']]],
   ['_5frunning_17',['_running',['../classsoso_1_1Worker.html#a58f521c08a6748ebf70e088cf1cc1c70',1,'soso::Worker::_running()'],['../classsoso_1_1WorkerManager.html#afb1b57feefac977d1e6072a36001531d',1,'soso::WorkerManager::_running()']]],
   ['_5fs_5fworker_18',['_s_worker',['../classsoso_1_1WorkerManager.html#a10d4dcc3deac3a2aefa67acd90679e29',1,'soso::WorkerManager']]],
   ['_5fwait_5ffor_5fms_19',['_wait_for_ms',['../classsoso_1_1WorkerManager.html#ae1f1f281a5095799669fc93c6b78049a',1,'soso::WorkerManager']]],

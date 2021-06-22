@@ -91,7 +91,11 @@ soso::WorkerManager에 대한 상속 다이어그램 : </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
+<tr class="memitem:af25f7b523a35d1fcf8f12de0be81025b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1WorkerManager.html#af25f7b523a35d1fcf8f12de0be81025b">WorkerManager</a> (const std::string &amp;name, int worker_num, int wait_for_ms=10)</td></tr>
+<tr class="memdesc:af25f7b523a35d1fcf8f12de0be81025b"><td class="mdescLeft">&#160;</td><td class="mdescRight">ModuleWorker 생성자  <a href="classsoso_1_1WorkerManager.html#af25f7b523a35d1fcf8f12de0be81025b">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:af25f7b523a35d1fcf8f12de0be81025b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf7fc13a9c5d86f3e8c2b89f6d866f99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1WorkerManager.html#aaf7fc13a9c5d86f3e8c2b89f6d866f99">setWorkerInitialize</a> (<a class="el" href="namespacesoso.html#a88b606ab3c7c2c1dde6f55abde2f404f">worker_init_t</a> handler)</td></tr>
+<tr class="memdesc:aaf7fc13a9c5d86f3e8c2b89f6d866f99"><td class="mdescLeft">&#160;</td><td class="mdescRight">worker thread initialize  <a href="classsoso_1_1WorkerManager.html#aaf7fc13a9c5d86f3e8c2b89f6d866f99">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:aaf7fc13a9c5d86f3e8c2b89f6d866f99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad7bd0c4f55450f385380d7df2909d82"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1WorkerManager.html#aad7bd0c4f55450f385380d7df2909d82">terminate</a> (bool with_join)</td></tr>
 <tr class="memdesc:aad7bd0c4f55450f385380d7df2909d82"><td class="mdescLeft">&#160;</td><td class="mdescRight">모든 worker(작업자) thread 종료할 것을 알림  <a href="classsoso_1_1WorkerManager.html#aad7bd0c4f55450f385380d7df2909d82">더 자세히 ...</a><br /></td></tr>
@@ -99,9 +103,6 @@ Public 멤버 함수</h2></td></tr>
 <tr class="memitem:aad8c187ba5a3788b0cde3c9d18f23763"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1WorkerManager.html#aad8c187ba5a3788b0cde3c9d18f23763">join</a> ()</td></tr>
 <tr class="memdesc:aad8c187ba5a3788b0cde3c9d18f23763"><td class="mdescLeft">&#160;</td><td class="mdescRight">worker thread가 모두 종료 될 때 까지 대기  <a href="classsoso_1_1WorkerManager.html#aad8c187ba5a3788b0cde3c9d18f23763">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:aad8c187ba5a3788b0cde3c9d18f23763"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae46071087eb74f526e2ef7c7f238dfbf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1WorkerManager.html#ae46071087eb74f526e2ef7c7f238dfbf">WorkerManager</a> (const std::string &amp;name, int worker_num, int wait_for_ms)</td></tr>
-<tr class="memdesc:ae46071087eb74f526e2ef7c7f238dfbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">ModuleWorker 생성자  <a href="classsoso_1_1WorkerManager.html#ae46071087eb74f526e2ef7c7f238dfbf">더 자세히 ...</a><br /></td></tr>
-<tr class="separator:ae46071087eb74f526e2ef7c7f238dfbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88bf2aa8b2517170de50c559ea865433"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1WorkerManager.html#a88bf2aa8b2517170de50c559ea865433">workerName</a> ()</td></tr>
 <tr class="separator:a88bf2aa8b2517170de50c559ea865433"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa07a5f7e112982808f0a458fa23f06dd"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1WorkerManager.html#aa07a5f7e112982808f0a458fa23f06dd">report</a> ()</td></tr>
@@ -112,22 +113,18 @@ Public 멤버 함수</h2></td></tr>
 <tr class="memitem:a3e05f4b80c5c16bf3466c928f97d6c3a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1WorkerManager.html#a3e05f4b80c5c16bf3466c928f97d6c3a">addJobMultiWorker</a> (const std::string &amp;name, <a class="el" href="namespacesoso.html#a5e0f73d41fc3ab920bed09e3254c3d50">job_handler_t</a> handler, bool affinity=false)</td></tr>
 <tr class="memdesc:a3e05f4b80c5c16bf3466c928f97d6c3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">여러 worker 중 하나의 worker에게 작업 요청  <a href="classsoso_1_1WorkerManager.html#a3e05f4b80c5c16bf3466c928f97d6c3a">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:a3e05f4b80c5c16bf3466c928f97d6c3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14d7a969bad1472f8fd0df8c4931ff77"><td class="memTemplParams" colspan="2">template&lt;typename _Callable &gt; </td></tr>
-<tr class="memitem:a14d7a969bad1472f8fd0df8c4931ff77"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsoso_1_1WorkerManager.html#a14d7a969bad1472f8fd0df8c4931ff77">_run</a> (_Callable &amp;&amp;__f, bool block=false)</td></tr>
-<tr class="memdesc:a14d7a969bad1472f8fd0df8c4931ff77"><td class="mdescLeft">&#160;</td><td class="mdescRight">ModuleWorker 수행  <a href="classsoso_1_1WorkerManager.html#a14d7a969bad1472f8fd0df8c4931ff77">더 자세히 ...</a><br /></td></tr>
-<tr class="separator:a14d7a969bad1472f8fd0df8c4931ff77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaede6dc10d3ae31b34cebd426429ea3b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1WorkerManager.html#aaede6dc10d3ae31b34cebd426429ea3b">run</a> (bool block=false)</td></tr>
+<tr class="memdesc:aaede6dc10d3ae31b34cebd426429ea3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">ModuleWorker 수행  <a href="classsoso_1_1WorkerManager.html#aaede6dc10d3ae31b34cebd426429ea3b">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:aaede6dc10d3ae31b34cebd426429ea3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected 멤버 함수</h2></td></tr>
-<tr class="memitem:a22190f8e8a367dc26fcd581b8639c620"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1WorkerManager.html#a22190f8e8a367dc26fcd581b8639c620">workerThreadFunc</a> (std::shared_ptr&lt; <a class="el" href="classsoso_1_1Worker.html">Worker</a> &gt; worker, std::deque&lt; std::shared_ptr&lt; <a class="el" href="classsoso_1_1Job.html">Job</a> &gt;&gt; *Q, std::shared_ptr&lt; std::mutex &gt; M, std::shared_ptr&lt; std::condition_variable &gt; CV)</td></tr>
-<tr class="memdesc:a22190f8e8a367dc26fcd581b8639c620"><td class="mdescLeft">&#160;</td><td class="mdescRight">worker thread 동작 함수<br  />
-worker(작업자) thread는 작업큐에서 job(작업)을 가져와 작업 함수(job_handle)를 수행한다.  <a href="classsoso_1_1WorkerManager.html#a22190f8e8a367dc26fcd581b8639c620">더 자세히 ...</a><br /></td></tr>
-<tr class="separator:a22190f8e8a367dc26fcd581b8639c620"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27e252aa48026d42b35423b2824173be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1WorkerManager.html#a27e252aa48026d42b35423b2824173be">addJob</a> (const std::string &amp;name, <a class="el" href="namespacesoso.html#a5e0f73d41fc3ab920bed09e3254c3d50">job_handler_t</a> handler, <a class="el" href="namespacesoso.html#a390399d33ffd04660776fff91e506a43">JOB_QUEUE_TYPE</a> type, bool affinity)</td></tr>
 <tr class="memdesc:a27e252aa48026d42b35423b2824173be"><td class="mdescLeft">&#160;</td><td class="mdescRight">worker에게 작업 요청  <a href="classsoso_1_1WorkerManager.html#a27e252aa48026d42b35423b2824173be">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:a27e252aa48026d42b35423b2824173be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6dae903650dcec38cd418cd91e9cd3b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoso_1_1WorkerManager.html#ac6dae903650dcec38cd418cd91e9cd3b">_run</a> (<a class="el" href="namespacesoso.html#a2083a128d5418330a4c09b696b6756ed">thread_handler_t</a> f, bool block=false)</td></tr>
+<tr class="memdesc:ac6dae903650dcec38cd418cd91e9cd3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">ModuleWorker 수행  <a href="classsoso_1_1WorkerManager.html#ac6dae903650dcec38cd418cd91e9cd3b">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:ac6dae903650dcec38cd418cd91e9cd3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected 속성</h2></td></tr>
@@ -175,10 +172,10 @@ Protected 속성</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
 <div class="textblock"><p>worker(작업자) 스레드가 job(작업)을 처리하는 라이브러리. 하나의 job이 Queue(큐)에 추가되면 여러개의 worker 중 하나의 worker가 선택되어 job을 처리한다. 여기서 어떠한 worker가 선택될지는 모른다. </p>
 
-<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00184">184</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00188">188</a> 번째 라인에서 정의되었습니다.</p>
 </div><h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
-<a id="ae46071087eb74f526e2ef7c7f238dfbf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae46071087eb74f526e2ef7c7f238dfbf">&#9670;&nbsp;</a></span>WorkerManager()</h2>
+<a id="af25f7b523a35d1fcf8f12de0be81025b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af25f7b523a35d1fcf8f12de0be81025b">&#9670;&nbsp;</a></span>WorkerManager()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -199,7 +196,7 @@ Protected 속성</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>wait_for_ms</em>&#160;</td>
+          <td class="paramname"><em>wait_for_ms</em> = <code>10</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -225,19 +222,20 @@ Protected 속성</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">멤버 함수 문서화</h2>
-<a id="a14d7a969bad1472f8fd0df8c4931ff77"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a14d7a969bad1472f8fd0df8c4931ff77">&#9670;&nbsp;</a></span>_run()</h2>
+<a id="ac6dae903650dcec38cd418cd91e9cd3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6dae903650dcec38cd418cd91e9cd3b">&#9670;&nbsp;</a></span>_run()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename _Callable &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void WorkerManager::_run </td>
           <td>(</td>
-          <td class="paramtype">_Callable &amp;&amp;&#160;</td>
-          <td class="paramname"><em>__f</em>, </td>
+          <td class="paramtype"><a class="el" href="namespacesoso.html#a2083a128d5418330a4c09b696b6756ed">thread_handler_t</a>&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -251,6 +249,11 @@ template&lt;typename _Callable &gt; </div>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>ModuleWorker 수행 </p>
@@ -265,7 +268,7 @@ FALSE인 경우 run 함수 호출 후 바로 리턴됨 </td></tr>
 <p>block thread</p>
 <p>non block thread</p>
 
-<p class="definition"><a class="el" href="worker__manager_8cpp_source.html">worker_manager.cpp</a> 파일의 <a class="el" href="worker__manager_8cpp_source.html#l00217">217</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="worker__manager_8cpp_source.html">worker_manager.cpp</a> 파일의 <a class="el" href="worker__manager_8cpp_source.html#l00234">234</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -329,7 +332,7 @@ FALSE인 경우 run 함수 호출 후 바로 리턴됨 </td></tr>
 <p>select worker TODO: job 분뱁 RR(Round Robin)</p>
 <p>worker에게 작업이 추가되었음을 알림</p>
 
-<p class="definition"><a class="el" href="worker__manager_8cpp_source.html">worker_manager.cpp</a> 파일의 <a class="el" href="worker__manager_8cpp_source.html#l00145">145</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="worker__manager_8cpp_source.html">worker_manager.cpp</a> 파일의 <a class="el" href="worker__manager_8cpp_source.html#l00113">113</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -375,7 +378,7 @@ FALSE인 경우 run 함수 호출 후 바로 리턴됨 </td></tr>
   </dd>
 </dl>
 
-<p class="definition"><a class="el" href="worker__manager_8cpp_source.html">worker_manager.cpp</a> 파일의 <a class="el" href="worker__manager_8cpp_source.html#l00201">201</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="worker__manager_8cpp_source.html">worker_manager.cpp</a> 파일의 <a class="el" href="worker__manager_8cpp_source.html#l00170">170</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -414,7 +417,7 @@ FALSE인 경우 run 함수 호출 후 바로 리턴됨 </td></tr>
   </dd>
 </dl>
 
-<p class="definition"><a class="el" href="worker__manager_8cpp_source.html">worker_manager.cpp</a> 파일의 <a class="el" href="worker__manager_8cpp_source.html#l00190">190</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="worker__manager_8cpp_source.html">worker_manager.cpp</a> 파일의 <a class="el" href="worker__manager_8cpp_source.html#l00159">159</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -435,7 +438,7 @@ FALSE인 경우 run 함수 호출 후 바로 리턴됨 </td></tr>
 
 <p>worker thread가 모두 종료 될 때 까지 대기 </p>
 
-<p class="definition"><a class="el" href="worker__manager_8cpp_source.html">worker_manager.cpp</a> 파일의 <a class="el" href="worker__manager_8cpp_source.html#l00098">98</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="worker__manager_8cpp_source.html">worker_manager.cpp</a> 파일의 <a class="el" href="worker__manager_8cpp_source.html#l00066">66</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -454,7 +457,7 @@ FALSE인 경우 run 함수 호출 후 바로 리턴됨 </td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="worker__manager_8cpp_source.html">worker_manager.cpp</a> 파일의 <a class="el" href="worker__manager_8cpp_source.html#l00119">119</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="worker__manager_8cpp_source.html">worker_manager.cpp</a> 파일의 <a class="el" href="worker__manager_8cpp_source.html#l00087">87</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -474,7 +477,21 @@ FALSE인 경우 run 함수 호출 후 바로 리턴됨 </td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="worker__manager_8cpp_source.html">worker_manager.cpp</a> 파일의 <a class="el" href="worker__manager_8cpp_source.html#l00207">207</a> 번째 라인에서 정의되었습니다.</p>
+<p>ModuleWorker 수행 </p>
+<p>worker thread 동작 함수<br  />
+worker(작업자) thread는 작업큐에서 job(작업)을 가져와 작업 함수(job_handle)를 수행한다.</p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">block</td><td>YES인 경우 run 함수 block되어 뒤에 실행 코드가 수행 안됨<br  />
+FALSE인 경우 run 함수 호출 후 바로 리턴됨</td></tr>
+    <tr><td class="paramname">bool</td><td>block </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>worker initialize</p>
+<p>worker thread 종료 되었음을 알림</p>
+
+<p class="definition"><a class="el" href="worker__manager_8cpp_source.html">worker_manager.cpp</a> 파일의 <a class="el" href="worker__manager_8cpp_source.html#l00182">182</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -493,6 +510,14 @@ FALSE인 경우 run 함수 호출 후 바로 리턴됨 </td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>worker thread initialize </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handler</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition"><a class="el" href="worker__manager_8cpp_source.html">worker_manager.cpp</a> 파일의 <a class="el" href="worker__manager_8cpp_source.html#l00038">38</a> 번째 라인에서 정의되었습니다.</p>
 
@@ -522,7 +547,7 @@ FALSE인 경우 run 함수 호출 후 바로 리턴됨 </td></tr>
   </dd>
 </dl>
 
-<p class="definition"><a class="el" href="worker__manager_8cpp_source.html">worker_manager.cpp</a> 파일의 <a class="el" href="worker__manager_8cpp_source.html#l00088">88</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="worker__manager_8cpp_source.html">worker_manager.cpp</a> 파일의 <a class="el" href="worker__manager_8cpp_source.html#l00046">46</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -541,68 +566,7 @@ FALSE인 경우 run 함수 호출 후 바로 리턴됨 </td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="worker__manager_8cpp_source.html">worker_manager.cpp</a> 파일의 <a class="el" href="worker__manager_8cpp_source.html#l00115">115</a> 번째 라인에서 정의되었습니다.</p>
-
-</div>
-</div>
-<a id="a22190f8e8a367dc26fcd581b8639c620"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22190f8e8a367dc26fcd581b8639c620">&#9670;&nbsp;</a></span>workerThreadFunc()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void WorkerManager::workerThreadFunc </td>
-          <td>(</td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classsoso_1_1Worker.html">Worker</a> &gt;&#160;</td>
-          <td class="paramname"><em>worker</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::deque&lt; std::shared_ptr&lt; <a class="el" href="classsoso_1_1Job.html">Job</a> &gt;&gt; *&#160;</td>
-          <td class="paramname"><em>Q</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::shared_ptr&lt; std::mutex &gt;&#160;</td>
-          <td class="paramname"><em>M</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::shared_ptr&lt; std::condition_variable &gt;&#160;</td>
-          <td class="paramname"><em>CV</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>worker thread 동작 함수<br  />
-worker(작업자) thread는 작업큐에서 job(작업)을 가져와 작업 함수(job_handle)를 수행한다. </p>
-<dl class="params"><dt>매개변수</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">worker</td><td>작업자 </td></tr>
-  </table>
-  </dd>
-</dl>
-<p>worker initialize</p>
-<p>worker thread 종료 되었음을 알림</p>
-
-<p class="definition"><a class="el" href="worker__manager_8cpp_source.html">worker_manager.cpp</a> 파일의 <a class="el" href="worker__manager_8cpp_source.html#l00042">42</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="worker__manager_8cpp_source.html">worker_manager.cpp</a> 파일의 <a class="el" href="worker__manager_8cpp_source.html#l00083">83</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -627,7 +591,7 @@ worker(작업자) thread는 작업큐에서 job(작업)을 가져와 작업 함�
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00214">214</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00218">218</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -653,7 +617,7 @@ worker(작업자) thread는 작업큐에서 job(작업)을 가져와 작업 함�
 
 <p>worker(작업자) 선택 대기 Queue 동시 접근 변수 </p>
 
-<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00195">195</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00199">199</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -679,7 +643,7 @@ worker(작업자) thread는 작업큐에서 job(작업)을 가져와 작업 함�
 
 <p>worker(작업자) 선택 대기 Queue 동시 접근을 위한 lock </p>
 
-<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00192">192</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00196">196</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -705,7 +669,7 @@ worker(작업자) thread는 작업큐에서 job(작업)을 가져와 작업 함�
 
 <p>worker(작업자)에게 할당을 요청하는 선택 대기 Queue(큐) </p>
 
-<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00189">189</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00193">193</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -729,7 +693,7 @@ worker(작업자) thread는 작업큐에서 job(작업)을 가져와 작업 함�
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00196">196</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00200">200</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -753,7 +717,7 @@ worker(작업자) thread는 작업큐에서 job(작업)을 가져와 작업 함�
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00193">193</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00197">197</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -777,7 +741,7 @@ worker(작업자) thread는 작업큐에서 job(작업)을 가져와 작업 함�
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00190">190</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00194">194</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -801,7 +765,7 @@ worker(작업자) thread는 작업큐에서 job(작업)을 가져와 작업 함�
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00212">212</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00216">216</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -827,7 +791,7 @@ worker(작업자) thread는 작업큐에서 job(작업)을 가져와 작업 함�
 
 <p>작업자(worker) 목록 </p>
 
-<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00199">199</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00203">203</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -853,7 +817,7 @@ worker(작업자) thread는 작업큐에서 job(작업)을 가져와 작업 함�
 
 <p>작업 관리 이름 </p>
 
-<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00187">187</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00191">191</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -879,7 +843,7 @@ worker(작업자) thread는 작업큐에서 job(작업)을 가져와 작업 함�
 
 <p>모든 worker(작업자) thread 실행 여부 </p>
 
-<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00209">209</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00213">213</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -903,7 +867,7 @@ worker(작업자) thread는 작업큐에서 job(작업)을 가져와 작업 함�
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00200">200</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00204">204</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -928,7 +892,7 @@ worker(작업자) thread는 작업큐에서 job(작업)을 가져와 작업 함�
 </div><div class="memdoc">
 <p>worker(작업자)가 job(작업) 요청을 대기하는 시간으로 해당 시간 안에 작업 요청이 없으면 persist handle(지속적으로 처리해야 작업)이 호출됨 </p>
 
-<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00207">207</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00211">211</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -952,7 +916,7 @@ worker(작업자) thread는 작업큐에서 job(작업)을 가져와 작업 함�
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00216">216</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00220">220</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -978,7 +942,7 @@ worker(작업자) thread는 작업큐에서 job(작업)을 가져와 작업 함�
 
 <p>worker(작업자) 수 </p>
 
-<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00211">211</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00215">215</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -1004,7 +968,7 @@ worker(작업자) thread는 작업큐에서 job(작업)을 가져와 작업 함�
 
 <p>작업자(worker) 스레드 목록 </p>
 
-<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00203">203</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="worker_8h_source.html">worker.h</a> 파일의 <a class="el" href="worker_8h_source.html#l00207">207</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>

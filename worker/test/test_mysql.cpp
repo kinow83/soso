@@ -17,15 +17,11 @@ using namespace std;
 using namespace soso;
 using namespace sql;
 
-int main(int argc, char **argv) {
-  argc = argc;
-
+template <typename T> //
+void mysql_test(int thread_num) {
   ChronosStack cstack("test_mysql", 1000);
 
-  int thread_num = atoi(argv[1]);
-
-  shared_ptr<WorkerManager> manager =
-      make_shared<WorkerManager>("mysql", thread_num, 1000);
+  shared_ptr<T> manager = make_shared<T>("mysql", thread_num);
 
   auto driver = get_driver_instance();
 
@@ -34,7 +30,7 @@ int main(int argc, char **argv) {
       shared_ptr<Connection> conn(
           driver->connect("tcp://127.0.0.1:3306", "api", "qwer1234"));
       conn->setSchema("api");
-      cout << "create sql connection: #" << worker->getWorkerID() << endl;
+      // cout << "create sql connection: #" << worker->getWorkerID() << endl;
 
       worker->setCTX(conn);
     } catch (sql::SQLException &e) {
@@ -48,9 +44,10 @@ int main(int argc, char **argv) {
 
   manager->run(false);
   sleep(3);
+  cout << "wait for thread init\n";
 
-  Chronos c("run", &cstack);
   {
+    Chronos c("run", &cstack);
     {
       Chronos c("add job", &cstack);
       for (int i = 0; i < 4; i++) {
@@ -64,14 +61,14 @@ int main(int argc, char **argv) {
               shared_ptr<void> con = worker->getCTX();
               Connection *conn = reinterpret_cast<Connection *>(con.get());
               stmt = conn->createStatement();
-              res = stmt->executeQuery("SELECT * FROM foo");
+              res = stmt->executeQuery("SELECT id, name FROM foo");
               while (res->next()) {
 #if 0
             cout << res->getString("id") << ":" << res->getString("name")
                  << endl;
 #endif
               }
-              cout << "ok\n";
+              cout << "\tpop #" << worker->getWorkerID() << endl;
             });
         sleep(1);
         cout << "push\n";
@@ -81,8 +78,16 @@ int main(int argc, char **argv) {
     manager->terminate(true);
   }
   cout << cstack.toString();
-#if 0
-  cout << "checkedCount: " << cstack.checkedCount() << endl;
-  cout << "pointSize: " << cstack.pointSize() << endl;
-#endif
+}
+
+int main(int argc, char **argv) {
+  argc = argc;
+  int thread_num = atoi(argv[1]);
+
+  cout << "WorkerManager ================================\n";
+  mysql_test<WorkerManager>(thread_num);
+
+  cout << "\n\n\n";
+  cout << "WorkerManager2 ================================\n";
+  mysql_test<WorkerManager2>(thread_num);
 }
