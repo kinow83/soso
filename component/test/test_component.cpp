@@ -10,26 +10,26 @@ public:
   ComponentTest(std::string name) : Component(name) {}
   ~ComponentTest() {}
   bool init() { //
-    usleep(100);
+    usleep(10);
     return noop();
   }
   bool prepare(Request *request) { //
     request = request;
-    usleep(100);
+    usleep(10);
     return noop();
   }
   bool process(Request *request) { //
     request = request;
-    usleep(100);
+    usleep(10);
     return noop();
   }
   bool post(Request *request) { //
     request = request;
-    usleep(100);
+    usleep(10);
     return noop();
   }
   void schedule() { //
-    usleep(100);
+    usleep(10);
     return;
   }
 };
@@ -39,11 +39,11 @@ int main(void) { //
   ComponentChain chain;
   Request *request = new Request();
 
-  chain.registers(make_shared<Component>("test#1"));
-  chain.registers(make_shared<Component>("test#2"));
-  chain.registers(make_shared<Component>("test#3"));
-  chain.registers(make_shared<Component>("test#4"));
-  chain.registers(make_shared<Component>("test#5"));
+  chain.registers(make_shared<ComponentTest>("test#1"));
+  chain.registers(make_shared<ComponentTest>("test#2"));
+  chain.registers(make_shared<ComponentTest>("test#3"));
+  chain.registers(make_shared<ComponentTest>("test#4"));
+  chain.registers(make_shared<ComponentTest>("test#5"));
 
   chain.initComponent();
   chain.callComponent(request);

@@ -20,8 +20,8 @@ PRIVATE
     gtest_main component
 )
 
-include(GoogleTest)
-gtest_discover_tests(component_unit_test
-  PROPERTIES
-    LABELS "unit test"
-)
+#include(GoogleTest)
+#gtest_discover_tests(component_unit_test
+#  PROPERTIES
+#    LABELS "unit test"
+#)
