@@ -220,8 +220,8 @@ bool Component80211::post(Request *request) { //
   return noop();
 }
 
-void Component80211::schedule() {
-  //
+void Component80211::schedule() { //
+  cout << "Component80211::schedule\n";
 }
 
 Component80211::~Component80211() {

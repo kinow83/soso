@@ -60,11 +60,13 @@ var menudata={children:[
 {text:"~",url:"functions_~.html#index__7E"}]},
 {text:"함수",url:"functions_func.html",children:[
 {text:"c",url:"functions_func.html#index_c"},
+{text:"f",url:"functions_func.html#index_f"},
 {text:"g",url:"functions_func.html#index_g"},
 {text:"i",url:"functions_func.html#index_i"},
 {text:"p",url:"functions_func.html#index_p"},
 {text:"r",url:"functions_func.html#index_r"},
 {text:"s",url:"functions_func.html#index_s"},
+{text:"t",url:"functions_func.html#index_t"},
 {text:"v",url:"functions_func.html#index_v"},
 {text:"~",url:"functions_func.html#index__7E"}]},
 {text:"변수",url:"functions_vars.html",children:[

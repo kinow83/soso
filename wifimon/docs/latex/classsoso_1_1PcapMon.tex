@@ -11,9 +11,15 @@
 \item 
 \mbox{\hyperlink{classsoso_1_1PcapMon_a3a0959cb7523decba28022f4e664da5d}{$\sim$\+Pcap\+Mon}} ()
 \item 
-std\+::shared\+\_\+ptr$<$ Worker\+Manager $>$ \mbox{\hyperlink{classsoso_1_1PcapMon_aaa4c75b3120552c67ab690deb6e4832f}{get\+Worker\+Manager}} ()
+std\+::shared\+\_\+ptr$<$ Worker\+Manager2 $>$ \mbox{\hyperlink{classsoso_1_1PcapMon_afbf2c9faf3914b5d5256a8acddc1f1c5}{get\+Worker\+Manager}} ()
 \item 
 std\+::shared\+\_\+ptr$<$ Component\+Chain $>$ \mbox{\hyperlink{classsoso_1_1PcapMon_a1e38acd88c4fea7327932b63fe75c7c7}{get\+Component\+Chain}} ()
+\item 
+struct event \& \mbox{\hyperlink{classsoso_1_1PcapMon_a0de7894d1425c9795ef9f849d11660cf}{get\+Schedule\+Event}} ()
+\item 
+bool \mbox{\hyperlink{classsoso_1_1PcapMon_a0046ecce1f5abbb422a47fee4b6450b3}{finished}} ()
+\item 
+void \mbox{\hyperlink{classsoso_1_1PcapMon_a8368d4e7dd3f85f9a8ba5b3898596884}{terminate}} ()
 \item 
 void \mbox{\hyperlink{classsoso_1_1PcapMon_a83cad9f52000abb94371fcd13c0bd75e}{run}} (bool block)
 \end{DoxyCompactItemize}
@@ -22,7 +28,7 @@ void \mbox{\hyperlink{classsoso_1_1PcapMon_a83cad9f52000abb94371fcd13c0bd75e}{ru
 \item 
 std\+::shared\+\_\+ptr$<$ Component\+Chain $>$ \mbox{\hyperlink{classsoso_1_1PcapMon_a61d28af60c9762c58eac66e12ed29aaa}{\+\_\+chain}}
 \item 
-std\+::shared\+\_\+ptr$<$ Worker\+Manager $>$ \mbox{\hyperlink{classsoso_1_1PcapMon_af168692889fcf44d07d662a0227e2338}{\+\_\+worker\+\_\+manager}}
+std\+::shared\+\_\+ptr$<$ Worker\+Manager2 $>$ \mbox{\hyperlink{classsoso_1_1PcapMon_a5401a39df0e3a57506db7f7f65358a23}{\+\_\+worker\+\_\+manager}}
 \item 
 std\+::string \mbox{\hyperlink{classsoso_1_1PcapMon_a3a55c05a83cf213aa88b2ba4bbf9c858}{\+\_\+source}}
 \item 
@@ -30,18 +36,20 @@ size\+\_\+t \mbox{\hyperlink{classsoso_1_1PcapMon_a54aaabd3b535db0daf0a832738cab
 \item 
 bool \mbox{\hyperlink{classsoso_1_1PcapMon_a54f94372f6edee77413f9d711c3210b7}{\+\_\+running}}
 \item 
+bool \mbox{\hyperlink{classsoso_1_1PcapMon_a1041ce17f09f991fef7390e0d71993ce}{\+\_\+finished}} = false
+\item 
 size\+\_\+t \mbox{\hyperlink{classsoso_1_1PcapMon_afbf9c3c7c8e946fb1fd451e77720ae77}{\+\_\+dispatched}}
 \item 
-int \mbox{\hyperlink{classsoso_1_1PcapMon_ae99131db4933ee4f448f2a42df16aa7c}{\+\_\+wait\+\_\+ms}}
+int \mbox{\hyperlink{classsoso_1_1PcapMon_a312328fbec23f1a326350a3a6f4043dd}{\+\_\+wait\+\_\+for\+\_\+ms}}
 \item 
-std\+::thread \mbox{\hyperlink{classsoso_1_1PcapMon_ae49a7654cfe28ef5d4abd536bb3c1cf5}{\+\_\+schedule\+\_\+thread}}
+struct event \mbox{\hyperlink{classsoso_1_1PcapMon_a941327407901221cdac2464a01861536}{\+\_\+schedule\+\_\+ev}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{상세한 설명}
 
 
-pcapmon.\+h 파일의 12 번째 라인에서 정의되었습니다.
+pcapmon.\+h 파일의 13 번째 라인에서 정의되었습니다.
 
 
 
@@ -54,7 +62,7 @@ pcapmon.\+h 파일의 12 번째 라인에서 정의되었습니다.
 
 
 
-pcapmon.\+cpp 파일의 10 번째 라인에서 정의되었습니다.
+pcapmon.\+cpp 파일의 13 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{classsoso_1_1PcapMon_a3a0959cb7523decba28022f4e664da5d}\label{classsoso_1_1PcapMon_a3a0959cb7523decba28022f4e664da5d}} 
 \index{soso::PcapMon@{soso::PcapMon}!````~PcapMon@{$\sim$PcapMon}}
@@ -64,11 +72,21 @@ pcapmon.\+cpp 파일의 10 번째 라인에서 정의되었습니다.
 
 
 
-pcapmon.\+cpp 파일의 22 번째 라인에서 정의되었습니다.
+pcapmon.\+cpp 파일의 25 번째 라인에서 정의되었습니다.
 
 
 
 \doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{classsoso_1_1PcapMon_a0046ecce1f5abbb422a47fee4b6450b3}\label{classsoso_1_1PcapMon_a0046ecce1f5abbb422a47fee4b6450b3}} 
+\index{soso::PcapMon@{soso::PcapMon}!finished@{finished}}
+\index{finished@{finished}!soso::PcapMon@{soso::PcapMon}}
+\doxysubsubsection{\texorpdfstring{finished()}{finished()}}
+{\footnotesize\ttfamily bool Pcap\+Mon\+::finished (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+pcapmon.\+cpp 파일의 27 번째 라인에서 정의되었습니다.
+
 \mbox{\Hypertarget{classsoso_1_1PcapMon_a1e38acd88c4fea7327932b63fe75c7c7}\label{classsoso_1_1PcapMon_a1e38acd88c4fea7327932b63fe75c7c7}} 
 \index{soso::PcapMon@{soso::PcapMon}!getComponentChain@{getComponentChain}}
 \index{getComponentChain@{getComponentChain}!soso::PcapMon@{soso::PcapMon}}
@@ -77,17 +95,27 @@ pcapmon.\+cpp 파일의 22 번째 라인에서 정의되었습니다.
 
 
 
+pcapmon.\+h 파일의 33 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1PcapMon_a0de7894d1425c9795ef9f849d11660cf}\label{classsoso_1_1PcapMon_a0de7894d1425c9795ef9f849d11660cf}} 
+\index{soso::PcapMon@{soso::PcapMon}!getScheduleEvent@{getScheduleEvent}}
+\index{getScheduleEvent@{getScheduleEvent}!soso::PcapMon@{soso::PcapMon}}
+\doxysubsubsection{\texorpdfstring{getScheduleEvent()}{getScheduleEvent()}}
+{\footnotesize\ttfamily struct event\& soso\+::\+Pcap\+Mon\+::get\+Schedule\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
 pcapmon.\+h 파일의 34 번째 라인에서 정의되었습니다.
 
-\mbox{\Hypertarget{classsoso_1_1PcapMon_aaa4c75b3120552c67ab690deb6e4832f}\label{classsoso_1_1PcapMon_aaa4c75b3120552c67ab690deb6e4832f}} 
+\mbox{\Hypertarget{classsoso_1_1PcapMon_afbf2c9faf3914b5d5256a8acddc1f1c5}\label{classsoso_1_1PcapMon_afbf2c9faf3914b5d5256a8acddc1f1c5}} 
 \index{soso::PcapMon@{soso::PcapMon}!getWorkerManager@{getWorkerManager}}
 \index{getWorkerManager@{getWorkerManager}!soso::PcapMon@{soso::PcapMon}}
 \doxysubsubsection{\texorpdfstring{getWorkerManager()}{getWorkerManager()}}
-{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Worker\+Manager$>$ soso\+::\+Pcap\+Mon\+::get\+Worker\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Worker\+Manager2$>$ soso\+::\+Pcap\+Mon\+::get\+Worker\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-pcapmon.\+h 파일의 30 번째 라인에서 정의되었습니다.
+pcapmon.\+h 파일의 32 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{classsoso_1_1PcapMon_a83cad9f52000abb94371fcd13c0bd75e}\label{classsoso_1_1PcapMon_a83cad9f52000abb94371fcd13c0bd75e}} 
 \index{soso::PcapMon@{soso::PcapMon}!run@{run}}
@@ -97,7 +125,17 @@ pcapmon.\+h 파일의 30 번째 라인에서 정의되었습니다.
 
 
 
-pcapmon.\+cpp 파일의 64 번째 라인에서 정의되었습니다.
+pcapmon.\+cpp 파일의 90 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1PcapMon_a8368d4e7dd3f85f9a8ba5b3898596884}\label{classsoso_1_1PcapMon_a8368d4e7dd3f85f9a8ba5b3898596884}} 
+\index{soso::PcapMon@{soso::PcapMon}!terminate@{terminate}}
+\index{terminate@{terminate}!soso::PcapMon@{soso::PcapMon}}
+\doxysubsubsection{\texorpdfstring{terminate()}{terminate()}}
+{\footnotesize\ttfamily void Pcap\+Mon\+::terminate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+pcapmon.\+cpp 파일의 31 번째 라인에서 정의되었습니다.
 
 
 
@@ -110,7 +148,7 @@ pcapmon.\+cpp 파일의 64 번째 라인에서 정의되었습니다.
 
 
 
-pcapmon.\+h 파일의 14 번째 라인에서 정의되었습니다.
+pcapmon.\+h 파일의 15 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{classsoso_1_1PcapMon_afbf9c3c7c8e946fb1fd451e77720ae77}\label{classsoso_1_1PcapMon_afbf9c3c7c8e946fb1fd451e77720ae77}} 
 \index{soso::PcapMon@{soso::PcapMon}!\_dispatched@{\_dispatched}}
@@ -120,7 +158,17 @@ pcapmon.\+h 파일의 14 번째 라인에서 정의되었습니다.
 
 
 
-pcapmon.\+h 파일의 19 번째 라인에서 정의되었습니다.
+pcapmon.\+h 파일의 21 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1PcapMon_a1041ce17f09f991fef7390e0d71993ce}\label{classsoso_1_1PcapMon_a1041ce17f09f991fef7390e0d71993ce}} 
+\index{soso::PcapMon@{soso::PcapMon}!\_finished@{\_finished}}
+\index{\_finished@{\_finished}!soso::PcapMon@{soso::PcapMon}}
+\doxysubsubsection{\texorpdfstring{\_finished}{\_finished}}
+{\footnotesize\ttfamily bool soso\+::\+Pcap\+Mon\+::\+\_\+finished = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+pcapmon.\+h 파일의 20 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{classsoso_1_1PcapMon_a54f94372f6edee77413f9d711c3210b7}\label{classsoso_1_1PcapMon_a54f94372f6edee77413f9d711c3210b7}} 
 \index{soso::PcapMon@{soso::PcapMon}!\_running@{\_running}}
@@ -130,17 +178,17 @@ pcapmon.\+h 파일의 19 번째 라인에서 정의되었습니다.
 
 
 
-pcapmon.\+h 파일의 18 번째 라인에서 정의되었습니다.
+pcapmon.\+h 파일의 19 번째 라인에서 정의되었습니다.
 
-\mbox{\Hypertarget{classsoso_1_1PcapMon_ae49a7654cfe28ef5d4abd536bb3c1cf5}\label{classsoso_1_1PcapMon_ae49a7654cfe28ef5d4abd536bb3c1cf5}} 
-\index{soso::PcapMon@{soso::PcapMon}!\_schedule\_thread@{\_schedule\_thread}}
-\index{\_schedule\_thread@{\_schedule\_thread}!soso::PcapMon@{soso::PcapMon}}
-\doxysubsubsection{\texorpdfstring{\_schedule\_thread}{\_schedule\_thread}}
-{\footnotesize\ttfamily std\+::thread soso\+::\+Pcap\+Mon\+::\+\_\+schedule\+\_\+thread\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\Hypertarget{classsoso_1_1PcapMon_a941327407901221cdac2464a01861536}\label{classsoso_1_1PcapMon_a941327407901221cdac2464a01861536}} 
+\index{soso::PcapMon@{soso::PcapMon}!\_schedule\_ev@{\_schedule\_ev}}
+\index{\_schedule\_ev@{\_schedule\_ev}!soso::PcapMon@{soso::PcapMon}}
+\doxysubsubsection{\texorpdfstring{\_schedule\_ev}{\_schedule\_ev}}
+{\footnotesize\ttfamily struct event soso\+::\+Pcap\+Mon\+::\+\_\+schedule\+\_\+ev\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-pcapmon.\+h 파일의 21 번째 라인에서 정의되었습니다.
+pcapmon.\+h 파일의 23 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{classsoso_1_1PcapMon_a3a55c05a83cf213aa88b2ba4bbf9c858}\label{classsoso_1_1PcapMon_a3a55c05a83cf213aa88b2ba4bbf9c858}} 
 \index{soso::PcapMon@{soso::PcapMon}!\_source@{\_source}}
@@ -150,27 +198,27 @@ pcapmon.\+h 파일의 21 번째 라인에서 정의되었습니다.
 
 
 
-pcapmon.\+h 파일의 16 번째 라인에서 정의되었습니다.
+pcapmon.\+h 파일의 17 번째 라인에서 정의되었습니다.
 
-\mbox{\Hypertarget{classsoso_1_1PcapMon_ae99131db4933ee4f448f2a42df16aa7c}\label{classsoso_1_1PcapMon_ae99131db4933ee4f448f2a42df16aa7c}} 
-\index{soso::PcapMon@{soso::PcapMon}!\_wait\_ms@{\_wait\_ms}}
-\index{\_wait\_ms@{\_wait\_ms}!soso::PcapMon@{soso::PcapMon}}
-\doxysubsubsection{\texorpdfstring{\_wait\_ms}{\_wait\_ms}}
-{\footnotesize\ttfamily int soso\+::\+Pcap\+Mon\+::\+\_\+wait\+\_\+ms\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\Hypertarget{classsoso_1_1PcapMon_a312328fbec23f1a326350a3a6f4043dd}\label{classsoso_1_1PcapMon_a312328fbec23f1a326350a3a6f4043dd}} 
+\index{soso::PcapMon@{soso::PcapMon}!\_wait\_for\_ms@{\_wait\_for\_ms}}
+\index{\_wait\_for\_ms@{\_wait\_for\_ms}!soso::PcapMon@{soso::PcapMon}}
+\doxysubsubsection{\texorpdfstring{\_wait\_for\_ms}{\_wait\_for\_ms}}
+{\footnotesize\ttfamily int soso\+::\+Pcap\+Mon\+::\+\_\+wait\+\_\+for\+\_\+ms\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-pcapmon.\+h 파일의 20 번째 라인에서 정의되었습니다.
+pcapmon.\+h 파일의 22 번째 라인에서 정의되었습니다.
 
-\mbox{\Hypertarget{classsoso_1_1PcapMon_af168692889fcf44d07d662a0227e2338}\label{classsoso_1_1PcapMon_af168692889fcf44d07d662a0227e2338}} 
+\mbox{\Hypertarget{classsoso_1_1PcapMon_a5401a39df0e3a57506db7f7f65358a23}\label{classsoso_1_1PcapMon_a5401a39df0e3a57506db7f7f65358a23}} 
 \index{soso::PcapMon@{soso::PcapMon}!\_worker\_manager@{\_worker\_manager}}
 \index{\_worker\_manager@{\_worker\_manager}!soso::PcapMon@{soso::PcapMon}}
 \doxysubsubsection{\texorpdfstring{\_worker\_manager}{\_worker\_manager}}
-{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Worker\+Manager$>$ soso\+::\+Pcap\+Mon\+::\+\_\+worker\+\_\+manager\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$Worker\+Manager2$>$ soso\+::\+Pcap\+Mon\+::\+\_\+worker\+\_\+manager\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-pcapmon.\+h 파일의 15 번째 라인에서 정의되었습니다.
+pcapmon.\+h 파일의 16 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{classsoso_1_1PcapMon_a54aaabd3b535db0daf0a832738cabc33}\label{classsoso_1_1PcapMon_a54aaabd3b535db0daf0a832738cabc33}} 
 \index{soso::PcapMon@{soso::PcapMon}!\_worker\_num@{\_worker\_num}}
@@ -180,7 +228,7 @@ pcapmon.\+h 파일의 15 번째 라인에서 정의되었습니다.
 
 
 
-pcapmon.\+h 파일의 17 번째 라인에서 정의되었습니다.
+pcapmon.\+h 파일의 18 번째 라인에서 정의되었습니다.
 
 
 

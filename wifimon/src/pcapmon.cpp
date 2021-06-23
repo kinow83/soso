@@ -3,32 +3,43 @@
 #include "pcap_request.h"
 #include <pcap.h>
 #include <string>
+#include <thread>
 
 using namespace soso;
 using namespace std;
 
-PcapMon::PcapMon(std::shared_ptr<ComponentChain> chain, //
-                 const std::string &source,             //
-                 size_t worker_num, int wait_ms) {      //
+static struct timeval tv = {.tv_sec = 10, .tv_usec = 0};
+
+PcapMon::PcapMon(shared_ptr<ComponentChain> chain,     //
+                 const string &source,                 //
+                 size_t worker_num, int wait_for_ms) { //
   _chain = chain;
   _source = source;
   _worker_num = worker_num;
-  _wait_ms = wait_ms;
-  _worker_manager = std::make_shared<WorkerManager>("pcap", _worker_num, 100);
+  _wait_for_ms = wait_for_ms;
+  _worker_manager = make_shared<WorkerManager2>("pcap", _worker_num, 100);
   // run worker thread
   _worker_manager->run();
 };
 
-PcapMon::~PcapMon() {
-  _worker_manager->terminate(true);
-  std::cout << _worker_manager->report() << std::endl;
+PcapMon::~PcapMon() {}
+
+bool PcapMon::finished() { //
+  return _finished;
+}
+
+void PcapMon::terminate() { //
+  _running = false;
+  _worker_manager->terminate();
+  cout << _worker_manager->report() << endl;
+  cout << _chain->report() << endl;
 }
 
 static void pcap_callback(u_char *args,                     //
                           const struct pcap_pkthdr *header, //
                           const u_char *packet) {
   static size_t req_idx = 0;
-  PcapMon *pcapmon = reinterpret_cast<PcapMon *>(args);
+  auto pcapmon = reinterpret_cast<PcapMon *>(args);
   auto chain = pcapmon->getComponentChain();
   auto worker_manager = pcapmon->getWorkerManager();
   shared_ptr<PcapRequest> request =
@@ -36,8 +47,7 @@ static void pcap_callback(u_char *args,                     //
 
   worker_manager->addJobMultiWorker( //
       "pcap wifi monitoring",        //
-      [request, chain](std::shared_ptr<Worker> worker,
-                       std::shared_ptr<Job> job) {
+      [request, chain](shared_ptr<Worker> worker, shared_ptr<Job> job) {
         (void)worker;
         (void)job;
         chain->callComponent(request.get());
@@ -61,11 +71,29 @@ static pcap_t *create_pcap(const string &source, int wait_ms) {
   return pcap;
 }
 
+void schedule_callback(int fd, short event, void *args) {
+  auto pcapmon = reinterpret_cast<PcapMon *>(args);
+  auto chain = pcapmon->getComponentChain();
+  auto worker_manager = pcapmon->getWorkerManager();
+
+  worker_manager->addJobSingleWorker( //
+      "pcap wifi scheduler",          //
+      [chain](shared_ptr<Worker> worker, shared_ptr<Job> job) {
+        (void)worker;
+        (void)job;
+        chain->callSchedule();
+      });
+
+  evtimer_add(&pcapmon->getScheduleEvent(), &tv);
+}
+
 void PcapMon::run(bool block) {
   pcap_t *pcap;
   size_t captured = 0;
 
-  pcap = create_pcap(_source, _wait_ms);
+  event_init();
+
+  pcap = create_pcap(_source, _wait_for_ms);
   if (!pcap) {
     goto end;
   }
@@ -74,15 +102,19 @@ void PcapMon::run(bool block) {
     goto end;
   }
 
+  evtimer_set(&_schedule_ev, schedule_callback, this);
+  evtimer_add(&_schedule_ev, &tv);
+
   _running = true;
   while (_running) {
-    captured = pcap_dispatch(pcap, 1, pcap_callback, (u_char *)this);
+    event_loop(EVLOOP_NONBLOCK);
 
+    captured = pcap_dispatch(pcap, 1, pcap_callback, (u_char *)this);
     if (captured == 0) {
       if (!block) {
         break;
       }
-      usleep(_wait_ms);
+      usleep(_wait_for_ms);
     }
     _dispatched += captured;
   }
@@ -90,5 +122,7 @@ void PcapMon::run(bool block) {
 end:
   if (pcap)
     pcap_close(pcap);
+  _finished = true;
+  cout << "xxxx\n";
   return;
 }

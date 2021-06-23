@@ -97,6 +97,9 @@ bool ComponentSession::init() {
                 });
                 return aps.dump();
               });
+
+  cout << api->endpointTables() << endl;
+
   return true;
 }
 
