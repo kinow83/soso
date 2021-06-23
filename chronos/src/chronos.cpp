@@ -85,7 +85,7 @@ void ChronosStack::addChronos(Chronos &chronos) {
 
   _add_count++;
 
-  if (_points.size() > _max_point) {
+  if (_points.size() >= _max_point) {
     auto &last = _points.back();
     if (timercmp(&last.diff(), &chronos.diff(), <)) {
       _points.push_front(chronos);

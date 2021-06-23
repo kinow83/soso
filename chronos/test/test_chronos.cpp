@@ -1,36 +1,53 @@
 #include "chronos.h"
+#include <gtest/gtest.h>
 #include <iostream>
 #include <unistd.h>
+#include <vector>
 
 using namespace std;
 using namespace soso;
 
-int main(void) {
-  ChronosStack cstack("Test", 4);
-  Chronos chronoss[] = {
-      Chronos("factor#1"),  //
-      Chronos("factor#2"),  //
-      Chronos("factor#3"),  //
-      Chronos("factor#4"),  //
-      Chronos("factor#5"),  //
-      Chronos("factor#6"),  //
-      Chronos("factor#7"),  //
-      Chronos("factor#8"),  //
-      Chronos("factor#9"),  //
-      Chronos("factor#10"), //
-  };
+TEST(chronos_test, normal) {
+  ChronosStack cstack("Test", 100);
+  vector<Chronos> chronos;
 
-  for (auto &c : chronoss) {
-    c.begin();
-    usleep(10);
-    c.end();
-
-    cstack.addChronos(c);
+  for (int i = 0; i < 10; i++) {
+    chronos.push_back(Chronos("chronos#" + to_string(i)));
   }
 
+  for (auto &chrono : chronos) {
+    chrono.begin();
+    usleep(10);
+    chrono.end();
+    cstack.addChronos(chrono);
+  }
   cout << cstack.toString();
-  cout << cstack.checkedCount() << endl;
-  cout << cstack.pointSize() << endl;
+}
 
-  return 0;
+TEST(chronos_test, limit_stack_size) {
+  ChronosStack cstack("Test", 4);
+  vector<Chronos> chronos;
+
+  for (int i = 0; i < 10; i++) {
+    chronos.push_back(Chronos("chronos#" + to_string(i)));
+  }
+
+  for (auto &chrono : chronos) {
+    chrono.begin();
+    usleep(10);
+    chrono.end();
+    cstack.addChronos(chrono);
+  }
+  cout << cstack.toString();
+}
+
+TEST(chronos_test, rvalue) {
+  ChronosStack cstack("Test", 10);
+  vector<Chronos> chronos;
+
+  for (int i = 0; i < 10; i++) {
+    Chronos chrons("chronos#" + to_string(i), &cstack);
+    usleep(10);
+  }
+  cout << cstack.toString();
 }
