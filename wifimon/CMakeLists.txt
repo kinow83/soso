@@ -10,7 +10,7 @@ include_directories(
     ${component_SOURCE_DIR}/include
     ${echo_SOURCE_DIR}/include
     ${worker_SOURCE_DIR}/include
-    ${chronos_SOURCE_DIR}/include
+    ${kairos_SOURCE_DIR}/include
     ${hash_SOURCE_DIR}/include
     ${restapi_SOURCE_DIR}/include
     components)
@@ -24,7 +24,7 @@ add_executable(wifimon
 
 target_link_libraries(wifimon
 PUBLIC
-    component echo worker chronos restapi
+    component echo worker kairos restapi
     fmt pthread event pcap
 )
 
