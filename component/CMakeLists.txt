@@ -22,13 +22,13 @@ component
 target_include_directories (component
 PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/include
-    ${chronos_SOURCE_DIR}/include
+    ${kairos_SOURCE_DIR}/include
     ${echo_SOURCE_DIR}/include
 )
 
 target_link_libraries(component
 PUBLIC
-    echo chronos
+    echo kairos
 )
 
 ###############################

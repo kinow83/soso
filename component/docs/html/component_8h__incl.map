@@ -1,13 +1,13 @@
 <map id="include/component.h" name="include/component.h">
-<area shape="rect" id="node1" title=" " alt="" coords="287,5,446,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,80,91,107"/>
-<area shape="rect" id="node3" href="$request_8h.html" title=" " alt="" coords="115,80,197,107"/>
-<area shape="rect" id="node7" title=" " alt="" coords="221,80,299,107"/>
-<area shape="rect" id="node8" title=" " alt="" coords="323,80,410,107"/>
-<area shape="rect" id="node9" title=" " alt="" coords="435,80,493,107"/>
-<area shape="rect" id="node10" title=" " alt="" coords="517,80,581,107"/>
-<area shape="rect" id="node11" title=" " alt="" coords="606,80,669,107"/>
-<area shape="rect" id="node4" title=" " alt="" coords="31,155,97,181"/>
-<area shape="rect" id="node5" title=" " alt="" coords="121,155,191,181"/>
-<area shape="rect" id="node6" title=" " alt="" coords="216,155,283,181"/>
+<area shape="rect" id="node1" title=" " alt="" coords="276,5,435,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,80,79,107"/>
+<area shape="rect" id="node3" href="$request_8h.html" title=" " alt="" coords="103,80,186,107"/>
+<area shape="rect" id="node7" title=" " alt="" coords="210,80,287,107"/>
+<area shape="rect" id="node8" title=" " alt="" coords="312,80,399,107"/>
+<area shape="rect" id="node9" title=" " alt="" coords="423,80,482,107"/>
+<area shape="rect" id="node10" title=" " alt="" coords="506,80,570,107"/>
+<area shape="rect" id="node11" title=" " alt="" coords="595,80,657,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="20,155,85,181"/>
+<area shape="rect" id="node5" title=" " alt="" coords="109,155,180,181"/>
+<area shape="rect" id="node6" title=" " alt="" coords="205,155,271,181"/>
 </map>

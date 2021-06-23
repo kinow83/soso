@@ -5,17 +5,18 @@ using namespace std;
 using namespace soso;
 
 ComponentChain::ComponentChain() {
-  size_t max_point = 100;
-  _chrono_stack.push_back(ChronosStack("init", max_point));
-  _chrono_stack.push_back(ChronosStack("prepare", max_point));
-  _chrono_stack.push_back(ChronosStack("process", max_point));
-  _chrono_stack.push_back(ChronosStack("post", max_point));
-  _chrono_stack.push_back(ChronosStack("schedule", max_point));
+  size_t max_point = _chains.size();
+  _kstack.push_back(KairosStack("init", max_point));
+  _kstack.push_back(KairosStack("prepare", max_point));
+  _kstack.push_back(KairosStack("process", max_point));
+  _kstack.push_back(KairosStack("post", max_point));
+  _kstack.push_back(KairosStack("schedule", max_point));
 }
 
-ComponentChain::~ComponentChain() {}
+ComponentChain::~ComponentChain() { //
+}
 
-void ComponentChain::registers(std::shared_ptr<Component> component) {
+void ComponentChain::registers(shared_ptr<Component> component) {
   for (auto c : _chains) {
     if (c->getName() == component->getName()) {
       throw runtime_error("already registered component: " + c->getName());
@@ -24,7 +25,7 @@ void ComponentChain::registers(std::shared_ptr<Component> component) {
   _chains.push_back(component);
 }
 
-std::shared_ptr<Component> ComponentChain::operator[](const string name) {
+shared_ptr<Component> ComponentChain::operator[](const string name) {
   for (auto c : _chains) {
     if (c->getName() == name) {
       return c;
@@ -49,32 +50,29 @@ void ComponentChain::remove(const string name) {
   }
 }
 
-void ComponentChain::chronosMonitoring(COMPONENT_IDX comp_idx,
-                                       std::function<void(ChronosStack &)> f) {
-  _chrono_stack[comp_idx].monitoring(f);
+void ComponentChain::kairosMonitor(COMPONENT_IDX comp_idx,
+                                   function<void(KairosStack &)> f) {
+  _kstack[comp_idx].monitoring(f);
 }
 
-bool ComponentChain::chronosCheckPoint(const string comp_name, int comp_idx,
-                                       std::function<bool(void)> logic) {
-  bool result;
-  if (!_trace_chrono) {
+bool ComponentChain::kairosCheck(const string comp_name, int comp_idx,
+                                 function<bool(void)> logic) {
+  if (!_trace_kairos) {
     return logic();
   }
 
-  Chronos chrono(comp_name);
-  result = logic();
-  chrono.end();
-  _chrono_stack[comp_idx].addChronos(chrono);
-
-  return result;
+  {
+    Kairos karios(comp_name, &_kstack[comp_idx]);
+    return logic();
+  }
 }
 
 bool ComponentChain::initComponent() {
   bool ok;
   for (auto c : _chains) {
-    ok = chronosCheckPoint(c->getName(),   //
-                           COMPONENT_INIT, //
-                           [c](void) { return c->init(); });
+    ok = kairosCheck(c->getName(),   //
+                     COMPONENT_INIT, //
+                     [c](void) { return c->init(); });
     if (!ok) {
       return ok;
     }
@@ -85,12 +83,12 @@ bool ComponentChain::initComponent() {
 void ComponentChain::callSchedule(void) {
   bool ok;
   for (auto c : _chains) {
-    ok = chronosCheckPoint(c->getName(),       //
-                           COMPONENT_SCHEDULE, //
-                           [c](void) {
-                             c->schedule();
-                             return true;
-                           });
+    ok = kairosCheck(c->getName(),       //
+                     COMPONENT_SCHEDULE, //
+                     [c](void) {
+                       c->schedule();
+                       return true;
+                     });
     if (!ok) {
       return;
     }
@@ -105,11 +103,11 @@ void ComponentChain::callComponent(Request *request) {
 
   // prepare
   for (auto c : _chains) {
-    ok = chronosCheckPoint(c->getName(),        //
-                           COMPONENT_PREPARE,   //
-                           [c, request](void) { //
-                             return c->prepare(request);
-                           });
+    ok = kairosCheck(c->getName(),        //
+                     COMPONENT_PREPARE,   //
+                     [c, request](void) { //
+                       return c->prepare(request);
+                     });
     if (!ok) {
       return;
     }
@@ -117,11 +115,11 @@ void ComponentChain::callComponent(Request *request) {
 
   // process
   for (auto c : _chains) {
-    ok = chronosCheckPoint(c->getName(),        //
-                           COMPONENT_PROCESS,   //
-                           [c, request](void) { //
-                             return c->process(request);
-                           });
+    ok = kairosCheck(c->getName(),        //
+                     COMPONENT_PROCESS,   //
+                     [c, request](void) { //
+                       return c->process(request);
+                     });
     if (!ok) {
       return;
     }
@@ -129,11 +127,11 @@ void ComponentChain::callComponent(Request *request) {
 
   // post
   for (auto c : _chains) {
-    ok = chronosCheckPoint(c->getName(),        //
-                           COMPONENT_POST,      //
-                           [c, request](void) { //
-                             return c->post(request);
-                           });
+    ok = kairosCheck(c->getName(),        //
+                     COMPONENT_POST,      //
+                     [c, request](void) { //
+                       return c->post(request);
+                     });
     if (!ok) {
       return;
     }

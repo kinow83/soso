@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['_7ecomponent_38',['~Component',['../classsoso_1_1Component.html#a938eedb53bb41d71f4b7b47fec963b0a',1,'soso::Component']]],
-  ['_7ecomponentchain_39',['~ComponentChain',['../classsoso_1_1ComponentChain.html#a10006f62b071f1e06a3ec6e0d54cc31c',1,'soso::ComponentChain']]]
+  ['schedule_35',['schedule',['../classsoso_1_1Component.html#aee7a1fdff6412fbf9317e86d6bf313f0',1,'soso::Component']]],
+  ['setrequestid_36',['setRequestID',['../classsoso_1_1Request.html#a08478466b484775ff0d54df8a56b7335',1,'soso::Request']]],
+  ['soso_37',['soso',['../namespacesoso.html',1,'']]]
 ];

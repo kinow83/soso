@@ -1,7 +1,7 @@
 #ifndef __SOSO_COMPONENT_H__
 #define __SOSO_COMPONENT_H__
 
-#include "chronos.h"
+#include "kairos.h"
 #include "request.h"
 #include <memory>
 #include <stdexcept>
@@ -94,8 +94,8 @@ public:
  */
 class ComponentChain {
 private:
-  std::vector<ChronosStack> _chrono_stack;
-  bool _trace_chrono = true;
+  std::vector<KairosStack> _kstack;
+  bool _trace_kairos = true;
 
   /// 컴포넌트 구성요청 체인 리스트
   std::vector<std::shared_ptr<Component>> _chains;
@@ -107,17 +107,17 @@ public:
 
   size_t componentSize() { return _chains.size(); }
 
-  const std::string getChronoResult() {
-    std::string results = "";
+  const std::string report() {
+    std::string results = "[ComponentChain::report]\n";
 
-    for (ChronosStack &c : _chrono_stack) {
-      results += c.toString();
+    for (KairosStack &kairos : _kstack) {
+      results += kairos.toString();
     }
     return results;
   }
 
-  void chronosMonitoring(COMPONENT_IDX comp_idx,
-                         std::function<void(ChronosStack &)> f);
+  void kairosMonitor(COMPONENT_IDX comp_idx,
+                     std::function<void(KairosStack &)> f);
 
   /**
    * @brief 컴포넌트 추가
@@ -128,7 +128,6 @@ public:
   /**
    * @brief 컴포넌트 접근자
    * @param name
-   * @return Component&
    */
   std::shared_ptr<Component> operator[](const std::string name);
 
@@ -158,8 +157,8 @@ public:
    */
   void callSchedule(void);
 
-  bool chronosCheckPoint(const std::string comp_name, int comp_idx,
-                         std::function<bool(void)> logic);
+  bool kairosCheck(const std::string comp_name, int comp_idx,
+                   std::function<bool(void)> logic);
 };
 
 }; // namespace soso

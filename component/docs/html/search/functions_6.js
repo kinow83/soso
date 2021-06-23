@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['registers_64',['registers',['../classsoso_1_1ComponentChain.html#aa30c87b6b132e73ea8741c1dde6bc8f3',1,'soso::ComponentChain']]],
-  ['remove_65',['remove',['../classsoso_1_1ComponentChain.html#a0cfbfb25ebbfcc663e36dedcbcd91a46',1,'soso::ComponentChain']]],
-  ['request_66',['Request',['../classsoso_1_1Request.html#acf5700fe50a6da8b7924c044bd40d162',1,'soso::Request']]]
+  ['post_60',['post',['../classsoso_1_1Component.html#aac0456d1c1bed46f5929137b4aafafe8',1,'soso::Component']]],
+  ['prepare_61',['prepare',['../classsoso_1_1Component.html#a4995b454662f0964deb02dc2d3e1aa9a',1,'soso::Component']]],
+  ['process_62',['process',['../classsoso_1_1Component.html#a29b3365d432ec4745e372b49de37723b',1,'soso::Component']]]
 ];

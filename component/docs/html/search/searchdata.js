@@ -1,10 +1,10 @@
 var indexSectionsWithContent =
 {
-  0: "_cginoprs~",
+  0: "_cgiknoprs~",
   1: "cr",
   2: "s",
   3: "cr",
-  4: "cginoprs~",
+  4: "cgiknoprs~",
   5: "_",
   6: "c",
   7: "c"

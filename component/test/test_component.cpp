@@ -49,12 +49,12 @@ int main(void) { //
   chain.callComponent(request);
   chain.callSchedule();
 
-  cout << chain.getChronoResult() << endl;
+  cout << chain.report() << endl;
   cout << chain.componentSize() << endl;
 
-  chain.chronosMonitoring( //
-      COMPONENT_PROCESS,   //
-      [](ChronosStack &stack) {
+  chain.kairosMonitor(   //
+      COMPONENT_PROCESS, //
+      [](KairosStack &stack) {
         cout << "monitoring: " << stack.title() << endl;
         if (stack.getTotal().tv_usec > 10) {
           cout << "BAD process" << endl;
