@@ -29,6 +29,8 @@ public:
    */
   ~RestApi();
 
+  std::string endpointTables() { return _endpoint->endpointTables(); }
+
   /**
    * @brief API url 주소 입력
    * @param address

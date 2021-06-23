@@ -53,7 +53,35 @@ private:
 
 public:
   Endpoint(utility::string_t url, size_t listen_thread_num = 4);
-  virtual ~Endpoint() {}
+  ~Endpoint() {}
+
+  std::string endpointTables() {
+    int i = 0;
+    std::string result = "[Endpoint::report]\n";
+    for (auto &table : _tables) {
+      for (auto &m : table) {
+        auto get_path_name = [](int i) {
+          switch (i) {
+          case 0:
+            return "GET";
+          case 1:
+            return "PUT";
+          case 2:
+            return "POST";
+          case 3:
+            return "DEL";
+          default:
+            return "";
+          }
+        };
+
+        result += get_path_name(i);
+        result += ":" + m.first + "\n";
+      }
+      i++;
+    }
+    return result;
+  }
 
   /**
    * @brief rest api 서버 시작
