@@ -16,7 +16,7 @@ Endpoint::Endpoint(utility::string_t url, size_t listen_thread_num) //
   /// https://github.com/microsoft/cpprestsdk/blob/master/Release/src/pplx/threadpool.cpp
   /// initialize_shared_threadpool
   /// std::call_once
-  // crossplat::threadpool::initialize_with_threads(_listen_thread_num);
+  crossplat::threadpool::initialize_with_threads(_listen_thread_num);
 
   _listener.support(methods::GET, //
                     bind(&Endpoint::get, this, placeholders::_1));

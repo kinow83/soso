@@ -143,60 +143,61 @@ $(function() {
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
 <div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="pcapmon_8cpp.html#ab3ec22c988d7eaeb0581180d76ab9bb7">   74</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="pcapmon_8cpp.html#ab3ec22c988d7eaeb0581180d76ab9bb7">schedule_callback</a>(<span class="keywordtype">int</span> fd, <span class="keywordtype">short</span> event, <span class="keywordtype">void</span> *args) {</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keyword">auto</span> pcapmon = <span class="keyword">reinterpret_cast&lt;</span><a class="code" href="classsoso_1_1PcapMon.html">PcapMon</a> *<span class="keyword">&gt;</span>(args);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keyword">auto</span> chain = pcapmon-&gt;<a class="code" href="classsoso_1_1PcapMon.html#a1e38acd88c4fea7327932b63fe75c7c7">getComponentChain</a>();</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keyword">auto</span> worker_manager = pcapmon-&gt;getWorkerManager();</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  worker_manager-&gt;addJobSingleWorker( <span class="comment">//</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      <span class="stringliteral">&quot;pcap wifi scheduler&quot;</span>,          <span class="comment">//</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      [chain](shared_ptr&lt;Worker&gt; worker, shared_ptr&lt;Job&gt; job) {</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        (void)worker;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        (void)job;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        chain-&gt;callSchedule();</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      });</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  evtimer_add(&amp;pcapmon-&gt;getScheduleEvent(), &amp;tv);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="classsoso_1_1PcapMon.html#a83cad9f52000abb94371fcd13c0bd75e">   90</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsoso_1_1PcapMon.html#a83cad9f52000abb94371fcd13c0bd75e">PcapMon::run</a>(<span class="keywordtype">bool</span> block) {</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  pcap_t *pcap;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keywordtype">size_t</span> captured = 0;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  event_init();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  (void)fd;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  (void)event;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keyword">auto</span> pcapmon = <span class="keyword">reinterpret_cast&lt;</span><a class="code" href="classsoso_1_1PcapMon.html">PcapMon</a> *<span class="keyword">&gt;</span>(args);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keyword">auto</span> chain = pcapmon-&gt;<a class="code" href="classsoso_1_1PcapMon.html#a1e38acd88c4fea7327932b63fe75c7c7">getComponentChain</a>();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keyword">auto</span> worker_manager = pcapmon-&gt;getWorkerManager();</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  worker_manager-&gt;addJobSingleWorker( <span class="comment">//</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;      <span class="stringliteral">&quot;pcap wifi scheduler&quot;</span>,          <span class="comment">//</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      [chain](shared_ptr&lt;Worker&gt; worker, shared_ptr&lt;Job&gt; job) {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        (void)worker;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        (void)job;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        chain-&gt;callSchedule();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      });</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  evtimer_add(&amp;pcapmon-&gt;getScheduleEvent(), &amp;tv);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="classsoso_1_1PcapMon.html#a83cad9f52000abb94371fcd13c0bd75e">   92</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsoso_1_1PcapMon.html#a83cad9f52000abb94371fcd13c0bd75e">PcapMon::run</a>(<span class="keywordtype">bool</span> block) {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  pcap_t *pcap;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keywordtype">size_t</span> captured = 0;</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  pcap = create_pcap(_source, _wait_for_ms);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keywordflow">if</span> (!pcap) {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">goto</span> end;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  }</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="keywordflow">if</span> (!_chain-&gt;initComponent()) {</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">goto</span> end;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  }</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  evtimer_set(&amp;_schedule_ev, <a class="code" href="pcapmon_8cpp.html#ab3ec22c988d7eaeb0581180d76ab9bb7">schedule_callback</a>, <span class="keyword">this</span>);</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  evtimer_add(&amp;_schedule_ev, &amp;tv);</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  _running = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <span class="keywordflow">while</span> (_running) {</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    event_loop(EVLOOP_NONBLOCK);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    captured = pcap_dispatch(pcap, 1, pcap_callback, (u_char *)<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">if</span> (captured == 0) {</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      <span class="keywordflow">if</span> (!block) {</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;      }</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      usleep(_wait_for_ms);</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    }</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    _dispatched += captured;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  }</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;end:</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="keywordflow">if</span> (pcap)</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    pcap_close(pcap);</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  _finished = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  cout &lt;&lt; <span class="stringliteral">&quot;xxxx\n&quot;</span>;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;}</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  event_init();</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  pcap = create_pcap(_source, _wait_for_ms);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="keywordflow">if</span> (!pcap) {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">goto</span> end;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keywordflow">if</span> (!_chain-&gt;initComponent()) {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordflow">goto</span> end;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  evtimer_set(&amp;_schedule_ev, <a class="code" href="pcapmon_8cpp.html#ab3ec22c988d7eaeb0581180d76ab9bb7">schedule_callback</a>, <span class="keyword">this</span>);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  evtimer_add(&amp;_schedule_ev, &amp;tv);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  _running = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="keywordflow">while</span> (_running) {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    event_loop(EVLOOP_NONBLOCK);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    captured = pcap_dispatch(pcap, 1, pcap_callback, (u_char *)<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordflow">if</span> (captured == 0) {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;      <span class="keywordflow">if</span> (!block) {</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      usleep(_wait_for_ms);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    _dispatched += captured;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;end:</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <span class="keywordflow">if</span> (pcap)</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    pcap_close(pcap);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  _finished = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  cout &lt;&lt; <span class="stringliteral">&quot;xxxx\n&quot;</span>;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="apcapmon_8cpp_html_ab3ec22c988d7eaeb0581180d76ab9bb7"><div class="ttname"><a href="pcapmon_8cpp.html#ab3ec22c988d7eaeb0581180d76ab9bb7">schedule_callback</a></div><div class="ttdeci">void schedule_callback(int fd, short event, void *args)</div><div class="ttdef"><b>Definition:</b> <a href="pcapmon_8cpp_source.html#l00074">pcapmon.cpp:74</a></div></div>
 <div class="ttc" id="aclasssoso_1_1PcapMon_html_a0046ecce1f5abbb422a47fee4b6450b3"><div class="ttname"><a href="classsoso_1_1PcapMon.html#a0046ecce1f5abbb422a47fee4b6450b3">soso::PcapMon::finished</a></div><div class="ttdeci">bool finished()</div><div class="ttdef"><b>Definition:</b> <a href="pcapmon_8cpp_source.html#l00027">pcapmon.cpp:27</a></div></div>
@@ -208,7 +209,7 @@ $(function() {
 <div class="ttc" id="apcap__request_8h_html"><div class="ttname"><a href="pcap__request_8h.html">pcap_request.h</a></div></div>
 <div class="ttc" id="aclasssoso_1_1PcapMon_html_a1e38acd88c4fea7327932b63fe75c7c7"><div class="ttname"><a href="classsoso_1_1PcapMon.html#a1e38acd88c4fea7327932b63fe75c7c7">soso::PcapMon::getComponentChain</a></div><div class="ttdeci">std::shared_ptr&lt; ComponentChain &gt; getComponentChain()</div><div class="ttdef"><b>Definition:</b> <a href="pcapmon_8h_source.html#l00033">pcapmon.h:33</a></div></div>
 <div class="ttc" id="aclasssoso_1_1PcapMon_html_a3a0959cb7523decba28022f4e664da5d"><div class="ttname"><a href="classsoso_1_1PcapMon.html#a3a0959cb7523decba28022f4e664da5d">soso::PcapMon::~PcapMon</a></div><div class="ttdeci">~PcapMon()</div><div class="ttdef"><b>Definition:</b> <a href="pcapmon_8cpp_source.html#l00025">pcapmon.cpp:25</a></div></div>
-<div class="ttc" id="aclasssoso_1_1PcapMon_html_a83cad9f52000abb94371fcd13c0bd75e"><div class="ttname"><a href="classsoso_1_1PcapMon.html#a83cad9f52000abb94371fcd13c0bd75e">soso::PcapMon::run</a></div><div class="ttdeci">void run(bool block)</div><div class="ttdef"><b>Definition:</b> <a href="pcapmon_8cpp_source.html#l00090">pcapmon.cpp:90</a></div></div>
+<div class="ttc" id="aclasssoso_1_1PcapMon_html_a83cad9f52000abb94371fcd13c0bd75e"><div class="ttname"><a href="classsoso_1_1PcapMon.html#a83cad9f52000abb94371fcd13c0bd75e">soso::PcapMon::run</a></div><div class="ttdeci">void run(bool block)</div><div class="ttdef"><b>Definition:</b> <a href="pcapmon_8cpp_source.html#l00092">pcapmon.cpp:92</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">

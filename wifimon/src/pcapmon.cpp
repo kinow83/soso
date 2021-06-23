@@ -72,6 +72,8 @@ static pcap_t *create_pcap(const string &source, int wait_ms) {
 }
 
 void schedule_callback(int fd, short event, void *args) {
+  (void)fd;
+  (void)event;
   auto pcapmon = reinterpret_cast<PcapMon *>(args);
   auto chain = pcapmon->getComponentChain();
   auto worker_manager = pcapmon->getWorkerManager();
@@ -108,7 +110,6 @@ void PcapMon::run(bool block) {
   _running = true;
   while (_running) {
     event_loop(EVLOOP_NONBLOCK);
-
     captured = pcap_dispatch(pcap, 1, pcap_callback, (u_char *)this);
     if (captured == 0) {
       if (!block) {

@@ -100,13 +100,14 @@ bool ComponentSession::init() {
 
   cout << api->endpointTables() << endl;
 
+  api->on_initialize();
+
   return true;
 }
 
 bool ComponentSession::prepare(Request *request) {
   PcapRequest *R = reinterpret_cast<PcapRequest *>(request);
   (void)R;
-  api->on_initialize();
   return noop();
 }
 
