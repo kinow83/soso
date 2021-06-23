@@ -12,9 +12,13 @@
 \doxysubsection*{Public 멤버 함수}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classsoso_1_1KairosStack_a092bce7b68ebb93d8e7a553b0cf80e4c}{Kairos\+Stack}} (const std\+::string \&\mbox{\hyperlink{classsoso_1_1KairosStack_a15c4871823f832b6f7589e8ffe196007}{title}}, size\+\_\+t max\+\_\+point)
+\mbox{\hyperlink{classsoso_1_1KairosStack_a1ff9fa00e7bc55761a366554c9bcf225}{Kairos\+Stack}} (const std\+::string \&\mbox{\hyperlink{classsoso_1_1KairosStack_a15c4871823f832b6f7589e8ffe196007}{title}}, size\+\_\+t max\+\_\+point=0)
 \begin{DoxyCompactList}\small\item\em Kairo\+Stack 생성자 \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classsoso_1_1KairosStack_a3b1774aae88ed713e871e8f849ef2beb}{Kairos\+Stack}} (const \mbox{\hyperlink{classsoso_1_1KairosStack}{Kairos\+Stack}} \&cs)
+\item 
+void \mbox{\hyperlink{classsoso_1_1KairosStack_ab16d266063e53c376f770397dc733a13}{inc\+Max\+Point}} (size\+\_\+t inc=1)
+\item 
+void \mbox{\hyperlink{classsoso_1_1KairosStack_a4f138c69b360b092e328bbb93e5d928a}{dec\+Max\+Point}} (size\+\_\+t inc=1)
 \item 
 void \mbox{\hyperlink{classsoso_1_1KairosStack_a1cde49caf7dcbaf79f43a781cd09b776}{add\+Kairos}} (\mbox{\hyperlink{classsoso_1_1Kairos}{Kairos}} \&\&kairos)
 \begin{DoxyCompactList}\small\item\em 시간 측정 값을 stack에 추가 (thread-\/safe) \end{DoxyCompactList}\item 
@@ -65,11 +69,11 @@ kairos.\+h 파일의 48 번째 라인에서 정의되었습니다.
 
 
 \doxysubsection{생성자 \& 소멸자 문서화}
-\mbox{\Hypertarget{classsoso_1_1KairosStack_a092bce7b68ebb93d8e7a553b0cf80e4c}\label{classsoso_1_1KairosStack_a092bce7b68ebb93d8e7a553b0cf80e4c}} 
+\mbox{\Hypertarget{classsoso_1_1KairosStack_a1ff9fa00e7bc55761a366554c9bcf225}\label{classsoso_1_1KairosStack_a1ff9fa00e7bc55761a366554c9bcf225}} 
 \index{soso::KairosStack@{soso::KairosStack}!KairosStack@{KairosStack}}
 \index{KairosStack@{KairosStack}!soso::KairosStack@{soso::KairosStack}}
 \doxysubsubsection{\texorpdfstring{KairosStack()}{KairosStack()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily soso\+::\+Kairos\+Stack\+::\+Kairos\+Stack (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{title,  }\item[{size\+\_\+t}]{max\+\_\+point }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily soso\+::\+Kairos\+Stack\+::\+Kairos\+Stack (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{title,  }\item[{size\+\_\+t}]{max\+\_\+point = {\ttfamily 0} }\end{DoxyParamCaption})}
 
 
 
@@ -90,7 +94,7 @@ Kairo\+Stack 생성자
 
 
 
-kairos.\+cpp 파일의 66 번째 라인에서 정의되었습니다.
+kairos.\+cpp 파일의 63 번째 라인에서 정의되었습니다.
 
 
 
@@ -112,7 +116,7 @@ kairos.\+cpp 파일의 66 번째 라인에서 정의되었습니다.
 \end{DoxyParams}
 
 
-kairos.\+h 파일의 72 번째 라인에서 정의되었습니다.
+kairos.\+h 파일의 75 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{classsoso_1_1KairosStack_a978f585eb18715f2b9caa890edbdea48}\label{classsoso_1_1KairosStack_a978f585eb18715f2b9caa890edbdea48}} 
 \index{soso::KairosStack@{soso::KairosStack}!addKairos@{addKairos}}
@@ -124,7 +128,7 @@ total
 
 avg
 
-kairos.\+cpp 파일의 83 번째 라인에서 정의되었습니다.
+kairos.\+cpp 파일의 80 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{classsoso_1_1KairosStack_a2427b44028d30a7245268e25ff42b7ad}\label{classsoso_1_1KairosStack_a2427b44028d30a7245268e25ff42b7ad}} 
 \index{soso::KairosStack@{soso::KairosStack}!checkedCount@{checkedCount}}
@@ -134,7 +138,17 @@ kairos.\+cpp 파일의 83 번째 라인에서 정의되었습니다.
 
 
 
-kairos.\+cpp 파일의 75 번째 라인에서 정의되었습니다.
+kairos.\+cpp 파일의 72 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1KairosStack_a4f138c69b360b092e328bbb93e5d928a}\label{classsoso_1_1KairosStack_a4f138c69b360b092e328bbb93e5d928a}} 
+\index{soso::KairosStack@{soso::KairosStack}!decMaxPoint@{decMaxPoint}}
+\index{decMaxPoint@{decMaxPoint}!soso::KairosStack@{soso::KairosStack}}
+\doxysubsubsection{\texorpdfstring{decMaxPoint()}{decMaxPoint()}}
+{\footnotesize\ttfamily void soso\+::\+Kairos\+Stack\+::dec\+Max\+Point (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{inc = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+kairos.\+h 파일의 69 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{classsoso_1_1KairosStack_a5a0cee2afabeb8db00088fa13bbb66f4}\label{classsoso_1_1KairosStack_a5a0cee2afabeb8db00088fa13bbb66f4}} 
 \index{soso::KairosStack@{soso::KairosStack}!getAvg@{getAvg}}
@@ -144,7 +158,7 @@ kairos.\+cpp 파일의 75 번째 라인에서 정의되었습니다.
 
 
 
-kairos.\+cpp 파일의 162 번째 라인에서 정의되었습니다.
+kairos.\+cpp 파일의 159 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{classsoso_1_1KairosStack_a122e44db61fc69ccf71715ccaeaf1c20}\label{classsoso_1_1KairosStack_a122e44db61fc69ccf71715ccaeaf1c20}} 
 \index{soso::KairosStack@{soso::KairosStack}!getPoints@{getPoints}}
@@ -154,7 +168,7 @@ kairos.\+cpp 파일의 162 번째 라인에서 정의되었습니다.
 
 
 
-kairos.\+cpp 파일의 150 번째 라인에서 정의되었습니다.
+kairos.\+cpp 파일의 147 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{classsoso_1_1KairosStack_aceae4d5b5abd650a05a77d3ef73e428c}\label{classsoso_1_1KairosStack_aceae4d5b5abd650a05a77d3ef73e428c}} 
 \index{soso::KairosStack@{soso::KairosStack}!getTotal@{getTotal}}
@@ -164,7 +178,17 @@ kairos.\+cpp 파일의 150 번째 라인에서 정의되었습니다.
 
 
 
-kairos.\+cpp 파일의 158 번째 라인에서 정의되었습니다.
+kairos.\+cpp 파일의 155 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1KairosStack_ab16d266063e53c376f770397dc733a13}\label{classsoso_1_1KairosStack_ab16d266063e53c376f770397dc733a13}} 
+\index{soso::KairosStack@{soso::KairosStack}!incMaxPoint@{incMaxPoint}}
+\index{incMaxPoint@{incMaxPoint}!soso::KairosStack@{soso::KairosStack}}
+\doxysubsubsection{\texorpdfstring{incMaxPoint()}{incMaxPoint()}}
+{\footnotesize\ttfamily void soso\+::\+Kairos\+Stack\+::inc\+Max\+Point (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{inc = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+kairos.\+h 파일의 68 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{classsoso_1_1KairosStack_a42924e701052058eb18703dd619cf6c5}\label{classsoso_1_1KairosStack_a42924e701052058eb18703dd619cf6c5}} 
 \index{soso::KairosStack@{soso::KairosStack}!monitoring@{monitoring}}
@@ -174,7 +198,7 @@ kairos.\+cpp 파일의 158 번째 라인에서 정의되었습니다.
 
 
 
-kairos.\+cpp 파일의 145 번째 라인에서 정의되었습니다.
+kairos.\+cpp 파일의 142 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{classsoso_1_1KairosStack_af2f25bd3e4260b452de516c319e85f7f}\label{classsoso_1_1KairosStack_af2f25bd3e4260b452de516c319e85f7f}} 
 \index{soso::KairosStack@{soso::KairosStack}!pointSize@{pointSize}}
@@ -184,7 +208,7 @@ kairos.\+cpp 파일의 145 번째 라인에서 정의되었습니다.
 
 
 
-kairos.\+cpp 파일의 79 번째 라인에서 정의되었습니다.
+kairos.\+cpp 파일의 76 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{classsoso_1_1KairosStack_a15c4871823f832b6f7589e8ffe196007}\label{classsoso_1_1KairosStack_a15c4871823f832b6f7589e8ffe196007}} 
 \index{soso::KairosStack@{soso::KairosStack}!title@{title}}
@@ -194,7 +218,7 @@ kairos.\+cpp 파일의 79 번째 라인에서 정의되었습니다.
 
 
 
-kairos.\+cpp 파일의 154 번째 라인에서 정의되었습니다.
+kairos.\+cpp 파일의 151 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{classsoso_1_1KairosStack_aa332c6a12daaeb9c18a5800c11001a3c}\label{classsoso_1_1KairosStack_aa332c6a12daaeb9c18a5800c11001a3c}} 
 \index{soso::KairosStack@{soso::KairosStack}!toString@{toString}}
@@ -204,7 +228,7 @@ kairos.\+cpp 파일의 154 번째 라인에서 정의되었습니다.
 
 
 
-kairos.\+cpp 파일의 116 번째 라인에서 정의되었습니다.
+kairos.\+cpp 파일의 113 번째 라인에서 정의되었습니다.
 
 
 

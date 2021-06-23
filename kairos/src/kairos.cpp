@@ -56,9 +56,6 @@ KairosStack::KairosStack(const string &title, size_t max_point) { //
   _add_count = 0;
   _title = title;
   _max_point = max_point;
-  if (_max_point == 0) {
-    _max_point = 1;
-  }
   timerclear(&_total);
   timerclear(&_avg);
 }

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7echronos_83',['~Chronos',['../classsoso_1_1Chronos.html#a14953b77cf21e40b9653ebe6d4b1517c',1,'soso::Chronos']]]
+  ['_7ekairos_56',['~Kairos',['../classsoso_1_1Kairos.html#a2c2463379e4442c4d457e8eaba44cf09',1,'soso::Kairos']]]
 ];

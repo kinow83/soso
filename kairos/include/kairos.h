@@ -62,8 +62,11 @@ public:
    * @param title
    * @param max_point 시간 측정 값 최대 저장 갯수
    */
-  KairosStack(const std::string &title, size_t max_point);
+  KairosStack(const std::string &title, size_t max_point = 0);
   KairosStack(const KairosStack &cs);
+
+  void incMaxPoint(size_t inc = 1) { _max_point += inc; }
+  void decMaxPoint(size_t inc = 1) { _max_point -= inc; }
 
   /**
    * @brief 시간 측정 값을 stack에 추가 (thread-safe)

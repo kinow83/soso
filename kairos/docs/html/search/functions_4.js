@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['end_42',['end',['../classsoso_1_1Kairos.html#af05b5fe81b4450e55293721d02322bf0',1,'soso::Kairos']]]
+  ['end_45',['end',['../classsoso_1_1Kairos.html#af05b5fe81b4450e55293721d02322bf0',1,'soso::Kairos']]]
 ];

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['title_50',['title',['../classsoso_1_1KairosStack.html#a15c4871823f832b6f7589e8ffe196007',1,'soso::KairosStack']]],
-  ['tostring_51',['toString',['../classsoso_1_1KairosStack.html#aa332c6a12daaeb9c18a5800c11001a3c',1,'soso::KairosStack']]]
+  ['pointsize_53',['pointSize',['../classsoso_1_1KairosStack.html#af2f25bd3e4260b452de516c319e85f7f',1,'soso::KairosStack']]]
 ];

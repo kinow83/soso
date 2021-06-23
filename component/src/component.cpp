@@ -5,12 +5,11 @@ using namespace std;
 using namespace soso;
 
 ComponentChain::ComponentChain() {
-  size_t max_point = _chains.size();
-  _kstack.push_back(KairosStack("init", max_point));
-  _kstack.push_back(KairosStack("prepare", max_point));
-  _kstack.push_back(KairosStack("process", max_point));
-  _kstack.push_back(KairosStack("post", max_point));
-  _kstack.push_back(KairosStack("schedule", max_point));
+  _kstack.push_back(KairosStack("init"));
+  _kstack.push_back(KairosStack("prepare"));
+  _kstack.push_back(KairosStack("process"));
+  _kstack.push_back(KairosStack("post"));
+  _kstack.push_back(KairosStack("schedule"));
 }
 
 ComponentChain::~ComponentChain() { //
@@ -23,6 +22,10 @@ void ComponentChain::registers(shared_ptr<Component> component) {
     }
   }
   _chains.push_back(component);
+
+  for (auto &kairos : _kstack) {
+    kairos.incMaxPoint();
+  }
 }
 
 shared_ptr<Component> ComponentChain::operator[](const string name) {
@@ -48,6 +51,10 @@ void ComponentChain::remove(const string name) {
   if (removed == 0) {
     throw runtime_error("no such component: " + name);
   }
+
+  for (auto &kairos : _kstack) {
+    kairos.decMaxPoint();
+  }
 }
 
 void ComponentChain::kairosMonitor(COMPONENT_IDX comp_idx,
@@ -57,14 +64,16 @@ void ComponentChain::kairosMonitor(COMPONENT_IDX comp_idx,
 
 bool ComponentChain::kairosCheck(const string comp_name, int comp_idx,
                                  function<bool(void)> logic) {
+  bool result;
   if (!_trace_kairos) {
     return logic();
   }
 
   {
     Kairos karios(comp_name, &_kstack[comp_idx]);
-    return logic();
+    result = logic();
   }
+  return result;
 }
 
 bool ComponentChain::initComponent() {
