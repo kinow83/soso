@@ -1,0 +1,205 @@
+\hypertarget{classsoso_1_1Kairos}{}\doxysection{soso\+::Kairos 클래스 참조}
+\label{classsoso_1_1Kairos}\index{soso::Kairos@{soso::Kairos}}
+
+
+소요 시간 측정 class  
+
+
+
+
+{\ttfamily \#include $<$kairos.\+h$>$}
+
+
+
+soso\+::Kairos에 대한 협력 다이어그램\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=183pt]{classsoso_1_1Kairos__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsoso_1_1Kairos_ab2e207c29b81c7ab4437c9b07c65dea5}{Kairos}} (const std\+::string \&\mbox{\hyperlink{classsoso_1_1Kairos_a2cf54056b7c4db7a26b7ac0c32561d1e}{desc}}, \mbox{\hyperlink{classsoso_1_1KairosStack}{Kairos\+Stack}} $\ast$kstack=nullptr)
+\item 
+\mbox{\hyperlink{classsoso_1_1Kairos_a2c2463379e4442c4d457e8eaba44cf09}{$\sim$\+Kairos}} ()
+\item 
+void \mbox{\hyperlink{classsoso_1_1Kairos_a683493c7205d9538ad5dbb10fdb52ad2}{begin}} ()
+\item 
+void \mbox{\hyperlink{classsoso_1_1Kairos_af05b5fe81b4450e55293721d02322bf0}{end}} ()
+\item 
+struct timeval \& \mbox{\hyperlink{classsoso_1_1Kairos_a41ecf931c3aaf94dc05164a5926b7f3c}{diff}} ()
+\item 
+const std\+::string \mbox{\hyperlink{classsoso_1_1Kairos_a2cf54056b7c4db7a26b7ac0c32561d1e}{desc}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classsoso_1_1Kairos_a72896a875dc3c0e473a100b1064f04f8}{\+\_\+desc}}
+\begin{DoxyCompactList}\small\item\em 소요 시간 측정 설명 \end{DoxyCompactList}\item 
+struct timeval \mbox{\hyperlink{classsoso_1_1Kairos_a88ec53d9ea3e067670c1f633acc00b32}{\+\_\+begin}}
+\begin{DoxyCompactList}\small\item\em 측정 시점 시각 \end{DoxyCompactList}\item 
+struct timeval \mbox{\hyperlink{classsoso_1_1Kairos_aaa58ac437e38cf513120d608aba335b2}{\+\_\+end}}
+\item 
+struct timeval \mbox{\hyperlink{classsoso_1_1Kairos_a3ae9c220c8142e8d1b438fa123b1fe7c}{\+\_\+diff}}
+\begin{DoxyCompactList}\small\item\em 소요 시간 측정 값 \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsoso_1_1KairosStack}{Kairos\+Stack}} $\ast$ \mbox{\hyperlink{classsoso_1_1Kairos_ad79b3dd73e9a1f3966ae4e15b3517c93}{\+\_\+kstack}}
+\item 
+size\+\_\+t \mbox{\hyperlink{classsoso_1_1Kairos_a46633db52e9e46889b58b85a069c9e8a}{\+\_\+once\+\_\+destructure}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+소요 시간 측정 class 
+
+kairos.\+h 파일의 22 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{classsoso_1_1Kairos_ab2e207c29b81c7ab4437c9b07c65dea5}\label{classsoso_1_1Kairos_ab2e207c29b81c7ab4437c9b07c65dea5}} 
+\index{soso::Kairos@{soso::Kairos}!Kairos@{Kairos}}
+\index{Kairos@{Kairos}!soso::Kairos@{soso::Kairos}}
+\doxysubsubsection{\texorpdfstring{Kairos()}{Kairos()}}
+{\footnotesize\ttfamily Kairos\+::\+Kairos (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{desc,  }\item[{\mbox{\hyperlink{classsoso_1_1KairosStack}{Kairos\+Stack}} $\ast$}]{kstack = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+kairos.\+cpp 파일의 6 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1Kairos_a2c2463379e4442c4d457e8eaba44cf09}\label{classsoso_1_1Kairos_a2c2463379e4442c4d457e8eaba44cf09}} 
+\index{soso::Kairos@{soso::Kairos}!````~Kairos@{$\sim$Kairos}}
+\index{````~Kairos@{$\sim$Kairos}!soso::Kairos@{soso::Kairos}}
+\doxysubsubsection{\texorpdfstring{$\sim$Kairos()}{~Kairos()}}
+{\footnotesize\ttfamily Kairos\+::$\sim$\+Kairos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+kairos.\+cpp 파일의 14 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{classsoso_1_1Kairos_a683493c7205d9538ad5dbb10fdb52ad2}\label{classsoso_1_1Kairos_a683493c7205d9538ad5dbb10fdb52ad2}} 
+\index{soso::Kairos@{soso::Kairos}!begin@{begin}}
+\index{begin@{begin}!soso::Kairos@{soso::Kairos}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily void Kairos\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+kairos.\+cpp 파일의 27 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1Kairos_a2cf54056b7c4db7a26b7ac0c32561d1e}\label{classsoso_1_1Kairos_a2cf54056b7c4db7a26b7ac0c32561d1e}} 
+\index{soso::Kairos@{soso::Kairos}!desc@{desc}}
+\index{desc@{desc}!soso::Kairos@{soso::Kairos}}
+\doxysubsubsection{\texorpdfstring{desc()}{desc()}}
+{\footnotesize\ttfamily const string Kairos\+::desc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+kairos.\+cpp 파일의 23 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1Kairos_a41ecf931c3aaf94dc05164a5926b7f3c}\label{classsoso_1_1Kairos_a41ecf931c3aaf94dc05164a5926b7f3c}} 
+\index{soso::Kairos@{soso::Kairos}!diff@{diff}}
+\index{diff@{diff}!soso::Kairos@{soso::Kairos}}
+\doxysubsubsection{\texorpdfstring{diff()}{diff()}}
+{\footnotesize\ttfamily struct timeval \& Kairos\+::diff (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+kairos.\+cpp 파일의 51 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1Kairos_af05b5fe81b4450e55293721d02322bf0}\label{classsoso_1_1Kairos_af05b5fe81b4450e55293721d02322bf0}} 
+\index{soso::Kairos@{soso::Kairos}!end@{end}}
+\index{end@{end}!soso::Kairos@{soso::Kairos}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily void Kairos\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+kairos.\+cpp 파일의 31 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{classsoso_1_1Kairos_a88ec53d9ea3e067670c1f633acc00b32}\label{classsoso_1_1Kairos_a88ec53d9ea3e067670c1f633acc00b32}} 
+\index{soso::Kairos@{soso::Kairos}!\_begin@{\_begin}}
+\index{\_begin@{\_begin}!soso::Kairos@{soso::Kairos}}
+\doxysubsubsection{\texorpdfstring{\_begin}{\_begin}}
+{\footnotesize\ttfamily struct timeval soso\+::\+Kairos\+::\+\_\+begin\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+측정 시점 시각 
+
+
+
+kairos.\+h 파일의 27 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1Kairos_a72896a875dc3c0e473a100b1064f04f8}\label{classsoso_1_1Kairos_a72896a875dc3c0e473a100b1064f04f8}} 
+\index{soso::Kairos@{soso::Kairos}!\_desc@{\_desc}}
+\index{\_desc@{\_desc}!soso::Kairos@{soso::Kairos}}
+\doxysubsubsection{\texorpdfstring{\_desc}{\_desc}}
+{\footnotesize\ttfamily std\+::string soso\+::\+Kairos\+::\+\_\+desc\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+소요 시간 측정 설명 
+
+
+
+kairos.\+h 파일의 25 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1Kairos_a3ae9c220c8142e8d1b438fa123b1fe7c}\label{classsoso_1_1Kairos_a3ae9c220c8142e8d1b438fa123b1fe7c}} 
+\index{soso::Kairos@{soso::Kairos}!\_diff@{\_diff}}
+\index{\_diff@{\_diff}!soso::Kairos@{soso::Kairos}}
+\doxysubsubsection{\texorpdfstring{\_diff}{\_diff}}
+{\footnotesize\ttfamily struct timeval soso\+::\+Kairos\+::\+\_\+diff\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+소요 시간 측정 값 
+
+
+
+kairos.\+h 파일의 30 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1Kairos_aaa58ac437e38cf513120d608aba335b2}\label{classsoso_1_1Kairos_aaa58ac437e38cf513120d608aba335b2}} 
+\index{soso::Kairos@{soso::Kairos}!\_end@{\_end}}
+\index{\_end@{\_end}!soso::Kairos@{soso::Kairos}}
+\doxysubsubsection{\texorpdfstring{\_end}{\_end}}
+{\footnotesize\ttfamily struct timeval soso\+::\+Kairos\+::\+\_\+end\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+kairos.\+h 파일의 28 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1Kairos_ad79b3dd73e9a1f3966ae4e15b3517c93}\label{classsoso_1_1Kairos_ad79b3dd73e9a1f3966ae4e15b3517c93}} 
+\index{soso::Kairos@{soso::Kairos}!\_kstack@{\_kstack}}
+\index{\_kstack@{\_kstack}!soso::Kairos@{soso::Kairos}}
+\doxysubsubsection{\texorpdfstring{\_kstack}{\_kstack}}
+{\footnotesize\ttfamily class \mbox{\hyperlink{classsoso_1_1KairosStack}{Kairos\+Stack}}$\ast$ soso\+::\+Kairos\+::\+\_\+kstack\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+kairos.\+h 파일의 32 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1Kairos_a46633db52e9e46889b58b85a069c9e8a}\label{classsoso_1_1Kairos_a46633db52e9e46889b58b85a069c9e8a}} 
+\index{soso::Kairos@{soso::Kairos}!\_once\_destructure@{\_once\_destructure}}
+\index{\_once\_destructure@{\_once\_destructure}!soso::Kairos@{soso::Kairos}}
+\doxysubsubsection{\texorpdfstring{\_once\_destructure}{\_once\_destructure}}
+{\footnotesize\ttfamily size\+\_\+t soso\+::\+Kairos\+::\+\_\+once\+\_\+destructure = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+kairos.\+h 파일의 33 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{kairos_8h}{kairos.\+h}}\item 
+src/\mbox{\hyperlink{kairos_8cpp}{kairos.\+cpp}}\end{DoxyCompactItemize}

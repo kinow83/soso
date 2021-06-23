@@ -1,0 +1,287 @@
+\hypertarget{classsoso_1_1KairosStack}{}\doxysection{soso\+::Kairos\+Stack 클래스 참조}
+\label{classsoso_1_1KairosStack}\index{soso::KairosStack@{soso::KairosStack}}
+
+
+소요 시간 측정 요소 관리  
+
+
+
+
+{\ttfamily \#include $<$kairos.\+h$>$}
+
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsoso_1_1KairosStack_a092bce7b68ebb93d8e7a553b0cf80e4c}{Kairos\+Stack}} (const std\+::string \&\mbox{\hyperlink{classsoso_1_1KairosStack_a15c4871823f832b6f7589e8ffe196007}{title}}, size\+\_\+t max\+\_\+point)
+\begin{DoxyCompactList}\small\item\em Kairo\+Stack 생성자 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsoso_1_1KairosStack_a3b1774aae88ed713e871e8f849ef2beb}{Kairos\+Stack}} (const \mbox{\hyperlink{classsoso_1_1KairosStack}{Kairos\+Stack}} \&cs)
+\item 
+void \mbox{\hyperlink{classsoso_1_1KairosStack_a1cde49caf7dcbaf79f43a781cd09b776}{add\+Kairos}} (\mbox{\hyperlink{classsoso_1_1Kairos}{Kairos}} \&\&kairos)
+\begin{DoxyCompactList}\small\item\em 시간 측정 값을 stack에 추가 (thread-\/safe) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsoso_1_1KairosStack_a978f585eb18715f2b9caa890edbdea48}{add\+Kairos}} (\mbox{\hyperlink{classsoso_1_1Kairos}{Kairos}} \&kairos)
+\item 
+const std\+::string \mbox{\hyperlink{classsoso_1_1KairosStack_aa332c6a12daaeb9c18a5800c11001a3c}{to\+String}} ()
+\item 
+size\+\_\+t \mbox{\hyperlink{classsoso_1_1KairosStack_a2427b44028d30a7245268e25ff42b7ad}{checked\+Count}} ()
+\item 
+size\+\_\+t \mbox{\hyperlink{classsoso_1_1KairosStack_af2f25bd3e4260b452de516c319e85f7f}{point\+Size}} ()
+\item 
+void \mbox{\hyperlink{classsoso_1_1KairosStack_a42924e701052058eb18703dd619cf6c5}{monitoring}} (std\+::function$<$ void(\mbox{\hyperlink{classsoso_1_1KairosStack}{Kairos\+Stack}} \&)$>$ f)
+\item 
+std\+::list$<$ \mbox{\hyperlink{classsoso_1_1Kairos}{Kairos}} $>$ \& \mbox{\hyperlink{classsoso_1_1KairosStack_a122e44db61fc69ccf71715ccaeaf1c20}{get\+Points}} ()
+\item 
+const std\+::string \mbox{\hyperlink{classsoso_1_1KairosStack_a15c4871823f832b6f7589e8ffe196007}{title}} ()
+\item 
+struct timeval \mbox{\hyperlink{classsoso_1_1KairosStack_aceae4d5b5abd650a05a77d3ef73e428c}{get\+Total}} ()
+\item 
+struct timeval \mbox{\hyperlink{classsoso_1_1KairosStack_a5a0cee2afabeb8db00088fa13bbb66f4}{get\+Avg}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classsoso_1_1KairosStack_a176b81af912ed43d97b51a108de4cbe5}{\+\_\+title}}
+\item 
+std\+::list$<$ \mbox{\hyperlink{classsoso_1_1Kairos}{Kairos}} $>$ \mbox{\hyperlink{classsoso_1_1KairosStack_a746020c069a38d8bde7e9421f462c2dd}{\+\_\+points}}
+\item 
+std\+::mutex \mbox{\hyperlink{classsoso_1_1KairosStack_a30728ba795af28ec6fe03fd7e183cd59}{\+\_\+lock}}
+\item 
+size\+\_\+t \mbox{\hyperlink{classsoso_1_1KairosStack_af385edbd0d6efdb2787dfc10d97cf7b0}{\+\_\+max\+\_\+point}}
+\item 
+struct timeval \mbox{\hyperlink{classsoso_1_1KairosStack_a85be9fc3bfbb7c1749cab00a8d71627c}{\+\_\+total}}
+\item 
+struct timeval \mbox{\hyperlink{classsoso_1_1KairosStack_a43735c81e1e6826ad1022121d76fcd6c}{\+\_\+avg}}
+\item 
+size\+\_\+t \mbox{\hyperlink{classsoso_1_1KairosStack_a05d669eba6ae676aa42243b8e823b039}{\+\_\+add\+\_\+count}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+소요 시간 측정 요소 관리 
+
+
+
+kairos.\+h 파일의 48 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{classsoso_1_1KairosStack_a092bce7b68ebb93d8e7a553b0cf80e4c}\label{classsoso_1_1KairosStack_a092bce7b68ebb93d8e7a553b0cf80e4c}} 
+\index{soso::KairosStack@{soso::KairosStack}!KairosStack@{KairosStack}}
+\index{KairosStack@{KairosStack}!soso::KairosStack@{soso::KairosStack}}
+\doxysubsubsection{\texorpdfstring{KairosStack()}{KairosStack()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily soso\+::\+Kairos\+Stack\+::\+Kairos\+Stack (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{title,  }\item[{size\+\_\+t}]{max\+\_\+point }\end{DoxyParamCaption})}
+
+
+
+Kairo\+Stack 생성자 
+
+
+\begin{DoxyParams}{매개변수}
+{\em title} & \\
+\hline
+{\em max\+\_\+point} & 시간 측정 값 최대 저장 갯수 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsoso_1_1KairosStack_a3b1774aae88ed713e871e8f849ef2beb}\label{classsoso_1_1KairosStack_a3b1774aae88ed713e871e8f849ef2beb}} 
+\index{soso::KairosStack@{soso::KairosStack}!KairosStack@{KairosStack}}
+\index{KairosStack@{KairosStack}!soso::KairosStack@{soso::KairosStack}}
+\doxysubsubsection{\texorpdfstring{KairosStack()}{KairosStack()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Kairos\+Stack\+::\+Kairos\+Stack (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsoso_1_1KairosStack}{Kairos\+Stack}} \&}]{cs }\end{DoxyParamCaption})}
+
+
+
+kairos.\+cpp 파일의 66 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{classsoso_1_1KairosStack_a1cde49caf7dcbaf79f43a781cd09b776}\label{classsoso_1_1KairosStack_a1cde49caf7dcbaf79f43a781cd09b776}} 
+\index{soso::KairosStack@{soso::KairosStack}!addKairos@{addKairos}}
+\index{addKairos@{addKairos}!soso::KairosStack@{soso::KairosStack}}
+\doxysubsubsection{\texorpdfstring{addKairos()}{addKairos()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void soso\+::\+Kairos\+Stack\+::add\+Kairos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsoso_1_1Kairos}{Kairos}} \&\&}]{kairos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+시간 측정 값을 stack에 추가 (thread-\/safe) 
+
+
+\begin{DoxyParams}{매개변수}
+{\em Kairo} & \\
+\hline
+\end{DoxyParams}
+
+
+kairos.\+h 파일의 72 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1KairosStack_a978f585eb18715f2b9caa890edbdea48}\label{classsoso_1_1KairosStack_a978f585eb18715f2b9caa890edbdea48}} 
+\index{soso::KairosStack@{soso::KairosStack}!addKairos@{addKairos}}
+\index{addKairos@{addKairos}!soso::KairosStack@{soso::KairosStack}}
+\doxysubsubsection{\texorpdfstring{addKairos()}{addKairos()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Kairos\+Stack\+::add\+Kairos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsoso_1_1Kairos}{Kairos}} \&}]{kairos }\end{DoxyParamCaption})}
+
+total
+
+avg
+
+kairos.\+cpp 파일의 83 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1KairosStack_a2427b44028d30a7245268e25ff42b7ad}\label{classsoso_1_1KairosStack_a2427b44028d30a7245268e25ff42b7ad}} 
+\index{soso::KairosStack@{soso::KairosStack}!checkedCount@{checkedCount}}
+\index{checkedCount@{checkedCount}!soso::KairosStack@{soso::KairosStack}}
+\doxysubsubsection{\texorpdfstring{checkedCount()}{checkedCount()}}
+{\footnotesize\ttfamily size\+\_\+t Kairos\+Stack\+::checked\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+kairos.\+cpp 파일의 75 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1KairosStack_a5a0cee2afabeb8db00088fa13bbb66f4}\label{classsoso_1_1KairosStack_a5a0cee2afabeb8db00088fa13bbb66f4}} 
+\index{soso::KairosStack@{soso::KairosStack}!getAvg@{getAvg}}
+\index{getAvg@{getAvg}!soso::KairosStack@{soso::KairosStack}}
+\doxysubsubsection{\texorpdfstring{getAvg()}{getAvg()}}
+{\footnotesize\ttfamily struct timeval Kairos\+Stack\+::get\+Avg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+kairos.\+cpp 파일의 162 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1KairosStack_a122e44db61fc69ccf71715ccaeaf1c20}\label{classsoso_1_1KairosStack_a122e44db61fc69ccf71715ccaeaf1c20}} 
+\index{soso::KairosStack@{soso::KairosStack}!getPoints@{getPoints}}
+\index{getPoints@{getPoints}!soso::KairosStack@{soso::KairosStack}}
+\doxysubsubsection{\texorpdfstring{getPoints()}{getPoints()}}
+{\footnotesize\ttfamily list$<$ \mbox{\hyperlink{classsoso_1_1Kairos}{Kairos}} $>$ \& Kairos\+Stack\+::get\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+kairos.\+cpp 파일의 150 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1KairosStack_aceae4d5b5abd650a05a77d3ef73e428c}\label{classsoso_1_1KairosStack_aceae4d5b5abd650a05a77d3ef73e428c}} 
+\index{soso::KairosStack@{soso::KairosStack}!getTotal@{getTotal}}
+\index{getTotal@{getTotal}!soso::KairosStack@{soso::KairosStack}}
+\doxysubsubsection{\texorpdfstring{getTotal()}{getTotal()}}
+{\footnotesize\ttfamily struct timeval Kairos\+Stack\+::get\+Total (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+kairos.\+cpp 파일의 158 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1KairosStack_a42924e701052058eb18703dd619cf6c5}\label{classsoso_1_1KairosStack_a42924e701052058eb18703dd619cf6c5}} 
+\index{soso::KairosStack@{soso::KairosStack}!monitoring@{monitoring}}
+\index{monitoring@{monitoring}!soso::KairosStack@{soso::KairosStack}}
+\doxysubsubsection{\texorpdfstring{monitoring()}{monitoring()}}
+{\footnotesize\ttfamily void Kairos\+Stack\+::monitoring (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(\mbox{\hyperlink{classsoso_1_1KairosStack}{Kairos\+Stack}} \&)$>$}]{f }\end{DoxyParamCaption})}
+
+
+
+kairos.\+cpp 파일의 145 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1KairosStack_af2f25bd3e4260b452de516c319e85f7f}\label{classsoso_1_1KairosStack_af2f25bd3e4260b452de516c319e85f7f}} 
+\index{soso::KairosStack@{soso::KairosStack}!pointSize@{pointSize}}
+\index{pointSize@{pointSize}!soso::KairosStack@{soso::KairosStack}}
+\doxysubsubsection{\texorpdfstring{pointSize()}{pointSize()}}
+{\footnotesize\ttfamily size\+\_\+t Kairos\+Stack\+::point\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+kairos.\+cpp 파일의 79 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1KairosStack_a15c4871823f832b6f7589e8ffe196007}\label{classsoso_1_1KairosStack_a15c4871823f832b6f7589e8ffe196007}} 
+\index{soso::KairosStack@{soso::KairosStack}!title@{title}}
+\index{title@{title}!soso::KairosStack@{soso::KairosStack}}
+\doxysubsubsection{\texorpdfstring{title()}{title()}}
+{\footnotesize\ttfamily const string Kairos\+Stack\+::title (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+kairos.\+cpp 파일의 154 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1KairosStack_aa332c6a12daaeb9c18a5800c11001a3c}\label{classsoso_1_1KairosStack_aa332c6a12daaeb9c18a5800c11001a3c}} 
+\index{soso::KairosStack@{soso::KairosStack}!toString@{toString}}
+\index{toString@{toString}!soso::KairosStack@{soso::KairosStack}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily const string Kairos\+Stack\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+kairos.\+cpp 파일의 116 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{classsoso_1_1KairosStack_a05d669eba6ae676aa42243b8e823b039}\label{classsoso_1_1KairosStack_a05d669eba6ae676aa42243b8e823b039}} 
+\index{soso::KairosStack@{soso::KairosStack}!\_add\_count@{\_add\_count}}
+\index{\_add\_count@{\_add\_count}!soso::KairosStack@{soso::KairosStack}}
+\doxysubsubsection{\texorpdfstring{\_add\_count}{\_add\_count}}
+{\footnotesize\ttfamily size\+\_\+t soso\+::\+Kairos\+Stack\+::\+\_\+add\+\_\+count\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+kairos.\+h 파일의 57 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1KairosStack_a43735c81e1e6826ad1022121d76fcd6c}\label{classsoso_1_1KairosStack_a43735c81e1e6826ad1022121d76fcd6c}} 
+\index{soso::KairosStack@{soso::KairosStack}!\_avg@{\_avg}}
+\index{\_avg@{\_avg}!soso::KairosStack@{soso::KairosStack}}
+\doxysubsubsection{\texorpdfstring{\_avg}{\_avg}}
+{\footnotesize\ttfamily struct timeval soso\+::\+Kairos\+Stack\+::\+\_\+avg\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+kairos.\+h 파일의 56 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1KairosStack_a30728ba795af28ec6fe03fd7e183cd59}\label{classsoso_1_1KairosStack_a30728ba795af28ec6fe03fd7e183cd59}} 
+\index{soso::KairosStack@{soso::KairosStack}!\_lock@{\_lock}}
+\index{\_lock@{\_lock}!soso::KairosStack@{soso::KairosStack}}
+\doxysubsubsection{\texorpdfstring{\_lock}{\_lock}}
+{\footnotesize\ttfamily std\+::mutex soso\+::\+Kairos\+Stack\+::\+\_\+lock\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+kairos.\+h 파일의 52 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1KairosStack_af385edbd0d6efdb2787dfc10d97cf7b0}\label{classsoso_1_1KairosStack_af385edbd0d6efdb2787dfc10d97cf7b0}} 
+\index{soso::KairosStack@{soso::KairosStack}!\_max\_point@{\_max\_point}}
+\index{\_max\_point@{\_max\_point}!soso::KairosStack@{soso::KairosStack}}
+\doxysubsubsection{\texorpdfstring{\_max\_point}{\_max\_point}}
+{\footnotesize\ttfamily size\+\_\+t soso\+::\+Kairos\+Stack\+::\+\_\+max\+\_\+point\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+kairos.\+h 파일의 53 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1KairosStack_a746020c069a38d8bde7e9421f462c2dd}\label{classsoso_1_1KairosStack_a746020c069a38d8bde7e9421f462c2dd}} 
+\index{soso::KairosStack@{soso::KairosStack}!\_points@{\_points}}
+\index{\_points@{\_points}!soso::KairosStack@{soso::KairosStack}}
+\doxysubsubsection{\texorpdfstring{\_points}{\_points}}
+{\footnotesize\ttfamily std\+::list$<$\mbox{\hyperlink{classsoso_1_1Kairos}{Kairos}}$>$ soso\+::\+Kairos\+Stack\+::\+\_\+points\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+kairos.\+h 파일의 51 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1KairosStack_a176b81af912ed43d97b51a108de4cbe5}\label{classsoso_1_1KairosStack_a176b81af912ed43d97b51a108de4cbe5}} 
+\index{soso::KairosStack@{soso::KairosStack}!\_title@{\_title}}
+\index{\_title@{\_title}!soso::KairosStack@{soso::KairosStack}}
+\doxysubsubsection{\texorpdfstring{\_title}{\_title}}
+{\footnotesize\ttfamily std\+::string soso\+::\+Kairos\+Stack\+::\+\_\+title\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+kairos.\+h 파일의 50 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classsoso_1_1KairosStack_a85be9fc3bfbb7c1749cab00a8d71627c}\label{classsoso_1_1KairosStack_a85be9fc3bfbb7c1749cab00a8d71627c}} 
+\index{soso::KairosStack@{soso::KairosStack}!\_total@{\_total}}
+\index{\_total@{\_total}!soso::KairosStack@{soso::KairosStack}}
+\doxysubsubsection{\texorpdfstring{\_total}{\_total}}
+{\footnotesize\ttfamily struct timeval soso\+::\+Kairos\+Stack\+::\+\_\+total\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+kairos.\+h 파일의 55 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{kairos_8h}{kairos.\+h}}\item 
+src/\mbox{\hyperlink{kairos_8cpp}{kairos.\+cpp}}\end{DoxyCompactItemize}
