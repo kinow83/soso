@@ -218,6 +218,8 @@ protected:
   size_t _job_count = 0;
   ///
   worker_init_t _worker_init_handler = nullptr;
+  ///
+  bool _joinable = true;
 
 protected:
   /**
@@ -234,11 +236,16 @@ protected:
 
 public:
   /**
-   * @brief ModuleWorker 생성자
+   * @brief WorkerManager 생성자
    * @param worker_num worker(작업자) 수
    * @param wait_for_ms job(작업) 용처 대기 시간 (millisecond)
    */
   WorkerManager(const std::string &name, int worker_num, int wait_for_ms = 10);
+
+  /**
+   * @brief WorkerManager 소멸자
+   */
+  ~WorkerManager();
 
   /**
    * @brief worker thread initialize
@@ -248,9 +255,8 @@ public:
 
   /**
    * @brief 모든 worker(작업자) thread 종료할 것을 알림
-   * @param with_join 모든 worker가 종료될 때 까지 대기할지 여부
    */
-  void terminate(bool with_join);
+  void terminate();
 
   /**
    * @brief worker thread가 모두 종료 될 때 까지 대기
@@ -277,7 +283,7 @@ public:
   void addJobMultiWorker(const std::string &name, job_handler_t handler,
                          bool affinity = false);
   /**
-   * @brief ModuleWorker 수행
+   * @brief WorkerManager 수행
    * @param block YES인 경우 run 함수 block되어 뒤에 실행 코드가 수행 안됨\n
    * FALSE인 경우 run 함수 호출 후 바로 리턴됨
    */

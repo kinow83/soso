@@ -58,6 +58,8 @@ void notify2() {
 }
 
 int main(int argc, char **argv) {
+  (void)argc;
+  (void)argv;
   vector<thread> ts;
 
   for (int i = 0; i < 4; i++) {

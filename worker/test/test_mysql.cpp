@@ -1,5 +1,5 @@
 
-#include "chronos.h"
+#include "kairos.h"
 #include "worker.h"
 #include <cppconn/driver.h>
 #include <cppconn/exception.h>
@@ -19,7 +19,7 @@ using namespace sql;
 
 template <typename T> //
 void mysql_test(int thread_num) {
-  ChronosStack cstack("test_mysql", 1000);
+  KairosStack cstack("test_mysql", 1000);
 
   shared_ptr<T> manager = make_shared<T>("mysql", thread_num);
 
@@ -47,9 +47,9 @@ void mysql_test(int thread_num) {
   cout << "wait for thread init\n";
 
   {
-    Chronos c("run", &cstack);
+    Kairos c("run", &cstack);
     {
-      Chronos c("add job", &cstack);
+      Kairos c("add job", &cstack);
       for (int i = 0; i < 4; i++) {
         manager->addJobMultiWorker(
             "select",                                            //
@@ -75,7 +75,7 @@ void mysql_test(int thread_num) {
       }
     }
 
-    manager->terminate(true);
+    manager->terminate();
   }
   cout << cstack.toString();
 }

@@ -26,17 +26,18 @@ void WorkerManager2::run(bool block) {
     }
 
     while (true) {
-      {
-        unique_lock<mutex> lock(*M.get());
-        CV->wait(lock,
-                 [&]() { //
-                   return (!Q->empty() || !_running);
-                 });
+      unique_lock<mutex> lock(*M);
+      CV->wait(lock,   //
+               [&]() { //
+                 return (!Q->empty() || !_running);
+               });
 
-        if (!_running && Q->empty()) {
-          break;
-        }
+      if (!_running && Q->empty()) {
+        break;
+      }
 
+      handler = nullptr;
+      if (!Q->empty()) {
         job = Q->front();
         job->setWorkerID(worker->getWorkerID());
         handler = job->getHandler();
@@ -45,8 +46,8 @@ void WorkerManager2::run(bool block) {
         /// increment completed job count
         worker->incCompletedJobs();
       }
-
-      handler(worker, job); // call job user defined function
+      if (handler != nullptr)
+        handler(worker, job); // call job user defined function
     }
 
     /// worker thread 종료 되었음을 알림

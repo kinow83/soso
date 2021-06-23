@@ -9,17 +9,12 @@ static const char *job_type_str[] = { //
     "m_worker",                       //
     "s_worker"};
 
-/**
- * @brief ModuleWorker 생성자
- * @param worker_num worker(작업자) 수
- * @param wait_for_ms job(작업) 용처 대기 시간 (millisecond)
- */
-WorkerManager::WorkerManager(const std::string &name, int worker_num,
+WorkerManager::WorkerManager(const string &name, int worker_num,
                              int wait_for_ms) {
   int i = 0;
   _name = name;
   _worker_num = worker_num;
-  this->_wait_for_ms = chrono::milliseconds(wait_for_ms);
+  _wait_for_ms = chrono::milliseconds(wait_for_ms);
 
   /// initialize job workers
   /// for multi worker
@@ -35,49 +30,58 @@ WorkerManager::WorkerManager(const std::string &name, int worker_num,
   _job_s_CV = make_shared<condition_variable>();
 }
 
-void WorkerManager::setWorkerInitialize(worker_init_t handler) {
-  _worker_init_handler = handler;
+WorkerManager::~WorkerManager() { //
+  terminate();
 }
 
-/**
- * @brief 모든 worker(작업자) thread 종료할 것을 알림
- * @param with_join 모든 worker가 종료될 때 까지 대기할지 여부
- */
-void WorkerManager::terminate(bool with_join) { //
+void WorkerManager::terminate() {
+  shared_ptr<Worker> W;
+  shared_ptr<mutex> M;
+  shared_ptr<condition_variable> CV;
+  deque<shared_ptr<Job>> Q;
+
   _running = false;
 
-  // 종료를 위해 wait를 깨운다.
-  for (int i = 0; i < _worker_num; i++) {
-    lock_guard<mutex> lock(*_job_m_M[i]);
-    _job_m_CV[i]->notify_one();
+  if (!_joinable) {
+    return;
   }
-  {
-    lock_guard<mutex> lock(*_job_s_M);
-    _job_s_CV->notify_one();
-  }
-  if (with_join) {
-    join();
-  }
-}
 
-/**
- * @brief worker thread가 모두 종료 될 때 까지 대기
- */
-void WorkerManager::join() {
-  for (auto worker : _m_workers) {
+  // 종료를 위해 wait를 깨운다.
+  for (size_t i = 0; i < _worker_num; i++) {
+    W = _m_workers[i];
+    M = _job_m_M[i];
+    CV = _job_m_CV[i];
+    Q = _job_m_Q[i];
+
     while (true) {
-      if (worker->finished()) {
+      {
+        lock_guard<mutex> lock(*M);
+        CV->notify_all();
+      }
+      if (W->finished()) {
         break;
       }
       this_thread::sleep_for(_wait_for_ms);
     }
   }
+
+  W = _s_worker;
+  M = _job_s_M;
+  CV = _job_s_CV;
   while (true) {
-    if (_s_worker->finished()) {
+    {
+      lock_guard<mutex> lock(*M);
+      CV->notify_all();
+    }
+    if (W->finished()) {
       break;
     }
     this_thread::sleep_for(_wait_for_ms);
   }
+}
+
+void WorkerManager::setWorkerInitialize(worker_init_t handler) {
+  _worker_init_handler = handler;
 }
 
 string WorkerManager::workerName() { //
@@ -85,7 +89,7 @@ string WorkerManager::workerName() { //
 }
 
 string WorkerManager::report() {
-  string result = "";
+  string result = "[WorkerManager::report]\n";
   size_t total_job = 0;
 
   for (auto worker : _m_workers) {
@@ -103,13 +107,6 @@ string WorkerManager::report() {
   return result;
 }
 
-/**
- * @brief worker에게 작업 요청
- * @param name
- * @param handler
- * @param type
- * @param affinity
- */
 void WorkerManager::addJob(const string &name,    //
                            job_handler_t handler, //
                            JOB_QUEUE_TYPE type,   //
@@ -147,38 +144,21 @@ void WorkerManager::addJob(const string &name,    //
     lock_guard<mutex> lock(*M);
     Q->push_back(make_shared<Job>(job_id, handler, affinity));
     /// worker에게 작업이 추가되었음을 알림
-    CV->notify_one();
+    CV->notify_all();
   }
 }
 
-/**
- * @brief single worker에게 작업 요청
- * @param name
- * @param handler
- */
 void WorkerManager::addJobSingleWorker(const string &name, //
                                        job_handler_t handler) {
   return addJob(name, handler, SINGLE_WORKER, false);
 }
 
-/**
- * @brief 여러 worker 중 하나의 worker에게 작업 요청
- * @param name
- * @param handler
- * @param affinity
- */
 void WorkerManager::addJobMultiWorker(const string &name,    //
                                       job_handler_t handler, //
                                       bool affinity) {
   return addJob(name, handler, MULTI_WORKER, affinity);
 }
 
-/**
- * @brief worker thread 동작 함수\n
- * worker(작업자) thread는 작업큐에서 job(작업)을 가져와 작업
- * 함수(job_handle)를 수행한다.
- * @param bool block
- */
 void WorkerManager::run(bool block) {
 
   auto f = [&](shared_ptr<Worker> worker, //
@@ -224,12 +204,6 @@ void WorkerManager::run(bool block) {
 
   _run(f, block);
 }
-
-/**
- * @brief ModuleWorker 수행
- * @param block YES인 경우 run 함수 block되어 뒤에 실행 코드가 수행 안됨\n
- * FALSE인 경우 run 함수 호출 후 바로 리턴됨
- */
 
 void WorkerManager::_run(thread_handler_t f, bool block) {
   /// create job worker thread

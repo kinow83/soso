@@ -40,7 +40,7 @@ int main(int argc, char **argv) {
 
       cout << "\tpush #" + to_string(i + 1) << endl;
     }
-    manager->terminate(true);
+    manager->terminate();
     cout << manager->report() << endl;
 
     delete manager;
@@ -67,7 +67,7 @@ int main(int argc, char **argv) {
           true);
       cout << "\tpush #" + to_string(i + 1) << endl;
     }
-    manager->terminate(true);
+    manager->terminate();
     cout << manager->report() << endl;
     delete manager;
   }
@@ -88,7 +88,7 @@ int main(int argc, char **argv) {
           true);
       cout << "\tpush #" + to_string(i + 1) << endl;
     }
-    manager->terminate(true);
+    manager->terminate();
     cout << manager->report() << endl;
     delete manager;
   }
@@ -115,7 +115,7 @@ int main(int argc, char **argv) {
           });
       cout << "\tpush #" + to_string(i + 1) << endl;
     }
-    manager->terminate(true);
+    manager->terminate();
     cout << manager->report() << endl;
     delete manager;
   }

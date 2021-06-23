@@ -5,7 +5,6 @@ FetchContent_Declare(gtest
 )
 FetchContent_MakeAvailable(gtest)
 
-find_package(sql)
 
 # testcase #1
 add_executable(worker_unit_test
@@ -32,7 +31,7 @@ target_include_directories(mysql_unit_test
 PRIVATE
     ${CMAKE_CURRENT_LIST_DIR}
     ${worker_SOURCE_DIR}/include
-    ${chronos_SOURCE_DIR}/include
+    ${kairos_SOURCE_DIR}/include
 )
 
 target_link_libraries(mysql_unit_test
@@ -41,7 +40,7 @@ PRIVATE
     pthread
     mysqlcppconn
     gtest_main
-    chronos
+    kairos
 )
 
 # testcase #3
