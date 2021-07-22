@@ -1,0 +1,16 @@
+[37m17:03:13: TRACE: [test] normal trace
+[0m[37m17:03:13: DEBUG: [test] normal debug
+[0m[32m17:03:13: INFO : [test] normal info
+[0m[31m17:03:13: ERROR: [test] normal error
+[0m[33m17:03:13: FATAL: [test] normal fatal
+[0m[1m[37m17:03:13: TRACE: [test] BOLD TRACE
+[0m[1m[37m17:03:13: DEBUG: [test] BOLD DEBUG
+[0m[1m[32m17:03:13: INFO : [test] BOLD INFO
+[0m[1m[31m17:03:13: ERROR: [test] BOLD ERROR
+[0m[1m[33m17:03:13: FATAL: [test] BOLD FATAL
+[0m[33m17:03:13: TRACE: (len:16) [test] trace hex dump 01 02 03 04 05 06 07 08 11 12 13 14 15 16 17 18
+[0m[37m17:03:13: DEBUG: (len:16) [test] debug hex dump 01 02 03 04 05 06 07 08 11 12 13 14 15 16 17 18
+[0m[32m17:03:13: INFO : (len:16) [test] info hex dump 01 02 03 04 05 06 07 08 11 12 13 14 15 16 17 18
+[0m[31m17:03:13: ERROR: (len:16) [test] error hex dump 01 02 03 04 05 06 07 08 11 12 13 14 15 16 17 18
+[0m[33m17:03:13: FATAL: (len:16) [test] fatal hex dump 01 02 03 04 05 06 07 08 11 12 13 14 15 16 17 18
+[0m
