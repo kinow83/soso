@@ -1,4 +1,7 @@
 #!/bin/bash
 
-cmake -B build -S . $@
+# for ctest
+# -DBUILD_TESTING=ON
+
+cmake -B build -S .  $@
 cmake --build build

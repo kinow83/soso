@@ -15,10 +15,13 @@ REQUIRED
 add_library(richevent SHARED)
 target_sources(richevent
 PRIVATE
-    src/richevent.cpp
+    src/richevent_reader.cpp
+    src/richevent_writer.cpp
 PUBLIC
-    include/richevent.h
+    include/richevent_reader.h
+    include/richevent_writer.h
 )
+
 target_include_directories (richevent
 PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/include
@@ -27,21 +30,5 @@ target_link_libraries(richevent
 PUBLIC
     czmq
 )
-
-# for doxygen
-option(BUILD_DOC "Build documentation" ON)
-find_package(Doxygen)
-if (DOXYGEN_FOUND)
-    set(DOXYGEN_OUT ${CMAKE_CURRENT_SOURCE_DIR}/Doxyfile)
-    configure_file(${DOXYGEN_OUT} @ONLY)
-    add_custom_target(
-	    richevent_doxygen ALL
-        COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYGEN_OUT}
-        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
-        COMMENT "Generating API documentation with Doxygen"
-        VERBATIM )
-else (DOXYGEN_FOUND)
-    message("Doxygen need to be installed to generate the doxygen documentation")
-endif (DOXYGEN_FOUND)
 
 add_subdirectory(examples)
